@@ -1,0 +1,69 @@
+﻿  0.073927 ## open COM4 at 2026-11-14T12:10:45
+  0.225256 ## variant A: stop, init ED x3
+  0.269006 TX 30
+  0.316233 RX cf
+  1.465236 TX ff
+  1.760375 TX ff
+  1.840177 TX ed
+  1.844641 RX 00
+  1.847952 RX 00
+  1.871063 RX 12
+  3.386339 ## init ED -> False
+  3.393932 TX 30
+  3.424229 RX cf
+  4.514871 TX ff
+  4.862615 TX ff
+  4.950634 TX ed
+  4.956609 RX 00
+  4.959953 RX 00
+  4.993799 RX 12
+  6.470169 ## init ED -> False
+  6.476780 TX 30
+  6.501992 RX cf
+  7.614241 TX ff
+  7.915643 TX ff
+  8.009726 TX ed
+  8.013379 RX 00
+  8.016339 RX 00
+  8.019496 RX 12
+  9.535290 ## init ED -> False
+  9.540552 TX 30
+  9.566948 RX cf
+ 10.683573 ## variant B: init EF then ED, x2
+ 10.689212 TX ff
+ 10.980281 TX ff
+ 11.067237 TX ef
+ 11.071448 RX 00
+ 11.073962 RX 00
+ 12.587943 ## init EF -> False
+ 12.613789 TX ff
+ 12.914805 TX ff
+ 13.009753 TX ed
+ 13.040825 RX 12
+ 14.528636 ## init ED -> False
+ 14.539355 TX 30
+ 14.559160 RX cf
+ 15.678109 TX ff
+ 15.971025 TX ff
+ 16.049321 TX ef
+ 16.051900 RX 00
+ 16.054307 RX 00
+ 17.565703 ## init EF -> False
+ 17.576082 TX ff
+ 17.879405 TX ff
+ 17.958074 TX ed
+ 17.989705 RX 12
+ 19.477007 ## init ED -> False
+ 19.482919 TX 30
+ 19.509051 RX cf
+ 20.614451 ## variant C: init ED with no stop before
+ 20.626863 TX ff
+ 20.925993 TX ff
+ 21.004757 TX ed
+ 21.008436 RX 00
+ 21.011386 RX 00
+ 21.014941 RX 12
+ 22.511085 ## init ED -> False
+ 22.524663 TX 30
+ 22.558473 RX cf
+ 23.792500 ## close

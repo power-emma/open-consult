@@ -1,0 +1,16 @@
+  0.016000 ## open COM4 at 2026-11-14T12:27:29
+  0.016000 ## cmd: --dev COM4 --test-id koer-aac watch rpm aac battery -n 3
+  0.016000 TX 30
+  0.031000 RX cf
+  0.235000 TX ff
+  0.516000 TX ff
+  0.578000 TX ed
+  0.578000 RX 00
+  0.594000 RX 00
+  0.594000 RX 12
+  0.594000 ## init ok id=ED attempt=1 secs=0.016
+  0.594000 TX 5a 00 5a 01 5a 17 5a 0c
+  0.625000 RX a5 00 a5 01 a5 fe a5 0c
+  0.625000 TX 30
+  0.641000 RX cf
+  0.641000 ## close

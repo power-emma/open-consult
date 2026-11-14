@@ -1,0 +1,20 @@
+﻿  0.141159 ## open COM4 (System.IO.Ports, DTR/RTS off) at 2026-11-14T11:59:59
+  0.351659 ## attempt 1
+  0.399874 TX 30
+  0.523118 RX ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 ff 01 00 cf
+  0.995418 TX ff ff ef
+  1.022055 RX 00 00
+  3.022105 ## attempt 2
+  3.024582 TX 30
+  3.541900 TX ff ff ef
+  5.557074 ## attempt 3
+  5.562857 TX 30
+  6.070900 TX ff ff ef
+  8.084768 ## attempt 4
+  8.088590 TX 30
+  8.604615 TX ff ff ef
+ 10.620880 ## attempt 5
+ 10.627161 TX 30
+ 11.134916 TX ff ff ef
+ 13.147110 ## init FAILED: no 0x10
+ 13.265429 ## close

@@ -15,7 +15,7 @@ import os
 import sys
 import time
 
-from .protocol import Consult, ConsultError
+from .protocol import ENGINE_IDS, Consult, ConsultError
 from .registers import ENGINE, decode, registers_for
 from .transport import DEFAULT_DEV, Transport
 
@@ -23,13 +23,13 @@ LOG_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 
 
 def connect(c):
-    r = c.init()
+    r = c.init(c.ecu_ids)
     if r is None:
-        sys.exit("init failed: no 0x10 from the ECU (ignition on? dongle in the car?)")
-    attempt, secs, junk = r
-    print(f"init ok: attempt {attempt}, 0x10 after {secs * 1000:.0f} ms"
-          + (f", other bytes first: {junk.hex(' ')}" if junk else ""))
-    c.t.note(f"init ok attempt={attempt} secs={secs:.3f}")
+        sys.exit("init failed: no reply from the ECU (ignition on? dongle in the car?)")
+    attempt, secs, junk, ecu = r
+    print(f"init ok: id {ecu:02X}, attempt {attempt}, {~ecu & 0xFF:02X} after "
+          f"{secs * 1000:.0f} ms" + (f", other bytes first: {junk.hex(' ')}" if junk else ""))
+    c.t.note(f"init ok id={ecu:02X} attempt={attempt} secs={secs:.3f}")
 
 
 def cmd_init(c, args):
@@ -50,7 +50,7 @@ def cmd_id(c, args):
     connect(c)
     d, pn = c.part_number()
     print(f"D0 raw ({len(d)} bytes): {d.hex(' ')}")
-    print(f"part number (openconsult decoding): {pn}")
+    print(f"part number: {pn}")
     print("as ASCII:", "".join(chr(b) if 32 <= b < 127 else "." for b in d))
 
 
@@ -106,6 +106,8 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dev", default=DEFAULT_DEV)
     ap.add_argument("--test-id", help="log name suffix, e.g. 1.1 (default: subcommand)")
+    ap.add_argument("--ecu", type=lambda x: int(x, 16), action="append",
+                    help="init ID in hex, repeatable (default: ED then EF)")
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("init")
     sub.add_parser("stop-ack")
@@ -124,14 +126,18 @@ def main():
     log = os.path.join(LOG_DIR, f"{datetime.date.today()}_{args.test_id or args.cmd}.log")
     try:
         t = Transport(args.dev, log)
-    except PermissionError:
+    except (PermissionError, IOError) as e:
         if os.name == "nt":
+            if "denied" not in str(e).lower():
+                sys.exit(f"cannot open {args.dev}: {e}")
             sys.exit(f"{args.dev} is busy or access denied: close ECUTalk or anything else using it")
         sys.exit(f"no permission for {args.dev}: run `sudo usermod -aG uucp $USER`, "
                  "then log out and back in (or `newgrp uucp`)")
     t.note("cmd: " + " ".join(sys.argv[1:]))
     try:
-        globals()["cmd_" + args.cmd.replace("-", "_")](Consult(t), args)
+        c = Consult(t)
+        c.ecu_ids = tuple(args.ecu) if args.ecu else ENGINE_IDS
+        globals()["cmd_" + args.cmd.replace("-", "_")](c, args)
     except (ConsultError, TimeoutError) as e:
         print("error:", e)
     finally:
