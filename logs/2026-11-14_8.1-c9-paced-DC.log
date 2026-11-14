@@ -1,0 +1,156 @@
+  0.000132 ## open /dev/ttyUSB0 at 2026-11-14T14:56:30
+  0.000181 ## cmd: --test-id 8.1-c9-paced-DC --ecu DC mem 8000 -n 1
+  0.000237 TX 30
+  0.009231 RX cf
+  0.210591 TX ff
+  0.491115 TX ff
+  0.561368 TX dc
+  0.562483 RX 00
+  0.562524 RX 00
+  0.573457 RX 23
+  0.573538 ## init ok id=DC attempt=1 secs=0.011
+  0.573609 TX c9
+  0.583434 RX 36
+  0.583500 TX 80
+  0.593444 RX 80
+  0.593514 TX 00
+  0.602404 RX fe
+  0.602508 ## command try 1 failed: bad echo 36 80 fe, expected 36 80 00
+  0.602530 TX 30
+  0.612489 RX cf
+  0.713334 TX c9
+  0.721511 RX 36
+  0.721552 TX 80
+  0.731378 RX 80
+  0.731419 TX 00
+  0.741634 RX fe
+  0.741678 ## command try 2 failed: bad echo 36 80 fe, expected 36 80 00
+  0.741687 TX 30
+  0.751425 RX cf
+  0.852256 TX c9
+  0.860505 RX 36
+  0.860546 TX 80
+  0.870505 RX 80
+  0.870544 TX 00
+  0.880465 RX fe
+  0.880507 ## command try 3 failed: bad echo 36 80 fe, expected 36 80 00
+  0.880516 TX 30
+  0.890330 RX cf
+  0.990563 ## close
+  0.000055 ## open /dev/ttyUSB0 at 2026-11-14T14:56:31
+  0.000086 ## cmd: --test-id 8.1-c9-paced-DC --ecu DC mem F000 -n 1
+  0.000104 TX 30
+  0.009836 RX cf
+  0.211135 TX ff
+  0.491662 TX ff
+  0.562256 TX dc
+  0.562501 RX 00
+  0.562531 RX 00
+  0.574339 RX 23
+  0.574395 ## init ok id=DC attempt=1 secs=0.012
+  0.574460 TX c9
+  0.584066 RX 36
+  0.584145 TX f0
+  0.594069 RX f0
+  0.594145 TX 00
+  0.604348 RX fe
+  0.604391 ## command try 1 failed: bad echo 36 f0 fe, expected 36 f0 00
+  0.604420 TX 30
+  0.614275 RX cf
+  0.715178 TX c9
+  0.723224 RX 36
+  0.723264 TX f0
+  0.733150 RX f0
+  0.733189 TX 00
+  0.742908 RX fe
+  0.742948 ## command try 2 failed: bad echo 36 f0 fe, expected 36 f0 00
+  0.742957 TX 30
+  0.752113 RX cf
+  0.852903 TX c9
+  0.860962 RX 36
+  0.861020 TX f0
+  0.871209 RX f0
+  0.871248 TX 00
+  0.880944 RX fe
+  0.880986 ## command try 3 failed: bad echo 36 f0 fe, expected 36 f0 00
+  0.880995 TX 30
+  0.891206 RX cf
+  0.991803 ## close
+  0.000047 ## open /dev/ttyUSB0 at 2026-11-14T14:56:32
+  0.000079 ## cmd: --test-id 8.1-c9-paced-DC --ecu DC mem 0100 -n 1
+  0.000104 TX 30
+  0.008579 RX cf
+  0.209941 TX ff
+  0.490738 TX ff
+  0.561240 TX dc
+  0.561605 RX 00
+  0.561638 RX 00
+  0.571789 RX 23
+  0.571893 ## init ok id=DC attempt=1 secs=0.010
+  0.571933 TX c9
+  0.581834 RX 36
+  0.581913 TX 01
+  0.591792 RX 01
+  0.591845 TX 00
+  0.601811 RX fe
+  0.601891 ## command try 1 failed: bad echo 36 01 fe, expected 36 01 00
+  0.601904 TX 30
+  0.611804 RX cf
+  0.712436 TX c9
+  0.720754 RX 36
+  0.720806 TX 01
+  0.730700 RX 01
+  0.730745 TX 00
+  0.740694 RX fe
+  0.740746 ## command try 2 failed: bad echo 36 01 fe, expected 36 01 00
+  0.740780 TX 30
+  0.750721 RX cf
+  0.851355 TX c9
+  0.859785 RX 36
+  0.859819 TX 01
+  0.868569 RX 01
+  0.868634 TX 00
+  0.878650 RX fe
+  0.878730 ## command try 3 failed: bad echo 36 01 fe, expected 36 01 00
+  0.878744 TX 30
+  0.888494 RX cf
+  0.988917 ## close
+  0.000047 ## open /dev/ttyUSB0 at 2026-11-14T14:56:33
+  0.000080 ## cmd: --test-id 8.1-c9-paced-DC --ecu DC mem 0000 -n 1
+  0.000099 TX 30
+  0.008608 RX cf
+  0.209730 TX ff
+  0.490238 TX ff
+  0.560708 TX dc
+  0.561164 RX 00
+  0.561201 RX 00
+  0.572499 RX 23
+  0.572598 ## init ok id=DC attempt=1 secs=0.011
+  0.572638 TX c9
+  0.581549 RX 36
+  0.581617 TX 00
+  0.591952 RX 00
+  0.591993 TX 00
+  0.601584 RX fe
+  0.601663 ## command try 1 failed: bad echo 36 00 fe, expected 36 00 00
+  0.601677 TX 30
+  0.611770 RX cf
+  0.712610 TX c9
+  0.720607 RX 36
+  0.720647 TX 00
+  0.730487 RX 00
+  0.730602 TX 00
+  0.740537 RX fe
+  0.740619 ## command try 2 failed: bad echo 36 00 fe, expected 36 00 00
+  0.740654 TX 30
+  0.750567 RX cf
+  0.851335 TX c9
+  0.859382 RX 36
+  0.859423 TX 00
+  0.869156 RX 00
+  0.869216 TX 00
+  0.879432 RX fe
+  0.879479 ## command try 3 failed: bad echo 36 00 fe, expected 36 00 00
+  0.879491 TX 30
+  0.889624 RX cf
+  0.990275 ## close

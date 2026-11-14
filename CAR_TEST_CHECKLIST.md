@@ -41,7 +41,8 @@ Legend for conditions:
 
 - [x] **1.1 Init.** Send `FF FF EF`. Expect `10`. Record how many attempts it took and
       how long the reply took.
-      Result: **Windows (2026-11-14): this ECU uses ID `ED`, not `EF`.** `FF`, 280 ms, `FF`, 70 ms, `ED` → `00 00 12` on the first attempt, within 10–30 ms, every time (10/10). `FF FF EF` → `00 00` only, and after that the ECU ignores even `30` until it gets a correct init. ECUTalk silently falls back from `EF` to `ED`. Logs: `logs/2026-11-14_1.1-win-ED.log`, `logs/2026-11-14_1.1-win-variants.log`. Not yet tested: whether init works without the byte gaps.
+      Result: **Linux (2026-11-14, 12:54): works.** Same sequence (`ED`, ECUTalk gaps), with DTR/RTS now dropped after open to match Windows → `00 00 12` on attempt 1, 3 ms. `id`, `dtc`, `stop-ack` (`CF`) and `watch` (~100 fps, 4 registers, KOER warm, latency_timer 1) all OK. Logs: `logs/2026-11-14_{1.1,id,dtc,stop-ack,watch}-linux.log`.
+      **Windows (2026-11-14): this ECU uses ID `ED`, not `EF`.** `FF`, 280 ms, `FF`, 70 ms, `ED` → `00 00 12` on the first attempt, within 10–30 ms, every time (10/10). `FF FF EF` → `00 00` only, and after that the ECU ignores even `30` until it gets a correct init. ECUTalk silently falls back from `EF` to `ED`. Logs: `logs/2026-11-14_1.1-win-ED.log`, `logs/2026-11-14_1.1-win-variants.log`. Not yet tested: whether init works without the byte gaps.
       Earlier result: **FAILING on Linux (2026-11-14).** Key ON, engine off: 18+ inits, zero RX bytes ever, with all four DTR/RTS combinations, with and without a leading `30`. ECUTalk 1.5.0 under Wine on the same port behaves the same way (it sends `30` with DTR/RTS off and gets nothing back), so the Linux tool isn't the cause. ECUTalk reportedly works on Windows; next step is to run `python -m consult --dev COM4 init` there. Logs: `logs/2026-11-14_1.1*.log`, `logs/2026-11-14_12.2-ecutalk.log`. **Windows (COM4), ~12:00:** a .NET `SerialPort` probe matching decompiled ECUTalk exactly (FF, 280 ms, FF, 70 ms, EF, DTR/RTS off) also gets zero RX bytes. See HANDOFF.md. Logs: `logs/2026-11-14_1.1-win-*.log`.
 - [ ] **1.2 Init twice in a row.** What does the ECU send back to a second init while
       it's already initialised?
@@ -73,9 +74,10 @@ Legend for conditions:
 - [ ] **2.2 `D0` other bytes.** Do the 17 unexplained bytes look like ASCII,
       calibration IDs, or something else?
       Result: ____
-- [ ] **2.3 `D1` with no faults.** **Is the "no fault" code byte `0x55` or `0x37`?**
+- [x] **2.3 `D1` with no faults.** **Is the "no fault" code byte `0x55` or `0x37`?**
       This settles the hex-vs-decimal question for codes.
-      Result: Not applicable yet: codes are stored (Windows 2026-11-14). `D1` raw: `21 01 34 03 A8 00`, three (code, starts) pairs: `21`/1, `34`/3, `A8`/0. Read as hex digits, 21 = ignition signal and 34 = knock sensor in Nissan's 2-digit list, which fits a 1998 car. `A8` isn't a valid hex-digit or decimal code. It's unexplained and needs checking against `EL.pdf` / a generic OBD-II scan. Log: `logs/2026-11-14_2.3-win-py.log`.
+      Result: **The no-fault byte is `0x55`**, so codes are hex digits (Linux 2026-11-14, 13:19): right after `C1`, `D1` returned `FF 02 55 00`. Matches ECUTalk.
+      Earlier: Not applicable yet: codes are stored (Windows 2026-11-14). **Hex-digit reading agrees with ECUTalk** (owner, 2026-11-14), so 21 = ignition signal, 34 = knock sensor. Code 21 is a known fault on this car: present for about a year, and new ignition coils and plugs didn't clear it. `D1` raw: `21 01 34 03 A8 00`, three (code, starts) pairs: `21`/1, `34`/3, `A8`/0. Read as hex digits, 21 = ignition signal and 34 = knock sensor in Nissan's 2-digit list, which fits a 1998 car. `A8` isn't a valid hex-digit or decimal code. It's unexplained and needs checking against `EL.pdf` / a generic OBD-II scan. Log: `logs/2026-11-14_2.3-win-py.log`.
 - [ ] **2.4 `D1` with a known fault.** KOEO: unplug the coolant temp sensor (or the
       IAT sensor). Key off, key on. Read `D1`. Record the code byte.
       Expected: a code for coolant (13 or 0x13?) or the 1996+ 4-digit equivalent.
@@ -84,9 +86,9 @@ Legend for conditions:
 - [ ] **2.5 Starts counter.** Keep the fault from 2.4 stored, fix the cause, and do a
       few start cycles. Does the second byte count the starts?
       Result: ____
-- [ ] **2.6 `C1` clear.** Clear the codes, re-read `D1` and confirm they're gone. Also
+- [x] **2.6 `C1` clear.** Clear the codes, re-read `D1` and confirm they're gone. Also
       check with a generic OBD-II scanner.
-      Result: ____
+      Result: **Works** (C GUI, Linux 2026-11-14, 13:19, KOER). `C1` → echo `3E`, then `F0` gives a frame with the codes *before* the clear (`21 00 34 03 A8 00`), then `CF` on `30`. `D1` straight after: `55 00` (no faults). **Code 21 came back within 3 s**, as `21 F5`: the starts byte reads `F5` (245) for a code that has just set, not `00`; meaning unknown, watch it over the next start. 34 stayed cleared. **After an engine restart (13:2x) `A8` was back too, also as `A8 F5`, and the MIL stayed off** (owner). Working theory: `F5` marks a first-trip (pending) code under Nissan's two-trip logic, before it is confirmed and the MIL lights. Log: `logs/2026-11-14_dtc-after-restart.log`. Not yet checked with a generic OBD-II scanner. Logs: `logs/2026-11-14_gui.log`, `logs/2026-11-14_dtc-after-clear.log`.
 - [ ] **2.7 Number of DTC pairs.** With 2 or more faults stored, is the frame length
       2 × the number of faults?
       Result: Consistent so far: 6 bytes for 3 pairs (2.3). Still to do: confirm the fault count with a generic OBD-II scan.
@@ -109,12 +111,14 @@ Legend for conditions:
       Result: **× 12.5 confirmed.** At a tach "2000 held steady", the ECU read 1980–2004 (band mean 1966). At a tach wavering 2300–2700, the ECU read 2250–2750 (mean 2473). Other readings: 1350 rpm right after start, 1175 at a cold fast idle, ~660 warm idle. Log: `logs/2026-11-14_3.x-koer-throttle2.log`.
 - [ ] **3.6 CAS reference.** Is `02/03` × 8 also equal to RPM?
       Result: **No.** At 1175 rpm (`00/01`), `02/03` × 8 alternates between ~16 750 and ~17 250 (raw ~2100), about 14.4× RPM. It may be a period or a different unit. Log: `logs/2026-11-14_3.x-koer-idle.log`.
-- [ ] **3.7 Coolant / IAT.** Compare `08` and `11` (value − 50) with an IR thermometer
+- [x] **3.7 Coolant / IAT.** Compare `08` and `11` (value − 50) with an IR thermometer
       or the gauge, cold and warm.
-      Result: Partial: coolant 29 °C (KOEO, earlier in the day, ECUTalk), 35 °C (KOEO before start), 42 °C (KOER a few minutes later). IAT 18 °C. `08` only streams alongside other registers. Still to do: compare with a reference.
-- [ ] **3.8 Battery voltage.** Compare `0C` × 80 mV with a multimeter on the battery,
+      Result: **Coolant confirmed correct by the owner (2026-11-14)**: 94 °C warm idle on Linux matches. IAT not yet checked against a reference.
+      Earlier: coolant 29 °C (KOEO, earlier in the day, ECUTalk), 35 °C (KOEO before start), 42 °C (KOER a few minutes later). IAT 18 °C. `08` only streams alongside other registers. Still to do: compare with a reference.
+- [x] **3.8 Battery voltage.** Compare `0C` × 80 mV with a multimeter on the battery,
       KOEO and KOER.
-      Result: Partial: KOEO 11.76–11.92 V, KOER 13.84–14.0 V (charging). Still to do: compare with a multimeter.
+      Result: **Confirmed correct by the owner (2026-11-14)**: 13.52 V KOER on Linux.
+      Earlier: KOEO 11.76–11.92 V, KOER 13.84–14.0 V (charging). Still to do: compare with a multimeter.
 - [ ] **3.9 TPS.** `0D` × 20 mV at closed and at wide-open throttle (KOEO). Compare
       with the FSM spec.
       Result: ____
@@ -177,39 +181,46 @@ Do them one at a time. Restore the normal value and send `30` after each.
 - [ ] **4.3 `0A 84` AAC.** **Is the value signed ±0.5 % steps or absolute 0–`8C`?**
       Start with `00` and watch register `17`, then try `02`.
       Result: ____
-- [ ] **4.4 `0A 88` power balance.** **Is the value a bitmask (`01`, `02`, `04`…) or a
+- [x] **4.4 `0A 88` power balance.** **Is the value a bitmask (`01`, `02`, `04`…) or a
       cylinder number (`01`–`06`)?** Watch the RPM drop. Record which cylinder number
       matches which bit.
-      Result: ____
+      Result: Partial (Linux 2026-11-14, KOER warm idle): `0A 88 01` for 5 s **cut cylinder 1**: the owner felt the idle go rough. Just after the stop: 700 rpm (was 662), timing 9° (was 15°), RH injector 1.55 ms (was 2.32) while LH stayed ~2.5, which fits cylinder 1 being on the RH bank. `01` means cylinder 1 under both encodings, so bitmask vs number is still open (it first differs at cylinder 3). Log: `logs/2026-11-14_4.4-cut-cyl1.log`.
 - [ ] **4.5 `0A 89` fuel pump.** Do this KOEO only. **Does `00` mean ON or OFF?**
       Listen for the pump.
       Result: ____
 - [ ] **4.6 `0A 80` coolant override.** Set it to 100 °C (`96`). Does the cooling fan
       turn on? Send `30` and confirm it returns to normal.
       Result: ____
-- [ ] **4.7 `0A 93` / `0A 94` fan Lo/Hi.** Do the fans run?
-      Result: ____
+- [x] **4.7 `0A 93` / `0A 94` fan Lo/Hi.** Do the fans run?
+      Result: **Works** (Linux 2026-11-14): `0A 93 01` (5 s) and `0A 94 01` (10 s); the owner thinks the fan ran. `1E` bit 1 was set before the fan-low test and clear after, so bit 1 may be fan low (see 3.18). Logs: `logs/2026-11-14_4.7-fan-low.log`, `logs/2026-11-14_4.7-fan-high.log`.
 - [ ] **4.8 `0A 8B` clear self-learn.** Does register `1C` reset? (Do this last. It
       resets the fuel trims, and the car re-learns them.)
       Result: ____
-- [ ] **4.9 Active test echo format.** Is the echo `F5 t v`?
-      Result: ____
+- [x] **4.9 Active test echo format.** Is the echo `F5 t v`?
+      Result: **Yes, the echo is `F5 t v`** (e.g. `F5 93 01`). After `F0` the ECU sends `FF 00` (empty frames) continuously, about 100 per second, until `30`, which it acks with `CF`. No live data is sent while a test is held.
 
 ## 5. ROM / RAM read (engine)
 
-- [ ] **5.1 Single byte.** `C9 80 00 F0`. Expect the echo `36 80 00` and a frame
+- [x] **5.1 Single byte.** `C9 80 00 F0`. Expect the echo `36 80 00` and a frame
       `FF 01 xx`.
-      Result: ____
+      Result: **Works** (Linux 2026-11-14, KOER): `C9 80 00 F0` → echo `36 80 00`, frame `FF 01 FF`. 8 addresses per request also work (`FF 08 …`). About 55 ms per 8-byte request. Log: `logs/2026-11-14_5.1-mem.log`.
 - [ ] **5.2 8-byte limit.** Read 8 addresses, then 9. What happens at 9?
       Result: ____
-- [ ] **5.3 Full dump.** Read `0x8000–0xFFFF` and save it to `rom/<partnumber>.bin`.
+- [x] **5.3 Full dump.** Read `0x8000–0xFFFF` and save it to `rom/<partnumber>.bin`.
       Time how long it takes.
-      Result: ____
-- [ ] **5.4 Repeatability.** Dump it a second time. Is the result byte-identical?
-      Result: ____
-- [ ] **5.5 Below 0x8000.** Read a few addresses in `0x0000–0x7FFF` (RAM and I/O). Do
+      Result: **Done** (Linux 2026-11-14, KOER): `rom/23710-2L904_8000-FFFF.bin`, 32 768 bytes in 238 s (`python -m consult rom-dump`), one echo retry. sha256 `eb23a73a0d9ddaba8377df43c6abf0ba88c0c8fba6693e69cedc77028ef3615b`. ASCII `J8ZM06` at `0xFFCA` (calibration/software ID?). Vector-like table at `0xFFD0–0xFFFF` (mostly `7C44`) points **below** `0x8000`. Code-number table at `0x9E0E`: `11…18 21…28 … E1…E8 19…1F 10 …`, i.e. flag bit → 2-digit code; `A8` is a real entry. Log: `logs/2026-11-14_5.3-rom-dump.log`.
+- [x] **5.4 Repeatability.** Dump it a second time. Is the result byte-identical?
+      Result: **Byte-identical**: a second dump had the same sha256 (237 s). Log: `logs/2026-11-14_5.4-rom-dump2.log`.
+- [x] **5.5 Below 0x8000.** Read a few addresses in `0x0000–0x7FFF` (RAM and I/O). Do
       some values change between reads at idle? If so, those are live variables.
-      Result: ____
+      Result: **Done (KOEO, Linux 2026-11-14).** Memory map from reads:
+      - `0000–007F`: not read on purpose (probably CPU hardware registers).
+      - `0080–0FFF`: **RAM**. Two reads 30 s apart differ in 186 bytes, mostly around `0180–02FF` and `0880–0FFF`. `rom/ram_0080-0FFF_{1,2}.bin`.
+      - `1000–2FFF`: data tables (maps); `3000–3BFF`: all `00`; `3C00–FFFF`: code and data. `0x1000–0x7FFF` dumped in 205 s with no retries: `rom/23710-2L904_1000-7FFF.bin` (sha256 `572ddafc…fa92`). Combined image: `rom/23710-2L904_1000-FFFF.bin`.
+      - The code looks like the **Mitsubishi 7700 family** (`42` accumulator-B prefix, little-endian operands into `09xx` RAM, vectors at `FFD6–FFFF`). Confirm from the chip markings (11.3).
+      The ECU kept answering normally after every read (init, `D1`, live data).
+      Logs: `logs/2026-11-14_5.5-rom-dump-low.log`, `logs/2026-11-14_5.5-ram.log`.
+      Earlier: Partial: `0x4470–0x448F` (around the `7C44` vector target) reads the same 3 times and doesn't mirror `0xC470`, so there is more ROM below `0x8000` (internal CPU ROM?). The bottom of the space wasn't read on purpose: I/O registers may be there, and reading some can clear flags. Need the CPU type (11.2/11.3) for the memory map before dumping `0x0000–0x7FFF`. Log: `logs/2026-11-14_5.5-mem.log`.
 - [ ] **5.6 Compare with ECUTalk.** If possible, dump with ECUTalk too and compare the
       two files.
       Result: ____
@@ -221,13 +232,20 @@ Do them one at a time. Restore the normal value and send `30` after each.
       Result: ____
 - [ ] **6.2 Init scan.** Try `FF FF xx` for every `xx` from `00` to `FF`, sending `30`
       and draining between tries. List every value that gets a reply.
-      Result: ____
+      Result: **Done (Linux 2026-11-14, KOEO, `python -m consult init-scan`).** Four units, all reply `~id`: **`DA`→`25`, `DC`→`23`, `E7`→`18`, `ED`→`12` (engine)**. `EA` (A/T per the docs) and `EF` get nothing. The `00 00` "hits" at `00`, `DB`, `DD`, `E8`, `EE` always follow a real hit (or the precheck's engine session): it's the previously selected unit letting go, not a unit. So the complement rule holds for every unit (answers 6.1's question without the A/T at `EA`). Log: `logs/2026-11-14_6.2-init-scan.log`.
 - [ ] **6.3 Repeat 6.2 KOER and with the ASCD main switch ON.** Do any new units appear?
       Result: ____
 - [ ] **6.4 Identify each hit.** Run `D0` on each, and pull fuses one at a time to see
       which unit drops out. Write down which init byte is the BCM, the ASCD and the
       airbag unit.
-      Result: ____
+      Result: **D0 done, fuses not yet (2026-11-14, KOEO).**
+      - `DA`: 20 bytes `25 13 00 07 1f 00 01 01 3a d3 df 01 70 01 50 32 4c 39 30 30`, ASCII tail `2L900`. Same layout family as the engine frame. ~~Guess: A/T unit~~ (the car is a manual). **`DA` = ASCD cruise unit (confirmed 15:2x):** after a key cycle (main switch off) `DA` stopped answering init while `ED` still did; with the ASCD MAIN switch ON it answers again with the same D0.
+      - `DC`: 2 bytes `12 a0`, no ASCII. Guess: BCM (IVMS) or ASCD.
+      - `E7`: 12 bytes `11 52 41 32 37 33 20 30 4c 37 30 31` = `.RA273 0L701`. Unknown; airbag or ABS? **Treat as possibly-SRS (read-only) until identified.** Later (15:23–15:29, lamp watched, never blinked): `C9` → `FE` on the command byte. Command probe (no F0): only `D0` echoes; `9E`, `9F`, `D1` get **silence**, and then `F0` → `FE` (so also unsupported); the other 245 → `FE` at once; `FE` → `FF`. So E7 supports only D0 with the standard commands. Odd for the BCM, which the manual says has self-diag, data monitor and active tests. Logs: `logs/2026-11-14_8.1-c9-E7.log`, `logs/2026-11-14_7.x-cmd-probe-E7.log`, `logs/2026-11-14_7.4-9f-E7.log`.
+      **`8F` silences E7 (15:31–15:44).** Argument scan of `9F`, `D1`, `9E` + `00..FF` (no F0): every argument → `FE` except **`8F`**, after which E7 ignores init. In the scan it came back by itself after ~32 s (sent a lone `20`, then answered). After `D1 8F F0` (15:41:04) it stayed silent for >2.5 min: no reply to F0, no stop ack, no init reply even after a door open/close; engine `ED` answered fine; windows and locks worked. **A key cycle restored it** (same D0). Nothing visible happened in the car; lamp never blinked. Treat `8F` on E7 as "stop talking"; don't send it again. Logs: `logs/2026-11-14_7.x-argscan-E7.log`, `logs/2026-11-14_7.x-d1-8f-E7.log`.
+      - D1: `DA` answers `FE` (unsupported?); `E7` sends nothing; **`DC` returns 6 bytes `20 20 20 20 20 40`**, not code/count pairs. Six bytes = the six IVMS self-diag items (PW C/U DR, AS, RR, RL, MULTI-REMOTE, BCM; BODY_DIAG_PLAN §1.4), so **`DC` is very likely the BCM**. `20` = OK? `40` on the 6th (BCM)? Confirm with 7.2.
+      Next: pull fuses one at a time / ASCD switch on-off and re-init each ID.
+      Logs: `logs/2026-11-14_6.4-id-{DA,DC,E7}.log`.
 - [ ] **6.5 A/T data.** Run `9F` (stream all). Record the frame layout. Check gear,
       selector position and fluid temperature against reality.
       Result: ____
@@ -242,10 +260,13 @@ Do them one at a time. Restore the normal value and send `30` after each.
       Result: ____
 - [ ] **7.3 Erase.** Does `C1` clear it?
       Result: ____
-- [ ] **7.4 Stream all.** Does `9F` work on the BCM?
-      Result: ____
-- [ ] **7.5 Register scan.** Send `5A 00..FF` to the BCM and list the supported registers.
-      Result: ____
+- [x] **7.4 Stream all.** Does `9F` work on the BCM?
+      Result: **No** (`DC`, 2026-11-14 KOEO): `9F F0` → `FE`. `C9` (any address) also → `FE FE FE`. Logs: `logs/2026-11-14_7.4-9f-DC.log`, `logs/2026-11-14_8.1-c9-DC.log`.
+- [x] **7.5 Register scan.** Send `5A 00..FF` to the BCM and list the supported registers.
+      Result: **12 registers, but only when paced.** Sent as one burst, every `5A xx` → `FE` (`logs/2026-11-14_7.5-reg-scan-DC.log`). The BCM needs **one byte at a time, each after its echo** (now automatic for non-engine IDs in `protocol.py`), and takes **only one `5A` per request** (a second gets `FE`). Command-byte probe (no F0): only `5A C9 D0 D1` echo, plus untested `0A C1` (`logs/2026-11-14_7.x-cmd-probe-DC.log`). Paced scan of 00–FF accepts (frame length; KOEO, doors closed):
+      `8A` (10) all `20` · `8B` (5) all `20` · `8C` (1) `FF` · `96` (1) `40` · `97` (1) `00` · `9A` (5) all `20` · `A7` (6) all `FF` · `A8` (1) `00` · `A9` (1) `00` · `AA` (1) `FF` · `AB` (25) all `20` · `AC` (1) `6B`.
+      `8B` (5×`20`) + `96` (`40`) = the 6-byte D1 reply, so D1 is probably those two. Paced `9F` → `FE` (unsupported). Paced `C9`: echoes `36` and the high byte (`80`, `F0`, `01`, `00`) but answers `FE` to low byte `00`, like `5A` rejecting unlisted registers; scanning low bytes is still to do (`logs/2026-11-14_8.1-c9-paced-DC.log`). Log: `logs/2026-11-14_7.5-paced-DC.log`.
+      Tool: `python -m consult --ecu DC watch-raw 8A 8B 8C 96 97 9A A7 A8 A9 AA AB AC` (full sweep ≈1.4 s, prints changes as `reg+offset old->new`).
 - [ ] **7.6 Differential logging.** Change one input at a time and record which byte
       and bit changes:
   - [ ] Key in / out
@@ -266,7 +287,11 @@ Do them one at a time. Restore the normal value and send `30` after each.
   - [ ] Key cylinder lock / unlock, DR and AS
   - [ ] Each door's unlock sensor
   - [ ] Remote fob: lock, unlock, panic, trunk
-      Result: ____
+      Result: **Partial, nothing mapped yet (`DC`, 2026-11-14 KOEO).** Tried driver door, headlamp 1st, driver seat belt, driver window (down/up/auto).
+      - 12 `5A` registers (`watch-raw`): **no byte changed** for any input. They look like stored results/text (mostly `20`), not live data. Log: `logs/2026-11-14_7.6-diff-DC.log`.
+      - `C9` is accepted only at **`FF00–FF5F`** (scanned lo 00–FF for hi 00 01 02 04 08 10 20 40 80 C0 F0 FF), max **6 addresses per request**. `FF06–FF07` = `12 A0` = the D0 reply. Log: `logs/2026-11-14_8.1-c9-lo-scan-DC.log`.
+      - `watch-mem FF00 -n 96` (≈4.6 s/sweep): **no byte follows an input.** `FF04` toggles `00`/`90` every ~4.6 s; `FF2F` bit 7 clears for ~5–9 s about **every 60 s** (32, 92, 156 s in two separate runs). Both are timers. FF2F first looked like the door, then the belt: a coincidence, so don't trust single-event matches without a repeat. Logs: `logs/2026-11-14_7.6-mem-diff{,3}-DC.{log}`.
+      - So the BCM data monitor is **not** `5A` on these registers and not `FF00–FF5F`. Next: C9 scan of the remaining hi bytes; try `5A` with the registers paced *and* streamed (no re-request); capture a real Consult tool (12.1).
 - [ ] **7.7 Intermittent wiper knob.** Sweep the knob from end to end. Which register
       changes smoothly? Record the raw values at each end so the kΩ scale (0 to about
       1.0) can be fitted.
@@ -320,6 +345,9 @@ Do them one at a time. Restore the normal value and send `30` after each.
 - [ ] **10.1 Find it.** Find its init byte (from 6.2), then run `D0` and `D1` only.
       **No `0A`, no unknown commands, no unplugging SRS connectors.**
       Result: ____
+- **Incident 2026-11-14 ~15:13 (KOEO, charger just connected).** The AIR BAG lamp **blinked uniformly** (no code pattern) during a paced `C9` scan **of the BCM (`DC`)**: init `FF FF DC`, then 69 × `C9 hi lo` for hi `00–11`, all rejected `FE` at the low byte; no `F0` sent, nothing to `E7`. Stopped within ~7 s (`logs/2026-11-14_8.1-c9-hi-scan-DC.log`). Key cycle → lamp on ~7 s then off (normal). Cause unknown: bus traffic, the charger hook-up, or low voltage (11.9 V seen earlier) are all possible. Before any more C9 scans on the BCM, have someone watch the AIR BAG lamp and stop at the first blink.
+- **Reproduced 15:15:36:** init `FF FF DC`, `30`, then the single byte `C9` (echo `36`), then `30` (taken as an address byte, no ack). **The AIR BAG lamp started blinking.** (Init alone vs. `C9` not separated.) **Control 15:22:28:** the same kind of single `C9` sent to `DA` (ASCD) did **not** blink the lamp. With a manual car the Consult units are ENGINE, ASCD, AIRBAG, IVMS; `ED` = engine, `DA` = ASCD, so **`DC` = AIRBAG (SRS) and `E7` = BCM (IVMS)** by elimination plus the lamp behaviour. **Revised after reading fsm/ (16:05):** RS-34/35: Consult switches the SRS unit from User mode into **Diagnosis mode** (exit via BACK or ignition OFF), and in Diagnosis mode the lamp flashes patterns (RS-38). That matches `DC` exactly → **`DC` = AIRBAG confirmed**. BR-39: ABS is on Consult (self-diag, data monitor, **active tests drive the brake solenoids and pump motor**) and "ignore the ECU part number" → **`E7` is most likely ABS**, not the BCM. Consult system list (RS-34): ENGINE, A/T, AIRBAG, ABS, IVMS. So the **BCM never answered the init scan**. Never send `0A` to `E7`.
+      **Wiring (fsm):** BCM (EL-180), ABS (BR-33) and SRS (RS-31) all use Consult connector (M2) **pin 1 = unit RX, pin 2 = unit TX**, no clock (ABS also has DIAG L on pin 4). BCM power: BAT 7.5 A #56, ACC 7.5 A #19, IGN 7.5 A #12; ABS power: IGN only (10 A #15/#17). ~~Discriminator: init scan at key ACC~~ **Tried 16:06: zero RX bytes from anything, because Consult connector pin 7 (dongle power) is IGN-fed (10 A #17, BR-33).** Fuse-pull test skipped by choice (2026-11-14): **`E7` taken as ABS** (high confidence: on Consult per BR-39, part number "ignore", only D0 works). The BCM did not answer any init; its ID is unknown. Log: `logs/2026-11-14_6.x-init-scan-ACC.log`. SRS unit also has a driver-door-switch input (diagnosis-mode entry, RS-38). Everything logged as "BCM (`DC`)" in §7 and §8.1 was actually sent to the airbag unit. **`DC` may be the airbag unit, not the BCM** (original note): its 2-byte D0, the 6 D1 bytes and the total lack of body-input response all fit that too. **Send nothing to `DC` until it is identified without bus traffic** (e.g. key off, pull the BCM fuse, re-run only the init scan, see which ID disappears). Log: `logs/2026-11-14_10.x-srs-lamp-test.log`.
 
 ## 11. Hardware (key off, battery disconnected)
 

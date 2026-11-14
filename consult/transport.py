@@ -11,7 +11,9 @@ import time
 if os.name == "nt":
     import serial
 else:
+    import fcntl
     import select
+    import struct
     import termios
 
 DEFAULT_DEV = "COM4" if os.name == "nt" else "/dev/ttyUSB0"
@@ -40,11 +42,16 @@ class Transport:
         iflag = 0
         oflag = 0
         lflag = 0
+        # No HUPCL, so closing the port doesn't toggle DTR either.
         cflag = termios.CS8 | termios.CREAD | termios.CLOCAL
         cc[termios.VMIN] = 0
         cc[termios.VTIME] = 0
         termios.tcsetattr(self.fd, termios.TCSANOW,
                           [iflag, oflag, cflag, lflag, termios.B9600, termios.B9600, cc])
+        # Linux raises DTR and RTS on open; drop them to match the Windows path (and
+        # .NET SerialPort / ECUTalk), which is the setup verified on the car.
+        fcntl.ioctl(self.fd, termios.TIOCMBIC,
+                    struct.pack("I", termios.TIOCM_DTR | termios.TIOCM_RTS))
         termios.tcflush(self.fd, termios.TCIOFLUSH)
 
     def _ts(self):

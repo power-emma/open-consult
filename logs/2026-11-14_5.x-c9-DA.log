@@ -1,0 +1,62 @@
+  0.000098 ## open /dev/ttyUSB0 at 2026-11-14T15:21:24
+  0.000165 ## cmd: --test-id 5.x-c9-DA --ecu DA mem 8000 -n 1
+  0.000213 TX 30
+  0.803454 TX ff
+  1.084014 TX ff
+  1.154337 TX da
+  3.164422 TX 30
+  3.967412 TX ff
+  4.247729 TX ff
+  4.318163 TX da
+  6.327678 TX 30
+  7.131593 TX ff
+  7.412117 TX ff
+  7.482605 TX da
+  9.492413 TX 30
+ 10.295594 TX ff
+ 10.576271 TX ff
+ 10.646907 TX da
+ 12.656435 TX 30
+ 13.459703 TX ff
+ 13.740191 TX ff
+ 13.810638 TX da
+ 15.820458 ## close
+  0.000095 ## open /dev/ttyUSB0 at 2026-11-14T15:22:28
+  0.000172 ## cmd: --test-id 5.x-c9-DA --ecu DA mem 8000 -n 1
+  0.000193 TX 30
+  0.007922 RX cf
+  0.208083 TX ff
+  0.488526 TX ff
+  0.559075 TX da
+  0.559491 RX 00
+  0.559518 RX 00
+  0.564514 RX 25
+  0.564569 ## init ok id=DA attempt=1 secs=0.005
+  0.564655 TX c9
+  0.584242 RX 36
+  0.584311 TX 80
+  0.603344 RX 80
+  0.603419 TX 00
+  0.623241 RX fe
+  0.623324 ## command try 1 failed: bad echo 36 80 fe, expected 36 80 00
+  0.623339 TX 30
+  0.643326 RX cf
+  0.743925 TX c9
+  0.762026 RX 36
+  0.762109 TX 80
+  0.782004 RX 80
+  0.782075 TX 00
+  0.802010 RX fe
+  0.802096 ## command try 2 failed: bad echo 36 80 fe, expected 36 80 00
+  0.802151 TX 30
+  0.822045 RX cf
+  0.922658 TX c9
+  0.940851 RX 36
+  0.940914 TX 80
+  0.960817 RX 80
+  0.960860 TX 00
+  0.981165 RX fe
+  0.981208 ## command try 3 failed: bad echo 36 80 fe, expected 36 80 00
+  0.981219 TX 30
+  1.001151 RX cf
+  1.101922 ## close

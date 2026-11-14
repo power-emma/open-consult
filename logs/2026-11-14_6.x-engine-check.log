@@ -1,0 +1,9 @@
+  0.000140 ## open /dev/ttyUSB0 at 2026-11-14T15:21:51
+  0.000209 ## cmd: --test-id 6.x-engine-check init
+  0.000232 TX 30
+  0.804252 TX ff
+  1.084923 TX ff
+  1.155588 TX ed
+  1.159314 RX 12
+  1.159367 ## init ok id=ED attempt=1 secs=0.003
+  1.159401 ## close

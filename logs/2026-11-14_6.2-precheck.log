@@ -1,0 +1,12 @@
+  0.000085 ## open /dev/ttyUSB0 at 2026-11-14T14:31:13
+  0.000116 ## cmd: --test-id 6.2-precheck init
+  0.000135 TX 30
+  0.003879 RX cf
+  0.204434 TX ff
+  0.485127 TX ff
+  0.555584 TX ed
+  0.555891 RX 00
+  0.555917 RX 00
+  0.559102 RX 12
+  0.559163 ## init ok id=ED attempt=1 secs=0.003
+  0.559170 ## close

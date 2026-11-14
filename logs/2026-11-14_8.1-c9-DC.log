@@ -1,0 +1,60 @@
+  0.000096 ## open /dev/ttyUSB0 at 2026-11-14T14:39:21
+  0.000131 ## cmd: --test-id 8.1-c9-DC --ecu DC mem 8000 -n 8
+  0.000157 TX 30
+  0.012083 RX cf
+  0.212567 TX ff
+  0.492924 TX ff
+  0.563474 TX dc
+  0.563782 RX 00
+  0.563816 RX 00
+  0.576533 RX 23
+  0.576576 ## init ok id=DC attempt=1 secs=0.013
+  0.576622 TX c9 80 00 c9 80 01 c9 80 02 c9 80 03 c9 80 04 c9 80 05 c9 80 06 c9 80 07
+  0.600440 RX fe fe
+  0.605532 RX fe
+  1.106059 ## command try 1 failed: bad echo fe fe fe, expected 36 80 00 36 80 01 36 80 02 36 80 03 36 80 04 36 80 05 36 80 06 36 80 07
+  1.106122 TX 30
+  1.111224 RX cf
+  1.211603 TX c9 80 00 c9 80 01 c9 80 02 c9 80 03 c9 80 04 c9 80 05 c9 80 06 c9 80 07
+  1.234122 RX fe fe
+  1.239175 RX fe
+  1.739944 ## command try 2 failed: bad echo fe fe fe, expected 36 80 00 36 80 01 36 80 02 36 80 03 36 80 04 36 80 05 36 80 06 36 80 07
+  1.739978 TX 30
+  1.744637 RX cf
+  1.845019 TX c9 80 00 c9 80 01 c9 80 02 c9 80 03 c9 80 04 c9 80 05 c9 80 06 c9 80 07
+  1.868229 RX fe fe
+  1.873596 RX fe
+  2.374271 ## command try 3 failed: bad echo fe fe fe, expected 36 80 00 36 80 01 36 80 02 36 80 03 36 80 04 36 80 05 36 80 06 36 80 07
+  2.374307 TX 30
+  2.378206 RX cf
+  2.478637 ## close
+  0.000049 ## open /dev/ttyUSB0 at 2026-11-14T14:39:23
+  0.000077 ## cmd: --test-id 8.1-c9-DC --ecu DC mem 0100 -n 8
+  0.000096 TX 30
+  0.011065 RX cf
+  0.211202 TX ff
+  0.491747 TX ff
+  0.562106 TX dc
+  0.562432 RX 00
+  0.562459 RX 00
+  0.565205 RX 23
+  0.565263 ## init ok id=DC attempt=1 secs=0.003
+  0.565299 TX c9 01 00 c9 01 01 c9 01 02 c9 01 03 c9 01 04 c9 01 05 c9 01 06 c9 01 07
+  0.588409 RX fe fe
+  0.595548 RX fe
+  1.096162 ## command try 1 failed: bad echo fe fe fe, expected 36 01 00 36 01 01 36 01 02 36 01 03 36 01 04 36 01 05 36 01 06 36 01 07
+  1.096197 TX 30
+  1.099946 RX cf
+  1.200432 TX c9 01 00 c9 01 01 c9 01 02 c9 01 03 c9 01 04 c9 01 05 c9 01 06 c9 01 07
+  1.224373 RX fe fe
+  1.228919 RX fe
+  1.729646 ## command try 2 failed: bad echo fe fe fe, expected 36 01 00 36 01 01 36 01 02 36 01 03 36 01 04 36 01 05 36 01 06 36 01 07
+  1.729679 TX 30
+  1.733543 RX cf
+  1.833995 TX c9 01 00 c9 01 01 c9 01 02 c9 01 03 c9 01 04 c9 01 05 c9 01 06 c9 01 07
+  1.856373 RX fe fe
+  1.862465 RX fe
+  2.363094 ## command try 3 failed: bad echo fe fe fe, expected 36 01 00 36 01 01 36 01 02 36 01 03 36 01 04 36 01 05 36 01 06 36 01 07
+  2.363128 TX 30
+  2.367848 RX cf
+  2.468186 ## close

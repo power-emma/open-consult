@@ -1,0 +1,23 @@
+  0.000111 ## open /dev/ttyUSB0 at 2026-11-14T13:21:38
+  0.000182 ## cmd: --test-id dtc-after-restart dtc
+  0.000222 TX 30
+  0.003598 RX cf
+  0.204105 TX ff
+  0.484582 TX ff
+  0.555251 TX ed
+  0.555638 RX 00
+  0.555672 RX 00
+  0.558606 RX 12
+  0.558646 ## init ok id=ED attempt=1 secs=0.003
+  0.558693 TX d1
+  0.561605 RX 2e
+  0.561633 TX f0
+  0.571568 RX ff
+  0.572546 RX 04
+  0.573540 RX 21
+  0.574513 RX f5
+  0.575514 RX a8
+  0.576515 RX f5
+  0.576537 TX 30
+  0.579607 RX cf
+  0.579644 ## close
