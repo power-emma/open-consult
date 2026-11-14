@@ -16,18 +16,18 @@ Legend for conditions:
 
 ## 0. Before connecting
 
-- [ ] **0.1 Dongle on Linux.** Plug the dongle into the PC only (not the car yet). Run
+- [x] **0.1 Dongle on Linux.** Plug the dongle into the PC only (not the car yet). Run
       `lsusb`, `dmesg | tail` and `ls /dev/ttyUSB*`.
       Record: VID:PID, chip type, driver, device node.
-      Result: ____
-- [ ] **0.2 Custom PID?** If no `/dev/ttyUSB*` appears, bind it with
+      Result: FTDI FT232R, `0403:6001`, serial `A7AHY3Q8`, `ftdi_sio`, `/dev/ttyUSB0` (Arch). EEPROM is factory default: CBUS0–4 = TXLED/RXLED/TXDEN/PWREN/SLEEP, so the chip outputs **no clock**; the cable must make its own. Log: `logs/2026-11-14_1.1.log`.
+- [x] **0.2 Custom PID?** If no `/dev/ttyUSB*` appears, bind it with
       `echo 0403 <pid> > /sys/bus/usb-serial/drivers/ftdi_sio/new_id`.
-      Result: ____
-- [ ] **0.3 Permissions.** Your user can open the port without sudo (`uucp`/`dialout` group).
-      Result: ____
-- [ ] **0.4 Latency timer.** Read `/sys/bus/usb-serial/devices/ttyUSB0/latency_timer`
+      Result: Not needed, stock PID.
+- [x] **0.3 Permissions.** Your user can open the port without sudo (`uucp`/`dialout` group).
+      Result: Port is `root:uucp 660`. Fixed with udev rule `/etc/udev/rules.d/99-consult.rules` (MODE 0666, symlink `/dev/consult`).
+- [x] **0.4 Latency timer.** Read `/sys/bus/usb-serial/devices/ttyUSB0/latency_timer`
       (the default is probably 16), then set it to 1.
-      Result: ____
+      Result: Default 16. The same udev rule sets it to 1 on plug-in (confirmed after a replug).
 - [ ] **0.5 Locate connectors.** Find the 14-pin Consult connector (grey, near the fuse
       block) and the 16-pin OBD-II connector. Take photos.
       Result: ____
@@ -41,7 +41,7 @@ Legend for conditions:
 
 - [ ] **1.1 Init.** Send `FF FF EF`. Expect `10`. Record how many attempts it took and
       how long the reply took.
-      Result: ____
+      Result: **FAILING on Linux (2026-11-14).** Key ON, engine off: 18+ inits, zero RX bytes ever, with all four DTR/RTS combinations, with and without a leading `30`. ECUTalk 1.5.0 under Wine on the same port behaves the same way (it sends `30` with DTR/RTS off and gets nothing back), so the Linux tool isn't the cause. ECUTalk reportedly works on Windows; next step is to run `python -m consult --dev COM4 init` there. Logs: `logs/2026-11-14_1.1*.log`, `logs/2026-11-14_12.2-ecutalk.log`.
 - [ ] **1.2 Init twice in a row.** What does the ECU send back to a second init while
       it's already initialised?
       Result: ____
