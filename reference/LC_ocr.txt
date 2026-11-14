@@ -1,0 +1,1324 @@
+===== PDF page 1 =====
+ENGINE LUBRICATION &
+COOLING SYSTEMS
+
+SECTION L C
+
+CONTENTS
+
+PRECAUTIONS AND PREPARATION. ............ccccuennee. 2 Water PUMP ceiver creer snare ene 9
+Liquid Gasket Application Procedure ............ccecceuenne. 2 Thermostat.........cceeiiiicceecninnr ieee 14
+Special Service TOOIS .........c.oceiiininiieie, 3 RAGIALON ...veveverieeeceerese sss sesseasssassensosins 15
+
+ENGINE LUBRICATION SYSTEM.........coocoevvnnininiriannnns 4 Cooling Fan Control System .......cecriremesnsnsensnens 15
+Lubrication GirCUI.......cce veces reerecs reese snens 4 Radiator (AIUMINUM YP) ...ceeuereerreerrrerereeassenacsneeeans 16
+Oil Pressure CheCK......ciiiicieeveresecrrrcenenianecneveee onan 5 Overheating Cause Analysis ........cccermeceerinninn nine, 19
+Oil PUMP cette ceeienieeeeeseretcrer eee sateete sna ess srtnssne nee 5 SERVICE DATA AND SPECIFICATIONS (SDS) .......... 20
+
+ENGINE COOLING SYSTEM................ccocerveereeee irene 8 Engine Lubrication SyStem.........ccccccueereererserersessnanns 20
+Cooling Circuit ..........cccooriviii eres 8 ENGINE COONNG SYSIOM .vvvveeereeeeresrereeeaeesesenessseaens 20
+System Check... creer eee 9
+
+MA
+
+EM
+
+CL
+
+MT
+
+AT
+
+ag
+
+EL
+
+IDX
+
+147
+
+===== PDF page 2 =====
+148
+
+PRECAUTIONS AND PREPARATION
+
+&
+
+Groove
+
+o>
+
+(LD
+(vin Inner
+
+side
+
+Bolt hole
+
+SEM164F
+
+Inner side
+
+AEMO080
+
+Liquid Gasket Application Procedure
+
+a. Use a scraper to remove all traces of old liquid gasket from
+mating surfaces and grooves. Also, completely clean any oil
+from these areas.
+
+b. Apply a continuous bead of liquid gasket to mating surfaces.
+(Use Genuine RTV silicone sealant Part No. 999MP-A7007,
+Three Bond TB1207D or equivalent.)
+
+c. Apply liquid gasket around the inner side of bolt holes (unless
+
+otherwise specified).
+
+d. Assembly should be done within 5 minutes after coating.
+
+e. Wait at least 30 minutes before refilling engine oil and engine
+coolant.
+
+LC-2
+===== PDF page 3 =====
+PRECAUTIONS AND PREPARATION
+
+Special Service Tools
+
+The actual shapes of Kent-Moore tools may differ from those of special service tools illustrated here.
+
+Tool number
+(Kent-Moore No.)
+Tocl name
+
+Description
+
+ST25051001
+(J25695-1)
+Oil pressure gauge
+
+NTO050
+
+$T25052000
+(J25695-2)
+Hose
+
+NTO51
+
+Adapting oil pressure gauge to
+upper oil pan
+
+WS39930000
+« —)
+Tube pressure
+
+NT052
+
+Pressing the tube of liquid gasket
+
+EG17650301
+(J33984-A)
+Radiator cap tester adapter
+
+NT053
+
+Adapting radiator cap tester to
+radiator filler neck
+
+KV99103510
+« —
+Radiator plate pliers A
+
+NT224
+
+Installing radiator upper and lower tanks
+
+KV99103520
+« —
+Radiator plate pliers B
+
+NT226
+
+Wr, o—
+
+Removing radiator upper and lower tanks
+
+LC-3
+
+MA
+
+EM
+
+EG
+
+FE
+
+CL
+
+MT
+
+AT
+
+FA
+
+149
+===== PDF page 4 =====
+ENGINE LUBRICATION SYSTEM
+
+Lubrication Circuit
+
+Intake camshaft No. 2 journal
+Exhaust camshaft
+
+Camshaft chain tensioner lubrication
+Exhaust camshaft No. 1 journal
+
+Intake camshaft 2
+
+Main gallery
+
+Chain case oil gallery
+
+Oil jet
+
+Gil pump
+
+] , Oil strainer
+Aluminum oil pan
+
+Sz
+Oil pan oil galiery ’ Oil filter
+SLC036B
+
+ne cel fe H
+! .
+!
+H N 1]
+i | |
+: <4 oittiow
+' £777 Oilsplash !
+I “ ‘
+| ~—— To oil pan :
+14 1
+\ ---- By-pass passage H
+: !
+H i
+' .
+: :
+H Chain tensioner H
+N 1
+i i
+| '
+: :
+H Main oil gallery Cylinder head '
+H Timing chain oil passage :
+} oil jet H
+: :
+1 intake camshaft Intake camshalt Exhaust camshaft Camshaft chain 1
+1 journal (#2) journal (#1) journal (#1) tensioner :
+H
+
+:
+} 1
+{ Crankshaft Camshait oil :
+i passage i
+t Conneating rod Exhaus camshak :
+) aaiing journal (#2.3,4) :
+) IT {
+{ Connecting |
+: Exhaust camshaft ‘
+i 37
+| [=] |
+H 1
+| [re]
+H 1
+! 1
+V ; i
+
+SLC037B
+
+150 LC-4
+===== PDF page 5 =====
+ENGINE LUBRICATION SYSTEM
+
+Oil pressure switch
+(\\T \
+
+SLCI30A
+
+Qil Pressure Check
+
+WARNING:
+
+® Be careful not to burn yourself, as the engine and oil may
+be hot.
+
+eo Oil pressure check should be done in “Neutral position”
+(M/T) or “Parking position” (A/T).
+
+1. Check oil level.
+
+2. Remove oil pressure switch.
+
+3. Install pressure gauge.
+
+4. Start engine and warm it up to normal operating temperature.
+
+5. Check oil pressure with engine running under no-load.
+
+ST25051001
+(J25695-1)
+
+ST25052000
+(J25695-2)
+
+SLC826
+
+Engine speed Approximate discharge pressure
+rpm kPa (kg/cm?, psi)
+Idle speed More than 69 (0.70, 10.0)
+3,000 435 - 551 (4.44 - 5.62, 63.1 - 79.9)
+
+If difference is extreme, check oil passage and oil pump for oil
+leaks.
+6. Install oil pressure switch with sealant.
+
+Oil Pump
+
+REMOVAL AND INSTALLATION
+
+CAUTION:
+
+When removing the oil pans, oil pump assembly and timing
+chain from engine, first remove the camshaft position sensor
+(PHASE) and the crankshaft position sensor (REF)/(POS) from
+the assembly.
+
+Be careful not to damage sensor edge.
+
+Drain engine oil.
+
+Remove drive belts.
+
+Remove camshaft position sensor (PHASE), and crankshaft
+
+position sensor (REF)/(POS).
+
+Remove engine lower covers.
+
+Remove crankshaft pulley.
+
+Remove front exhaust tube and its support.
+
+Support engine at right and left side engine slingers with a
+
+suitable hoist.
+
+Remove engine right side mounting insulator and bracket bolts
+
+and nuts.
+
+Remove center member assembly.
+
+0. Remove air compressor assembly and bracket.
+
+1. Remove oil pans. (Refer to “Removal” of “OIL PAN” in EM
+section.)
+
+12. Remove water pump cover.
+
+13. Remove front cover assembly.
+
+14. Remove timing chain. {Refer to “Removal” of “TIMING
+
+CHAIN" in EM section.)
+15. Remove oil pump assembly.
+16. Reinstall any parts removed in reverse order of removal.
+
+NOOR WN
+
+“zo ©
+
+LC-5
+
+@l
+
+AT
+
+FA
+
+BR
+
+ST
+
+RS
+
+BT
+
+FA
+
+EL
+
+IDX
+
+151
+===== PDF page 6 =====
+152
+
+ENGINE LUBRICATION SYSTEM
+
+Oil Pump (Contd)
+
+DISASSEMBLY AND ASSEMBLY
+SEC. 150 FY AST
+
+Qil pump body
+
+Outer gear
+
+Inner gear
+
+Oil pump cover
+
+D] 8.43 - 10.8 RD, Gaske! [X)
+
+- y (=)
+(0.86 - 1.10, 2 : . S
+74.6 - BI \ ) . : Oil strainer
+) Regulator valve
+[O] 16 - 19
+
+=
+=)!
+)
+(1.6 - 1.9, 12 - 14)
+~~
+
+Spring
+
+Regulator valve set”
+
+@] : Nem (kg-m, in-ib) 59-79 |G poser plug
+
+[0 : Nem (kg-m, ft-Ib) (0.60 - 0.81, 52.1 - 70.3) [0) 39 - 69 (4.0 - 7.0, 29 - 51)
+
+SLC1568B
+
+e When installing oil pump, apply engine oil to gears.
+
+OIL PUMP INSPECTION
+
+Using a feeler gauge, straightedge and micrometers, check the
+following clearances:
+
+Unit: mm (in)
+Body to outer gear radial clearance 0.114 - 0.200 (0.0045 - 0.0079)
+Inner gear to outer gear tip clearance @ Below 0.18 (0.0071)
+Body to inner gear axial clearance @ 0.030 - 0.070 (0.0012 - 0.0028)
+Body to outer gear axial clearance @ 0.050 - 0.110 (0.0020 - 0.0043)
+
+SLCO32A! Inner gear to brazed partion of housing clear- 0.045 - 0.091 (0.0018 - 0.0036)
+
+ance ®
+
+e [f the tip clearance {2 ) exceeds the limit, replace gear set.
+eo If body to gear clearances (1, ® , @ , ® ) exceed the limit,
+replace oil pump body assembly.
+
+SLCY33A
+
+LC-6
+
+===== PDF page 7 =====
+ENGINE LUBRICATION SYSTEM
+
+/ gear
+
+aN
+
+SLCA34AA
+
+Regulator valve
+Ir Quter spring
+
+~Inner spring
+
+SLCY59A
+
+AN
+Regulator valve
+
+C
+) ] Z AY
+5A )
+5
+Oil pump body @-® =®
+| SLC9Y35AA
+il filter b
+Oil filter body v a J
+Relief valve 3 — I
+Filtering -
+Screw J
+J
+Packing SLCO35B
+
+Oil Pump (Cont'd)
+
+REGULATOR VALVE INSPECTION
+1. Visually inspect components for wear and damage.
+2. Check oil pressure regulator valve sliding surface and valve
+
+spring.
+3. Coat regulator valve with engine oil. Check that it falls
+smoothly into the valve hole by its own weight.
+
+If damaged, replace regulator valve set or oil pump body.
+
+4. Check regulator valve to oil pump body clearance.
+
+Clearance:
+® : 0.040 - 0.097 mm (0.0016 - 0.0038 in)
+If it exceeds the limit, replace oil pump body.
+
+OIL FILTER
+The oil filter is a small, full-flow cartridge type and is provided with
+a relief valve.
+
+LC-7
+
+@
+MIA
+EM
+
+EG
+
+CL
+AT
+
+RA
+
+153
+===== PDF page 8 =====
+154
+
+ENGINE COOLING SYSTEM
+
+Cooling Circuit
+
+From heater
+
+—
+
+—t——
+
+=
+
+To heater
+
+Dd
+
+Lorne outlet
+
+t
+
+0
+
+0
+
+}
+
+Cylinder head Wi
+
+Cylinder block
+
+}
+1 of]
+
+Water J
+
+Bypass
+
+\ Radiator
+
+Water inlet
+Cylinder head (LH) Thermostat
+SLCY36A
+TTT Radiator
+1 TTT =
+| 1
+1 1
+Reservoir tank Thermostat
+Y
+Water pump
+'
+Heater
+Cylinder head Cylinder block
+Throttle body
+4
+: Thermostat open
+
+: Thermostat closed
+
+SLCY37A
+
+LC-8
+
+===== PDF page 9 =====
+ENGINE COOLING SYSTEM
+
+System Check
+
+WARNING:
+
+Never remove the radiator cap when the engine is hot; serious
+burns could be caused by high pressure fluid escaping from
+
+the radiator. @l
+Wrap a thick cloth around the cap and carefully remove it by
+turning it a quarter turn to allow built-up pressure to escape
+
+and then turn the cap all the way off. MA
+
+CHECKING COOLING SYSTEM HOSES
+
+Check hoses for improper attachment, leaks, cracks, damage, (g]if
+loose connections, chafing and deterioration.
+
+CHECKING RADIATOR CAP
+To check radiator cap, apply pressure to cap with a tester.
+Radiator cap relief pressure:
+Standard _
+78 - 98 kPa EC
+(0.8 - 1.0 kg/cm?, 11 - 14 psi)
+Limit
+59 - 98 kPa PE
+(0.6 - 1.0 kg/cm?, 9 - 14 psi)
+EG17650301 CL
+(J33984-A) SLC755A]
+Pull the negative pressure valve to open it. ie
+Check that it closes completely when released. ll
+FA
+SMAS67B
+CHECKING COOLING SYSTEM FOR LEAKS BR
+Hose adapter To check for leakage, apply pressure to the cooling system with a
+tester. ST
+
+Testing pressure:
+157 kPa (1.6 kg/cm?, 23 psi)
+
+CAUTION:
+Higher than the specified pressure may cause radiator dam- RS
+
+EG17650301
+
+{J33084-A) age.
+El]
+AS ~~ SLC756A
+Water Pump A
+CAUTION:
+
+e When removing water pump assembly, be careful not to [2
+get coolant on drive belt.
+
+e Water pump cannot be disassembled and should be
+replaced as a unit. 0)
+
+e After installing water pump, connect hose and clamp
+securely, then check for leaks using radiator cap tester.
+
+LC-9 155
+===== PDF page 10 =====
+156
+
+ENGINE COOLING SYSTEM
+
+Water Pump (Cont'd)
+
+SEC. 130210
+
+@] 8.4 - 108
+(0.86 - 1.10, 74.6 - 95.5)
+
+72-96
+
+{0.73 - 0.98, 63.4 - 85.1)
+
+Water pump
+
+f
+
+\
+Lo
+|
+
+i 10 - 13 \X
+[21 : Nom (kg-m, in-ib) 5 (1.0 - 1.3, 87 - 113)
+
+: Apply liquid gasket (Genuine RTV silicone sealant
+Part No. 999MP-A7007, Three Bond TB1207D or equivalent).
+
+Drain plug 10 - 13
+& (1.0 - 1.3, 87 - 113)
+FAQ 78-1138
+
+{0.80 - 1.20, 69.4 - 104.2)
+
+SLC1548B
+
+Water pump
+drain plug
+
+SLC9O39A
+
+i
+To
+. -
+Chain tensioner cover ~g—g
+
+INL) NO
+
+Chain tensioner assembly
+
+f
+
+SLC840A
+
+REMOVAL
+
+1. Drain coolant from drain plugs on radiator and both sides of
+cylinder block.
+
+Refer to “Changing Engine Coolant” in MA section.
+
+Remove right side engine mounting, mounting bracket and
+nuts.
+
+Remove drive belts and idler pulley bracket.
+
+Remove water pump drain plug.
+
+Remove chain tensioner cover and water pump cover.
+
+or DN
+
+6. Pushing timing chain tensioner sleeve, apply a stopper pin so
+it does not return. Then remove the chain tensioner assembly.
+
+LC-10
+===== PDF page 11 =====
+ENGINE COOLING SYSTEM
+Water Pump (Cont'd)
+
+(| 7. Remove the 3 water pump fixing bolts. Secure a gap between
+water pump gear and timing chain, by turning crankshaft pul-
+ley 20° backwards.
+
+1, (*)
+Turn 20°
+
+~~. counterclockwise.
+RY
+
+\ J
+Crank pul
+an PS —glcoara EM
+
+8. Put M8 bolts to two M8-threaded holes out of 3 water pump
+
+Timing chain rear case fixing bolt hol
+IXIN Olt holes.
+fom SUG) ’ ~
+NG
+op
+
+\
+M8
+SH EC
+
+D
+A > RE
+FR
+Wa cL
+
+{
+ter pump SLC942A
+
+9. Tighten M8 bolts by turning half turn alternately until they reach
+timing chain rear case. MT
+® In order to prevent damages to water pump or timing chain rear
+case, do not tighten one bolt continuously. Always turn each
+bolt half turn each time. AT
+10. Lift up water pump and remove it.
+eo When lifting up water pump, do not allow water pump gear to Ef
+hit timing chain. FA
+
+Sl
+
+RS
+
+4
+
+PA
+J Water pomp’ TS
+NN re
+
+BY
+
+Pn
+
+RIA
+
+SLCi16B
+
+LC-11 157
+===== PDF page 12 =====
+158
+
+ENGINE COOLING SYSTEM
+
+SLCY43A
+
+a Apply coolant.
+
+No
+
+1
+
+FIT TT THO
+A
+
+[Ili
+
+SLCO30BA
+
+Chain tensioner cover Water pump cover
+SLC944A
+
+Water pump cover
+
+presser
+
+#] (0.091 - 0.130 in)
+
+SLCY45AA
+
+Water Pump (Cont'd)
+INSPECTION
+
+1. Check for badly rusted or corroded body assembly.
+2. Check for rough operation due to excessive end play.
+
+INSTALLATION
+1. Apply engine oil and coolant to O-rings as shown in the figure.
+
+2. Install water pump.
+
+e Do not allow cylinder block to nip O-rings when installing
+water pump.
+
+3. Before installing, remove all traces of liquid gasket from mat-
+ing surface of water pump cover and chain tensioner cover
+
+using a scraper.
+Also remove traces of liquid gasket from mating surface of
+front cover.
+
+4. Apply a continuous bead of liquid gasket to mating surface of
+chain tensioner cover and water pump cover.
+
+LC-12
+===== PDF page 13 =====
+ENGINE COOLING SYSTEM
+Water Pump (Cont'd)
+
+5. Return the crankshaft pulley to its original position by turning
+it 20° forward.
+
+Crankshaft pulley SLC1568 EM
+
+6. Install timing chain tensioner, then remove the stopper pin.
+
+eo After installing the tensioner, race the engine at about
+3,000 rpm under no load to purge air from the high-pres-
+
+NN sure chamber. The engine may produce a rattling noise.
+
+Timing chain tensioner
+
+This indicates that air still remains in the chamber and is [EC
+not a matter of concern.
+
+7. Install drain plug on cylinder block.
+8. Reinstall any parts removed in reverse order of removal.
+
+WV SLCY61A
+
+FHA
+EL
+
+ox
+
+LC-13 159
+===== PDF page 14 =====
+160
+
+ENGINE COOLING SYSTEM
+
+Thermostat
+
+| SEC. 210
+
+Jel @, > h ge = / J inlet & Thermostat
+y J A ~\
+®) 3 T = ® 4, 84 - 11.2
+& (0.86 - 1.14, 74.6 - 99.0)
+
+<a
+
+§®): Nm (kg-m, in-ib)
+
+SLCO47AC
+
+SLC962AA
+
+Jiggle
+rey valve
+
+SLCY48A
+
+SLCO49A
+
+REMOVAL AND INSTALLATION
+
+1.
+
+Drain coolant from drain plugs on radiator and both sides of
+cylinder block.
+
+2. Remove drive belts and idler pulley bracket.
+
+3. Remove water pump drain plug on pump side of cylinder block.
+
+4. Remove lower radiator hose.
+
+5. Remove water inlet and thermostat assembly.
+
+¢ Do not disassemble water inlet and thermostat. Replace
+them as a unit, if necessary.
+
+6. Install thermostat with jiggle valve facing upward.
+
+e After installation, run engine for a few minutes, and check
+for leaks.
+
+eo Be careful not to spill coolant over engine compartment.
+Use a rag to absorb coolant.
+
+INSPECTION
+
+1. Check valve seating condition at ordinary room temperatures.
+it should seat tightly.
+
+2. Check valve opening temperature and maximum valve lift.
+
+Standard
+Valve opening temperature °C (°F) 82 (180)
+Valve lift mm/°C (in/°F) More than 8.6/95 (0.339/203)
+
+3.
+
+Then check if valve closes at 5°C (9°F) below valve opening
+temperature.
+
+LC-14
+===== PDF page 15 =====
+ENGINE COOLING SYSTEM
+
+Radiator
+
+REMOVAL AND INSTALLATION
+
+Remove under cover.
+
+Drain coolant from radiator. al
+Disconnect radiator upper and lower hoses. Hl
+Remove radiator shroud.
+
+Remove A/T oil cooler hoses. (A/T models only) MA
+Disconnect reservoir tank hose. a
+Remove radiator mounting bracket.
+
+Remove radiator. EN
+After repairing or replacing radiator, install any part removed in
+
+reverse order of removal.
+When filling radiator with coolant, refer to “Changing Engine
+Coolant” in MA section. :
+
+CONGO AWND =
+
+SEC. 214
+
+—
+
+@) 0.78 - 1.56
+
+[@] : Nem (kg-m, in-Ib}
+
+[@ 1.47 - 2.45
+
+(0.08 - 0.16, 6.9 - 13.9)
+
+5G
+
+3.82 - 4.51
+(0.39 - 0.46, 33.9 - 39.9)
+
+3.7 - 5.0
+
+(0.38 - 0.51, 33.0 - 44.3)
+
+=
+
+BY
+
+(0.15 - 0.25, 13.0 - 21.7)
+
+Si
+
+3.92 - 4.90
+(0.40 - 0.50, 34.7 - 43.4)
+
+SLC153B RS
+
+Radiator
+
+Radiator filler cap
+Reservoir tank
+Radiator drain cock
+
+Pee
+
+® Lower radiator hose Cooling fan motors
+® Oil cooler hoses (A/T models) ©@ Radiator shroud BI
+@ Cooling fans @®@ Upper radiator hose
+
+Cooling Fan Control System
+
+Cooling fans are controlled by ECM {ECCS control module).
+For details, refer to EC section (“Cooling Fan”, “TROUBLE DIAG- 3:
+NOSIS FOR DTC P1900"). -
+
+LC-15 161
+===== PDF page 16 =====
+162
+
+ENGINE COOLING SYSTEM
+
+Radiator (Aluminum type)
+
+SEC.214 Upper tank
+
+Sealing rubber €39 Sealing rubber €9
+
+Core
+
+Oil cooler securing nut
+8 - 12 Nem (0.8 - 1.2 kg-m, 69 - 104 in-lb)
+
+—-
+I &——— Conical washer X]
+
+~ Washer
+
+&——— O-ring (XC)
+
+Lower tank
+
+A/T model only
+
+Oil cooler
+
+SLC882AB
+
+PREPARATION
+
+1. Attach the spacer to the tip of the radiator plate pliers A.
+Spacer specification: 1.5 mm (0.059 in} thick x 18 mm (0.71 in}
+wide x 8.5 mm (0.335 in) long.
+
+2. Make sure that when radiator plate pliers A are closed dimen-
+sion H” is approx. 7.6 mm (0.299 in).
+
+3. Adjust dimension H” with the spacer, if necessary.
+
+KV99103510
+Unit: mm {in) t=)
+
+SLC655CB
+
+DISASSEMBLY
+1. Remove tank with Tool.
+
+e Grip the crimped edge and bend it upwards so that Tool slips
+off.
+Do not bend excessively.
+
+SLC893
+
+LC-16
+===== PDF page 17 =====
+ENGINE COOLING SYSTEM
+Radiator (Aluminum type) (Cont'd)
+
+® In areas where Tool cannot be used, use a screwdriver to bend
+the edge up.
+Be careful not to damage tank.
+Gi
+MA
+SLC930 [EW
+2. Make sure the edge stands straight up.
+3. Remove oil cooler from tank. (A/T models only)
+EC
+cL,
+SLC931
+ASSEMBLY _
+Oil cooler SS : MIT
+O-ring £34 1. Install oil cooler. (A/T models only)
+\ /~ Washer Pay attention to direction of conical washer.
+\ / — Conical washer #34 AT
+5]
+IFA
+RA
+— Lower tank
+SLC8Y94
+2. Clean contact portion of tank. BR
+RS
+SLCI32|
+: [A
+3. Install sealing rubber. i
+Push it in with fingers.
+Be careful not to twist sealing rubber. EL.
+DX
+
+LC-17 163
+===== PDF page 18 =====
+164
+
+ENGINE COOLING SYSTEM
+
+|
+
+— I~
+
+SLCO04-A
+
+Radiator (Aluminum type) (Contd)
+4. Caulk tank in specified sequence with Tool.
+
+Keep tool perpendicular to
+the radiator.
+
+]
+
+(Grip is insufficient.)
+SLC896
+
+SLC897
+
+SLC554A
+
+EG17650301
+(J33984-A)
+
+SLCY33-A
+
+e Use pliers in the locations where Tool cannot be used.
+
+5. Make sure that the rim is completely crimped down.
+Standard height “H":
+8.0 - 8.4 mm (0.315 - 0.331 in)
+6. Confirm that there is no leakage.
+
+Refer to Inspection.
+
+INSPECTION
+
+Apply pressure with Tool.
+Specified pressure value:
+157 kPa (1.6 kg/cm?, 23 psi)
+WARNING:
+To prevent the risk of the hose coming undone while under
+pressure, securely fasten it down with a hose clamp.
+Attach a hose to the oil cooler as well. (A/T models only)
+
+LC-18
+===== PDF page 19 =====
+ENGINE COOLING SYSTEM
+
+Overheating Cause Analysis
+
+Symptom
+
+Check items
+
+Poor heat transfer
+
+Water pump malfunction
+
+Worn or loose drive belt
+
+Thermostat stuck closed
+
+Damaged fins
+
+Dust contamination or paper
+clogging
+
+Mechanical damage
+
+Clogged radiator cooling tube
+
+Excess foreign material (rust,
+dirt, sand, etc.)
+
+Reduced air flow
+
+Cooling fan does not operate.
+
+High resistance to fan rotation
+
+Damaged fan blades
+
+Damaged radiator shroud
+
+Improper coolant mixture ratio — — -
+Cooling sys- | poor coolant quality — _ —
+tem parts
+malfunction ] Loose clamp
+Cooling hose
+Cracked hose
+Water pump Poor sealing
+Loose
+Radiator cap ;
+Coolant leaks Poor sealing
+O-ring for damage, deteriora-
+Insufficient coolant tion or improper fitting
+Radiator Cracked radiator tank
+Cracked radiator core
+Reservoir tank Cracked reservoir tank
+Cylinder head deterioration
+. . Exhaust gas leaks into cooling
+Overflowing reservoir tank system Cylinder head gasket deteriora-
+tion
+High engine rpm under no load
+iving in low gear for extended
+Abusive driving Driving In low g
+time
+Driving at extremely high speed
+— Overload on engine Powertrain system malfunction
+Installed improper size wheels
+and tires —
+Except cool- Dragging brakes
+ing system
+
+parts malfunc-
+tion
+
+Improper ignition timing
+
+Blocked or restricted air flow
+
+Blocked bumper
+
+Blocked radiator grille
+
+Installed car brassiere
+
+Mud contamination or paper
+clogging
+
+Blocked radiator
+
+Blocked condenser
+
+Installed large fog tamp
+
+LC-19
+
+VIA
+
+Fle
+
+Cl,
+
+[Y)
+
+AT
+
+[4
+
+2X
+
+165
+===== PDF page 20 =====
+166
+
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+Oil pressure
+
+Engine Lubrication System
+
+Oil pump
+
+Unit: mm (in)
+
+Body to outer gear radial clear-
+ance
+
+Engine speed Approximate discharge
+rpm pressure kPa (kg/cm?, psi)
+Idle speed More than 69 (0.70, 10.0)
+3,000 435 - 551 (4.44 - 5.62, 63.1 - 79.9)
+
+Inner gear to outer gear tip clear-
+ance
+
+Body to inner gear axial clearance
+
+Regulator valve
+
+Unit: mm (in)
+
+Body to outer gear axial clearance
+
+inner gear to brazed portion of
+housing clearance
+
+0.114 - 0.200 (0.0045 - 0.0079)
+
+Below 0.18 (0.0071)
+
+0.030 - 0.070 (0.0012 - 0.0028}
+0.050 - 0.110 (0.0020 - 0.0043)
+
+0.045 - 0.091 (0.0018 - 0.0036)
+
+Regulator valve to oil pump cover
+
+0.040 - 0.097 (0.0016 - 0.0038)
+
+clearance
+Engine Cooling System
+Thermostat Radiator Unit: kPa (kg/or?, ps)
+Valve opening temperature °C (°F) 82 (180) Cap relief Standard 78-98 (0.8-10, 11-14)
+pressure imi -98(0.6-1.0,9-14
+Valve lift mm/C (in/°F) Me i Limit 59 - 98 )
+
+Leakage test pressure
+
+157 (1.6, 23)
+
+LC-20

@@ -31,8 +31,8 @@ Legend for conditions:
 - [ ] **0.5 Locate connectors.** Find the 14-pin Consult connector (grey, near the fuse
       block) and the 16-pin OBD-II connector. Take photos.
       Result: ____
-- [ ] **0.6 Confirm the manual.** Check the `EL.pdf` cover: is it the 1998 Maxima?
-      Result: ____
+- [x] **0.6 Confirm the manual.** Check the `EL.pdf` cover: is it the 1998 Maxima?
+      Result: **Yes**: `fsm/fwd.pdf` says "1998 Nissan MAXIMA" (© 1997) and GI lists the 1998 model year. See `VEHICLE_SYSTEMS.md`.
 - [ ] **0.7 ECU label.** Read the part number on the ECU sticker (`23710-xxxxx`). It is
       checked against the `D0` result in 2.1.
       Result: 23710-2L904 (confirmed by owner, 2026-11-14). Matches `D0`.
@@ -77,6 +77,7 @@ Legend for conditions:
 - [x] **2.3 `D1` with no faults.** **Is the "no fault" code byte `0x55` or `0x37`?**
       This settles the hex-vs-decimal question for codes.
       Result: **The no-fault byte is `0x55`**, so codes are hex digits (Linux 2026-11-14, 13:19): right after `C1`, `D1` returned `FF 02 55 00`. Matches ECUTalk.
+      **Decoded from the ROM (desk, 2026-11-14): `21` = P1320 ignition signal primary, `34` = P0325 knock sensor, `A8` = P0443 EVAP canister purge volume control valve circuit** (`ROM_ANALYSIS.md` §3; `dtc` now prints these).
       Earlier: Not applicable yet: codes are stored (Windows 2026-11-14). **Hex-digit reading agrees with ECUTalk** (owner, 2026-11-14), so 21 = ignition signal, 34 = knock sensor. Code 21 is a known fault on this car: present for about a year, and new ignition coils and plugs didn't clear it. `D1` raw: `21 01 34 03 A8 00`, three (code, starts) pairs: `21`/1, `34`/3, `A8`/0. Read as hex digits, 21 = ignition signal and 34 = knock sensor in Nissan's 2-digit list, which fits a 1998 car. `A8` isn't a valid hex-digit or decimal code. It's unexplained and needs checking against `EL.pdf` / a generic OBD-II scan. Log: `logs/2026-11-14_2.3-win-py.log`.
 - [ ] **2.4 `D1` with a known fault.** KOEO: unplug the coolant temp sensor (or the
       IAT sensor). Key off, key on. Read `D1`. Record the code byte.
@@ -92,6 +93,16 @@ Legend for conditions:
 - [ ] **2.7 Number of DTC pairs.** With 2 or more faults stored, is the frame length
       2 × the number of faults?
       Result: Consistent so far: 6 bytes for 3 pairs (2.3). Still to do: confirm the fault count with a generic OBD-II scan.
+
+- [ ] **2.8 Watch the P1320 monitor live (desk find, 2026-11-14).** The ECU counts
+      ignition "misses" in RAM `$0C60` (10 → P1320) and its sample counter in `$0C6F`
+      (`ROM_ANALYSIS.md` §7). KOER, warm: `python -m consult --test-id 2.8-p1320 watch-mem 0C5F -n 2`
+      (shows `$0C5F`/`$0C60`; add `0C6F` in a second run). Then, one at a time: idle,
+      2000 rpm, load (A/C on), wiggle the coil harness on each bank, tap the condenser,
+      wiggle the ECM connector. **Which action makes `$0C60` climb?** That points at the
+      faulty part. Reading the input port itself (`$000A`, bit 3) would be more direct,
+      but `$0000–$007F` is CPU I/O and hasn't been read yet, so try one read KOEO first.
+      Result: ____
 
 ## 3. Live data registers (engine)
 
@@ -110,7 +121,8 @@ Legend for conditions:
 - [x] **3.5 RPM.** Compare `00/01` × 12.5 with the tach at idle and at about 2500 rpm.
       Result: **× 12.5 confirmed.** At a tach "2000 held steady", the ECU read 1980–2004 (band mean 1966). At a tach wavering 2300–2700, the ECU read 2250–2750 (mean 2473). Other readings: 1350 rpm right after start, 1175 at a cold fast idle, ~660 warm idle. Log: `logs/2026-11-14_3.x-koer-throttle2.log`.
 - [ ] **3.6 CAS reference.** Is `02/03` × 8 also equal to RPM?
-      Result: **No.** At 1175 rpm (`00/01`), `02/03` × 8 alternates between ~16 750 and ~17 250 (raw ~2100), about 14.4× RPM. It may be a period or a different unit. Log: `logs/2026-11-14_3.x-koer-idle.log`.
+      Result: **It's a period, not RPM (ROM, desk 2026-11-14):** `02/03` is the 120° REF period copied from a timer capture. rpm ≈ 2 500 000 / word fits the log (2.49 M at 1175 rpm). Confirm at a second RPM: at 2500 rpm expect word ≈ 1000.
+      Earlier: **No.** At 1175 rpm (`00/01`), `02/03` × 8 alternates between ~16 750 and ~17 250 (raw ~2100), about 14.4× RPM. It may be a period or a different unit. Log: `logs/2026-11-14_3.x-koer-idle.log`.
 - [x] **3.7 Coolant / IAT.** Compare `08` and `11` (value − 50) with an IR thermometer
       or the gauge, cold and warm.
       Result: **Coolant confirmed correct by the owner (2026-11-14)**: 94 °C warm idle on Linux matches. IAT not yet checked against a reference.
@@ -216,13 +228,20 @@ Do them one at a time. Restore the normal value and send `30` after each.
       Result: **Done (KOEO, Linux 2026-11-14).** Memory map from reads:
       - `0000–007F`: not read on purpose (probably CPU hardware registers).
       - `0080–0FFF`: **RAM**. Two reads 30 s apart differ in 186 bytes, mostly around `0180–02FF` and `0880–0FFF`. `rom/ram_0080-0FFF_{1,2}.bin`.
-      - `1000–2FFF`: data tables (maps); `3000–3BFF`: all `00`; `3C00–FFFF`: code and data. `0x1000–0x7FFF` dumped in 205 s with no retries: `rom/23710-2L904_1000-7FFF.bin` (sha256 `572ddafc…fa92`). Combined image: `rom/23710-2L904_1000-FFFF.bin`.
+      - `1000–2FFF`: data tables (maps); `3000–3BFF`: all `00`; `3C00–FFFF`: code and data. `0x1000–0x7FFF` dumped in 205 s with no retries: `rom/23710-2L904_1000-7FFF.bin` (sha256 `572ddafc…fa92`). **⚠ Hole (found at the desk, 2026-11-14): `$5D40–$623F` is not ROM data.** The ECU's `C9` reply skips that range, so the dump holds stale reply bytes there (`ROM_ANALYSIS.md` §1). It needs a bench read of the chip. Combined image: `rom/23710-2L904_1000-FFFF.bin`.
       - The code looks like the **Mitsubishi 7700 family** (`42` accumulator-B prefix, little-endian operands into `09xx` RAM, vectors at `FFD6–FFFF`). Confirm from the chip markings (11.3).
       The ECU kept answering normally after every read (init, `D1`, live data).
       Logs: `logs/2026-11-14_5.5-rom-dump-low.log`, `logs/2026-11-14_5.5-ram.log`.
       Earlier: Partial: `0x4470–0x448F` (around the `7C44` vector target) reads the same 3 times and doesn't mirror `0xC470`, so there is more ROM below `0x8000` (internal CPU ROM?). The bottom of the space wasn't read on purpose: I/O registers may be there, and reading some can clear flags. Need the CPU type (11.2/11.3) for the memory map before dumping `0x0000–0x7FFF`. Log: `logs/2026-11-14_5.5-mem.log`.
 - [ ] **5.6 Compare with ECUTalk.** If possible, dump with ECUTalk too and compare the
       two files.
+      Result: ____
+
+- [ ] **5.7 Second CPU's memory (desk find, 2026-11-14).** `C9` on `$5D40–$623F` is
+      forwarded to a second processor, one byte per frame from frame 2 (`ROM_ANALYSIS.md` §1, §6).
+      KOEO: `python -m consult --test-id 5.7-sub sub-dump --first 5D40 --last 5D4F` first.
+      Are the later frames stable, and is `5D40` = `A5`? If so, run the full range (~1280
+      addresses, a few minutes) → `rom/sub_0D40-123F.bin`.
       Result: ____
 
 ## 6. Other control units (KOEO, Charger)
@@ -251,6 +270,50 @@ Do them one at a time. Restore the normal value and send `30` after each.
       Result: ____
 
 ## 7. IVMS / BCM (see BODY_DIAG_PLAN.md)
+
+- [ ] **7.0 Find the BCM.** **Update (desk, later 2026-11-14): `DA` is probably the BCM.**
+      `DA`'s `D0` ends ASCII `2L900`, and Nissan part **28491-2L900 = "Controller Assy-LAN"**
+      for the 1997–99 Maxima VQ30DE (nissanpartsdeal.com), i.e. the IVMS/LAN controller =
+      BCM. (Same method confirms `E7`: `0L701` = 47850-0L701, the 95–99 Maxima ABS module.)
+      The "`DA` = ASCD" call rested on one silent attempt at 15:21:24, about a minute after
+      a key cycle (`logs/2026-11-14_5.x-c9-DA.log`). It answered at 15:22:20 with the
+      ASCD main switch on, but readiness after key-on would explain it equally well.
+      Confirm first (KOEO, ASCD main **off**):
+      a. `python -m consult --test-id 7.0-DA-main-off --ecu DA id` right after key-on, and
+         again every 30 s for 2 min. Answers with main off → not the ASCD.
+      b. Then repeat with main **on**, and run `init-scan` with main on. The real ASCD unit
+         should show up as a 5th ID.
+      c. If `DA` = BCM: paced `reg-scan` / `watch-raw` on `DA` while opening a door,
+         turning the key ACC/ON, headlamp 1st, seat belt (the 7.6 list; that earlier work
+         went to `DC`, the airbag unit). `D1` on `DA` gave `FE`; the FSM gives the BCM
+         self-diag only for door locks, so that may be normal.
+      Only if `DA` turns out not to be the BCM, continue with the steps below.
+      Original desk findings (2026-11-14):
+      - **Wiring (EL-180, read from the page image):** BCM pin 39 TX → Consult connector
+        M2 pin 2 (wire P), pin 40 RX → M2 pin 1 (BR/Y). These are the same lines and wire
+        colours as the engine ECM's Consult pins 75/76, and the same lines `DA`/`DC`/`E7`
+        answer on. No clock line goes to the BCM. Power: fuses 56 (BAT), 19 (ACC), 12 (IGN).
+        The windows work, so it's powered.
+      - **Sleep isn't the reason:** EL-167 says the BCM only sleeps with the ignition OFF and
+        all loads off. The scan was KOEO.
+      - **No published ID:** the FSM gives no bytes. The maxima.org "Consult interrogator"
+        thread and the consult-scan project only document engine IDs (`ED`, `EF`; the
+        thread's "ECU finder" also found `E7`).
+      - **What the 6.2 scan didn't cover:** every init used ECUTalk's pauses (`FF`, 280 ms,
+        `FF`, 70 ms, ID). A unit that resets its receiver between slow bytes would never
+        see a valid init. The real Consult hand-held almost certainly sends `FF FF xx`
+        back to back. Untested on any unit (see 1.3).
+      Plan (KOEO, charger on; `init-scan` already skips `DC`/airbag):
+      1. `python -m consult --test-id 7.0-engine-nogap init-scan --first ED --last ED --gaps none`.
+         Does the engine still answer `12` without the pauses? (This also answers 1.3.)
+      2. `python -m consult --test-id 7.0-scan-nogap init-scan --gaps none`
+      3. `python -m consult --test-id 7.0-scan-10ms init-scan --gaps 0.01,0.01`
+      4. If still nothing, repeat 2 with the key in, a door open and the lighting switch at
+         1st (all of these are IVMS wake-up inputs), then KOER.
+      5. If still nothing: key off, check continuity from M2 pin 1/2 to BCM pins 40/39
+         (connectors M103/M104), then suspect the BCM's Consult port. The on-board Mode I–IV
+         blink diagnostics (EL-175 onward) still work without Consult.
+      Result: ____
 
 - [ ] **7.1 BCM `D0` / `D1`.** Record the raw frames.
       Result: ____
@@ -346,7 +409,7 @@ Do them one at a time. Restore the normal value and send `30` after each.
       **No `0A`, no unknown commands, no unplugging SRS connectors.**
       Result: ____
 - **Incident 2026-11-14 ~15:13 (KOEO, charger just connected).** The AIR BAG lamp **blinked uniformly** (no code pattern) during a paced `C9` scan **of the BCM (`DC`)**: init `FF FF DC`, then 69 × `C9 hi lo` for hi `00–11`, all rejected `FE` at the low byte; no `F0` sent, nothing to `E7`. Stopped within ~7 s (`logs/2026-11-14_8.1-c9-hi-scan-DC.log`). Key cycle → lamp on ~7 s then off (normal). Cause unknown: bus traffic, the charger hook-up, or low voltage (11.9 V seen earlier) are all possible. Before any more C9 scans on the BCM, have someone watch the AIR BAG lamp and stop at the first blink.
-- **Reproduced 15:15:36:** init `FF FF DC`, `30`, then the single byte `C9` (echo `36`), then `30` (taken as an address byte, no ack). **The AIR BAG lamp started blinking.** (Init alone vs. `C9` not separated.) **Control 15:22:28:** the same kind of single `C9` sent to `DA` (ASCD) did **not** blink the lamp. With a manual car the Consult units are ENGINE, ASCD, AIRBAG, IVMS; `ED` = engine, `DA` = ASCD, so **`DC` = AIRBAG (SRS) and `E7` = BCM (IVMS)** by elimination plus the lamp behaviour. **Revised after reading fsm/ (16:05):** RS-34/35: Consult switches the SRS unit from User mode into **Diagnosis mode** (exit via BACK or ignition OFF), and in Diagnosis mode the lamp flashes patterns (RS-38). That matches `DC` exactly → **`DC` = AIRBAG confirmed**. BR-39: ABS is on Consult (self-diag, data monitor, **active tests drive the brake solenoids and pump motor**) and "ignore the ECU part number" → **`E7` is most likely ABS**, not the BCM. Consult system list (RS-34): ENGINE, A/T, AIRBAG, ABS, IVMS. So the **BCM never answered the init scan**. Never send `0A` to `E7`.
+- **Reproduced 15:15:36:** init `FF FF DC`, `30`, then the single byte `C9` (echo `36`), then `30` (taken as an address byte, no ack). **The AIR BAG lamp started blinking.** (Init alone vs. `C9` not separated.) **Control 15:22:28:** the same kind of single `C9` sent to `DA` (ASCD) did **not** blink the lamp. With a manual car the Consult units are ENGINE, ASCD, AIRBAG, IVMS; `ED` = engine, `DA` = ASCD, so **`DC` = AIRBAG (SRS) and `E7` = BCM (IVMS)** by elimination plus the lamp behaviour. **Revised after reading fsm/ (16:05):** RS-34/35: Consult switches the SRS unit from User mode into **Diagnosis mode** (exit via BACK or ignition OFF), and in Diagnosis mode the lamp flashes patterns (RS-38). That matches `DC` exactly → **`DC` = AIRBAG confirmed**. BR-39: ABS is on Consult (self-diag, data monitor, **active tests drive the brake solenoids and pump motor**) and "ignore the ECU part number" → **`E7` is most likely ABS**, not the BCM. Consult system list (RS-34): ENGINE, A/T, AIRBAG, ABS, IVMS. So the **BCM never answered the init scan**. **Desk confirmation (2026-11-14):** RS-25 gives the A32 airbag unit's "ECU DISCRIMINATED NO." as **6B**, and `DC` register `AC` read `6B`. RS-25/26: Consult puts the unit in Diagnosis mode, shown by the lamp flashing; flash pattern 1 (uniform blink after 7 s) = a past fault is stored. See `VEHICLE_SYSTEMS.md` §2. Never send `0A` to `E7`.
       **Wiring (fsm):** BCM (EL-180), ABS (BR-33) and SRS (RS-31) all use Consult connector (M2) **pin 1 = unit RX, pin 2 = unit TX**, no clock (ABS also has DIAG L on pin 4). BCM power: BAT 7.5 A #56, ACC 7.5 A #19, IGN 7.5 A #12; ABS power: IGN only (10 A #15/#17). ~~Discriminator: init scan at key ACC~~ **Tried 16:06: zero RX bytes from anything, because Consult connector pin 7 (dongle power) is IGN-fed (10 A #17, BR-33).** Fuse-pull test skipped by choice (2026-11-14): **`E7` taken as ABS** (high confidence: on Consult per BR-39, part number "ignore", only D0 works). The BCM did not answer any init; its ID is unknown. Log: `logs/2026-11-14_6.x-init-scan-ACC.log`. SRS unit also has a driver-door-switch input (diagnosis-mode entry, RS-38). Everything logged as "BCM (`DC`)" in §7 and §8.1 was actually sent to the airbag unit. **`DC` may be the airbag unit, not the BCM** (original note): its 2-byte D0, the 6 D1 bytes and the total lack of body-input response all fit that too. **Send nothing to `DC` until it is identified without bus traffic** (e.g. key off, pull the BCM fuse, re-run only the init scan, see which ID disappears). Log: `logs/2026-11-14_10.x-srs-lamp-test.log`.
 
 ## 11. Hardware (key off, battery disconnected)

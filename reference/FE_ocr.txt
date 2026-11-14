@@ -1,0 +1,272 @@
+===== PDF page 1 =====
+ACCELERATOR CONTROL, FUEL &
+EXHAUST SYSTEMS
+
+@l
+SECTION F E a
+
+EM
+
+LG
+
+CONTENTS wo
+
+PREPARATION/ACCELERATOR CONTROL Adjusting Accelerator Wire ......cocooeeeviniinnnnnniennins 2 3
+SYSTEM... .....oiiiiir reese serene 2 FUEL SYSTEM ........ccccoi iii ene 3
+Special Service TOO... 2 EXHAUST SYSTEM ........ooort ee 4 QL
+
+RS
+
+BT
+
+FA
+
+El
+
+639
+===== PDF page 2 =====
+640
+
+PREPARATION/ACCELERATOR CONTROL SYSTEM
+
+Special Service Tool
+
+The actual shapes of Kent-Moore tools may differ from those of special service tools illustrated here.
+
+Tool number
+{Kent-Moore No.) Description
+Tool name
+
+KV10114400
+(J-38365)
+
+Heated oxygen sensor
+wrench
+
+a Loosening or tightening front and rear heated
+oxygen sensors
+
+NT636 a =22 mm (0.87 in)
+
+CAUTION:
+
+e When removing accelerator wire, make a mark to indicate lock nut’s initial position.
+
+e Check that throttle valve opens fully when accelerator pedal is fully depressed. Also check that it
+returns to idle position when pedal is released.
+
+e Check accelerator control parts for improper contact with any adjacent parts.
+
+e When connecting accelerator wire, be careful not to twist or scratch wire.
+
+SEC. 180
+
+Wire bracket
+
+Accelerator wire Pedal bracket
+
+ALN CE
+0
+
+3-4 Acme
+
+(0.3 - 0.4, 26.0 - 34.7)
+
+Return spring
+
+© Nem (kg-m, in-Ib)
+
+Accelerator pedal
+
+SFE475A
+
+Lock nut Adjusting Accelerator Wire
+
+le - 11 N-m CAUTION:
+oe PR A e Make sure the ASCD wire is not pulling the throttle drum.
+e Refer to “AUTOMATIC SPEED CONTROL DEVICE” in EL
+
+section for ASCD wire adjustment.
+
+1. Loosen lock nut, and tighten adjusting nut until throttle drum
+
+Accelerator wire starts to move.
+
+2. From that position turn back adjusting nut 1.5 to 2 turns, and
+fasten it with lock nut.
+
+Throttle drum
+
+Adjusting nut
+
+SFE248AB
+
+FE-2
+===== PDF page 3 =====
+FUEL SYSTEM
+
+WARNING:
+e Be sure to furnish workshop with a CO, fire extinguisher.
+¢ Do not smoke while servicing fuel system. Keep open flames and sparks away from work area.
+CAUTION:
+eo Before removing fuel line parts carry out the following procedures:
+a. Put drained fuel in an explosion-proof container and put the lid on securely.
+b. Release fuel pressure from fuel line. Refer to “Changing Fuel Filter” in MA section.
+¢. Disconnect battery ground cable.
+e¢ Always replace O-ring and clamps with new ones.
+eo Do not kink or twist tubes when they are being installed.
+¢ Do not tighten hose clamps excessively to avoid damaging hoses.
+e After installing tubes, run engine and check for fuel leaks at connections.
+eo Use only a genuine fuel filler cap as a replacement.
+SEC. 172
+
+2.0 - 2.5 (0.20 - 0.26, 17.4 - 22.6)
+
+vr
+=
+
+Gauge assembly
+
+Fuel pump assembly
+
+Fuel filler cap
+
+"
+
+as
+Ly
+
+o~FLL
+kr ©
+
+#
+
+Fuel pump
+
+Pawl
+
+Fuel tank
+
+! Fuel tube
+
+N
+
+Protector
+
+[0] 37 - 49
+
+(3.8 - 5.0, 27.07 - 36.51)
+
+[3 109 - 147
+(1.11 - 1.50, 8.0 - 10.8)
+
+: N-m (kg-m, in-Ib)
+
+[O] : Nem (kg-m, ft-lb)
+
+Front
+
+©
+
+Fuel outiet hose
+
+Fuel return hose
+
+Fuel tank
+
+SFE474A
+
+FE-3
+
+MA
+
+EM
+
+LGC
+
+GL
+
+MT
+
+AT
+
+FA
+
+BR
+
+RS
+
+BT
+
+HA
+
+641
+===== PDF page 4 =====
+642
+
+EXHAUST SYSTEM
+
+CAUTION:
+eo Always replace exhaust gaskets with new ones when
+
+reassembling. If gasket remains on flange surface, scrape
+off completely as shown at left.
+
+e With engine running, check all tube connections for
+exhaust gas leaks, and entire system for unusual noises.
+
+e Check to ensure that mounting brackets and mounting
+insulators are installed properly and free from undue
+stress. improper installation could result in excessive
+noise or vibration.
+
+eo Discard any heated oxygen sensor which has been
+
+SEF 180A dropped from a height of more than 0.5 m (19.7 in) onto a
+hard surface such as a concrete floor; use a new one.
+SEC. 200 [© 13 - 16 (1.3 - 1.6, 3 - 12)
+7 Sey
+Ix
+©
+
+sz 1 0.52 "os, 6b a] |
+
+W] 51-65 SN 45.4 - 57.3) |
+|
+0.52 - 0.66, 45.1 - 57.3 os
+{ ’ ) — exhaust
+Front heated oxygen sensor tube assembly
+
+HIE =
+[@] 40 - 60 * IX) 5
+(41-51, 30 - 44) [0] 51-65 (5.2 - 6.6, 38 - 48) ya Muffler
+Gasket (X] Gasket [X) [0] 43 - 55 Three-way catalyst ® assembly
+
+~~. [3 30 - 39
+
+tube assembly
+
+(4.4 - 5.6, '
+\ Front exhaust 31.7 - 40.6) 2) 0 ” | Tg (3.1 - 4.0, 22 - 29)
+
+TG
+*
+[0 13-18
+<; (13-16, 9 - 12)
+Gasket £19 Za. 0) 5.1 6.5
+| Gasket £3 (0.52 - 0.66, 45.1 - 57.3)
+
+Rear heated oxygen sensor
+
+| [™e 5.1 - 6.5
+7. (0.52 - 0.66, 45.1 - 57.3) [0] 40 - 60 (4.1 - 6.1, 30 - 44)
+i ~1 ed (1.3 - 1.6, 9 - 12) (0.52 - 0.66, 45.1 - 57.3)
+12 - 14) W acs h &
+(%} © 43 - 50 0 51 - 65 % : Except for California
+(4.4 - 5.1, 32 - 37) (5.2 - 6.6, 38 - 48) [@] : Nem (kg-m, in-Ib)
+fl 51-65 [3 : N-m (kg-m, ft-Ib)
+
+(0.52 - 0.66, 45.1 - 57.3)
+SFE473A
+
+FE-4

@@ -19,6 +19,7 @@ import os
 import sys
 import time
 
+from .dtcs import describe
 from .protocol import ENGINE_IDS, STOP_ACKS, Consult, ConsultError
 from .registers import ENGINE, decode, registers_for
 from .transport import DEFAULT_DEV, Transport
@@ -43,20 +44,31 @@ def cmd_init(c, args):
     connect(c)
 
 
+def parse_gaps(text):
+    if text == "none":
+        return None
+    a, b = (float(v) for v in text.split(","))
+    return a, b
+
+
 def cmd_init_scan(c, args):
     """6.2: FF FF xx for each xx, logging any reply. Read-only (init bytes only)."""
     hits = []
+    c.t.note(f"gaps {args.gaps}")
     for x in range(args.first, args.last + 1):
         if x == AIRBAG:
             continue
         c.stop(timeout=0.3)
         c.t.drain(quiet=0.2)
         c.t.note(f"scan {x:02X}")
-        c.t.write(b"\xFF")
-        time.sleep(0.28)
-        c.t.write(b"\xFF")
-        time.sleep(0.07)
-        c.t.write(bytes([x]))
+        if args.gaps is None:
+            c.t.write(bytes([0xFF, 0xFF, x]))
+        else:
+            c.t.write(b"\xFF")
+            time.sleep(args.gaps[0])
+            c.t.write(b"\xFF")
+            time.sleep(args.gaps[1])
+            c.t.write(bytes([x]))
         rx = c.t.drain(quiet=args.wait, limit=args.wait + 1.0)
         if rx:
             tag = "complement" if rx[0] == ~x & 0xFF else "other"
@@ -123,8 +135,7 @@ def cmd_dtc(c, args):
     d, codes = c.dtcs()
     print(f"D1 raw ({len(d)} bytes): {d.hex(' ')}")
     for code, starts in codes:
-        print(f"  code byte 0x{code:02X} (hex-digit '{code:02X}', decimal {code}), "
-              f"starts since last seen: {starts}")
+        print(f"  {code:02X}  {describe(code)}, starts byte {starts}")
 
 
 def cmd_watch(c, args):
@@ -277,6 +288,48 @@ def cmd_rom_dump(c, args):
     c.t.note(f"rom-dump {out} {len(data)} bytes sha256={hashlib.sha256(data).hexdigest()}")
 
 
+def cmd_sub_dump(c, args):
+    """C9 on the range the ECU forwards to its second processor (ROM_ANALYSIS.md §6).
+
+    For C9 addresses $5D40-$623F the ECU doesn't read its own memory: it passes
+    (address - $5000) to the other CPU and fills the byte from that CPU's reply, one
+    per frame, starting with the second frame. So each address is streamed for
+    `--frames` frames and the value is kept only when the later frames agree.
+    Read-only. Output: rom/sub_<first-5000>-<last-5000>.bin and a .txt of each
+    address's frames, so unstable bytes can be checked.
+    """
+    connect(c)
+    first, last = args.first, args.last
+    os.makedirs(ROM_DIR, exist_ok=True)
+    base = os.path.join(ROM_DIR, f"sub_{first - 0x5000:04X}-{last - 0x5000:04X}")
+    data, unstable, t0 = bytearray(), 0, time.monotonic()
+    with open(base + ".txt", "w") as txt:
+        for addr in range(first, last + 1):
+            frames = []
+            try:
+                c.command(bytes([0xC9, addr >> 8, addr & 0xFF]))
+                for _ in range(args.frames):
+                    frames.append(c.read_frame(expected_len=1)[0])
+            except (ConsultError, TimeoutError) as e:
+                c.t.note(f"sub {addr:04X} failed: {e}")
+            finally:
+                c.stop(timeout=0.5)
+                c.t.drain(quiet=0.05)
+            late = frames[len(frames) // 2:]
+            ok = len(late) >= 2 and len(set(late)) == 1
+            unstable += not ok
+            data.append(late[-1] if late else 0)
+            txt.write(f"{addr - 0x5000:04X} {'ok ' if ok else '?? '}{' '.join(f'{v:02X}' for v in frames)}\n")
+            c.t.note(f"sub {addr - 0x5000:04X} frames {' '.join(f'{v:02X}' for v in frames)}")
+            if (addr - first) % 64 == 63:
+                print(f"\r  {addr - first + 1}/{last - first + 1}, {unstable} unstable, "
+                      f"{time.monotonic() - t0:.0f} s", end="", flush=True)
+    print()
+    with open(base + ".bin", "wb") as f:
+        f.write(data)
+    print(f"wrote {base}.bin ({len(data)} bytes, {unstable} unstable; see {base}.txt)")
+
+
 # Active tests (CONSULT_PROTOCOL.md §8), with limits kept inside the normal ranges.
 # name -> (test register, argument help, argument -> value byte, needs the engine running)
 ACTIVE_TESTS = {
@@ -377,6 +430,9 @@ def main():
     sc.add_argument("--first", type=lambda x: int(x, 16), default=0x00)
     sc.add_argument("--last", type=lambda x: int(x, 16), default=0xFF)
     sc.add_argument("--wait", type=float, default=0.5, help="seconds of silence per ID")
+    sc.add_argument("--gaps", type=parse_gaps, default=(0.28, 0.07),
+                    help="pauses after each FF: 'none' = back to back, or 'A,B' in seconds "
+                         "(default 0.28,0.07 = ECUTalk)")
     cp = sub.add_parser("cmd-probe", help="send each command byte without F0, list echoes")
     cp.add_argument("--first", type=lambda x: int(x, 16), default=0x00)
     cp.add_argument("--last", type=lambda x: int(x, 16), default=0xFF)
@@ -410,6 +466,10 @@ def main():
     m.add_argument("addr", type=hexint)
     m.add_argument("-n", "--count", type=int, default=8)
     m.add_argument("-r", "--repeat", type=int, default=1, help="read it this many times")
+    sd = sub.add_parser("sub-dump", help="C9 $5D40-$623F: read the second CPU's memory")
+    sd.add_argument("--first", type=lambda x: int(x, 16), default=0x5D40)
+    sd.add_argument("--last", type=lambda x: int(x, 16), default=0x623F)
+    sd.add_argument("--frames", type=int, default=6, help="frames to read per address")
     r = sub.add_parser("rom-dump", help="C9: dump ROM to a file")
     r.add_argument("--first", type=hexint, default=0x8000)
     r.add_argument("--last", type=hexint, default=0xFFFF)

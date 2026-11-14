@@ -1,0 +1,1447 @@
+===== PDF page 1 =====
+MAINTENANCE
+
+SECTION M A
+
+__|
+PRECAUTIONS AND PREPARATION............cooeevennene 2 Checking EVAP Vapor Lines ......ccevreeenieeniiiicceninnnnns 16
+Supplemental Restraint System (SRS) “AIR CHASSIS AND BODY MAINTENANCE ...................... 17
+BAG eterna sen en 2 Checking Exhaust System........cccccveminininniiennennnnn, 17
+Special SEVICE TOO auucvivviivieceireeeceeecir eter vanes 2 Checking Cluich Fluid Level and Leaks.........c......... 17
+GENERAL MAINTENANCE .........ccooveriirenreeceieene 3 Checking M/T Oil ..ccvivniireerieei riences 17
+PERIODIC MAINTENANCE .............ccovvieiviiinrcieecrioe 5 Changing M/T Oll....ceeevirivinerniiiniinirine erases snes 17
+SCREAUIE Teaver eee terse een een 6 Checking A/T FIUIA ....eeeeeeeeecvrreiereereeseeeerasacsesneens 18
+Schedule 2... 7 Changing A/T FIUI coccinea 18
+RECOMMENDED FLUIDS AND LUBRICANTS............. 8 Balancing Wheels ..........cooeeirivveiniecinininnens cence 19
+Fluids and Lubricants .........cccceeveieeiieiecieec cece 8 Tire Rotation ........c.ceociiireir cece 19
+SAE Viscosity NUMDET .......ccccvrirrereriineeneeveneirnns 8 Checking Brake Fluid Level and Leaks.................... 19
+Anti-freeze Coolant Mixture Ratio ........cccceeeeeeevreenennee. 9 Checking Brake Lines and Cables.....c.cccocecveiunninnns 19
+ENGINE MAINTENANCE............ocooveriiiinenieerrine 10 Checking DISC Brake .......c..cccovvvrrmnniininnnecnnnne 19
+Checking Drive Belts ......vveecereecererecieveeenieieeeea 10 Checking Steering Gear and Linkage ......c..coceeeueenee.. 20
+Changing Engine Coolant.........c.cceeeeeeeceveeieeeeerecnnee. 11 Checking Power Steering Fluid and Lines................ 20
+Checking Fuel LINES ..........ooovveiieeee cece seeeeeees seen 12 Lubricating Locks, Hinges and Hood Latches........... 21
+Changing Fuel Filter ce. 12 Checking Seat Belts, Buckles, Retractors,
+Changing Air Cleaner Filter... ..cvveeeeeeeeerreeeeeeene 13 Anchors and AdjUSters........ccecueerriie nnn, 21
+Changing Engine Oil.......cc.cooviiovrinierer cere 14 SERVICE DATA AND SPECIFICATIONS (SDS) .......... 22
+Changing Oil Fier ...ccovveeeeeciereeerie eevee cere eve 14 Engine Maintenance ........cceeeeeviicennennvinnnennccnnnnennns 22
+Changing Spark Plugs. .....ccccoueecieeveceeeeeveeear aca 15 Chassis and Body Maintenance..........cccoccevvneernnnenn. 22
+
+AT
+
+EL
+
+IDX
+
+51
+===== PDF page 2 =====
+52
+
+PRECAUTIONS AND PREPARATION
+
+Supplemental Restraint System (SRS) “AIR
+BAG”
+
+The Supplemental Restraint System “AIR BAG”, used along with a seat belt, helps to reduce the risk or
+severity of injury to the driver and front passenger in a frontal collision. The Supplemental Restraint System
+consists of air bag modules (located in the center of the steering wheel and on the instrument panel on the
+passenger side), a diagnosis sensor unit, warning lamp, wiring harness and spiral cable. If the vehicle is
+equipped with side air bags as the Supplemental Restraint System, the side air bag used along with the seat
+belt helps to reduce the risk or severity of injury to the driver and front passenger in a side collision. The side
+air bag consists of air bag modules (located in the outer side of front seats), satellite sensor, diagnosis sen-
+sor unit (which is one of components of air bags for a frontal collision), wiring harness, warning lamp (which
+is one of components of air bags for a frontal collision). Information necessary to service the system safely is
+included in the RS section in this Service Manual. :
+
+WARNING:
+
+e To avoid rendering the SRS inoperative, which could increase the risk of personal injury or death
+in the event of a collision which would result in air bag inflation, all maintenance must be performed
+by an authorized NISSAN dealer.
+
+e Improper maintenance, including incorrect removal and installation of the SRS, can lead to per-
+sonal injury caused by unintentional activation of the system.
+
+e Do not use electrical test equipment on any circuit related to the SRS unless instructed to in this
+Service Manual. SRS wiring harnesses can be identified with yellow harness protector or yellow
+insulation tape before the harness connectors.
+
+Special Service Tool
+The actual shapes of Kent-Moore tools may differ from these of special service tools illustrated here.
+
+Tool number
+{Kent-Moore No.) Description
+Tool name
+
+KV10115801
+(J38956)
+Qil fitter wrench
+
+NT375 a: 64.3 mm (2.531 in)
+
+MA-2
+===== PDF page 3 =====
+GENERAL MAINTENANCE
+
+General maintenance includes those items which should be checked during normal day-to-day operation of
+the vehicle. They are essential if the vehicle is to continue operating properly. The owners can perform checks
+and inspections themselves or have their NISSAN dealers do them.
+
+item Reference page
+
+OUTSIDE THE VEHICLE
+
+The maintenance items listed here should be performed from time to time, unless otherwise
+specified.
+
+Tires Check the pressure with a gauge periodically when at a service station, including the
+spare, and adjust to the specified pressure if necessary. Check carefully for damage, cuts or
+excessive wear. EM
+
+Wheel nuts When checking the tires, make sure no nuts are missing, and check for any loose _
+
+nuts. Tighten if necessary. 1G
+Tire rotation Tires should be rotated every 12,000 km (7,500 miles). MA-19
+
+Wheel alignment and balance If the vehicle pulls to either side while driving on a straight and
+
+level road, or if you detect uneven or abnormal tire wear, there may be a need for wheel align- MA-19 EG
+ment. If the steering wheel or seat vibrates at normal highway speeds, wheel balancing may be FA-7
+
+needed.
+
+Windshield wiper blades Check for cracks or wear if they do not wipe properly. —
+
+Doors and engine hood Check that all doors and the engine hood operate smoothly as well as
+
+the trunk lid or back hatch. Also make sure that ali latches lock securely. Lubricate if necessary. CL
+Make sure that the secondary latch keeps the hood from opening when the primary latch is MA-21
+
+released.
+
+When driving in areas using road salt or other corrosive materials, check lubrication frequently. MT
+INSIDE THE VEHICLE
+
+The maintenance items listed here should be checked on a regular basis, such as when per- AT
+
+forming periodic maintenance, cleaning the vehicle, etc.
+
+Lights Make sure that the headlights, stop lights, tail lights, turn signal lights, and other lights
+are all operating properly and installed securely. Also check headlight aim. EA
+Warning lights and buzzers/chimes Make sure that all warning lights and buzzers/chimes are
+operating properly. =A
+Windshield wiper and washer Check that the wipers and washer operate properly and that the
+wipers do not streak.
+
+Windshield defroster Check that air comes out of the defroster outlets properly and in good _ BR
+quantity when operating the heater or air conditioner. ;
+Steering wheel Check that it has the specified play. Be sure to check for changes in the steer- ST
+
+ing condition, such as excessive play, hard steering or strange noises.
+Free play: Less than 35 mm (1.38 in)
+
+Seats Check seat position controls such as seat adjusters, seatback recliner, etc. to make sure BIS
+they operate smoothly and that all latches lock securely in every position. Check that the head
+restrains move up and down smoothly and that the locks (if equipped) hold securely in all
+
+latched positions. Check that the latches lock securely for folding-down rear seatbacks. BT |
+Seat belts Check that all parts of the seat belt system (e.g. buckles, anchors, adjusters and : MA-21
+retractors) operate properly and smoothly, and are instalied securely. Check the belt webbing for RS-5 MA
+
+cuts, fraying, wear or damage.
+
+[71
+=
+
+MA-3 53
+===== PDF page 4 =====
+GENERAL MAINTENANCE
+
+item
+
+Reference page
+
+Clutch pedal Make sure the pedal operates smoothly and check that it has the proper free play.
+
+CL-5
+
+Brakes Check that the brake does not pull the vehicle to one side when applied.
+
+Brake pedal Check the pedal for smooth operation and make sure it has the proper distance
+under it when depressed fuily. Check the brake booster function. Be sure to keep the floor mats
+away from the pedal.
+
+BR-7, 10
+
+Parking brake Check that the lever has the proper travel and make sure that the vehicie is held
+securely on a fairly steep hill when only the parking brake is applied.
+
+BR-22
+
+Automatic transaxle “Park position” mechanism Check that the lock release button on the
+selector lever operates properly and smoothly. On a fairly steep hill check that the vehicle is held
+securely with the selector lever in the “P” position without applying any brakes.
+
+UNDER THE HOOD AND VEHICLE
+The maintenance items listed here should be checked periodically (e.g. each time you check the
+engine oil or refuel).
+
+Windshield washer fluid Check that there is adequate fluid in the tank.
+
+Engine coolant level Check the coolant level when the engine is cold.
+
+MA-11
+
+Radiator and hoses Check the front of the radiator and clean off any dirt, insects, leaves, stc.,
+that may have accumulated. Make sure the hoses have no cracks, deformation, deterioration or
+loose connections.
+
+Brake and clutch fluid levels Make sure that the brake and clutch fluid levels are between the
+“MAX” and “MIN” lines on the reservoir.
+
+MA-17, 19
+
+Battery Check the fluid level in each ceil. It should be between the “MAX” and “MIN” lines.
+
+Engine drive belts Make sure that no belt is frayed, worn, cracked or oily.
+
+MA-10
+
+Engine oil level Check the level on the dipstick after parking the vehicle on a level spot and
+turning off the engine.
+
+MA-14
+
+Power steering fluid level and lines Check the ievel in the reservoir tank with the engine off.
+Check the lines for proper attachment, leaks, cracks, etc.
+
+MA-20
+
+Automatic transaxle fluid level Check the level on the dipstick after putting the selector lever
+in “P" with the engine idling.
+
+MA-18
+
+Exhaust system Make sure there are no loose supports, cracks or holes. If the sound of the
+exhaust seems unusual or there is a smell of exhaust fumes, immediately locate the trouble and
+correct it.
+
+MA-17
+
+Underbody The underbody is frequently exposed to corrosive substances such as those used
+on icy roads or to control dust. It is very important to remove these substances, otherwise rust
+will form on the floor pan, frame, fuel lines and around the exhaust system. At the end of winter,
+the underbody should be thoroughly lushed with plain water, being careful to clean those areas
+where mud and dirt can easily accumulate.
+
+Fluid leaks Check under the vehicle for fuel, oil, water or other fluid leaks after the vehicle has
+been parked for a while. Water dripping from the air conditioner after use is normal. If you
+should notice any leaks or gasoline fumes are evident, check for the cause and correct it imme-
+diately.
+
+MA-4
+===== PDF page 5 =====
+PERIODIC MAINTENANCE
+
+Two different maintenance schedules are provided, and should be used, depending upon the conditions in
+which the vehicle is mainly operated. After 60,000 miles (96,000 km) or 48 months, continue the periodic
+
+maintenance at the same mileage/time intervals.
+
+SCHEDULE 1 al
+Follow Periodic Maintenance Schedule 1 if your driving habits frequently includes one or more of the follow-
+
+ing driving conditions:
+
+® Repeated short trips of less than 5 miles (8 km). |
+
+® Repeated short trips of less than 10 miles (16 km) with outside temperatures remaining below freezing.
+
+e Operating in hot weather in stop-and-go “rush hour” traffic.
+
+e Extensive idling and/or low speed driving for long distances, such as police, taxi or door-to-door delivery [jy
+
+use.
+
+e Driving in dusty conditions.
+
+e Driving on rough, muddy, or salt spread roads. LG
+
+e Towing a trailer, using a camper or a car-top carrier.
+
+SCHEDULE 2 EC
+
+Follow Periodic Maintenance Schedule 2 if none of the driving conditions shown in Schedule 1 apply to your
+
+driving habits. EE
+CL
+MT
+AT
+
+|
+
+FA
+BR
+8T
+RS
+BT
+FHA
+EL
+fiDX
+
+MA-5 55 |
+===== PDF page 6 =====
+PERIODIC MAINTENANCE
+Schedule 1
+
+"padinbai ale s|eAtdlul pur Swe) aoueuIUIEY JB3YI0 "AlIqe!| [208] Jaun1oBINUBW JO AJUBLIEM uoISSIWa ay} ulejulew oy Japio
+ui 8dUeuslUlRW YONns wiopad jou pasu Jaumo ay) ‘uopesado 3I0IYdA 3|qel|94 10) NYSSIN Aq PepuUaWWOD3l BI. ,,,, YIM S|BAISIUI PUB SWB) 9JUBLIBJUIRIY *
+‘Ieqe] Uones| ed SSANL 24) Uo palou einjoejnuel JO Slep ay) Jole Seah 01 wejsAs Beq aie ay) J0adsy) (2)
+
+‘Syjuo Hg Io
+(wy 000°) sanw p0'0g AteAe 18 Ilo (19edsuj 1snf jou) abueys ‘speos Appnuw Jo ybneu uo Buiaup Jo “isuies doj-1es e Jo Jadwes e Buisn open Buna: J {9)
+"30URJEIIO SABA 199dsu| ‘sasealoul asiou Bale J (G)
+"Syiuow pz Jo (wn 0008p) Seliw 000‘0¢ A1eAa soejdas ‘syiuow gy 10 (WY 00°96) SOI 000'09 J8uv (v)
+
+, "AleieIpawwl wey aoe|dal ‘tusas ue yons uj ‘pabbojos awooaq 1ybiw sie
+ay} ‘ybiy Alpweiixa 10 moj Ajpwenxa 4aUi1e ale sainesadwa) Jualquie aiaym SBIR Ul JO SUORIPUOD loyieam astanpe Ajgwaiixa Jepun pajesado si 9o1yan Ji (g)
+‘palinbais aq Aew asueusjuiew juanbayy aiow ‘suonipuos Aisnp uj Ajuiew Buyesado §) (2)
+
+‘Sliuow z} Jo (un 000'v2) Sai 000'GL A19As 1oadsul ‘syiuow gy 10 (Wy 000'96) Sow 00009 424Y (I) :310N
+0l-sd (2) LON oes wisyshs Beq ay
+8-vd [ | I } I I | I $)00q Jeys sALg
+LI-YIN | | I | | | | i WwoIsAs 1sneyxg
+RAS | | | | | | | } sued uoisuadsns  Jjxe 'abexul gp Jesh Bulos)g
+BL '2-wA ! : (9) 3LON e8g -uel) aewoine x jlo opxesuBn Phun
+0Z ‘61-YW | I I | [| ! I I sosIp p sped eyeig
+8E-VIW | | 1 | $8|(eD Bp Saul |xeIg
+aoueusjuiew Apoq pue sisseyn
+— (S) ILON o8g QOUBIBAJD DARA |SNRYXD | OYE)
+SL-v (ul (0d4) GaddIL-WNNILY Id os) sbnid sueds
+yL-YIN d d H H 8 d d d H H H | d H H d ("uereanba 10 00M LE-80ZS1 ‘ON Lied asn) Jai) 10 euibug
+rI-vW d d H o 4 4d od H H H H H d H d d Ilo duibu3
+LE-YIN -d (#) LON e088 Je00d suibug
+Ch-YW .(€) ALON 988 iy jen
+AR J J saul |ond
+9L-vIN .l | soul Jodea dyad
+gL-vYW [4] [4] (2) I1ON 88g Ja) 1ouBed hy
+0l-vin ol (1) 31ON 983 sjieq aAUQ
+soueULUIEW WIISAS [041UOD UOISSIWT
+8 Sv evr 6€ 9 €€ 0c 2 v2 ig 8. SL 2 6 9 € SUIIOW 1 SOUIOD JSASHII
+(08) (08) (v8) (82) (22) (09) (09) (v5) (ev) f(2¥) (98) (08) Wa) (81) (21) (9) {0001 x wy) ‘SYILOW 10 SIBISLIOY
+abed sousiejey ‘S8|IW JO JaGINU JB WIoUad
+09 G2'9S GTS SL8y Sv STlv GLE SEC OF S292 STC SL8L GL STL SZ SE 000°} X SalI
+IVAYILNI 3ONYNILNIVIA NOILYHIJO JONVYNILNIVIN
+
+Auo sjeassiul abesjiw ay; jy [|] "AIesseou Ji 9or|dal 10 1001100 10adsu| = | -aoe|dey = YH :SUCIRIAGIGOY
+
+MA-6
+
+56
+===== PDF page 7 =====
+PERIODIC MAINTENANCE
+
+Schedule 2
+
+ay} ‘ybiy Ajpwanxa 10 mo| Ajowanxe Pyle ale sainjesodwa) Jusiquie aiaym Se
+
+EM
+
+LC
+EG
+FE
+CL
+
+MIT
+
+AT
+
+FA
+
+BR
+
+—
+
+0)
+
+ST
+RS
+J
+HA
+EL
+(DX
+
+"Paiinbai ale sjeAssiul pue swe) souUBUSIUIEW JRYLO ‘ANIIGEI| [JES] 12INI0RINUEBW 10 AJUBLIEM LIO|SS|WS BU} UIBIUIRW O} JOPI0
+ul 2dueURlUEW INS wioled JOU PIU JBUMO BY | “uonesado JIOIYSA 9Iqelfal 10) NYSSIN AQ PSpUSWILLODal BI. |... YIM S[BAISIU| PUE SWa} aduBUIUIE ¥
+‘I9GE| UOHEBOIISY SSAA BY) UO Palou ainjoeinuew jo alep ay) Jaye steak 01 walsAs Beq ne ay) 1oadsuj (5)
+
+"20UeIed]9 IAIBA J0adsul ‘saseaioul asIou aAleA §| (b)
+
+"Stuow pz Jo (wy 0008) Sel 0000 A1aAa ade|da. ‘syluot gp Jo (WH 00096) SalI 00009 JoUY (8)
+‘ARP way) 99.|das WUaAS Ue Yons uj ‘pabbo|a awoosaq 1ybiw sia
+
+SJE Ul 10 SUOIIPUOD Jalieam asIaape Ajawanxa lapun patesado si ajoyaa § (2)
+
+“Syiuow zy 10 (wy 000'v2) S3lIW 000'sL A10Ae 1oadsu) ‘syluow gy 10 (WH 000'96) SSW 00°09 +eLY (1) ‘ALON
+
+01-SH (S) LON ees weisAs Beq ay
+8-vd | | | $100q Yeys aAluQg
+L1I-WYIN | |
+
+wesAs 1Sneyxg
+
+S-vH ‘9-vd ‘02-YIN
+
+sued uoisuadsns wp o)xe ‘obeyul Jesb Buses
+
+8 ‘ZIV i | | | pIN|} spxesues oljeLIOINg ¥ [IO J|XBSUel) [enue
+02 '61-¥YWN | | i | sosip ¥ sped ayeig
+61-YIW | | | | S8j(es B® saul) axelg
+aoueuauiew Apoq pue sisseyn
+BN (b) 31ON 88g OOUEBIBIID BA[BA JSNEUXS 9 OYE)
+SL-YN [4] ('edAl Q3ddIL-WNNILY 1d @sn) sBnd sueds
+PL-VIN H ba] | H d H H <| ('JusieAinba 10 oon 18-8026 "ON ued ssn) Jayy po suibug
+YI-VYIN d H H d H d j<} H jlo suibu3
+LYN .H {€) LON 99S 1uR|000 8uIbug
+TI-vA «{¢) 31ON eg 31 jan
+CL-YW N| Al saull jeng
+9I-¥YIN N | sau Jodea gya3
+ELVIN [4] [4] ayy Jeueslo Ny
+Ol-YW « (1) ILON 88g sl|8q salQ.
+asueuslulEW WSISAS |041U0D UOISSIWT
+
+8y ¢r 9 08 v2 8b Cb 9 SUIUOW "}Si1} SBUWIOD JOABLDIYM
+
+(96) (v8) (22) (09) (8¥) (9g) (va) (21) {000°t x tu) 'SYIUOW JO SIBlBaWIoN
+
+abed aousigjey } ! ‘SIL JO Jaquinu Je Wiopsd
+
+09 629 Sb G/€ 08 GS Sb G2 000°} x ssi
+
+IVAHILNI 3ONVYNILNIVIA
+
+NOILLYHIdO FONVYNILNIVIN
+
+Aluo sjeargyul obese ay) iv if]
+
+‘Kiesseoeu J) sor|des J0 1084100 10edsu] = | 90e|dey = YH :SUCHRIASIQQY
+
+57
+
+MA-7
+===== PDF page 8 =====
+RECOMMENDED FLUIDS AND LUBRICANTS
+
+Fluids and Lubricants
+
+Capacity (Approximate}
+
+Recommended fluids and lubricants
+
+US measure Imp measure Liter
+Engine oil (Refill)
+With oil filter 4-1/4 qt 3-1/2 gt 4.0 . API SG or SH and Energy Conserving
+Without oil filter 3-7/8 gt 3-1/4 gt 3.7 y he Certification Mark*1
+Cooling system
+With reservoir 9 qt 7-1/2 gt 8.5 Anti-freeze coolant
+Reservoir 7/8 qt 3/4 qt 0.8 (Ethylene glycol base}
+Manual transaxle gear oil
+RS5F50V 9-1/8 - 9-1/2 pt 7-5/8 - 7-7/8 pt 43-45 API GL-4, Viscosity SAE 80W-90 only
+RS5F50A 9-1/2 -10-1/8 pt 7-7/8 - 8-1/2 pt 45-48 API GL-4, Viscosity SAE 80W-90 only
+Automatic transaxle fluid
+Nissan Matic “D” (Continental U.S. and
+RE4F04A/V 10 gt 8-1/4 qt 9.4 Alaska} or Genuine Nissan Automatic Trans-
+
+mission Fluid (Canada)*2
+
+Power steering fluid
+
+Type DEXRON™ II or equivalent
+
+Brake & Clutch fluid
+
+Genuine Nissan Brake Fluid*3
+
+or equivalent
+DOT 3 (US FMVSS No. 116)
+
+Multi-purpose grease
+
+NLGI No. 2 (Lithium soap base)
+
+“1: For further details, see “SAE Viscosity Number”. }
+*2: Dexron™ lil/Mercon™ or equivalent may also be used. Outside the continental United States and Alaska contact a NISSAN dealership for more
+information regarding suitable fluids, including recommended brand(s) of Dexron™ Ill/Mercon™ Automatic Transmission Fluid.
+
+*3: For more information regarding suitable fluids, contact a NISSAN dealership.
+
+Outside Temperature Range
+Anticipated Before Next Oil Change
+
+GASOLINE ENGINE OIL
+
+°C N°
+
++38 {+100
+
+SAE Viscosity Number
+
+SMAT796CB
+
+SAE 5W-30 viscosity oil is preferred for all
+temperatures. SAE 10W-30 viscosity oil may be
+used if the ambient temperature is above -18°C
+
+(0°F).
+
+MA-8
+===== PDF page 9 =====
+RECOMMENDED FLUIDS AND LUBRICANTS
+
+Anti-freeze Coolant Mixture Ratio
+
+The engine cooling system is filled at the factory with a high-quality,
+year-round, anti-freeze coolant solution. The anti-freeze solution
+contains rust and corrosion inhibitors. Therefore, additional cooling
+
+system additives are not necessary.
+
+CAUTION:
+
+When adding or replacing coolant, be sure to use only an eth-
+ylene glycol anti-freeze with the proper mixture ratio of 50%
+
+anti-freeze and 50% soft water.
+
+Outside temperature .
+down to Anti- Soft
+freeze water
+°C °F
+-35 -30 50% 50%
+
+Other types of coolant solutions may damage the cooling sys-
+
+tem.
+
+MA-9
+
+@
+
+EM
+
+LGC
+
+RE
+CL
+MT
+AT
+
+FA
+
+ST
+RS
+BT
+HA
+
+EL
+
+59 |
+===== PDF page 10 =====
+ENGINE MAINTENANCE
+
+Checking Drive Belts
+
+[A] 21 - 26 (2.1 - 27, 15 - 20)
+) J
+
+O
+Power steering oil pump Power steering
+
+—
+= oil pump belt
+Tighten , Loosen
+
+idler pulley
+
+Power steering
+oil pump
+
+Alternator
+
+Power steering oil pump
+
+Air conditioner
+Compressor
+
+Crankshaft pulley
+
+Crankshaft
+pulley
+
+wv : Check point for deflection
+[3 : Nem (kg-m, ft-lb)
+
+: N-m {kg-m, in-Ib)
+
+With air conditioner
+
+After adjusting belt tension, tighten
+adjusting nut.
+
+4-74-07 35-61
+
+Idier pulley
+
+Without air conditioner
+
+Alternator
+
+SMAB04CB
+
+1. Inspect for cracks, fraying, wear or oil. If necessary, replace
+
+with a new one.
+2.
+leys.
+
+Inspect drive belt deflections by pushing midway between pul-
+
+Inspect drive belt deflections when engine is cold.
+
+Adjust if belt deflections exceed the limit.
+Belt deflection:
+
+Unit: mm (in)
+Used belt deflection
+Drive belts - Deflection of
+Limit Deflection after new belt
+adjustment
+Alternator
+With air conditioner 7 (0.28) 42-46 3.8-4.1
+compressor ' (0.165 - 0.181) | (0.150 - 0.161)
+Without air condi- 10 (0.39) 6.3-6.9 58-6.2
+tioner compressor ’ (0.248 - 0.272) | (0.228 - 0.244)
+. ; 73-8 65-7
+|
+Power steering oil pump 11 (0.43) (0.287 - 0.315) | (0.256 - 0.276)
+Applied pushing force 98 N (10 kg, 22 Ib}
+
+60 MA-10
+===== PDF page 11 =====
+ENGINE MAINTENANCE
+
+OQ) OX )\¢ | Changing Engine Coolant |
+J Radiator VE \’ WARNING: x
+drain cock JES To avoid the danger of being scalded, never change the cool-
+\ NY 4 ant when the engine is hot.
+RS 7 = ll
+EM
+1. Open radiator drain cock at the bottom of radiator, and remove
+radiator filler cap. LG
+2. Remove reservoir tank, drain coolant, then clean reservoir
+tank.
+Install it temporarily. EG
+e Be careful not to allow coolant to contact drive belts.
+[FE
+CL
+3. Open drain plugs on both sides of cylinder block. MT
+AY
+| =)
+OD 2
+ANSE
+Drain plug on left side BRA
+BR
+ST
+RS
+Drain plug on right
+side of eylinder block BY }
+Exhaust manifold |
+SMAS53C
+[HA
+
+4. Close and tighten drain plugs securely.
+5. Flush cooling system by running fresh water through radiator.
+
+eo Apply sealant to the drain plug thread. EL
+[T]: 60 - 66 N'm (6.1 - 6.7 kg-m, 44 - 48 ft-Ib) Left side |
+18 - 22 N'm (1.8 - 2.2 kg-m, 13 - 16 ft-lb) Right side |
+IDX
+
+MA-11 61
+===== PDF page 12 =====
+62
+
+ENGINE MAINTENANCE
+
+Radiator
+
+JESENENARERAAANESNENNANRRIREIED
+
+ESNSERORESNIERERIRNINNNEANEE]
+
+TTTTIITTTT TIT ITI TIT ITITTIITT
+SMA182B
+
+yj
+
+MAX.
+
+MIN.
+
+SMA4128
+
+engine] Fuel line [Fuei tank]
+Fe —
+
+>
+
+SMAB0D3A
+
+— k—3 (0.12)
+mi —
+
+Unit: mm (in)
+
+ —
+
+®
+
+28 (1.10)
+
+Fuel hose clamps
+1.0 - 1.5 N-m
+
+(0.10 - 0.15 kg-m,
+8.7 - 13.0 in-lb)
+
+MMA 104A
+
+BM FUEL PRES RELEASE NM [J]
+
+FUEL PUMP WILL STOP BY
+TOUCHING START DURING
+IDLE.
+
+CRANK A FEW TIMES AFTER
+ENGINE STALL.
+
+START |
+
+SEF823K
+
+Changing Engine Coolant (Cont'd)
+6. Fill radiator slowly with proper mixture of coolant and water. Fill
+reservoir tank up to the “H” level. Then install radiator cap.
+Coolant capacity (With reservoir tank):
+8.5¢ (9 US qt, 7-1/2 Imp qt)
+Reservoir tank:
+0.8¢ (7/8 US qt, 3/4 Imp qt)
+Pour coolant through coolant filler neck slowly to allow air in
+system to escape.
+Regarding anti-freeze coolant mixture ratio, see MA-9.
+
+7. Start engine and warm it up until it reaches normal operating
+temperature. Then race engine 2 or 3 times under no-load.
+Watch coolant temperature gauge for signs of overheating.
+
+8. Stop engine. After it completely cools down, refill radiator up to
+filler opening. Fill reservoir tank up to the “H” level.
+
+9. Check drain cock and drain plug for any sign of leakage.
+
+Checking Fuel Lines
+
+Inspect fuel lines and tank for improper attachment, leaks, cracks,
+damage, chafing or deterioration.
+If necessary, repair or replace.
+
+CAUTION:
+Tighten high-pressure rubber hose clamp so that clamp end is
+
+3 mm (0.12 in) from hose end.
+
+Tightening torque specifications are the same for all rubber
+hose clamps.
+
+Ensure that screw does not contact adjacent parts.
+
+Changing Fuel Filter
+WARNING:
+Before removing fuel filter, release fuel pressure from fuel line
+to eliminate danger.
+1. Start engine.
+2. Perform “FUEL PRESSURE RELEASE” in “WORK
+SUPPORT” mode with CONSULT.
+3. After engine stalls, crank engine two or three times to
+make sure that fuel pressure is released.
+4. Turn ignition switch off.
+OR
+
+MA-12
+===== PDF page 13 =====
+ENGINE MAINTENANCE
+
+15 | Fuel pump
+A | fuse
+
+SMA755C
+
+0» p.
+
+11/7 7 | fe
+ak) erin (ST
+
+AMS SMAT57C
+
+Changing Fuel Filter (Cont'd)
+
+® 2
+3.
+
+4.
+
+Remove fuel pump fuse.
+Start engine.
+
+After engine stalls, crank engine two or three times to
+
+make sure that fuel pressure is released.
+
+Turn ignition switch off and install fuel pump fuse.
+
+5. Loosen fuel hose clamps.
+6. Replace fuel filter.
+
+e Be careful not to spill fuel over engine compartment. Place
+
+a shop towel to absorb fuel.
+
+e Use a high-pressure type fuel filter. Do not use a synthetic
+
+resinous fuel filter.
+
+e When tightening fuel hose clamps, refer to “Checking Fuel
+Lines’
+
+Changing Air Cleaner Filter
+Viscous paper type
+
+The viscous paper type filter does not need cleaning between
+
+renewals.
+
+MA-13
+
+@l
+La
+
+[ERM
+
+LC
+
+EE
+
+FEE
+
+CL
+
+[HA
+EL
+
+IDX
+
+63
+===== PDF page 14 =====
+64
+
+ENGINE MAINTENANCE
+
+Oil filter 0
+Loosen etd
+
+SSN
+
+SMA758C
+
+Refill oil to this “H" level.
+Do not overfiil.
+
+SMA954C
+
+Oil filter J
+KV10115801
+
+(J389586)
+
+SMA760CB
+
+Changing Engine Oil
+
+WARNING:
+
+e Be careful not to burn yourself, as the engine oil is hot.
+
+e Prolonged and repeated contact with used engine oil may
+cause skin cancer; try to avoid direct skin contact with
+used oil. If skin contact is made, wash thoroughly with
+soap or hand cleaner as soon as possible.
+
+1. Warm up engine, and check for oil leakage from engine com-
+
+ponents.
+2. Stop engine and wait for more than 10 minutes.
+3. Remove drain plug and oil filler cap.
+4. Drain oil and refill with new engine oil.
+Oil specification and viscosity
+e API SG or SH and Energy Conserving Il
+e _ API Certification Mark
+eo See “RECOMMENDED FLUIDS AND LUBRICANTS”, MA-8.
+
+Refill oil capacity (Approximate): Unit: liter (US qt, Imp qt)
+
+4.0 (4-1/4, 3-1/2)
+3.7 (3-7/8, 3-1/4)
+
+With oil filter change
+
+Without oil filter change
+
+CAUTION:
+e Be sure to clean drain plug and install with new washer.
+
+Drain plug:
+[0]: 29 - 39 N'm (3.0 - 4.0 kg-m, 22 - 29 ft-Ib)
+
+eo The refill capacity depends on the oil temperature and
+drain time; use the “Refill oil capacity” values as a refer-
+ence and be certain to check with the dipstick when
+changing the oil.
+
+Never pull out level gauge while filling engine oil.
+
+Warm up engine and check area around drain plug and oil fil-
+ter for oil leakage.
+
+Stop engine and wait for more than 10 minutes.
+
+Check oil level.
+
+NO Oe
+
+Changing Oil Filter
+
+1. The oil filter is a small full-floating cartridge type and is pro-
+vided with a relief valve.
+
+Refer to LC section (“OIL FILTER”).
+
+2. Remove ail filter with Tool or suitable tool.
+
+WARNING:
+Be careful not to burn yourself, as the engine and the engine
+oil are hot.
+
+MA-14
+===== PDF page 15 =====
+ENGINE MAINTENANCE
+Changing Oil Filter (Cont'd)
+
+3. Clean oil filter mounting surface on cylinder block. Coat rubber
+seal of new oil filter with engine oil.
+
+SMAO010
+J ] 4. Screw in the oil filter until a slight resistance is felt, then tighten
+— | ~~ | additionally 2/3 turn. Le
+TT 5. Add engine oil.
+Oil filter:
+2/3 of a turn ok 14.7 - 20.5 N'm (1.5 - 2.1 kg-m, 11-15 ft-lb) =0C
+Refer to “Changing Engine Qil”’, MA-14 .
+FE
+GL
+SMA229B
+Changing Spark Plugs WIT
+
+1. Remove left side rocker cover ornament.
+
+2. Disconnect ignition coil harness connectors.
+
+3. Loosen ignition coil fixing bolts and pull out coil from intake AT
+manifold connector.
+
+FA
+RA
+SMA761C
+4. Remove spark plugs with suitable spark plug wrench. BR
+Wrench with a magnet : ¢
+to hold spark plug Spark plug (Platinum-tipped type):
+Make NGK ST
+~~ Standard type PFR5G-11
+16 mm
+{0.63 in) Hot type PFR4G-11 2
+Q Cold type PFR6G-11
+
+Use standard type spark plug for normal condition.
+semeasa| The hot type spark plug is suitable when fouling may occur with the
+
+standard type spark plug such as: HA
+e frequent engine starts
+e |ow ambient temperatures
+The cold type spark plug is suitable when spark knock may occur EL
+with the standard type spark plug such as:
+e extended highway driving IB
+e frequent high engine revolution
+
+[O): 20 - 29 N'm (2.0 - 3.0 kg-m, 14 - 22 ft-lb)
+
+MA-15 65
+===== PDF page 16 =====
+66
+
+ENGINE MAINTENANCE
+
+SMA773C
+
+SMAB06C
+
+\
+
+2rd A= Front
+
+D)
+
+EVAP vapor
+line
+
+SMA955CA
+
+Changing Spark Plugs (Cont'd)
+
+® Do not use a wire brush for cleaning.
+e If plug tip is covered with carbon, spark plug cleaner may
+be used.
+Cleaner air pressure:
+Less than 588 kPa (6 kg/cm?, 85 psi)
+Cleaning time:
+Less than 20 seconds
+
+e Checking and adjusting plug gap is not required between
+change intervals.
+
+Checking EVAP Vapor Lines
+
+1. Visually inspect EVAP vapor lines for improper attachment and
+for cracks, damage, loose connections, chafing and deteriora-
+tion.
+
+2. Inspect fuel tank filler cap vacuum relief valve for clogging,
+sticking, etc.
+
+Refer to EVAPORATIVE EMISSION SYSTEM in EC section.
+
+MA-16
+===== PDF page 17 =====
+CHASSIS AND BODY MAINTENANCE
+
+SMA211A
+
+SMA941B
+
+SMA066C
+
+~~ Drain plug
+“Oh
+
+SMA067C
+
+Checking Exhaust System
+
+Check exhaust pipes, muffler and mounting for improper
+attachment, leaks, cracks, damage, chafing or deterioration.
+
+Checking Clutch Fluid Level and Leaks
+
+If fluid level is extremely low, check clutch system for leaks.
+
+Checking M/T Qil
+
+Check for oil leakage and oil level.
+
+Never start engine while checking oil level.
+Filler plug:
+): 25 - 34 N'm (2.5 - 3.5 kg-m, 18 - 25 ft-lb)
+
+Changing M/T Oil
+1. Drain oil from drain plug and refill with new gear oil.
+2. Check oil level.
+Oil grade:
+API GL-4
+Viscosity:
+See “RECOMMENDED FLUIDS AND
+LUBRICANTS”, MA-8.
+Capacity:
+RS5F50A
+45-48¢
+(9-1/2 - 10-1/8 US pt, 7-7/8 - 8-1/2 Imp pt)
+RS5F50V
+43-45¢
+(9-1/8 - 9-1/2 US pt, 7-5/8 - 7-7/8 Imp pt)
+Drain plug:
+0): 15 - 20 N'm (1.5 - 2.0 kg-m, 11 - 14 ft-lb)
+
+MA-17
+
+67
+===== PDF page 18 =====
+CHASSIS AND BODY MAINTENANCE
+
+® Front side
+HOT [50 - 80°C (122 - 176°F)]
+
+SMAB45CA
+
+Check fluid for contamination.
+
+SMAB53B
+
+[}
+AN il rd
+Drain tray
+
+Drain plug
+
+SAT007D)
+
+68
+
+Checking A/T Fluid
+
+1. Warm up engine.
+
+2. Check for fluid leakage.
+
+3. Before driving, fluid level can be checked at fluid temperatures
+
+of 30 to 50°C (86 to 122°F) using “COLD” range on dipstick.
+
+Park vehicle on level surface and set parking brake.
+
+Start engine and move selector lever through each gear posi-
+
+tion. Leave selector lever in “P” position.
+
+Check fluid level with engine idling.
+
+Remove dipstick and wipe clean with lint-free paper.
+
+Re-insert dipstick into charging pipe as far as it will go.
+
+Remove dipstick and note reading. If reading is at low side of
+
+range, add fluid to the charging pipe.
+
+Do not overfill.
+
+4. Drive vehicle for approximately 5 minutes in urban areas.
+
+5. Re-check fluid level at fluid temperatures of 50 to 80°C (122
+to 176°F) using “HOT” range on dipstick.
+
+op
+
+oo
+
+Check fluid condition.
+e If fluid is very dark or smells burned, refer to AT section for
+
+checking operation of A/T. Flush cooling system after repair of
+
+eo
+
+e If A/T fluid contains frictional material (clutches, bands, etc.),
+replace radiator and flush cooler line using cleaning solvent
+and compressed air after repair of A/T. Refer to LC section
+(“Radiator”, “ENGINE COOLING SYSTEM”).
+
+Changing A/T Fluid
+1. Warm up A/T fluid.
+2. Stop engine.
+3. Drain A/T fluid from drain plug and refill with new A/T fluid.
+Always refill same volume with drained fluid.
+Fluid grade:
+Nissan Matic “D” (Continental U.S. and Alaska) or
+Genuine Nissan Automatic Transmission Fluid
+(Canada)
+Refer to “RECOMMENDED FLUIDS AND
+LUBRICANTS”, MA-8.
+Fluid capacity (With torque converter):
+RE4F04A/V
+9.4 ¢ (10 US qt, 8-1/4 Imp qt)
+Drain plug:
+[0]: 29 - 39 N'm (3.0 - 4.0 kg-m, 22 - 29 ft-Ib)
+4. Run engine at idle speed for five minutes.
+5. Check fluid level and condition. Refer to “Checking A/T Fluid”.
+If fluid is still dirty, repeat step 2. through 5.
+
+MA-18
+===== PDF page 19 =====
+CHASSIS AND BODY MAINTENANCE
+
+FRONT
+
+|
+]
+
+4 wheels SMAB29C
+
+SBR389C
+
+SMA260A
+
+Balancing Wheels
+
+Adjust wheel balance using road wheel center.
+
+Wheel balance (Maximum allowable unbalance):
+
+Dynamic
+Maximum allowable unbal- | (At rim flange) 10 (0.35) (one side)
+ance g (0z)
+
+Static g (02) 20 (0.71)
+
+Tire Rotation
+
+Do not include the T-type spare tire when rotating the tires.
+
+Wheel nuts:
+
+[0]: 98 - 118 N'm (10.0 - 12.0 kg-m, 72 - 87 ft-lb)
+
+Checking Brake Fluid Level and Leaks
+
+If fluid level is extremely low, check brake system for leaks.
+
+Checking Brake Lines and Cables
+
+Check brake fluid lines and parking brake cables for improper
+
+attachment, leaks, chafing, abrasions, deterioration, etc.
+
+Checking Disc Brake
+ROTOR
+
+Check condition and thickness.
+Unit: mm (in)
+Front Rear
+Brake model CL25VB CL9HA
+Standard thickness 22 (0.87) 9 (0.35)
+Maximum runout 0.08 (0.0031) 0.15 (0.0059)
+Wom imo 20.0 (0.787) 8.0 (0.315)
+
+MA-19
+
+@l
+
+LG
+
+EA
+RA
+
+BR
+
+IRA
+EL
+
+[DX
+
+69
+===== PDF page 20 =====
+70
+
+CHASSIS AND BODY MAINTENANCE
+
+SMA922A
+
+a : Check grease leakage.
+a : Check tightening torque. AY
+I®) : Refer to ST section.
+
+SMAB54C
+coLD: HOT:
+0 - 30°C 50 - 80°C
+{32 - 86°F) (122 - 176°F)
+OK OK
+[
+SST476C
+
+SST477C
+
+Checking Disc Brake (Cont'd)
+CALIPER
+Check for leakage.
+
+PAD
+Check for wear or damage.
+Unit: mm (in)
+Brake model CL25VB CL9HA
+Standard thickness 11 (0.43) 10 {0.39}
+Minimum thickness
+(Wear limit) 2.0 (0.079) 1.5 (0.059)
+
+Checking Steering Gear and Linkage
+
+STEERING GEAR
+
+eo Check gear housing and boots for looseness, damage and
+grease leakage.
+eo Check connection with steering column for looseness.
+
+STEERING LINKAGE
+
+Check ball joint, dust cover and other component parts for
+looseness, wear, damage and grease leakage.
+
+Checking Power Steering Fluid and Lines
+
+Check fluid level in reservoir tank with engine off.
+
+Use “HOT” range at fluid temperatures of 50 to 80°C (122 to
+
+176°F) or “COLD” range at fluid temperatures of 0 to 30°C (32 to
+
+86°F).
+
+CAUTION:
+
+e¢ Do not overfill.
+
+eo Recommended fluid is Automatic Transmission Fluid type
+DEXRON™ III or equivalent.
+
+e Check lines for improper attachment, leaks, cracks, damage,
+loose connections, chafing and deterioration.
+® Check rack boots for accumulation of power steering fluid.
+
+MA-20
+===== PDF page 21 =====
+CHASSIS AND BODY MAINTENANCE
+
+Lubricating Locks, Hinges and Hood Latches
+
+SMA769C
+
+Checking Seat Belts, Buckles, Retractors,
+Anchors and Adjusters
+
+CAUTION:
+
+® After any collision, Inspect all seat
+belt assemblies, including retractors
+and other attached hardwares (i.e.
+guide rail set). Nissan recommends
+to replace all seat belt assemblies
+in use during a collision, unless not
+damaged and properly operating after
+minor collision.
+Also inspect seat belt assemblies not
+in use during a collision, and replace
+if damaged or improperly operating.
+
+® If any component of seat belt
+assembly is questionable, do not repair.
+Replace as seat belt assembly.
+
+eo If webbing is cut, frayed, or damaged,
+replace belt assembly.
+
+® Never oil tongue and buckle.
+
+® Use a genuine seat belt assembly.
+
+For details, refer to “Seat Belt inspection”,
+“SEAT BELTS” in RS section.
+
+Anchor bolt
+[0] 43 - 55 Nem (4.4 - 5.6 kg-m, 32 - 41 ft-Ib)
+
+Check anchors for
+loose mounting.
+
+Check belts
+for damage.
+
+Check retractor for
+smooth operation.
+
+IS
+
+Check function of buckles and
+tongues when buckled and released.
+
+MMAC98BAB
+
+MA-21
+
+LC
+
+EC
+
+[Fe
+
+CL
+
+MT
+
+AT
+
+IDX
+
+71
+===== PDF page 22 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+Engine Maintenance
+
+INSPECTION AND ADJUSTMENT Spark plug
+Drive belt deflection Platinum tipped type
+Unit: mm (in) Make NGK
+Used belt deflection Deflecti Type
+c ellection
+Drive belts Limit Deflection after | of new belt Standard PER5G-11
+adjustment Hot PFR4G-11
+
+Alternator Cold PFR6G-11
+
+With air condi-
+
+: ) 42-46 38-41 Plug gap mm (in) 1.0 - 1.1 (0.039 - 0.043)
+
+tfoner com 7028 | (0.165 0.181) | (0.150 - 0.161)
+
+pressor
+
+Without air
+
+” 6.3 - 6.9 5.8-6.2
+
+conditioner 10039 | 0248-0272) | (0.208 - 0.244)
+
+compressor
+Power steering oil 11 (0.43) 73-8 65-7
+pump (0.287 - 0.315) | (0.256 - 0.276)
+Applied pushing 98 N (10 Kg, 22 Ib)
+force !
+
+Chassis and Body Maintenance
+INSPECTION AND ADJUSTMENT
+
+72
+
+Wheel balance
+
+Dynamic
+Maximum allowable | (At rim flange) 10 {0.35) {one side)
+unbalance g (02)
+
+Static g (02) 20 (0.71)
+
+MA-22

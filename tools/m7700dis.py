@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Recursive-descent disassembler for Mitsubishi 7700 ROM images (bank 0 only).
 
-    python3 tools/m7700dis.py rom/23710-2L904_1000-FFFF.bin --base 1000 -o rom/23710-2L904.asm
+    python3 tools/m7700dis.py rom/23710-2L904_1000-FFFF.bin --base 1000 \
+        --ann rom/23710-2L904.ann -o rom/23710-2L904.asm
 
 Instruction lengths on the 7700 depend on the m (data width) and x (index width) flags,
 so a linear sweep goes wrong. This follows code from the interrupt vectors, tracking
@@ -49,9 +50,15 @@ class Insn:
 class Rom:
     def __init__(self, data, base):
         self.data, self.base, self.end = data, base, base + len(data)
+        self.holes = []         # (start, end, why): bytes in the image that aren't real ROM
+
+    def hole_at(self, a):
+        return next((h for h in self.holes if h[0] <= a < h[1]), None)
 
     def has(self, a, n=1):
-        return self.base <= a and a + n <= self.end
+        if not (self.base <= a and a + n <= self.end):
+            return False
+        return not any(h[0] < a + n and a < h[1] for h in self.holes)
 
     def r8(self, a):
         return self.data[a - self.base]
@@ -178,22 +185,23 @@ def decode(rom, pc, m, x):
     elif mode == "SIG":
         n += 1
         t = f"#${rom.r8(a):02X}"
+    # LDM/SEB/CLB: address first, then the immediate (64 dd ii, 0C ll hh ii).
     elif mode == "LDM4":
         n += 1 + w
-        t = f"${rom.r8(a + w):02X},{imm(a)}"
-        i.ref, i.ref_kind = rom.r8(a + w), "dp"
+        t = f"${rom.r8(a):02X},{imm(a + 1)}"
+        i.ref, i.ref_kind = rom.r8(a), "dp"
     elif mode == "LDM4X":
         n += 1 + w
-        t = f"${rom.r8(a + w):02X},X,{imm(a)}"
+        t = f"${rom.r8(a):02X},X,{imm(a + 1)}"
     elif mode == "LDM5":
         n += 2 + w
-        v = rom.r16(a + w)
-        t = f"${v:04X},{imm(a)}"
+        v = rom.r16(a)
+        t = f"${v:04X},{imm(a + 2)}"
         i.ref, i.ref_kind = v, "abs"
     elif mode == "LDM5X":
         n += 2 + w
-        v = rom.r16(a + w)
-        t = f"${v:04X},X,{imm(a)}"
+        v = rom.r16(a)
+        t = f"${v:04X},X,{imm(a + 2)}"
         i.ref, i.ref_kind = v, "abs"
     elif mode == "BBCD":
         n += 1 + w + 1
@@ -201,7 +209,7 @@ def decode(rom, pc, m, x):
         bit_val = rom.r8(a + 1) if not wide else rom.r16(a + 1)
         rel_at = a + 1 + w
         tgt = (pc + n + s8(rom.r8(rel_at))) & 0xFFFF
-        t = f"${dp:02X},#{bit_val},L_{tgt:04X}"
+        t = f"${dp:02X},#${bit_val:0{2*w}X},L_{tgt:04X}"
         i.targets = [tgt]
         i.ref, i.ref_kind = dp, "dp"
     elif mode == "BBCA":
@@ -210,7 +218,7 @@ def decode(rom, pc, m, x):
         bit_val = rom.r8(a + 2) if not wide else rom.r16(a + 2)
         rel_at = a + 2 + w
         tgt = (pc + n + s8(rom.r8(rel_at))) & 0xFFFF
-        t = f"${abs_addr:04X},#{bit_val},L_{tgt:04X}"
+        t = f"${abs_addr:04X},#${bit_val:0{2*w}X},L_{tgt:04X}"
         i.targets = [tgt]
         i.ref, i.ref_kind = abs_addr, "abs"
     elif mode == "PEI":
@@ -334,16 +342,8 @@ def walk(rom):
 # Table annotation
 # ---------------------------------------------------------------------------
 
-SENSOR_NAMES = {
-    0x0980: "RPM_raw", 0x0981: "RPM_idx", 0x0982: "RPM_hi",
-    0x0983: "RPM_period", 0x098B: "coolant_temp",
-    0x09AE: "load_raw", 0x09B0: "load_idx", 0x09B4: "load_hi",
-    0x0994: "battery_v", 0x0907: "throttle_pos",
-    0x0A12: "airflow", 0x0A14: "ign_dwell",
-    0x0A65: "knock_level", 0x0BA7: "o2_sensor",
-    0x0BC5: "idle_val", 0x0BCB: "iac_pos",
-    0x0C1F: "vehicle_speed", 0x0E0D: "iac_duty",
-}
+# RAM names for operand comments and 1D-table inputs; filled from the annotation file.
+SENSOR_NAMES = {}
 
 INTERP_ENTRIES = {0xEA77: 16, 0xEA82: 32, 0xEA8D: 8}
 
@@ -383,10 +383,7 @@ def find_tables(rom, insns):
                 )
 
     # Pass 2: identify 2D maps (16x16 byte blocks in non-code regions)
-    map_candidates = {
-        0x1300: "FUEL_MAP",
-        0x1400: "TIMING_MAP",
-    }
+    map_candidates = {}
     # Scan for additional 16x16 smooth maps
     for base in range(rom.base, rom.end - 255, 0x10):
         if base in map_candidates:
@@ -409,20 +406,64 @@ def find_tables(rom, insns):
         if rom.has(base, 256):
             annotations[base] = (name, "16x16 byte map", 256)
 
-    # Pass 3: identify axis breakpoints
-    axis_candidates = {
-        0x1500: ("AXIS_RPM_8", "8-step RPM axis", 16),
-        0x1510: ("AXIS_LOAD_16", "16-step load axis", 16),
-    }
-    for addr, (name, desc, size) in axis_candidates.items():
-        if rom.has(addr, size):
-            annotations[addr] = (name, desc, size)
-
-    # 16-bit RPM axis at $12C0 (32 breakpoints as 16-bit BE values)
-    if rom.has(0x12C0, 64):
-        annotations[0x12C0] = ("AXIS_RPM_32x16", "32 x 16-bit RPM breakpoints", 64)
-
     return annotations
+
+
+# ---------------------------------------------------------------------------
+# Annotation file
+# ---------------------------------------------------------------------------
+
+class Ann:
+    """Hand annotations for one ROM, read from a text file. One directive per line:
+
+        ram   ADDR name  [description]   name a RAM/IO address (used in operand comments)
+        label ADDR name                  name a code or data address
+        head  ADDR text                  comment line(s) printed before ADDR ("-" = file header)
+        note  ADDR text                  comment at the end of the line at ADDR
+        table ADDR SIZE name  description   data block printed as a named table
+        hole  ADDR SIZE text             bytes in the image that aren't real ROM: never decoded
+
+    ADDR and SIZE are hex. Blank lines and lines starting with # are ignored.
+    """
+
+    def __init__(self):
+        self.ram, self.ram_desc, self.labels, self.notes, self.tables = {}, {}, {}, {}, {}
+        self.heads = collections.defaultdict(list)
+        self.holes = []
+
+    @classmethod
+    def load(cls, path):
+        a = cls()
+        for n, line in enumerate(open(path, encoding="utf-8"), 1):
+            line = line.rstrip("\n")
+            if not line.strip() or line.lstrip().startswith("#"):
+                continue
+            kind, rest = (line.split(None, 1) + [""])[:2]
+            try:
+                if kind == "head":
+                    addr, _, text = rest.partition(" ")
+                    a.heads[-1 if addr == "-" else int(addr, 16)].append(text.strip())
+                    continue
+                addr_s, _, rest = rest.partition(" ")
+                addr, rest = int(addr_s, 16), rest.strip()
+                if kind == "ram":
+                    name, _, desc = rest.partition(" ")
+                    a.ram[addr], a.ram_desc[addr] = name, desc.strip()
+                elif kind == "label":
+                    a.labels[addr] = rest
+                elif kind == "note":
+                    a.notes[addr] = rest
+                elif kind == "hole":
+                    size_s, _, why = rest.partition(" ")
+                    a.holes.append((addr, addr + int(size_s, 16), why.strip()))
+                elif kind == "table":
+                    size_s, name, desc = (rest.split(None, 2) + [""])[:3]
+                    a.tables[addr] = (name, desc, int(size_s, 16))
+                else:
+                    raise ValueError(f"unknown directive '{kind}'")
+            except ValueError as e:
+                sys.exit(f"{path}:{n}: {e}")
+        return a
 
 
 # ---------------------------------------------------------------------------
@@ -465,15 +506,44 @@ def format_table(rom, addr, ann, out):
             out.write(f"          .db {','.join(f'${v:02X}' for v in vals)}\n")
 
 
-def format_listing(rom, insns, labels, annotations, out):
-    out.write("; M7700 disassembly — 23710-2L904\n")
+def format_listing(rom, insns, labels, annotations, out, ann, title):
+    out.write(f"; M7700 disassembly — {title}\n")
     out.write(f"; ROM base ${rom.base:04X}, end ${rom.end - 1:04X}, {len(insns)} instructions decoded\n")
     out.write("; Assumptions: DPR=0, DT=0, bank 0, m=x=0 at vectors\n")
-    out.write(";\n")
-    out.write("; Known sensor addresses:\n")
-    for addr in sorted(SENSOR_NAMES):
-        out.write(f";   ${addr:04X} = {SENSOR_NAMES[addr]}\n")
+    out.write("; Generated by tools/m7700dis.py; edit the .ann file, not this listing.\n")
+    for text in ann.heads.get(-1, []):
+        out.write(f"; {text}\n")
+    if ann.ram:
+        out.write(";\n; RAM / IO names:\n")
+        for addr in sorted(ann.ram):
+            desc = f"  {ann.ram_desc[addr]}" if ann.ram_desc[addr] else ""
+            out.write(f";   ${addr:04X} {ann.ram[addr]}{desc}\n")
     out.write(";\n\n")
+
+    # Hand labels replace generated ones; calls get a cross-reference line.
+    names = dict(labels)
+    names.update(ann.labels)
+    callers = collections.defaultdict(list)
+    for pc, i in insns.items():
+        if i.flow == "call":
+            for t in i.targets:
+                callers[t].append(pc)
+
+    shown = set()
+
+    def label_line(a):
+        shown.add(a)
+        for text in ann.heads.get(a, []):
+            out.write(f"; {text}\n" if text else ";\n")
+        if a in names:
+            out.write(f"{names[a]}:\n")
+        if callers.get(a):
+            cs = sorted(callers[a])
+            more = f" (+{len(cs) - 8} more)" if len(cs) > 8 else ""
+            out.write(f"; called from {', '.join(f'{c:04X}' for c in cs[:8])}{more}\n")
+
+    def needs_break(a):
+        return a in names or a in ann.heads or a in callers
 
     for va in sorted(VECTOR_NAMES):
         if rom.has(va, 2):
@@ -483,8 +553,8 @@ def format_listing(rom, insns, labels, annotations, out):
 
     # Build set of addresses covered by annotated tables
     table_ranges = {}
-    for ta, ann in annotations.items():
-        for off in range(ann[2]):
+    for ta, tab in annotations.items():
+        for off in range(tab[2]):
             table_ranges[ta + off] = ta
 
     addr = rom.base
@@ -496,26 +566,56 @@ def format_listing(rom, insns, labels, annotations, out):
         if not data_run:
             return
         for da, db in data_run:
-            if da in labels:
-                out.write(f"\n{labels[da]}:\n")
+            if needs_break(da):
+                out.write("\n")
+                label_line(da)
             hex_str = " ".join(f"{b:02X}" for b in db)
-            out.write(f"    {da:04X}  {hex_str:<24s}.db {','.join(f'${b:02X}' for b in db)}\n")
+            note = f"  ; {ann.notes[da]}" if da in ann.notes else ""
+            shown.add(da)
+            out.write(f"    {da:04X}  {hex_str:<24s}.db {','.join(f'${b:02X}' for b in db)}{note}\n")
         data_run = []
 
     while addr < rom.end:
+        hole = rom.hole_at(addr)
+        if hole:
+            flush_data()
+            out.write(f"\n; ${hole[0]:04X}-${hole[1] - 1:04X}: NOT REAL ROM DATA. {hole[2]}\n")
+            refs = sorted(pc for pc, i in insns.items() for t in i.targets if hole[0] <= t < hole[1])
+            if refs:
+                out.write(f"; Code jumps or calls into it from {', '.join(f'{r:04X}' for r in refs)}.\n")
+            addr = hole[1]
+            continue
         if addr in insns:
             flush_data()
             i = insns[addr]
-            if addr in labels:
-                out.write(f"\n{labels[addr]}:\n")
+            if needs_break(addr):
+                out.write("\n")
+                label_line(addr)
             raw = bytes(rom.r8(addr + j) for j in range(i.size))
             hex_str = " ".join(f"{b:02X}" for b in raw)
+            text = i.text
+            for t in i.targets:
+                if t in names:
+                    text = text.replace(f"L_{t:04X}", names[t]).replace(f"$00{t:04X}", names[t])
+                    if i.name in ("JSR", "JMP") and text == f"${t:04X}":
+                        text = names[t]
             line = f"    {addr:04X}  {hex_str:<24s}{i.name}"
-            if i.text:
-                line += f" {i.text}"
-            # Add sensor name comment for known addresses
-            if i.ref and i.ref in SENSOR_NAMES and i.ref_kind in ("abs", "dp"):
-                line += f"  ; {SENSOR_NAMES[i.ref]}"
+            if text:
+                line += f" {text}"
+            comments = []
+            if i.ref is not None and i.ref_kind in ("abs", "dp") and i.ref in SENSOR_NAMES:
+                comments.append(SENSOR_NAMES[i.ref])
+            elif text.startswith("#$") and len(text) == 6:
+                v = int(text[2:], 16)
+                if v in names:
+                    comments.append(f"-> {names[v]}")
+                elif v >= 0x100 and v in SENSOR_NAMES:
+                    comments.append(f"&{SENSOR_NAMES[v]}")
+            if addr in ann.notes:
+                comments.append(ann.notes[addr])
+                shown.add(addr)
+            if comments:
+                line = f"{line:<50s}  ; {'; '.join(comments)}"
             out.write(line + "\n")
             addr += i.size
         elif addr in table_ranges:
@@ -523,6 +623,10 @@ def format_listing(rom, insns, labels, annotations, out):
             ta = table_ranges[addr]
             if ta not in emitted_tables:
                 emitted_tables.add(ta)
+                out.write("\n")
+                for text in ann.heads.get(ta, []):
+                    out.write(f"; {text}\n" if text else ";\n")
+                shown.add(ta)
                 format_table(rom, ta, annotations[ta], out)
             addr = ta + annotations[ta][2]
         else:
@@ -536,6 +640,10 @@ def format_listing(rom, insns, labels, annotations, out):
             data_run.append((run_start, run_bytes))
 
     flush_data()
+    lost = sorted(a for a in set(ann.labels) | set(ann.notes) | set(ann.heads) if a >= 0 and a not in shown)
+    if lost:
+        print("warning: annotations not at an instruction/data start: "
+              + ", ".join(f"{a:04X}" for a in lost), file=sys.stderr)
     code_bytes = sum(i.size for i in insns.values())
     table_bytes = sum(ann[2] for ann in annotations.values())
     total = rom.end - rom.base
@@ -548,6 +656,8 @@ def main():
     parser.add_argument("rom", help="Binary ROM image")
     parser.add_argument("--base", type=lambda x: int(x, 16), default=0x1000,
                         help="Load address in hex (default: 1000)")
+    parser.add_argument("--ann", help="Annotation file (see Ann)")
+    parser.add_argument("--title", help="Listing title (default: ROM file name)")
     parser.add_argument("-o", "--output", help="Output file (default: stdout)")
     args = parser.parse_args()
 
@@ -556,18 +666,28 @@ def main():
     rom = Rom(data, args.base)
     print(f"Loaded {len(data)} bytes at ${args.base:04X}-${rom.end - 1:04X}", file=sys.stderr)
 
+    ann = Ann.load(args.ann) if args.ann else Ann()
+    SENSOR_NAMES.update(ann.ram)
+    rom.holes = ann.holes
+    title = args.title or os.path.splitext(os.path.basename(args.rom))[0]
+
     insns, labels = walk(rom)
     print(f"Decoded {len(insns)} instructions, {len(labels)} labels", file=sys.stderr)
 
     annotations = find_tables(rom, insns)
+    # Hand-named tables win; drop generated tables that overlap them.
+    for ta, (name, desc, size) in ann.tables.items():
+        for other in [o for o, a in annotations.items() if o < ta + size and ta < o + a[2]]:
+            del annotations[other]
+        annotations[ta] = (name, desc, size)
     print(f"Found {len(annotations)} annotated tables", file=sys.stderr)
 
     if args.output:
         with open(args.output, "w") as f:
-            format_listing(rom, insns, labels, annotations, f)
+            format_listing(rom, insns, labels, annotations, f, ann, title)
         print(f"Wrote {args.output}", file=sys.stderr)
     else:
-        format_listing(rom, insns, labels, annotations, sys.stdout)
+        format_listing(rom, insns, labels, annotations, sys.stdout, ann, title)
 
 
 if __name__ == "__main__":

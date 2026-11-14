@@ -1,0 +1,647 @@
+===== PDF page 1 =====
+CLUTCH
+
+R=
+@l
+SECTION A
+EM
+LC
+CONTENTS =
+PRECAUTIONS AND PREPARATION...............cccc.c.c.... 2 HYDRAULIC CLUTCH CONTROL ..........oovirrccininnne 7 FE
+Precautions .....uuveecieeceeeecreceeceete ete eecae sees ne snes 2 Clutch Master Cylinder ..........cccvcerneenimennnn. 7
+Special SErviCe TOOIS ......cccoeveerrereereersrrerersresssserssssnses 2 1007-12: 11121 [37] 114To [= GSS 8
+NOISE, VIBRATION AND HARSHNESS (NVH) CLUTCH RELEASE MECHANISM .........cccovinnnnnnnen. 9
+TROUBLESHOOTING ...........coooovceeeeereeeeeesess essen 3 CLUTCH DISC AND CLUTCH COVER...........ccconsssesens10
+NVH Troubleshooting Cha eee 3 ne os [ 5 FS erierresiasserarasssansirEtrasErrrsanan I MIT
+. utch Cover and Flywheel .......occeeveeiceeeeeneeeenieeenne
+CLUTCH SYSTEM — Hydraulic Type............ccoccvrveennnn. 4
+ICE DA N DS) ......... 12
+INSPECTION AND ADJUSTMENT ...........ooocerrrnnnennn, 5 SERV TA AND SPECIFICATIONS (SDS) AT
+a. General Specifications. ...........ccoveeererreenenseeneeeene 12
+Adjusting Clutch Pedal ...........ooeeeeerevereieereees sores cree 5 Inspection and AdUSIMENt .....oevvvvvoseeeeeseseeeeeeeeeeeee 12
+Bleeding Procedure ........ooceceeeeeeeeeceeecieeecee verre vvsnernens 6
+FA
+RA
+BR
+ST
+|
+RS
+Br |
+HA |
+BL |
+DX |
+
+643
+===== PDF page 2 =====
+PRECAUTIONS AND PREPARATION
+
+-
+
+Sa@B43TO000
+
+SBR500
+
+Precautions
+
+eo Recommended fluid is brake fluid “DOT 3”.
+
+Never reuse drained brake fluid.
+
+Be careful not to splash brake fluid on painted areas.
+
+When removing and installing clutch piping, use Tool.
+
+Use new brake fluid to clean or wash all parts of master
+
+cylinder, operating cylinder and clutch damper.
+
+e Never use mineral oils such as gasoline or kerosene. It will
+ruin the rubber parts of the hydraulic system.
+
+WARNING:
+After cleaning clutch disc, wipe it with a dust collector. Do not
+
+use compressed air.
+
+Special Service Tools
+
+The actual shapes of Kent-Moore tools may differ from those of special service foals illustrated here.
+
+Tool number
+(Kent-Moore No.)
+Tool name
+
+Description
+
+GG94310000
+( —)
+
+Flare nut torque wrench
+
+Removing and installing clutch piping
+
+a: 10 mm (0.39 in)
+
+NT4306
+Kv30101000 Installing clutch cover and clutch disc
+(J33213)
+Clutch aligning bar
+a: 12 mm (0.47 in) dia.
+b: 15.7 mm (0.618 in) dia.
+Former c: 22.8 mm (0.898 in) dia.
+d: 21 mm (0.83 in)
+NT440 e: 22 mm (0.87 in)
+ST20050240 Adjusting unevenness of diaphragm
+( —) a b spring of clutch cover
+Diaphragm spring
+adjusting wrench
+a: 150 mm (5.91 in)
+NT404 b: 25 mm (0.98 in}
+Kv32101000 Remaving and installing spring pin
+(J25689-A)
+Pin punch je
+da
+NT410 a: 4 mm (0.16 in) dia.
+
+644
+
+CL-2
+===== PDF page 3 =====
+NOISE, VIBRATION AND HARSHNESS (NVH) TROUBLESHOOTING
+
+NVH Troubleshooting Chart
+
+Use the chart below to help you find the cause of the problem. The numbers indicate the priority of the likely
+
+cause of the problem. Check each part in order. If necessary, repair or replace these parts.
+
+LID {(uonio)sia) TIIHMATS 0
+1-10 {uooisiq) 31v1d IHNSSIHA < i
+L-1D (uswuBife diy j0 INO) ONIYAS WOVHHAVYIA | ©
+L-1D {(pebewed) ONIHAS WOYHHJYIA om | ©
+01-12 (eseauf suds Jo or) DSIQ HOLNTO 0
+0110 (peuspieyd) 081A HOLNTD | ov
+0-10 {ino wiopm) 2S1a HOLNTD | ou a
+01-10 (AIO) 081 HOLMTD | ov | 0
+01-10 (pauIng Jo AulQ) SIA HOLNTD 0
+01-10 (uexo.g Bury) 081A HOLATD 0
+01-19 (ea1ss0x@ St INouny) 0S1a HOLMD | ov 0
+01-10 (8n41 40 INO) OSIA HOLM 0
+8-10 (peBewep Jo Auip ‘UIOM) DNIHYIS 3SYI13H -
+"uones WI 0) 199 (88007) ONILNNOW INIONT | —
+8-10 {pebeweq) dND NOLSId HIANITAD ONILYHILO ~N <
+2710 {pabeweq) dnd NOLSId HIANITAD HILSYI ~ 0
+9-10 (eur way) INN HOLNTD - oN
+oxo) (iuswisnipe Jo Jno Aeid 8s.) Vad HOLMO —_1
+[0]
+om
+— S
+s I< I. 5
+® 212 2
+S gg =
+2 8182/88
+a oD Qa) C | T
+I K- ££ J J oy
+w C|lC|GC|OC!C
+E S|5|53|315
+< CIO |0]0O|0O
+[}] [a
+[a]
+g 2
+[«] =
+[&4
+: pe £
+3 & E
+& a &
+
+RS
+
+BT
+
+FA
+
+645
+
+CL-3
+===== PDF page 4 =====
+CLUTCH SYSTEM — Hydraulic Type
+
+SEC. 300-305-306-465
+
+[0] 16 - 22 (1.6 - 2.2, 12 - 16)
+_ ~[0] 13 - 16 (1.3 - 1.6, 9 - 12)
+
+vd [0] 13-16 (1.3 - 1.6, 9 - 12)
+
+3 Pedal stopper
+i [O) 16 - 22 (1.6 - 2.2, 12 - 16)
+— ASCD cancel switch
+gH TF [0] 12-15 (1.2 - 1.5, 9 - 11)
+
+—® ER
+
+8 - 11 (0.8 - 1.1, 69 - 96)
+
+ov
+
+[0] 12-15 (1.2- 15,9 - 11) <0.
+
+@ == ® x
+
+[O] 30 - 40 (3.1 - 4.1, 22 - 30)
+
+10 - 17 (1.0 - 1.7, 87 - 148)
+
+[C] 16.7 - 19.6 (1.7 - 2.0, 12.3 - 14.5)
+IX (© : Apply lithium-based grease
+including molybdenum disulphide.
+: Nem (kg-m, ft-lb}
+: Nem (kg-m, in-ib)
+
+eld
+
+SCL714
+
+(d Pedal! bracket @® Air bleeder screw @@ Assist spring
+
+@ Clutch master cylinder @ Withdrawal lever @® ASCD cancel switch
+@ Clutch interlock switch @ Release bearing @ Washer
+
+@ Fulcrum pin @ Clutch hose @ Clutch hose connector
+® Pin @ Clutch cover @® Bushing
+
+Clutch pedal @ Clutch disc @ Stopper rubber
+
+@ Operating cylinder @ Clevis pin
+
+646 CL-4
+===== PDF page 5 =====
+INSPECTION AND ADJUSTMENT
+
+ASCD cancel
+switch
+Pedal
+pad
+Dash floor 90° H
+panel
+C=
+Floor carpet
+Dash insulator
+Dash reinforcement panel SCL715
+
+Pedal bracket
+
+SCL702
+Pedal
+stopper
+pedal lever rubber
+Clutch interlock
+swifch
+Lock nut
+Thread of clutch _
+interlock switch C
+SCL380
+
+1.
+
+Adjusting Clutch Pedal
+Adjust pedal height with ASCD cancel! switch.
+
+Pedal height “H”":
+168 - 175 mm (6.61 - 6.89 in)
+
+Adjust pedal free play with master cylinder push rod. Then
+
+tighten lock nut.
+Pedal free play “A”:
+9-16 mm (0.35 - 0.63 in)
+
+Push or step on clutch pedal until resistance is felt, and check
+
+the distance the pedal moves.
+
+For U.S.A. model only
+3. Adjust clearance “C” shown in the figure while fully depress-
+
+ing clutch pedal.
+Clearance C:
+0.3 - 1.0 mm (0.012 - 0.039 in)
+
+CL-5
+
+MA
+
+EC
+FE
+MT
+AT
+FA
+
+647
+===== PDF page 6 =====
+648
+
+INSPECTION AND ADJUSTMENT
+
+Bleeding Procedure
+
+1. Bleed air from clutch operating cylinder according to the fol-
+lowing procedure.
+Carefully monitor fluid level at master cylinder during bleed-
+ing operation.
+Top up reservoir with recommended brake fluid.
+Connect a transparent vinyl tube to air bleeder valve.
+Slowly depress clutch pedal all the way several times.
+With clutch pedal depressed, open bleeder valve to release air.
+== aid Then close bleeder valve.
+SCLso7 Release clutch pedal and wait for a few seconds.
+
+Clutch piping
+Air bleeder connector F
+
+Qaoo®
+
+~o
+
+Repeat steps c through e above until brake fluid flows from air
+bleeder valve without air bubbles.
+2. Bleed air from clutch piping connector according to the above
+
+same procedure.
+3. Repeat the above bleeding procedures 1 and 2 several times.
+
+CL-6
+===== PDF page 7 =====
+HYDRAULIC CLUTCH CONTROL
+
+Clutch Master Cylinder
+
+SEC. 305
+Reservoir
+ca ;
+P Return spring Piston cup iF B
+
+Piston assembly
+
+52
+
+Reservoir tank
+
+Dust cover
+
+] |_7a.] ® Rubbing surface
+Stopper ring %] to push rod
+
+Cylinder body
+
+EH (I) Rubbing surface
+to piston assembly
+
+Stopper ®: Apply rubber lubricant.
+
+®: Apply silicone grease.
+Push rod
+
+(® Contact surface to
+piston assembly
+
+®: Apply rubber grease.
+
+SCL762
+
+DISASSEMBLY AND ASSEMBLY
+
+e Push piston into cylinder body with screwdriver when remov-
+ing and installing valve stopper.
+
+INSPECTION
+
+Check the following items, and replace if necessary.
+
+® Rubbing surface of cylinder and piston, for uneven wear, rust
+or damage
+
+Piston with piston cup, for wear or damage
+
+Return spring, for wear or damage
+
+Dust cover, for cracks, deformation or damage
+
+Reservoir, for deformation or damage
+
+CL-7
+
+MA
+
+EM
+
+LC
+
+EC
+
+AT
+
+FA
+
+BR
+
+Re
+
+FA
+
+&l,
+
+649 |
+===== PDF page 8 =====
+650
+
+HYDRAULIC CLUTCH CONTROL
+
+Operating Cylinder
+
+SEC. 306
+
+Dust cover
+
+Push rod
+Bleeder screw
+
+f]10 - 17 Nem
+
+(1.0 - 1.7 kg-m, 87 - 148 in-Ib)
+D4 KR
+
+Piston spring
+
+Pistcn assembly
+
+Piston cup ®
+
+Operating cylinder
+EA () Rubbing surface
+to piston assembly
+
+EFA (r) : Apply rubber lubricant. SCL709
+
+INSPECTION
+
+Check the following items, and replace if necessary.
+
+e Rubbing surface of cylinder and piston, for uneven wear, rust
+or damage
+
+e Piston with piston cup, for wear or damage
+
+e Piston spring, for wear or damage
+
+eo Dust cover, for cracks, deformation or damage
+
+CL-8
+===== PDF page 9 =====
+CLUTCH RELEASE MECHANISM
+
+SEC. 321
+
+Dust cover
+
+Withdrawal lever
+
+Bearing retainer
+Pay attention to direction
+of bearing retainer.
+
+@
+
+Release bearing
+
+Retainer
+
+|i: (W)
+spring EL
+
+TA (1): Apply lithium-based grease includin
+ER (1): Apply g g
+molybdenum disulphide. SCL598
+
+INSPECTION
+Check the following items, and replace if necessary.
+eo Release bearing, to see that it rolls freely and is free from
+
+noise, cracks, pitting or wear
+eo Release sleeve and withdrawal lever rubbing surface, for wear,
+
+rust or damage
+
+i
+: s//
+mp 20
+=. JB] : Apply lithium-based grease including molybdenum disulphide. SCL708
+LUBRICATION
+oe Apply recommended grease to contact surface and rubbing
+surface.
+
+eo Too much lubricant might damage clutch disc facing.
+
+CL-9
+
+MA
+
+EM
+
+LC
+
+EC
+
+FE
+
+MT
+
+AT
+
+651
+===== PDF page 10 =====
+CLUTCH DISC AND CLUTCH COVER
+
+SEC. 300
+
+Flywheel
+
+Clutch disc
+
+@® Do not clean in solvent.
+
+® When installing, be careful that grease applied to
+main drive shaft does not adhere to clutch disc.
+
+Clutch cover securing bolt
+1st: [010 - 20 (1 - 2, 7 - 14)
+
+2nd: [C)34 - 44 (35 - 4.5, 25 - 33)
+
+Clutch cover
+{Q) : Nem (kg-m, ft-b)
+© © Apply lithium-based grease including
+
+molybdenum disulphide. SCL599-C
+T Clutch Disc
+HEE INSPECTION
+wt € Check the following items, and replace if necessary.
+E e Clutch disc, for burns, discoloration, oil or grease leakage
+° e Clutch disc, for wear of facing
+
+Wear limit of facing surface to rivet head:
+0.3 mm (0.012 in)
+
+SCL229,
+
+e Clutch disc, for spline backlash
+Maximum spline backlash (at outer edge of disc):
+1.0 mm (0.039 in)
+e Clutch disc, for facing runout
+Runout limit:
+1.0 mm (0.039 in)
+Distance of runout check point (from hub cen-
+ter)
+115 mm (4.53 in)
+
+SCL221
+INSTALLATION
+¢ Apply recommended grease to contact surface of spline por-
+tion.
+
+e Too much lubricant might damage clutch facing.
+
+652 CL-10
+
+===== PDF page 11 =====
+CLUTCH DISC AND CLUTCH COVER
+
+SCL466
+
+AEM100
+
+Kv30101000
+
+SCL600
+
+Clutch Cover and Flywheel
+
+INSPECTION AND ADJUSTMENT
+e Check clutch cover installed on vehicle for unevenness of dia-
+
+phragm spring toe height. al
+Uneven limit:
+0.5 mm (0.020 in)
+eo If out of limit, adjust the height with Tool. MA
+EM
+
+FLYWHEEL INSPECTION
+
+e Check contact surface of flywheel for slight burns or discolora- LG
+tion. Repair flywheel with emery paper.
+eo Check flywheel runout.
+Maximum allowable runout: EG
+Refer to EM section (“Inspection”, “CYLINDER
+BLOCK”).
+
+INSTALLATION MIT
+e Insert Tool into clutch disc hub when installing clutch cover and
+disc.
+
+e Tighten bolts in numerical order. AT
+e Be careful not to allow grease to contaminate clutch fac-
+ing.
+First step: (FA
+0): 10 - 20 N'm (1 - 2 kg-m, 7 - 14 ft-lb)
+Final step:
+[0): 34 - 44 N'm (3.5 - 4.5 kg-m, 25 - 33 ft-Ib)
+BR
+ST
+RS
+BT
+IRA
+EL
+IDX
+
+CL-11 653
+===== PDF page 12 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+General Specifications
+
+CLUTCH CONTROL SYSTEM CLUTCH DISC
+Unit: mm (in)
+
+Type of clutch controt Hydraulic Model 240
+
+Facing size (Outer dia. x inner dia. 240 x 160 x 3.5
+
+x thickness) (9.45 x 6.30 x 0.138)
+CLUTCH MASTER CYLINDER Thickness of disc assembly
+Inner diameter mm (in) 15.87 (5/8) With load ot wo
+CLUTCH OPERATING CYLINDER CLUTCH COVER
+Inner diameter mm {in) 19.05 (3/4) Model 240
+
+Set load N (kg, Ib) 5,688 (580, 1,279)
+
+Inspection and Adjustment
+
+CLUTCH PEDAL CLUTCH DISC
+Unit: mm (in) Unit: mm (in)
+Pedal height* 168 - 175 (6.61 - 6.89) Model 240
+Pedal free play 9-16 (0.35 - 0.63) Wear limit of facing surface to 0.3 (0.012)
+rivet head oo
+Clearance between pedal stopper
+rubber and clutch interlock switch Facing runout limit 1.0 (0.039)
+threaded end while clutch pedal 0.3-1.0 (0.012 - 0.039)
+is fully depressed Distance of runout check 115 (4.53)
+y cep : point (from the hub center) ’
+: Measured from surface of dash reinforcement panel to surface of Maximum spline backlash 13 055)
+P p (at outer edge of disc) RE
+CLUTCH COVER
+Unit: mm (in)
+Model 240
+Uneven limit of diaphragm spring 0.5 (0.020)
+toe height
+
+654 CL-12

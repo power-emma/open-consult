@@ -1,0 +1,777 @@
+===== PDF page 1 =====
+ALPHABETICAL INDEX
+
+SECTION DX
+
+MA
+
+[ER]
+
+LC
+
+EC
+
+CL
+
+MT
+
+AT
+
+FA
+
+BR
+
+ST
+
+RS
+
+BT
+
+FIA
+
+1685
+===== PDF page 2 =====
+ALPHABETICAL INDEX
+
+A
+ABS (anti-lock brake system) .....ccccceevennenne. BR-24
+ABS - Wiring diagram ......c.cceceeeeeeeeeeeieeenen. BR-33
+Absolute Pressure SENSOr....eiiceiiiieiir vere EC-117
+A/G air flOW....ueererereerereeeeccr rec rrecrne HA-18
+A/C component layout........ccceeeeeeeeeveveiinnen. HA-17
+A/C compressor clutch removal and
+
+INStAllAtION ....ccreecie cries HA-129
+A/C compressor description..........ccccceveeineee. HA-13
+A/C compressor mounting ..........eeeeeeeeveunen HA-128
+A/C compressor precaution ......ce.evieeeeeeeeneeens HA-7
+A/C compressor special service tool .............. HA-7
+A/C control linkage adjustment (auto
+
+YO FS HA-108
+A/C control operation (auto A/C)..........c.eeu.... HA-61
+A/C control operation (manual A/C).............. HA-19
+A/C diagnostic work flow (auto A/C)............. HA-64
+A/C diagnostic work flow (manual A/C} ........ HA-21
+A/C harness layout (auto A/C) ...................... HA-88
+A/C harness layout (manual A/C) ................. HA-37
+A/C HFC134a (R134a) system
+
+Precaution .........covveeeeeieeeeeeeeeeee eee mea HA-3
+A/C HFC134a (R134a) system service
+
+procedure.......c...coeeeeee. eeereerrrrnaar aera aaaaaas HA-121
+A/C HFC134a (R134a) system service
+
+T00IS eevee eee HA-8
+A/C HFC134a system service equip-
+
+Ment Precaution... ice eeeeeeeceeeeeeeieeens HA-10
+A/C lubricant (R134Q) .....cceeeveeeureeeceeeeeien, HA-123
+A/C operational checK........ccceveeecvvveeeennnns HA-22, 65
+A/C performance Chart ......ccceevceenieviiiieinnnns HA-33
+A/C performance test diagnoses .....cccccoeunee HA-31
+AIC Telay cocoon HA-56, 107
+A/C self-diagnoses (auto A/C) ...................... HA-70
+A/C service data specification..................... HA-133
+AJC SWItCH irri, HA-55
+A/C symptom chart (auto A/C).......cccvervveennen. HA-68
+A/C symptom chart (manual A/C) ................. HA-24
+A/C system description (auto A/C).............. HA-109
+A/C trouble diagnoses (auto A/C) .......c......... HA-64
+A/C trouble diagnoses (manual A/C) ............ HA-21
+A/C, A - Wiring diagram .........ccoveceenveecnninnnae HA-91
+A/C, M - Wiring diagram ......c.ccoceervernvineninnens HA-40
+Accelerator control system ......cccceevvvvernreerneen. FE-2
+Accelerator wire adjustment .........coceeeeeenenen. FE-2
+LANG «= Vo FSO RS-8
+Air bag disposal ....cccevvveeeeeeeeeiieeceeeeeeeeen. RS-19
+Air bag precautions .....cocevceceiiieeeece eee Gl-2
+Air bleeding (hydraulic clutch) ..........cceeeuvvinnene CL-6
+Air bleeding for brake system...........ccceeeeeneee. BR-4
+Air cleaner filter replacement...........ccc.cce.c... MA-13
+Air conditioner cut control ........eeeecievevevicceens EC-21
+Air flow meter - See Mass air flow
+
+(ST E:T] SSSR EC-110
+Air mix door control linkage
+
+adjustment .....ccceeeeeeeeiieeeeeeeen HA-57, 108
+Air mix. door Motor....eeeceeeeeeccececeeeee HA-114
+Air SPOIler, FEA ........vcvvvvrrerrer creer BT-22
+
+AREINALOr viverra EL-33
+Ambient SEBNSOT coccinea HA-111
+Angular tightening application ........cccceveunnnee. EM-2
+FN 41 C= 0] = FORO EL-128
+Anti-lock brake system - See ABS............... BR-24
+Anti-lock brake system - Wiring
+
+Lo] E= To £213 FR BR-33
+ASCD (automatic speed control device) ..... EL-140
+ASCD - Wiring diagram .........ccecveeeersnnninens EL-145
+A/T - Wiring diagram ....cceeeeeeriiicinnniininnnenneens AT-13
+AST CONLION covers rns EC-314
+A/T diagnosis communication line .............. EC-422
+A/T fluid temperature Sensor .......coueeen. AT-89, 155
+A/T sSelf-diagnoSes. ..cccceveeereeiicoriinnnienns ieee AT-43
+A/T shift 10Ck System ...cccceeeeeecriiennirieceeeeee AT-180
+A/T shift lock system - Wiring diagram........ AT-181
+A/T trouble diagnoses .....ccccvevvvrereneeecneeniens AT-54
+Fo Lo J EL-119
+AUDIO - Wiring diagram..........ccccuvvrervinnenns EL-121
+Audio and A/C control removal and
+
+installation - See Instrument panel ............ BT-13
+Auto air conditioner - Wiring diagram ........... HA-91
+Automatic speed control system - See
+Automatic transaxle number ..........ccccccecinnen GI-38
+Automatic transmission fluid
+
+replacement... coccinea MA-18
+Auxiliary air control (AAC) valve................. EC-303
+
+B
+
+Back-up 1amp cee eceeeveeer ceri EL-53
+Back-up lamp switch (M/T) .......ccooninnnnnnnnan. MT-8
+BACK/L - Wiring diagram ......ccccecceecimninnnnnns EL-53
+BaAtErY..ooo eects EL-19
+Baulk ring (M/T) corinne MT-12
+Blower Motor ....covvviiiniiiiieccniniiined HA-55, 107
+Blower resistor civics HA-55
+Board-on lift .........ccccvniieeniminnnnin cei Gl-40
+Body alignment ........ccovvccrnireereecceennneeiinnnennn BT-44
+BPT VaAIVE cee EC-267
+Brake bOOSter......cccvev riverine inne BR-10
+Brake control valve (Proportioning
+
+VAIVE) cies BR-6
+Brake fluid change ..............ccccniiiiiinernnnnne. BR-4
+Brake fluid [evel .......cocoeoeeeeiiiiec MA-19
+Brake fluid level and line check ...........cocvennns BR-4
+Brake hydraulic line........ccoovemmimimimicceieeciieenn, BR-5
+Brake iNSPecCtion ........ccccvmiineinnncininnnenenns MA-19
+Brake lines and cables inspection................ MA-19
+Brake master cylinder .........ccccvvrininnnininnnnnin, BR-8
+Brake pedal ........ocoeveeiiererniicn rece eiinnes BR-7
+Bulb specifications .........ccceccevieeriiiniiennnnenn. EL-316
+Bumper, front co.cc BT-6
+5 Tq] a1] (Rl = | OP BT-9
+BUZZER - Wiring diagram........cccocvecrviecinnnnne EL-87
+BYPS/V - Wiring diagram .......c.ccuee.... EC-399, 404
+===== PDF page 3 =====
+ALPHABETICAL INDEX
+
+C
+
+Camshaft inspection .......cccevviecnniininieninne EM-39
+Camshaft position sensor (CMPS) ............. EC-249
+Camshaft position sensor (PHASE)............ EC-249
+Canister - See EVAP canister......cccecevivennnns EC-23
+CHARGE - Wiring diagram........ce.ceeveererenrenns EL-30
+Charging System .....cccceeiieriie ever cinsireeiesneae EL-29
+Chassis and body maintenance .......c.c.e.v... MA-17
+CIGAR - Wiring diagram.....c.cccevveeciemnernnienns EL-108
+Cigarette lighter ........oceciveiiineeiiicniecerennn EL-108
+Circuit breaker vues sresreseesseennne EL-14
+ClOCK carretera nena EL-109
+CLOCK - Wiring diagram........cccevveenvernnernes EL-109
+Closed 100p CONrol ...cvvevcenireiiereinnesenirennes EC-327
+Closed throttle position switch .........ccvcneee EC-309
+CIUtCN COVE .uiiiiiicrercerrirrecnerine esr seen CL-10
+ClUICh dISC .uiivieriercrerie cere serene CL-10
+Clutch fluid [evel coercive MA-17
+Clutch master cylinder ........ccovveceneiieiineenes CL-7
+Clutch operating cylinder ........coeeveeniniceiniiens CL-8
+Clutch pedal......coeevieierenenereeeeeeee eens CL-5
+Clutch release bearing ......ccccvvvivnieninnnnecnnens CL-9
+Clutch release mechanism ........cccccoeeecivecnnenns CL-9
+Clutch withdrawal lever ..........ccccoovvveeioeiiienicnne CL-9
+Coil spring (front) c....eeeeeeeecrceeeeeee creer FA-22
+Coil SPring (rear) ....ccuervrreevrrererrsireeeerreereneans RA-11
+Collision QIagnOSIs ........ccvvervrvrereeeriernenreennnes RS-53
+Combination lamp, front, removal and
+
+Installation ......ccceeeeceeeeec ee BT-6
+Combination lamp, rear, removal and
+
+iNStANlAtion «over vvcereeee ee c BT-22
+Combination meter ...........c...cocoeeeiieciivienenn, EL-68
+Combination meter removal and instal-
+
+lation - See Instrument panel........ccccovuuu.... BT-13
+Combination SWitCh.......ccovecvveeieeiie ieee EL-34
+COMM - Wiring diagram.........ccccveveeereennens EL-180
+Compression Pressure... eens EM-12
+Compressor clutch removal and
+
+installation ........evviceeeeeeinecrnneneenreens HA-129
+Compressor description .......ccceevveeeeeieenenee. HA-13
+Compressor MOUNtiNg .....voeeerieenerieecrisnenns HA-128
+Compressor Precaution... serseenenans HA-7
+Compressor special service t00l......ccocvvevvenene HA-7
+Connecting rod .....cccvvveevvriveereesieeeiee serra EM-58
+Connecting rod bearing clearance ............... EM-62
+
+Connecting rod bushing clearance................
+
+Console box - See Instrument panel............. BT-13
+CONSULT for ABS... BR-39
+CONSULT for ECCS ....ooeviirrerrecrireernin EC-63
+CONSULT general information...........cccee..... Gl-34
+Control lever (MIT) ..vvecieeeinireeieeieneeeiaenens MT-10
+Control valve (A/T) coerce. AT-218
+Converter housing instaliation...........ccceeeeu. AT-191
+Coolant mixture ratio ......ccccceeeeeeeicieeiee cere. MA-9
+Coolant replacement .......coccevecererrcerierieneenenn. MA-11
+Cooling circuit (NgiNe).....cccvveevirerreereevrireennnnnns LC-8
+Cooling fan control ..........ccoveeveiiccricceeennee. EC-430
+Cooling fan control system ........cccccovvcnvecvnacn. LC-15
+IDX-
+
+Cooling fan Motor .......ccovveevreercinrecninnreninnnnn, EC-442
+Cooling fan relay ......ccovcvrerninnnircnninnnnne EC-442
+Coupling sleeve (M/T)....ccocceeeieerinineeeiinnnane MT-12
+Crankshaft......oo eevee EM-60
+Crankshaft position sensor (POS) .............. EC-243
+Crankshaft position sensor (POS)
+
+ola] ol 011g SSRIS EC-341
+Crankshaft position sensor (REF).............. . EC-336
+Cruise control - See ASCD......cccccveeeeuveennee, EL-140
+Cylinder BOCK ...oovcvvveeirccirreee rece eee EM-56
+Cylinder head.....cccccivvrvvirieccrrr serene sere EM-36
+Cylinder head bolt tightening........ccceeeeeen.... EM-45
+
+D
+
+Daytime fight system ......cccceivceviniiinienennn, EL-42
+Daytime running light - See Daytime
+
+light SYStemM cuir EL-42
+DEF - Wiring diagram .........cccecvevrnrerernnneennns EL-111
+Detonation sensor - See Knock sensor...... EC-240
+Diagnosis Sensor Unit........ccccoceeeeenereennnnnnee RS-12
+Differential gear (FF A/T) voce. AT-261
+Differential gear (FF M/T) .occovreeeniiennnns MT-12, 26
+DIMENSIONS ccc eee GI-39
+Direct ignition system ......ccovcerinirenncennnninnnne EC-32
+Distributor ignition (Dl) system.....cccccceeveeenne EC-20
+D/LOCK - Wiring diagram........cceeceverueecinenne EL-215
+[ToT] gi (ol: BT-11
+ED ole] gl 11114 (oS OPI BT-43
+[Bele] (1 1 EO OOOO BT-19
+Door, front eevee BT-11
+DOO, TEA... eee eee eee BT-12
+Drive belt inspection ........ccco eee MA-10
+Drive plate runout .........occveivenniiccnninceinnee. EM-63
+Drive shaft (front) .......ccccovviivcrvnn irene, FA-13
+Dropping resistor (A/T) coven eee AT-133
+DTRL - Wiring diagram.....c....ccc.eeeeeecveeeeeeeee.. EL-44
+
+E
+
+ECCS basic inspection ........cccceeeeveeecrveennnne, EC-82
+ECCS circuit diagram .....cceccvveeeeeeccieeeereee EC-11
+ECCS component parts location.........ccc.o.eu. EC-13
+ECCS on board diagnostic system............... EC-41
+ECCS system diagram and chart ................. EC-12
+ECM input/output signal .......ccccceeeeeeerieeennen. EC-95
+EGR control (EGRC) - BPT valve............... EC-263
+EGR control (EGRC) - solenoid valve ........ EC-347
+
+ceeeeeenn. EC-261, 362
+crerennenens EC-352
+
+EGR control valve...................
+EGR temperature sensor ................
+
+Electric sun roof.......ccoevevmeeeeeviieiiieeeeeees EL-134
+Electrical diagnoses .......cccvvvvveviveeeeceeeeeeen, Gl-21
+Electrical ignition system......coccvvieeciineeennns EC-20
+Electrical load signal cirCuit........cceeeeveuvnnnns EC-465
+Electrical unit.........ccooee eevee Foldout
+Engine compartment .........ccceeeeviiiiiiiieeeennes BT-44
+Engine control module (ECM)......cccuuveeenns EC-318
+
+1687
+===== PDF page 4 =====
+ALPHABETICAL INDEX
+
+Engine coolant temperature sensor
+
+Front heated oxygen sensor
+
+(ECTS)iiiviiiireicrieeee ce eee seen EC-132, 145 (HO2S)......cccrn....... EC-150, 157, 163, 169, 178
+Engine mounting control (Front) ................. EC-454 Front heated oxygen sensor (HO2S)
+Engine oil filter replacement ........cccceevmreennn. MA-14 (Left bank)............... EC-150, 157, 163, 169, 178
+Engine oil precautionS.......cccvveeeeeeeeeiviiierereeeeee. Gl-5 Front heated oxygen sensor (HO2S)
+Engine oil replacement ..........ccccocoevvieeenenn. MA-14 (Right bank) ............ EC-150, 157, 163, 169, 178
+Engine outer component parts .........cccce.n...... EM-8 Front heated oxygen sensor (HO2S)
+Engine removal......cooovevnnnrieeeiie ieee. EM-53 (307073110 PU EC-57
+Engine room - See Engine Front heated oxygen sensor heater
+COMPANMENT ...ecvvrevireeriiieireneneeeee. B 1-44 (Left DANK) covveecvviniireerrriee iver ecnernnns EC-184
+Engine serial nUMbEr ....ccouvceveeeeeeeeecieeee Gi-38 Front heated oxygen sensor heater
+EVAP Canister .......ccoovcnimrirercennecnnenesieneanas EC-23 (Right bank) ........coocevririniiniiinininnnnee. EC-184
+EVAP canister purge control solenoid Front passenger air Dag.......ccoccceeevieiineninenn. RS-8
+VAIVE Leicester EC-415 Front S€at.......ccooeecveeiecreeecee cece BT-27
+EVAP canister purge control valve ............. EC-409 Front seat belt ..........oooeeeiiieeeeeeeee RS-3
+EVAP canister purge volume control Front SUSPENSION ...ccviveecieeiicccrrnn screen ee FA-21
+VAIVE corinne entree EC-282, 374 Front washer.....ccoceaniiecnieniniccniicinecinis EL-95
+EVAP canister vent control valve........ EC-288, 381 Front Wiper .....cccv eevee ens EL-95
+EVAP control system purge flow moni- Fuel cut control (at no load & high
+toring diagnosis .....cccoeeeiueeeeccieeeeeee ee EC-386 engine Speed)... cccvveecvrcrerineereeeir eens EC-22
+EVAP vapor lines inspection...........cce.u....... MA-16 Fuel filler lid cocoon BT-9
+Evaporative emission (EVAP) system........... EC-23 Fuel filter replacement ........ccccvveeviivcenieeneenn. MA-12
+Exhaust system ......oceveeceeeeervceieceece seen, FE-4 FUE! GAUGE .eecerririeriiireeire ricer einen EL-68
+Exhaust system inspection ..........ccccevveernene MA-17 Fuel injection system (Left bank)........ EC-219, 225
+EXON. coin eeeeeeeeeenn BT-22 Fuel injection system (Right bank) ..... EC-219, 225
+Fuel line inspection...........ccceccevieerercevrennnnns MA-12
+F Fuel precautions........cccecevinnnicmmnenscceeccenieen, Gl-6
+Fuel pressure check.......cc.vecvveeeeiiiveniiinennnas EC-29
+Fuel pressure release ...coccceeeeeeveeverreeeneeeennn. a
+Fan control amo. ween HA-119 FUE) PUMP eee cae EC-453
+Fa SWHOR cov I  — EC-453
+Bsa syinst sc kan £C.31  FUELLH - Wiring diagram —......... EC-219, 225
+F/FOG - Wiring diagram w....oeeeevrevesssressresronn. EL-55 FUSE coerce rere rere eee eee EL-14
+Final drive (FF AIT) woveeeeenieeereeeneeeneessanenae AT-261 Fuse block eae eemeeataseesatessetesneeneeenerienerenrananen Foldout
+Final drive (FF MIT) coueeeereeeeeeeeeneeoeeean MT-12, 26 FUSIDIE TINK ..coreeeeieeieeeet eres erene seems EL-14
+Finisher, interior - See Trim ........covvecevveeninnne BT-16
+[lolol gi 41 1 1 FORO BT-16 G
+FIOW CharS .....c.veeeiiieiceeeeeeecveeen ene GI-31
+Fluid temperature sensor (A/T).............. AT-89, 155
+FIUIAS «oor MA-8 Garage jack and safety stand .........cccccceenns Gl-41
+Flywheel (Clutch) ......coevvcnnicreecececec, CL-11 GAUGES .vveerreenerieeeiereeniee serena sees eae staan EL-68
+Flywheel runout .........ccvvveeniververiiiieeeirenn. EM-63 Gear components (M/T) ....coceveeeeririenrennennnne MT-12
+FO2H-L - Wiring Generic scan tool (GST) ccvvecueeeeccreinieenicinens EC-76
+diagram................... EC-150, 157, 163, 169, 178 Ground distribution .......ccccee vec iecmrinereiieeeeennes EL-15
+Fog lamp, front .......eeeeeeieeeieeeeee eee EL-54
+Fog lamp, front, removal and H
+installation ........ccccveevvecn revere BT-6
+FOrK rod (M/T) cuvvcceeercceeeeseeeeceeeseans MT-13
+Forward ClUCh......c.covuecreieeeeceeee ee AT-239 R
+Freeze frame data.........cccovemrievivevienirennnn, EC-43 HAIMESS CONNECION....vorvosvvss vrs FL 3
+: Harness layout.........ccoovceieincccnnnnices EL-301
+FROZLH - Wiring diagram ...............c...cc.e. EC-184 Hazard warning lamp..............ccveeeureseveecanens. EL-57
+FONE @XIE o.oo aS EP sO EL-37
+~ Front bumper RL ETTT ECE UEC PETS PRP EP ERE RR BT-6 Headlamp removal and installation ..ee.eeenenne.. BT-6
+Front combination lamp removal and Headlining - See ROOF trim ...ceeerrveeereecirraenen. BT-20
+installation rererrrEawEr tre TIES I renner brani rena raeens BT-6 Heated oxygen sensor (HO2S)
+Front disC brake ........c.cocccvviieeecireveeeeeeeene BR-12 (OM) eee. EC-150, 157, 163, 169, 178
+Front door Cerrereraiena. Serene BT-11 Heated oxygen sensor (HO2S) (Front)
+Front engine mounting control................... EC-454 (Left bank) EC-150. 157. 163. 169. 178
+Front fog lamp ........cccoveviiveeeeeeeeee cece EL-54 YT TT mmm ’ ’ ’ ’
+Front fog lamp removal and installation .......... BT-6
+IDX-4
+
+1688
+===== PDF page 5 =====
+ALPHABETICAL INDEX
+
+Heated oxygen sensor (HO2S) (Front)
+
+(Right bank) ............ EC-150, 157, 163, 169, 178
+Heated oxygen sensor (HO2S) monitor ....... EC-57
+Heated oxygen sensor heater
+
+(Front)(Left bank).......ccccceeeirieiiieninienee EC-184
+Heated oxygen sensor heater
+
+(Front)(Right bank) .....cccccoeeoeiinriiinnieee EC-184
+Heated oxygen sensor monitor (HO2S)
+
+1001119 SOURS EC-57
+Heated seat.........cccervvermrnerecnineccnnnn BT-31, EL-137
+Height (DIMensions) ......ccvoeeeeee riences GI-39
+HFC134a (R134a) system precaution ............ HA-3
+HFC134a (R134a) system service
+
+PrOCEAUIE.....eeeeerrirreeee i ireeereesrenresenenenes ne HA-121
+HFC134a (R134a) system service tools......... HA-8
+HFC134a system service equipment
+
+Precaution... eee HA-10
+High CIUtCh...eeeinn eee AT-235
+H/LAMP - Wiring diagram.......ccccceeevrecnnnnneee. EL-38
+HOOG «cee eee BT-6
+[2 [0] 1 IO TRTOPP ROR EL-107
+HORN - Wiring diagram .........cccceevceeinicnnns EL-107
+How to erase DTC for ECCS OBD
+
+SYSIEM weenie EC-52
+HSEAT - Wiring diagram .......ccccveeveieevecennne EL-137
+
+I
+
+IACV - FICD solenoid valve.......cccccceeceeenne EC-464
+IACV-AAC VaIVe eee EC-308
+IACV-FICD solenoid valve ......covccnvicennnnee EC-462
+Identification plate .......ccccvvreerirerricrnrnenienens Gl-38
+Idle air control valve (IACV).....ccccccvenninnnns EC-303
+Idle mixture ratio .....ccovceeeriierreeenn cece EC-34
+Idle Speed......cccevemeiiiirreneee eer EC-34
+Ignition COIl cover EC-335
+Ignition tiMING .....ccccoivri ee EC-34
+[ILL - Wiring diagram ........cccceecvenrirenennenrineans EL-63
+HUMINAtioN....coeee cece EL-61, 278
+In vehicle SENSOr .....occvcnricecrrccner sree, HA-110
+Inhibitor SWItCh ..coveiiicrerer ie AT-82, 85
+[=o Co SOUP PTTPPSROPRO EC-447
+Injector removal and installation ................... EC-30
+Input shaft (FF M/T)} ..ceevvriieniicirivenniiennn MT-12, 17
+Instrument panel ........cccconniciiinnenncnne. BT-13
+INT/L - Wiring diagram ......cocecceciiennincceenineen. EL-67
+Intake air temparature sensor.......cc.cc.ceuveen. EC-126
+intake door control linkage
+
+adjustment o.oo, HA-57, 108
+Intake door MOtOr ...ceceeeeeeeeeeceeeccre eee HA-118
+Intake Manifold ........ocvveniiiieceee EM-10
+INtAKE SENSOI .....vivericrrrririrrrernreenr sree HA-112
+Integrated homelink transmitter ................... EL-296
+19)0=T go GSS BT-16
+Interior lamp on-off control.............ccceeeenee. EL-282
+[VMS (In-Vehicle Multiplexing System) ....... EL-164
+IVMS-System description .......cccoveeevvevernnnnn. EL-164
+IVMS-Trouble diagnoses ........ccvcceeereeeennens EL-183
+
+J
+Jacking PoiNtS.......ccccvveeceveerermeeeecceeeecnrene Gl-41
+Junction box (J/B) ....ooeeevieiivecnnrieecereieeeenn Foldout @f
+K MA
+Key illumination............cccccoveeemiceceeniecannnnnnns EL-282 EM
+Keyless entry system - See Multi-re-
+mote control system......ceeiiiiiieriiiennnns EL-232
+Knock sensor (KS) ....coceiveeiccnenns EC-240 LG
+L
+EG
+Length (DIMensions) ........c.ccovveveeieicieeecivann, GI-39
+License lamp... cee vceeeieereeeemecsisnree samme sieenns EL-49 FE
+[12100 J 0 ToT] 1 JOON Gl-42
+Line pressure solenoid valve ....... AT-118, 129, 133 CL
+Line pressure test (A/T) ocoviiennniiinniiciennen. AT-62 “=
+Liquid gasket application .......cceoeeeiiecriineennnes EM-2
+Location of electrical units .......cccvvveveeennn, EL-298 MIT
+LOCK, OOF ceeeeeeieeeeie eee cece cree eee ecensnnaes BT-11 =
+Low and reverse brake ....coccceeeeeeeiininnnnenn AT-245
+Lubricant (R134a) A/C ...ooeeceeeerrerere eee HA-123 a5
+LUDFICANES evieeei cere MA-8
+Lubrication circuit (engine) ........ccevvvreeriiiiiannnn LC-4
+Lubrication-locks, hinges and hood EA
+JAtCNES cee een MA-21
+M RA
+Magnet Clutch... HA-129 8R
+Main drive gear (M/T) .ooccerriieeevneecciienin MT-12
+Mainshaft (M/T) .ccorcoivcrmierincnins MT-12, 22
+Maintenance ......coevccirinneeren cise MA-1 ST
+Maintenance (engine) .......cccoceeeiveeeeeirennnnne MA-10
+MAJOR OVERHALL.....ccoveerriierniiieneenneenn AT-193 RS
+Malfunction indicator lamp (MIL)................... EC-54
+Manual air conditioner - Wiring diagram....... HA-40
+Manual transaxle number............cccccviiiiiviennns GI-38 BT
+Manual transmission oil replacement........... MA-17
+MAP/BARO switch solenoid valve .............. EC-320
+Mass air flow sensor (MAFS)..........c.......... ECG-110 MA
+Master cylinder (brake) .........cccvveeciniiciccccennn BR-8
+Master cylinder (ClUtCh) .cocovvervceeiirriinieiireaennn. CL-7
+1 {= C= TR EL-68 =
+METER - Wiring diagram ......cccceeuevrieeenrenenne EL-71
+MIL & Data link connectors circuit .............. EC-468
+MIRROR - Wiring diagram ..........cccccemecrenne EL-138 ES
+Mirror defogger.......covvieciieiceererin nrc EL-110
+Mirror, OOF ..eeveeei ii ceeeeeeeeeeeee cesses rneee ens BT-43
+Mirror, Out SIdE .....cuvveeeecrrrreeeisie serene BT-43
+MISHIE c.eveiiiiererrrcnr rc rcee EC-235
+Mode door control linkage
+adjustment... HA-56, 108
+
+IDX-5 1689
+===== PDF page 6 =====
+1690
+
+ALPHABETICAL INDEX
+
+Mode door Motor.....cccveeeeviee creer cece. HA-116
+Model variation ...........ceeevevreiiceeiieeeee cece GlI-36
+Molding - See EXterior........cccceeeevvevveenvrcnnns BT-22
+M/T major overhaul ..........cccceevvvrerneirviccnnennene. MT-11
+M/T removal and installation...........c.cccc.eeeeee... MT-8
+Mud guard - See Exterior ......ccceeeeeevceeeeernene. BT-22
+MULTI - Wiring diagram.......c.ccceeeceerceeeuennes EL-235
+Multi-remote control system .........ccccevveenee. EL-232
+Multiport fuel injection (MFI) system............. EC-18
+Multiport fuel injection precautions................... Gl-4
+N
+Neutral position switch (M/T) c.cceeeeveeireiennene MT-8
+NVH troubleshooting (BR) ......cccoevevrrveceniienne. BR-3
+NVH troubleshooting (CL) ....ccvveereeeeiviceerrennens CL-3
+NVH troubleshooting (FA).....ccccvveeuveeeeeeeennee. FA-4
+NVH troubleshooting (M/T) ...cceooveeieeeeeeneee. MT-5
+NVH troubleshooting (RA) ......ccoeieeevieeeeeeene. RA-3
+NVH troubleshooting (ST) ....coceeeveeiinerieecenne ST-5
+0
+Oil pan (ENGINE) vouveeeveeeeeeeeeree eee EM-13
+Oil pressure (engine) .........cvveeeerveeeeieerereeeenns LC-5
+Oil PUMP (A/T) eee eee AT-214
+Oil pump (ENGINE) ....ceivviirieceraie recesses LC-5
+Oil pump regulator valve (enging)..........ceue... LC-7
+Oil seal replacement (engine) ......ccccevveeernen. EM-33
+Operating cylinder (CIUtCh) .....c.ceveeiieemrerrnninins CL-8
+Out Side Mirror .....vccveeeeireeee eee cere BT-43
+Overdrive control SwitCh..........cccvveeveveivnen... AT-178
+Overrun CIULCH eevee cece AT-239
+Overrun clutch solenoid valve...... AT-118, 129, 151 -
+Oxygen sensor monitor (02S) (front) ........... EC-57
+P
+P/ANT - Wiring diagram......... eeereareeerannaaas EL-129
+Park/Neutral position switch..........ccuceue.ne... EC-425
+Parking brake control .........cc.coeevvevveevrveenenn, BR-22
+Parking lamp......cccieeeerie cece seen EL-49
+PCV (positive crankcase ventilation) ............ EC-28
+PGC/V - Wiring diagram ..........cccceeeeeveerennne EC-282
+PHONE - Wiring diagram ........ccoceecvveerennne, EL-133
+Piston assembly.......ccoeeveeeiiieeeecccececeee EM-64
+Piston pin inspection.........ccccccevvrvrennennene. EM-57
+Piston ring inspection .........ccccevevvervinecnnns EM-58
+Piston to bore clearance.......ccoeeveevevirennen. EM-59
+POWER - Wiring diagram ........ccccoocvevenrvecnens EL-7
+Power antenna...........ccccceceeeveerevesinsee snes sens EL-128
+Power door 10CK........ccevueeemereeeeeece cece EL-213
+Power door mirror.......euecceeeeeeeeeeeeeee eee EL-138
+Power. seat .......ccceoveeveeiee cece EL-135
+Power steering fluid level.................... MA-20, ST-7
+Power steering gear ......cccuceeveeiveeecceeeeeene. ST-14
+Power steering hydraulic pressure. ..........cve.. ST-9
+
+Power steering oil pressure switch..... EC-457, 461
+Power steering oil pUmMP.......ccccvvvvrrvvvrnnennens ST-24
+Power steering system bleeding .....c....ccevueenne. ST-7
+Power supply routing .......coeeeevevreenrisemriicinian, EL-6
+Power transistor .......... creer reese EC-335
+Power transistor & ignition coil ...........c.e..... EC-329
+POWer WiNAOW........ccccveriimerieemsinessseresecnsnns EL-198
+Precautions (General) c.ceoecccvvcvvereniiccnrnnnerenenns Gl-2
+Pressure plate - See Clutch cover ................ CL-10
+Pressure test (A/T) coerce cee ee eens AT-62
+R
+
+(RF: To [F210 SS LC-15
+Radio - See Audio....ccvvrerierinenncnniciieecins EL-119
+Rear air SPOIler .....coc ceric BT-22
+Rear axle... RA-7
+Rear bumper... creer ieee, BT-9
+Rear disc brake.....eocccoevomreeevivcrnnnnennnreneneee BR-16
+Bear dOOr . ieee eee reer een BT-12
+Rear heated oxygen sensor (HO2S)
+
+REALE «eee EC-214
+Rear seat ...ccoveeviver veces BT-32
+Rear seat Delt....cc.vvoriiceiiiieiiren creer RS-4
+Rear SUSPENSION ...vvieveeereeerireeeeeierriee eee eee RA-10
+Rear window defogger .......c.cvevveeeicicninnenen. EL-110
+Refrigerant connection precaution .................. HA-4
+Refrigerant general precaution .........coceenn..e. HA-3
+Refrigerant ines ......cccoevciien viene cenrereeneee. HA-125
+Release bearing (Clutch) .....cceeeveeriiivieciieniiinn CL-9
+Removal and installation (A/T).....cccceeniienne AT-190
+Reverse ClutCh........coo oes AT-232
+Reverse idler shaft (M/T) ....cveveimnneieeiiene MT-12
+Reverse lamp switch (M/T) - See
+
+Back-up lamp switch (M/T)..ccccccevvrvevnrennnnee MT-8
+Reverse main gear (M/T) ....ccocoveemriceeeeiccneen. MT-12
+Revolution sensor (A/T) eevee eceeeiceeeeeeceecninns AT-92
+Road wheel Size......ccoviiiiiccr cence GI-39
+ROOF HM eee ees BT-20
+ROOMY/L - Wiring diagram ......ccceevvcrnenrnenne EL-283
+RRO2LH - Wiring diagram..........ccevvrvecrane. EC-196
+RRO2RH - Wiring diagram ......ceeecceeuveennne EC-189
+
+S
+SAE J1930 terminology list .....eoveeveeeeereeennen Gl-45
+SAE J1979 - Mode 1 = 7 ceive EC-41
+Seal - See EXLerior ......ccveeeecreecnrmrerscnnenn. BT-22
+SEAT - Wiring diagram. ...........cocevvevcveneennn. EL-135
+Seat belt inspection.......ccevveeeercinnnne MA-21, RS-5
+Seat belt, front... RS-3
+Seat Delt, rear ooo. ceeeeeeeeveeee eee vere rerrnanrannas RS-4
+Seat, front ..eeeeeeeeceee cece BT-27
+SEAL, TEA ...eeeeeeieeeirecree reese sme seers BT-32
+Self-diagnostic results ......couvvvveeeeecenveciniccinnn EC-54
+SHIFT - Wiring diagram ............... rerennernenees AT-181
+Shift control components (M/T)......cccevcrcerinnes MT-13
+Shift Tork (M/T) eerie eves eee eee MT-13
+===== PDF page 7 =====
+ALPHABETICAL INDEX
+
+Shift lever cocci reece MT-10
+Shift schedule... eee AT-284
+Shift solenoid valve A
+
+(ATT) cee, AT-99, 109, 118, 129, 137
+Shift solenoid valve B
+
+(ATT) corer AT-99, 104, 118, 129, 141
+Shock absorber (rear) .....coeeeeeeeeceeeceevenne, RA-11
+Side HM. reece eee BT-16
+SMJ (super multiple junction).........cccuvee..... Foldout
+Spark plug replacement.......cccoeeeeeeeeeieenenn. MA-15
+Speedometer .....ucccveeeceeeiee eee EL-68
+Spiral Cable ......covvveeeieeriieee eee RS-14
+SPO IaMP cies EL-67
+Spring (Wheelarch) height.......covcevvviveeoeeeenn... FA-6
+SROOF - Wiring diagram .....cc.cccecveeveevvnnnns EL-134
+SRS - See Supplemental Restraint
+
+SYSIEM iii RS-8
+SRS - Wiring diagram ..........cceeveeeveeeneeenennee. RS-30
+SRS Trouble diagnoses ......c...cceceeeeeceeerennes RS-25
+Stabilizer bar (front) ........ccccvviicmeiiiie ieee FA-23
+Stall test (A/T) eevee reese AT-59
+Standardized relay.......ccocevvvvvverii ieee EL-4
+START - Wiring diagram...........ccecceeeeeveeneenee. EL-25
+SHAMEY een EL-28
+Starting system .....oovvveevceeeeeeeeee eee EL-23
+Steering gear and linkage inspection........... MA-20
+Steering iNKage ..covveeeeeeeeeeevecrrereir crises ST-14
+Steering switch ....... eens EL-36
+Steering wheel and column.............c........... ST-10
+Steering wheel play .......cccccoeevievvecvieeicireene, ST-6
+Steering wheel turning force.........cvoeeuennen.... ST-8
+SEP 1aMP eee ree EL-290
+STEP/L - Wiring diagram ...........ccceeeeeeiveennne. EL-291
+NS] (07 0 JN Eo 1 0 JSS EL-51
+STOP/L - Wiring diagram ........coceeevveevereennenne. EL-51
+Striking rod (M/T) cueeeciie cece creas MT-13
+Strut (fron) eeeeeee eee eee FA-22
+SuNload SENSON....c.cvviiee cerca seine HA-111
+SUNFOOT «eee screenees BT-33
+Supplemental Restraint System...................... RS-8
+Supplemental restraint system - Wiring
+
+(0 [F=To | ¢=1 1 1 FOSS SRR RS-30
+SWI/ILL - Wiring diagram ........cceeeeveecenens EL-279
+Symbols and abbreviations ...........cevee eee. Gl-7
+Synchronizer (MIT) ...uiiieeieecee eccrine MT-12
+System readiness test (SRT) code............... EC-43
+
+T
+
+LE: Teg ToT T= CT EL-68
+Tail laMP eee EL-49
+TAIL/L - Wiring diagram..........c.oceecveveenseennrenns EL-49
+Tank fuel temperature sensor ...........c........ EC-231
+TCM circuit diagram .......ceeeeeeveeceeeeeereecneeen, AT-12
+TCM inspection table ........cccccveeeveeveeerveennnne, AT-77
+Telephone cove EL-133
+THEFT - Wiring diagram........cccceovveeereennnee. EL-256
+Theft warning system ......coeeveeeevcvecvvcienns EL-250
+Thermostat. creer cee LC-14
+Three way catalyst .......cceeeeeveveieeireersiennn EC-268
+
+Three way catalyst function (Left bank}...... EC-268
+Three way catalyst function (Right
+
+DANK) ...ceeee ee EC-268
+Three way catalyst precautions ........cccccceeeeeee. GI-5
+Throttle bodies .....ccoevvrieeeciciire EM-10
+Throttle position sensor (TPS) .......ccc......... EC-137
+Throttle position sensor adjustment.............. EC-82
+Throttle position switch .......cccceeeveennnnn. AT-147, 179
+Throwout bearing - See Clutch release
+
+DEANNG ce. CL-9
+JLLES (oo IPP PPPS PR ST-18
+Tie-rod ball jOINtS ...c..cceveeereirrcrcrcrirrecnnenens ST-18
+Tightening torque of standard boits ............... GI-44
+TIMING ChaIN.....oceeeiee eee ererrremrrrennr crannies EM-19
+Tire rotation .........ccoveeeeeecvcr rence MA-19
+Tir SIZE ueeriiirerirircir creer essere GI-39
+TLID - Wiring diagram ......cceceerveeveerecrnneneene. EL-139
+Torque converter installation ............cceevue.... AT-191
+Torque convertor clutch solenoid
+
+VIVE weitere eens rnene ne AT-118, 122, 129
+Tow truck tOWING......ccceveiiieriirernrensiecn rena Gl-43
+Transmission case (M/T) ....coccoovrreeciiceennne MT-11
+TRANSMT - Wiring diagram .......ccccceeeveenne EL-296
+Transverse link (front) ........ccooviicviieeiiniennnneen. FA-24
+Tread-FR&RR (Dimensions) .......ccccceevveecunnn. GI-39
+THM cece eee ere errr eee eee ranean BT-16
+Triple pressure switCh.......ccoveeeeee.e. HA-12, 56, 107
+TPUNK BA eee cnn BT-9
+Trunk lid opener - See Trunk lid...................... BT-9
+Trunk lid opener, electric .......cceevieceeeeciiennns EL-139
+Trunk room Jamp.......coeervicmeeeeerieee sees EL-67
+Trunk room tM .e..evevcnieeeeceeee rece eeeen BT-21
+TURN - Wiring diagram ........eceeeeeeeeercnnereeneen. EL-58
+Turn signal [amp ..c.ueeeceeee irene eee erence EL-57
+Two trip detection 10giC ..........ccciiinnieninnee. EC-41
+TWO-POIE Tift cee Gl-42
+
+U
+Under DOAY ..ccoeeeeereeecensee reer BT-46
+Vv
+
+Vacuum Cut valve ...c.ovcevvieicrinieen cence
+Vacuum hose (brake system)........coccceeeeennn.
+Vacuum hose drawing (ECCS) .........c...........
+Valve clearance.........ooccvveeeeeeeeeciiiiieeieeee eee
+Valve gUIdE ..ocvveieeiieiieer reese eee
+Valve Seal corer
+Valve SPriNg ......ccoceevieennniin irene sneer
+Vehicle identification number ......ccccooevviens
+Vehicle recovery (freeing a stuck
+
+VENICE) ceiver eaters seers eee eens
+Vehicle speed sensor (VSS) .....ccvvecieninnn,
+Viscosity number (SAE) .....cccceeeriricrerrrcrccnnnnns
+Viscous coupling {FF M/T).ccoovernicincnnns
+
+EM
+
+LG
+
+FA
+
+RA
+
+BR
+
+===== PDF page 8 =====
+ALPHABETICAL INDEX
+
+WwW
+
+WARN - Wiring diagram ......cccoceeeeeiiicnennne EL-81
+Warning buzzer ..........cvevveeceieveeciereeeeen EL-86
+Warning [amps......ccoerrrvnmninnceeen, EL-80
+Washer, front... eerie veer EL-95
+Water PUMP cere eerste renee LC-9
+Water temperature gauge........cccooeeeeveereeen.. EL-68
+Weatherstrip - See Exterior .......ccccceveeeennn. BT-22
+Wheel alignment (front) ......ccoeeveieiniiiininieens FA-7
+Wheel alignment (rear) ...cccccceeveveieeeiceeencnneens RA-6
+Wheel balance .....ueceeceevenreeceeiiccreeeeeeevieees MA-19
+Wheel bearing (front axle) .......cccccoeverirnencnee. FA-7
+Wheel bearing (rear) .....cccovvveeeeeniineveennicneeeees RA-5
+Wheel hub (rear) .....coeeeceeeeeeiieeecee eres RA-7
+Wheel sensors (ABS).....cccceeeceevevneeeeeinnnenn... BR-27
+Wheel SiZ€.....ccooiiiiieicccernee crete GI-39
+Wheelarch height ........ etree eetee eae ee aero aaa FA-6
+Wheelbase (Dimensions) ......iiceivceerreennne GI-39
+Wide open & closed throttle position
+
+SWILCH eric EC-137
+Width (DIMENSIONS) ..ueeerrereniiieerriimnenrreeeeerinnnne GI-39
+WINDOW - Wiring diagram ......c..cccevveeuenennn. EL-200
+Window antenna .........cocceeeeoviee cence seccninenns EL-130
+WIPER - Wiring diagram ..........ccccceceiennene. EL-97
+Wiper, front .......coeveeeeeeeee eee EL-95
+Wiring Diagram (Cell code) list......ccooveveeennns EL-317
+Wiring diagrams .....oeeeeeeeevevecee sierra Gi-9
+Withdrawal lever (clutch) .......ccoveeeeeeiiricreiennn. CL-9
+Wrist pin - See Piston pin inspection ........... EM-57
+
+1692 IDX-8

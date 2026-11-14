@@ -1,0 +1,3930 @@
+===== PDF page 1 =====
+RESTRAINT SYSTEM
+
+SECTION R S
+
+CONTENTS
+
+PRECAUTION... erect sees senna 2
+Supplemental Restraint System (SRS) “AIR
+BAG iinet nicer erases 2
+
+SEAT BELTS... cece esses anaes 3
+Front Seat Belt......coocoeiiiin cece 3
+Rear Seat Belt .......cooooceiiiiiieeeeeeeeeeeeeeeeeee 4
+Seat Belt Inspection.......ccccovviininiiinscnni rece 5
+
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)............ 8
+Precautions for SRS “AIR BAG .......ccecoceeieeeieeeeeenne 8
+Special Service TOOIS ...ouuiiiecieeeceee cere 8
+Description... ee 9
+SRS Component Parts Location .........ccccceveecvvennnen. 10
+Maintenance ems ........ccccvveerviierecinnee eee 10
+Removal and Installation — Diagnosis Sensor
+Unit and Satellite Sensor........ccccevvvvecreveiicrccerrreeeenne 12
+Removal — Air Bag Module and Spiral Cabie.......... 14
+
+Removal — Front Passenger Air Bag Module .......... 15
+Removal — Side Air Bag Module.......cooccvveriiirinninne 16
+Installation — Air Bag Module and Spiral Cable....... 17
+Installation — Front Passenger Air Bag Module.......18
+Installation — Side Air Bag Module............c.cccccoiiie 19
+Disposal of Air Bag Module .........cooiuiimeiniirnnicnnnns 19
+
+TROUBLE DIAGNOSES — Supplemental
+
+Restraint System (SRS)......ccccvcrirneiiinnnneircre cece 25
+Trouble Diagnoses Introduction ........ccccveveveiieenenneen. 25
+How to Perform Trouble Diagnoses for Quick
+and Accurate Repair........ccccccervee iin ccnnnennenennnennns 27
+SChEMALIC .....eivmeeirerrrerircee rere cree 29
+Wiring Diagram — SRS —.....oovciiiiiiiceeee 30
+Self-AagnoSIS ..uvvvvrvrire rere reece 33
+Trouble Diagnoses for Air Bag Warning Lamp.......... 51
+
+COLLISION DIAGNOSIS............cooeeririiernnrnnsennieenanens 53
+
+CL
+
+MIT
+
+AT
+
+1127
+===== PDF page 2 =====
+1128
+
+PRECAUTION
+
+Supplemental Restraint System (SRS) “AIR
+BAG”
+
+The Supplemental Restraint System “AlR BAG”, used along with a seat belt, helps to reduce the risk or
+
+severity of injury to the driver and front passenger in a frontal collision. The Supplemental Restraint System
+
+consists of air bag modules (located in the center of the steering wheel and on the instrument panel on the
+passenger side), a diagnosis sensor unit, warning lamp, wiring harness and spiral cable.
+
+If the vehicle is equipped with side air bag as the Supplemental Restraint System, the side air bag used along
+
+with the seat belt helps to reduce the risk or severity of injury to the driver and front passenger in a side col-
+
+lision. The side air bag consists of air bag modules (located in the outer side of front seats), satellite sensor,
+diagnosis sensor unit (which is one of components of air bags for a frontal collision}, wiring harness, warning
+lamp (which is one of components of air bags for a frontal collision).
+
+WARNING:
+
+e To avoid rendering the SRS inoperative, which could increase the risk of personal injury or death
+in the event of a collision which would result in air bag inflation, all maintenance must be performed
+by an authorized NISSAN dealer.
+
+e Improper maintenance, including incorrect removal and installation of the SRS, can lead to per-
+sonal injury caused by unintentional activation of the system.
+
+e Do not use electrical test equipment on any circuit related to the SRS unless instructed to in this
+Service Manual. SRS wiring harnesses can be identified with yellow harness protector or yellow
+insulation tape before the harness connectors.
+
+RS-2
+===== PDF page 3 =====
+SEAT BELTS
+
+CAUTION:
+
+eo Do not disassemble buckle or seat belt assembly.
+
+Replace anchor bolts if they are deformed or worn out.
+
+Never oil tongue and buckle.
+
+If any component of seat belt assembly is questionable, do not repair. Replace the whole seat belt
+assembly. Gl
+if webbing is cut, frayed, or damaged, replace seat beit assembly.
+
+When replacing seat belt assembly, use a genuine seat belt assembly. MA
+After any collision, inspect all seat belt assemblies, including retractors and other attached hard-
+
+wares (i.e., guide rail set).
+
+Front Seat Belt EM
+Remove front seat. Refer .to “SEAT” in BT section for details.
+Remove adjuster cover. LC
+Slide the floor anchor cover.
+Remove floor anchor bolt. Eg
+
+Remove shoulder anchor bolt.
+Remove center pillar upper and lower garnish. Refer to “INTERIOR TRIM” in BT section for details.
+
+Remove the boit securing seat belt retractor, then remove seat belt and seat belt retractor.
+Remove bolts securing seat belt adjuster, then remove seat belt adjuster. FE
+
+SICICICISISIC)
+
+SEC. 769-868 0) 43 - 55 -
+IN  Flat-bladed (4.4 - 56, 32 - 41)
+
+dk AT
+ORO =m “
+
+BR
+
+S¥
+
+[FIA
+EL
+©) : Nem (kg-m, ft-lb) Xo yp he 32 - 41)
+IDX
+
+SRS373
+
+RS-3 1129
+===== PDF page 4 =====
+SEAT BELTS
+
+Rear Seat Belt
+
+Remove rear seat. Refer to “SEAT” in BT section for details.
+Remove rear pillar garnish. Refer to “INTERIOR TRIM” in BT section for details.
+
+@®
+
+@
+
+@ Remove each anchor bolt.
+
+@ Remove the bolt securing rear seat belt retractor, then remove seat belt retractor.
+
+SEC. 869
+
+Anchor bolt
+
+43 - 55
+QF (4.4 - 556, 32 - 41) J
+
+Anchor bolt
+
+SD
+rd €3[0] 43 - 55
+
+(4.4 - 5.6, 32 - 41)
+
+A
+<2. p= [@] : Nem (kg-m, ft-lb)
+
+SRS442
+
+1130 RS-4
+===== PDF page 5 =====
+SEAT BELTS
+
+Seat Belt Inspection
+
+AFTER A COLLISION
+
+WARNING:
+
+Inspect all seat belt assemblies including retractors and attaching hardware after any collision.
+NISSAN recommends that all seat belt assemblies in use during a collision be replaced unless the
+collision was minor and the belts show no damage and continue to operate properly. Failure to do so
+could result in serious personal injury in an accident. Seat belt assemblies not in use during . a colli-
+sion should also be replaced if either damage or improper operation is noted.
+
+Replace any seat belt assembly if:
+
+The seat belt was in use at the time of a collision (except for minor collisions and the belts, retractors and
+buckles show no damage and continue to operate properly).
+
+The seat belt was damaged in an accident (i.e. torn webbing, bent retractor or guide, etc.).
+
+The seat belt attaching point was damaged in an accident. Inspect the seat belt attaching area for dam-
+age or distortion and repair as necessary before installing a new seat belt assembly.
+
+PRELIMINARY CHECKS
+
+1.
+a.
+
+wn oT
+
+Check the seat belt warning lamp/chime for proper operation as follows:
+Switch ignition ON. The seat belt warning lamp should illuminate. Also, the seat belt warning chime should
+
+sound for about seven seconds.
+Fasten driver's seat belt. The seat belt warning lamp should go out and the chime (if sounding) should
+
+stop.
+
+Check that the seat belt retractor, seat belt anchor and buckie bolts are securely attached.
+
+Check the shoulder seat belt guide and shoulder belt height adjuster for front seats. Ensure guide swiv-
+els freely and that belt lays flat and does not bind in guide. Ensure height adjuster operates properly and
+
+holds securely.
+
+4. Check retractor operation:
+
+a. Fully extend the seat belt webbing and check for twists, tears
+or other damage.
+
+b. Allow the seat belt to retract. Ensure that belt returns smoothly
+and completely into the retractor. If the seat belt does not
+returns smoothly, wipe the inside of the loops with a clean
+paper cloth etc. because dirt built up in the loops of the upper
+anchors can cause the seat belts to retractor slowly.
+
+c. Fasten the seat belt. Pull firmly on belt and buckle to ensure
+belt remains latched. Unfasten seat belt. Ensure belt releases
+
+freely and buckle button returns to original position.
+SRS353
+
+5. For center (non-retractable) seat belt, check that the seat belt
+is accessible. Check seat belt webbing for twists, tears or other
+damage. Fasten the seat belt. Pull firmly on belt and buckle to
+ensure belt remains latched. Unfasten seat belts. Ensure belt
+releases freely and buckle button returns to original position.
+
+6. Repeat steps above as necessary to check the other seat
+belts.
+
+RS-5
+
+EM
+
+LC
+
+EC
+
+FE
+
+CL
+
+MT
+
+AY
+
+fa
+
+EL
+
+1131
+===== PDF page 6 =====
+1132
+
+SEAT BELTS
+
+Seat Belt Inspection (Cont'd)
+ON-VEHICLE CHECK SEAT BELT RETRACTOR
+Emergency Locking Retractors (ELR) and Automatic Locking Retractors (ALR)
+
+NOTE:
+
+All seat belt retractors are of the Emergency Locking Retractors {(ELR) type. In an emergency (sudden
+stop) the retractor will lock and prevent the belt from extending any further. All outboard 3-point type
+seat belt retractors except the driver's seat belt also have an Automatic Locking Retractors (ALR)
+mode. The ALR mode {also called child restraint mode) is used when installing child seats in outboard
+seating positions. The ALR mode is activated when the seat belt is fully extended. When the belt is
+then retracted partially, the ALR mode automatically locks the seat belt in a specific position so the
+belt cannot be extended any further. To cancel the ALR mode, allow the seat belt to fully wind back
+
+into the retractor.
+
+Check the seat belt retractors using the following test(s) to determine if a retractor assembly is operating
+properly.
+
+ELR function stationary check
+Grasp the shoulder beit and pull forward quickly. The retractor should lock and prevent the belt from extend-
+
+ing further.
+
+ALR function stationary check
+1. Pull out entire length of seat belt from retractor untit a click is heard.
+2. Retract the belt partially. A clicking noise should be heard as the belt retracts indicating retractor is in the
+
+Automatic Locking Retractors (ALR) mode.
+3. Grasp the seat belt and try to pull out of retractor. Belt must lock and not extend further. If NG, replace the
+
+retractor assembly.
+4. Allow the entire length of belt to retract to cancel the ALR mode.
+
+ELR function moving check (all outboard seating positions)
+
+WARNING:
+
+Perform the following test in a safe, open area clear of other vehicles and obstructions (for example,
+a large, empty parking lot). Road surface must be paved and dry. DO NOT perform the following test
+on wet or gravel roads or on public streets and highways. This could result in an accident and seri-
+ous personal injury. The driver and passenger must be prepared to brace themselves in the event the
+
+retractor does not lock.
+
+Fasten driver's seat belt. Buckle a passenger into the seat for the belt.
+
+1.
+2. Proceed to the designated safe area.
+3. Drive the vehicle at approximately 16 km/h (10 MPH). Notify any passengers of the pending sudden stop
+
+and the driver and passenger must be prepared to brace themselves in the event the retractor does not
+
+lock. Apply brakes firmly and make a very hard stop.
+During the stop, seat belts should lock and not extend. If the seat belt retractor assembly does not lock, per-
+
+form the retractor off-vehicle check.
+
+RS-6
+===== PDF page 7 =====
+SEAT BELTS
+
+Seat Belt inspection (Cont'd)
+
+OFF-VEHICLE CHECK SEAT BELT RETRACTOR
+1. Remove the seat belt retractor assembly.
+
+2. Slowly pull out belt while tilting the retractor assembly forward from the mounted position without twisting
+
+the retractor assembly as shown in the illustration.
+
+15 degrees or less tilt: Belt can be pulled out.
+35 degrees or less tilt: Belt locks and cannot be pulled out.
+
+Front seat belt Rear seat belt
+
+The mounted
+position
+
+The mounted
+position
+
+Tilt the seat belt retractor assembly forward from the mounted position without twisting the retractor assembly
+
+SRS377
+
+If NG, replace the retractor assembly.
+
+RS-7
+
+Gl
+
+MIA
+EM
+LG
+EC
+EE
+CL
+MT
+AT
+FA
+
+BR
+SY
+Bil
+
+RIA
+
+EL
+
+1133
+===== PDF page 8 =====
+1134
+
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+Precautions for SRS “AIR BAG”
+
+® Do not use a circuit tester to check SRS circuits unless instructed to in this Service Manual.
+eo Before servicing the SRS, turn ignition switch “OFF”, disconnect both battery cables and wait at least 3
+
+minutes.
+
+For approximately 3 minutes after the cables are removed, it is still possible for the air bag to deploy.
+Therefore, do not work on any SRS connectors or wires until at least 3 minutes have passed.
+e Diagnosis sensor unit must always be installed with their arrow marks “{” pointing towards the front of
+the vehicle for proper operation. Also check diagnosis sensor unit for cracks, deformities or rust before
+installation and replace as required.
+® The spiral cable must be aligned with the neutral position since its rotations are limited. Do not attempt to
+turn steering wheel or column after removal of steering gear.
+e Handle air bag module carefully. Always place it with the pad side facing upward.
+
+Conduct self-diagnosis to check entire SRS for proper function after replacing any components.
+
+¢ After air bag inflates, the front instrument panel assembly should be replaced if damaged.
+
+Special Service Tools
+
+The actual shapes of Kent-Moore tools may differ from those of special service tools illustrated here.
+
+Tool number
+(Kent-Moore No.) Description
+Tool name
+KV991072S0 Disposing of air bag module
+(J38381-KIT)
+Air bag deployment kit
+KV98106400
+(J38381)
+Deployment tool NT357
+KV991085S0 For seat belt pre-tensioner
+(J38381-30)
+Deployment tool
+adapters
+NT353 Black"
+KV89105300 Anchoring air bag module
+(J412486)
+Air bag module bracket
+NT354
+HT61961000 and Use for special bolts
+HT62152000 combined [TAMPER RESISTANT TORX (Size T50)]
+(J38219)
+b: 8.5 - 8.6 (0.335 - 0.339) dia.
+c: approx. 10 (0.39) sq.
+NT361 Unit: mm (in)
+
+*: Special tool or commercial equivalent
+
+RS-8
+===== PDF page 9 =====
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+Description
+The air bag deploys if the diagnosis sensor unit activates while the ignition switch is in “ON” or “START”
+position.
+
+Driver air bag Passenger air bag el
+module module
+[_]
+| ® | N
+Satellite sensor (LH) Satellite sensor (RH) =
+(G sensor for side air bag LH) Diagnosis sensor unit (G sensor for side air bag RH)
+® Auxiliary power source (condenser) LG
+
+® Drive circuit
+
+* CPU EC
+
+Side air bag module {RH}
+
+Side air bag module (LH} ® G sensor
+(for driver and passenger air bags)
+® Safing sensor FE
+(for driver and passenger air bags)
+* Safing sensor NU
+(for side air bag) GL
+SRS375 MT
+
+The collision modes for which supplemental restraint systems are activated are different among the SRS sys-
+tems. For example, the driver air bag module and passenger air bag module are activated in a frontal colli- AT
+
+sion but not in a side collision.
+SRS configurations which are activated for some collision modes are as follows;
+
+=F/\
+SRS configuration Frontal collision Left side collision Right side collision a
+Driver air bag module O — — A
+Passenger air bag module O — —
+Side air bag module (LH) — O — -
+Side air bag module (RH) — uu O RR
+
+HA
+
+EL
+
+[)
+
+RS-9 1135
+===== PDF page 10 =====
+1136
+
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+SRS Component Parts Location
+
+Passenger air bag module Side air bag module
+
+Spiral cable
+
+Driver air bag module Satellite sensor
+
+Driver side door switch
+Diagnosis sensor unit
+
+Satellite sensor
+
+SRS376
+
+AIR
+BAG
+
+Maintenance Items
+
+CAUTION:
+Do not use a circuit tester to check SRS circuit.
+
+1. Check operation of “AiR BAG" warning lamp.
+After turning ignition key to “ON” position, “AIR BAG” warning
+lamp illuminates. The “AIR BAG” warning lamp will go off after
+about 7 seconds if no malfunction is detected.
+If any of the following warning lamp conditions occur, immedi-
+ately check the air bag system. Refer to RS-33 for details.
+
+eo The “AIR BAG” warning lamp does not illuminate when the
+ignition switch is turned “ON”.
+
+Me™ «The “AIR BAG” warning lamp does not go off about 7 seconds
+
+after the ignition switch is turned “ON”.
+e The “AIR BAG” warning lamp blinks after about 7 seconds
+after the ignition switch is turned “ON”,
+
+2. Visually check SRS components.
+
+(1) Diagnosis sensor unit
+
+e Check diagnosis sensor unit and bracket for dents, cracks or
+deformities.
+
+® Check connectors for damage and terminals for deformities.
+
+RS-10
+===== PDF page 11 =====
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+Maintenance Items (Cont’d)
+(2) Air bag module and steering wheel
+e Remove air bag module from steering wheel, instrument panel
+or seatback. Check harness cover and connectors for damage,
+terminals for deformities, and harness for binding.
+e Install driver air bag module to steering wheel to check fit or
+alignment with the wheel. @l
+e Check steering wheel for excessive free play.
+e Install passenger air bag module to instrument panel to check
+fit or alignment with the instrument panel. VIA
+e Install side air bag module to seatback to check fit and align-
+ment with the seat.
+EY]
+(3) Spiral cable
+eo Check spiral cable for dents, cracks, or deformities.
+eo Check connectors and protective tape for damage. LG
+e Check steering wheel for noise, binding or heavy operation.
+
+(4) Main harness, air bag harness, body harness EC
+eo Check connectors for poor connections, damage, and termi-
+
+nals for deformities.
+oe Check harnesses for binding, chafing or cuts. EE
+
+(5) Satellite sensor
+e Check satellite sensor (including bracket portion) for dents, CL
+
+cracks or deformities.
+e (Check connectors for damage, and terminals for deformities.
+
+MT
+
+CAUTION:
+Replace previously used special bolts and ground bolt with
+
+new ones. AT
+[FA
+
+BR
+
+IFA
+
+EL
+
+RS-11 1137
+===== PDF page 12 =====
+1138
+
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+Removal and Installation — Diagnosis Sensor
+Unit and Satellite Sensor
+
+CAUTION:
+
+Before servicing SRS, turn the ignition switch off, disconnect both battery cables and wait at least
+
+3 minutes.
+The special bolts are coated with bonding agent while the other bolt is for ground. Do not use old
+
+| J
+bolts after removal; replace with new ones.
+e Check diagnosis sensor unit and satellite sensor for proper installation.
+eo Check diagnosis sensor unit and satellite sensor to ensure they are free of deformities, dents,
+cracks or rust. If they show any visible signs of damage, replace them with new ones.
+e Check diagnosis sensor unit brackets to ensure they are free of deformities or rust.
+e After replacement of diagnosis sensor unit and satellite sensor, check SRS function and perform
+self-diagnosis for SRS. Refer to “Self-diagnosis” for details. (RS-33)
+¢ Do not attempt to disassemble diagnosis sensor unit and satellite sensor.
+e Replace diagnosis sensor unit and satellite sensor if it has been dropped or sustained an impact.
+With side air bag Special bolt REMOVAL OF DIAGNOSIS SENSOR UNIT
+SEC. 253 [3] 15 - 25 1. Disconnect driver, passenger and side air bag module connec-
+iagnosis sensor unit tors
+Ground bolt :
+yn 2. Remove console box. Refer to “INSTRUMENT PANEL” in BT
+section.
+BR 3. Disconnect diagnosis sensor unit connector.
+Lp Xe 4. Remove ground bolt and also remove special bolts using the
+Ze ART TAMPER RESISTANT TORX (Size T50), from diagnosis sen-
+z rorst Special bolt €39 ' Sor unit.
+[P15 - 25 (1.5 - 2.5, 11 - 18) Then remove the diagnosis sensor unit.
+[7 : Nem (kgm, fet) srsareA| NOTE:
+e To install, reverse the removal procedure sequence.
+Without side air bag Special bolt
+SEC. 253 [0] 15 - 25
+Diagnosis sensor unit (1.5 - 2.5
+=F
+—~—
+PAs
+“= Front Special bolt 9
+[0] 15 -25 (1.5 - 25, 11 - 18)
+© : Nem (kg-m, ft-ib) SRS430
+
+RS-12
+===== PDF page 13 =====
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+€3 [5 - 10 Nem
+
+(0.5 - 1.0 kg-m,
+43 - 87 in-Ib)
+
+Connector
+
+SRS379
+
+Removal and Installation — Diagnosis Sensor
+Unit and Satellite Sensor (Cont'd)
+REMOVAL OF SATELLITE SENSOR
+
+1.
+
+2.
+3.
+
+Remove seat belt retractor. Refer to “Front Seat Belt” for
+details. (RS-3)
+
+Disconnect satellite sensor connector.
+
+Remove bolt and special nuts from satellite sensor unit.
+
+Then remove the satellite sensor.
+
+NOTE:
+
+To install, reverse the removal procedure sequence.
+
+RS-13
+
+MA
+
+EM
+
+LC
+
+EC
+
+FE
+
+CL
+
+MIT
+
+AT
+
+BA
+
+1139
+===== PDF page 14 =====
+1140
+
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+Removal — Air Bag Module and Spiral Cable
+
+SEC. 253484
+Spiral cable or
+
+Horn connector
+
+[0] 29 - 39 (3.0 - 4.0, 22 - 29)
+Side lid RH
+
+\ ASCD steering switch
+Air bag module connector
+\ Special bolt £9
+®) by - > Air bag module
+Speciat bolt (X) ) (° Pp 5
+[GO 15 - 25
+
+(1.5 - 2.5, 11 - 8
+
+PaaS
+b Lower lid
+- 0) : Nem (kg-m, in-Ib)
+‘ i ~~
+Side lid LH - [CO : Nem (kg-m, ft-lb)
+SRS268
+
+CAUTION:
+
+e Before servicing SRS, turn the ignition switch off, discon-
+nect both battery cables and wait at least 3 minutes.
+
+eo Always work from the side of air bag module.
+
+1. Remove lower lid from steering wheel, and disconnect air bag
+module connector.
+
+SBF811E|
+2. Remove side lid. Using the TAMPER RESISTANT TORX (Size
+750), remove left and right special bolts. Air bag module can
+then be removed.
+aly
+Special bolt $29
+SBF812E
+
+CAUTION:
+
+e Always place air bag module with pad side facing upward.
+
+e¢ Do not attempt to disassemble air bag module.
+
+e The special bolts are coated with bonding agent. Do not
+use old bolts after removal; replace with new ones.
+
+e¢ Do not insert any foreign objects (screwdriver, etc.) into
+air bag module connector.
+
+RS-14
+===== PDF page 15 =====
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+Removal — Air Bag Module and Spiral Cable
+
+(Cont'd)
+eo Replace air bag module if it has been dropped or sus-
+
+tained an impact.
+¢ Do not expose the air bag module to temperatures exceed-
+ing 90°C (194°F). &l
+eo Do not allow oil, grease or water to come in contact with
+the air bag module.
+
+SBF814E
+
+Set steering wheel in the neutral position.
+
+3.
+4. Disconnect horn connector and remove nuts. LG
+5. Remove dynamic damper. Then using steering wheel puller,
+remove steering wheel. Be careful not to over-tighten puller
+bolt on steering wheel. EC
+CAUTION:
+Do not tap or bump the steering wheel.
+6. Remove steering column cover. =
+SBF239F GL
+7. Unlock the spiral cable connector. Then, disconnect connector ___
+and remove the four screws. The spiral cable can then be LY
+Connector removed.
+Unlock
+Lock = wird CAUTION: AT
+e¢ Do not attempt to disassemble spiral cable.
+_— e Do not apply lubricant to the spiral cable.
+FA
+
+SRS384|
+
+Removal — Front Passenger Air Bag Module BR
+
+CAUTION:
+e Before servicing SRS, turn the ignition switch off, discon-
+nect both battery cables and wait at least 3 minutes. Sl
+
+eo Always work from the side of or under air bag module.
+1. Open the glove box lid. RS
+2. Disconnect air bag module connector from body harness air
+bag connector.
+3. Remove glove box assembly. Refer to “INSTRUMENT gp
+TTS PANEL” in BT section for details.
+MRS043A
+— AA. Special bolt 4. Remove the nuts and special bolts using the TAMPER RESIS- IFA
+B =~ 15 - 25 TANT TORX (Size T50) from front passenger air bag module.
+Air bag module > (1.5 - 2.5, 11 - 18) Take out the air bag module from the instrument panel. =
+N- e The air bag module is heavy and should be supported using EL
+both hands during removal.
+IDX
+Ts : 8
+Steering member vA) © Nem (kg-m, ft-lb)
+
+View from under side SRS380
+
+RS-15 1141
+===== PDF page 16 =====
+1142
+
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+MRS045A
+
+SRS381
+
+4.9 - 9.8 Nem
+
+Torx nut
+
+(0.5 - 1.0 kg-m,
+43 - 87 in-Ib)
+
+SRS383
+
+Removal — Front Passenger Air Bag Module
+
+(Cont'd)
+
+CAUTION:
+
+eo Always place air bag module with pad side facing upward.
+
+e Do not attempt to disassemble air bag module.
+
+e The special bolts are coated with bonding agent. Do not
+use old bolts after removal; replace with new coated bolts.
+
+e Do not insert any foreign objects (screwdriver, etc.) into
+air bag module connector.
+
+¢ Replace air bag module if it has been dropped or sus-
+tained an impact.
+
+e Do not expose the air bag module to temperatures exceed-
+ing 90°C (194°F).
+
+e Do not allow oil, grease or water to come in contact with
+the air bag module.
+
+e After air bag inflates, the front instrument panel assembly
+
+should be replaced if damaged.
+
+Removal — Side Air Bag Module
+CAUTION:
+
+®
+
+3.
+
+Before servicing SRS, turn the ignition switch off, discon-
+nect both battery cables and wait at least 3 minutes.
+Always work from the rear of air bag module.
+
+Remove seatback finisher.
+
+When using a clip removal tool to remove the seatback
+finisher, take care not to damage the air bag harness.
+
+Disconnect side air bag module connector.
+
+Remove torx nuts from air bag module. Air bag module can
+then be removed.
+
+RS-16
+===== PDF page 17 =====
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+Removal — Side Air Bag Module (Cont'd)
+
+uP CAUTION:
+eo Always place air bag module with pad side facing upward.
+
+e Do not attempt to disassemble air bag module.
+eo The torx nuts are coated with bonding agent. Do not use
+old nuts after removal; replace with new coated nuts. al
+eo Do not insert any foreign objects (screwdriver, etc.) into
+air bag module connector.
+
+MA
+
+EM
+
+SRS327
+
+eo Replace air bag module if it has been dropped or sus-
+
+tained an impact. LC
+e Do not expose the air bag module to temperatures exceed-
+
+ing 90°C (194°F).
+e Do not allow oil, grease or water to come in contact with EG
+
+the air bag module.
+e After air bag inflates, the front seat should be replaced if
+
+damaged.
+
+FE
+
+CL
+
+Installation — Air Bag Module and Spiral Cable MT
+1. Set the front wheels in the straight-ahead position.
+
+Connector 2. Connect spiral cable connector. Then, lock the connector and
+tighten with screws. Install steering column cover. AT
+[FA
+RA
+SRS384
+3. Make sure that the spiral cable is in the neutral position. BR
+
+The neutral position is detected by turning left about 2.5 revo-
+lutions from the right end position. Align the two marks ().
+
+CAUTION:
+
+The spiral cable may snap due to steering operation if the
+cable is installed in an improper position.
+
+Also, with the steering linkage disconnected, the cable may
+snap by turning the steering wheel beyond the limited number
+
+of turns. BY
+Richt end The spiral cable can be turned up to about 2.5 turns from the
+s neutral position to both the right and left. A
+
+EN
+
+NT EL
+3 (.® ;
+Neutral position
+
+SRS273
+
+RS-17 1143
+===== PDF page 18 =====
+1144
+
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+SRS231
+Special bolt OC
+15 - 25 Nem
+(1.5 - 2.5 kg-m,
+1-18 ft-lb) SBFB12EA
+
+ANY Special bolt 7
+PI a
+
+[0] 15-25
+o (1.5 - 2.5, 11 - 18)
+
+Steering member
+View from under side
+
+[0] : Nom (kg-m, ft-lb)
+SRS380
+
+—
+
+Connector
+
+MRS043A
+
+Installation — Air Bag Module and Spiral Cable
+(Cont'd)
+
+*
+
+_— DD
+-_
+
+12.
+
+13.
+
+Install steering wheel setting spiral cable pin guides, and pull
+spiral cable through.
+
+Connect horn connector and engage spiral cable with pawls in
+steering wheel. Move air bag module connector away from
+steering wheel lower lid opening.
+
+Tighten nut.
+: 29 - 39 N'm (3.0 - 4.0 kg-m, 22 - 29 ft-lb)
+Install dynamic damper.
+
+Position air bag module and tighten with new special bolts.
+Always service the air bag module from the side.
+Connect air bag module connector.
+
+. Install all lids.
+. Conduct self-diagnosis, RS-33, to ensure entire SRS operates
+
+properly. (Use CONSULT or warning lamp check.)
+
+Before performing self-diagnosis, connect both battery cables.
+Turn steering wheel to the left end and then to the right end
+fully to make sure that spiral cable is set in the neutral posi-
+tion.
+
+If air bag warning lamp blinks or stays ON (at the User
+mode), it shows the spiral cable may be snapped due to its
+improper position. Perform self-diagnosis again (use CON-
+SULT or warning lamp). If a malfunction is detected, replace
+the spiral cable with a new one.
+
+Perform self-diagnosis again to check that no malfunction is
+
+detected.
+
+Installation — Front Passenger Air Bag Module
+
+Oo Aw
+
+Always work from the side of or under air bag module.
+Install front passenger air bag module on steering member.
+Ensure harness is not caught between rear of air bag module
+
+and steering member.
+Install glove box assembly. (Glove box lid is open.)
+
+Connect air bag module connector to body harness connector.
+
+Close the glove box lid.
+
+Connect both battery cables.
+
+Conduct self-diagnosis, RS-33, to ensure entire SRS operates
+properly. (Use CONSULT or warning lamp check.)
+
+RS-18
+===== PDF page 19 =====
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+Installation — Side Air Bag Module
+
+Torx nut €33 1. Install side air bag module on front seat with new torx nuts.
+
+4.9 - 9.8 Nem
+
+{0.5 - 1.0 kg-m,
+43 - 87 in-lb)
+Gl
+
+MA
+
+EM
+
+SRS383
+
+2. Connect side air bag module connector.
+3. Install seatback finisher with new clips. LE
+eo Ensure harness is not caught between seatback finisher
+and seatback.
+4. Connect both battery cables. EC
+5. Conduct self-diagnosis, RS-33, to ensure SRS operates
+properly. (Use CONSULT or air bag warning lamp.) 5g
+CL
+MT
+AT
+FA
+SRS382
+Disposal of Air Bag Module BR
+
+Before disposing of air bag module, or vehicles equipped with such systems, deploy the systems. If such
+systems have already been deployed due to an accident, dispose of them as indicated in “DISPOSING
+
+OF AIR BAG MODULE” (RS-24). ST
+When deploying the air bag module, always use the Special Service Tool; Deployment tool KV99106400
+{Kent-Moore No. J38381).
+
+When deploying the air bag module, stand at least 5 m (16 ft) away from the deployment component.
+When deploying air bag module, a fairly loud noise is made, followed by smoke being released. The smoke
+is not poisonous, however, be careful not to inhale smoke since it irritates the throat and can cause chok- BT
+ing.
+
+Always activate one air bag module at a time.
+
+Due to heat, leave air bag module unattended for more than 30 minutes after deployment. HA
+Be sure to wear gloves when handling a deployed air bag module.
+
+Never apply water to the deployed air bag module.
+
+Wash your hands clean after finishing work. EL
+Place the vehicle outdoors with an open space of at least 6 m (20 ft) on all sides when deploying air bag
+module while mounted in vehicle.
+
+Use a voltmeter to make sure the vehicle battery is fully charged. IDX
+Do not dispose of the air bag module un-deployed.
+
+RS-19 1145
+===== PDF page 20 =====
+1146
+
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+Kv99106400
+{J38381) SRS005-A
+
+SBF266H
+
+Disposal of Air Bag Module (Cont'd)
+CHECKING DEPLOYMENT TOOL
+
+Connecting to battery
+
+CAUTION:
+
+The battery must show voltage of 9.6V or more.
+
+Remove the battery from the vehicle and place it on dry wood
+
+blocks approximately 5 m (16 ft) away from the vehicle.
+® Wait 3 minutes after the vehicle battery is disconnected before
+
+proceeding.
+eo (Connect red clip of deployment tool to battery positive termi-
+nal and black clip to negative terminal.
+
+Make sure the polarity is correct. The right side lamp in the
+tool, marked “deployment tool power”, should glow with a
+green light. If the right side lamp glows red, reverse the con-
+nections to the battery.
+
+Deployment tool check
+
+Press the deployment tool switch to the “ON” position. The left side
+lamp in the tool, marked “air bag connector voltage” should illumi-
+nate. If it does not illuminate, replace the tool.
+
+Air bag deployment tool lamp illumination chart
+(Battery connected)
+
+Left side lamp, green* | Right side lamp, green”
+Switch operation “AIR BAG CONNECTOR | “DEPLOYMENT TOOL
+VOLTAGE” POWER"
+OFF OFF ON
+ON ON ON
+
+*: i this lamp glows red, the tool is connected to the battery incorrectly.
+Reverse the connections and make sure the lamp glows green.
+
+RS-20
+===== PDF page 21 =====
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+= [KV99105300
+(J41246)] —
+
+RS
+
+Air bag module
+bracket
+[KV99105300
+(J41246)]
+
+SRS233
+
+y
+\
+
+Deployment tool
+[KV99106400
+"Air bag La (J38381)]
+
+TE \
+
+Air bag module bracket
+[KV99105300 (J41246)] SRS234
+Air bag module
+Deployment tool
+[KV93106400 (J38381)]
+SRS235
+
+8.5 (0.335) dia.
+
+15 (0.59)
+
+15 (0.59)
+\
+
+oi
+
+145 (5.71)
+(a [an]
+\_ air bag module bracket
+Unit: mm (in) [KV99105300 (J41246)] SR$236
+
+- Disposal of Air Bag Module (Cont’ d)
+DEPLOYMENT PROCEDURES FOR AIR BAG MODULE
+(OUTSIDE OF VEHICLE)
+
+Unless the vehicle is being scrapped, deploying the air bag in the
+vehicle is not recommended. This may cause damage to the
+
+vehicle interior.
+Anchor air bag module bracket [KV99105300 (J41246)] in a vise
+
+secured to a firm foundation during deployment.
+
+Deployment of driver's air bag module (outside of
+
+vehicle)
+
+1. Using wire, secure air bag module to air bag module bracket
+[SST: KV99105300 (J41246)] at two places.
+
+CAUTION:
+
+Use wire of at least 1 mm (0.04 in) diameter.
+
+2. Firmly secure air bag module bracket [SST: KV99105300
+(J41246)] with air bag module attached, in a vise.
+
+3. Connect deployment too! [SST: KV99106400 (J38381)] to air
+bag module connector.
+
+4. Connect red clip of deployment tool to battery positive termi-
+nal and black clip to negative terminal.
+
+5. The lamp on the right side of the tool, marked “deployment tool
+power”, should glow green, not red.
+
+6. Press the button on the deployment tool. The left side lamp on
+the tool, marked “air bag connector voltage”, will illuminate and
+the air bag module will deploy.
+
+CAUTION:
+When deploying the air bag module, stand at least 5 m (16 ft)
+
+MA
+
+EM
+
+LC
+
+EC
+
+FE
+
+CL
+
+MT
+
+AT
+
+FA
+
+=)
+IE)
+
+R
+
+away from the air bag module. BY
+
+Deployment of passenger air bag module (outside of FA
+
+vehicle)
+
+1. Make an 8.5 mm (0.335 in} diameter hole in air bag module {|
+bracket [SST: KV99105300 (J41246)] at the position shown in
+figure at left.
+
+DX
+1147
+
+RS-21
+===== PDF page 22 =====
+1148
+
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+Air bag module
+bracket
+[KV89105300
+{J41246)]
+
+[KV99105300 (J41246)]
+
+SRS386
+
+Deployment
+tool adapter
+
+[KVS891065S0
+(J38381-30)]
+
+Deployment tool
+[KV83106400
+(J38381)]
+
+SRS387
+
+Deployment tool
+[KV98106400
+(J38381)]
+
+SRS329
+
+Disposal of Air Bag Module (Cont'd)
+2. Firmly secure air bag module bracket [SST: KV99105300
+(J41246)} in a vise.
+
+3. Match the two holes in air bag module bracket (held in vise)
+and passenger air bag module and fix them with two bolts [M8
+x 25 - 30 mm (0.98 - 1.18 in}].
+
+CAUTION:
+
+If a gap exists between passenger air bag module and air bag
+
+module bracket, use a piece of wood inserted in the gap to
+
+stabilize the air bag module.
+
+4. Connect deployment tool adapter [SST: KV991065S0 (J38381-
+30)] to deployment tool [SST: KV99106400 (J38381)] connec-
+tor and connector on either side of air bag module.
+
+5. Connect red clip of deployment tool to battery positive termi-
+nal and black clip to negative terminal.
+
+6. The lamp on the right side of the tool, marked “deployment tool
+power”, should glow green, not red.
+
+7. Press the button on the deployment tool. The left side lamp on
+the tool, marked “air bag connector voltage”, will illuminate and
+the air bag module will deploy.
+
+CAUTION:
+eo When deploying the air bag module, do not stand on the
+
+deploying side. .
+eo Stand at least 5 m (16 ft) away from the air bag module.
+
+Deployment of side air bag module (outside of vehicle)
+1. Firmly anchor side air bag module in a vise.
+
+RS-22
+===== PDF page 23 =====
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+Disposal of Air Bag Module (Cont'd)
+
+e The side air bag module must be installed in an oblique
+
+Side air bag module he si ¢ . ust b A
+direction, not in a vertical direction. Refer to the figure at
+
+the left.
+2. Connect deployment tool [SST: KV99106400 (J38381)] to side
+air bag module connector. al
+[MIA
+EV]
+
+SRS330
+
+Side air bag module 3. Connect red clip of deployment tool to battery positive termi-
+nal and black clip to negative terminal. LC
+4. The lamp on the right side of the tool, marked “deployment tool
+power”, should glow green, not red.
+5. Press the button on the deployment tool. The left side lamp on EG
+the tool, marked “air bag module connector voltage”, will illu-
+minate and the air bag module will deploy.
+
+CAUTION: FE
+When deploying the air bag module, stand at least 5 m (16 ft)
+away from the air bag module. cl
+
+[KVS9106400 (J38381)] SRS331
+
+DEPLOYMENT OF AIR BAG MODULE WHILE MOUNTED :
+
+IN VEHICLE Wi
+
+When disposing of a vehicle, deploy air bag modules while they are
+
+mounted in vehicle. AT
+
+CAUTION:
+
+When deploying air bag module ensure vehicle is empty.
+
+1. Disconnect both vehicle battery cables and wait 3 minutes. FA
+
+2. Disconnect air bag modules connector.
+
+3. Connect deployment tool {SST: KV99106400 (J38381)] to air
+
+Kv99106400 bag module. RA
+
+(438381) SRS006-A For front passenger air bag module, attach deployment tool
+adapter [SST: KV991065S0 (J38381-30}] to the tool connector.
+
+4. Connect red clip of deployment tool to battery positive termi- BR
+nal and black clip to negative terminal.
+
+5. The lamp on the right side of the tool, marked “deployment tool
+power”, should glow green, not red. ST
+
+6. Press the button on the deployment tool. The left side lamp on
+the tool, marked “air bag connector voltage”, will illuminate and
+the air bag module will depioy.
+
+CAUTION:
+
+Activate only one air bag module at a time. BT
+HA
+EL
+IDX
+
+RS-23 1149
+===== PDF page 24 =====
+SUPPLEMENTAL RESTRAINT SYSTEM (SRS)
+
+SBF276H
+
+1150
+
+Disposal of Air Bag Module (Cont'd)
+DISPOSING OF AIR BAG MODULE
+
+Deployed air bag modules are very hot. Before disposing of air bag
+module, wait at least 30 minutes respectively. Seal them in a plas-
+tic bag before disposal.
+
+CAUTION:
+
+Never apply water to a deployed air bag module.
+
+Be sure to wear gloves when handling a deployed air bag
+module.
+
+No poisonous gas is produced upon air bag module
+deployment. However, be careful not to inhale gas since it
+irritates throat and can cause choking.
+
+Do not attempt to disassemble air bag module.
+
+Air bag module cannot be reused.
+
+Wash your hands clean after finishing work.
+
+RS-24
+===== PDF page 25 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Trouble Diagnoses Introduction
+
+CAUTION:
+
+[J
+
+Do not use a circuit tester to check SRS harness connectors uniess instructed to in this Service
+Manual. SRS wiring harnesses can be identified with yellow harness protector or yellow insulation
+
+tape before the harness connectors.
+Do not attempt to repair, splice or modify the SRS wiring harness. If the harness is damaged,
+
+replace it with a new one.
+Keep ground portion clean.
+
+DIAGNOSIS FUNCTION
+
+The SRS self-diagnosis results can be read by using “AIR BAG” warning lamp and/or CONSULT. The read-
+ing of these results is accomplished using one of two modes — “User mode” and “Diagnosis mode”.
+
+The User mode is exclusively prepared for the customer (driver). This mode warns the driver of a system
+malfunction through the operation of the “AIR BAG” warning lamp.
+
+The Diagnosis mode allows the technician to locate and inspect the malfunctioning part.
+
+The mode applications for the “AIR BAG” warning lamp and CONSULT are as follows:
+
+User mode Diagnosis mode Display type
+ON-OFF operation
+
+"AIR BAG” warning lamp X X
+CONSULT — X Monitoring
+
+DIAGNOSIS MODE FOR CONSULT
+
+“SELF-DIAG [CURRENT]”
+
+A current Self-diagnosis result (also indicated by the warning lamp flashes in the Diagnosis mode) is dis-
+played on the CONSULT screen in real time. This refers to a malfunctioning part requiring repairs.
+“SELF-DIAG [PAST]”
+
+Diagnosis results previously stored in the memory (also indicated by the warning lamp flashes in the
+Diagnosis mode) are displayed on the CONSULT screen. The stored results are not erased until memory
+
+erasing is executed.
+“TROUBLE DIAG RECORD”
+With “TROUBLE DIAG RECORD”, diagnosis results previously erased by a reset operation can be dis-
+
+played on the CONSULT screen.
+
+e “ECU DISCRIMINATED NO.”
+
+HB ECU DISCRIMINATED NO. ll The diagnosis sensor unit for each vehicle model is assigned
+with its own, individual classification number. This number will
+
+ECU No. be displayed on the CONSULT screen, as shown at left. When
+6B replacing the diagnosis sensor unit, refer to the part number for
+
+the compatibility. After installation, replacement with a correct
+unit can be checked by confirming this classification number
+on the CONSULT screen.
+For NISSAN MODEL A32, the diagnosis sensor unit classifica-
+tion number assigned is 6B.
+
+SRS268
+
+VIA
+
+EM
+
+LGC
+
+EC
+
+[FIE
+
+cL
+
+RS-25 1151
+===== PDF page 26 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+Trouble Diagnoses Introduction (Cont’d)
+HOW TO CHANGE SELF-DIAGNOSIS MODE
+
+With CONSULT
+
+From User mode to Diagnosis mode
+After selecting AIR BAG on the “SELECT SYSTEM?” screen, User mode automatically changes to Diagnosis
+
+mode.
+ln secectsvstem [|
+
+[ENGINE NAL
+
+ar | [aR]
+
+AIRBAG »p ~ [BAG |~
+
+[ABS ] CIA
+
+“AlR BAG" warning lamp operation
+indicates Diagnosis mode.
+
+SRS391
+
+From Diagnosis mode to User mode
+To return to User mode from diagnosis mode, touch “BACK” key of CONSULT until “SELECT SYSTEM”
+appears. Diagnosis mode automatically changes to User mode.
+
+|ln selectsvstem [J]
+
+“AlR BAG” warning lamp operation
+indicates User mode.
+
+[ENGINE NA
+AT CLAIR
+[AIRBAG »p — [| BAG |~
+[ ABS SARS
+
+SRS392
+
+Without CONSULT
+
+From User mode to Diagnosis mode
+
+Diagnosis mode activates only when a malfunction is detected, by
+pressing the driver's door switch at least 5 times within 7 seconds
+after turning the ignition “ON”. SRS will not enter Diagnosis mode
+if no malfunction is detected.
+
+Door switch
+
+MRSD49A
+
+From Diagnosis mode to User mode
+
+After a malfunction is repaired, switch the ignition “OFF” for at least 1 second, then back “ON”. Diagnosis
+mode returns to User mode. Hf switching Diagnosis mode to User mode is required while malfunction is being
+detected, switch the ignition “OFF”, then back “ON” and press the driver's door switch at least 5 times within
+
+7 seconds.
+
+1152 RS-26
+===== PDF page 27 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+Trouble Diagnoses Introduction (Cont'd)
+HOW TO ERASE SELF-DIAGNOSIS RESULTS
+
+With CONSULT
+
+® “SELF-DIAG [CURRENT]"
+A current Self-diagnosis result is displayed on the CONSULT screen in real time. After the malfunction is al
+
+repaired completely, no malfunction is detected on “SELF-DIAG [CURRENT]".
+
+MA
+
+EM
+
+e “SELF-DIAG [PAST]”
+
+SELF-DIAG [CURRE Ll Return to the “SELF-DIAG [CURRENT]” CONSULT screen by (©
+. Nl pushing “BACK” key of CONSULT and select “SELF-DIAG
+CURRENT]” in “SELECT DIAG MODE”. Touch “ERASE” in
+FAILURE DETECTED lf .
+* NO SELF DIAGNOSTIC SELF-DIAG [CURRENT]” mode. =
+FAILURE INDICATED. NOTE:
+If the memory of the malfunction in “SELF-DIAG [PAST]” is
+Te BE REGURES x * not erased, the User mode shows the system malfunction by [FE
+the operation of the warning lamp even if the malfunction is
+| ERASE | PRINT repaired completely. cL
+SRS357|
+
+e “TROUBLE DIAG RECORD”
+The memory of “TROUBLE DIAG RECORD” cannot be erased. MT
+
+Without CONSULT AT
+After a malfunction is repaired, return to User mode from Diagnosis mode by switching the ignition “OFF” for
+at least 1 second, then back “ON”. At that time, the problem code is cleared.
+
+How to Perform Trouble Diagnoses for Quick
+and Accurate Repair
+
+A good understanding of the malfunction conditions can make troubleshooting faster and more accurate.
+In general, each customer feels differently about a problem. It is important to fully understand the symptoms
+
+FA
+
+or conditions for a customer complaint. BR
+INFORMATION FROM CUSTOMER
+WHAT ............ Vehicle model ST
+WHEN ........... Date, Frequencies
+WHERE ......... Road conditions
+HOW ............. Operating conditions, Symptoms
+PRELIMINARY CHECK | BT
+
+Check that the following parts are in good order.
+e Battery [Refer to EL section (“BATTERY™).]
+e Fuse [Refer to EL section (“Fuse”, “POWER SUPPLY ROUTING”).] HA
+
+e System component-to-harness connections
+
+0X
+
+RS-27 1153
+===== PDF page 28 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+How to Perform Trouble Diagnoses for Quick
+and Accurate Repair (Cont'd)
+
+WORK FLOW
+
+ACTION ITEM
+
+REFERENCE {TEM
+
+Check in
+
+A 4
+
+Listen to customer complaints and requests.
+
+Perform preliminary check.
+
+Preliminary check (R8-27)
+
+Check for any Service Bulletin,
+
+y
+
+Perform self-diagnosis using “AIR BAG” warning lamp — User mode
+
+h
+
+DIAGNOSTIC PROCEDURE 1
+(RS-33)
+
+Y
+
+Inspect malfunctioning part. — Diagnosis mode
+
+Perform self-diagnosis using CONSULT.
+
+OR
+
+Perform self-diagnosis using “AIR BAG” warming lamp.
+
+DIAGNOSTIC PROCEDURE 2:
+Using CONSULT (RS-34}
+DIAGNOSTIC PROCEDURE 3:
+Using “AIR BAG” warning lamp
+(RS-38)
+
+F
+
+Repair/Replace
+
+Y
+
+NG
+
+Final check — Diagnosis mode and User mode
+
+OK
+
+h 4
+
+DIAGNOSTIC PROCEDURE 4:
+Using CONSULT (R542)
+DIAGNQSTIC PROCEDURE 5:
+Using “AIR BAG" warning lamp
+{RS-44)
+
+Check out
+
+1154
+
+RS-28
+
+===== PDF page 29 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Schematic
+
+ws) : Models with side air bag
+
+IGNITION SWITCH
+ON or START ll
+
+SIDE AIR BAG SIDE AIR BAG
+COMBINATION METER MODULE LH MODULE RH
+FUSE FUSE
+DOOR SWITCH CAA aon MA
+H AA v
+
+17 1 Le
+AIR BAG DIAGNOSIS SENSOR UNIT
+3 4 5 6 2 37 38 3 38 EG
+| |
+SPIRAL ® | WS ws
+CABLE = od Lome
+flied al FE
+I i |
+Evy ay i
+i i = i I
+-——— ~) { —— 1
+AIR BAG MODULE AIR BAG MODULE CONNECTOR TTT TTT
+WH RH FOR CONSULT | | GL
+SATELLITE SATELLITE MT
+SENSOR LH SENSOR RH
+
+AY
+
+MRS201A
+
+FA
+
+BR
+
+RS-29 1155
+===== PDF page 30 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Wiring Diagram — SRS —
+
+IGNITION SWITCH - -
+ON or START - RS-SRS-01
+] FUSE
+BLOCK
+
+OA 10a |B) Refer to EL-POWER.
+aD
+
+1 1
+
+8J 5J
+
+EM [154]; a
+G RIL
+
+da
+
+COMBI-
+AIR BAG NATION
+*r—b—¢ METER
+1 @)
+Me3) |
+M84
+FPC CONNECTOR
+Q RIL LEN] RIL [En IGN AR
+Lie] 13] ; BAG
+ILE] A] DIAGNOSIS
+CEE) SENSOR
+B RW - UNIT
+—— iE] GUL (EE W/L (LED)
+SQ.DR (+) SQ.DR{-) SQ.AS (+) SQ.AS ()
+G OR
+1 ] I | G OR
+B B B B 3 IG
+ca. s — YW (BH
+= = =
+Mis) M73) Mitt
+Refer to last page (Foldout page).
+en I
+| 514/32] 31[30[2]28)/£\\J27 [26] 25 |
+14f3]i2][i1]io] a8] 7 [2a]23]22]1 a fairer) 48 40] 39] 38]37][36[35]34{33[32 |
+cc, —e———,, 8  —m——————e—e oe wo 1
+EI aI578 le)
+7] 8] 9]10[11]12][13[14] 15] 16 W 6lals]2]1]7]3 v
+[— =
+17 15]20[ 1 [21 10} —=
+5] [3 4|2]6 @
+* : This connector is not shown in “HARNESS LAYOUT” of EL section.
+
+MRS180A
+
+1156 RS-30
+===== PDF page 31 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Wiring Diagram — SRS — (Cont'd)
+
+RS-SRS-02
+DIAGNOSIS @
+SENSOR
+UNIT
+DOOR SW SSSRX SSSTX GND MIA
+WIL BR/Y P B
+WiL BR/Y P 8 LG
+Gr GG
+
+CLOSED
+
+te
+
+| P
+wiL
+P
+
+3 EC
+EE
+WIL GL
+| MIT
+~
+DOOR
+OPEN | SWITCH
+LH
+FA
+1 2]
+®
+|
+
+BR/Y
+
+DATA LINK
+CONNECTOR
+FOR
+
+ — —
+—
+
+CONSULT
+: sos 5
+a
+B16 = = =
+M73 MT EN
+Refer to last page (Foldout page).
+: BT
+1 6l7 == 1]2]3 4|5]6
+2) 2]1] E18) Zi
+8 11]12]13]14 GY 5 7 [8] alo] 11]12]:3[14]15 GY
+HA
+C———
+1520] 1 [21
+nae
+Y EL
+IDX
+
+MRS191A
+
+RS-31 1157
+===== PDF page 32 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+Wiring Diagram — SRS — (Cont'd)
+
+MODELS WITH SIDE AIR BAG
+
+SIDE SIDE
+AIR BAG AIR BAG
+MODULE MODULE
+rd LH rn RH
+DD) B66
+LG GIY LG GY
+I I
+—=-|1 Se
+l= B59 Ll B61 =
+Y/G Y/R y Y/B
+[Ea Iza] [EH 211
+Q SQ Ee) 5Q
+SIDE SIDE SIDE SIDE DIAGNOSIS
+LH (+) LH (-) RH (+) AH (-) SENSOR
+UNIT
+SAT SAT SAT SAT B60
+LH (+) LH (-) RH (+) RH (-)
+1L3z)) EA] [ES ET
+Ww OR p L
+- -T ~ L- -T = ~~
+K - @ Ommm—— _
+} Tm —— | 1 —— a — |
+I I I ]
+I (
+1 I ( I
+| I I
+1 I I
+| I I
+I I I I
+I I I
+I mm I  — I
+<a ~~ | ¢” ~ 1
+~ -——— @ ~ ———— ®
+Ww OR P L
+[41] [Faz] [Em ==]
+SATELLITE SATELLITE
+SENSOR SENSOR
+[H RH
+(858) = = (862) =
+- 2 —
+AoE @  [EEERFN ED [7] @ED . ED
+GY Ww W 32] 131 [34183] TY GY Y Y
+MRS192A
+
+1158 RS-32
+===== PDF page 33 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+~[TAIR\
+_| BAG JV
+
+SRS045
+
+Self-diagnosis
+
+DIAGNOSTIC PROCEDURE 1
+Checking SRS operation by using “AIR BAG” warning lamp —
+
+User mode
+
+1. After turning ignition switch from “OFF” to “ON”, “AIR BAG”
+
+warning lamp operates.
+
+2. Compare “AIR BAG” warning lamp operation to the chart
+
+below.
+
+MA
+
+EM
+
+“AIR BAG" warning lamp operation — User mode —
+
+SRS condition
+
+Reference item
+
+LC
+
+IGN ON
+
+ON
+
+T
+
+OFF 7 sec.
+
+k
+
+MRS095A
+
+No malfunction is
+detected.
+
+Nc further action is neces-
+sary.
+
+EC
+
+IGN ON
+ON
+
+T
+
+JiUUuruyyy
+
+The system has problem
+and needs to be repaired
+as indicated.
+
+Go to DIAGNOSTIC PRO-
+CEDURE 2 or 3 (RS-34 or
+38).
+
+Air bag is deployed.
+
+Go to COLLISION DIAG-
+NOSIS (RS-53).
+
+Air bag fuse, diagnosis
+sensor unit or harness is
+malfunctioning and needs
+to be repaired.
+
+Go to DIAGNOSTIC PRO-
+CEDURE 9 (RS-51).
+
+OFF
+0.5 sec. los sec.
+Py
+MRS096A
+IGN ON
+|
+OFF
+MRS097A
+IGN ON
+ON |
+OFF
+MRS098A
+
+One of the following has
+
+occurred and needs to be
+
+repaired.
+
+® Meter fuse is blown.
+
+® “AlR BAG” warning
+lamp circuit has open or
+short.
+
+® Diagnosis sensor unit is
+malfunctioning.
+
+Go to DIAGNOSTIC PRO-
+CEDURE 10 (RS-51).
+
+NOTE:
+
+If “AIR BAG” warning lamp operates differently from the
+
+operations shown above, refer to “AIR BAG” warning lamp
+operation — Diagnosis mode —, DIAGNOSTIC PROCEDURE 3
+
+(step 4), RS-38.
+
+RS-33
+
+1159
+===== PDF page 34 =====
+1160
+
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Jz C
+Fuse box/ - Data link
+connector
+for CONSULT
+SBF326H
+
+NISSAN
+
+CONSULT
+
+START
+
+| SUB MODE |
+
+SRS046
+
+{lm secectsystem [|
+
+ENGINE
+| a7 |
+
+ABS
+
+VMS
+
+SRS274
+
+(Mm  seectoiaemooe [Tf
+
+SELF-DIAG [ CURRENT]
+
+SELF-DIAG [ PAST)
+
+TROUBLE DIAG RECORD |
+ECU DISCRIMINATED NO. |
+|
+|
+S
+
+B SELF-DIAG [ CURRENT] ll [J
+
+FAILURE DETECTED
+CONTROL UNIT
+
+[ERASE || PRINT |
+
+SRS048
+
+Self-diagnosis (Cont'd)
+DIAGNOSTIC PROCEDURE 2 (®) with CONSULT)
+
+Inspecting SRS malfunctioning parts by using CONSULT —
+Diagnosis mode
+
+1. Turn ignition switch “OFF”.
+2. Connect “CONSULT” to Data link connector.
+
+3. Turn ignition switch “ON”.
+
+4. Touch “START”.
+
+5. Touch “AIRBAG”.
+
+6. Touch “SELF-DIAG [CURRENT]”.
+
+7. Diagnostic codes are displayed on “SELF-DIAG [CURRENT]”.
+
+RS-34
+===== PDF page 35 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Bl SELF-DIAG [ CURRENT] Hi
+
+FAILURE DETECTED
+* NO SELF DIAGNOSTIC
+FAILURE INDICATED.
+
+FURTHER TESTING
+MAY BE REQUIRED. * *
+
+[ERASE || PRINT |
+
+SRS049
+
+Self-diagnosis (Cont'd)
+
+If no sel-diagnostic failure is detected on “SELF-DIAG
+
+[CURRENT]” even though malfunction is detected in DIAGNOSTIC
+
+PROCEDURE 1, check the battery voltage. If the battery voltage
+
+is less than 9V, charge the battery. Then go to DIAGNOSTIC PRO-
+
+CEDURE 4 for final checking, page RS-42. If the battery voltage is
+
+OK, go to DIAGNOSTIC PROCEDURE 6, page RS-46, to diag-
+
+nose the following situations:
+
+e Self-diagnostic failure “SELF-DIAG [PAST]” (previously stored
+in the memory) might not be erased after repair.
+
+e The SRS system malfunctions intermittently.
+
+8. Touch “PRINT”.
+9. Compare diagnostic codes to the CONSULT DIAGNOSTIC
+
+CODE CHART, page RS-36.
+
+10. Touch “BACK” key of CONSULT until SELECT SYSTEM
+appears in order to return to User mode from Diagnosis mode,
+then turn off CONSULT.
+
+11. Turn ignition switch “OFF”, then disconnect CONSULT and
+both battery cables.
+
+12. Repair the system as outlined by the “Repair order” in CON-
+SULT DIAGNOSTIC CODE CHART, that corresponds to the
+problem code. For replacement procedure of component parts,
+
+refer to RS-12.
+13. After repairing the system, go to DIAGNOSTIC PROCEDURE
+
+4 for final checking, page RS-42.
+
+RS-35
+
+@l
+
+MA
+EM
+LC
+EC
+FE
+
+CL
+MT
+AT
+
+FA
+
+BR
+
+ST
+
+BT
+
+HA
+
+Elk
+
+1161
+===== PDF page 36 =====
+1162
+
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Self-diagnosis (Cont'd)
+
+CONSULT DIAGNOSTIC CODE CHART (“SELF-DIAG [CURRENT]")
+
+Diagnostic item
+
+Explanation
+
+Repair order
+Recheck SRS at each
+replacement.
+
+NO SELF DIAGNOSTIC
+FAILURE INDICATED
+
+® Low battery voltage (Less
+than 9V)
+
+When malfunction is indicated
+by the “AIR BAG” warning lamp
+in User mode
+
+® Go to DIAGNOSTIC PROCE-
+
+DURE 4 (RS-42) after charg-
+ing battery.
+
+e Self-diagnostic failure “SELF-
+DIAG [PAST] (previously
+stored in the memory) might
+not be erased after repair.
+
+® Intemittent problem has been
+detected in the past.
+
+Go to DIAGNOSTIC PROCE-
+DURE 6 (RS-46).
+
+o No malfunction is detected.
+
+Go to DIAGNOSTIC PROCE-
+DURE 4 (RS-42).
+
+AIRBAG MODULE
+[OPEN]
+
+# Driver's air bag module circuit is open. (including the spiral cable)
+
+AIRBAG MODULE
+[VB-SHORT]
+
+e Driver's air bag module circuit is shorted to some power supply
+circuit. (including the spiral cable)
+
+AIRBAG MODULE
+[GND-SHORT)
+
+® Driver's air bag module circuit is shorted to ground. {including the
+spiral cable)
+
+® Driver's air bag module circuits are shorted to each other.
+
+Ww
+
+. Visually check the wiring har-
+
+ness connection.
+
+. Replace the harness if it has
+
+visible damage.
+
+. Replace the spiral cable.
+. Replace driver's air bag mod-
+
+ule.
+(Before disposal of it, it must
+be deployed.)
+
+AIRBAG MODULE I .
+[SHORT] 5. heplace the diagnosis sensor
+ASSIST A/B MODULE e Front passenger air bag module circuit is shorted to some power | 1. Visually check the wiring har-
+[VB-SHORT] supply circuit. ness connection.
+
+ASSIST AB MODULE | Front passenger air bag module circuit i 2. Replace the harness if it has
+
+p ger air bag module circuit is open. visible damage.
+[OPEN] 3. Replace front passenger air
+bag module.
+
+ASSIST A/B MODULE
+[GND-SHORT]
+
+® Front passenger air bag module circuit is shorted to ground.
+
+ASSIST A/B MODULE
+[SHORT]
+
+® Front passenger air bag module circuits are shorted to each
+other.
+
+(Before disposal of it, it must
+be deployed.)
+
+. Replace the diagnosis sensor
+
+unit.
+
+. Visually check the wiring har-
+
+DA ® Side air bag module (LH) circuit is open.
+ness connection.
+DB e Side air bag module (LH) circuit is shorted to some power supply | 2 Replace the harness if it has
+circuits. visible damage.
+3. Replace side air bag module
+TT — (LH).
+DC # Side air bag module (LH) circuit is shorted to ground. (Before disposal, it must be
+deployed.)
+DD e Side air bag module (LH) circuits are shorted to each other. 4. Replace the diagnosis sensor
+unit.
+7A o Side air bag module (RH) circuit is open. 1. Visually check the wiring har-
+ness connection.
+78 ® Side air bag module (RH) circuit is shorted to some power supply 2. Replace the harness if it has
+circuits. visible damage.
+3. Replace side air bag module
+(RH).
+7C ¢ Side air bag module (RH) circuit is shorted to ground. (Before disposal, it must be
+deployed.}
+7D ® Side air bag module (RH) circuits are shorted to each other. 4. Replace the diagnosis sensor
+
+unit.
+
+RS-36
+===== PDF page 37 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+Self-diagnosis (Cont'd)
+
+Repair order
+Diagnostic item Explanation Recheck SRS at each
+replacement.
+91 e Satellite sensor (LH) 1. Visually check the wiring har-
+92 ness connection. @l
+93 2. Replace the harness if it has
+visible damage.
+3. Replace the satellite sensor [MA
+(LH).
+4. Replace the diagnosis sensor
+unit, EM
+81 ® Satellite sensor (RH) 1. Visually check the wiring har-
+82 ness connection. LC
+83 2. Replace the harness if it has
+visible damage.
+3. Replace the satellite sensor EGC
+(RH).
+4. Replace the diagnosis sensor
+unit. [EE
+CONTROL UNIT ® Diagnosis sensor unit is malfunctioning. 1. Visually check the wiring har-
+ness connections.
+2. Replace the diagnosis sensor CL
+unit.
+
+* Follow the procedures in numerical order when repairing malfunctioning parts. Confirm whether malfunction is eliminated MT
+using the air bag warning lamp or CONSULT each time repair is finished. If malfunction is still observed, proceed to the next
+step. When malfunction is eliminated, further repair work is not required.
+
+AT
+FA
+
+BR
+
+IRA
+
+EL
+
+RS-37 1163
+===== PDF page 38 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Self-diagnosis (Cont'd)
+DIAGNOSTIC PROCEDURE 3 ((® without CONSULT)
+
+JR Ta > Pe < Inspecting SRS malfunctioning parts by using “AIR BAG”
+= ale = warning lamp — Diagnosis mode
+SAD NOTE:
+SRS will not enter Diagnosis mode if no malfunction is
+~~ detected in User mode.
+1. Open driver's door.
+2. Turn ignition switch from “OFF” to “ON”.
+3. Press driver's door switch at least 5 times within 7 seconds
+Door swiich — after turning ignition switch “ON”.
+SRS is now in Diagnosis mode.
+4. “AIR BAG” warning lamp operates in Diagnosis mode as fol-
+lows:
+NOTE:
+If SRS does not enter Diagnosis mode even though malfunc-
+tion is detected in User mode, go to DIAGNOSTIC PROCE-
+DURE 11, page RS-52.
+No. “AIR BAG” warning lamp flash pattern — Diagnosis mode — SRS condition
+@ through ® are repeated. e Diagnosis
+results {(pre-
+viously
+stored in
+the
+IGN ON memory)
+on ojcxoxcyexcyexcyelcxoe might not
+| | | | | | | | | | | be erased
+after repair.
+| oFF- | e intermittent
+7 sec. 3 sec. problem
+2 sec. has been
+SRS333 detected in
+the past.
+Go to DIAG-
+NOSTIC PRO-
+CEDURE 7
+(RS-46).
+through @ are repeated. The system
+(® — Driver and passenger air has a problem
+IGN ON bag marker (For identifying [and needs to
+ON @ ® © @ @ ® driver and/or passenger air [be repaired.
+bag malfunctioning)
+2 OFF | | | | | | | | | | | @ — Indicates malfunctioning
+part. The number of flash
+788 i. oases] varies with malfunctioning
+2 sec. 2 sec part (0.5 sec. ON and 0.5
+sec. OFF is counted as one
+SRS341 flash.)
+@ through (© are repeated.
+IGN ON ®, ©, @ — Side air bag marker
+© @® @ ®0 (For identifying side
+ON air bag malfunction-
+ing)
+3 OFF — — (® — Indicates malfunctioning
+7 sec. | | 2 sec part. The number of flash
+Ni TE —>rEpirreie—> varies with malfunctioning
+2 soc. ii is sec. part (0.5 sec. ON and 0.5
+sec. OFF is counted as one
+SRS8342-A flash.)
+1164 RS-38
+===== PDF page 39 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Self-diagnosis (Cont'd)
+
+5.
+
+Malfunctioning part is indicated by the number of flashes (part
+@ or (0). Compare the number of flashes to AIR BAG WARN-
+ING LAMP FLASH CODE CHART, page RS-39, and locate
+malfunctioning part.
+
+Turn ignition switch “OFF”, and disconnect both battery
+cables.
+
+Repair the system as outlined by the “Repair order” in AIR
+BAG WARNING LAMP FLASH CODE CHART that corre-
+sponds to the flash code. For replacement procedure of com-
+ponent parts, refer to RS-12.
+
+After repairing the system, go to DIAGNOSTIC PROCEDURE
+
+5, page RS-44,
+
+AIR BAG WARNING LAMP FLASH CODE CHART (DIAGNOSIS MODE)
+
+® Diagnosis results
+{previously stored in
+the memory) might
+not be erased after
+repair,
+
+® Intermittent problem
+has been detected in
+the past.
+
+Flash pattern
+
+@ through @® are repeated.
+
+L
+
+1" 000000000000
+| | HERES
+7 sec. 3 sec.
+h > son
+
+SRS333
+
+Repair order
+
+® Co to DIAGNOSTIC PROCEDURE 7 (RS-46).
+
+The driver's air bag
+module circuit is mal-
+functioning.
+
+(@: 2 flashes)
+
+Flash pattern
+
+IGN ON
+
+@ through @ are repeated.
+
+(@ — Two flashes indicate
+malfunctioning driver's
+air bag module circuit.
+
+@ ® ©O0@ ®
+
+ON
+
+OFF —
+
+7 sec.
+
+bed
+
+3 se
+
+¥©
+
+> -
+2 sec. 2 sec.
+
+SRS334
+
+Repair order (“Recheck SRS at each replacement.”)
+
+1. Visually check the wiring harness connection.
+2. Replace the harness if it has visible damage.
+
+Gl
+
+MA
+
+EM
+
+LC
+
+EC
+
+FE
+
+CL
+
+AT
+
+FA
+
+BR
+
+3. Replace the spiral cable. BT
+4. Replace driver's air bag module.
+(Before disposal, it must be deployed.)
+5. Replace the diagnosis sensor unit.
+P - HA
+EL
+DX
+RS-39 1165
+===== PDF page 40 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Self-diagnosis (Cont'd)
+
+Flash pattern
+
+@ through @ are repeated.
+(@ — Seven flashes indicate
+IGN ON malfunctioning diagno-
+
+2 @ ® © @ @ ® sis sensor unit.
+
+- (LCT
+The diagnosis sensor OFF _]
+
+unit is malfunctioning. 7 sec 3
+. sec.
+
+{@: 7 flashes) - »le— ie >
+2 sec. 2 sec.
+
+SRS335
+
+Repair order ("Recheck SRS at each replacement.”)
+
+1. Visually check the wiring harness connections.
+2. Replace the diagnosis sensor unit.
+
+Flash pattern
+
+(@ through (@ are repeated.
+(® — Eight flashes indicate
+IGN ON malfunctioning front
+
+J @ ® ® @ @ ® passenger air bag mod-
+
+ON , .
+TUT | ule circuit.
+
+The front passenger air
+
+Co 7 sec. 3 sec
+bag module circuit is « Ae
+malfunctioning.
+(@: 8 flashes)
+
+SRS336
+
+Repair order ("Recheck SRS at each replacement.”)
+
+1. Visually check the wiring harness connection.
+2. Replace the harness if it has visible damage.
+3. Replace front passenger air bag module.
+(Before disposal, it must be deployed.)
+
+4. Replace the diagnosis sensor unit.
+
+Flash pattern
+
+through (© are repeated.
+(D — One flash indicates
+
+IGN ON
+N° @ ®O@ C06) GEQ malfunctioning side air
+ON 1 bag module (RH) cir-
+cuit.
+OFF — | | | |
+The side air bag module 7 sec. 1 2 sec
+(RH} circuit is malfunc- « Pi rr ie—>|
+tionin: 2 sec./ | Ys sec.
+g 1.5 sec’ 5 sec.
+((: 1 flash) Sssas
+
+Repair order (“Recheck SRS at each replacement.”)
+
+1. Visually check the wiring harness connection.
+2. Replace the harness if it has visible damage.
+3. Replace side air bag module (RH).
+
+(Before disposal, it must be deployed.)
+
+4. Replace the diagnosis sensor unit.
+
+1166 RS-40
+===== PDF page 41 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+Self-diagnosis (Cont'd)
+
+Flash pattern
+
+through (© are repeated.
+(H — Two flashes indicate
+malfunctioning side air
+
+IGN ON @
+bag module {LH) circuit. @l
+
+@
+
+@
+
+on OOO @
+OFF = [il
+
+=
+®@
+
+The side air bag module 7 sec. | ; seo. MA
+(LH) circuit is malfunc- on 7 ANE -
+
+tioning. 1.5 sec. 0.5 sec.
+(®: 2 flashes) SRS337 Sid
+
+Repair order (“Recheck SRS at each replacement.”)
+
+LC
+
+1. Visually check the wiring harness connection.
+2. Replace the harness if it has visible damage.
+3. Replace side air bag module (LH).
+
+(Before disposal, it must be deployed.) EC
+4. Replace the diagnosis sensor unit.
+
+Flash pattern EE
+
+through (© are repeated.
+({@ — Three flashes indicate
+
+iGN ON
+on @ © ® @ malfunctioning satelite ~~ GL
+| | [1] [] sensor (RH) circuit.
+FF —
+0 I MT
+The satellite sensor 7 sec. | | | 2 sec.
+(RH) is malfunctioning. 5 sec. / | \1 5 soc.
+{(D: 3 flashes) 1.5 sec’ 0.5 sec. AT
+. SRS340
+Repair order (“Recheck SRS at each replacement.”) [EA
+1. Visually check the wiring harness connection.
+2. Replace the harness if it has visible damage.
+
+3. Replace the satellite sensor (RH).
+4. Replace the diagnosis sensor unit.
+
+Flash pattern
+A BR
+@ through (© are repeated.
+IGN ON ~ (D— Four flashes indicate
+
+} @ ® © (OCL6)] malfunctioning satellite ~~ ST
+
+oN sensor (LH) circuit.
+
+The satellite sensor 7 sec. | 2 sec.
+
+(LH) is malfunctioning. ERNAl i Lh GA
+: 1.5 sec.
+(®: 4 flashes) 1.5 wil I) sec. oC BY
+SRS339-A
+Repair order (“Recheck SRS at each replacement.”) HA
+
+1. Visually check the wiring harness connection.
+
+2. Replace the harness if it has visible damage.
+
+3. Replace the satellite sensor (LH). EL
+4. Replace the diagnosis sensor unit.
+
+* Follow the procedures in numerical order when repairing malfunctioning parts. Confirm whether malfunction is eliminated IDX
+
+using the air bag warning lamp (in User mode) or CONSULT each time repair is finished. If malfunction is still observed,
+proceed to the next step. When malfunction is eliminated, further repair work is not required.
+
+RS-41 1167
+===== PDF page 42 =====
+1168
+
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+\
+Fuse box/ \_ Data link
+connector
+
+for CONSULT
+SBF326H
+
+NISSAN
+CONSULT
+
+START
+
+SUB MODE
+
+_
+
+[ln secectsystem [|
+
+ENGINE |
+
+ar _]
+ABS
+VMS
+
+SRS274
+
+[Wm seectomemooe [J]
+
+SELF-DIAG [ PAST]
+
+TROUBLE DIAG RECORD
+ECU DISCRIMINATED NO.
+
+prrerere) (——— p— — —
+LL |
+
+SRS047|
+
+B seELF-DIAG [CURRENT] lB [J
+
+FAILURE DETECTED
+#* NO SELF DIAGNOSTIC
+FAILURE INDICATED.
+
+FURTHER TESTING
+MAY BE REQUIRED. *
+
+[ ERASE |[ PRINT |]
+
+SRS049
+
+Self-diagnosis (Cont'd)
+
+DIAGNOSTIC PROCEDURE 4 ((® with CONSULT)
+Final checking after repairing SRS by using CONSULT — Diag-
+nosis mode
+
+1. After repairing SRS, connect both battery cables.
+2. Connect CONSULT to Data link connector.
+3. Turn ignition switch from “OFF” to “ON”.
+
+4. Touch “START”.
+
+5. Touch “AIRBAG”.
+
+6. Touch “SELF-DIAG [CURRENT]".
+
+7. If no malfunction is detected on “SELF-DIAG [CURRENT]”,
+repair of SRS is completed.
+If any problem code is displayed on “SELF-DIAG
+[CURRENT]”, the malfunctioning part is not repaired com-
+pletely or another malfunctioning part is detected. Go to DIAG-
+NOSTIC PROCEDURE 2, page RS-34, and repair malfunc-
+tioning part completely.
+
+RS-42
+===== PDF page 43 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+BW SELF-DIAG {CURRENT] HI []
+
+FAILURE DETECTED
+
+* NO SELF DIAGNOSTIC
+FAILURE INDICATED.
+
+FURTHER TESTING
+MAY BE REQUIRED. * *
+
+SRE8357
+
+[lm setectoinamone [|
+[ SELF-DIAG[ CURRENT] |
+
+SELF-DIAG [ PAST |
+
+| TROUBLE DIAG RECORD |
+[  ecupiscrminaTED NO. |
+
+L
+
+SRS050)
+
+Bm SeLF-DIAG(PAST] BI [J
+
+FAILURE DETECTED
+
+* NO SELF DIAGNOSTIC
+FAILURE INDICATED.
+
+FURTHER TESTING
+MAY BE REQUIRED. * *
+
+PRINT
+
+SRS062;
+
+Self-diagnosis (Cont’d)
+8. Touch “ERASE”.
+
+NOTE:
+Touch “ERASE” to clear the memory of the malfunction
+
+(“SELF-DIAG [PAST]").
+If the memory of the malfunction is “SELF-DIAG [PAST]” is not
+erased, the User mode shows the system malfunction by the
+operation of the warning lamp even if the malfunction is
+repaired completely.
+
+9. Touch “BACK” key of CONSULT to select “SELF-DIAG
+[PAST]” in the “SELECT DIAG MODE” screen. Touch “SELF-
+
+DIAG [PAST]".
+
+10. Check that no self-diagnostic failure is detected on “SELF-
+DIAG [PAST]".
+
+11. Touch “BACK” key of CONSULT until SELECT SYSTEM
+appears in order to return to User mode from Diagnosis mode,
+turn off CONSULT, then disconnect CONSULT.
+
+12. Turn ignition switch “OFF”.
+13. Go to DIAGNOSTIC PROCEDURE 1, page RS-33 to check
+SRS operation by using “AIR BAG” warning lamp with User
+
+mode.
+
+RS-43
+
+EM
+LC
+
+EC
+
+CL
+MT
+AT
+
+FA
+
+Br
+HA
+
+EL
+
+1169
+===== PDF page 44 =====
+1170
+
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Self-diagnosis (Cont'd)
+
+DIAGNOSTIC PROCEDURE 5 ( without CONSULT)
+Final checking after repairing SRS by using “AIR BAG” warn-
+ing lamp — Diagnosis mode and User mode
+
+After repairing SRS connect both battery cables.
+
+Open driver's door.
+Turn ignition switch from “OFF” to “ON”.
+“AIR BAG” warning lamp operates in Diagnosis mode as fol-
+
+lows:
+
+hal al
+
+MRS049A
+No. “AIR BAG” warning famp flash pattern — Diagnosis mode — SRS condition
+(@ through @ are repeated. No maliunc-
+tion is.
+IGN ON detected or
+on @POOPOOPAOO@O®O®® repair is com-
+1 pleted.
+Iinipininint ge
+OFF action is nec-
+7 sec. [3 sec. essary.
+2 sec. SRS333
+@ through (@ are repeated. The system
+(® — Driver and passenger air has a problem
+IGN ON bag marker (For identifying [and needs to
+ON @ ® © @ @ ® driver and/or passenger air { be repaired.
+bag malfunctioning)
+2 | off ® — Indicates malfunctioning
+part. The number of flashes
+7 sec. . 3 sec. varies with malfunctioning
+2 sec. 2 sec. part (0.5 sec. ON and 0.5
+sec. OFF is counted as one
+SRS341 flash.)
+through (OD are repeated.
+IGN ON ®, ©, @ — Side air bag marker
+on | @ ® ® ®O@ (For identifying side
+air bag malfunction-
+| ing)
+3 OFF | (© — Indicates malfunctioning
+7 sec. | | 2g part. The number of flashes
+ry py 7 i Ts Si varies with malfunctioning
+15 sec! o's son SC part (0.5 sec. ON and 0.5
+} sec. OFF is counted as one
+SRS342-A flash.)
+
+NOTE:
+When diagnosis sensor unit is replaced with new one, “AIR
+
+BAG” warning lamp will operate in User mode. Checking “AIR
+BAG” warning lamp operation in Diagnosis mode is not
+required. Go to step 6.
+
+RS-44
+===== PDF page 45 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Self-diagnosis (Cont'd)
+
+5. If “AIR BAG” warning lamp operates as shown in No. 1 in chart
+above, turn ignition switch “OFF” to reset from Diagnosis
+mode to User mode and to erase the memory of the malfunc-
+tion. Then go to step 6.
+
+If “AIR BAG” warning lamp operates as shown in No. 2 or No.
+3 in chart above, the malfunctioning part is not repaired
+completely, or another malfunctioning part is detected. Go to
+DIAGNOSTIC PROCEDURE 3, page RS-38, and repair mal-
+functioning part completely.
+
+6. Turn ignition switch “ON”. “AIR BAG” warning lamp operates
+in User mode. Compare “AIR BAG” warning lamp operation to
+the chart below.
+
+NOTE:
+If switching Diagnosis mode to User mode is required while
+
+malfunction is being detected, turn ignition switch from “OFF”
+to “ON”. Then press driver's door switch at least 5 times
+within 7 seconds after turning ignition switch “ON”.
+
+SRS is now in User mode.
+
+“AIR BAG” warning {amp operation — User mode — SRS condition Reference item
+No malfunction is
+IGN ON detected.
+No further action is neces-
+ON ] sary. _
+OFF 7 sec.
+MRS095A
+The system has problem | Go to DIAGNOSTIC PRO-
+IGN ON and needs to be repaired | CEDURE 2 or 3 (RS-34 or
+ON inn as indicated. 38).
+OFF JUUuuiuuuuuy
+05 sec. los Sec.
+MRS096A
+Air bag is deployed. Go to COLLISION DIAG-
+NOSIS (RS-53).
+
+IGN ON
+
+Air bag fuse, diagnosis Go to DIAGNOSTIC PRO-
+
+*
+OFF
+
+sensor unit or harness is | CEDURE 9 (RS-51).
+malfunctioning and needs
+
+to be repaired.
+MRSO097A
+
+IGN ON
+
+ON
+
+One of the following has | Go to DIAGNOSTIC PRO-
+
+occurred and needs to be | CEDURE 10 (RS-51).
+
+repaired.
+
+e Meter fuse is blown.
+
+¢ “AIR BAG” warning
+lamp circuit has open or
+
+OFF
+
+short.
+MRS098A | @ Diagnosis sensor unit is
+malfunctioning.
+
+EM
+
+LC
+
+EC
+
+FE
+
+CL
+
+MT
+
+[2
+
+EL
+
+IDX
+
+RS-45 1171
+===== PDF page 46 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+1172
+
+Self-diagnosis (Cont'd)
+DIAGNOSTIC PROCEDURE 6 (Continued from
+DIAGNOSTIC PROCEDURE 2) (@ with CONSULT)
+
+Inspecting SRS malfunctioning record
+
+Is it the first time for maintenance of No | Seli-diagnostic failure
+SRS? "| “SELF-DIAG [PAST]” (pre-
+viously stored in the
+Yes memory) might not be
+
+erased after repair.
+
+Go to DIAGNOSTIC PRO-
+CEDURE 4, step 8 (RS-
+42).
+
+y
+GO TO DIAGNOSTIC PROCEDURE 8
+(RS-47).
+
+DIAGNOSTIC PROCEDURE 7 (Continued from
+DIAGNOSTIC PROCEDURE 3) ((®) without CONSULT)
+
+Inspecting SRS malfunctioning record
+
+Is it the first time for maintenance of No | Diagnosis results (previ-
+SRS? "| ously stored in the
+memory} might not be
+
+Yi :
+es erased after repair.
+
+Go to DIAGNOSTIC PRO-
+CEDURE 5, step 5 (RS-
+44).
+
+y
+GO TO DIAGNOSTIC PROCEDURE 8
+{RS-47). Further inspection cannot be
+performed without CONSULT.
+
+RS-46
+===== PDF page 47 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+7. \
+Fuse box/ \- Data link
+connector
+for CONSULT
+
+SBF326H
+NISSAN
+CONSULT
+START
+SUB MODE
+SRS046,
+[ln seectsvstem [|
+| ENGINE
+LAT |
+| ABS |
+IVMS |
+| SRS274
+
+Im secectomemooe [|
+
+|  SELF-DIAG[CURRENT] |
+
+SELF-DIAG [ PAST]
+
+| TROUBLE DIAGRECORD |
+| EcuDiscRMINATEDNO. |
+
+|
+
+SRS050
+
+BH seLFDiAG[PasT] EB []
+FAILURE DETECTED
+CONTROL UNIT
+
+PRINT
+
+SRS054
+
+Self-diagnosis (Cont'd)
+
+DIAGNOSTIC PROCEDURE 8 (ff) with CONSULT)
+
+Inspecting SRS intermittent problem by using CONSULT —
+
+Diagnosis mode
+1. Turn ignition switch “OFF”.
+
+2. Connect “CONSULT” to Data link connector.
+
+3. Turn ignition switch “ON”.
+4. Touch “START”.
+
+5. Touch “AIRBAG”.
+
+6. Touch “SELF-DIAG [PAST]".
+
+7. If diagnostic codes are displayed on “SELF-DIAG [PAST]”, go
+
+to step 10.
+
+RS-47
+
+@l
+
+MA
+EM
+LC
+EG
+FE
+
+CL
+
+MT
+
+FA
+RA
+BR
+
+ST
+
+[OX
+
+1173
+===== PDF page 48 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Self-diagnosis (Cont'd)
+
+If no self-diagnostic failure is detected on “SELF-DIAG [PAST]”,
+MW seLroiac(pasT] BL] touch “BACK” and go back to “SELECT DIAG MODE".
+
+FAILURE DETECTED
+
+* NO SELF DIAGNOSTIC
+FAILURE INDICATED.
+
+FURTHER TESTING
+MAY BE REQUIRED. * *
+
+[ PRINT
+SRS062
+8. Touch “TROUBLE DIAG RECORD”.
+[hn SELECT DIAG MODE [| NOTE:
+SELF-DIAG [ CURRENT | | With TROUBLE DIAG RECORD, diagnosis results previously
+
+erased by a reset operation can be displayed.
+
+{| SELF-DIAG( PAST] |
+
+TROUBLE DIAG RECORD
+
+[  EcuDisCRMINATEDNO. |
+
+|
+
+SRS055
+
+9. Diagnostic code is displayed on “TROUBLE DIAG RECORD".
+MW TROUBLE DIAG RECORD MJ
+FAILURE DETECTED
+
+ASSIST A/B MODULE
+[OPEN |
+
+PRINT
+
+SRS056
+
+10. Touch “PRINT”.
+
+11. Compare diagnostic codes to the INTERMITTENT PROBLEM
+DIAGNOSTIC CODE CHART, page RS-49.
+
+12. Touch “BACK” key of CONSULT until SELECT SYSTEM
+appears, then turn off CONSULT.
+
+13. Turn ignition switch “OFF”, then disconnect CONSULT and
+both battery cables.
+
+14. Repair the system as outlined by the “Repair order” in INTER-
+MITTENT PROBLEM DIAGNOSTIC CODE CHART, that cor-
+responds to the problem code. For replacement procedure of
+component parts, refer to RS-12.
+
+15. Go to DIAGNOSTIC PROCEDURE 4, page RS-42, for final
+checking.
+
+1174 RS-48
+===== PDF page 49 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Self-diagnosis (Cont'd)
+
+INTERMITTENT PROBLEM DIAGNOSTIC CODE CHART (“SELF-DIAG [PAST] or “TROUBLE
+
+DIAG RECORD”)
+
+Diagnostic item
+
+Repair order
+
+NO SELF DIAGNOSTIC
+FAILURE INDICATED.
+
+Explanation
+When malfunction is indicated ® Low battery voltage (Less
+by the “AIR BAG" warning than 9V}
+
+lamp in User mode
+
+® Go to DIAGNOSTIC PRO-
+CEDURE 4 (RS-42) after
+charging battery.
+
+@l
+
+e No malfunction is detected.
+
+® Go to DIAGNOSTIC PRO-
+CEDURE 4 (RS-42).
+
+MA
+
+AIRBAG MODULE
+[OPEN]
+
+® Driver's air bag module circuit is open. (including the spiral
+cable)
+
+AIRBAG MODULE
+[VB-SHORT]
+
+® Driver's air bag module circuit is shorted to some power supply
+
+N circuit. (including the spiral cable)
+
+AIRBAG MODULE
+[GND-SHORT]
+
+e Driver's air bag module circuit is shorted to ground. (including
+the spiral cable)
+
+AIRBAG MODULE
+[SHORT]
+
+e Driver's air bag module circuits are shorted to each other.
+
+® Visually check the wiring
+harness connection.
+
+® Replace the harness if it has
+visible damage.
+
+e Replace driver's air bag
+module.
+{Before disposal of it, it must
+be deployed.)
+
+® Replace the spiral cable.
+
+® Replace the diagnosis sen-
+sor unit.
+
+EM
+
+LC
+
+EC
+
+FE
+
+ASSIST A/B MODULE
+[VB-SHORT]
+
+e Front passenger air bag module circuit is shorted to some
+power supply circuit.
+
+ASSIST A/B MODULE
+[OPEN]
+
+® Front passenger air bag module circuit is open.
+
+ASSIST A/B MODULE
+[GND-SHORT]
+
+e Front passenger air bag module circuit is shorted to ground.
+
+ASSIST A/B MODULE
+[SHORT]
+
+e Front passenger air hag module circuits are shorted to each
+other.
+
+e Visually check the wiring
+harness connection.
+
+® Replace the harness if it has
+visible damage.
+
+® Replace front passenger air
+bag module.
+(Before disposal of it, it must
+be deployed.)
+
+e Replace the diagnosis sen-
+sor unit,
+
+CL
+
+MT
+
+AT
+
+FA
+
+e Visuaily check the wiring
+harness connection.
+
+® Replace the harness if it has
+visible damage.
+
+® Replace side air bag module
+(LH).
+{Before disposal, it must be
+deployed.)
+
+® Replace the diagnosis sen-
+sor unit.
+
+BR
+
+DA e Side air bag module (LH) circuit is open.
+
+DB ® Side air bag module (LH) circuit is shorted to some power sup-
+ply circuits.
+
+DC ® Side air bag module (LH) circuit is shorted to ground.
+
+DD e Side air bag module (LH) circuits are shorted to each other.
+
+7A | e Side air bag module (RH) circuit is open.
+
+7B ® Side air bag module (RH) circuit is shorted to some power
+supply circuits.
+
+77C # Side air bag module (RH) circuit is shorted to ground.
+
+7D ¢ Side air bag module (RH) circuits are shorted to each other.
+
+e Visually check the wiring
+harness connection.
+
+® Replace the harness if it has
+visible damage.
+
+® Replace side air bag module
+(LH).
+(Before disposal, it must be
+deployed.)
+
+e Replace the diagnosis sen-
+sor unit.
+
+FIA
+
+EL
+
+RS-49
+
+1175
+===== PDF page 50 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+Self-diagnosis (Cont'd)
+
+Diagnostic. item
+
+Explanation
+
+Repair order
+
+91
+92
+93
+
+e Satellite sensor (LH)
+
+e Visually check the wiring
+harness connection.
+
+® Replace the harness if it has
+visibie damage.
+
+® Replace the satellite sensor
+(LH).
+
+® Replace the diagnosis sen-
+sor unit.
+
+81
+82
+83
+
+o Satellite sensor (RH)
+
+® Visually check the wiring
+harness connection.
+
+¢ Replace the harness if it has
+visible damage.
+
+® Replace the satellite sensor
+(RH).
+
+® Replace the diagnosis sen-
+sor unit.
+
+CONTROL UNIT
+
+® Diagnosis sensor unit is malfunctioning.
+
+e Visually check the wiring
+harness connection.
+
+® Replace the diagnosis sen-
+sor unit.
+
+* Intermittent problem areas cannot be easily located. For this reason, perform the procedures outlined under the repair order, then
+
+1176
+
+make the final system check.
+
+RS-50
+===== PDF page 51 =====
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+U
+SIDE
+
+Trouble Diagnoses for Air Bag Warning Lamp
+
+DIAGNOSTIC PROCEDURE 9
+
+SYMPTOM: “AiR BAG” warning lamp does not turn off.
+
+Is air bag deployed? Yes Refer to COLLISION DIAG-
+No NOSIS (RS-53).
+\ 4
+mp | Is SRS “Air Bag” fuse OK? No | Replace fuse.
+! Yes
+MRS051A = Connect CONSULT and touch No _ | Visually check the wiring
+= / “START”. "1 harness connection of diag-
+by SELECT SYSTEM wm] Is “AIRBAG” displayed on nosis sensor unit. If the har-
+CONSULT? ness connection check is
+L ENGINE Yes OK, replace diagnosis sen-
+[ AT | SOr unit.
+y -
+AIRBA "
+RBAG | Is harness connection between warning No | Connect warning lamp and
+[ ABS | lamp and diagnosis sensor unit OK? "| diagnosis sensor unit con-
+IVMS | Yes nector properly. If warning
+lamp still does not go off,
+| replace harness.
+SRS275 4
+
+Replace diagnosis sensor unit.
+
+SIDE
+
+DIAGNOSTIC PROCEDURE 10
+
+SYMPTOM: “AIR BAG” warning lamp does not turn on.
+
+MRSO50A
+
+Is warning tamp fuse OK? No | Replace fuse.
+Yes
+A
+Is warning lamp LED OK? No | Replace warning lamp LED.
+Yes
+\d
+No | Check the ground circuit of
+
+1. Disconnect diagnosis sensor unit con-
+nector.
+
+2. Turn the ignition key to ON pasition.
+
+eo Does warning lamp turn on?
+
+v Yes
+
+Replace diagnosis sensor unit.
+
+RS-51
+
+“AIR BAG” warning lamp.
+
+MIA
+
+EM
+
+LC
+
+E¢
+
+GL
+
+MIT
+
+AT
+
+FA
+
+1177
+===== PDF page 52 =====
+1178
+
+TROUBLE DIAGNOSES — Supplemental Restraint System (SRS)
+
+DISCONNECT
+SRS263
+B) hing) DISCONNECT
+TS.
+Driver's door switch
+2
+3
+SRS264
+Log DISCONNECT
+1.8.
+Driver's door switch (B18)
+3
+~d U1
+SRS265
+
+Trouble Diagnoses for Air Bag Warning Lamp
+
+(Cont'd)
+DIAGNOSTIC PROCEDURE 11
+
+SYMPTOM: SRS does not enter Diagnosis mode using door
+
+switch.
+
+Disconnect both battery cables and check
+battery voltage using circuit tester.
+® Is battery voltage more than 9V?
+
+No
+
+A 4
+
+Yes
+
+B] Ad
+
+Charge battery.
+
+Remove driver's door switch and check
+continuity between driver's door switch
+connector terminals @ and @ under the
+following conditions.
+
+No
+
+Replace driver's door
+switch.
+
+33).
+
+RS-52
+
+Condition Continuity
+Door switch is depressed NO
+{Door is closed).
+Door switch is released YES
+(Door is open}.
+Yes
+y
+Check harness continuity between driver's | No . | Replace or repair harness.
+door switch connector terminal @ and o
+body ground.
+© Does continuity exist?
+Yes
+v
+Replace diagnosis sensor unit.
+v
+Go to DIAGNOSTIC PROCEDURE 1 (RS-
+
+===== PDF page 53 =====
+COLLISION DIAGNOSIS
+
+FOR FRONTAL COLLISION
+
+To repair the SRS for a frontal collision, perform the following steps.
+
+When SRS (except the side air bag) is activated in a collision:
+
+@ Replace the diagnosis sensor unit.
+
+@ Remove the air bag modules (except the side air bag module). el
+
+@ Check the SRS components using the table shown below:
+e Replace any SRS components showing visible signs of damage (dents, cracks, deformation). MA
+
+@ Install new air bag modules (except the side air bag module).
+® Conduct self-diagnosis using CONSULT, and “AIR BAG” warning lamp. Refer to “Self-diagnosis” for
+
+details (RS-33). Ensure entire SRS operates properly. EM
+When SRS is not activated in a collision:
+® Check the SRS components using the table shown below:
+
+¢ Replace any SRS components showing visible signs of damage (dents, cracks, deformation). LC
+@ Conduct self-diagnosis using CONSULT, and “AIR BAG” warning lamp. Refer to “Self-diagnosis” for
+details (RS-33). Ensure entire SRS operates properly. 5G
+SRS inspection
+Part SRS (except the SRS is NOT activated FE
+side air bag) is acti-
+vated
+Air bag module REPLACE 1. Remove air bag module. Check harness cover and connectors for damage, ter- CL
+(driver and passen- Install air bag mod- minals for deformities, and harness for binding.
+ger side) ule with new bolts. 2-1. Install driver air bag module into the steering wheel to check fit and alignment
+with the wheel. MT
+
+2-2. Install passenger air bag module into the instrument panel to check fit with the
+
+instrument panel.
+3. No damage found, reinstall with new bolts.
+
+4. If damaged—REPLACE. Air bag must be deployed before discarding. AT
+Diagnosis sensor REPLACE 1. Check case and bracket for dents, cracks or deformities.
+unit Install diagnosis sen- | 2. Check connectors for damage, and terminals for deformities.
+sor unit with new 3. If no damage is found, reinstall with new bolts. E A
+bolts. 4. If damaged—REPLACE. Install diagnosis sensor unit with new bolts.
+Steering wheel 1. Visually check steering wheel for deformities.
+2. Check harness (built into steering wheel) and connectors for damage, and terminals for deformities.
+3. Install air bag module to check fit or alignment with steering wheel.
+4. Check steering wheel for excessive free play.
+5. If no damage is found, reinstall the steering wheel.
+6. If damaged—REPLACE. BR
+Spiral cable 1. Visually check spiral cable and combination switch for damage.
+2. Check connectors, flat cable and protective tape for damage.
+3. Check steering wheel for noise, binding or heavy operation. SI
+4. \f no damage is found, reinstall the spiral cable.
+5. If damaged-—REPLACE.
+Harness and Con- 1. Check connectors for poor connection, damage, and terminals for deformities. RS
+nectors 2. Check harness for binding, chafing, cuts, or deformities.
+3. If no damage is found, reinstall harness and connectors.
+4. Damaged—REPLACE damaged section of harness. Do not atternpt to repair, splice or modify any SRS
+harness.
+Instrument panel Refer to the table on the next page.
+FHA
+EL
+IDX
+
+RS-53 1179
+===== PDF page 54 =====
+1180
+
+COLLISION DIAGNOSIS
+
+Part
+
+SRS (except the
+side air bag) is acti-
+vated
+
+SRS is NOT activated
+
+Instrument panel
+
+1. When passenger air bag inflates, check the following points for bending, deformities or cracks.
+
+® Opening portion for passenger air bag
+
+li
+
+7} : Check points
+
+® Passenger air bag module brackets
+
+a!
+
+7
+7%
+
+2417.77
+
+220
+
+¢//): Check points
+
+Se ARE TT 77
+
+ frreeezz7, T7227,
+
+A rrr oy
+
+yr.
+
+CU
+
+2. It no damage is found, reinstall the instrument panel.
+3. If damaged—REPLACE the instrument panel with bolts.
+
+SRS388
+
+SRS389
+
+SRS390
+
+RS-54
+===== PDF page 55 =====
+COLLISION DIAGNOSIS
+
+FOR SIDE COLLISION
+To repair the SRS for a side collision, perform the following steps.
+When the side air bag is activated in the side collision:
+
+Seat
+
+nN —
+
+. Visually check the seat on the collision side.
+. Remove the seat on the collision side and check the following for damage and deformities.
+
+@® Replace the following component:
+- Diagnosis sensor unit Gl
+- Satellite sensor (on the side on which side air bag is activated)
+@ Remove the deployed side air bag module.
+@ Check the SRS components and the related parts using the table shown below. MA
+e Replace any SRS components and the related parts showing visible signs of damage (dents, cracks,
+deformation).
+@ Install new side air bag module (on the side on which side air bag has been activated) with new nuts. EM
+® Conduct self-diagnosis using CONSULT, and “AIR BAG” warning lamp. Refer to “Self-diagnosis” for
+~ details (RS-33). Ensure entire SRS operates properly.
+When SRS is not activated in the side collision: LC
+@® Check the SRS components and the related parts using the table shown below.
+® Replace any SRS components and the related parts showing visible signs of damage (dents, cracks, EC
+deformation).
+@ Conduct self-diagnosis using CONSULT, and “AIR BAG” warning lamp. Refer to “Self-diagnosis” for
+details (RS-33). Ensure entire SRS operates properly. EE
+In the case of the side collision
+Part Side air bag is acti- SRS is NOT activated CL
+vated
+Side air bag module | REPLACE the 1. Check for visible signs of damage (dents, cracks, deformation) of the side air bag MT
+{LH or RH) deployed side air module on the collision side.
+bag module with 2. Remove the side air bag module on the collision side.
+new nuts. 3. Check harness and connectors for damage, and terminals for deformities.
+{Repair or replace 4. Install side air bag module into the seat to check fit with the seat. } AT
+seatback, etc. before | 5. If no damage is found, reinstall the side air bag module with new special nuts.
+installing new one if | 6. If damaged—REPLACE it with the special nuts. Air bag must be deployed before
+damaged.) disposing of it. BA
+Satellite sensor (LH REPLACE the satel- | 1. Remove the satellite sensor an the collision side. Check harness connectors for
+or RH) lite sensor on the damage, terminals for deformities, and harness for binding.
+collision side with 2. Check for visible signs of damage (dents, cracks, deformation) of the satellite
+new nuts. sensor.
+(Repair the center 3. Install the satellite sensor to check fit.
+pillar inner, etc. 4. If no damage is found, reinstall the satellite sensor with new special nuts.
+before installing new | 5. If damaged—REPLACE the satellite sensor with the special nuts. BR
+one if damaged.)
+Diagnosis sensor REPLACE the diag- | 1. Check case and bracket for dents, cracks or deformities.
+unit nosis sensor unit 2. Check connectors for damage, and terminals for deformities. ST
+with the new bolts. 3. If no damage is found, reinstall the diagnosis sensor unit with new special bolts
+and ground boit.
+4. if damaged—REPLACE the diagnosis sensor unit with the special bolts and 5s |
+ground bolt.
+
+® Harness, connectors and terminals
+® Frame, recliner, adjuster and slides
+
+. Install the side air bag module into the seat to check fit with the seat.
+. If no damage is found, reinstall the seat.
+. If damaged—REPLACE the damaged seat parts with new bolts.
+
+HA
+
+Center pillar inner
+
+N=Uhdw
+
+. Check the center pillar inner on the collision side for damage (dents, cracks, deformation).
+. If damaged—REPAIR the center pillar inner.
+
+EL
+
+RS-55
+
+1X
+
+1181
