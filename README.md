@@ -51,9 +51,12 @@ python -m consult init                 # engine ECU: FF FF ED -> 12
 python -m consult id                   # part number
 python -m consult dtc                  # fault codes
 python -m consult watch rpm coolant tps speed
-python -m consult --ecu DA watch-raw FF    # BCM switch block
+python -m consult bcm-watch                # BCM switches, by name
+python -m consult bcm-test window-dr-down  # BCM output
+python -m consult p1320                    # P1320 monitor
+python -m consult knock                    # knock fail-safe state
 
-# GTK 4 app: live data, codes, engine active tests, Body (BCM) tab
+# GTK 4 app
 make && ./consult-gui
 ```
 
@@ -70,7 +73,6 @@ latency timer to 1 ms for smooth data (`CONSULT_PROTOCOL.md` §2).
 | [`VEHICLE_SYSTEMS.md`](VEHICLE_SYSTEMS.md) | Service-manual digest: units, specs, ECM pinout |
 | [`CAR_TEST_CHECKLIST.md`](CAR_TEST_CHECKLIST.md) | Every test run on the car, with results and logs |
 | [`BODY_DIAG_PLAN.md`](BODY_DIAG_PLAN.md) | Service-manual reference for the IVMS and ASCD, and remaining body work |
-| [`HANDOFF.md`](HANDOFF.md) | Status, next steps, rules |
 
 ## Safety
 

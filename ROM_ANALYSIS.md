@@ -68,7 +68,7 @@ the car (checklist §3).
 | `0B` | `$098B` | Vehicle speed, × 2 km/h |
 | `0C` | `$09F4` | Battery, × 80 mV |
 | `0D` | `$09F0` | TPS, × 20 mV |
-| `10` | `$0895` | ? |
+| `10` | `$0895` | No bank-0 writer. EGR temperature sensor, × 20 mV [PLMS] |
 | `11` | `$0866` | Intake air temp, − 50 °C |
 | `13` | `$072A` | Switch bits (see checklist 3.17) |
 | `14`/`15` | `$0DAA`/`$0DA9` | Injection pulse, / 100 ms |
@@ -76,21 +76,31 @@ the car (checklist §3).
 | `18` | `$0BD9` | **IACV-AAC step**: written by the idle control routine (`$AC54`), which test `85` overrides. The FSM shows IACV-AAC in steps (spec 2–10 at idle), which is why `17` (%) is unsupported [ROM] |
 | `1A`/`1B` | `$0730`/`$0731` | A/F alpha %. Active test `81` writes `$0730` |
 | `1C`/`1D` | `$0B45`/`$0B5B` | Self-learn alpha % |
-| `1E`/`1F`/`20` | `$0721–$0723` | Output bits |
-| `21` | `$072B` | O2 monitor bits: b7 = `09` lean, b6 = `0A` lean (< ~450 mV); b0 latches on after warm-up (meaning open) [car] |
+| `1E` | `$0721` | Output image `$095C` & `C3` (`$9D3F`); the bits are set in bank 1 |
+| `1F` | `$0722` | Port `$0C` bits 4–3 (`$9D47`) |
+| `20` | `$0723` | b4 = `$07F1.1` |
+| `21` | `$072B` | O2 monitor bits: b7 = `09` lean, b6 = `0A` lean (< ~450 mV); b0 latches on after warm-up [car] = `$0B81.6` and not `$0CD4.5`; b5/b4 = `$0E02.2/.1`. Built at `$8632` [ROM] |
 | `22`/`23` | `$0DAC`/`$0DAB` | Injection pulse, other bank |
 | `29` | `$0806` | **EVAP purge volume control valve step** [inferred, strong]: written by `$BD00`, overridden by test `98`, and `$9488` drives output ports from it. FSM spec: 0 step with the vehicle stopped |
 | `33`/`34` | `$0ABE`/`$0ABD` | **CAL/LD**: `33` whole %, `34` fraction / 256 [PLMS]. Here the two registers are the two halves of one RAM word, and the fuel code multiplies by `$0ABD` (`MPY` at `$66CC`), which fits a load value |
 | `35` | `$0B8A` | Rear O2, × 10 mV [PLMS] |
 | `37` | `$09B4` | Absolute throttle position, % = v / 2.55 [PLMS]. Written at `$5849` after a filter |
-| `38` | `$0A17` | MAF as **% of the VQ table** (× 272 g/s / 100 for g/s) [PLMS] |
-| `39` | `$0A16` | EVAP system pressure per the generic table; PLMS unsure [PLMS] |
+| `38`/`39` | `$0A17`/`$0A16` | **One word: calibration `$26BB` × `$0A12`** (`$5558`), i.e. mass airflow. PLMS: `38` = % of the VQ table, × 272 / 100 g/s [ROM + PLMS] |
 | `4A` | `$0D7A` | Absolute pressure sensor, × 20 mV [PLMS] |
-| `28 2A 30 31 3A` | various | ? Candidates from the FSM list: PURG VOL C/V, ENGINE MOUNT, O2 heaters, EGR TEMP, TANK F/TMP. PLMS: `30` = front O2 heater; `3A` unknown |
+| `28` | `$0DAD` | No bank-0 writer; next to the RH injector word `$0DAB/$0DAC` |
+| `2A` | `$09F8` | No bank-0 writer; inside the ADC result block (`$09F0` TPS, `$09F4` battery), so a raw sensor value. Tank fuel temperature? [PLMS] |
+| `30` | `$0724` | **Bits** (`$9D68`): b6 + b5 = `$095E.3` (one control bit, set together: front O2 heaters B1/B2? *(inferred)*), b4 = `$07F1.0`, b3 = NOT `$0E09.7`, b2 = `$095E.5` |
+| `31` | `$072C` | **Bits** (`$8687`): b7 = switch input `$092B.6` (the bit register `13` masks out), b1 = NOT `$0213.1` (second CPU) |
+| `3A` | `$0872` | No bank-0 writer. The `AB` monitor range-checks it (`$2BDB–$2BDC`), so EVAP-related *(inferred)* |
 | `32` | `$0C4C` | **A 00/FF flag, not CAL/LD**: `$DD8A` writes `FF` or `00` from a comparison of the MAF word with calibration value `$22FB`. (The freeze frame does copy it.) Meaning open [ROM] |
 | `3B–47`, `51` | `$05E0–$05ED` | **Freeze frame** (§3.2) |
 | `56–5F` | `$0F70–$0F79` | **1st-trip freeze frame**, in backup RAM |
-| `49 4A 4C 4E 4F 60 61` | various | ? |
+| `49` | `$0725` | **Bits** (`$9D89`): **MAP/BARO switch solenoid** `$095E.1` (b3 = on, b5 = off; toggled by `$E7A2`, which samples the pressure sensor in each state), b2 = `$095D.2` (test `A2` output), b0 = `$0961.0` |
+| `4C` | `$07FA` | From the second CPU's message block (`mb_in` + `18`, `$C867`) |
+| `4E` | `$0726` | **Bits** (`$9DA7`) from backup-RAM monitor flags `$0F66`/`$0F68`: monitor-complete / readiness status *(inferred)* |
+| `4F` | `$072F` | **Bits** (`$9DEF`): b1 from `$0F69.7`, `$0F66.0` and REF valid |
+| `60` | `$0D24` | No bank-0 writer |
+| `61` | `$0F6D` | Backup RAM: step of the `AB` monitor sequence (table `$9913`, `$990F`) |
 
 ## 3. Fault codes [ROM+car]
 
@@ -146,36 +156,37 @@ The exact order is still to confirm by reading `3B–47` on the car.
 
 Descriptor `(mask, ctl)`: `ctl >> 4` picks a flag byte `$07AC+n` (copied to `$07B7+n`
 on `F0`). `(ctl & 7F) >> 1` is the value slot (`$076F + slot`). Every test takes a
-value byte.
+value byte. Any running test sets `$07F1.2` (sent to the second CPU). Handlers marked
+"bank 1" aren't readable over Consult (§8).
 
-| Test | Flag | Value slot | Meaning |
-|---|---|---|---|
-| `80` | `$07B7.01` | `$076F` | Coolant temp override |
-| `81` | `$07B7.02` | `$0770` | **Fuel injection**: clamped to `4B–7D` (75–125 %), written into alpha `$0730` |
-| `82` | `$07B7.04` | `$0771` | Ignition timing |
-| `85` | `$07B7.20` | `$0774` | **IACV-AAC opening**: forces register `18`, clamped to ≤ `81` steps [ROM] |
-| `88` | `$07B8.01` | `$0777` | Power balance (cut cylinder 1 confirmed on car) |
-| `89` | `$07B8.02` | `$0778` | Fuel pump relay |
-| `8B` | `$07B8.08` | `$077A` | Self-learning clear |
-| `8C` | `$07B8.10` | `$077B` | Forces an idle-air path (`$BC22`, constant `$22AF`). Unknown |
-| `93`/`94` | `$07B9.08/.10` | `$0782/$0783` | Cooling fan low/high (car: fan ran) |
-| `98` | `$07BA.01` | `$0787` | **PURG VOL CONT** [inferred, strong]: forces register `29`, clamped by a calibration limit (`$26BC`) |
-| `95 99 9A 9C A2 A6 A7 AA AB AC AD` | | | Unknown (`A2` is on/off: zero vs non-zero). FSM tests left to place: EGRC SOLENOID, ENGINE MOUNTING, PURG VOL CONT, VENT CONTROL/V, VC BYPASS/V, PURG CONT S/V, MAP/BARO SW/V. Some IDs are probably A/T-only (shared firmware) |
+| Test | Flag | Value | Handler | Meaning |
+|---|---|---|---|---|
+| `80` | `$07B7.01` | `$076F` | bank 1 | Coolant temp override |
+| `81` | `$07B7.02` | `$0770` | `$6E15`, `$7434` | **Fuel injection**: clamped `4B–7D` (75–125 %), written into alpha `$0730` |
+| `82` | `$07B7.04` | `$0771` | bank 1 | Ignition timing |
+| `85` | `$07B7.20` | `$0774` | `$ACB3` | **IACV-AAC opening**: forces register `18`, ≤ `81` steps |
+| `88` | `$07B8.01` | `$0777` | bank 1 | Power balance (cylinder 1 cut on the car) |
+| `89` | `$07B8.02` | `$0778` | bank 1 | Fuel pump relay |
+| `8B` | `$07B8.08` | `$077A` | bank 1 | Self-learning clear |
+| `8C` | `$07B8.10` | `$077B` | `$ACA0` | Forces an idle-air path (`$BC22`, constant `$22AF`) |
+| `93` / `94` | `$07B9.08/.10` | `$0782/3` | bank 1 | Cooling fan low / high (fan ran on the car). Use as a pair |
+| `95` | `$07B9.20` | `$0784` | bank 1 | ? |
+| `98` | `$07BA.01` | `$0787` | `$BFB3`, `$7384` | **PURG VOL CONT** *(inferred, strong)*: forces register `29`, limit `$26BC` |
+| `99` | `$07BA.02` | `$0788` | bank 1 | ? |
+| `9A` | `$07BA.04` | `$0789` | bank 1 | Canister vent control valve [PLMS] |
+| `9C` | `$07BA.10` | `$078B` | bank 1 | Vacuum cut bypass valve [PLMS] |
+| `A2` | `$07BB.04` | `$0791` | `$F4C0` | On/off (value 0 / non-0): forces output bit `$095D.2` in task `$F468`, which otherwise switches it on throttle (`37`) and speed thresholds `$2BBC–$2BBE`. Engine mount? *(inferred, weak)* |
+| `A6` | `$07BB.40` | `$0795` | bank 1 | ? |
+| `A7` | `$07BB.80` | `$0796` | bank 1 | Vacuum cut bypass valve [PLMS] |
+| `AA` | `$07BC.04` | `$0799` | `$5406` | **Persistent side effect:** stopping it sets backup-RAM `$0F69.4`, which stops the session reset (`$550A`) from clearing `$0F69` bits 7–6. Bit 7 gates logic at `$9DEF`. Avoid |
+| `AB` | `$07BC.08` | `$079A` | `$98BB`, `$992E` | Drives a backup-RAM monitor sequence (`$0F6C–$0F6E`, uses register `3A`); canister vent valve [PLMS] |
+| `AC` | `$07BC.10` | `$079B` | bank 1 | ? |
+| `AD` | `$07BC.20` | `$079C` | bank 1 | ? |
 
-- **Range check [ROM]:** `CMPB #$2E` at `$511D` rejects any test outside `80`–`AD` with
-  `FE`. **⚠ PLMS reports that a test above `9F` ("believed to be `B0`") on the 1999 ECU
-  re-registered the NATS keys and locked out every other key.** `B0` is rejected here,
-  but the unknown IDs that *are* accepted (`95 99 9A 9C A2 A6 A7 AA AB AC AD`) could do
-  something similar. **Don't fire them blind.** `AA` already has a known side effect (a
-  backup-RAM flag at stop, below).
-- **PLMS names for some of those IDs** (1999 ECU) [PLMS]: `9A` and `AB` = EVAP canister
-  vent control valve, `9C` and `A7` = vacuum cut bypass valve. `95 97 98 99 9D 9E A2 A9
-  AA AC` valid but unknown. Fans: **`93` and `94` act as a pair**: low = `93 01` +
-  `94 00`, high = `93 00` + `94 01`; both `01` energises both windings (avoid).
-- Test `83` has code (`$B39A`, clamped ≤ `90`), but no descriptor, so the ECU rejects it.
-- Most test values are read by indexed code that the disassembler doesn't reach
-  (≈ 14 % of `$3C00–$FFFF` is still undecoded), so the unknown IDs need more tracing.
-- `30` during a test sets `$0F69.4` when `$07BC.04` (test `AA`) is active.
+- `$511D` rejects tests outside `80`–`AD`. **Don't fire unknown tests**: on a 1999 ECU
+  one above `9F` re-registered the NATS keys [PLMS].
+- Fans [PLMS]: low = `93 01` + `94 00`, high = `93 00` + `94 01`. Both `01`: avoid.
+- `83` has code (`$B39A`) but no descriptor, so it's rejected.
 
 ## 5. Interrupts (from what each handler writes)
 
@@ -186,7 +197,8 @@ value byte.
 | Timer A2 | `$46C0` | Dispatches on event flags `$B9` (crank POS / timing events?) |
 | UART0 TX | `$4BC2` | Used as the periodic **scheduler tick**: runs the task list (sensor reads, fuel, ignition, idle, diagnostics, `consult_task`) |
 | UART1 RX + TX | `$4EF5` | Consult |
-| Timer A4, B2, NMI | `$4540`, `$44B6`, `$473F` | Not verified |
+| Timer A4, B2 | `$4540`, `$44B6` | **Knock interface chip**: per-cylinder values to `$030266`; B2 also runs the chip watchdog (§8b) |
+| NMI | `$473F` | Not verified |
 
 The Consult code uses registers `$32/$35/$36` (data out, status, data in) and `$F0/$F1`
 (enables). That doesn't fit the stock M37702 register map, so the exact chip variant
@@ -216,16 +228,29 @@ code reads it constantly.
 
 ## 7. How this car's codes are detected
 
-- **P1320 (`21`, slot 8)** at `$E2F6`, enabled by config bit `$120C.7`. Preconditions:
-  engine running, REF valid, past cranking, load index `$09AE` ≥ 4. Every second call it
-  samples port P4 bit 3 (`$0A.3`); a high sample counts a miss; 10 misses →
-  `dtc_detect(8)`. **This reading doesn't fit the car:** while driving, `$0C60` (taken as
-  the miss count) cycles 0–9 at 21–45 counts/s and `$000A` bit 3 toggles ~8/s with no
-  code set. The counter, the port bit or the routine's role is misread [open].
-- **P0443 (`A8`, slot 79)** comes from the other CPU (§6) as `$0E55` bit 0. The logic
-  isn't in this ROM.
-- **P0325 (`34`, slot 19)**: the setter isn't found yet. It isn't a direct
-  `dtc_detect` call, so it's probably also from the other CPU or in undecoded code.
+- **P1320 (`21`, slot 8)** at `$E2F6` [ROM+car]: fixed-rate slow task (`$4C69`), not
+  synced to ignition. Enabled by `$120C.7`.
+
+  | Step | Code | Detail |
+  |---|---|---|
+  | Preconditions | `$E2F6–$E328` | `$0850.0`, not `$07EE.5`, REF valid (`$092A.6`, `$0931.2`), past start or `$0ACA` ≥ 30, load `$09AE` ≥ 4. Else count = 0 |
+  | Spacing | `$0C6F` | Sample needs ≥ 2; a miss resets it. ≤ 1 miss per 2 calls |
+  | Sample | `$E331` | P4.3 (`$0A.3`) high = miss |
+  | Count | `$0C60` | +1 per miss, sets `$0811.7` |
+  | Detect | `$E341` | At 10: `dtc_detect(8)`, count back to 0 |
+
+  | Drive (655 s) | |
+  |---|---|
+  | Detections | 2–5 per second; never 0.15 s without a miss |
+  | Misses | 18–20/s idle, 42–48/s under load (near the ceiling) |
+  | P4.3 high | 36 % at `$09AE` 32–63, 92 % at ≥ 224; 0 KOEO |
+
+  P4.3 has no FSM wire of its own (EC-331 … 333); presumably an internal check on the
+  six coil outputs (pins 1 2 3 7 8 9) [inferred]. All cylinders fire, so the *check*
+  fails. A ~11 ms window per spark on every cylinder fits the numbers, which points at a
+  shared cause: condenser, coil supply or ground, coil type, or the ECM [inferred].
+- **P0325 (`34`, slot 19)**: not set in bank 0; probably by the second CPU, which gets
+  knock-chip timeouts via `$0235` (§8b) [inferred].
 
 ## 8. Calibration maps [ROM + PLMS]
 
@@ -249,12 +274,47 @@ that reads them isn't traced (no direct operands or pointers found).
 Row/column axes need the lookup code. Measured WOT timing to compare against: 9–10°
 at 3750–4500 rpm, 15–16° above 5000 (checklist 3.14).
 
+**Bank 1:** the firmware calls 24 routines at `$01xxxx` (e.g. `$4C96 $4CEE $4CF2 $4D20
+$4D52`). `C9` takes 16-bit addresses, so they need a chip read. Nothing in bank 0 points
+at the 2D maps, so their lookups are there. 1D lookups (`interp8/16/32`, `$EA77`) are in
+bank 0.
+
+Timing path in bank 0 (INT2, `$47A8`):
+
+| Term | RAM | Source |
+|---|---|---|
+| Base timing | `$0BA6` | Set only at reset in bank 0; the map value from bank 1 [inferred] |
+| Knock retard | `$0DB7/$0DB8` | §8b. Ignored if `$28AC` ≠ 0 (here `00`) |
+| Correction | `$0E01` | `$A9B9`, from `$0DFC` and the knock retard |
+| Correction | `$096D` | `interp8` of table `$2270` by `$09B0`, only under conditions (`$5694`) |
+| Limits | `$20D7/$20D8`, `$20D4` | Clamp, then target `$0BA8` = `$20D4` − sum, clamped `30–75` |
+| Rate limit | `$0BA9` | Steps toward `$0BA8` by at most `$0BAA` (advance) / `$20D5` (retard) |
+| Per-cylinder | `$0DB0–$0DB5` | Subtracted per cylinder; register `16` = `$0BA9` − trim + `80` (`$4928`) |
+
+
+## 8b. Knock control [ROM]
+
+
+| Part | Where | Detail |
+|---|---|---|
+| Knock interface chip | bank 3 I/O: `$030262` control, `$030266` data | Programmed per cylinder from the Timer A4 / B2 interrupts (`$4545`, `$44C4`). Self-test handshake at `$9EDA`: reads `CC00` → chip OK (`$0DD0.0`, `.6`); `AA55` → reply `55AA` |
+| Per-cylinder values | 6 × 16-word tables `$26F0–$2790` (normal), `$27B0–$2850` (alternate) | Indexed by `$09AC` (rpm-related) into `$0DE1–$0DEB`, sent to the chip per cylinder (`$4579`). `FFFF` outside the active rpm band. Alternate set is flat (`0025–0028`) and used when `$0DCF.3` is set |
+| Chip watchdog | Timer B2, `$44E8` | If the second CPU's `$021F.3` doesn't toggle for `$239F` interrupts: clear `$0DD0.0` (chip not OK), pulse `$0710.0` → `$0235` to the second CPU, count in `$0DE0` |
+| Knock status | `$0213.3` (from the second CPU) | 1 = knock system OK |
+| Active zone | `$9F27–$9FA8` | Coolant ≥ `$2883` (60 °C), REF valid, not cranking, rpm index `$09B1` ≥ `$2881`, CAL/LD `$0ABE` ≥ `$2882` (56 %), with hysteresis. Outside it the retard is cleared |
+| Retard | `$0DC1` → `$0DB7/8` | `$2884` per knock event (`$0DC7` = count from the interrupt); learned separately below / above rpm index `$2880` (`$0DB9`, `$0DBB`); slewed by `$288E`; clamped to `$0DD1/$0DD3` |
+| **Fail-safe** | `$9FBC–$9FE2` | If `$0213.3` = 0 (or `$0DD0.7`): latch `$070D.7`, set **fixed retard `$2895` = `FC`** (−4 counts, i.e. 4° less advance in register-16 units *(inferred)*), set `$0DCF.3` (alternate tables) |
+
+**This car (P0325 stored):** probably in fail-safe, ~4° fixed retard [inferred]. Check:
+`python -m consult knock`.
+
 ## 9. Open questions
 
-1. Re-read the P1320 routine at `$E2F6` (§7).
-2. Find the map lookup code; fix the axes and the timing-map bit 7 flag (§8).
-3. Read `$5D40–$623F` off the chip (Consult forwards it, §1); dump the other CPU with
-   `sub-dump`.
-4. Map registers `10 28–2A 30 31 3A 49 4C 4E 4F 60 61`; confirm the [PLMS] scalings.
-5. Name the unknown active tests (trace the readers of `$076F + slot`). Don't fire them.
-6. Decode `D0` bytes 0–26.
+1. P1320 (§7): `python -m consult p1320` while unplugging one coil at a time. Test the
+   condenser by capacitance.
+2. Knock fail-safe state (§8b): `python -m consult knock`.
+3. Chip read: bank 1 (maps, test handlers) and `$5D40–$623F`.
+4. Dump the second CPU with `sub-dump`.
+5. Confirm the [PLMS] scalings on a drive; name `28 2A 3A 60`.
+6. Unknown active tests `95 99 A6 AC AD` (bank 1). Don't fire them.
+7. Decode `D0` bytes 0–26.

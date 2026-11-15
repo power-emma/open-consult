@@ -112,6 +112,16 @@ ram 072B mon21        Consult 21: O2 rich/lean monitor bits
 ram 0DAC inj_b_hi     Consult 22: injection pulse other bank
 ram 0DAB inj_b_lo     Consult 23
 ram 0806 purge_step   Consult 29: EVAP purge volume control valve step ? (forced by test 98, drives the stepper)
+ram 0BA6 tim_base     Base timing term; only set at reset in bank 0, so written by bank-1 code (map lookup?)
+ram 0BA8 tim_target   Timing target, clamped 30-75 ($47F3)
+ram 0BA9 tim_out      Timing after rate limit; register 16 = tim_out - cyl trim + 80
+ram 0DB7 knock_ret    Knock retard, 16-bit (written $A1FC; high byte $0DB8 used at $47A8)
+ram 0DB0 cyl_trim     Per-cylinder timing trim, 6 bytes ($0DB0-$0DB5)
+ram 070D knock_fs     b7 = knock fail-safe latched (fixed retard $2895)
+ram 0213 sub_status   From 2nd CPU; b3 = knock system OK
+ram 0DC1 knock_work   Knock retard working value (16-bit)
+ram 0DD0 kchip_state  Knock chip: b0 OK (self-test CC00), b6 just reset, b4 watchdog
+ram 0DDD kchip_rx     Word read back from the knock chip (CC00 / AA55 self-test)
 ram 0C4C reg32_flag   Consult 32: 00/FF flag from MAF vs $22FB at $DD8A (not CAL/LD)
 ram 09B4 reg37        Consult 37: absolute throttle position, v/2.55 % (PLMS)
 
@@ -159,7 +169,7 @@ label 4476 isr_zero_div
 label 4495 isr_ta3_coils
 head  4495 ===== Timer A3: fires the coils queued in coil_fire_mask (ignition) ?
 label 44B6 isr_tb2
-head  44B6 ===== Timer B2 interrupt (purpose not verified)
+head  44B6 ===== Timer B2 interrupt: knock chip per-cylinder value + watchdog ($021F.3 from 2nd CPU)
 label 4540 isr_ta4
 head  4540 ===== Timer A4 interrupt (purpose not verified)
 label 46C0 isr_ta2
@@ -311,9 +321,11 @@ head  D237 More flags from the second CPU ($0E58 bits -> slots 22h, 12h, 14h, ..
 label E2F6 p1320_monitor
 head  E2F6 ===== P1320 ignition signal monitor (slot 8). Engine running, past start, load index >= 4:
 head  E2F6 every 2nd call sample port P4 bit 3; each high sample = one miss (accumulates while the
-head  E2F6 conditions hold); 10 misses -> dtc_detect(8). Enabled by CONFIG $120C.7.
+head  E2F6 conditions hold); 10 misses -> dtc_detect(8), then the count restarts at 0. Enabled by
+head  E2F6 CONFIG $120C.7. Fixed-rate slow task (sched slots 3/8), not synced to ignition.
 note  E331 P4.3 low = ignition OK, skip
 note  E341 10 misses?
+note  E34F count restarts at 0 (after a detection, or when a precondition fails)
 label D128 dtc_task
 head  D128 ===== Fault bookkeeping task (writes dtc_conf / dtc_1st / ffrm).
 label A4DB diag_task_a4db
@@ -369,3 +381,6 @@ label B97A sub16_x4
 # C9 on $5D40-$623F is forwarded to the second CPU (address - $5000, one byte per frame from
 # the second frame), so our one-frame-per-request dump holds stale bytes here. See sub-dump.
 hole 5D40 500 Consult C9 forwards these addresses to the second CPU, so the dump holds stale reply bytes. This CPU's own code here (e.g. $5F1B) can only be read off the chip.
+note  9FBC knock fail-safe: $0213.3 clear or $0DD0.7 -> latch $070D.7, fixed retard
+note  9F27 knock control active zone: coolant, REF, rpm index, CAL/LD (with hysteresis)
+note  540B test AA at stop: keep $0F69 bits 7-6 across the session reset

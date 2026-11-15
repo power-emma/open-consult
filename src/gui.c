@@ -1,13 +1,16 @@
 /* consult-gui: read engine sensors, read and clear fault codes, run engine active
- * tests, and drive the body control module's outputs (windows, locks, wipers…).
+ * tests, drive the body control module's outputs (windows, locks, wipers…) and read
+ * the knock fail-safe state.
  *
  * The serial link runs on a worker thread that opens the port, inits the unit it needs
  * (the engine ECU or the BCM, switching between them as asked) and then streams live
  * data, reads or clears codes, or runs an active test. It closes the port when there's
  * nothing left to do. Every session appends a raw TX/RX log to logs/YYYY-MM-DD_gui.log. */
 #include <errno.h>
+#include <math.h>
 #include <gtk/gtk.h>
 #include <stdatomic.h>
+#include <stdlib.h>
 #include <string.h>
 
 #include "consult.h"
@@ -17,7 +20,7 @@
 #define LOG_DIR "logs"
 #endif
 
-enum { MSG_STATUS, MSG_VALUES, MSG_DTCS, MSG_ACTIVE, MSG_BCM, MSG_DONE };
+enum { MSG_STATUS, MSG_VALUES, MSG_DTCS, MSG_ACTIVE, MSG_BCM, MSG_KNOCK, MSG_DONE };
 
 #define WINDOW_MAX_HOLD 10.0    /* s; a window moves only while its button is held */
 
@@ -28,17 +31,20 @@ typedef struct {
     double fps;
     consult_dtc_t dtcs[CONSULT_MAX_DTCS];
     int ndtcs;
+    uint8_t knock[3];       /* $070D, $0213, $0DB8 */
 } msg_t;
 
 static struct {
-    GtkWidget *win, *dev, *live_btn, *dtc_btn, *clear_btn, *status, *fps, *dtc_grid;
+    GtkWidget *win, *dev, *dev_list, *dev_scan, *live_btn, *dtc_btn, *clear_btn, *status, *fps, *dtc_grid;
     GtkWidget *value[N_SENSORS];
     GtkWidget *test, *test_value, *test_unit, *test_hold, *test_btn, *test_result;
     GtkWidget *bcm_btn[N_BCM_TESTS], *bcm_hold, *bcm_result, *bcm_latch;
+    GtkWidget *knock_btn, *knock_fs, *knock_ok, *knock_val, *knock_raw;
     GThread *thread;
+    GPtrArray *dev_paths;   /* path per dev_list entry; the last entry is "Custom…" */
     char devpath[256];
     GMutex lock;            /* guards the want_* flags and the active_* and bcm_* parameters */
-    int want_live, want_dtc, want_clear, want_active, want_bcm;
+    int want_live, want_dtc, want_clear, want_active, want_bcm, want_knock;
     int want_latch;         /* stay connected to the BCM while idle */
     int active_idx, active_arg;
     double active_hold;
@@ -106,6 +112,7 @@ static void give_up(void)
 {
     g_mutex_lock(&app.lock);
     app.want_live = app.want_dtc = app.want_clear = app.want_active = app.want_bcm = 0;
+    app.want_knock = 0;
     app.want_latch = 0;
     g_mutex_unlock(&app.lock);
 }
@@ -116,7 +123,8 @@ static const char *link_error(consult_t *c)
 }
 
 /* Stream a few frames of the sensor list, show them, and return the last one. */
-static int snapshot(consult_t *c, const uint8_t *payload, size_t plen, int flen, double *values)
+static int snapshot(consult_t *c, const uint8_t *payload, size_t plen, int flen, int full,
+                    double *values)
 {
     uint8_t frame[CONSULT_MAX_FRAME];
     int ok = 0;
@@ -128,14 +136,14 @@ static int snapshot(consult_t *c, const uint8_t *payload, size_t plen, int flen,
     if (ok) {
         msg_t *m = g_new0(msg_t, 1);
         m->kind = MSG_VALUES;
-        sensor_decode(frame, values);
+        sensor_decode(frame, full, values);
         memcpy(m->values, values, sizeof m->values);
         post(m);
     }
     return ok;
 }
 
-static void run_active(consult_t *c, const uint8_t *payload, size_t plen, int flen,
+static void run_active(consult_t *c, const uint8_t *payload, size_t plen, int flen, int full,
                        int idx, int arg, double hold)
 {
     const active_test_t *t = &ACTIVE_TESTS[idx];
@@ -143,7 +151,7 @@ static void run_active(consult_t *c, const uint8_t *payload, size_t plen, int fl
     double before[N_SENSORS], after[N_SENSORS], held;
     int rc;
 
-    if (!snapshot(c, payload, plen, flen, before)) {
+    if (!snapshot(c, payload, plen, flen, full, before)) {
         post_active("Not sent: couldn't read the engine first (%s).", link_error(c));
         return;
     }
@@ -175,7 +183,7 @@ static void run_active(consult_t *c, const uint8_t *payload, size_t plen, int fl
         return;
     }
     post_status("Active test finished and stopped (ack %02X)", ack);
-    if (!snapshot(c, payload, plen, flen, after)) {
+    if (!snapshot(c, payload, plen, flen, full, after)) {
         post_active("%s ran for %.1f s and was stopped. Couldn't read the engine afterwards.",
                     t->name, held);
         return;
@@ -283,13 +291,32 @@ static void run_bcm(consult_t *c, const char *name, uint8_t item, uint8_t value,
     post_status("BCM test finished and stopped (ack %02X)", ack);
 }
 
+/* Knock fail-safe state (ROM_ANALYSIS.md §8b): $070D b7 = fail-safe latched, $0213 b3 =
+ * knock system OK (from the second CPU), $0DB8 = knock retard term (signed). */
+static int read_knock(consult_t *c)
+{
+    static const uint16_t addrs[3] = {0x070D, 0x0213, 0x0DB8};
+    msg_t *m = g_new0(msg_t, 1);
+
+    if (!consult_read_memory(c, addrs, 3, m->knock)) {
+        g_free(m);
+        post_status("Couldn't read the knock state: %s", link_error(c));
+        return 0;
+    }
+    m->kind = MSG_KNOCK;
+    post(m);
+    post_status("Knock state read");
+    return 1;
+}
+
 static gpointer worker(gpointer unused)
 {
     serial_t s;
     consult_t c = {.s = &s, .cancel = &app.cancel};
-    uint8_t payload[64], frame[CONSULT_MAX_FRAME], cur = 0;
-    size_t plen = sensor_payload(payload);
-    int flen = sensor_frame_len(), streaming = 0, frames = 0, timeouts = 0, latched = 0;
+    uint8_t payload[2 * 40], frame[CONSULT_MAX_FRAME], cur = 0;
+    int full = 1;           /* drops to the core list if the ECU refuses the full one */
+    size_t plen = sensor_payload(payload, full);
+    int flen = sensor_frame_len(full), streaming = 0, frames = 0, timeouts = 0, latched = 0;
     double t0 = 0, last_post = 0, last_poll = 0;
     char log[512], date[16];
     GDateTime *now = g_date_time_new_now_local();
@@ -317,7 +344,7 @@ static gpointer worker(gpointer unused)
     }
 
     while (!atomic_load(&app.cancel)) {
-        int live, dtc, clear, active, bcm, latch, idx, arg;
+        int live, dtc, clear, active, bcm, latch, knock, idx, arg;
         double hold, bcm_hold;
         char bcm_name[sizeof app.bcm_name];
         uint8_t bcm_item, bcm_value;
@@ -328,6 +355,7 @@ static gpointer worker(gpointer unused)
         active = app.want_active;
         bcm = app.want_bcm;
         latch = app.want_latch;
+        knock = app.want_knock;
         idx = app.active_idx;
         arg = app.active_arg;
         hold = app.active_hold;
@@ -351,10 +379,23 @@ static gpointer worker(gpointer unused)
             continue;
         }
 
-        if (clear || active || dtc || live)
+        if (clear || active || dtc || live || knock)
             latched = 0;
-        if ((clear || active || dtc || live) && !streaming && !use_engine(&c, &cur))
+        if ((clear || active || dtc || live || knock) && !streaming && !use_engine(&c, &cur))
             goto fail;
+
+        if (knock) {
+            if (streaming)
+                consult_stop(&c, 2.0, NULL);
+            streaming = 0;
+            read_knock(&c);
+            g_mutex_lock(&app.lock);
+            app.want_knock = 0;
+            g_mutex_unlock(&app.lock);
+            if (s.error)
+                goto fail;
+            continue;
+        }
 
         if (clear) {
             msg_t *m = g_new0(msg_t, 1);
@@ -390,7 +431,7 @@ static gpointer worker(gpointer unused)
             if (streaming)
                 consult_stop(&c, 2.0, NULL);
             streaming = 0;
-            run_active(&c, payload, plen, flen, idx, arg, hold);
+            run_active(&c, payload, plen, flen, full, idx, arg, hold);
             g_mutex_lock(&app.lock);
             app.want_active = 0;
             g_mutex_unlock(&app.lock);
@@ -453,13 +494,22 @@ static gpointer worker(gpointer unused)
 
         if (!streaming) {
             if (!consult_command(&c, payload, plen, 2)) {
+                if (full && !s.error) {
+                    /* 27 registers is inside the ROM's limit but untested on the car */
+                    serial_note(&s, "full sensor list refused (%s), using the core list", c.err);
+                    full = 0;
+                    plen = sensor_payload(payload, full);
+                    flen = sensor_frame_len(full);
+                    continue;
+                }
                 post_status("Live data failed: %s", link_error(&c));
                 goto fail;
             }
             streaming = 1;
             frames = 0;
             t0 = last_post = mono();
-            post_status("Streaming live data from ECU %02X", cur);
+            post_status("Streaming live data from ECU %02X (%s sensor list)", cur,
+                        full ? "full" : "core");
         }
 
         if (consult_read_frame(&c, flen, 1.0, frame) < 0) {
@@ -479,7 +529,7 @@ static gpointer worker(gpointer unused)
         if (mono() - last_post >= 0.1) {
             msg_t *m = g_new0(msg_t, 1);
             m->kind = MSG_VALUES;
-            sensor_decode(frame, m->values);
+            sensor_decode(frame, full, m->values);
             m->fps = frames / (mono() - t0);
             post(m);
             last_post = mono();
@@ -503,17 +553,25 @@ fail:
 
 /* ---- UI (main thread) ---- */
 
+static void update_buttons(void);
+
 static void start_worker(void)
 {
     if (app.thread)
         return;
     g_strlcpy(app.devpath, gtk_editable_get_text(GTK_EDITABLE(app.dev)), sizeof app.devpath);
+    if (!app.devpath[0]) {
+        post_status("Pick a port, or choose Custom… and type its path.");
+        give_up();
+        update_buttons();
+        return;
+    }
     app.thread = g_thread_new("consult", worker, NULL);
 }
 
 static void update_buttons(void)
 {
-    int live, dtc, clear, active, bcm, latch;
+    int live, dtc, clear, active, bcm, latch, knock;
     const active_test_t *t = &ACTIVE_TESTS[gtk_drop_down_get_selected(GTK_DROP_DOWN(app.test))];
     g_mutex_lock(&app.lock);
     live = app.want_live;
@@ -522,7 +580,9 @@ static void update_buttons(void)
     active = app.want_active;
     bcm = app.want_bcm;
     latch = app.want_latch;
+    knock = app.want_knock;
     g_mutex_unlock(&app.lock);
+    gtk_widget_set_sensitive(app.knock_btn, !knock && !active && !bcm);
     /* No-op (and no "toggled" signal) unless the worker dropped the latch. */
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(app.bcm_latch), latch);
     /* The window buttons stay sensitive: making a held button insensitive would cancel
@@ -533,7 +593,10 @@ static void update_buttons(void)
     gtk_button_set_label(GTK_BUTTON(app.live_btn), live ? "Stop live data" : "Start live data");
     gtk_widget_set_sensitive(app.dtc_btn, !dtc && !clear && !active);
     gtk_widget_set_sensitive(app.clear_btn, !dtc && !clear && !active);
-    gtk_widget_set_sensitive(app.dev, app.thread == NULL);
+    gtk_widget_set_sensitive(app.dev_list, app.thread == NULL);
+    gtk_widget_set_sensitive(app.dev_scan, app.thread == NULL);
+    gtk_widget_set_sensitive(app.dev, app.thread == NULL &&
+        gtk_drop_down_get_selected(GTK_DROP_DOWN(app.dev_list)) == app.dev_paths->len - 1);
     gtk_button_set_label(GTK_BUTTON(app.test_btn), active ? "Stop test" : "Run test…");
     gtk_widget_set_sensitive(app.test, !active);
     gtk_widget_set_sensitive(app.test_value, !active && t->has_value);
@@ -595,8 +658,11 @@ static gboolean on_msg(gpointer p)
         break;
     case MSG_VALUES:
         for (int i = 0; i < N_SENSORS; i++) {
-            g_snprintf(buf, sizeof buf, "%.*f %s", SENSORS[i].decimals, m->values[i],
-                       SENSORS[i].unit);
+            if (isnan(m->values[i]))
+                g_snprintf(buf, sizeof buf, "–");
+            else
+                g_snprintf(buf, sizeof buf, "%.*f %s", SENSORS[i].decimals, m->values[i],
+                           SENSORS[i].unit);
             gtk_label_set_text(GTK_LABEL(app.value[i]), buf);
         }
         if (m->fps > 0)
@@ -614,6 +680,17 @@ static gboolean on_msg(gpointer p)
     case MSG_BCM:
         gtk_label_set_text(GTK_LABEL(app.bcm_result), m->text);
         break;
+    case MSG_KNOCK: {
+        int ret = m->knock[2] > 127 ? m->knock[2] - 256 : m->knock[2];
+        gtk_label_set_text(GTK_LABEL(app.knock_fs), m->knock[0] & 0x80 ? "YES" : "no");
+        gtk_label_set_text(GTK_LABEL(app.knock_ok), m->knock[1] & 0x08 ? "yes" : "NO");
+        g_snprintf(buf, sizeof buf, "%+d", ret);
+        gtk_label_set_text(GTK_LABEL(app.knock_val), buf);
+        g_snprintf(buf, sizeof buf, "070D=%02X  0213=%02X  0DB8=%02X",
+                   m->knock[0], m->knock[1], m->knock[2]);
+        gtk_label_set_text(GTK_LABEL(app.knock_raw), buf);
+        break;
+    }
     case MSG_DONE:
         if (app.thread)
             g_thread_join(app.thread);
@@ -622,7 +699,7 @@ static gboolean on_msg(gpointer p)
         /* A button may have been pressed while the worker was finishing. */
         g_mutex_lock(&app.lock);
         int again = app.want_live || app.want_dtc || app.want_clear || app.want_active ||
-                    app.want_bcm || app.want_latch;
+                    app.want_bcm || app.want_latch || app.want_knock;
         g_mutex_unlock(&app.lock);
         if (again && !atomic_load(&app.cancel))
             start_worker();
@@ -650,6 +727,16 @@ static void on_dtc(GtkButton *b, gpointer u)
     (void)b, (void)u;
     g_mutex_lock(&app.lock);
     app.want_dtc = 1;
+    g_mutex_unlock(&app.lock);
+    start_worker();
+    update_buttons();
+}
+
+static void on_knock(GtkButton *b, gpointer u)
+{
+    (void)b, (void)u;
+    g_mutex_lock(&app.lock);
+    app.want_knock = 1;
     g_mutex_unlock(&app.lock);
     start_worker();
     update_buttons();
@@ -890,133 +977,323 @@ static GtkWidget *framed(const char *title, GtkWidget *child)
     return f;
 }
 
+/* ---- port list ---- */
+
+static int by_name(gconstpointer a, gconstpointer b)
+{
+    return g_strcmp0(*(char *const *)a, *(char *const *)b);
+}
+
+/* Serial ports that may be the Consult cable: /dev/consult (udev link), then
+ * /dev/ttyUSB* and /dev/ttyACM*, each labelled with its /dev/serial/by-id name when
+ * there is one. Fills app.dev_paths and the drop-down, with "Custom…" last. */
+static void scan_ports(void)
+{
+    GtkStringList *names = gtk_string_list_new(NULL);
+    GPtrArray *found = g_ptr_array_new_with_free_func(g_free);
+    GHashTable *ids = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, g_free);
+    GDir *d;
+    const char *e;
+
+    if ((d = g_dir_open("/dev/serial/by-id", 0, NULL))) {
+        while ((e = g_dir_read_name(d))) {
+            char *link = g_build_filename("/dev/serial/by-id", e, NULL), *real = realpath(link, NULL);
+            if (real) {
+                g_hash_table_replace(ids, g_strdup(real), g_strdup(e));
+                free(real);
+            }
+            g_free(link);
+        }
+        g_dir_close(d);
+    }
+    if ((d = g_dir_open("/dev", 0, NULL))) {
+        while ((e = g_dir_read_name(d)))
+            if (g_str_has_prefix(e, "ttyUSB") || g_str_has_prefix(e, "ttyACM"))
+                g_ptr_array_add(found, g_build_filename("/dev", e, NULL));
+        g_dir_close(d);
+    }
+    g_ptr_array_sort(found, by_name);
+    if (g_file_test("/dev/consult", G_FILE_TEST_EXISTS)) {
+        char *real = realpath("/dev/consult", NULL);
+        g_ptr_array_insert(found, 0, g_strdup("/dev/consult"));
+        if (real) {
+            g_hash_table_replace(ids, g_strdup("/dev/consult"),
+                                 g_strdup_printf("udev link to %s", real));
+            free(real);
+        }
+    }
+
+    if (app.dev_paths)
+        g_ptr_array_unref(app.dev_paths);
+    app.dev_paths = g_ptr_array_new_with_free_func(g_free);
+    for (guint i = 0; i < found->len; i++) {
+        const char *path = g_ptr_array_index(found, i), *id = g_hash_table_lookup(ids, path);
+        char *text = id ? g_strdup_printf("%s  (%s)", path, id) : g_strdup(path);
+        gtk_string_list_append(names, text);
+        g_free(text);
+        g_ptr_array_add(app.dev_paths, g_strdup(path));
+    }
+    gtk_string_list_append(names, "Custom…");
+    g_ptr_array_add(app.dev_paths, g_strdup(""));
+
+    gtk_drop_down_set_model(GTK_DROP_DOWN(app.dev_list), G_LIST_MODEL(names));
+    gtk_drop_down_set_selected(GTK_DROP_DOWN(app.dev_list), 0);    /* first port, or Custom… */
+    g_object_unref(names);
+    g_ptr_array_unref(found);
+    g_hash_table_unref(ids);
+}
+
+/* A port picked: show its path; Custom… makes the path editable. */
+static void on_port_selected(GObject *o, GParamSpec *ps, gpointer u)
+{
+    guint i = gtk_drop_down_get_selected(GTK_DROP_DOWN(app.dev_list));
+    int custom;
+    (void)o, (void)ps, (void)u;
+    if (!app.dev_paths || i >= app.dev_paths->len)
+        return;
+    custom = i == app.dev_paths->len - 1;
+    if (!custom)
+        gtk_editable_set_text(GTK_EDITABLE(app.dev), g_ptr_array_index(app.dev_paths, i));
+    else if (!gtk_editable_get_text(GTK_EDITABLE(app.dev))[0])
+        gtk_editable_set_text(GTK_EDITABLE(app.dev), "/dev/ttyUSB0");
+    gtk_widget_set_sensitive(app.dev, custom && app.thread == NULL);
+    if (custom)
+        gtk_widget_grab_focus(app.dev);
+}
+
+static void on_port_scan(GtkButton *b, gpointer u)
+{
+    (void)b, (void)u;
+    scan_ports();
+    gtk_label_set_text(GTK_LABEL(app.status),
+                       app.dev_paths->len > 1 ? "Ports rescanned."
+                                              : "No serial ports found. Is the cable plugged in?");
+}
+
+/* A tab page: padded vertical box. */
+static GtkWidget *page_box(void)
+{
+    GtkWidget *b = gtk_box_new(GTK_ORIENTATION_VERTICAL, 12);
+    gtk_widget_set_margin_start(b, 12);
+    gtk_widget_set_margin_end(b, 12);
+    gtk_widget_set_margin_top(b, 12);
+    gtk_widget_set_margin_bottom(b, 12);
+    return b;
+}
+
+static GtkWidget *engine_page(void)
+{
+    GtkWidget *page = page_box(), *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+    GtkWidget *grid = gtk_grid_new();
+    int rows = (N_SENSORS + 1) / 2;
+
+    app.live_btn = gtk_button_new_with_label("Start live data");
+    g_signal_connect(app.live_btn, "clicked", G_CALLBACK(on_live), NULL);
+    app.fps = label("", 1);
+    gtk_widget_add_css_class(app.fps, "dim-label");
+    gtk_widget_set_hexpand(app.fps, TRUE);
+    gtk_box_append(GTK_BOX(row), app.live_btn);
+    gtk_box_append(GTK_BOX(row), app.fps);
+    gtk_box_append(GTK_BOX(page), row);
+
+    /* Two columns of name / value pairs. */
+    gtk_grid_set_column_spacing(GTK_GRID(grid), 24);
+    gtk_grid_set_row_spacing(GTK_GRID(grid), 4);
+    for (int i = 0; i < N_SENSORS; i++) {
+        int col = i / rows * 2, r = i % rows;
+        app.value[i] = label("–", 1);
+        gtk_widget_add_css_class(app.value[i], "numeric");
+        gtk_widget_set_hexpand(app.value[i], TRUE);
+        gtk_grid_attach(GTK_GRID(grid), label(SENSORS[i].name, 0), col, r, 1, 1);
+        gtk_grid_attach(GTK_GRID(grid), app.value[i], col + 1, r, 1, 1);
+    }
+    gtk_box_append(GTK_BOX(page), framed("Engine sensors", grid));
+    return page;
+}
+
+static GtkWidget *codes_page(void)
+{
+    GtkWidget *page = page_box(), *codes = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
+    GtkWidget *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+
+    app.dtc_btn = gtk_button_new_with_label("Read fault codes");
+    g_signal_connect(app.dtc_btn, "clicked", G_CALLBACK(on_dtc), NULL);
+    app.clear_btn = gtk_button_new_with_label("Clear codes…");
+    g_signal_connect(app.clear_btn, "clicked", G_CALLBACK(on_clear), NULL);
+    gtk_box_append(GTK_BOX(row), app.dtc_btn);
+    gtk_box_append(GTK_BOX(row), app.clear_btn);
+    gtk_box_append(GTK_BOX(page), row);
+
+    app.dtc_grid = gtk_grid_new();
+    gtk_grid_set_column_spacing(GTK_GRID(app.dtc_grid), 16);
+    gtk_grid_set_row_spacing(GTK_GRID(app.dtc_grid), 4);
+    gtk_grid_attach(GTK_GRID(app.dtc_grid), label("Not read yet.", 0), 0, 0, 3, 1);
+    gtk_box_append(GTK_BOX(codes), app.dtc_grid);
+    gtk_box_append(GTK_BOX(page), framed("Stored codes", codes));
+    return page;
+}
+
+static GtkWidget *tests_page(void)
+{
+    const char *names[N_ACTIVE_TESTS + 1];
+    GtkWidget *page = page_box(), *tests = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
+    GtkWidget *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+    GtkWidget *row2 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+
+    for (int i = 0; i < N_ACTIVE_TESTS; i++)
+        names[i] = ACTIVE_TESTS[i].name;
+    names[N_ACTIVE_TESTS] = NULL;
+    app.test = gtk_drop_down_new_from_strings(names);
+    gtk_widget_set_hexpand(app.test, TRUE);
+    app.test_value = gtk_spin_button_new_with_range(0, 1, 1);
+    app.test_unit = label("", 0);
+    gtk_box_append(GTK_BOX(row), app.test);
+    gtk_box_append(GTK_BOX(row), app.test_value);
+    gtk_box_append(GTK_BOX(row), app.test_unit);
+
+    app.test_hold = gtk_spin_button_new_with_range(1, 30, 1);
+    gtk_spin_button_set_value(GTK_SPIN_BUTTON(app.test_hold), 5);
+    app.test_btn = gtk_button_new_with_label("Run test…");
+    gtk_widget_set_hexpand(app.test_btn, TRUE);
+    gtk_widget_set_halign(app.test_btn, GTK_ALIGN_END);
+    gtk_box_append(GTK_BOX(row2), label("Hold for", 0));
+    gtk_box_append(GTK_BOX(row2), app.test_hold);
+    gtk_box_append(GTK_BOX(row2), label("s", 0));
+    gtk_box_append(GTK_BOX(row2), app.test_btn);
+
+    app.test_result = label("", 0);
+    gtk_label_set_wrap(GTK_LABEL(app.test_result), TRUE);
+    gtk_label_set_selectable(GTK_LABEL(app.test_result), TRUE);
+    gtk_widget_add_css_class(app.test_result, "numeric");
+
+    gtk_box_append(GTK_BOX(tests), row);
+    gtk_box_append(GTK_BOX(tests), row2);
+    gtk_box_append(GTK_BOX(tests), app.test_result);
+    gtk_box_append(GTK_BOX(page), framed("Engine active tests", tests));
+
+    g_signal_connect(app.test, "notify::selected", G_CALLBACK(on_test_selected), NULL);
+    g_signal_connect(app.test_btn, "clicked", G_CALLBACK(on_test), NULL);
+    return page;
+}
+
+static GtkWidget *other_page(void)
+{
+    GtkWidget *page = page_box(), *knock = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
+    GtkWidget *grid = gtk_grid_new();
+    static const char *rows[] = {"Fail-safe latched", "Knock system OK (second CPU)",
+                                 "Knock retard term", "Raw"};
+    GtkWidget **vals[] = {&app.knock_fs, &app.knock_ok, &app.knock_val, &app.knock_raw};
+
+    app.knock_btn = gtk_button_new_with_label("Read knock status");
+    gtk_widget_set_halign(app.knock_btn, GTK_ALIGN_START);
+    g_signal_connect(app.knock_btn, "clicked", G_CALLBACK(on_knock), NULL);
+    gtk_box_append(GTK_BOX(knock), app.knock_btn);
+
+    gtk_grid_set_column_spacing(GTK_GRID(grid), 24);
+    gtk_grid_set_row_spacing(GTK_GRID(grid), 4);
+    for (int i = 0; i < 4; i++) {
+        *vals[i] = label("–", 0);
+        gtk_widget_add_css_class(*vals[i], "numeric");
+        gtk_grid_attach(GTK_GRID(grid), label(rows[i], 0), 0, i, 1, 1);
+        gtk_grid_attach(GTK_GRID(grid), *vals[i], 1, i, 1, 1);
+    }
+    gtk_box_append(GTK_BOX(knock), grid);
+    gtk_box_append(GTK_BOX(page), framed("Knock control", knock));
+    return page;
+}
+
+/* Sidebar toggle: show or hide its panel. */
+static void on_page_toggled(GtkToggleButton *b, gpointer panel)
+{
+    gtk_widget_set_visible(GTK_WIDGET(panel), gtk_toggle_button_get_active(b));
+}
+
+/* A panel for the content area: bold title over the page, fixed minimum width so
+ * several fit side by side. */
+static GtkWidget *panel(const char *title, GtkWidget *page)
+{
+    GtkWidget *box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0), *head = label(NULL, 0);
+    char *markup = g_markup_printf_escaped("<b>%s</b>", title);
+
+    gtk_label_set_markup(GTK_LABEL(head), markup);
+    g_free(markup);
+    gtk_widget_set_margin_start(head, 12);
+    gtk_widget_set_margin_top(head, 8);
+    gtk_box_append(GTK_BOX(box), head);
+    gtk_box_append(GTK_BOX(box), page);
+    gtk_widget_set_size_request(box, 400, -1);
+    gtk_widget_set_hexpand(box, TRUE);
+    return box;
+}
+
 static void activate(GtkApplication *ga, gpointer u)
 {
-    GtkWidget *win, *root, *bar, *cols, *sensors, *grid, *codes, *right;
+    GtkWidget *win, *root, *bar, *split, *side, *scroll, *content, *body;
+    struct { const char *name; GtkWidget *page; int open; } pages[5];
     (void)u;
 
     win = app.win = gtk_application_window_new(ga);
     gtk_window_set_title(GTK_WINDOW(win), "Consult");
-    gtk_window_set_default_size(GTK_WINDOW(win), 760, 480);
+    gtk_window_set_default_size(GTK_WINDOW(win), 1100, 600);
 
-    root = gtk_box_new(GTK_ORIENTATION_VERTICAL, 12);
-    gtk_widget_set_margin_start(root, 12);
-    gtk_widget_set_margin_end(root, 12);
-    gtk_widget_set_margin_top(root, 12);
-    gtk_widget_set_margin_bottom(root, 12);
-
+    root = page_box();
     bar = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+    app.dev_list = gtk_drop_down_new(NULL, NULL);
+    gtk_widget_set_hexpand(app.dev_list, TRUE);
     app.dev = gtk_entry_new();
-    gtk_editable_set_text(GTK_EDITABLE(app.dev),
-                          g_file_test("/dev/consult", G_FILE_TEST_EXISTS) ? "/dev/consult"
-                                                                          : "/dev/ttyUSB0");
-    gtk_widget_set_hexpand(app.dev, TRUE);
-    app.live_btn = gtk_button_new_with_label("Start live data");
-    app.dtc_btn = gtk_button_new_with_label("Read fault codes");
-    g_signal_connect(app.live_btn, "clicked", G_CALLBACK(on_live), NULL);
-    g_signal_connect(app.dtc_btn, "clicked", G_CALLBACK(on_dtc), NULL);
+    gtk_entry_set_placeholder_text(GTK_ENTRY(app.dev), "/dev/ttyUSB0");
+    gtk_widget_set_size_request(app.dev, 200, -1);
+    app.dev_scan = gtk_button_new_with_label("Rescan");
+    g_signal_connect(app.dev_list, "notify::selected", G_CALLBACK(on_port_selected), NULL);
+    g_signal_connect(app.dev_scan, "clicked", G_CALLBACK(on_port_scan), NULL);
     gtk_box_append(GTK_BOX(bar), label("Port", 0));
+    gtk_box_append(GTK_BOX(bar), app.dev_list);
     gtk_box_append(GTK_BOX(bar), app.dev);
-    gtk_box_append(GTK_BOX(bar), app.live_btn);
-    gtk_box_append(GTK_BOX(bar), app.dtc_btn);
+    gtk_box_append(GTK_BOX(bar), app.dev_scan);
+    scan_ports();
+    on_port_selected(NULL, NULL, NULL);
     gtk_box_append(GTK_BOX(root), bar);
 
     app.status = label("", 0);
     gtk_label_set_wrap(GTK_LABEL(app.status), TRUE);
     gtk_box_append(GTK_BOX(root), app.status);
 
-    cols = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 12);
-    gtk_widget_set_vexpand(cols, TRUE);
+    body = bcm_page();
+    gtk_widget_set_margin_start(body, 12);
+    gtk_widget_set_margin_end(body, 12);
+    gtk_widget_set_margin_top(body, 12);
+    gtk_widget_set_margin_bottom(body, 12);
+    pages[0].name = "Engine readouts"; pages[0].page = engine_page(); pages[0].open = 1;
+    pages[1].name = "Fault codes";     pages[1].page = codes_page();  pages[1].open = 1;
+    pages[2].name = "Engine tests";    pages[2].page = tests_page();  pages[2].open = 0;
+    pages[3].name = "BCM tests";       pages[3].page = body;          pages[3].open = 0;
+    pages[4].name = "Other";           pages[4].page = other_page();  pages[4].open = 0;
 
-    sensors = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
-    grid = gtk_grid_new();
-    gtk_grid_set_column_spacing(GTK_GRID(grid), 24);
-    gtk_grid_set_row_spacing(GTK_GRID(grid), 4);
-    for (int i = 0; i < N_SENSORS; i++) {
-        app.value[i] = label("–", 1);
-        gtk_widget_add_css_class(app.value[i], "numeric");
-        gtk_widget_set_hexpand(app.value[i], TRUE);
-        gtk_grid_attach(GTK_GRID(grid), label(SENSORS[i].name, 0), 0, i, 1, 1);
-        gtk_grid_attach(GTK_GRID(grid), app.value[i], 1, i, 1, 1);
+    /* Left: one toggle per page, any number on at once. Right: the open pages side by
+     * side, scrolling when they don't fit. */
+    split = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    gtk_widget_set_vexpand(split, TRUE);
+    side = gtk_box_new(GTK_ORIENTATION_VERTICAL, 4);
+    gtk_widget_set_margin_end(side, 8);
+    content = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+    for (int i = 0; i < 5; i++) {
+        GtkWidget *p = panel(pages[i].name, pages[i].page);
+        GtkWidget *t = gtk_toggle_button_new_with_label(pages[i].name);
+        gtk_widget_set_halign(gtk_button_get_child(GTK_BUTTON(t)), GTK_ALIGN_START);
+        gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(t), pages[i].open);
+        gtk_widget_set_visible(p, pages[i].open);
+        g_signal_connect(t, "toggled", G_CALLBACK(on_page_toggled), p);
+        gtk_box_append(GTK_BOX(side), t);
+        gtk_box_append(GTK_BOX(content), p);
     }
-    app.fps = label("", 1);
-    gtk_widget_add_css_class(app.fps, "dim-label");
-    gtk_box_append(GTK_BOX(sensors), grid);
-    gtk_box_append(GTK_BOX(sensors), app.fps);
-    gtk_box_append(GTK_BOX(cols), framed("Engine sensors", sensors));
+    scroll = gtk_scrolled_window_new();
+    gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(scroll), content);
+    gtk_widget_set_hexpand(scroll, TRUE);
+    gtk_box_append(GTK_BOX(split), side);
+    gtk_box_append(GTK_BOX(split), gtk_separator_new(GTK_ORIENTATION_VERTICAL));
+    gtk_box_append(GTK_BOX(split), scroll);
+    gtk_box_append(GTK_BOX(root), split);
 
-    codes = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
-    gtk_widget_set_hexpand(codes, TRUE);
-    app.dtc_grid = gtk_grid_new();
-    gtk_grid_set_column_spacing(GTK_GRID(app.dtc_grid), 16);
-    gtk_grid_set_row_spacing(GTK_GRID(app.dtc_grid), 4);
-    gtk_grid_attach(GTK_GRID(app.dtc_grid), label("Not read yet.", 0), 0, 0, 3, 1);
-    app.clear_btn = gtk_button_new_with_label("Clear codes…");
-    gtk_widget_set_halign(app.clear_btn, GTK_ALIGN_END);
-    g_signal_connect(app.clear_btn, "clicked", G_CALLBACK(on_clear), NULL);
-    gtk_box_append(GTK_BOX(codes), app.dtc_grid);
-    gtk_box_append(GTK_BOX(codes), app.clear_btn);
-    right = gtk_box_new(GTK_ORIENTATION_VERTICAL, 12);
-    gtk_widget_set_hexpand(right, TRUE);
-    gtk_box_append(GTK_BOX(right), framed("Fault codes", codes));
-
-    {
-        const char *names[N_ACTIVE_TESTS + 1];
-        GtkWidget *tests = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
-        GtkWidget *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
-        GtkWidget *row2 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
-
-        for (int i = 0; i < N_ACTIVE_TESTS; i++)
-            names[i] = ACTIVE_TESTS[i].name;
-        names[N_ACTIVE_TESTS] = NULL;
-        app.test = gtk_drop_down_new_from_strings(names);
-        gtk_widget_set_hexpand(app.test, TRUE);
-        app.test_value = gtk_spin_button_new_with_range(0, 1, 1);
-        app.test_unit = label("", 0);
-        gtk_box_append(GTK_BOX(row), app.test);
-        gtk_box_append(GTK_BOX(row), app.test_value);
-        gtk_box_append(GTK_BOX(row), app.test_unit);
-
-        app.test_hold = gtk_spin_button_new_with_range(1, 30, 1);
-        gtk_spin_button_set_value(GTK_SPIN_BUTTON(app.test_hold), 5);
-        app.test_btn = gtk_button_new_with_label("Run test…");
-        gtk_widget_set_hexpand(app.test_btn, TRUE);
-        gtk_widget_set_halign(app.test_btn, GTK_ALIGN_END);
-        gtk_box_append(GTK_BOX(row2), label("Hold for", 0));
-        gtk_box_append(GTK_BOX(row2), app.test_hold);
-        gtk_box_append(GTK_BOX(row2), label("s", 0));
-        gtk_box_append(GTK_BOX(row2), app.test_btn);
-
-        app.test_result = label("", 0);
-        gtk_label_set_wrap(GTK_LABEL(app.test_result), TRUE);
-        gtk_label_set_selectable(GTK_LABEL(app.test_result), TRUE);
-        gtk_widget_add_css_class(app.test_result, "numeric");
-
-        gtk_box_append(GTK_BOX(tests), row);
-        gtk_box_append(GTK_BOX(tests), row2);
-        gtk_box_append(GTK_BOX(tests), app.test_result);
-        gtk_box_append(GTK_BOX(right), framed("Active tests", tests));
-
-        g_signal_connect(app.test, "notify::selected", G_CALLBACK(on_test_selected), NULL);
-        g_signal_connect(app.test_btn, "clicked", G_CALLBACK(on_test), NULL);
-    }
-    gtk_box_append(GTK_BOX(cols), right);
-
-    {
-        GtkWidget *tabs = gtk_notebook_new(), *body = bcm_page();
-        gtk_widget_set_vexpand(tabs, TRUE);
-        gtk_widget_set_margin_start(cols, 8);
-        gtk_widget_set_margin_end(cols, 8);
-        gtk_widget_set_margin_top(cols, 8);
-        gtk_widget_set_margin_bottom(cols, 8);
-        gtk_widget_set_margin_start(body, 8);
-        gtk_widget_set_margin_end(body, 8);
-        gtk_widget_set_margin_top(body, 8);
-        gtk_widget_set_margin_bottom(body, 8);
-        gtk_notebook_append_page(GTK_NOTEBOOK(tabs), cols, gtk_label_new("Engine"));
-        gtk_notebook_append_page(GTK_NOTEBOOK(tabs), body, gtk_label_new("Body (BCM)"));
-        gtk_box_append(GTK_BOX(root), tabs);
-    }
     gtk_window_set_child(GTK_WINDOW(win), root);
     on_test_selected(NULL, NULL, NULL);
     gtk_window_present(GTK_WINDOW(win));

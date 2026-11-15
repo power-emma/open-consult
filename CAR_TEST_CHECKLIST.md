@@ -42,7 +42,7 @@ Tests run on a 1998 Maxima (VQ30DE, 5-speed, ECU 23710-2L904).
 | 2.5 | Starts counter | ☐ | | |
 | 2.6 | `C1` clear | ✅ | Echo `3E`; the frame shows the codes *before* the clear; `D1` after = `55 00`. `21` and `A8` returned as `xx F5` (`F5` = 1st-trip / pending, MIL off) | `gui`, `dtc-after-restart` |
 | 2.7 | Frame length vs code count | ◐ | 6 bytes for 3 codes | `2.3-win-py` |
-| 2.8 | P1320 monitor live | ◐ | Doesn't match the ROM reading: `$0C60` counts 0–9 continuously (21/s idle, 40–45/s driving); `$000A` bit 3 toggles ~8/s; no code set. Re-read `$E2F6` | `2.8-p1320-drive` |
+| 2.8 | P1320 monitor live | ◐ | **Continuous:** detected 2–5×/s; P4.3 high 36 % (idle) to 92 % (high load). Next: `p1320` while unplugging one coil at a time (`ROM_ANALYSIS.md` §7) | `2.8-p1320-drive` |
 
 ## 3. Live data (engine)
 
@@ -69,6 +69,7 @@ Tests run on a 1998 Maxima (VQ30DE, 5-speed, ECU 23710-2L904).
 | 3.19 | Bits `1F` | ◐ | b0 on ~0.2 s during a throttle blip | `3.17-bits2` |
 | 3.20 | Bits `21` | ✅ | b7 = `09` lean, b6 = `0A` lean (< ~450 mV). b0 latches on after warm-up. b5/b4 always 1 | `3.17-bits2`, `3.x-drive` |
 | 3.21 | Unscaled registers | ☐ | Candidates in `ROM_ANALYSIS.md` §2 | |
+| 3.22 | Knock fail-safe state | ☐ | KOER warm: `knock` (or GUI → Other). Fail-safe = `070D` b7 set (`ROM_ANALYSIS.md` §8b) | |
 
 ## 4. Engine active tests (KOER, parked, warm)
 

@@ -1,49 +1,68 @@
+#include <math.h>
+
 #include "registers.h"
 
-/* 18 registers, under the 20-register limit. Left out on purpose for the 1998 Maxima
- * (ID ED, 23710-2L904): 17 (AAC) is unsupported and would fail the whole command, and
- * 02/03 (CAS) × 8 isn't RPM. 08 (coolant) only streams alongside other registers,
- * which it always does here. Speed × 2 is still unverified (checklist 3.12). */
+/* 1998 Maxima (ID ED, 23710-2L904). Left out on purpose: 17 (AAC) is unsupported and
+ * would fail the whole command. 08 (coolant) only streams alongside other registers,
+ * which it always does here. Sensors marked extra are only in the full list; their
+ * scalings marked PLMS come from the 1999 A32 notes and are unchecked on this car
+ * (ROM_ANALYSIS.md §2). */
 const sensor_t SENSORS[N_SENSORS] = {
-    {"Engine speed",        {0x00, 0x01}, 2, 12.5,   0, 0, "rpm"},
-    {"Coolant temp",        {0x08},       1, 1,    -50, 0, "°C"},
-    {"Intake air temp",     {0x11},       1, 1,    -50, 0, "°C"},
-    {"Battery",             {0x0C},       1, 0.08,   0, 2, "V"},
-    {"Throttle position",   {0x0D},       1, 20,     0, 0, "mV"},
-    {"Mass air flow",       {0x04, 0x05}, 2, 5,      0, 0, "mV"},
-    {"O2 sensor LH",        {0x09},       1, 10,     0, 0, "mV"},
-    {"O2 sensor RH",        {0x0A},       1, 10,     0, 0, "mV"},
-    {"Vehicle speed",       {0x0B},       1, 2,      0, 0, "km/h"},
-    {"Injector LH",         {0x14, 0x15}, 2, 0.01,   0, 2, "ms"},
-    {"Injector RH",         {0x22, 0x23}, 2, 0.01,   0, 2, "ms"},
-    {"Ignition timing",     {0x16},       1, -1,   110, 0, "°BTDC"},
-    {"A/F alpha LH",        {0x1A},       1, 1,      0, 0, "%"},
-    {"A/F alpha RH",        {0x1B},       1, 1,      0, 0, "%"},
+    {"Engine speed",        {0x00, 0x01}, 2, 12.5,   0, 0, "rpm",   0},
+    {"Coolant temp",        {0x08},       1, 1,    -50, 0, "°C",    0},
+    {"Intake air temp",     {0x11},       1, 1,    -50, 0, "°C",    0},
+    {"Battery",             {0x0C},       1, 0.08,   0, 2, "V",     0},
+    {"Throttle position",   {0x0D},       1, 20,     0, 0, "mV",    0},
+    {"Mass air flow",       {0x04, 0x05}, 2, 5,      0, 0, "mV",    0},
+    {"O2 sensor LH",        {0x09},       1, 10,     0, 0, "mV",    0},
+    {"O2 sensor RH",        {0x0A},       1, 10,     0, 0, "mV",    0},
+    {"Vehicle speed",       {0x0B},       1, 2,      0, 0, "km/h",  0},
+    {"Injector LH",         {0x14, 0x15}, 2, 0.01,   0, 2, "ms",    0},
+    {"Injector RH",         {0x22, 0x23}, 2, 0.01,   0, 2, "ms",    0},
+    {"Ignition timing",     {0x16},       1, -1,   110, 0, "°BTDC", 0},
+    {"A/F alpha LH",        {0x1A},       1, 1,      0, 0, "%",     0},
+    {"A/F alpha RH",        {0x1B},       1, 1,      0, 0, "%",     0},
+    {"Self-learn LH",       {0x1C},       1, 1,      0, 0, "%",     1},
+    {"Self-learn RH",       {0x1D},       1, 1,      0, 0, "%",     1},
+    {"IACV-AAC valve",      {0x18},       1, 1,      0, 0, "step",  1},
+    {"Purge volume valve",  {0x29},       1, 1,      0, 0, "step",  1},
+    {"Load (CAL/LD)",     {0x33, 0x34}, 2, 1.0 / 256, 0, 1, "%",  1},
+    {"Absolute throttle", {0x37},       1, 1 / 2.55, 0, 0, "%",   1},
+    {"Rear O2 sensor",    {0x35},       1, 10,     0, 0, "mV",    1},
+    {"Abs. pressure sensor", {0x4A},    1, 20,     0, 0, "mV",    1},
 };
 
-size_t sensor_payload(uint8_t *out)
+size_t sensor_payload(uint8_t *out, int full)
 {
     size_t o = 0;
-    for (int i = 0; i < N_SENSORS; i++)
+    for (int i = 0; i < N_SENSORS; i++) {
+        if (SENSORS[i].extra && !full)
+            continue;
         for (int j = 0; j < SENSORS[i].nregs; j++) {
             out[o++] = 0x5A;
             out[o++] = SENSORS[i].regs[j];
         }
+    }
     return o;
 }
 
-int sensor_frame_len(void)
+int sensor_frame_len(int full)
 {
     int n = 0;
     for (int i = 0; i < N_SENSORS; i++)
-        n += SENSORS[i].nregs;
+        if (full || !SENSORS[i].extra)
+            n += SENSORS[i].nregs;
     return n;
 }
 
-void sensor_decode(const uint8_t *frame, double *values)
+void sensor_decode(const uint8_t *frame, int full, double *values)
 {
     for (int i = 0; i < N_SENSORS; i++) {
         unsigned raw = 0;
+        if (SENSORS[i].extra && !full) {
+            values[i] = NAN;
+            continue;
+        }
         for (int j = 0; j < SENSORS[i].nregs; j++)
             raw = (raw << 8) | *frame++;
         values[i] = raw * SENSORS[i].scale + SENSORS[i].offset;

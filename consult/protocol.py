@@ -72,7 +72,7 @@ class Consult:
 
         `gaps` are the pauses after the first and second FF. ECUTalk 1.5.0 sends the
         three bytes separately with Sleep(Delay1=280 ms) and Sleep(Delay2=70 ms) in
-        between (decompiled, see HANDOFF.md). Pass gaps=None to send them back to back.
+        between (decompiled from ECUTalk). Pass gaps=None to send them back to back.
 
         Returns (attempt number, seconds from TX to the reply, other bytes seen, id)
         on success, or None.
@@ -218,8 +218,7 @@ class Consult:
         want = expected_echo(payload)
         got = bytearray()
         try:
-            self.t.write(payload)
-            echo = self.t.read(len(want), timeout=0.5)
+            echo = self._send(payload, want)    # paced for the BCM
             if echo != want:
                 raise ConsultError(f"bad echo {echo.hex(' ') or '(none)'}, expected {want.hex(' ')}")
             self.t.write(bytes([GO]))
