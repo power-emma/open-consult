@@ -1,5 +1,9 @@
 # Engine ECU ROM analysis: 23710-2L904 (1998 Maxima VQ30DE, M/T)
 
+This is the ECU in my own car. This is diagnostic/tuning work on hardware I own, read
+out over the car's own Consult diagnostic port — not reverse engineering of someone
+else's product or system.
+
 ROM read over Consult (`rom/23710-2L904_1000-FFFF.bin`), cross-checked against the FSM
 and the car. CPU: Mitsubishi 7700 family (M37702-like). Addresses are bank 0.
 
