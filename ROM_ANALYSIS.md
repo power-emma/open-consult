@@ -371,11 +371,10 @@ command to plant a pointer (§1).
 6. Unknown active tests `95 99 A6 AC AD` (bank 1). Don't fire them.
 7. Decode `D0` bytes 0–26.
 
-## 10. Consult attack surface (audited, no escalation found)
+## 10. Consult command handling review (checked, nothing useful found)
 
-Walked every Consult command path looking for a memory-safety or logic bug that would
-widen read access past what `C9` already gives. **None found that helps.** Recorded so
-nobody re-walks it.
+Walked every Consult command path looking for a bug that would widen read access past
+what `C9` already gives. **None found that helps.** Recorded so nobody re-walks it.
 
 - **`C9` already reads the whole readable space.** Config here is `$1206 = 00`, `$1207 =
   52`. `$1207.5` clear ⇒ `consult_reply_c9` (`$9AF1`) does **not** hide `$FE00–$FFCF`, so
@@ -386,34 +385,36 @@ nobody re-walks it.
   only (`$3D80`, `$4486`) and never changes. The address can't be formed; there is no gate
   to bypass. Same for the `$5D40–$623F` skip — a pure address-range compare, no
   wire-controlled input.
-- **The one config-gated backdoor can't be reached.** `$1206.0` routes the Consult ISR
-  into bank 1 (`$4EFA` → `$017B08`), but it is a ROM/calibration byte (read-only at run
-  time) and clear here. And there is **no write primitive**: `5A` stores a register index
-  validated `< $62` and resolved through the fixed ROM table at `$1000` (`$9BB0`); `0A`
-  stores the test value at `$076F + at_slot` with `at_slot` from the ROM descriptor; `C9`
-  stores only addresses into `cs_argbuf`. None take a caller-chosen destination.
-- **One real bug, no payoff.** The arg-count limit (`CMP #$28; BCS` at `$53BF`) is checked
-  only when a new `5A`/`C9` command byte arrives, not between the two bytes of a `C9`
-  address. Send 39× `5A` (argc→39), then one `C9`: it is accepted, then collects 2 bytes
-  unchecked, pushing `cs_argc` to 41 and writing one byte past the 40-byte `cs_argbuf`
-  (`$08D2`). The reply loop then reads ~2 bytes beyond the buffer as an extra address —
-  but still a bank-0 address read with data bank 0, i.e. memory `C9` already reaches. A
-  latent off-by-one, not an access-widener. Chased to the end: the overflow byte lands at
-  `$08FA`, which reset's RAM clear leaves untouched (`LDX #$08F9` down, `$3DAD`) and which
-  **no code anywhere reads** — dead padding, so it corrupts no pointer. And bank 1 can't
-  be formed by any indirection regardless: the data-bank register is set by `LDT #$00`
-  only (`$3D80`, `$4486`) and never changed, and the ROM contains **no long-indirect
-  (`[dp]`) read** — so every Consult-reachable read executes in data bank 0.
+- **The one config-gated bank-1 path can't actually be reached.** `$1206.0` routes the
+  Consult ISR into bank 1 (`$4EFA` → `$017B08`), but it is a ROM/calibration byte
+  (read-only at run time) and clear here. And there's no way to write to a caller-chosen
+  destination: `5A` stores a register index validated `< $62` and resolved through the
+  fixed ROM table at `$1000` (`$9BB0`); `0A` stores the test value at `$076F + at_slot`
+  with `at_slot` from the ROM descriptor; `C9` stores only addresses into `cs_argbuf`.
+  None of these let the caller pick where the write lands.
+- **One real bug, but it goes nowhere.** The arg-count limit (`CMP #$28; BCS` at `$53BF`)
+  is checked only when a new `5A`/`C9` command byte arrives, not between the two bytes of
+  a `C9` address. Send 39× `5A` (argc→39), then one `C9`: it is accepted, then collects 2
+  bytes unchecked, pushing `cs_argc` to 41 and writing one byte past the 40-byte
+  `cs_argbuf` (`$08D2`). The reply loop then reads ~2 bytes beyond the buffer as an extra
+  address — but still a bank-0 address read with data bank 0, i.e. memory `C9` already
+  reaches. A latent off-by-one, not a way to read anything new. Chased to the end: the
+  overflow byte lands at `$08FA`, which reset's RAM clear leaves untouched (`LDX #$08F9`
+  down, `$3DAD`) and which **no code anywhere reads** — dead padding, so it corrupts
+  nothing. And bank 1 can't be reached this way regardless: the data-bank register is set
+  by `LDT #$00` only (`$3D80`, `$4486`) and never changed, and the ROM contains **no
+  long-indirect (`[dp]`) read** — so every Consult-reachable read executes in data bank 0.
 
-- **No arbitrary write via active tests.** `0A` writes the caller's value byte to
-  `$076F + at_slot`, `at_slot = (ctl & $7F) >> 1` from the descriptor at `$1160`. Scanned
-  all 28 descriptors: slots run 0–45, so every write lands in `$076F–$079C`, inside
-  `at_values` (below `cs_streamlist` at `$07A0`). Destination is descriptor-fixed, the
-  values are consumed as data by test handlers, and none overflows the region.
-- **No code-execution primitive.** The entire image has exactly one indirect transfer,
-  `JMP ($CBAB,X)` at `$CAF1` — a dispatch through a fixed 9-entry ROM table, `X` bounded
-  0–8 by the search loop, all targets in ROM. There is **no** jump or call through a RAM
-  pointer anywhere, so there is no function pointer to corrupt even if a write reached one.
+- **No way to write arbitrary memory via active tests.** `0A` writes the caller's value
+  byte to `$076F + at_slot`, `at_slot = (ctl & $7F) >> 1` from the descriptor at `$1160`.
+  Scanned all 28 descriptors: slots run 0–45, so every write lands in `$076F–$079C`,
+  inside `at_values` (below `cs_streamlist` at `$07A0`). Destination is descriptor-fixed,
+  the values are consumed as data by test handlers, and none overflows the region.
+- **No way to redirect code execution.** The entire image has exactly one indirect
+  transfer, `JMP ($CBAB,X)` at `$CAF1` — a dispatch through a fixed 9-entry ROM table, `X`
+  bounded 0–8 by the search loop, all targets in ROM. There is **no** jump or call
+  through a RAM pointer anywhere, so there's no function pointer to corrupt even if a
+  write reached one.
 
 **Conclusion:** the handler is tight. The only under-used *intended* capability is
 `sub-dump` (the `$5D40–$623F` forward → the second CPU's `$0D40–$123F`), a different chip,
@@ -424,8 +425,8 @@ or a read of the `KNKT43J` H8.
 
 `0A` with a first byte `< $08` enters "direct mode" (the OBD Mode 6 / data-stream path,
 §1), which loads `cs_streamlist` (`$07A0`) and then streams it back via
-`consult_reply_direct` (`$9CDD`). Two findings here; neither escalates, but the second is
-the most promising lever found so far if a new primitive ever turns up.
+`consult_reply_direct` (`$9CDD`). Two findings here; neither leads anywhere today, but
+the second is the most promising thread to pull if anything else turns up later.
 
 - **Bug: integer underflow / missing lower bound on the value byte** (`$5239`–`$531F`).
   For the "high" sub-paths (value `≥ $80`) the table offset is `(value − $80 − 1) × 4`.
@@ -436,22 +437,23 @@ the most promising lever found so far if a new primitive ever turns up.
   words at `$EA6B` are `0000`); `fb=2/5/6/7` stream two bytes from fixed unintended ROM
   addresses (`$90F9`,`$A902` / `$5809`,`$2889` / `$42F8`,`$FF29` / `$0926`,`$8958`). The
   intended minimum was `value = $81` (offset 0). **No new access** — those are bank-0 ROM
-  bytes `C9` already returns — but it is a genuine input-validation defect. Read-only and
+  bytes `C9` already returns — but it is a genuine input-validation bug. Read-only and
   safe to poke on the car (direct mode writes no outputs); good for confirming the
   analysis.
-- **`consult_reply_direct` has no hole check and no forward.** It does `LDA $07A0,X; TAX;
-  LDA $00,X` (`$9CF1`): it dereferences each `cs_streamlist` entry as a 16-bit address and
-  reads it **locally in data bank 0, with none of the `$5D40–$623F` forward / range logic
-  that `consult_reply_c9` applies** (§1). So this engine is strictly more permissive than
-  `C9`: an entry pointing into `$5D40–$623F` would read *this* CPU's hidden code there
-  directly. It is **not exploitable today** — every reachable `cs_streamlist` value comes
-  from fixed ROM (the descriptor tables `$E95F–$EA80`, or the fixed OOB bytes above), and
-  scanning all of those tables found **no** entry in `$5D40–$623F`; `cs_streamlist` is
-  never attacker-controlled. But it reframes the target: the prize is no longer "defeat
-  the `C9` range check" (there is none to defeat here) but "**find any way to write a
-  chosen 16-bit value into `$07A0`**". None found — the active-test value write stops at
-  `$079C`, the `cs_argbuf` overflow reaches only `$08FA` — so this stays a dead end, but
-  it is the sharpest remaining direction.
+- **`consult_reply_direct` has no bounds check and no forwarding.** It does `LDA
+  $07A0,X; TAX; LDA $00,X` (`$9CF1`): it dereferences each `cs_streamlist` entry as a
+  16-bit address and reads it **locally in data bank 0, with none of the `$5D40–$623F`
+  forward / range logic that `consult_reply_c9` applies** (§1). So this path is more
+  permissive than `C9`: an entry pointing into `$5D40–$623F` would read *this* CPU's
+  hidden code there directly. It doesn't matter in practice, though — every reachable
+  `cs_streamlist` value comes from fixed ROM (the descriptor tables `$E95F–$EA80`, or the
+  fixed out-of-bounds bytes above), and scanning all of those tables found **no** entry in
+  `$5D40–$623F`; `cs_streamlist` can't be steered by the caller. But it reframes the
+  question: it's no longer "can the `C9` range check be bypassed" (there's none to bypass
+  here) but "**is there any way to write a chosen 16-bit value into `$07A0`**". None
+  found — the active-test value write stops at `$079C`, the `cs_argbuf` overflow reaches
+  only `$08FA` — so this stays a dead end, but it's the most promising remaining
+  direction.
 - **Swept — that write does not exist.** Checked every store in the ROM that targets
   `$07A0–$07A3`: there are exactly three (`$5224`, `$5327`, `$5331`), and all write
   fixed data — a descriptor-table pointer, or two 16-bit words read from ROM at
@@ -462,3 +464,14 @@ the most promising lever found so far if a new primitive ever turns up.
   nowhere else in the image, so it can't be left stale high either. **Conclusion:
   `cs_streamlist` is unconditionally fixed-content; `consult_reply_direct`'s missing hole
   check cannot be aimed from the Consult interface.** Lead closed.
+- **Exhaustively enumerated the entries, too.** For completeness (since `0A` can be fired
+  any number of times), every accepted direct-mode `(first-byte, value)` was enumerated —
+  71 configurations across the five dispatches, each producing two `cs_streamlist` words
+  from its fixed `table_base + offset` (including the `value=$80` underflow to `+$FC`).
+  **None of the 142 resulting addresses falls in `$5D40–$623F`.** Every one is low RAM/IO
+  (`$03xx–$08xx`), low ROM (`$23xx–$25xx`), or fixed garbage (`$90F9`,`$5809`,`$42F8`,
+  `$8958`) — all bank-0 and already `C9`-readable. Nearest misses: `fb=5 v=$80` → `$5809`
+  (just below the hole) and `fb=6 v=$80` → `$FF29` (inside `$FE00–$FFCF`, already readable
+  with `$1207.5` clear). So the engine cannot be handed a hole address, and since it is a
+  single dereference (`mem[entry]`, not `mem[mem[entry]]`), no RAM cell we can write turns
+  into a second hop. The hidden code at `$5D40–$623F` stays off-limits to software.
