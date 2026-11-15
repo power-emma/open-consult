@@ -1,0 +1,17 @@
+  0.000124 ## open /dev/ttyUSB0 at 2026-11-14T15:08:06
+  0.000195 ## cmd: --test-id 7.6-mem-diff2-DC --ecu DC watch-mem FF00 -n 96
+  0.000239 TX 30
+  0.145142 RX 18
+  0.155081 RX cf
+  0.163801 RX cf
+  0.566257 TX ff
+  0.846887 TX ff
+  0.917475 TX dc
+  0.926347 RX 23
+  0.926457 ## init ok id=DC attempt=1 secs=0.009
+  0.926518 TX c9
+  0.936393 RX 36
+  0.936454 TX ff
+  0.946451 TX 30
+  0.956273 RX 30
+  3.066300 ## close

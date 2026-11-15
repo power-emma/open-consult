@@ -1,0 +1,44 @@
+  0.000110 ## open /dev/ttyUSB0 at 2026-11-14T11:36:10
+  0.000355 ## proxy up, real port DTR=0 RTS=0
+  0.509033 ## pty termios iflag=0x0 oflag=0x4 cflag=0xf00bf lflag=0xa00 ispeed=38400 ospeed=38400
+  0.000000 ## serlog attached pid=8361
+  0.000860 ## ioctl 0x802c542a arg=0 -> 0
+  0.000893 ## ioctl 0x802c542a arg=0 -> 0
+  0.000910 ## ioctl 0x802c542a arg=0 -> 0
+  0.001015 ## ioctl 0x802c542a arg=0 -> 0
+  0.001507 ## ioctl 0x802c542a arg=0 -> 0
+  0.001661 ## ioctl 0x402c542b arg=0 -> 0
+  0.001685 ## ioctl 0x802c542a arg=0 -> 0
+  0.001757 ## ioctl 0x402c542b arg=0 -> 0
+  0.001802 ## ioctl 0x802c542a arg=0 -> 0
+  0.001956 ## ioctl 0x5418 arg=0x4 -> 0 (TIOCMSET)
+  0.002119 ## ioctl 0x5418 arg=0x4 -> 0 (TIOCMSET)
+  0.002189 ## ioctl 0x402c542b arg=0 -> 0
+  0.002213 ## ioctl 0x802c542a arg=0 -> 0
+  0.002296 ## ioctl 0x402c542b arg=0 -> 0
+  0.002521 ## ioctl 0x802c542a arg=0 -> 0
+  0.002633 ## ioctl 0x402c542b arg=0 -> 0
+  0.002652 ## ioctl 0x802c542a arg=0 -> 0
+  0.002716 ## ioctl 0x402c542b arg=0 -> 0
+  0.002734 ## ioctl 0x802c542a arg=0 -> 0
+  0.002875 ## ioctl 0x5418 arg=0x4 -> 0 (TIOCMSET)
+  0.003008 ## ioctl 0x5418 arg=0x4 -> 0 (TIOCMSET)
+  0.003070 ## ioctl 0x402c542b arg=0 -> 0
+  0.003088 ## ioctl 0x802c542a arg=0 -> 0
+  0.003157 ## ioctl 0x402c542b arg=0 -> 0
+  0.003581 ## ioctl 0x5418 arg=0x4 -> 0 (TIOCMSET)
+  0.003802 ## ioctl 0x802c542a arg=0 -> 0
+  0.003916 ## ioctl 0x402c542b arg=0 -> 0
+  0.003932 ## ioctl 0x802c542a arg=0 -> 0
+  0.003992 ## ioctl 0x402c542b arg=0 -> 0
+  0.004008 ## ioctl 0x802c542a arg=0 -> 0
+  0.004144 ## ioctl 0x5418 arg=0x4 -> 0 (TIOCMSET)
+  0.004348 ## ioctl 0x5418 arg=0 -> 0 (TIOCMSET)
+  0.004413 ## ioctl 0x402c542b arg=0 -> 0
+  0.004431 ## ioctl 0x802c542a arg=0 -> 0
+  0.004491 ## ioctl 0x402c542b arg=0 -> 0
+  0.004639 ## ioctl 0x5418 arg=0 -> 0 (TIOCMSET)
+  0.017782 ## ioctl 0x540b arg=0 -> 0
+  0.017834 ## ioctl 0x540b arg=0 -> 0
+  0.021984 TX 30
+        ## (removed 140190 status-polling ioctls: 0x545d/0x5459/TIOCMGET/0x541b, repeated until ECUTalk was killed)

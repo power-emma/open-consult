@@ -1,0 +1,27 @@
+  0.000100 ## open /dev/ttyUSB0 at 2026-11-14T14:37:51
+  0.000149 ## cmd: --test-id 6.4-dtc-DA --ecu DA dtc
+  0.000189 TX 30
+  0.003857 RX cf
+  0.204312 TX ff
+  0.484933 TX ff
+  0.555300 TX da
+  0.555563 RX 00
+  0.555605 RX 00
+  0.567206 RX 25
+  0.567270 ## init ok id=DA attempt=1 secs=0.012
+  0.567289 TX d1
+  0.587154 RX fe
+  0.587193 ## command try 1 failed: bad echo fe, expected 2e
+  0.587205 TX 30
+  0.607118 RX cf
+  0.707440 TX d1
+  0.726246 RX fe
+  0.726302 ## command try 2 failed: bad echo fe, expected 2e
+  0.726311 TX 30
+  0.746264 RX cf
+  0.846743 TX d1
+  0.866046 RX fe
+  0.866081 ## command try 3 failed: bad echo fe, expected 2e
+  0.866089 TX 30
+  0.885130 RX cf
+  0.985594 ## close

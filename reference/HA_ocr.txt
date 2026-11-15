@@ -1,0 +1,9703 @@
+===== PDF page 1 =====
+1230
+
+HEATER &
+AIR CONDITIONER
+
+seonon FLA
+
+CONTENTS
+
+[C1 MANUALANDAUTO [——
+
+PRECAUTIONS AND PREPARATION............................ 2
+Supplemental Restraint System (SRS) “AIR
+BAG”... eens nee 2
+Precautions for Working with HFC-134a (R-134a) .....3
+General Refrigerant Precautions...........ccceceeveveveeverenns 3
+Precautions for Refrigerant Connection ..........cccco....... 4
+Precautions for Servicing Compressor...........ccu...... 7
+Special Service TOOIS .........cccecvrerriieeeeeeeeeee eerie 7
+HFC-134a (R-134a) Service Tools and
+EQUIPMENT... srnceee 8
+Precautions for Service Equipment............cccceveueneena 10
+
+DESCRIPTION ..........coiieeeeee cere 12
+Refrigeration Cycle .......ccoovveoeriieceneceeeeeee eee 12
+V-6 Variable Displacement Compressor.................... 13
+Component Layout .......eceeeeeeeeeeeinneerecreiecnsennesesnns 17
+Discharge Air FIOW.......cccoviuecereerececeeeeecveee caer 18
+
+i ] MANUAL | 7]
+
+DESCRIPTION........cocotieeieieiereee eects 19
+Control Operation ...........ceeeeceeeeeeeeeeeeeveseseceeaens 19
+
+TROUBLE DIAGNOSES .........cccoooevriririirceeceeeeee 21
+How to Perform Trouble Diagnoses for Quick
+and Accurate Repair.......ceoeeeeevniiicinnieicecens 21
+Operational ChecK.....cocceeueeeimvvenieeeeeeeeeee sees 22
+Symptom Chart......ueceeveeeeeeeeeeeie eee 24
+Preliminary Check......oeecoeeeiriiieeeeeee cece 26
+
+[1 MANUALANDAUTO [
+
+TROUBLE DIAGNOSES ..........ccoccciviicceeceeeeeene 31
+Performance Test Diagnoses ...........ccvveeeerivcnenrenenne. 31
+Performance Chart ...........cccoovvirineccieceeeeee erences 33
+Trouble Diagnoses for Abnormal Pressure. ............... 34
+
+{ 7 MANUAL [_ 7
+Harness Layout...........cccouvvmevereieeeeereissesnise sesso. 37
+
+Circuit Diagram ......ccccccomierierrreeerenereeseeseeesssenesaeanas 39
+Wiring Diagram — A/C, M — correc 40
+Main Power Supply and Ground Circuit Check ........44
+Diagnostic Procedure 1 ........coeervevrvenniercicnnnneeirnneees 45
+Diagnostic Procedure 2.........ccccvveveeveeieeceeceseennnnes a7
+Diagnostic Procedure 3 ..........oceecvvimiicenirivinesnveeneennnn 49
+Diagnostic Procedure 4..........cccccooivivvcinnnccencenns 50
+Diagnostic Procedure 5........ccoeoiivnvieciviee neces 52
+Electrical Components Inspection ..........cceeeveeeeeveenes 55
+Control Linkage Adjustment........c..cccevvecnnceecininiraninns 56
+] AUTO | ]
+DESCRIPTION .........ooieeeeeeceeree eens 58
+INtrOAUCHION eects 58
+FRAIUIES ....cviieeecr trees eee seers emer 58
+Control Operation ...........ccocceveeeerieereicce nner sevens 61
+TROUBLE DIAGNOSES ......ccccoecirririee cece eee 64
+How to Perform Trouble Diagnoses for Quick
+and Accurate Repair......ccevvverecieecrincieciee cesses 64
+Operational Check..........ccccoveeeeeeieeceeeiceeecee serene. 65
+Symptom Chart.......cocuvveeerrrrirereienieeeree seers cee eens 68
+Self-diagnosis .....cceeeeeieeriereeeeeerree serra 70
+Preliminary ChecK.......uiiiinieiiccceeee ccc cceens 80
+Harness Layout.........cccceeeeercceenenncener esses esr eeceens 88
+Circuit Diagram ....cceo.veeceeeineernrin vier cece eee eeseeee eens 90
+Wiring Diagram — A/C, A — ......ooeeereeeeeeemreeeeene 91
+Main Power Supply and Ground Circuit Check ........ 94
+Diagnostic Procedure 1 ...........cooccevriniinenrsnsnnenneiennns 95
+Diagnostic Procedure 2........cveevvivevinvinee icici eens 96
+Diagnostic Procedure 3......cccceeeeveeeeeeeeeeceeee einen ene 97
+Diagnostic Procedure 4 ..........ccccvieeveeneecnenneessnnenns 98
+Diagnostic Procedure 5.......veeviceeeieeeceeeieeeee eee 99
+Diagnostic Procedure 6 ..........cecevvcereccereciannnccnrnnnes 100
+Diagnostic Procedure 7 ......ccoermeeniniereereereeeneeeenss 102
+Diagnostic Procedure 8..........ccvecevevevvennnvecrnnnecnnnnns 104
+Electrical Components Inspection ..........c.cccecuvvuenen. 107
+Control Linkage Adjustment......c....covevervieecriceannan, 108
+===== PDF page 2 =====
+CONTENTS (conta)
+
+SYSTEM DESCRIPTION..........ccccveiirrrenereieneineeens 109 Refrigerant LINES ........coviieeceriiiierccereinccntnnns ines
+Overview of Control System.........ccceccevvvverveecnennnn. 109 Checking Refrigerant Leaks ......cccccvvvviviiiiiennccennnnn,
+Control System Input Components ........ccccevvenneenn. 110 Compressor Mounting ....cocceoeveeiiicinnnniiinnnneceeee,
+Control System Automatic Amplifier (Auto amp.).... 113 Belt TENSION «eevee eect eeenae
+Control System Output Components...........cccueeeencne 113 Fast Idle Control Device (FICD)....ccocervuremsenirrennanes
+
+COMPIESSON uveenrrrrrerrrreernissnsrmmmnereess renee sessnnessessasins
+
+[1 MANUALANDAUTO [7] Compressor CIUtCh.......cceciiiceeenen,
+
+SERVICE DATA AND SPECIFICATIONS (SDS) ........
+
+SERVICE PROCEDURES rss 121 General SPECHfiCAtiONS............ovweweeereeeesemeerssessssreeen
+HFC-134a (R-134a) Service Procedure................... 121 Inspection and AdJUStMENt .........c.ceeeuererrrerecerarraenens
+Maintenance of Lubricant Quantity in
+COMPIESSON cveeirirriirearriorimmicessmmenermmmecsenens 123
+
+When you read wiring diagrams:
+
+FOR AN ELECTRICAL INCIDENT”.
+
+® Read Gl section, “HOW TO READ WIRING DIAGRAMS".
+
+e See EL section, “POWER SUPPLY ROUTING” for power distribution circuit.
+
+When you perform trouble diagnoses, read Gl section, “HOW TO FOLLOW FLOW
+CHART IN TROUBLE DIAGNOSES” and “HOW TO PERFORM EFFICIENT DIAGNOSIS
+
+LC
+
+EC
+
+FE
+
+CL
+
+Vil
+
+IDX
+
+1231
+===== PDF page 3 =====
+PRECAUTIONS AND PREPARATION [ MANUAL AND AUTO |
+
+Supplemental Restraint System (SRS) “AIR
+BAG”
+
+The Supplemental Restraint System “AIR BAG”, used along with a seat belt, helps to reduce the risk or
+
+severity of injury to the driver and front passenger in a frontal collision. The Supplemental Restraint System
+
+consists of air bag modules (located in the center of the steering wheel and on the instrument panel on the
+
+passenger side), a diagnosis sensor unit, warning lamp, wiring harness and spiral cable. If the vehicle is
+
+equipped with side air bag as the Supplemental Restraint System, the supplemental side air bag used along
+
+with the seat belt helps to reduce the risk or severity of injury to the driver and front passenger in a side col-
+
+lision. The supplemental side air bag consists of air bag modules (located in the outer side of front seats),
+
+satellite sensor, diagnosis sensor unit (which is one of components of supplemental air bags for a frontal
+
+collision), wiring harness, warning lamp (which is one of components of supplemental air bags for a frontal
+
+collision). Information necessary to service the system safely is included in the RS section in this Service
+
+Manual.
+
+WARNING:
+
+® To avoid rendering the SRS inoperative, which could increase the risk of personal injury or death
+in the event of a collision which would result in air bag inflation, all maintenance must be performed
+by an authorized NISSAN dealer.
+
+¢ Improper maintenance, including incorrect removal and installation of the SRS, can lead to per-
+sonal injury caused by unintentional activation of the system.
+
+¢ Do not use electrical test equipment on any circuit related to the SRS unless instructed to in this
+Service Manual. SRS wiring harnesses can be identified with yellow harness protector or yellow
+insulation tape before the harness connectors.
+
+1232 HA-2
+===== PDF page 4 =====
+PRECAUTIONS AND PREPARATION [ MANUAL AND AUTO |
+
+Precautions for Working with HFC-134a
+(R-134a)
+WARNING:
+
+¢ CFC-12 (R-12) refrigerant and HFC-134a (R-134a) refrigerant are not compatible. These refriger-
+ants must never be mixed, even in the smallest amounts. If the refrigerants are mixed, compres- Gl
+sor failure is likely to occur.
+
+® Use only specified lubricant for the HFC-134a (R-134a) A/C system and HFC-134a (R-134a) com-
+ponents. If lubricant other than that specified is used, compressor failure is likely to occur. MA
+
+® The specified HFC-134a (R-134a) lubricant rapidly absorbs moisture from the atmosphere. The
+following handling precautions must be observed: EM
+
+a: When removing refrigerant components from a vehicle, immediately cap (seal) the component
+to minimize the entry of moisture from the atmosphere.
+
+b: When installing refrigerant components to a vehicle, do not remove the caps (unseal) until just Le
+before connecting the components. Connect all refrigerant loop components as quickly as | -
+possible to minimize the entry of moisture into system.
+
+¢: Only use the specified lubricant from a sealed container. Immediately reseal containers of EC
+lubricant. Without proper sealing, lubricant will become moisture saturated and should not be
+used.
+
+d: Avoid breathing A/C refrigerant and lubricant vapor or mist. Exposure may irritate eyes, nose EE
+and throat. Remove R-134a from the A/C system, using certified service equipment meeting
+requirements of SAE J2210 (R-134a recycling equipment), or J2209 (R-134a recovery equip-
+ment). If accidental system discharge occurs, ventilate work area before resuming service. cL
+Additional health and safety information may be obtained from refrigerant and lubricant manu-
+
+facturers.
+e: Do not allow lubricant (Nissan A/C System Oil Type S) to come in contact with styrofoam parts. MT
+
+Damage may result.
+
+General Refrigerant Precautions AT
+
+WARNING:
+
+e Do not release refrigerant into the air. Use approved recovery/recycling equipment to capture the 2A
+refrigerant every time an air conditioning system is discharged.
+
+e Always wear eye and hand protection (goggles and gloves) when working with any refrigerant or
+air conditioning system. BA
+
+e Do not store or heat refrigerant containers above 52°C (125°F).
+
+*¢ Do not heat a refrigerant container with an open flame; if container warming is required, place the
+bottom of the container in a warm pail of water. BR
+
+e Do not intentionally drop, puncture, or incinerate refrigerant containers.
+
+e Keep refrigerant away from open flames: poisonous gas will be produced if refrigerant burns.
+
+e Refrigerant will displace oxygen, therefore be certain to work in well ventilated areas to prevent g§
+suffocation.
+
+¢ Do not introduce compressed air to any refrigerant container or refrigerant component.
+
+RS
+
+BT
+
+EL
+
+HA-3 1233
+===== PDF page 5 =====
+PRECAUTIONS AND PREPARATION [ MANUAL AND AUTO |
+
+Precautions for Refrigerant Connection
+
+A new type refrigerant connection has been introduced to all refrigerant lines except the following portion.
+e Expansion valve to cooling unit
+
+FEATURES OF NEW TYPE REFRIGERANT CONNECTION
+
+e® The O-ring has been relocated. It has also been provided with a groove for proper installation. This elimi-
+nates the chance of the O-ring being caught in, or damaged by, the mating part. The sealing direction of
+the O-ring is now set vertically in relation to the contacting surface of the mating part to improve sealing
+
+characteristics.
+® The reaction force of the O-ring will not occur in the direction that causes the joint to pull out, thereby
+
+facilitating piping connections.
+
+Flange portion Union-nut portion
+Former New Former
+Mirr——gp
+Pa Flange FO Nut
+| O-ring | O-ring
+O-ring | O-ring
+Union
+(i (Jo
+__\ __\Z
+O-ring O-ring O-ring
+
+«— : Sealed direction
+
+SHAB15E
+
+1234 HA-4
+===== PDF page 6 =====
+PRECAUTIONS AND PREPARATION
+
+[ MANUAL AND AUTO |
+
+Precautions for Refrigerant Connection
+
+(Cont'd)
+O-RING AND REFRIGERANT CONNECTION
+
+SEC. 2714274276
+
+Low-pressure (Suction)
+
+service valve
+
+fil
+
+Condenser
+Liquid tank
+
+®8-
+
+nD
+
+NN
+
+®8l
+® [8]
+
+=
+h
+|
+
+a
+
+Cooling unit
+
+7
+
+Triple-pressure switch
+
+OE
+
+: Former type refrig
+
+: O-ring size
+
+: Identification mark
+
+(
+
+erant connection
+
+: New type refrigerant connection
+
+SHA876E
+
+SN
+CAUTION:
+
+The new and former refrigerant connections use different O-ring configurations. Do not confuse
+O-rings since they are not interchangeable. If a wrong O-ring is installed, refrigerant will leak at, or
+
+around, the connection.
+
+A
+
+TT
+
++ W
+SHAB14E
+
+O-ring part numbers and specifications
+
+Goroeton ond Part number (D mm (in) | W mm (in)
+Former [6] 92472 N8200 4.5 (0.177) 1.40 (0.0551)
+New 92471 N821G 6.8 (0.268) 1.85 (0.0728)
+Former 92470 N8200 6.07 (0.2390) 1.78 (0.0701)
+New 92472 N8210 10.9 (0.429) 2.43 (0.0957)
+Former 92471 N8200 10.8 (0.425) 1.78 (0.0701)
+New 92473 N8210 13.6 (0.535) 2.43 (0.0957)
+Former 92475 721.00 14.3 (0.563) 2.3 (0.091)
+New 92474 N8210 16.5 (0.650) 2.43 (0.0957)
+Former 92477 N8200 | 17.12 (0.6740) 1.78 (0.0701)
+
+@l
+
+MIA
+LC
+EC
+
+FE
+
+RS
+
+BI
+
+In accordance with the adoption of the new type refrigerant [5]
+
+connection, the following components are not interchange-
+able between the former year model (1996 year model) and the
+
+current year model (1998 year model).
+
+Compressor
+Condenser
+Cooling unit
+Liquid tank
+
+Tubes and flexible hoses
+
+HA-5
+
+IDX
+
+1235
+===== PDF page 7 =====
+1236
+
+PRECAUTIONS AND PREPARATION [| MANUAL AND AUTO |
+
+Precautions for Refrigerant Connection
+(Cont'd)
+
+WARNING:
+Make sure all refrigerant is discharged into the recycling equipment and the pressure in the system
+is less than atmospheric pressure. Then gradually loosen the discharge side hose fitting and remove
+
+it.
+
+CAUTION:
+When replacing or cleaning refrigerant cycle components, observe the following.
+
+When the compressor is removed, store it in the same position as it is when mounted on the car.
+Failure to do so will cause lubricant to enter the low pressure chamber.
+
+When connecting tubes, always use a torque wrench and a back-up wrench.
+
+After disconnecting tubes, immediately plug all openings to prevent entry of dirt and moisture.
+When installing an air conditioner in the vehicle, connect the pipes as the final stage of the opera-
+tion. Do not remove the seal caps of pipes and other components until just before required for
+connection.
+
+Allow components stored in cool areas to warm to working area temperature before removing seal
+caps. This prevents condensation from forming inside A/C components.
+
+Thoroughly remove moisture from the refrigeration system before charging the refrigerant.
+Always replace used O-rings.
+
+When connecting tube, apply lubricant to circle of the O-rings shown in illustration. Be careful not
+to apply lubricant to threaded portion.
+
+Lubricant name: Nissan A/C System Oil Type S
+
+Part number: KLH00-PAGS0
+
+O-ring must be closely attached to dented portion of tube.
+
+When replacing the O-ring, be careful not to damage O-ring and tube.
+
+Connect tube until you hear it click, then tighten the nut or bolt by hand until snug.
+
+Make sure that the O-ring is installed to tube correctly.
+
+After connecting line, conduct leak test and make sure that there is no leakage from connections.
+When the gas leaking point is found, disconnect that line and replace the O-ring. Then tighten
+connections of seal seat to the specified torque.
+
+Torque wrench = por.
+. Apply lubricant. Do not apply =
+[2 lubricant to
+> “3 read. 2 om N
+
+IRRLCE
+
+NG Inflated portion GF
+
+OK + OK NG
+ca nt
+
+RHAB61F
+
+NG
+
+HA-6
+===== PDF page 8 =====
+PRECAUTIONS AND PREPARATION [MANUAL AND AUTO |
+
+Precautions for Servicing Compressor
+
+® Plug all openings to prevent moisture and foreign matter from entering.
+eo When the compressor is removed, store it in the same position as it is when mounted on the car.
+e When replacing or repairing compressor, follow “Maintenance of Lubricant Quantity in
+Compressor” exactly. Refer to HA-123.
+eo Keep friction surfaces between clutch and pulley clean. If the surface is contaminated, with
+lubricant, wipe it off by using a clean waste cloth moistened with thinner.
+e After compressor service operation, turn the compressor shaft by hand more than five turns in [A
+both directions. This will equally distribute lubricant inside the compressor. After the compressor
+is installed, let the engine idle and operate the compressor for one hour.
+e After replacing the compressor magnet clutch, apply voltage to the new one and check for normal [E}|
+
+operation.
+
+Gi
+
+Special Service Tools LC
+The actual shapes of Kent-Moore tools may differ from those of special service tools illustrated here.
+Tool number EG
+(Kent-Moore No.) Description
+Tool name
+, Fs
+KV99106100 Removing center bolt
+(J-41260)
+Clutch disc
+wrench CL
+NT232 MT
+AT
+FA
+When replacing the magnet RA
+clutch in the above compressor,
+use a clutch disc wrench with
+the pin side on the clutch disc
+to remove it. BR
+Pin
+a if ST
+C — ~ ~
+NT378 Clutch disk wrench
+KV98232340 Removing clutch disc RS
+(J-38874)
+or _
+KV992T0001 BY
+{ —
+Clutch disc puller 3
+NT376
+KV99106200 Installing pulley El
+(J-41261) =A
+Pulley installer
+IDX
+NT235
+1237
+
+HA-7
+===== PDF page 9 =====
+PRECAUTIONS AND PREPARATION [MANUAL AND AUTO |
+
+HFC-134a (R-134a) Service Tools and
+Equipment
+Never mix HFC-134a refrigerant and/or its specified iubricant with CFC-12 (R-12) refrigerant and/or its lubri-
+
+cant. :
+Separate and non-interchangeable service equipment must be used for handling each type of refrigerant/
+lubricant.
+
+Refrigerant container fittings, service hose fittings and service equipment fittings (equipment which handles
+refrigerant and/or lubricant) are different between CFC-12 (R-12) and HFC-134a (R-134a). This is to avoid
+mixed use of the refrigerants/lubricant.
+
+Adapters that convert one size fitting to another must never be used: refrigerant/lubricant contamination will
+
+occur and compressor failure will result.
+
+Tool number
+{Kent-Moore No.) Description Note
+Tool name
+HFC-134a (R-134a) refrig- Container color: Light biue
+erant Y Container marking: HFC-134a (R-134a)
+Fitting size: Thread size
+® large container 1/2”-16 ACME
+NT196
+KLHOO-PAGSO | Type: Poly alkylene glycol oil (PAG), type S
+( —) @ Application: HFC-134a (R-134a) swash plate
+Nissan A/C System Oil « (piston) compressors (Nissan only}
+Type S Lubricity: 40 me (1.4 US fi oz, 1.4 Imp fl 02)
+NT197
+(J-39500-NI) Function: Refrigerant Recovery and Recycling
+Recovery/Recycling and Recharging
+Recharging equipment
+(ACR4)
+NT195
+(J-39400) Power supply:
+Electrical leak detector ® DC 12V (Cigarette lighter)
+NT198
+(J-39183) Identification:
+Manifold gauge set (with ® The gauge face indicates R-134a.
+hoses and couplers) Fitting size: Thread size
+® 1/2"-16 ACME
+NT199
+
+1238 HA-8
+===== PDF page 10 =====
+PRECAUTIONS AND PREPARATION
+
+[ MANUAL AND AUTO |
+
+HFC-134a (R-134a) Service Tools and
+
+Equipment (Cont'd)
+
+Tool number
+(Kent-Moore No.) Description Note
+Tool name
+Service hoses Hose color:
+® High side hose e Low hose: Blue with black stripe
+(J-39501-72) High hose: Red with black stripe
+® Low side hose e Utility hose: Yellow with black stripe or
+(J-39502-72) green with black stripe
+o Utility hose Hose fitting to gauge:
+(J-39476-72) NT201 ® 1/27-16 ACME
+Service couplers Hose fitting to service hose:
+® High side coupler e M14 x 1.5 fitting is optional or
+(J-39500-20) permanently attached.
+® Low side coupler
+(J-39500-24)
+NT202
+(J-39650) For measuring of refrigerant
+Refrigerant weight scale Fitting size: Thread size
+® 1/2’-16 ACME
+NT200
+
+(J-39649)
+
+Vacuum pump
+(Including the isolator
+valve)
+
+NT203
+
+Capacity:
+
+® Air displacement: 4 CFM
+« Micron rating: 20 microns
+® Oil capacity: 482 g (17 02)
+Fitting size: Thread size
+
+® 1/2”-16 ACME
+
+HA-9
+
+[VIA
+
+EM
+
+LG
+
+E@
+
+CL
+
+MT
+
+AT
+
+FA
+
+BRR
+
+1239
+===== PDF page 11 =====
+1240
+
+PRECAUTIONS AND PREPARATION [| MANUAL AND AUTO |
+
+With isolator valve
+
+Hose fittings:
+g 1/2"-16ACME
+
+RHA270D
+
+1/2"-16ACME
+
+SHA533D
+
+Hose fittings to
+
+equipment; 1/2"-16ACME
+
+M14 x 1.5 fitting optional
+(Hose may be permanently attached
+to coupler)
+
+manifold gauge or recovery/recycling
+
+RHA272D
+
+Precautions for Service Equipment
+
+RECOVERY/RECYCLING EQUIPMENT
+
+Follow the manufacturer's instructions for machine operation and
+machine maintenance. Never introduce any refrigerant other than
+that specified into the machine.
+
+ELECTRONIC LEAK DETECTOR
+Follow the manufacture’s instructions for tester operation and
+tester maintenance.
+
+VACUUM PUMP
+
+The lubricant contained inside the vacuum pump is not compatible
+with the specified lubricant for HFC-134a (R-134a) A/C systems.
+The vent side of the vacuum pump is exposed to atmospheric
+pressure. So the vacuum pump lubricant may migrate out of the
+pump into the service hose. This is possible when the pump is
+switched off after evacuation (vacuuming) and hose is connected
+
+to it.
+
+To prevent this migration, use a manual valve situated near the
+
+hose-to-pump connection, as follows.
+
+e Usually vacuum pumps have a manual isolator valve as part
+of the pump. Close this valve to isolate the service hose from
+the pump.
+
+e For pumps without an isolator, use a hose equipped with a
+manual shut-off valve near the pump end. Close the valve to
+isolate the hose from the pump.
+
+e [If the hose has an automatic shut off valve, disconnect the
+hose from the pump: as long as the hose is connected, the
+valve is open and lubricating oil may migrate.
+
+Some one-way valves open when vacuum is applied and close
+
+under a no vacuum condition. Such valves may restrict the pump’s
+
+ability to pull a deep vacuum and are not recommended.
+
+MANIFOLD GAUGE SET
+
+Be certain that the gauge face indicates R-134a or 134a. Make
+sure the gauge set has 1/2”-16 ACME threaded connections for
+service hoses. Confirm the set has been used only with refrigerant
+HFC-134a (R-134a) along with specified lubricant.
+
+SERVICE HOSES
+
+Be certain that the service hoses display the markings described
+{colored hose with black stripe). All hoses must include positive
+shut off devices (either manual or automatic) near the end of the
+hoses opposite the manifold gauge.
+
+HA-10
+===== PDF page 12 =====
+PRECAUTIONS AND PREPARATION
+
+[MANUAL AND AUTO |
+
+Shut-off
+p> valve (®
+M14 x 1.5 fitting
+3S optional
+
+A/C service| {Hose may be
+
+valve permanently
+attached to
+coupler)
+
+RHA273D
+
+Refrigerant container
+(HFC-134a)
+
+Hose fittings:
+1/2"-16ACME
+
+To manifold gauge
+
+Weight scale RHA274D
+
+Precautions for Service Equipment (Cont'd)
+
+SERVICE COUPLERS
+
+Never attempt to connect HFC-134a (R-134a) service couplers to
+an CFC-12 (R-12) A/C system. The HFC-134a (R-134a) couplers
+will not properly connect to the CFC-12 (R-12) system. However, if
+an improper connection is attempted, discharging and contamina-
+tion may occur.
+
+Shut-off valve rotation A/C service valve
+
+Clockwise
+
+Counterclockwise
+
+Open
+
+Close
+
+REFRIGERANT WEIGHT SCALE
+
+Verify that no refrigerant other than HFC-134a (R-134a) and speci-
+fied lubricants have been used with the scale. if the scale controls
+refrigerant flow electronically, the hose fitting must be 1/2”-16
+
+ACME.
+
+CHARGING CYLINDER
+
+Using a charging cylinder is not recommended. Refrigerant may be
+vented into air from cylinder’s top valve when filling the cylinder
+with refrigerant. Also, the accuracy of the cylinder is generally less
+than that of an electronic scale or of quality recycle/recharge equip-
+ment.
+
+HA-11
+
+MIA
+
+EM
+
+LC
+
+EC
+
+FE
+
+cL
+
+1241
+===== PDF page 13 =====
+1242
+
+DESCRIPTION [ MANUAL AND AUTO |
+
+Refrigeration Cycle
+
+REFRIGERANT FLOW
+The refrigerant flow is in the standard pattern. Refrigerant flows through the compressor, condenser, liquid
+
+tank, evaporator, and back to the compressor.
+The refrigerant evaporation through the evaporator coil is controlled by an externally equalized expansion
+
+valve, located inside the evaporator case.
+
+FREEZE PROTECTION
+
+Under normal operating conditions, when the AUTO is switched on, the compressor runs continuously, and
+the evaporator pressure, and therefore temperature, is controlled by the V-6 variable displacement compres-
+sor to prevent freeze up.
+
+REFRIGERANT SYSTEM PROTECTION
+
+Triple-pressure switch
+
+The triple-pressure switch is located on the liquid tank. If the system pressure rises or falls out of specifications,
+the switch opens to interrupt compressor clutch operation. Triple-pressure switch closes to turn on the cool
+ing fan to reduce system pressure.
+
+Pressure relief valve
+The refrigerant system is protected by a pressure relief valve. The valve is located on the bottom of the com-
+pressor. When refrigerant system pressure increases abnormally [over 3,727 kPa (38 kg/cm?, 540 psi)], the
+relief valve’s port opens. The valve then releases refrigerant into the atmosphere.
+
+High-pressure gas Low-pressure liquid
+
+=3 High-pressure liquid Low-pressure gas
+
+|
+
+5 Compressor |;
+
+Pressure
+relief valve
+
+Oa do di 7d
+
+JUNAN WSAAD)
+
+J Condenser
+
+SV : Yi Evaporator
+
+Blower motor
+
+Liquid tank
+
+An
+24522 »>
+
+Expansion valve
+
+iple- re switch
+Triple-pressu i RHA036D
+
+HA-12
+===== PDF page 14 =====
+DESCRIPTION { MANUAL AND AUTO |
+
+V-6 Variable Displacement Compressor
+
+GENERAL INFORMATION
+
+1.
+
+The V-6 variable compressor differs from previous units. The vent temperatures of the V-6 variable com-
+press do not drop too far below 5°C (41°F) when:
+
+® evaporator intake air temperature is less than 20°C (68°F)
+
+® engine is running at speeds less than 1,500 rpm.
+
+This is because the V-6 compressor provides a means of “capacity” control.
+
+The V-6 variable compressor provides refrigerant control under varying conditions. During cold winters, it
+may not produce high refrigerant pressure discharge (compared to previous units) when used with air
+conditioning systems.
+
+A “clanking” sound may occasionally be heard during refrigerant charge. The sound indicates that the tilt
+angle of the swash plate has changed and is not a problem.
+
+For air conditioning systems with the V-6 compressor, the clutch remains engaged unless: the system main
+switch, fan switch or ignition switch is turned OFF. When ambient (outside) temperatures are low or when
+the amount of refrigerant is insufficient, the clutch is disengaged to protect the compressor.
+
+A constant range of suction pressure is maintained when engine speed is greater than a certain value. It
+normally ranges from 147 to 177 kPa (1.5 to 1.8 kg/cm?, 21 to 26 psi) under varying conditions.
+
+In previous compressors, however, suction pressure was reduced with increases in engine speed.
+
+HA-13
+
+MA
+
+EM
+
+LC
+
+EC
+
+Fl
+
+CL
+
+nr
+
+AT
+
+FA
+
+1243
+===== PDF page 15 =====
+DESCRIPTION [ MANUAL AND AUTO |]
+V-6 Variable Displacement Compressor (Cont'd)
+
+DESCRIPTION
+
+General
+The variable compressor is basically a swash plate type that changes piston stroke in response to the required
+
+cooling capacity.
+The tilt of the swash plate allows the piston’s stroke to change so that refrigerant discharge can be continu-
+
+ously changed from 10.5 to 184 cm® (0.641 to 11.228 cu in).
+
+Piston Suction valve
+Journal pin
+Socket plate Suction chamber
+} Piston rod
+Drive |
+lug Discharge valve
+Discharge valve retainer
+77,
+Rear head
+i 71% NC ocrrge chamber
+: C—O "i=
+Shaft
+ol A
+Beilows control
+Magnet clutch -\ Cylinder ~~ valve
+assembly Return
+Front spring
+head
+Long stroke
+Swash plate (Large amount of refrigerant discharge)
+tilting angle
+changes ~~ Short stroke
+— L 1 (Small amount of
+mL 1 refrigerant discharge}
+1 1 : | Discharge Piston stroke
+TT | Discharge capacit length
+(Ne J control 3 P Md at
+i em? (cu in}/rev. mm {in}
+Minimum 10.5 (0.641) 1.6 (0.063)
+Maximum 184 (11.228) | 28.6 (1.126)
+| TDC (fixed)
+L/
+Journal pin
+RHAQ37DA
+
+HA-14
+
+1244
+
+===== PDF page 16 =====
+DESCRIPTION | MANUAL AND AUTO |
+V-6 Variable Displacement Compressor (Cont'd)
+
+Operation
+
+1. Operation control valve
+Operation control valve is located in the suction port (low-pressure) side, and opens or closes in response
+to changes in refrigerant suction pressure.
+Operation of the valve controls the internal pressure of the crankcase.
+The angle of the swash plate is controlled between the crankcase'’s internal pressure and the piston cyl-
+inder pressure.
+2. Maximum cooling
+Refrigerant pressure on the low-pressure side increases with an increase in heat loads.
+When this occurs, the control valve’s bellows compress to open the low-pressure side valve and close the
+high-pressure side valve.
+This causes the following pressure changes:
+® the crankcase’s internal pressure to equal the pressure on the low-pressure side;
+e the cylinder’s internal pressure to be greater than the crankcase’s internal pressure.
+Under this condition, the swash plate is set to the maximum stroke position.
+
+Discharge port
+
+|
+Cylinder
+
+pressure i ’ «+
+Crankcase
+
+pressure
+
+Crankcase
+
+Suction port Low-pressure valve: Open
+
+i
+Bellows Spring pressure
+
+Forces needed to increase stroke
+
+Valve position for lowering
+crankcase pressure
+
+RHA473C
+
+HA-15
+
+MIA
+
+EM
+
+LC
+
+EC
+
+FE
+
+CL
+
+MT
+
+AT
+
+FA
+
+EL
+
+IDX
+
+1245
+===== PDF page 17 =====
+1246
+
+DESCRIPTION [ MANUAL AND AUTO |
+
+V-6 Variable Displacement Compressor (Cont'd)
+
+Capacity control
+
+Refrigerant pressure on suction side is low during high speed driving or when ambient or interior tempera-
+ture is low.
+
+The bellows expands when refrigerant pressure on the suction pressure side drops below approximately
+177 kPa (1.8 kg/cm?, 26 psi).
+
+Since suction pressure is low, it makes the suction port close and the discharge port open. Thus, crank-
+case pressure becomes high as high pressure enters the crankcase.
+
+The force acts around the journal pin near the swash plate, and is generated by the pressure difference
+before and behind the piston.
+
+The drive lug and journal pin are located where the piston generates the highest pressure. Piston pres-
+sure is between suction pressure Ps and discharge pressure Pd, which is near suction pressure Ps. If
+crankcase pressure Pc rises due to capacity control, the force around the journal pin makes the swash
+plate angle decrease and also the piston stroke decrease. In other words, crankcase pressure increase
+triggers pressure difference between the piston and the crankcase. The pressure difference changes the
+
+angie of the swash plate.
+
+Discharge port ~ Rez]
+i «
+High-pressure 7 |
+
+valve: Open
+
+% = —p I
+7 ylinder
+=P Crankcase
+Yi pressure =
+Crankcase
+— pressure
+
+Suction port Spring pressure
+
+Forces needed to decrease stroke
+Valve position for ralsing
+crankcase pressure
+
+RHA474C
+
+HA-16
+===== PDF page 18 =====
+DESCRIPTION { MANUAL AND AUTO |
+
+Component Layout
+
+SEC. 270.271.273
+
+MA
+
+EM
+
+Center defroster duct
+
+Side defroster duct LG
+
+Side defroster
+Center ventilator duct
+A
+Side ventilator / } a
+
+Heater unit
+
+EG
+
+FE
+
+CL
+
+MT
+
+AT
+
+FA
+
+Cooling unit
+
+Intake unit
+(Blower unit)
+
+Rear heater duct |
+
+RHA424E
+1247
+
+HA-17
+===== PDF page 19 =====
+DESCRIPTION [ MANUAL AND AUTO |
+
+Discharge Air Flow
+
+Air outlets
+
+Defroster door
+Heater core
+
+IEE
+
+Floor door
+
+Ventilator door
+
+Bi-level
+
+: To face
+
+@®
+®@ : To foot
+©)
+
+: To defroster
+For air flow %, refer to “Operational Check”,
+
+: When recirculation switch is ON “TROUBLE DIAGNOSES".
+
+SHAB47E
+
+1248 HA-18
+===== PDF page 20 =====
+DESCRIPTION
+
+Control Operation
+
+| \ J N J |
+ai
+Recirculation switc! switch N Mode IN [ MA
+A 3
+1 2 AN te | we @ eo (we | EM
+OFE 3) v oo) SH [NN W |
+NN — oO oo Oo oOo
+LC
+E (COLD em vrusnvannins 1 1 mmsmmy HOT)
+=| Coe | ==
+X A > EC
+\ \ \_ Temperature control lever
+\— Air condition i
+lL control IAN Air conditioning switch FE
+CL
+RHA426EA
+VITy
+FAN CONTROL SWITCH
+This switch turns the fan ON and OFF, and controls fan speed. AT
+
+MODE SWITCHES
+
+These switches allow control of the air discharge outlets. EA
+When the MODE switch is moved to “DEF” or “F/D”, the push control amplifier sets the intake door to
+
+“FRESH”. The compressor turns on when the MODE switch is moved to “DEF”.
+
+TEMPERATURE CONTROL LEVER
+This lever allows you to adjust the temperature of the discharge air.
+BR
+
+RECIRCULATION (REC) SWITCH
+
+OFF position: Outside air is drawn into the passenger compartment.
+ON position: Interior air is recirculated inside the vehicle. ST
+Recirculation is canceled when DEF or F/D is selected, and resumes when another mode is chosen.
+Intake door is set at recirculation position automatically when the following conditions are met:
+® VENT position RS
+® Fan speed: speed 4 position
+e Temperature control: Full cold position BT
+e Compressor: ON :
+e VENT, B/L, FOOT position
+® Engine coolant temperature: Over 105°C (221°F)
+eo Compressor: ON
+
+AIR CONDITIONING SWITCH EL
+
+Start the engine, set the fan control switch to the desired (1 to 4) position and push the air conditioning switch
+to turn ON the air conditioning. The indicator lamp will come on when the air conditioning is ON. To stop the
+
+air conditioning, push the switch again to return it to the original position. IDX
+The air conditioning cooling function operates only when the engine is running.
+
+1249
+
+HA-19
+===== PDF page 21 =====
+DESCRIPTION
+
+NOTE
+
+1250 HA-20
+===== PDF page 22 =====
+TROUBLE DIAGNOSES
+
+WORK FLOW
+
+How to Perform Trouble Diagnoses for Quick
+
+and Accurate Repair
+
+CHECK IN
+
+Reference item
+
+\ 4
+
+LISTEN TO CUSTOMER COMPLAINT AND CONFIRM BY
+PERFORMING OPERATIONAL CHECK.
+
+YY
+
+Operational check {Refer
+to HA-22.}
+
+Symptom Chart {Refer to
+HA-24.)
+
+INVESTIGATE ITEMS YOU SHOULD CARRY QUT
+RELATED TO EACH SYMPTOM.
+
+Symptom Chart
+{Refer to HA-24.)
+
+vY
+
+CHECK FOR ANY SERVICE BULLETINS.
+
+k /
+
+ELIMINATE GOOD SYSTEM(S)/PART(S).
+
+'
+
+Preliminary Check
+{Refer to HA-26.)
+
+CHECK MAIN POWER SUPPLY AND GROUND CIR-
+CUITS.
+
+¥
+
+Main Power Supply and
+Ground Circuit Check
+{Refer fo HA-44.)
+
+* Diagnostic Proce-
+dure(s) (Refer to
+HA-45.)
+
+— (Refer to HA-40.)
+
+¢ Wiring Diagram — A/C,
+
+NG
+
+ELIMINATE GOOD PART(S)/HARNESS(ES)/
+CONNECTOR(S) ELECTRICALLY.
+
+Hamess layout {Refer fo
+HA-37.)
+
+Malfunctioning Malfunctioning
+
+Electrical Components
+Inspection
+{Refer to HA-55.)
+
+harness{es)/ part(s)
+connector{s)
+INSPECT EACH COM-
+PONENT.
+Y 4
+REPAIR. REPAIR/REPLACE.
+y |
+FINAL CHECK
+| OK
+CHECK QUT
+
+HA-21
+
+LG
+
+fi 11
+
+WY
+
+fl
+
+FRA
+
+1251
+===== PDF page 23 =====
+TROUBLE DIAGNOSES
+
+RHA427E
+
+T=
+
+[a
+
+2d AC
+[om |
+
+a ea @ J
+
+Ea —
+
+RHA428E
+
+1252
+
+Discharge air flow
+
+Switch mode/
+
+Air outlet/distribution
+
+indicator
+
+Face Foot | Defroster
+
+- 0
+
+fr
+
+L$
+
+&
+
+g
+
+100% — —
+
+40% —
+
+60%
+
+- 78%
+
+22%
+
+40%
+
+—_— 60%
+
+100%
+
+RHA429E
+
+Operational Check
+
+The purpose of the operational check is to confirm that the system
+is as it should be. The systems which will be checked are the
+blower, mode (discharge air), intake air, temperature decrease,
+temperature increase and A/C switch.
+
+CONDITIONS:
+eo Engine running and at normal operating temperature.
+
+PROCEDURE:
+
+1. Check blower
+
+1) Turn fan switch to speed 1.
+Blower should operate on low speed.
+2) Then turn fan switch to speed 2.
+3) Continue checking blower speed until all speeds are checked.
+
+4) Leave blower on speed 4.
+
+2. Check discharge air
+1) Press each mode switch.
+
+2) Confirm that discharge air comes out according to the air dis-
+tribution table at left.
+Refer to “Discharge Air Flow”, “DESCRIPTION” (HA-18).
+
+NOTE:
+
+Confirm that the compressor clutch is engaged (visual inspec-
+tion) and intake door position is at FRESH when the DEF
+WY button is pressed.
+
+Confirm that the intake door position is at FRESH when the
+F/D ®; button is pressed.
+
+Intak&"door position is checked in the next step.
+
+HA-22
+===== PDF page 24 =====
+TROUBLE DIAGNOSES
+
+Operational Check (Cont'd)
+
+3. Check recirculation
+1) Press REC &y switch.
+Recirculation indicator should illuminate.
+
+ore l2s¥ [c= 2) Listen for intake door position change (air flow sound from
+&) { By intake unit). Gl
+
+COLD st 111811814411) ——
+
+\ BA
+
+EM
+
+RHA430E;
+
+Check temperature decrease
+Slide temperature control lever to full cold. LG
+
+>
+
+1)
+2) Check for cold air at discharge air outlets.
+EC
+FE
+CL
+RHA431E|
+5. Check temperature increase MT
+
+1) Slide temperature control lever to full hot.
+Check for hot air at discharge air outlets.
+
+rr? (@) Fee) | 2
+
+[a]
+
+| A/C
+FA
+RA
+RHA432E
+6. Check air conditioning switch BR
+Move the fan control switch to the desired (1 to 4 speed) position
+e128 ~~ EWACE and push the A/C switch to turn ON the air conditioner.
+oT, The indicator lamp should come on when air conditioner is ON. ST
+AC Se yp
+\ == RS
+BT
+
+RHA433E
+
+1253
+
+HA-23
+===== PDF page 25 =====
+TROUBLE DIAGNOSES
+
+Symptom Chart
+
+DIAGNOSTIC TABLE
+Main Power
+Preliminary Diagnostic Supply and
+PROCEDURE Check Procedure Ground Circuit
+Check
+© I~ oe} 0 fez} Q 0 ~~ [=>] oo [8] << 3 < <r
+oN IN &N IY a & < < < re} ry} < < ~
+REFERENCE PAGE ! i : ; ; 1 << < < < < < < < <
+t I = I T I I I I T I T I I T
+~— oN [op] <t Lp}
+Q jo jo} [od [5
+-— oN [3] < 0 © 3 3 3 3 3 &
+x 4 Xx x x x 3k =
+3 8s | 8 | 8|8 (8 8&8 &| 8&8 | @( &| €
+< = = c = = oO I<} <] © Q N — © =]
+© © S © 5 id a a a rol a | =| | 2] 35
+S| E|S5|&§|8|&8leje|lelele|8|g|g]|cz
+£ £ E £ £ £ 2 2 2 a 3 8 > 3 8
+E|IE|E|E|EIE|s|s!is|sls]li || 5%! =<
+go |e|lo|e|e|ls|e|s|g||S|w|s]| 3
+SYMPTOM o a a a a [} o [=) a [=) (=) - [ ~ a
+A/C does not blow cold air. 0 O QO [OI INO]
+Insufficient heating. 0 | O O
+Blower motor does not rotate. 0 12} O
+Air outlet does not change. [1] 2] O O
+Intake door does not change
+in VENT, B/L or FOOT mode. ° C ©
+Intake door is not set at
+“FRESH” in DEF or F/D 0 O @) O
+mode.
+Air mix door does not
+O
+change. ° 0 ©
+Magnet clutch does not
+engage when A/C switch and 0 12} OO
+fan switch are ON.
+Magnet clutch does not
+engage in DEF mode. ° 2 CO © ©
+Noise 0
+
+© . © : The number means checking order.
+(O : Checking order depends on malfunction in each flow chart.
+
+1254 HA-24
+===== PDF page 26 =====
+MANUAL
+
+TROUBLE DIAGNOSES
+
+Symptom Chart (Cont’d)
+
+Electrical Components Inspection
+
+£8 9 8 ¥ 8 8 5 5 8 8 g @
+_ ssaweH { O OlOo| © O oO
+"uonoes 93 0} Jejey (sinpow jonuo0 $553) WO3 | O
+62L-VH 10ssa1dwo) | (yan jeubepy) Jossaidwosn O
+9G-vH yonms alnssaud-siduy | O
+95-vYH Rei ony | O
+JS-YH Jojow Joop xiw iy | O O
+GVH 10]0W 100P SNE] O oO
+99-vH io]ow loop Spon O
+GS-YH youms ued | O O
+— youms 439 Q
+— Uyoums Q/4 Oo
+—_ wr youms 1004 Oo
+|0JIU03
+— usnd youms v/a O
+— uopms INIA O
+— youms O3y O O
+SG-YH yopms oy { O
+SG-VH lgsisey | O O
+SG-VH dojows Jemoig | O O
+
+1255
+
+HA-25
+===== PDF page 27 =====
+TROUBLE DIAGNOSES
+
+PRELIMINARY CHECK 1
+
+Preliminary Check
+
+Intake door is not set at “FRESH” in DEF or F/D mode.
+
+1256
+
+o Turn ignition switch ON and set fan
+speed at “4”.
+
+e Set mode door at VENT mode.
+
+® Turn REC switch OFF.
+
+Ad
+
+Does intake door change from “Fresh”
+position to “REC” position when REC
+switch is turned ON? (Make sure the
+intake door has moved by listening for air
+flow sound from the intake unit.)
+
+No
+
+Yes
+
+\4
+
+”| dure 3. (HA-49)
+
+Go to Diagnostic Proce-
+
+Does intake door change from “REC” posi-
+tion to “Fresh” position when F/D switch or
+
+DEF switch is pushed?
+
+No
+
+| Yes
+
+INSPECTION END
+
+HA-26
+
+"| built-in push control unit.
+
+Replace control amp.
+
+===== PDF page 28 =====
+TROUBLE DIAGNOSES
+
+PRELIMINARY CHECK 2
+A/C does not blow cold air.
+
+Preliminary Check (Cont'd)
+
+DOES AIR FLOW FROM VENTS?
+
+Condition
+
+® Ignition switch, A/C switch, and fan
+switch are ON.
+
+eo Mode switch is in VENT mode and
+temperature lever is in full cold posi-
+tion.
+
+NG
+
+A 4
+
+OK
+
+A 4
+
+IS BLOWER MOTOR OPERATING NOR-
+MALLY?
+
+Yes No
+
+y
+
+CHECK BLOWER
+MOTOR OPERATION.
+Perform Diagnostic Pro-
+cedure 1. Refer to HA-45.
+
+A 4
+
+CHECK COMPRESSOR
+BELT TENSION.
+
+Refer to MA section
+(“Checking Drive Belts”,
+“ENGINE
+MAINTENANCE”).
+
+NG
+
+NG OK
+
+h 4
+
+Adjust or
+replace
+compressor
+belt. Refer
+to MA sec-
+tion
+("ENGINE
+MAINTE-
+NANCE”).
+
+h 4
+
+CHECK COMPRESSOR OPERATION.
+
+OK
+
+h 4
+
+CHECK REFRIGERATION CYCLE
+PRESSURE WITH MANIFOLD GAUGE
+CONNECTED.
+
+Refer to HA-33.
+
+NG OK
+
+4
+
+CHECK REFRIGERANT.
+Connect manifold gauge
+then check system pres-
+sure.
+
+OK NG
+
+y
+
+Perform Performance
+Test Diagnoses. Refer to
+HA-31.
+
+A 4
+
+CHECK
+FOR
+REFRIG-
+ERANT
+LEAKS.
+Refer to
+HA-126.
+
+Y
+
+Perform Diagnostic Pro-
+
+cedure 5. Refer to HA-52.
+
+VISUALLY CHECK AIR MIX DOOR
+MOTOR AND LINKAGE OPERATION.
+
+NG OK
+
+y
+
+VISUALLY INSPECT AIR MIX
+DOOR.
+
+Access by removing instrument
+panel.
+
+y
+
+Perform Diagnostic Procedure 4.
+Refer to HA-50.
+
+HA-27
+
+CHECK FOR EVAPORATOR COIL
+
+FREEZE UP.
+Remove intake unit. Check if evaporator
+
+freezes.
+
+NG OK
+(Freezes up.) (Does not
+freeze up.)
+
+y
+
+CHECK VENTILATOR
+DUCT FOR AIR LEAKS.
+
+y
+
+CHECK COMPRESSOR OPERATION.
+
+MIA
+
+LG
+
+EC
+
+FE
+
+GL
+
+Mv
+
+1257
+===== PDF page 29 =====
+1258
+
+TROUBLE DIAGNOSES
+
+PRELIMINARY CHECK 3
+
+Magnet clutch does not engage in DEF mode.
+e Perform PRELIMINARY CHECK 2 before referring to the following flow chart.
+
+PRELIMINARY CHECK 4
+Air outlet does not change.
+
+Preliminary Check (Cont'd)
+
+switch are ON?
+
+With engine running, does magnet clutch
+engage normally when A/C switch and fan
+
+No
+
+y
+
+Yes
+
+engaged.
+
+Push A/C switch and turn A/C system
+OFF. Make sure that magnet clutch is dis-
+
+y
+
+| Perform Diagnostic Pro-
+"| cedure 5. Refer to HA-52.
+
+fan switch are ON?
+
+With engine running, does magnet clutch
+engage normally when DEF switch and
+
+No
+
+h 4
+
+y
+
+Yes
+
+INSPECTION END
+
+TURN IGNITION SWITCH ON. DOES AIR COME OUT NORMALLY FROM EACH DUCT
+WHEN EACH MODE SWITCH IS SELECTED?
+
+No
+
+Replace push control unit.
+
+| Perform Diagnostic
+
+Switch mode/
+
+Air outlet/distribution
+
+Indicator Face Foot Defroster
+| 100% — —
+| 60% 40% —
+
+" J — 78% 22%
+® — 60% 40%
+WwW — —_ 100%
+
+Yes
+
+y
+
+INSPECTION END
+
+HA-28
+
+"| Procedure 2. Refer
+to HA-47.
+
+===== PDF page 30 =====
+TROUBLE DIAGNOSES
+
+Preliminary Check (Cont'd)
+
+PRELIMINARY CHECK 5
+
+Noise
+Check where noise comes from.
+@l
+Ld y ¥ v y MIA
+Blower motor Compressor Expansion valve Refrigerant line Belt
+EM
+y A 4 y
+Check for noise in Inspect the com- Replace expan- LGC
+all modes and pressor clutch sion valve.
+temperature set- and pulley and
+tings. idler pulley. EG
+Noise is OK NG
+constant.
+: : FE
+Check Replace com- The line is fixed The line is not
+blower pressor clutch directly to the fixed. cL
+motor for and pulley. body.
+foreign par- Refer to
+ticles. HA-129. MT
+y A 4 y A 4
+Check Check disc-to- Fix the line with .Fix the line tightly. AT
+blower pulley clearance. rubber or some
+motor and Refer to HA-132. vibration
+fan for wear. absorbing FA
+OK :
+material.
+RA
+y
+Check and adjust v
+lubricant.
+Refer to HA-123. BR
+OK :
+y y y ST
+. Replace compres- The belt vibra- Side of belt is
+sor and liquid tion is intense. worn out.
+tank. RS
+Noise is 4 4
+intermittent. Readjust belt The pulley center Ei
+tension. does not match.
+Check air dis- Refer to MA Readjust the pul-
+charge ducts section ley center.
+for obstruc- (“Checking
+tions, foreign Drive Belts”,
+materials or air “ENGINE EL
+leakage. MAINTE-
+NANCE").
+IDX
+1259
+
+HA-29
+===== PDF page 31 =====
+TROUBLE DIAGNOSES
+
+Preliminary Check (Cont'd)
+
+PRELIMINARY CHECK 6
+Insufficient heating
+
+DOES AIR FLOW FROM FooT | NG
+
+\4
+
+AREA?
+
+Condition:
+
+® Ignition switch and fan switch
+are ON.
+
+® Mode switch is in FOOT
+mode and temperature lever
+is in full hot position.
+
+OK
+
+4
+
+CHECK BLOWER MOTOR
+OPERATION.
+
+Perform Diagnostic Proce-
+dure 1. Refer to HA-45.
+
+NG
+
+Check the following:
+
+e Engine coolant level (Refer
+
+to MA section.)
+® Hoses for leaks or kinks
+& Radiator cap (Refer to LC
+section.)
+® Air in cooling system.
+
+OK
+
+y
+Check air mix door adjustment.
+Refer to HA-57.
+
+OK
+
+y
+
+Check by feel the heater iniet
+and outlet hoses.
+
+Hot inlet Both hoses
+Warm outlet warm
+
+y
+
+Repair/replace as neces-
+sary.
+
+installation. proper installation.
+
+Check thermostat Check heater hoses for
+
+OK OK
+
+y y
+
+Replace thermostat. Back flush heater core, drain
+Refer to LC section and refill coolant. Retest.
+
+(“Thermostat”,
+“ENGINE COOLING
+SYSTEM”).
+
+Hot inlet
+Warm outlet
+
+y
+
+Both hoses
+warm
+
+y
+
+System OK
+
+Replace heater core.
+
+1260 HA-30
+===== PDF page 32 =====
+TROUBLE DIAGNOSES
+
+[ MANUAL AND AUTO |
+
+Performance Test Diagnoses
+
+INSUFFICIENT COOLING
+
+OK
+
+Ad
+
+Note: I-I@ correspond
+
+ABNORMAL PRESSURE.
+
+(Refer to HA-34.)
+
+INSUFFICIENT COOLING @l
+NG MA
+CHECK AIR FLOW. »| CHECK BLOWER MOTOR OPERATION.
+I OK OK yNG
+, ® EM
+CHECK COMPRESSOR OPERATION. Clogged blower inlet/Clogged (Go to
+duct/Loose duct connection/ next page.)
+OK NG Air leakage, etc. page.
+LG
+(Go to
+next page.) EC
+y
+CHECK HIGH AND LOW SIDE PRESSURE.
+USE PERFORMANCE CHART. (Refer to FE
+HA-33.)
+NG
+I! cL
+RECOVER REFRIGERANT USING RECOV-
+ERY RECYCLING EQUIPMENT AND
+CHARGE SPECIFIED AMOUNT OF REFRIG- MIT
+ERANT.
+I Note
+NG AT
+CHECK HIGH AND LOW SIDE PRESSURE. > SA
+USE PERFORMANCE CHART. (Refer to BOTH HIGH AND LOW
+HA-33.) PRESSURE SIDES ARE EA
+TOO HIGH
+OK
+y
+CHECK DISCHARGE AIR TEMPERATURE. HIGH PRESSURE SIDE SB!
+USE PERFORMANCE CHART. (Refer to IS TOO HIGH AND LOW
+HA-33.) PRESSURE SIDE IS TOO
+LOW =
+NG I OK BR
+END HIGH PRESSURE SIDE SC)
+IS TOO LOW AND LOW 8T
+PRESSURE SIDE IS TOO
+HIGH
+v RS
+Malfunctioning temperature control operation BOTH HIGH AND LOW 2D]
+{air mix door position improperly adjusted)’ PRESSURE SIDES ARE
+Malfunctioning water cock operation (incorrect TOO LOW BT
+valve closure)
+LOW PRESSURE SIDE
+SOMETIMES BECOMES
+NEGATIVE
+to those in TROUBLE DIAGNOSES FOR LOW PRESSURE SIDE
+BECOMES NEGATIVE
+IDX
+1261
+
+HA-31
+===== PDF page 33 =====
+TROUBLE DIAGNOSES [MANUAL AND AUTO |]
+
+Performance Test Diagnoses (Cont'd)
+
+®
+y Ad y
+Malfunctioning blower motor fan Malfunctioning electrical circuit Malfunctioning blower motor internal
+circuit
+A 4 y
+Loose fan/Improper contact of fan Discontinued wiring or component
+and case/Deformed fan circuits or poor connection/
+Malfunctioning resistor, amplifier,
+etc./Burned out fuse or low battery
+voltage
+y A 4 y
+Magnet clutch does not engage Magnet clutch slipping Beit slipping
+y
+
+A 4
+
+CHECK MAGNET CLUTCH
+(coil circuit, disc-to-pulley clear-
+ance).
+
+A 4
+
+CHECK ELECTRICAL CIRCUIT
+(wiring, components circuit).
+
+Y
+
+CHECK ACTIVATION OF SAFETY/
+PROTECTION DEVICES (such as
+pressure switch, etc.).
+
+CHECK COMPRESSOR BELT AND
+BELT TENSION.
+
+Malfunctioning internal parts of
+clutch, compressor
+
+Y
+
+Foreign particles on ciutch frictional
+surface or excessive disc clearance
+
+y
+
+Malfunctioning electrical circuit
+{poor connection, low battery
+voltage, etc.)
+
+A 4
+
+HA-32
+===== PDF page 34 =====
+TROUBLE DIAGNOSES [ MANUAL AND AUTO |
+
+Performance Chart
+
+TEST CONDITION
+
+Testing must be performed as follows:
+Vehicle location: Indoors or in the shade (in a well ventilated
+
+place)
+Doors: Closed
+Door window: Open
+Hood: Open MA
+TEMP. setting: Max. COLD
+Discharge Air: Face Vent Eu
+
+RECIRC switch: (Recirculation) ON
+
+FAN speed: 4-speed
+
+A/C switch: ON
+
+Engine speed: 1,500 rpm . LG
+Operate the air conditioning system for 10 minutes before tak-
+
+ing measurements. EC
+
+TEST READING
+Recirculating-to-discharge air temperature table
+
+FE
+Inside air (Recirculating air) at blower assembly inlet Discharge air temperature at center venti-
+Relative humidity Air temperature lator
+% °C (°F) °C (°F) CL
+20 (68) 1.5-2.6 (35-37)
+25 (77) 3.7-5.7 (39 - 42) Mv
+50 - 60
+30 (86) 7.6 - 10.0 (46 - 50)
+35 (95) 12.4 - 15.2 (54 - 59) AT
+20 (68) 2.6 - 3.6 (37 - 38)
+25 (77 5.7 -7.6 {42 - 46)
+60-70 7) ( FA
+30 (86) 10.0 - 12.4 (50 - 54)
+35 (95) 15.2 - 18.0 (59 - 64)
+Ambient air temperature-to-operating pressure table
+Ambient air i i i . . .
+Relative humidity Air temperature ee eon side) a side)
+% °C (°F) g + P g y P ST
+785 - 1,040 137 - 167
+20 (68) {8.0 - 10.6, 114 - 151) (1.4-1.7, 20-24)
+25 (77) 981 - 1,304 137 - 167 RS
+(10.0 - 13.3, 142 - 189) (1.4 -1.7,20-24)
+1,167 - 1,550 147 - 177
+50-70 30 (86) (11.9 - 15.8, 169 - 225) (1.5 - 1.8, 21 - 26) BT
+1,373 - 1,804 157 - 186
+35 (99) (14.0 - 18.4, 199 - 262) (1.6 -1.9, 23 - 27)
+1,550 - 2,059 167 - 206
+40 (104) (15.8 - 21.0, 225 - 299) (1.7 -2.1, 24 - 30)
+If pressure is not within range, refer to HA-34, “Trouble Diagnoses for Abnormal Pressure”. EL
+
+IDX
+
+HA-33 1263
+===== PDF page 35 =====
+TROUBLE DIAGNOSES [ MANUAL AND AUTO |
+
+Trouble Diagnoses for Abnormal Pressure
+Whenever system’s high or low side pressure is abnormal, diagnose using a manifold gauge. The marker
+above the gauge scale in the following tables indicates the standard (normal) pressure range. Since the stan-
+dard (normal) pressure, however, differs from vehicle to vehicle, refer to HA-33 (“Ambient air temperature-to-
+
+operating pressure table”).
+
+Gauge indication
+
+Refrigerant cycle
+
+Probable cause
+
+Corrective action
+
+Both high and low-pressure
+sides are too high.
+
+& Pressure is reduced soon
+after water is splashed on
+condenser.
+
+Excessive refrigerant charge in
+refrigeration cycle
+
+Reduce refrigerant until speci-
+fied pressure is obtained.
+
+Air suction by cooling fan is
+insufficient.
+
+Insufficient condenser cooling
+performance
+l
+@ Condenser fins are clogged.
+@ Improper fan rotation of
+cooling fan
+
+e Clean condenser.
+e Check and repair cooling fan
+as necessary.
+
+NIE
+
+AC359A
+
+& | ow-pressure pipe is not
+cold.
+
+® When compressor is stopped
+high-pressure value quickly
+drops by approximately 196
+kPa (2 kg/cm?, 28 psi). It
+then decreases gradually
+thereafter.
+
+Poor heat exchange in con-
+denser
+
+(After compressor operation
+stops, high pressure decreases
+too slowly.)
+
+l
+
+Air in refrigeration cycle
+
+Evacuate repeatedly and
+recharge system.
+
+Engine tends to overheat.
+
+Engine cooling systems mai-
+function.
+
+Check and repair each engine
+cooling system.
+
+© An area of the low-pressure
+pipe is colder than areas
+near the evaporator outlet.
+
+® Plates are sometimes cov-
+ered with frost.
+
+® Excessive liquid refrigerant
+on low-pressure side
+
+® Excessive refrigerant dis-
+charge flow
+
+e Expansion valve is open a
+littte compared with the
+specification.
+
+1
+
+@ Improper thermal valve
+installation
+
+@ Improper expansion valve
+adjustment
+
+Replace expansion valve.
+
+High-pressure side is too high
+and low-pressure side is too
+low.
+
+7
+
+AC360A
+
+Upper side of condenser and
+high-pressure side are hot,
+however, liquid tank is not so
+hot.
+
+High-pressure tube or parts
+located between compressor
+and condenser are clogged or
+crushed.
+
+& Check and repair or replace
+malfunctioning parts.
+
+# Check lubricant for contami-
+nation.
+
+1264
+
+HA-34
+===== PDF page 36 =====
+TROUBLE DIAGNOSES
+
+[MANUAL AND AUTO |
+
+Trouble Diagnoses for Abnormal Pressure
+
+(Cont’d)
+
+Gauge indication
+
+Refrigerant cycle
+
+Probable cause
+
+Corrective action
+
+High-pressure side is too low
+and low-pressure side is too
+high.
+
+® 7)
+eZ
+
+AC356A
+
+High and low-pressure sides
+become equal soon after com-
+pressor operation stops.
+
+Compressor pressure operation
+is improper.
+
+Damaged inside compressor
+packings
+
+Replace compressor.
+
+No temperature difference
+between high and low-pressure
+sides
+
+Compressor discharge capacity
+does not change. (Compressor
+stroke is set at maximum.)
+
+Replace compressor.
+
+Both high- and low-pressure
+sides are too low.
+
+AC353A
+
+® There is a big temperature
+difference between liquid
+tank outlet and inlet. Outlet
+temperature is extremely low.
+
+# Liquid tank inlet and expan-
+sion valve are frosted.
+
+Liquid tank inside is clogged a
+little.
+
+® Replace liquid tank.
+® Check lubricant for contami-
+nation.
+
+e Temperature of expansion
+valve inlet is extremely low
+as compared with areas near
+liquid tank.
+
+e Expansion valve inlet may be
+frosted.
+
+® Temperature difference
+occurs somewhere in high-
+pressure side
+
+High-pressure pipe located
+between liquid tank and expan-
+sion valve is clogged.
+
+e Check and repair malfunc-
+tioning parts.
+
+® Check lubricant for contami-
+nation.
+
+® Expansion valve and liquid
+tank are warm or only cool to
+the touch.
+
+Low refrigerant charge.
+{
+
+Leaking fittings or components.
+
+® Check for refrigerant leaks.
+Refer to “Checking Refriger-
+ant Leaks”, HA-126.
+
+There is a big temperature dif-
+ference between expansion
+valve inlet and outlet while the
+valve itself is frosted.
+
+Expansicn valve closes a little
+
+compared with the specifica-
+
+tion.
+
+l
+
+@ Improper expansion valve
+adjustment
+
+@ Malfunctioning thermal
+valve
+
+(® Outlet and inlet may be
+clogged.
+
+e® Remove foreign particles by
+using compressed air.
+
+® Check lubricant for contami-
+nation.
+
+An area of the low-pressure
+pipe is colder than areas near
+the evaporator outlet.
+
+Low-pressure pipe is clogged
+or crushed.
+
+® Check and repair malfunc-
+tioning parts.
+
+® Check lubricant for contami-
+nation.
+
+HA-35
+
+MIA
+
+EM
+
+LC
+
+EC
+
+FE
+
+CL
+
+MT
+
+AT
+
+FA
+
+BR
+
+RS
+
+BT
+
+Air flow volume is not enough | Evaporator is frozen. Replace compressor. EL
+or is too low. 4
+Compressor discharge capacity
+does not change. {Compressor IDX
+stroke is set at maximum
+length.)
+1265
+===== PDF page 37 =====
+1266
+
+TROUBLE DIAGNOSES
+
+[ MANUAL AND AUTO |
+
+Trouble Diagnoses for Abnormal Pressure
+
+(Cont'd)
+
+Gauge indication
+
+Refrigerant cycle
+
+Probable cause
+
+Corrective action
+
+Low-pressure side sometimes
+becomes negative.
+
+rm)
+
+®k 1)
+E301 QF
+
+AG354A
+
+® Air conditioning system does
+not function and does not
+cyclically cool the compart-
+ment air.
+
+® The system constantly func-
+tions for a certain period of
+time after compressor is
+stopped and restarted.
+
+Refrigerant does not discharge
+cyclically.
+
+l
+Moisture is frozen at expansion
+valve outlet and inlet.
+
+l
+
+Water is mixed with refrigerant.
+
+e Drain water from refrigerant
+or replace refrigerant.
+e Replace liquid tank.
+
+Low-pressure side becomes
+negative.
+
+Ok} )
+@ pf
+
+AC362A
+
+Liquid tank or front/rear side of
+expansion valve’s pipe is
+frosted or dewed.
+
+High-pressure side is closed
+
+and refrigerant does not flow.
+l
+
+Expansion valve or liquid tank
+
+is frosted.
+
+Leave the system at rest until
+no frost is present. Start it
+again to check whether or not
+the problem is caused by water
+or foreign particles.
+
+e |f water is the cause, initially
+cooling is okay. Then the
+water freezes causing a
+blockage. Drain water from
+refrigerant or replace reiriger-
+ant.
+
+e [f due to foreign particles,
+remove expansion valve and
+remove particles with dry and
+compressed air (not shop
+air).
+
+e If either of the above meth-
+ods cannot correct the
+problem, replace expansion
+valve.
+
+® Replace liquid tank.
+
+e Check lubricant for contami-
+nation.
+
+HA-36
+===== PDF page 38 =====
+TROUBLE DIAGNOSES
+
+Harness Layout
+Engine compartment
+
+A Relay box-1"
+
+@l
+
+MA
+
+EM
+
+LC
+
+EC
+
+=") (20-20) .
+
+Relay box-1 [FY (C5 pl
+
+Np een
+| TES ing fan motor [J ~.4 AT
+7 ds || Sg block [E]
+lees S
+le —
+NY aor (— {= Relay box-2 BA
+i Cor x
+id tank [8]
+/
+
+GL
+
+NDC WT
+
+Compressor
+
+mT fan yy | | h
+
+@)
+Cooling fan motor-2 WA
+
+1 AN oN ZN .
+_ Triple-pressure switch (E25)
+
+Ll
+. (C Coaling fan motor-1=
+h —_,
+
+a C
+
+RHA111F
+
+HA-37 1267
+===== PDF page 39 =====
+TROUBLE DIAGNOSES
+Harness Layout (Cont'd)
+
+Passenger compartment
+Intake door motor
+
+i, / ons
+Intake door motor (M69)
+
+LA
+
+IX Push control unit [E] Mode door motor
+
+Center ventilator BD)
+
+"i duct
+
+/
+Mode door motor
+
+Rh Joan control wl
+(a
+Fan switch (M39)
+
+Push control unit |i}
+
+Fuse block
+
+Air_mix door motor [J
+
+[A Fuse block
+
+roo J sr J nm |
+
+[os Re Bl
+
+EEL fo)
+
+fe Pi J
+
+en J ss J nts}
+
+fn J a J
+
+=a =
+
+— 2 9
+
+om Je J en
+: = |] 0 ~
+
+pas] 2} = Air mix door motor
+28
+
+|
+
+y  __\-AC (AIR CON)
+
+Blower motor
+>
+
+RHA132G
+
+1268 HA-38
+===== PDF page 40 =====
+TROUBLE DIAGNOSES
+
+IGNITION SWITCH
+ON
+
+Circuit Diagram
+
+IGNITION SWITCH
+
+BATTERY
+
+HA-39
+
+ON or START
+FUSE FUSE FUSE / FUSE
+MODE DOOR
+BLOWER MOTOR AIR 3
+14 CONDITIONER E [
+8 RELAY
+. 25
+7
+I — = Tocooling fan
+6 system
+: DEF
+5 TRIPLE-
+4 F/D IACV 1 [ Enron E
+= WITCH
+$ Foot COMPRESSOR Fico
+x 3 SOLENOID
+2 RESISTOR 2 BL VALVE La Tocooling fan
+=m VENT = - system
+1
+FAN SWITCH Uy
+OFF[1]2]3[4 ———
+— =
+51% z 13
+| [QIQ]0 12
+2 [e)[e][6) e] 15 * To illumination
+2 16 [—/ system 17 21
+Al z os CONTROL
+DOOR MCTCR wv INTAKE DOOR
+Op by & MOTOR MODULE)
+23 i"
+. ©
+1% 20
+—
+PBR 26 ”
+FRE
+THERMAL 10 ,
+TRANSMITTER 20%
+9
+28 HHH REC
++ 21
+17
+MHA704A
+
+MA
+ED
+1G
+
+EC
+FE
+cL
+Wr
+AT
+
+FA
+
+BR
+
+1269
+===== PDF page 41 =====
+1270
+
+TROUBLE DIAGNOSES
+
+IGNITION SWITCH
+ON or START
+
+Wiring Diagram — A/C, M —
+
+HA-A/C,M-01
+
+Refer to
+FUSE BLOCK [EL-POWER.
+ml (iB)
+i
+
+[La] -
+LG/B
+
+| |
+
+® LG/B A> Next page
+
+ag
+
+| p— GR E> HA-A/C,M-04
+LG/B LG/R
+I] [1a ]l
+
+[
+DEF
+PUSH
+SWITCH SWITCH pusH_
+ron, ON ON UNIT
+_ J _
+OFF OFF OFF
+FD FOOT BAL VENT @® VENT ® DEF
+DEF FD FOOT VENT ODEF © VENT
+
+00 «i
+nr BIL
+VENT DEF
+
+—
++—
+Pra—
+
+ED FOOT
+
+@
+=
+
+B
+MODE DOOR
+MOTOR
+
+DEF
+hy VENT
+POSITION
+SWITCH 1
+h 4
+A]
+TE
+v 10M
+B B B B
+| od |
+a a x
+M13) (M73, M111
+Refer to last page (Foldout page).
+Er |
+7 @ EE |
+M38 | |13j10]8i614(2 17 | 28]25| 24] 22] 20] 184 15 !
+[ele] J7felslalsfa]1]=5g BEEBE 16]29]26]23]21]19]11 1a ED |
+|
+
+HA-40
+
+MHA70SA
+===== PDF page 42 =====
+TROUBLE DIAGNOSES
+
+Wiring Diagram — A/C, M — (Cont’d)
+HA-A/C,M-02
+
+Gil
+
+UNIT
+@COLD BHOT
+
+PBR QHOT ©COLD ss) . (s9)
+
+20% FRE REC
+FRE REC 20% FRE
+INPUT INPUT INPUT
+
+PUSH
+CONTROL MIA
+
+P/L RIG G/OR
+
+i Le
+
+page
+BC
+
+LGB PL RG GOR
+FE
+
+9
+G/R R YB
+
+alle
+
+R Y/B
+
+1 F271 [=
+
+GL
+INTAKE AIR MIX
+DOOR DOOR
+—~ — MOTOR MOTOR WT
+20% (63) (443)
+FRE "NEREREC ____FRET & Cd
+POSITION
+SWITCH
+AT
+LJ
+B
+| | FA
+LJ
+| RA
+4
+B B B B
+: i A 1 ST
+M13 Mili
+RS
+BY
+el _ |
+| — I
+4] O |5 76] © 13[10]8|6| 4 17]28|25|24|22|20] 18]15 |
+T2]3 Yi STalal2 [7] UD iz[s[7]5]5]1] #20 telalzalmlz elie C2 | 3
+1
+aL
+IDX
+MHA706A
+1271
+
+HA-41
+===== PDF page 43 =====
+TROUBLE DIAGNOSES
+Wiring Diagram — A/C, M — (Cont'd)
+
+IGNITION SWITCH HA- A/C, M-03
+PUSH
+Refer to
+CONTROL
+15A 15a |FUSEBLOCK |ELPOWER wir UNIT
+4SPEED SENS  QIL @ILL
+El. l (E33 3
+Bu od TTT
+[]
+5 a To EL-ILL
+[xml >
+BLOWER To HA-A/C,M-01 <Cpore }
+MOTOR
+=
+LW
+© m— us
+eessss— ) E———
+| | a EE
+LW
+FE
+[1] LB
+RESISTOR
+LB 4 UR LW OR/B
+\, 2 J 2 FAN
+ory! © 2, ory! © 2} SWITCH
+EAA,
+LB
+t Iq
+Le] THERMAL
+5 TRANSMITTER
+e
+J
+1m
+B B B B
+| |
+1 11
+a A . 3
+Refer to last page (Foldout page).
+= a ll
+HBEARBE 1]2]3]4 s[e]718] cs
+8 W 9 [10]11]12{13]14[15]16]17]18]19]20 W BR
+[=]
+— 17]28]2524]22[Z0] 38] 15 -
+629 oe AE HID
+
+MHAT707A
+
+1272 HA-42
+===== PDF page 44 =====
+TROUBLE DIAGNOSES
+Wiring Diagram — A/C, M — (Cont'd)
+
+IGNITION SWITCH
+BATTERY TION SWI HA-A/ C,M-04
+2 7.5A | FUSE | Refer to [ECGs conTRoL
+SA | Bl OCK| EL-POWER.
+§ (J/B) ACRLY ARCON 5
+LG 1 E106 12 21
+" 12) (2d) A
+R
+LGB 5 T We
+= 4 [EM
+IG LGB BA G/B
+ED
+[7 He © ©
+CONDITIONER B/R G/B
+° RELAY EC
+E72
+EXE]
+YB BR
+FE
+[LG ip To EC-COOLF
+Ea G/B LG
+JOINT Il =
+CONNECTOR [1] [5] o
+7 + mv TRIPLE
+C1] Low | HiGH OFF | PRESSURE
+IC] eo » ON SWITCH MT
+Y/B NORMAL *-
+Y/B [EH] IL2.}
+E14 AT
+2] LG/R B
+B/P En ve | E— Bmp To EC-COOLF
+FA
+1
+[1 IACV- RA
+5 T- il
+P a LG/R BR
+I SB |
+B
+n
+HE] my .
+COMPRESSOR = = RS
+Fig
+Refer to last page (Foldout page). Eill
+- = LL OD NED)
+712) & 111 |
+5 E50
+Gl & Nl ACD ED 2|2]2]5g Fol
+8 - ATR tae
+EE] ENE [2]3]z 1]2[s]3
+Xie de Epo iEbe EL
+
+MHA708A
+
+HA-43 1273
+===== PDF page 45 =====
+1274
+
+TROUBLE DIAGNOSES
+
+[=
+
+ITI
+[ral 1]
+
+LGB
+
+Push control
+
+unit connector
+
+® ©
+
+HEA€
+
+RHA464EB
+
+LL]
+
+Push control B
+
+unit connector
+
+LTT (Gd a
+[17
+TT ZA €
+
+[Q]
+
+RHA4B5EB|
+
+Main Power Supply and Ground Circuit Check
+
+POWER SUPPLY CIRCUIT CHECK
+
+Check power supply circuit for air conditioning system.
+
+Refer to EL section (“Wiring Diagram”, “POWER SUPPLY
+ROUTING”).
+
+PUSH CONTROL UNIT CHECK
+Check power supply circuit for push control unit with ignition switch
+
+at ON.
+1. Disconnect push control unit harness connector.
+
+2. Connect voltmeter from harness side.
+3. Measure voltage across terminal G3 and body ground.
+
+Voltmeter terminal
+@ S)
+@® Body ground
+
+Voltage
+
+Approx. 12V
+
+Check body ground circuit for push control unit.
+
+1. Disconnect push control unit harness connector.
+
+2. Connect ohmmeter from harness side.
+
+3. Check for continuity between terminal @ and body ground.
+
+Ohmmeter terminal
+
+®
+
+©
+
+Continuity
+
+@
+
+Body ground
+
+Yes
+
+HA-44
+===== PDF page 46 =====
+TROUBLE DIAGNOSES
+
+Diagnostic Procedure 1
+
+HA-45
+
+INCIDENT Flow chart
+o SYMPTOM: Blower motor does not rotate.
+1 | Fan fails to rotate.
+EE 0 oak e Perform PRELIMINARY CHECK 2 before referring to the
+2 | Fan does not rotate at 1-speed. following flow chart.
+3 | Fan does not rotate at 2-speed. [4] Gl
+4 Fan does not rotate at 3-speed. Check if blower motor rotates properly at (Go to next page.)
+5 | Fan does not rotate at 4-speed. each fan speed. —»
+Conduct check as per flow chart at left. MA
+[EW]
+CHECK POWER SUPPLY FOR BLOWER No Check power supply circuit
+. Eg en MOTOR. "1 and 15A fuses (No. LC
+—j| Blower motor ¥. Di t bl tor h d [3], located in th
+connector (7d) | g'FY isconnect blower motor harness connec- an , located in the
+A tor. fuse block).
+BRW «© Do approx. 12 volts exist between blower Refer to EL section (“Wir- EG
+2 motor harness terminal » and body ing Diagram”, “POWER
+off 12, ground? SUPPLY ROUTING").
+4 \ 4
+Yes FE
+DC
+! B
+RHassee! | Check circuit continuity between blower NG Reconnect blower motor GL
+motor harness terminal @ and body "| harness connector.
+[E] ground. -
+DISCONNECT My
+Blower motor OK
+i= connector #70) | KY E> 3
+CHECK BLOWER MOTOR. AT
+we (Refer to HA-55.)
+NG
+ore] : y FA
+Replace blower motor.
+RA
+RHA467E 4
+Disconnect blower motor and resistor har- | NO] CHECK BLOWER MOTOR
+ness connectors. CIRCUIT BETWEEN BR
+— BLOWER MOTOR AND
+GEE) Resistor ie RESISTOR.
+FD come ® " Note Do approx. 12 volts exist ST
+WwW Check circuit continuity between blower between resistor harness
+motor harness terminal @ and resistor terminal (® and body RS
+© ) 2% harness terminal (3 . ground?
+Continuity should exist. [ Yes
+D © If OK, check harness for short. BT
+RHA468E ®
+He ® (Go to next page.)
+Resistor Blower motor Note: . ] oo Co . EL
+connector (7) connector (VE) i Ihe result is NG or No after checking circuit continuity, repair harness or
+| =)
+2
+IDX
+L/w
+LW
+RHA469E
+1275
+===== PDF page 47 =====
+1276
+
+TROUBLE DIAGNOSES
+
+m
+
+Fan
+
+ka]
+
+5)
+SR connector | AN &
+Ln » A
+
+[Fad
+
+CONNECT
+
+switch =a)
+
+wy
+
+RHA470E
+
+Diagnostic Procedure 1 (Cont'd)
+
+Im
+
+CHECK RESISTOR AFTER DISCON-
+NECTING IT.
+(Refer to HA-55.)
+
+El [B] [4
+
+a
+
+OK v NG
+
+Replace resistor.
+
+Y
+
+Reconnect resistor harness connector.
+
+Fan switch
+
+F
+
+DISCONNECT
+ae £
+connector (W33) Resistor (M77)
+
+connector
+
+_—1]2
+
+71 bn ang LCS
+
+L/R
+
+[Fad
+
+poe]
+
+Id
+1]
+r
+1
+1
+[1
+i
+1
+’
+’
+1
+
+ov ——————
+
+) FEE
+
+RHA471E
+
+od
+
+Fan switch #8
+connector
+
+DISCONNECT
+
+E> ©
+
+RHA477E
+
+[1]
+
+El [BB] [@
+
+y yr
+
+y
+[ cHECK FAN SWITCH CIRCUIT.
+Do approx. 12 volts exist between each fan
+switch harness terminal and body ground?
+Flow chart Terminal No.
+No Voltage
+: @ iS
+@
+@ Body Approx.
+® ground 12V
+[5] @
+Yes No
+i Note
+Check circuit continuity
+between fan switch and
+resistor.
+Terminal No. ]
+Conti-
+Resistor | 2" nuity
+switch
+@ @
+© ® Yes
+@ ®@
+@ @
+
+short.
+
+If OK, check harness for
+
+CHECK FAN SWITCH AFTER DISCON-
+NECTING IT.
+{Refer to HA-55.)
+
+NG
+
+y
+
+OK
+
+|
+
+Note
+
+Check circuit continuity between fan
+switch harness terminal ® and body
+ground.
+
++ OK
+
+Replace blower motor.
+
+Note:
+
+Replace fan switch.
+
+if the result is NG or No after checking circuit continuity, repair harness or
+
+connector.
+
+HA-46
+===== PDF page 48 =====
+TROUBLE DIAGNOSES
+
+Diagnostic Procedure 2
+
+HA-47
+
+3 DISCONNECT
+. Fr, Pus. SYMPTOM: Air outlet does not change.
+. control i e Perform PRELIMINARY CHECK 4, Main Power Supply and
+unit r Ground Circuit Check before referring to the flow chart
+[TE S\connector bel @l
+alee eI0W.
+1]3[5 an >
+CHECK MODE DOOR MOTOR POSI- NG Disconnect mode door MA
+zo TION SWITCH. motor harness connector.
+2(2\>- 5 1. Turn VENT switch ON with ignition
+switch at ON position. EM
+SHA4S4E8] | 5 Turn ignition switch OFF. EB] v Note
+Disconnect push control unit connector.
+B Mode door motor connector 3. Turn ignition switch ON. CHECK BODY GROUND
+ml VY ad Check continuity between terminal (OD CIRCUIT Fo MODE LE
+OTT | XI 1 | 4 EE) or @ of push control unit harness con- DOOR MOT ” R. .
+1 nector and body ground. Does continuity exist
+8 (G 4. Using above procedures, check for con- between mode door motor EE
+tinuity in any other mode, as indicated hamess terminal @ and
+in chart. body ground?
+~ ._ ) Y FE
+Mode Terminal No. es
+N Continuity
+switch @ fe) v Note
+1 VENT | @or®@ Check circuit continuity CL
+- RHA478E between each terminal on
+BL @or® Bod push control unit and on
+FOOT y Yi mode door motor.
+DISCONNECT oor® ground = IT
+=) FD @or ® Terminal No. Conti-
+Piru adr aha IP HS. i
+I i DEF ® or nuity
+VRE EG Co AT
+L \worl ! i [ OK Push Mode
+Y/R
+Ma ! Push control control door
+A\/ for i unit connector unit motor EA
+[2TaTel3T !
+BEC i o | @
+ww \° : CHECK SIDE LINK. @ ®
+fm BN ] Refer to HA-56.
+} Po ®@ ® ve
+H i Pood es
+HE [Q] @ @
+* re ) ® @ BR
+TTY A ®
+) ’ ' $
+Po Pood @ ST
+1] [] 1 1}
+CN \ Fre. i if OK, check harness for RS
+m= 1514 [56 [7X6 [o fram short.
+Mode door motor OK
+connector v BT
+®
+RHA479EB (Go to next page.) in
+Note:
+If the result is NG or No after checking circuit continuity, repair harness or
+connector. BL
+IDX
+1277
+===== PDF page 49 =====
+TROUBLE DIAGNOSES
+
+Push control
+unit
+
+connector
+
+-— G Vv
+
+Push control
+unit
+connector
+
+<
+
+Diagnostic Procedure 2 (Cont'd)
+
+®
+
+HS.
+
+CONNECT
+
+Reconnect push control unit and mode
+
+door motor harness connectors.
+
+y
+
+SHA455EB
+
+1278
+
+CHECK FOR OUTPUT OF PUSH CON-
+
+TROL UNIT.
+
+Change the mode from VENT to DEF, and
+from DEF to VENT. Bo approx. 12 volts
+exist between push contro! unit harness
+terminals @ and ® in both cases?
+
+No
+
+y
+
+Terminal No. Mode door
+! Voltage
+@ operation
+Each side Stop ov
+VENT
+oO | @ — DEF
+DEF 2
+® S — VENT
+Yes
+
+y
+
+Replace mode door motor.
+
+HA-48
+
+Replace push control unit.
+
+===== PDF page 50 =====
+TROUBLE DIAGNOSES
+
+Push ¢ontrol unit connector
+— =® uL
+| hol] TT] 7 [1]
+Te) [rer ffs)
+
+Diagnostic Procedure 3
+SYMPTOM: Intake door does not change in VENT, B/L or FOOT
+
+mode.
+L
+
+Perform PRELIMINARY CHECK 1, Main Power Supply and
+
+Ground Circuit Check before referring to the following
+
+HA-49
+
+R 4 Y/B flow chart below.
+Y
+[= va MA
+CHECK INTAKE BOOR MOTOR »| Disconnect intake door motor
+POSITION SWITCH. harness connector.
+rs 1. Turn REC switch ON with ignition
+SHAGSIE| switch at ON position. EM
+2. Turn ignition switch OFF, 1B) Note
+Disconnect push control unit con- i
+B p
+nector. oo ] CHECK BODY GROUND CiR- :
+7 ; 3. Check if continuity exists CUIT FOR INTAKE DOOR LG
+? in y. E> &) between terminal @ of push con- MOTOR.
+rol unit harness connector and Does continuity exist between
+ody ground. intake door motor harness termi-
+Intake door motor
+4. Using above procedures, check nal ® and body ground? EG
+connector (63) for REG switch OFF position as ya
+indicated in chart. - Yes
+C
+REG Terminal No. Con- 4 Note [oie
+[Ql] switch [&3) fa) tinuity Check circuit continuity between
+ON @or®@ each terminal on push control
+1 of Toons raced | Yes unit and on intake door motor. CL
+RHATT2F Terminal No. Con-
+tinuit:
+Push control th 4 'ntake door OK ® =) i MT
+unit connector (Mes) PY motor Push control Intake door
+j=l = connector (Weg)
+| ! LE DISCONNECT ” (wes) @ @ Yes
+@® @ .
+2[3]4 AT
+1—=1 @ @
+Y G/R G/R Y
+®@ |i [= = -
+~ .
+(©) 1 IRE If OK, check harness for short. [FA
+[J |
+=i Ri 1Y/B ! + OK
+0 - 1)
+| 5 ut CHECK INTAKE DOOR LINK. Reconnect push control unit and RA
+RHA113F| | Refer to HA-57. intake door motor harness con-
+nector.
+ID BR
+Note 0) y
+NG
+fo) - Check continuity between push < CHECK FOR OUTPUT OF PUSH ST
+Hs = control unit harness terminal @ CONTROL UNIT.
+add (GD) and intake door motor harness Check voltage between intake
+mscomnear Intake door terminal @ ®) door Sater hamess terminals
+t ontinuity should exist. an , for conditions below. 5
+connector GE) H ® © H If OK, check harness for short. RS
+! H REC Terminal No.
+@ oref ' OK switch D 2) Voltage
+) SRI - mnt ON @ ® 12v BT
+RHA114F OFF @
+If OK, check harness for short.
+r v OK
+I: Push control 4
+G/B ¥ [=== unit connector (Es) Replace push control unit. Replace intake door motor. EL
+io CRT]
+(ky [Lh TT 1
+If the result is NG or No after checking circuit continuity, repair harness or [34
+EE oo connector.
+caf L
+[= Intake door motor
+o [6[7] Sonmoctor
+LE]
+RHA115F]
+1279
+===== PDF page 51 =====
+1280
+
+TROUBLE DIAGNOSES
+
+A
+A To Air mix door motor (er)
+13] connector HS.
+DISCONNECT
+LG/B
+® ©
+RHA116F]
+B ro] Air mix door motor sn)
+HH connector Hs.
+DISCONNECT
+|
+@&)
+)
+RHA117F
+—
+Co
+Air mix door motor 9) DISCONNECT
+connector (M49) %d E>
+a
+| }
+Je Joon @&
+5] oC 4
+i
+
+[5
+[
+
+Jom E—D)
+RY
+lt
+
+Push control
+unit connector
+
+RHA118F|
+
+Diagnostic Procedure 4
+
+SYMPTOM: Air mix door does not change.
+
+eo Perform PRELIMINARY CHECK 2, Main Power Supply and
+Ground Circuit Check before referring to the following
+chart.
+CHECK POWER SUPPLY FOR AIR MIX No | Check power supply circuit
+DOOR MOTOR. "| and 7.5A fuse (No. [16],
+Disconnect air mix door motor harness located in the fuse block).
+connector. Refer to EL section (“Wir-
+Do approx. 12V exist between air mix ing Diagram”, “POWER
+door motor harness terminal 3 and body SUPPLY ROUTING”).
+ground?
+Yes
+B] y Note
+Check circuit continuity between air mix
+door motor harness terminal No. 3 and
+body ground.
+OK
+y
+Disconnect push control unit harness con-
+nector.
+y Note
+
+Check circuit continuity between each ter-
+minal on push control unit and air mix
+door motor.
+
+Terminal No. Continuity
+Push control | Air mix door
+
+unit motor
+
+@ @ Yes
+
+@ ®
+
+@ @
+
+If OK, check harness for short.
+OK
+
+y
+
+Reconnect push control unit and air mix
+door motor harness connector.
+
+v
+
+®
+{Go to next page.)
+
+Note:
+
+If the result is NG or No after checking circuit continuity, repair harness or
+
+connector.
+
+HA-50
+===== PDF page 52 =====
+TROUBLE DIAGNOSES
+
+Push control Je
+connector (vs)
+@® Ke!
+COLD mb HOT
+/OR
+=
+2 [1]
+I I 11
+Push control
+unit
+connactor (45)
+10 ®
+
+Diagnostic Procedure 4 (Cont'd)
+
+RHA487EB
+
+®
+D]
+CHECK FOR PUSH CONTROL UNIT No .| Replace push control unit.
+OUTPUT. ig
+Slide the temperature control lever from
+Hot to Cold and Cold to Hot.
+Do approx. 12 volts exist between push
+control unit harness terminals @ and @
+in both cases?
+Terminal No. | Temp. control
+lever opera- Voltage
+@ ®@ tion
+HOT
+S] ® — COLD Ap sov
+Prox.
+® o COLD
+— HOT
+Each side STOP Approx.-0V
+Yes
+y
+Yes
+
+CHECK FOR PBR RESISTANCE IN AIR
+MIX DOOR MOTOR.
+(Refer to HA-57.)
+
+No
+y
+
+CHECK AIR MIX DOOR.
+- (Refer to HA-57.)
+
+HA-51
+
+Replace air mix door
+motor.
+
+él
+
+WIA
+
+EM
+
+LG
+
+EC
+
+FE
+
+CL
+
+Mr
+
+AT
+
+FA
+
+BIR
+
+1281
+===== PDF page 53 =====
+1282
+
+TROUBLE DIAGNOSES
+
+A
+[a Compressor
+
+connector (Ea)
+
+0)
+
+DISCONNECT
+
+€ ©
+
+®
+£3
+
+Diagnostic Procedure 5
+
+SYMPTOM: Magnet clutch does not engage when A/C switch
+
+and fan switch are ON.
+
+eo Perform PRELIMINARY CHECK 2 before referring to the
+
+following chart.
+
+RHA494EA
+
+HA-52
+
+B/P
+N
+ofr 12 8 CHECK POWER SUPPLY FOR COM- © »| Disconnect A/C relay har-
+3, PRESSOR. ness connector.
+Disconnect compressor harness connec-
+& tor.
+= Do approx. 12 volts exist between com-
+RHA1200A pressor harness terminal O and body
+ground?
+BE Compressor A/C relay ] Yes
+connector (Ea) ED connector (E72) ER) EB Note
+& Check magnet clutch coil continuity. 4
+dl S. x Check circuit continuity
+1.5 NG between A/C relay harness
+& terminal 3 and compres-
+B/P sor harness terminal @ .
+Continuity should exist.
+If OK, check harness for
+A "E short.
+OK
+y v
+RHA130GA
+Replace magnet clutch assembly. CHECK POWER SUPPLY
+Refer to HA-129. FOR A/C RELAY.
+Do approx. 12 volts exist
+between A/C relay harness
+A/C relay > DISCONNECT _ A
+ig n terminais 1, & and body
+connector (E22) | £73 Eo (9) ground?
+LGB
+Yes No
+v
+CHECK A/C RELAY. Check power supply circuit
+{Refer to HA-56.) and 7.5A fuses (No.
+= and [61], located in the fuse
+OK NG block).
+RHA492ED Refer to EL section (“Wir-
+[0] ing Diagram”, “POWER
+PPLY ROUTING").
+on EOD CONNECT su ov @
+| __ECM  |O[ CONNECTOR SAE y Ki
+12 Reconnect A/C relay. Replace A/C relay.
+BR
+D] y Note
+No
+CHECK COIL SIDE CIRCUIT OF A/C »| Check circuit continuity
+RELAY. between A/C relay harness
+1D Or Do approx. 12 volts exist between ECM terminal @ and ECM
+= (ECCS control module) harness terminal (ECCS control module)
+(12 and body ground? harness terminal @.
+RHA493E| | {For terminal arrangement, refer to last [For terminal arrangement,
+page {Foldout page).] refer to last page (Foldout
+page).j ,
+Yes Continuity should exist.
+“4 If OK, check harness for
+short.
+Nerd [ecm Tol oc CONNECTOR |
+connector (£2) Fs ®
+FF Hs. (Go to next page.)
+[2 | 8A DISCONNECT Note:
+BR If the result is NG or No after checking circuit continuity, repair harness or
+@& connector.
+—
+===== PDF page 54 =====
+TROUBLE DIAGNOSES
+
+Diagnostic Procedure 5 (Cont'd)
+
+DISCONNECT
+€ 5 A
+
+If OK, check harness for short.
+
+Triple-pressure
+
+= switch
+IL ecm Jol 2 ©
+21 3
+G/B
+G/B Ql
+RHAB15G
+
+®
+Eo)
+[™ EcM__ || CONNECTOR] <
+A comnECT CHECK COIL SIDE CIRCUIT OF A/C Yes | CHECK TRIPLE-PRES-
+3) CR EE RELAY CONTROLLED BY ECM (ECCS “| SURE SWITCH CIRCUIT
+J control module). BETWEEN TRIPLE-
+
+Do approx. 8 to 9 volts exist between PRESSURE SWITCH AND
+off 12 % ECM (ECCS control module) harness ter- ECM (ECCS control mod-
+WN minal No. @ and body ground? ule).
+
+[For terminal arrangement, refer to fast Disconnect triple-pressure
+
+@ © page (Foldout page).] switch harness connector.
+Do approx. 8 to 9 volts
+RHA120PA No exist between friple-pres-
+r sure switch harness termi-
+CHECK ECM (ECCS control module). nal @ and body ground?
+Td mm Refer to EC section (“ECM Terminals and
+AE: « Reference Value”, “TROUBLE DIAG- Yes No
+: NOSES — General Description”).
+Tripte-pressure
+switch
+A 4
+ab Disconnect ECM (ECCS
+control module) harness
+G/B connector.
+D
+i 3 n Not
+RHAO14G] | CHECK TRIPLE-PRESSURE SWITCH. | VG 4 oe
+{Refer to HA-56.) Check circuit continuity
+td ‘amr between ECM (ECCS con-
+Hs. &E OK trol module) harness termi-
+Triple-pressure Push control unit nal ® and triple pressure
+switch or connector @. [For terminal
+FE [| arrangement, refer to last
+y WE page (Foldout page}.]
+LL] Continuity should exist.
+LG/R P If OK, check harness for
+oY short.
+L 4 Note
+RHA131G — — :
+
+Check circuit continuity between triple-
+
+pressure switch harness terminal @ and
+
+push control unit harness terminal (3.
+
+Continuity should exist. [ Replace triple-pressure
+
+switch.
+
+¥ OK
+
+{Go to next page.)
+
+HA-53
+
+[VIA
+
+EM
+
+LC
+
+EC
+
+cL
+
+MIT
+
+AT
+
+FA
+
+BR
+
+BY
+
+EL
+
+IDX
+
+1283
+===== PDF page 55 =====
+1284
+
+TROUBLE DIAGNOSES
+
+Diagnostic Procedure 5 (Cont'd)
+
+HEC :
+6 Disconnect push control unit harness con-
+Fan switch Push control unit nector.
+connector connector
+[a] fo) BE OK
+BT . a NG
+i2
+ORE ! CHECK A/C SWITCH. (Refer to HA-55.) Replace push control unit.
+@ OK
+y
+Disconnect fan switch harness connector.
+RHAS02EB
+OK
+—
+Im = , Note
+(my jung) HS. Check circuit continuity between push
+i DISCONNECT control unit harness terminal @ and fan
+Fan switch {8 E&) switch harness terminal ® .
+connector Continuity should exist.
+(5) If OK, check harness for short.
+OK
+y Note
+CHECK BODY GROUND CIRCUIT FOR
+FAN SWITCH.
+RHAS03E| | Does continuity exist between fan switch
+harness terminal ® and body ground?
+Yes
+y
+CHECK FAN SWITCH. {Refer to HA-55.) NG Replace fan switch.
+
+Note:
+
+If the result is NG or No after checking circuit continuity, repair harness or
+
+connector.
+
+HA-54
+===== PDF page 56 =====
+TROUBLE DIAGNOSES
+
+Fan switch connector (M8)
+
+Electrical Components Inspection
+
+FAN SWITCH
+
+Check continuity between terminals at each position.
+
+POSITION TERMINAL
+1 2 3 4 5 6
+OFF
+
+1 O O O
+2 0 O 0
+3 0 Oo——0
+
+¢ Sy gen
+
+in) IN
+J
+RHA244D
+
+Lo motor
+A ee 5
+vi,
+
+BLOWER MOTOR
+
+Circuit check
+
+Resistor
+
+BLOWER RESISTOR
+Check continuity between terminals.
+
+Check blower motor for smooth rotation.
+eo Ensure that there are no foreign particles inside the intake unit.
+
+HA-55
+
+MA
+
+EN
+
+LC
+
+EC
+
+Fle
+
+CL
+
+MT
+
+FA
+
+BR
+
+ST
+
+RS
+
+BT
+
+AHA230
+A/C SWITCH (Push control unit)
+AN = Check continuity between terminals.
+- NY c switch —J{~____ A/C switch Terminals Continuity EL
+= NSH TF [713 T0) ON Exists.
+/) \N SE OFF ©-® Does not exist. IDX
+PY —
+Push control unit connector
+a ===
+13 == 13 | a
+12 JR pa
+RHA504E8
+1285
+===== PDF page 57 =====
+1286
+
+TROUBLE DIAGNOSES
+
+Z Triple-pressure switch (E25)
+—— \—
+Liquid tank ZL CONNECT
+
+SHAB91E|
+
+AHA233
+
+Mode door
+motor
+
+RHA439E
+
+Electrical Components Inspection (Cont'd)
+TRIPLE-PRESSURE SWITCH
+
+High-pressure side line
+
+Terminals pressure Operation | Continuity
+kPa (kg/cm?, psi)
+Increasing to
+157 - 226 ON Exists.
+> D-@ :
+sure side Decreasing to Does not
+152.0 - 201.0 OFF exist
+(1.55 - 2.05, 22.0 - 29.2) ’
+Increasing to
+] 1,422 - 1,618 ON Exists.
+Medium- (14.5 - 16.5, 206 - 235)
+pressure @-@ 5 ——
+side” ecreasing to
+1,128 - 1,422 OFF Doss not
+(11.5 - 14.5, 164 - 208) :
+Decreasing to
+1.667 - 2,059 ON Exists.
+Hiah-pres- (17 - 21, 242 - 299)
+gmp @-@
+sure side Increasing to Does net
+2,452 - 2,844 OFF .
+exist.
+
+(25 - 29, 356 - 412)
+
+* For cooling fan motor operation.
+
+A/C RELAY
+
+Check circuit continuity between terminals by supplying 12 volts to
+coil side terminals of the relay.
+
+Control Linkage Adjustment
+
+MODE DOOR
+
+1. Install mode door motor on heater unit and connect it to main
+
+harness.
+
+Make sure lever of mode door motor is fitted into the slit of
+
+mode door link.
+
+pon
+
+Turn ignition switch to ON.
+Turn VENT switch ON.
+Turn DEF switch ON. Check that side link operates at the
+
+fully-open position. Also turn DEF switch ON to check that side
+link operates at the fully-open position.
+
+HA-56
+===== PDF page 58 =====
+TROUBLE DIAGNOSES
+Control Linkage Adjustment (Cont'd)
+
+[ 12[1 ool
+control lever is slid to full hot and full cold.
+Full hot ; Ld \— Check PBR characteristics. Measure resistance between air
+j Or HAB4sE mix door motor terminals M and @ . EM
+
+AIR MIX DOOR
+—— 1. Install air mix door motor on heater unit and connect sub-har-
+& EE ness.
+"1 NS Make sure lever of air mix door is fitted into the slit of air mix
+® door link. &
+Full cold =< Hs. 2. Turn ignition switch to ON.
+3. Slide temperature control lever to full cold.
+[0 4. Check that air mix door operates properly when temperature fia
+5.
+
+T 3 of
+o
+i=
+_E LC
+Rl
+= c 20
+z EC
+& @Q
+54 1.0f
+88Q
+SSo 0 . FE
+“ga 0° 350 105°
+SZ cod HOT
+Air mix door opening degree cL
+RHA564EA
+INTAKE DOOR -
+
+1. Install intake door motor on intake unit and connect it to main
+harness.
+Make sure lever of intake door motor is fitted into the slit of AT
+intake door link.
+
+2. Turn ignition switch to ON.
+3. Turn REC switch ON. EA
+Ne I 4. Check that intake door operates properly when REC switch is
+— ) oo turned ON and OFF.
+Ntake aoor moiol -
+== RHA442EA
+
+BR
+ST
+RS
+BT
+
+HA-57 1287
+===== PDF page 59 =====
+1288
+
+DESCRIPTION
+
+Introduction
+
+AIR CONDITIONER LAN SYSTEM OVERVIEW CONTROL SYSTEM
+
+The LAN system consists of auto amp., air mix door motor and mode door motor.
+A configuration of these components is shown in the diagram below.
+
+Auto amp. Air mix or mode door motor
+
+LCU mn LCU
+
+(Local Communication | "| (toca
+Control interphase Control
+
+Unit) Unit)
+
+« PBR
+RHA439G
+Features
+
+SYSTEM CONSTRUCTION (LAN)
+
+A small network is constructed between the auto amplifier, air mix door motor and mode door motor. The auto
+amplifier and motors are connected by data transmission lines and motor power supply lines. The LAN net-
+work is built through the ground circuits of the two motors. i
+Addresses, motor opening angle signals, motor stop signals and error checking messages are all transmitted
+through the data transmission lines connecting the auto amplifier and two motors.
+
+The following functions are contained in LCUs built into the air mix door motor and the mode door motor.
+
+® Address
+eo Motor opening angle signals
+¢ Data transmission
+eo Motor stop and drive decision
+eo Opening angle sensor (PBR function)
+eo Comparison
+e® Decision (Auto amplifier indicated value and motor opening angle comparison)
+Power supply line
+vd Communication line
+»
+Auto
+amp.
+Air mix Mode
+door motor door motor
+= = RHA440G
+Operation
+
+The auto amplifier receives data from each of the sensors. The amplifier sends air mix door and mode door
+opening angle data to the air mix door motor LCU and mode door motor LCU.
+
+The air mix door motor and mode door motor read their respective signals according to the address signal.
+Opening angle indication signals received from the auto amplifier and each of the motor position sensors are
+compared by the LCUs in each motor with the existing decision and opening angles. Subsequently, HOT/
+COLD or DEFROST/VENT operation is selected. The new selection data is returned to the auto amplifier.
+
+HA-58
+===== PDF page 60 =====
+DESCRIPTION
+
+Features (Cont'd)
+
+== 1
+
+amp.
+
+Air mix Mode
+door motor door motor
+
+Opening angle indication signal lp
+Door motor stop signal <=
+RRA441G
+
+NIA
+
+Transmission data and transmission order
+
+Amplifier data is transmitted consecutively to each of the door motors following the form shown in figure below.
+Start: Initial compulsory signal sent to each of the door motors.
+
+Address: Data sent from the auto amplifier is selected according to data-based decisions made by the air mix
+door motor and mode door motor.
+
+If the addresses are identical, the opening angle data and error check signals are received by the door motor
+LCUs. The LCUs then make the appropriate error decision. If the opening angle data is normal, door control
+begins.
+
+If an error exists, the received data is rejected and corrected data received. Finally, door control is based upon
+the corrected opening angle data.
+
+Opening angle: Data that shows the indicated door opening angle of each door motor.
+
+Error check: Procedure by which sent and received data is checked for errors. Error data is then compiled.
+The error check prevents corrupted data from being used by the air mix door motor and mode door motor.
+Error data can be related to the following problems.
+
+e Abnormal electrical frequency
+
+® Poor electrical connections
+
+e Signal leakage from transmission lines
+
+e Signal level fluctuation
+
+Stop signal: At the end of each transmission, a stop operation, in-operation, or internal problem message is
+delivered to the auto amplifier. This completes one data transmission and control cycle.
+
+Transmission data form
+
+. Error Stop
+Start Address Opening angle data check signal
+
+7
+
+J
+I'l oN
+Transmitted from Auto Amp. Transmitted from
+ra door motors
+Mode Air mix Mode Air mix Mode Air mix
+0.1 sec
+
+RHA442G
+
+Air mix door control (Automatic temperature control)
+
+The air mix door is automatically controlled so that in-vehicle temperature is maintained at a predetermined
+value by: The temperature setting, ambient temperature, in-vehicle temperature and amount of sunload.
+
+HA-59
+
+EM
+
+LG
+
+EG
+
+Fle
+
+CL
+
+Me
+
+AT
+
+FA
+
+BT
+
+1289
+===== PDF page 61 =====
+1290
+
+DESCRIPTION
+Features (Cont'd)
+
+Fan speed control
+
+Blower speed is automatically controlled based on temperature setting, ambient temperature, in-vehicle
+temperature, intake temperature, amount of sunload and air mix door position.
+
+With FAN switch set to “AUTO”, the blower motor starts to gradually increase air flow volume.
+
+When engine coolant temperature is low, the blower motor operation is delayed to prevent cool air from flow-
+
+ing.
+
+Intake door control
+The intake doors are automatically controlled by: The temperature setting, ambient temperature, in-vehicle
+temperature, intake temperature, amount of sunload and ON-OFF. operation of the compressor.
+
+Outlet door control
+The outlet door is automatically controlled by: The temperature setting, ambient temperature, in-vehicle
+temperature, intake temperature and amount of sunload.
+
+Magnet clutch control
+The ECM (ECCS control module) controls compressor operation using input signals from the throttle position
+sensor and auto amplifier.
+
+Self-diagnostic system
+The self-diagnostic system is built into the auto amplifier (LCU) to quickly locate the cause of problems.
+
+HA-60
+===== PDF page 62 =====
+DESCRIPTION
+
+Control Operation
+
+J N J
+
+. Nx )
+Auto switch Display screen }
+Econ switch / | Fan switch
+
+/ /
+
+~
+
+Ji
+¢
+<L 2
+AUTO ECON Ea MANUAL &
+Tu) al f—
+bY I \V4 I=]
+=
+| e—)
+0
+Se (== —
+aus \/ TEMP r .|
+| |» GY » ED le or
+Off switch Defroster switch—/ \ \ Mode switch
+| / Ambient switch |__|
+Recirculation switch : Temperature switch
+
+Tw Display the operation of the system.
+
+RHA380G
+
+AUTO SWITCH
+
+The compressor, air intake doors, air mix door, mode doors, and blower speed are automatically controlled so
+that the in-vehicle temperature will reach, and be maintained at the set temperature selected by the operator.
+
+The air conditioning cooling function operates only when the engine is running.
+
+ECON SWITCH
+
+Fully automatic control with the compressor off. With the compressor off, the system will not remove heat (cool)
+or de-humidify. The system will maintain the in-vehicle temperature at the set temperature when the set tem-
+perature is above the ambient (outside) temperature.
+
+TEMPERATURE SWITCH (Potentio Temperature Control)
+Increases or decreases the set temperature.
+
+OFF SWITCH
+
+The compressor and blower are off, the air intake doors are set to the outside air position. Then, the mode
+doors are set to the foot (78% foot and 22% defrost) position. In the off position the ATC system uses the
+vehicle's “flow through” ventilation. It tries to maintain the interior temperature based on the last set tempera-
+ture of the system.
+
+FAN SWITCH
+Manual control of the blower speed. Four speeds are available for manual control (as shown on the display
+
+screen):
+low 8 , medium low 3 , medium high $8 , high &
+
+MODE SWITCH
+
+Manual control of the, air discharge outlets. Four selections are available (as shown on the display screen):
+face “fF |, bi-level (ff , foot (J , defrost/foot Tp
+
+AMBIENT SWITCH
+Shows the ambient (outside) air temperature on display screen for 5 seconds.
+
+LG
+EC
+FE
+CL
+MT
+AT
+FA
+BIR
+
+ST
+
+Ell
+
+él
+
+IDX
+
+HA-61 1291
+===== PDF page 63 =====
+DESCRIPTION
+Control Operation (Cont'd)
+
+RECIRCULATION (REC) SWITCH
+
+ON position: Interior air is recirculated inside the vehicle.
+OFF position: Automatic control resumes.
+Recirculation is canceled when AUTO, DEF or ECON is selected. Recirculation resumes when another mode
+
+is chosen.
+
+DEFROSTER (DEF) SWITCH
+Positions the mode doors to the defrost position. Also positions the air intake doors to the outside air position.
+The compressor operates at ambient temperature approx. 2°C (35°F) or above.
+
+1292 HA-62
+===== PDF page 64 =====
+DESCRIPTION
+
+NOTE
+
+MA
+
+EM
+
+LG
+
+EC
+
+CL
+
+MT
+
+AT
+
+FA
+
+BR
+
+1293
+
+HA-63
+===== PDF page 65 =====
+TROUBLE DIAGNOSES
+
+How to Perform Trouble Diagnoses for Quick
+and Accurate Repair
+
+WORK FLOW
+
+1294
+
+CHECK IN
+
+Reference item
+
+v
+
+LISTEN TO CUSTOMER COMPLAINT AND
+CONFIRM BY PERFORMING OPERATIONAL
+
+Operational Check {Refer to HA-65.)
+Symptom Chart (Refer to HA-68.)
+
+CHECK.
+v
+
+INVESTIGATE ITEMS YOU SHOULD CARRY
+OUT RELATED TO EACH SYMPTOM.
+
+Symptom Chart
+(Refer to HA-68.)
+
+v
+
+CHECK FOR ANY SERVICE BULLETINS.
+
+v
+
+PERFORM SELF-DIAGNOSIS. Seli-diagnosis
+(Refer ta HA-70.)
+Can be Cannot be
+confirmed. confirmed. v
+CHECK MAIN Main Power Supply and Ground Circuit
+POWER SUPPLY Check
+AND GROUND {Refer to HA-94.)
+CIRCUIT.
+v v
+MALFUNCTION CODE CAN BE FOUND.
+v No Yes
+ELIMINATING Preliminary Check
+| GOOD PARTS/ {Refer to HA-80.)
+SYSTEMS
+h 4 Y
+e Diagnostic Pro- | ,{ ELIMINATE GOOD PART(S)/HARNESS(ES)/ Harness Layout for A/C System
+oe Ad CONNECTOR(S) ELECTRICALLY. (Refer to HA-88.)
+0 HA-95,
+. Wiring Diagram |
+To Py A Maltunctioning Maltunctioning
+(Refer to HA-91.) harness(es)/ part(s)
+cannector(s)
+INSPECT EACH Electrical Components inspection
+COMPONENT. (Refer to HA-107.)
+v ¥
+REPAIR. REPAIR/REPLACE.
+y ¥
+
+NG
+
+FINAL CHECK
+
++ OK
+
+CHECK QUT
+
+HA-64
+
+===== PDF page 66 =====
+TROUBLE DIAGNOSES
+
+Operational Check
+
+The purpose of the operational check is to confirm that the system
+is as it should be. The systems which will be checked are the
+blower, mode (discharge air), intake air, temperature decrease,
+
+temperature increase, A/C switch and the memory function. Gl
+CONDITIONS:
+e¢ Engine running and at normal operating temperature. MIA
+EM
+PROCEDURE:
+1. Check blower LC
+TF SiGe 8 1) Press fan switch (up side) one time.
+Blower should operate on low speed. EC
+=o wd] rear A The fan symbol should have one blade lit $8 .
+Ww | = Ee ™\ 2) Press fan switch (up side) one more time.
+A 3) Continue checking blower speed and fan symbol until all {Eg
+speeds are checked.
+4) leave blower on MAX speed 8 .
+RHA381G CL
+ee ew 2. Check discharge air MIT
+ALA A Td 1) Press mode switch four times and DEF button.
+wi | = AT
+[p= ~ v =
+=i = | V reve A wou | EA
+2
+AN RA
+RHA382G
+2) Confirm that discharge air comes out according to the air dis- BR
+Discharge air flow tribution table at left.
+Refer to “Discharge Air Flow”, “DESCRIPTION” (HA-18).
+— NOTE: ST
+Switch mode | AY oullev distribution Confirm that the compressor clutch is engaged (visual inspec-
+Icator Face Foot | Defroster . : sa :
+tion) and intake door position is at FRESH when the DEF but-
+-e 100% ton is pressed. RS
+4 - - Intake door position is checked in the next step.
+-s
+« 60% 40% —
+®
+“ —- 78% | 20%
+EL
+ws - 60% | 40%
+IDX
+WF | - | -| om
+RHA429E
+
+H A-65 1295
+===== PDF page 67 =====
+1296
+
+TROUBLE DIAGNOSES
+
+Operational Check (Cont’d)
+
+[ or % -iis
+Econ) 3, &
+ALTO OFF ||
+Er EE)
+25 [S25 fase] \7 vee
+ANN
+RHA383G
+MARL 4
+c CCF es [|
+ECON =5 a,
+AUTO [=5FF J &* |
+=o=3 =
+ii% 23 [ily ene A | yor
+RHA384G
+UA UAL 4
+= f+ J []
+auto ESO a= 4 EE <
+OFF
+=== =
+® | c= [1d] Trews Mot
+rd { —
+RHA385G
+—] -r Te Pra
+[ng
+AUTO fa ~%
+— [CoO
+\
+RHA386G
+ree MoE or =;%
+[ng
+ECON “0 ~”
+pid OFF
+=o
+FS == asl 7 remp |,
+RHA387G
+
+3.
+1)
+
+2)
+
+-—
+Sr
+
+2)
+
+1)
+2)
+
+3)
+
+Check recirculation
+
+Press REC «&y switch.
+
+Recirculation indicator should illuminate.
+
+Listen for intake door position change (you should hear blower
+sound change slightly).
+
+Check temperature decrease
+
+Press the temperature decrease button until 18°C (65°F) is
+displayed.
+
+Check for cold air at discharge air outlets.
+
+Check temperature increase
+Press the temperature increase button until 32°C (85°F) is
+
+displayed.
+Check for hot air at discharge air outlets.
+
+Check ECON mode
+
+Press ECON switch.
+
+Display should indicate ECON (no AUTO, no MANUAL).
+Confirm that the compressor clutch is not engaged (visual
+inspection).
+
+(Discharge air will depend on ambient, in-vehicle, and set tem-
+
+peratures.)
+Check for intake air at Fresh position.
+
+Check AUTO mode
+
+Press AUTO switch.
+
+Display should indicate AUTO (no ECON, no MANUAL).
+Confirm that the compressor clutch engages (audio or visual
+inspection).
+
+(Discharge air and suction air will depend on ambient,
+in-vehicle, and set temperatures.)
+
+HA-66
+===== PDF page 68 =====
+TROUBLE DIAGNOSES
+Operational Check (Cont'd)
+
+8. Check memory function
+1) Press OFF switch.
+
+2) Turn the ignition off.
+wv 3) Turn the ignition on.
+
+Jon Co ENE 4) Press the AUTO switch. al
+s 5) Confirm that the set temperature remains at previous tempera-
+oo | eel 7 vee ture.
+~ MA
+RHA388G EM
+9. Check ambient display
+Press AMB switch. LC
+4 | Display should show the outside (ambient) temperature for approxi-
+auro [ECON | mately 5 seconds. ae
+
+—
+Sos == Aue VV tewe JAN MOC
+
+Ne | [FE
+
+RHA388G
+
+AT
+FA
+
+BRR
+
+RS
+
+BT
+
+El.
+
+1297
+
+HA-67
+===== PDF page 69 =====
+TROUBLE DIAGNOSES
+
+Symptom Chart
+DIAGNOSTIC TABLE
+
+PROCEDURE Self-diagnosis Preliminary Check Diagnostic Procedure
+
+>
+N= —_— — — — ~~
+g 2181523
+Tlgls|lag|lag|ls|o|lg|lrlclas|<]<]|<
+wr s|®|@|X|@l@|I@|IRIP|IZ|IZ[(Z([Z]Z
+i - EON ES ET = ==
+& Gls si s(s(Elsl2(2]|5|5]5]5]n
+a Zao |v]|a|lal~r|ale]leleje]e
+= = ~ © ~ — = =1 =
+£8 FIRIRIRIRIS sls ss lclsislz|3|3|8|5|%
+=z Sif|o|g|lglo 2 882812 215188188
+ou TITS Icio |o|o|lo|lo|o|lo|lolg|lElElELE
+Ex | la| |< ola |d&]aia&
+hi z(z|z|z|z|z|g|z|z|le|lzlelzlzlelelelele
+SYMPTOM Qu cleo |w|=|S|E|E|E|E|E|E{E BEC |B|%
+TC ajaeloel|lala |Z |E|E|E|E|E|E|E|E{SlS|Si|5]%S
+<2 IEEE EIS (eee |s|e|le|2]2|8|8|8|8|8
+o< n|lo|lolo|lwjz|lala|ala|l]|lala|a|a|laida|d|d
+Air outlet does not change. 0 2) Ooo © } C10 O10
+Intake door does not change. ['} Olo © OO O10
+Insufficient cooling ololclololololocl@® OO Q1lO oR Ke)
+Insufficient heating olololololo|O lO 0/0 010 O10
+Blower motor operation is malfunctioning. Q ol o ® OQlO]O OO
+Magnet clutch does nat engage. 06 OO 2) O10 O10
+Discharged air temperature does
+net change. 0 2] O10 © ll oll AS
+Noise 0
+“11! Ambient sensor circuit is
+C 1 open 00 © o
+11 |In-vehicle sensor circuit is
+CLC [open 00 © o
+pu J Intake sensor circuit is (3)
+o Lf |open 00
+—- = Sunload sensor circuit is
+| ) open. 0 12 od
+8 PBR signal is open.
+o
+5 CD oo )
+Rel
+hd 4 Ambient sensor circuit is
+E] LL § [shorted J [2 3) o
+BS __ 1 33 |In-vehicle sensor circuit is
+FE LL [shorted. 00 3 id
+8 ee
+& | Intake sensor circuit is
+| Y shorted. 0 0 ©
+| Sunload sensor circuit is
+[ny shorted. 00 ©
+_ °5 PBR signal is shorted. ®
+c 00
+Mode door motor and/or air mix door motor
+do not operate normally. 0 12) 3 0 0 O10 Q 4
+Intake door motor does not operate normally. | @) | @ [3RNe OO O10
+Blower motor operation is malfunctioning
+under out of Starting Fan Speed Control. 0 2) O00 © Ololoejo]o
+Magnet clutch does not operate after perform- 0 0 olo (3) O
+
+ing Preliminary Check 6.
+Self-diagnosis cannot be performed.
+
+- [5) : The numbers refer to the probability of the cause, J) being the most likely.
+(OO: As for checking order, refer to each flow chart. (It depends on malfunctioning portion.)
+
+1298 HA-68
+===== PDF page 70 =====
+AUTO
+
+TROUBLE DIAGNOSES
+
+Symptom Chart (Cont'd)
+
+Electrical Components Inspection
+
+—
+
+&L
+8 = BB 9
+
+ssauleH
+
+O10
+
+=C
+
+OQ
+
+(D3) Aejea ues Buijoon
+
+(03) Jojow ue; Guljoon
+
+(D3) (aInpow joau0s $303) WO3
+
+(0L1-WH) %un j043u00 DOpY
+
+O
+
+(621-YH)
+{1ossa2dtion) yoinjo 1subepy
+
+{Z01-¥H) youms ainssaid-aidi|
+
+(£01-wRH) AB) Op
+
+O10 101 010
+
+lOO |O|C
+
+(611-¢H) "dwe j04u00 ue
+
+(20 1-vH) J010W Jamolg
+
+{811-vH) Jojout J00p ave]
+
+(911-¥H) Jor0w 100p spon
+
+{rL1-WH) Jojow Joop Xu iy
+
+(t1-vH) Josuss peojung
+
+CHEECH ECH ECE NCH ECA RCE ECR ESN HCN ECR RCH NCH RS)
+
+O10] 01010
+
+(73) Jemwsuen jeuay
+
+{Z211-vH) Josues exe)
+
+O
+O
+
+0)
+
+(0LL-WH) J0susS BjoIyOA-U|
+
+®)
+
+O
+
+{L11-¥H) J0suas juslquiy
+
+O10
+O
+
+Cl1lOo1o1Q 10
+
+O
+
+Ground Circuit Check
+
+(y6-¥H) Lo# asng yg 2
+
+(¥6-YH) OF# PUR 91# s9sN4 vg,
+
+Oo
+0
+
+(v6-VH) £# pue z# sesny yg|
+
+O|lO0O|O|]OC|O|10O;0} 0
+
+{r6-vH) (N07) dwe ony
+
+Orolo Oo
+
+S|
+
+Diagnostic Proce- | Main Power Supply and
+
+dure
+
+{r01-wH) 8 @mpadoiq onsoubei
+
+0101010
+
+Oooo
+
+{201-YH) 7 2inpoo0Ig onsoubeiq
+
+(001-VH) 9 2anpsooid aysoubeig
+
+9]
+
+olololololololololo
+
+EL
+
+DX
+
+1299
+
+HA-69
+===== PDF page 71 =====
+1300
+
+TROUBLE DIAGNOSES
+
+{Ignition switch OFF — ON)
+
+A
+
+Within 5 seconds after starting engine (ignition
+switch is tumed “ON”), press switch for
+at least 5 seconds.
+
+4
+
+Self-diagnosis
+
+The seif-diagnostic system diagnoses sensors, door motors,
+blower motor, etc. by system line. Refer to applicable sections
+(items) for details. Shifting from normal control to the self-diagnos-
+tic system is done as follows. Start the engine (turn the ignition
+switch from “OFF” to “ON"). And press “ » switch for at least
+5 seconds. The “ gg ” switch must be pressed within 5 seconds
+after starting the engine (ignition switch is turned “ON”). This sys-
+tem will be canceled by either pressing switch or turning the
+ignition switch “OFF”. Shifting from one step to another is accom-
+plished by means of pushing (HOT) or €@ (COLD)
+switch, as required.
+
+Additionally shifting from STEP 5 to AUXILIARY MECHANISM is
+accomplished by means of pushing (fan up) switch.
+
+Ignition switch: OFF
+
+STEP 1 — LEDs and segments are checked.
+
+—o-
+—of-
+
+STEP 2 — Input signals from each sensor are
+
+switch: ON
+
+Ignition switch: OFF
+
+checked.
+
+o-
+or
+
+STEP 3 -— Mode and intake door motor posi-
+
+switch: ON
+
+Ignition switch: OFF
+
+Self-diagnostic function is canceled.
+
+A 4
+
+tion switch is checked.
+
+switch; ON
+
+8
+o-
+
+Note
+
+Ignition switch: OFF
+
+STEP 4 — Actuators are checked.
+
+0
+of
+
+switch: ON
+
+STEP 5 — Temperature detected by each
+
+Ignition switch: OFF
+
+sensor is checked. Multiplex communication
+errors are detected.
+
+switch: ON
+
+em]
+——
+
+AUXILIARY MECHANISM — Temperature set-
+
+Ignition switch: OFF
+
+Note:
+
+ting trimmer
+
+switch: ON
+
+For STEP 4 and 5, engine must be running for compres-
+sor to operate.
+
+HA-70
+===== PDF page 72 =====
+TROUBLE DIAGNOSES
+Self-diagnosis (Cont'd)
+
+CHECKING PROCEDURE
+
+(Ignition switch OFF — ON)
+
+A 4
+
+Set in self-diagnostic mode.
+[Within 5 seconds after starting engine (ignition switch is turned
+“ON"), press switch ON for 5 seconds.) MIA
+
+4
+S1ER 1 All LEDs and segments illuminate. No »! Malfunctioning switch, LED or fluorescent EM
+display tube
+| Yes
+3 LC
+Press Oo (HOT) switch.
+v EG
+. . No Lo .
+Advance to self-diagnosis STEP 2? » Malfunctioning [a (HOT) switch
+| Yes FE
+Press @@ (COLD) switch.
+CL
+A 4
+Return to self-diagnosis STEP 1? No »| Malfunctioning (v ] (COLD) switch
+Yes bur
+3 *1: Conduct self-diagnosis STEP 2 under sun-
+shine.
+Press @@ (HOT) switch. When conducting indoors, direct light (more than 7
+Disola 60W) at sunload sensor or Code No. 25 will
+splay indicate despite the fact that sunload sensor is
+h 4 functioning properly.
+STEP 2 pu FA
+L
+All sensors are in Sensor(s}) is(are) RA
+good order. malfunctioning.
+Code Malfunctioning sensor BR
+Display No. (including circuits)
+= c ] Ambient sensor ST
+cu Code No. of malfunctioning sen- >
+sor is indicated on display. I | 1n-vehi
+cc In-vehicle sensor BS
+cH intake sensor
+v BT
+Press @9 (HOT) switch. c g Sunload sensor*1
+® C o
+Note: EL
+At any time, you can return to a previous step in the self-diagno-
+sis by pressing the © (COLD) switch. BX
+
+HA-71 1301
+===== PDF page 73 =====
+TROUBLE DIAGNOSES
+
+Self-diagnosis (Cont'd)
+
+|
+STEP 3 = Display
+of
+All mode door and intake door Mode door and intake door
+motor position switches are in motor position switch(es)
+good order. is{are) malfunctioning.
+y Display v
+an Code No. of malfunctioning
+mode door and intake door
+motor position switch(es) is(are)
+indicated on display.
+
+Code
+
+Malfunctioning part or circuit
+
+No.
+
+Position switch
+
+3 H VENT
+
+22 B/L
+
+Ad
+
+STEP 4
+
+‘
+
+Press @% (HOT) switch.
+
+!
+qi
+
+y
+
+Display
+
+Code No. of actuators test pattern is indicated
+
+4 FOOT
+
+35 FOOT/DEF
+
+46 DEF
+
+Mode door motor
+
+dT FRE
+377 |FR
+
+5 & 20%
+
+FRE
+
+39 REC
+
+Intake door motor
+
+on display.
+
+A 4
+
+Note:
+
+Press 8) (DEF) switch.
+
+y
+
+Press @§) (HOT) switch.
+
+v
+
+A 4
+
+Actuators test pattern
+
+Code
+No. Mode Intake Air mix | Blower Com-
+door door door motor pressor
+f Full sv ON
+vi VENT | REC cold | 4-5
+Full
+uz BIL REC cog | @-1MV | oN
+20% Full
+v3 BIL ERE Hot 7-9v OFF
+LL root | FRE Ful | 7 ov | OFF
+[A] Hot
+Full
+F/D FRE Hot 7-9v ON
+DEF | FRE Ful 140-12v| oN
+Hot
+
+For STEP 4, engine must be running for compressor to operate.
+
+1302
+
+HA-72
+===== PDF page 74 =====
+TROUBLE DIAGNOSES
+Self-diagnosis (Cont'd)
+
+Display
+
+STEP §
+
+LN | DE
+
+-—
+SD)
+=
+
+» Press (DEF) switch.) MA
+\ 4
+Temperature detected by each sensor is indi- | Ambient sensor EM
+cated on display. "| In-vehicle sensor
+Intake sensor
+y LC
+Press REC switch. €&3
+EC
+A 4 :
+Display
+5d
+L FE
+4 Display Signal direction
+[Multiplex communication error between | 3 ord CL
+control unit and auto amplifier is detected] 3¢ N good order
+: 52 Push control unit — Auto amp.
+4 2 8 MT
+Tum ignition switch OFF or (AUTO) blinks two
+switch ON. times Auto amp. — Push control unit i
+l AT
+v 52 88
+END
+FA
+RA
+BR
+ST
+RS
+BT
+
+EL
+
+HA-73 1303
+===== PDF page 75 =====
+1304
+
+TROUBLE DIAGNOSES
+
+Self-diagnosis (Cont'd)
+HOW TO INTERPRET THE RESULTS
+
+STEP 1: Checks LEDs and segments
+
+When switch’s LED and segments are in functioning properly in
+STEP 1, LED and display will come on.
+
+Fluorescent display tube
+
+| S ECON Dn ® o a
+oT 3 =
+
+Eo TD Ee \E v =
+-— a =e abl 7 emp A\ oor
+
+RHA390G
+
+Display malfunction
+
+AUTO ECON MANUAL
+£00 FR pl
+“O20 Te \
+
+Part of segments does
+not illuminate.
+
+RHA391G
+
+Display (when all sensors are
+in good order) llluminates 25 seconds
+after “2” is illuminated.
+
+lltuminates
+
+1
+Lou
+
+RHA499AB
+
+Display (when sensor malfunctions)
+
+Blinks (indicating
+
+a shortcircuit) Code No. (blinks)
+
+lluminates
+{
+
+oo
+
+J
+
+RHA392G
+
+If LEDs or segments malfunction, LED will not come on or display
+will show incomplete segment.
+
+STEP 2: Checks each sensor circuit for open or short
+circuit
+
+Display shows “p "in STEP 2 mode.
+
+When all sensors are in good order, display shows “
+It takes approximately 25 seconds to check all sensors.
+
+0”
+
+If a sensor is malfunctioning, the corresponding code No. blinks on
+display. A short circuit is identified by a blinking “~ ” mark preced-
+ing mode number.
+
+HA-74
+===== PDF page 76 =====
+TROUBLE DIAGNOSES
+
+Self-diagnosis (Cont'd)
+
+Each code No.
+blinks two times,
+A
+C4
+
+id
+a
+
+RHAS01A
+
+Sensors and abnormalities
+
+If a circuit is opened or shorted, display shows its code No. when
+input corresponds with any of foliowing conditions.
+
+If two or more sensors malfunction, corresponding code Nos.
+respectively blink two times.
+
+Code No. Sensor Open circuit Short circuit
+}
+c ! Ambient sensor Less than Greater than
+—- ] -41.9°C (43°F) 100°C (212°F)
+
+cc
+
+—cc
+
+In-vehicle sensor
+
+Less than
+-41.9°C (-43°F)
+
+Greater than
+100°C (212°F)
+
+pul)
+cH
+
+Intake sensor
+
+Less than
+—43.8°C (-47°F)
+
+Greater than
+100°C (212°F)
+
+cS
+£5
+
+Sunload sensor?
+
+Less than
+0.01515 mA
+
+Greater than
+0.545 mA
+
+cE
+
+cb
+
+PBR*1
+
+Greater than 95%
+
+Less than 5%
+
+*1: “95%” and “6%” refer to percentage with respect to stroke of air mix door.
+(Full cold: 0%, Full hot: 100%)
+
+*2: Conduct self-diagnosis STEP 2 under sunshine.
+When conducting indoors, direct light (more than 60W) at sunload sensor.
+
+Display (when all doors are
+in good order) llluminates 50 seconds after
+“37 is shown on display.
+
+11
+=
+
+RHA383DB
+
+HA-75
+
+STEP 3: Checks mode and intake door positions
+Display shows “3 "in STEP 3 mode.
+When all doors are in good order, display will then show “3g”.
+It takes approximately 50 seconds to check all mode and
+intake doors.
+
+WIA
+
+EM
+
+LC
+
+EC
+
+GL
+MT
+AT
+FA
+BR
+ST
+
+RS
+
+Br
+
+EL
+
+BX
+
+1305
+===== PDF page 77 =====
+TROUBLE DIAGNOSES
+
+Display {when a door is
+out of order)
+Code No. (blinks)
+
+[lluminates
+
+RHA394G
+
+Each code No.
+
+> blinks two times.
+
+RHA498A
+Changes from “!"” to “6"
+No
+RHA495A
+
+Discharge air flow
+
+Switch mode/ Air outlet/distribution
+
+indicator
+
+Face Foot {Defroster
+
+~b &
+
+yf
+
+100%
+
+60% 40%
+
+£4
+
+78% 22%
+
+£
+ne
+
+60% 40%
+
+2
+
+100%
+
+9
+
+1306
+
+RHA429E|
+
+Self-diagnosis (Cont'd)
+When abnormalities are detected, display shows a code No. cor-
+responding with malfunctioning part.
+
+codele 1313234 |35(|36|37 (38/39
+ioni 00T/ 20%
+bon VENT| BIL | FOOT ll DEF | FRE | —-° | REC
+
+if two or more mode or intake doors are out of order, correspond-
+
+ing code numbers respectively blink two times.
+if mode door motor harness connector is disconnected, the follow-
+
+ing display pattern will appear.
+
+3 = 323M 3I5 iil
+If intake mode door harness connector is disconnected, the follow-
+ing display pattern will appear.
+
+37 38 038
+
+If any mode door motor position switch is malfunctioning, mode
+door motor will also malfunction.
+
+STEP 4: Checks operation of each actuator
+
+Display shows “y; ” in STEP 4 mode.
+
+When @ DEF switch is pressed one time, display shows
+
+“ye ". Thereafter, each time the switch is pressed, display
+advances one number at a time, up to “4g ”, then returns to
+
+“yi 1”
+
+During inspection in STEP 4, the auto amp. will forcefully transmit
+an output to the affected actuators. The corresponding code Nos.
+are shown on display as indicated in the table below.
+
+Checks must be made visually, by listening to any noise, or by
+touching air outlets with your hand, etc. for improper opera-
+
+tion.
+
+Code No.
+: { 1 Lid
+Mode door VENT B/L B/L FOOT F/D DEF
+0;
+
+intake door REC REC dl FRE FRE FRE
+
+Air mix door Full Full Full Full Full Full
+Cold Cold Hot Hot Hot Hot
+
+Blower motor 4-5 9-11 7-9 7-9 7-9 10-12
+
+Vv Vv V Vv Vv Vv
+Compressor ON ON OFF OFF ON ON
+
+Operating condition of each actuator cannot be checked by indicators.
+
+HA-76
+===== PDF page 78 =====
+TROUBLE DIAGNOSES
+
+Self-diagnosis (Cont'd)
+
+STEP 5: Checks temperature detected by sensors, and
+“51” appears on display. detects multiplex communication error
+Checks temperature detected by sensors
+a Display shows “g: ” in STEP 5 mode. :
+eo When @ FRONT DEF switch is pressed one time, display Gl
+] | shows temperature detected by ambient sensor.
+
+- eo When @ FRONT DEF switch is pressed second time, dis-
+! | play shows temperature detected by in-vehicle sensor. IA
+4 eo When @ FRONT DEF switch is pressed third time, display
+
+shows temperature detected by intake sensor.
+ruaosan] © When @ FRONT DEF switch is pressed fourth time, display EM
+
+returns to original presentation “g; ”.
+
+Intake sensor corresponding
+with switch operation LC
+
+EC
+
+RHA426G
+MT
+Display Display Display Display
+> { Gp J Temperature [<i Temperature Temperature AT
+» - »| detected by detected by » detected by
+af { ambient sensor In-vehicle Intake
+sensor sehsor EA
+Al
+RHA395G
+If temperature shown on display greatly differs from actual BR
+temperature, check sensor circuit at first. Then inspect sensor itself
+according to the procedures described in Control System Input
+Component. Refer to HA-110. i
+RS
+BT
+
+1307
+
+HA-77
+===== PDF page 79 =====
+1308
+
+TROUBLE DIAGNOSES
+
+Display {multiplex communication
+
+properly functioning)
+) (}
+a, a»
+
+RHAQ56D)
+
+Self-diagnosis (Cont'd)
+Detects multiplex communication error
+
+Display shows “sg ” in STEP 5 mode.
+[Multiplex communication error between push control unit and auto
+
+amplifier is detected]
+
+Display Signal direction
+
+5c
+52
+
+5C
+
+blinks two
+times.
+
+in good order
+
+A/C control unit — auto amp.
+
+1 Auto amp. = A/C control unit
+5c %
+
+CAUTION:
+
+The auto amp. memorizes any communication error in the
+system in a normal control with battery connected.
+
+When there is an error, display will be as shown above.
+When plural errors occur, the display of each error will blink
+two times for 0.5 second intervals.
+
+If a communication error is displayed, follow the flow chart below.
+Determine if the error occurred in the past or is currently happen-
+
+ing.
+
+HA-78
+===== PDF page 80 =====
+TROUBLE DIAGNOSES
+
+Self-diagnosis (Cont'd)
+AUXILIARY MECHANISM: Temperature setting trimmer
+
+This trimmer compensates for differences between temperature
+setting (displayed digitally) and temperature felt by driver in a range
+of £3°C (+6°F).
+Operating procedures for this trimmer are as follows:
+
+Starting with STEP 5 under “Self-diagnostic mode”, press
+
+BE (fan up) switch to set air conditioning system in auxiliary mode.
+Display shows “g: ” in auxiliary mechanism. It takes approximately
+3 seconds. Then, press either @ (HOT) or €@ (COLD) switch
+as desired. Temperature will change at a rate of 0.5°C (1°F) each
+time a switch is pressed.
+
+Self-diagnosis STEP 5
+
+f
+Initial display |
+U.S.A. model Canada model
+B OF % | 0.0 & |
+| [} i [)
+Oo © OD O
+{ [ { |
+U.S.A. model U.S.A. model
+i'r &$ - IF $ |
+Canada model Canada model
+| 0sc  & - 0st &K
+[ 1 i
+Oo © QD O
+U.S.A. mode! U.S.A. model
+i 6F % | - &F % |
+Canada model Canada model
+| Jg= ® | - 38° 0®
+
+SHA197E
+
+When battery cable is disconnected, trimmer operation is can-
+celed and temperature set becomes that of initial condition,
+
+i.e. 0°C (0°F).
+HA-79
+
+MA
+EN
+LGC
+
+EG
+
+CL
+MT
+AT
+FA
+BR
+ST
+RS
+BT
+
+EL
+
+BX
+
+1309
+===== PDF page 81 =====
+TROUBLE DIAGNOSES
+
+Preliminary Check
+
+PRELIMINARY CHECK 1
+
+Air outlet does not change.
+® Perform Self-diagnosis STEP 1 before referring to the flow chart.
+
+CHECK SENSOR CIRCUIT. No CHECK SENSOR CIRCUIT IN DETAIL ACCORDING TO THE DIAG-
+Set up Self-diagnosis STEP 2. “| NOSTIC PROCEDURE BELOW CORRESPONDING TO EACH CODE
+Is each sensor circuit normai? NO.
+Code No. 20 should be indicated on the dis-
+play after approx. 3 seconds. Ref
+Code No. How to repair elerence
+Yes page
+rd Go to Diagnostic Procedure 1. HA-95
+ec Go to Diagnostic Procedure 2. HA-96
+cy Go to Diagnostic Procedure 3. HA-97
+cs Go to Diagnostic Procedure 4. HA-98
+2h Go to Diagnostic Procedure 5. HA-99
+-21 Go to Diagnaostic Procedure 1. HA-95
+-2c Go to Diagnostic Procedure 2. HA-96
+-2Y Go to Diagnostic Procedure 3. HA-97
+-25 Go to Diagnostic Procedure 4. HA-88
+-26 Go to Diagnostic Procedure 5. HA-99
+Are sensor circuits for ambient sensor, in-vehicle sensor and intake
+sensor operating normally? If maifunction is suspected, check tem-
+perature detected by each sensor using Self-diagnosis STEP 5. Con-
+firm the temperature is within normal range before performing Diag-
+nostic Procedures. .
+v
+CHECK MODE DOOR MOTOR. No »| Go to Diagnostic Procedure 5. (HA-99)
+Set up Self-diagnosis STEP 3. id
+Is mode door motor operating normally?
+Code No. 30 should be indicated on the dis-
+play after approx. 3 seconds.
+! Yes
+CHECK MODE DOOR OPERATION. No _"GHECK SIDE LINK MECHANISM. NG | Repair or adjust.
+Set up Self-diagnosis STEP 4. "| Refer to CONTROL LINKAGE ADJUST-
+Does air outlet change according to each code MENT. (HA-108})
+
+No.?
+Yi qe 43 qY 4S 46
+VENT | B/L B/L |FOOT| F/D2 | DEF
+
+OK
+
+Go to Diagnostic Procedure 5. (HA-99)
+
+Refer to Air Flow. (HA-18)
+Yes
+
+\ 4
+
+Air outlet control system is normal. Refer to
+Mode door control specification. (HA-116)
+
+1310 H A-80
+===== PDF page 82 =====
+TROUBLE DIAGNOSES
+Preliminary Check (Cont'd)
+
+PRELIMINARY CHECK 2
+
+Intake door does not change.
+¢ Perform Self-diagnosis STEP 1 before referring to the following flow chart.
+
+CHECK SENSOR CIRCUIT. No | CHECK SENSOR CIRCUIT IN DETAIL ACCORDING TO THE DIAG-
+Set up Self-diagnosis STEP 2. "| NOSTIC PROCEDURE BELOW CORRESPONDED TO EACH CODE @l
+is each sensor circuit normal? NO.
+Code No. 20 should be indicated on the dis-
+play after approx. 3 seconds later. Code No. How to repair Reference MIA
+page
+Yes
+2! Go to Diagnostic Procedure 1. HA-95 EM
+Le
+oc Go to Diagnostic Procedure 2. HA-96
+cy Go to Diagnostic Procedure 3. HA-97 LE
+cS Go to Diagnostic Procedure 4. HA-98 }
+Pag a) Go to Diagnostic Procedure 5. HA-98
+2 Go to Diagnostic Procedure 1. HA-95 EG
+-2¢ Go to Diagnostic Procedure 2. HA-86
+oY Go to Diagnostic Procedure 3. HA-97 FE
+-75 Go to Diagnostic Procedure 4. HA-98
+-°6 Go to Diagnostic Procedure 5. HA-99 CL
+Are sensor circuits for ambient sensor, in-vehicle sensor and intake
+sensor operating normally? If malfunction is suspected, check tem- Mii
+perature detected by each sensor using Self-diagnosis STEP 5. Con-
+firm the temperature is within normal range before performing Diag-
+nostic Procedures. AT
+Y EA
+CHECK INTAKE DOOR MOTOR OPERATION. [No | CHECK INTAKE DOOR ROD or LEVER | NG | Repair or adjust.
+Set up Self-diagnosis STEP 4. "| MECHANISM.
+Does intake air change according to each code Refer to CONTROL LINKAGE ADJUST- Rf
+No.? MENT. (HA-108)
+OK
+qi J ve | M3 fu [us | us BR
+0,
+REC | REC 20% FRE | FRE | FRE
+FRE
+Si
+Go to Diagnostic Procedure 6. (HA-100}
+Yes
+RS
+A
+Intake door control system is normal.
+y BT
+
+Refer to Intake door control specification. (HA-
+117)
+
+EL
+
+HA-81 1311
+===== PDF page 83 =====
+TROUBLE DIAGNOSES
+
+PRELIMINARY CHECK 3
+Insufficient cooling
+
+1312
+
+Preliminary Check (Cont'd)
+
+CHECK MODE DOOR OPERA- NG | Go to Preliminary Check 1. (HA-
+TION. ~1 80)
+OK
+A 4
+CHECK INTAKE DOOR OPERA- | NG | Go to Preliminary Check 2. (HA-
+TION. 1 81)
+OK
+A
+CHECK BLOWER MOTOR NG | Go to Preliminary Check 5. (HA-
+OPERATION. “1 84)
+OK
+CHECK MAGNET CLUTCH NG | Go to Preliminary Check 6. (HA-
+OPERATION. "1 85)
+OK
+\ 4
+CHECK COMPRESSOR BELT NG Adjust or replace compressor belt.
+TENSION. ©
+Refer to MA section.
+OK
+A 4
+CHECK AIR MiX DOOR OPERA- NG Go to Preliminary Check 7. (HA-
+TION. "1 86)
+| OK
+CHECK COOLING FAN MOTOR NG | Go to EC section.
+OPERATION. o
+OK
+Y
+CHECK REFRIGERATION CYCLE [NG | Go to Performance Test Diag-
+PRESSURE WITH MANIFOLD "| noses. (HA-31)
+GAUGE CONNECTED.
+Refer to Performance Chart. (HA-
+33)
+OK
+A 4
+CHECK FOR EVAPORATOR COIL [NG | Go to Preliminary Check 6. (HA-
+FREEZE UP. "| 85)
+1. Confirm center vent air is dis-
+OK
+charged sufficiently. (Freezes up.)
+OK
+{Does not freeze
+up.) Y
+Replace compressor.
+4
+CHECK DUCTS FOR AIR LEAKS. NG | Repair air leaks.
+
+OK
+
+A
+
+PERFORM TEMPERATURE SET-
+
+TING TRIMMING.
+
+1. Set up AUXILIARY MECHANISM
+mode in self-diagnosis.
+
+2. Press (COLD) switch at
+desirable times.
+
+HA-82
+===== PDF page 84 =====
+TROUBLE DIAGNOSES
+Preliminary Check (Cont'd)
+
+PRELIMINARY CHECK 4 NG —
+I fficient heati CHECK MODE DOOR OPERA- | Perform Preliminary Check
+nsutticient heating TION. ”1 1. Refer to HA-80.
+OK
+r NG Gl
+CHECK BLOWER MOTOR | Perform Preliminary Check
+OPERATION. "| 6. Refer to HA-84.
+ox WA
+4
+CHECK THE FOLLOWING: NG Repair/replace as neces- EM
+® Engine coolant level (Refer sary.
+to MA section.)
+® Hoses for leaks or kinks LG
+e Radiator cap (Refer to LC
+section.)
+® Air in cooling system. Ee
+OK
+Y BE
+CHECK AIR MIX DOOR NG | perform Preliminary Check
+OPERATION. "| 7. Refer to HA-86.
+Refer to HA-108. CL
+OK
+y
+CHECK DUCTS FOR AIR NG Repair leaks. MT
+LEAKS. "
+OK AT
+y
+CHECK BY FEEL THE 2A
+HEATER INLET AND OUTLET
+HOSES.
+Hot inlet Both hoses RA
+Warm outlet warm
+y y
+Check thermostat Check heater hoses for BR
+installation. proper installation.
+OK OK SI
+y Note s Note
+RS
+Replace thermostat. Back flush heater core, drain
+Refer to LC section and refill coolant. Retest.
+(“Thermostat”,
+“ENGINE COOLING Hot inlet Both hoses
+SYSTEM”). Warm outlet warm
+y Y
+SYSTEM OK Replace heater core.
+EL
+Note: To avoid unnecessary service of heating system,
+first perform TEMPERATURE SETTING TRIMMING.
+Refer to “AUXILIARY MECHANISM”, “Self-diagnosis”. IDX
+(HA-79)
+1313
+
+HA-83
+===== PDF page 85 =====
+1314
+
+TROUBLE DIAGNOSES
+
+PRELIMINARY CHECK 5
+
+Preliminary Check (Cont'd)
+
+Blower motor operation is malfunctioning.
+
+® Perform Self-diagnosis STEP 1 before referring to the following flow chart.
+
+CHECK SENSOR CIRCUIT.
+
+Set up Seif-diagnosis STEP 2.
+
+Is each sensor circuit normal?
+
+Code No. 20 should be indicated on the dis-
+play after approx. 3 seconds.
+
+No | CHECK SENSOR CIRCUIT IN DETAIL ACCORDING TO THE DIAG-
+"| NOSTIC PROCEDURE BELOW CORRESPONDING TO EACH CODE
+
+Yes
+
+Y
+
+NO.
+
+Code No. How to repair ae
+21 Go to Diagnostic Procedure 1. HA-95
+ac Go to Diagnostic Procedure 2. HA-96
+oH Go to Diagnostic Procedure 3. HA-97
+25 Go to Diagnostic Procedure 4. HA-98
+2b Go to Diagnostic Procedure 5. HA-99
+2! Go to Diagnostic Procedure 1. HA-95
+-22 Go to Diagnostic Procedure 2. HA-96
+a Go to Diagnostic Procedure 3. HA-97
+-25 Go to Diagnostic Procedure 4. HA-98
+26 Go to Diagnostic Procedure 5. HA-99
+
+nostic Procedures.
+
+Are sensor circuits for ambient sensor, in-vehicle sensor and intake
+sensor operating normally? If malfunction is suspected, check tem-
+perature detected by each sensor using Self-diagnosis STEP 5. Con-
+firm the temperature is within normal range before performing Diag-
+
+CHECK BLOWER MOTOR OPERATION.
+
+Set up Self-diagnosis STEP 4.
+
+Does blower speed change according to each
+code No.?
+
+Cod
+
+no. Hi] 2 | 43 {uy [us [us
+Blower )
+
+motor | Low Middle Middle low High
+speed 9
+
+No
+
+» Go to Diagnostic Procedure 7. (HA-102)
+
+Yes
+
+\d
+
+Is engine coolant temperature below 50°C
+(122°F) and ambient temperature below 15°C
+(69°F)?
+
+No | Blower motor operation is normal.
+Refer to Fan speed control specifica-
+tion. (HA-119)
+
+Ad
+
+Yes
+
+Ad
+
+IS BLOWER MOTOR CONTROLLED UNDER
+STARTING FAN SPEED CONTROL?
+Refer to Starting fan speed control. (HA-119)
+
+No | Check thermal transmitter.
+Refer to EL section.
+
+Me
+
+| Yes
+
+Blower motor operation is normal.
+
+HA-84
+===== PDF page 86 =====
+TROUBLE DIAGNOSES
+Preliminary Check (Cont'd)
+
+PRELIMINARY CHECK 6
+
+Magnet clutch does not engage.
+Perform Self-diagnosis STEP 1 before referring to the following flow chart.
+
+CHECK SENSOR CIRCUIT. No , | CHECK SENSOR CIRCUIT IN DETAIL ACCORDING TO THE DIAG- .
+Set up Self-diagnasis STEP 2. “| NOSTIC PROCEDURE BELOW CORRESPONDED TO EACH CODE i
+Is each sensor circuit normal? NO.
+Code No. 20 should be indicated on the dis- MA
+play after approx. 3 seconds. Code No. Hew 0 repair Reference ut
+page
+Yes
+i i 1 -
+ci Go to Diagnostic Procedure 1. HA-95 EM
+22 Go to Diagnostic Procedure 2. HA-96
+Pate Go to Diagnostic Procedure 3. HA-97 L C
+es Go to Diagnostic Procedure 4. HA-98
+cb Go to Diagnostic Procedure 5. HA-99 EC
+—! Go to Diagnostic Procedure 1. HA-95
+-22 Go to Diagnostic Procedure 2. HA-96
+-24 Go to Diagnostic Procedure 3. HA-97 EE
+-25 Go to Diagnostic Procedure 4. HA-98
+-26 Go to Diagnostic Procedure 5. HA-99 CL
+Are sensor circuits for ambient sensor, in-vehicle sensor and intake
+sensor operating normally? If malfunction is suspected, check tem- Ik
+perature detected by each sensor using Self-diagnosis STEP 5. Con-
+firm the temperature is within normal range before performing Diag-
+nostic Procedures. AT
+v FA
+CHECK MAGNET CLUTCH OPERATION. No . | CHECK REFRIGERANT. NG | Check refrigerant
+Set up Self-diagnosis STEP 4. "| Connect manifold gauge, then check sys- "| leaks. _
+Does magnet clutch operate according to each tem pressure. RA
+code No.? OK
+Code BR
+No.
+acta [HE [HR u3 | YY | us | HE
+tor
+Sill
+orator ON | on | OFF | OFF | ON | ON y
+Go to Diagnostic Procedure 8. (HA-104)
+Yes RS
+BT
+
+Magnet clutch control system is normal.
+
+Refer to MAGNET CLUTCH CONTROL. (HA-
+120) HA |
+
+HA-85 1315
+===== PDF page 87 =====
+1316
+
+TROUBLE DIAGNOSES
+
+PRELIMINARY CHECK 7
+
+Preliminary Check (Cont'd)
+
+Discharged air temperature does not change.
+Perform Self-diagnosis STEP 1 before referring to the following flow chart.
+
+CHECK SENSOR CIRCUIT.
+
+Set up Self-diagnosis STEP 2.
+
+Is each sensor circuit normal?
+
+Code No. 20 should be indicated on the dis-
+play after approx. 3 seconds later.
+
+A 4
+
+No | CHECK SENSOR CIRCUIT IN DETAIL ACCORDING TO THE DIAG-
+NOSTIC PROCEDURE BELOW CORRESPONDING TO EACH CODE
+
+Yes
+
+\4
+
+CHECK AIR MIX DOOR OPERATION.
+
+Set up Self-diagnosis STEP 4.
+
+Does discharged air temperature change accord-
+ing to each code No.?
+
+qi | 92 [43 | 44 [us | us
+Full cold Full hot
+
+Yes No
+
+v
+Air mix door control sys-
+tem is normal.
+
+Refer to Air mix door
+control specification.
+(HA-132)
+
+NO.
+
+Code No. How to repair an
+ad Go to Diagnostic Procedure 1. HA-95
+ce Go to Diagnostic Procedure 2. HA-96
+cy Go to Diagnostic Procedure 3. HA-97
+29 Go to Diagnostic Procedure 4. HA-98
+26 Go to Diagnostic Procedure 5. HA-99
+-c! Go to Diagnostic Procedure 1. HA-95
+-oZ Go to Diagnostic Procedure 2. HA-96
+-cY Go to Diagnostic Procedure 3. HA-97
+
+-25 Go to Diagnostic Procedure 4. HA-98
+-26 Go to Diagnostic Procedure 5. HA-99
+
+nostic Procedures.
+
+Are sensor circuits for ambient sensor, in-vehicle sensor and intake
+sensor operating normally? i malfunction is suspected, check tem-
+perature detected by each sensor using Self-diagnosis STEP 5. Con-
+firm the temperature is within normal range before performing Diag-
+
+CHECK AIR MIX DOOR MECHANISM.
+Refer to CONTROL LINKAGE ADJUSTMENT.
+(HA-108)
+
+NG | Repair or adjust.
+
+A 4
+
+OK
+
+A 4
+
+Go to Diagnostic Procedure 5. (HA-99)
+
+HA-86
+===== PDF page 88 =====
+TROUBLE DIAGNOSES
+Preliminary Check (Cont'd) ;
+
+PRELIMINARY CHECK 8
+
+Noise
+Check where noise comes from.
+@l
+v y y y MA
+Blower motor Compressor Expansion valve Refrigerant line Belt
+EM
+y y 4
+Check for noise in Inspect the com- Replace expan- LG
+all modes and pressor clutch sion valve.
+temperature set- and pulley and
+tings. idler pulley. EGC
+Noise is OK NG
+constant.
+4 h 4 A 4 y FE
+Check blower Replace com- The line is fixed The line is not
+motor for for- pressor clutch directly to the fixed. CL
+eign particles. and pulley. body.
+Refer to
+HA-129. MT
+\ 4 Ad A 4 4
+Check biower Check disc-to- Fix the line with Fix the line tightly.
+motor and fan pulley clearance. rubber or some AT
+for wear. Refer to HA-132. vibration
+absorbing .
+OK material. FA
+y
+2,
+Check and adjust v RA
+lubricant.
+Refer to HA-123. BR
+OK
+\ 4 A 4 Ad
+Replace compres- The belt vibra- Side of belt is ST
+sor and liquid tion is intense. worn out.
+tank.
+RS
+Noise is 4 y
+intermittent. Readjust belt The pulley center
+h 4 tension. does not match. BT
+Check air dis- Refer to MA Readjust the pul-
+charge ducts section ley center.
+for obstruc- (“Checking
+tions, foreign Drive Belts”,
+materials or air “ENGINE
+leakage. MAINTE- EL
+NANCE”).
+
+HA-87 1317
+===== PDF page 89 =====
+TROUBLE DIAGNOSES
+
+Harness Layout
+ENGINE COMPARTMENT
+
+7 Relay box-1
+
+\& INEZ
+
+IZ] Fuse SN \
+
+Dh A/C (AIR CON) \
+
+= RR
+
+= yn
+
+Relay box-1J} =e
+= lies
+ae T= = fa Wil
+dT coon ing | fan motor E] dL i
+
+Sng,
+
+NN Fuse ” ioc
+2 | 7
+
+pI
+
+{—Relay box-2 [¢
+ee A ——
+
+Cooling fan relay-3 | -3 (E62)
+
+__ Cooling fan ela) a
+
+Dl Liquid tank, ~- [8 Relay box-2
+edd =
+
+Te pressure & swi witch
+
+1318 HA-88
+
+RHAO98FE
+===== PDF page 90 =====
+TROUBLE DIAGNOSES
+Harness Layout (Cont'd)
+
+PASSENGER COMPARTMENT
+
+I] Control unit [E) Mode door motor Sunload sensor
+
+Mode door motor M112)
+
+Defroster @l
+
+grille RH
+/ :
+
+a
+ee
+
+_ _
+— |= MA
+Fett
+
+Go =
+
+ee EM
+
+I nt -
+
+1 _ LC
+
+[5] Intake door motor E@
+J, HI
+“Intake door motar (M69)
+FE
+GL
+MIT
+AT
+FA
+RA
+Fuse block [J] Fan control BR
+amp.
+Intake sensor I3 ST
+Air mix o Aspirator
+ir mix door
+motor [3 Blower a
+@n3 RS
+[5] Fuse block [€] in-vehicle sensor [d intake sensor
+= 3 Instrument | Br
+S= 35 finisher
+om J vu J es }
+55a Bark
+SESU
+cao
+SEL
+AY — = ~~ _
+-— In-vehicle sensor (Wa) TT
+[DX
+
+Blower motor
+
+ia AIG (4A GON)
+
+SHA968E
+
+HA-89 1319
+===== PDF page 91 =====
+TROUBLE DIAGNOSES
+
+IGNITION SWITCH
+
+Circuit Diagram
+
+BATTERY
+
+BLOWER
+MOTOR
+
+{ACV—
+FICD
+SOLENCID
+VALVE
+
+FAN
+CONTROL
+AMP.
+
+FUSE
+
+STAIR
+[ CONDITIONER
+
+RELAY
+
+3
+
+COMPRESSOR
+
+21
+
+ECM
+(ECCS CONTROL
+MODULE)
+
+To cooling fan
+
+———~
+system
+
+TRIPLE
+PRESSURE
+SWITCH
+
+ol
+
+ON or START
+Fuse | /| Fuse
+AIR MIX
+DOOR MOTOR
+26 27 33
+To illumination [ 24
+system -— 25
+AMBIENT MODE DOOR
+SENSOR MOTOR
+rs
+ANN 2
+NAL 18
+SUNLOAD ®
+SENSOR 21
+>
+IN-VEHICLE
+SENSOR
+32
+t——vo——3 INTAKE DOOR
+INTAKE S MOTOR
+SENSOR =
+TN = 36 Mr
+Qvy 1 2 28
+[&)
+~
+<C
+8
+18
+n 19
+THERMAL
+TRANSMITTER 34
+Juco
+L 35
+22
+14
+
+1320
+
+HA-90
+
+ik
+
+To cooling fan
+
+system
+
+© : For Canada
+
+MHA709A
+===== PDF page 92 =====
+TROUBLE DIAGNOSES
+
+Wiring Diagram — A/C, A —
+
+IGNITION SWITCH ] HA-A/C, A-01
+ON or START BATTERY
+y @l
+Refer to
+§ 7.5A § 7.5A er BLOCK | £[.POWER.
+16
+[i] i]
+P Y/L B [EM
+LC
+' LY
+agi CN Ee
+P YL LY RY FE
+[al el Bal Ie]
+IGN BAT LIGHT ILL GL
+A/C AUTO AMP.
+VACTR SIG GND Ga MT
+IE [KE EA] 4];
+LAW L/8 B B
+| {> : For Canada AT
+® "
+.
+Ea RA
+en | A
+4 E10
+B
+I BR
+LW UB B LAW LB B ® )
+1 = I= C1 =] I=] I l rn 8T
+MODE AIR MIX Rn
+M
+4 4 1 LCL RS
+M13) M73) 1d
+BT
+Refer to last page (Foldout page).
+«
+M112) , (M113)
+Ww Ww
+[EL
+mmm mm mmm mmm
+I [oo [Amn]
+1 [28]27]26]25]24] 23] 22] 21 DEB HEBBAEHE
+1 [s6[3s [alae 3130 7&2) mEEIEEDEBEEEA IDX
+I GY GY 1
+
+MHA710A
+
+HA-91 1321
+===== PDF page 93 =====
+TROUBLE DIAGNOSES
+Wiring Diagram — A/C, A — (Cont'd)
+
+HA-A/C ,A-02
+AMBIENT SUNLOAD IN- INTAKE
+SENSOR SENSOR SENSE SENSOR
+[JE] Lz] = 5 IL He = =
+OR/B pr
+[E22 DE)
+OR/B WC
+OR/B il a
+[21 I ol Em =
+AMB SENS SUN NCAR INTAKE
+SENS GND SENS SENS SENS AIC
+AUTO AMP.
+INTAKE ~~ INTAKE INTAKE INTAKE INTAKE WIT :
+CODE#2 CODE#2 CODE#1 ACTR+  ACTR- SENS
+EE KE YE J F=:3  EE3 Gel]
+YR Y/B Y L G/B LB
+y Y/R Y/B Y L G/B Xx
+LIE [nose z
+DOOR
+MOTOR
+[Ex]
+B
+1 UB
+x 1011 jm]
+B B B B THERMAL
+i TRANSMITTER
+4 = 1 =
+M13) (M73 Mi
+- Refer to last page (Foldout page).
+1 [28]e7]zs[25 ea [28222 10[8]8[7]|6]5[4]3
+aE wo HC GS TE El pA sefralralirlie fe iafralral mr] Ud 1
+I GY GY |
+T[e]a]4fk=_ _—I516]7]8 6[7] © av -
+9 [1o[11]12[13]14]15]16]17]18][19]20] 1]5[3]2]4 (DED =
+
+MHA711A
+
+1322 HA-92
+===== PDF page 94 =====
+TROUBLE DIAGNOSES
+
+Wiring Diagram — A/C, A — (Cont'd)
+HA-A/C,A-03
+
+IGNITION SWITCH
+ON or START BATTERY
+
+Refer to EL-POWER.,
+
+FUSE BLOCK 7.57
+15A 15A 7.5A | (J/B)
+
+~
+lo]
+
+{
+ada
+6 B
+
+Y/B
+
+So JAR
+BAW CONDITIONER
+0 RELAY EC
+E72 =
+IGN2 AC il [La]
+AS PER B/R Y/B
+
+FAN FAN Ms) BIE
+- bl cone | CONNECTOR FE
+
+| ESE] EA -7
+LY LW LG/R [EN] [i] (E50 el
+LW B/R it
+
+vod HE tre
+3A
+F37 1
+® LG/R B/R Lh MT
+Y/B Y/B
+| ] =) To EC-COOL/F Eid
+LY L/w LG Fa7 AT
+Al
+[en I Ir I iz]
+
+TRIPLE- ACRLY |ECM [ml
+LOW HIGH OFF | PRESSURE (ECCS IACV- EA
+Y » ON SWITCH CONTROL FICD
+MODULE) SOLENOID
+FAN [8] NORMAL T ARCON Y/B and E
+1 2 Refer t E38
+cova TL TED LEE) TEE Ly 2
+ws a G/B B/P B
+™ I Lg] E13 1]
+1
+B B B B B ® SY
+ho a COMPRESSOR | l
+il 4 i 2
+GD IRE) = Fig RS
+Refer to last page (Foldout page). ~
+= o o Bi
+2 282726252423] 22] 21 7112 71] 2) , E101
+UG) JS Ci
+31% 7 36]35[34]as]ee]3 joes] To EEA IEA
+F101
+[1 : In 5] — <1
+11] = T12]3T4 -
+Dew ERE Epo cl
+B W 3 L PU BR
+71]2]3]4 ES IDX
+\5l6]7]8 =
+
+MHA712A
+
+HA-93 1323
+===== PDF page 95 =====
+_TROUBLE DIAGNOSES
+
+Main Power Supply and Ground Circuit Check
+POWER SUPPLY CIRCUIT CHECK FOR AUTO A/C
+SYSTEM
+
+Check power supply circuit for auto air conditioning system.
+Refer to “POWER SUPPLY ROUTING” in EL section and Wir-
+ing Diagram.
+
+AUTO AMP. (LCU) CHECK
+
+EE (5) Check power supply circuit for auto amp. (LCU) with ignition switch
+
+Auto amp. ON. }
+connector 1. Disconnect auto amp. (LCU) harness connector.
+i=l 2. Connect voltmeter from harness side.
+H | EET o 3. Measure voltage across terminal @, @ , @3 and body ground.
+Voltmeter terminal
+
+BRW] | PIL Voltage
+2 2
+® ol PD @ Body ground Approx. 12V
+
+RHA398GC
+
+1324
+
+oisconmEcT Check body ground circuit for push control unit.
+E> 6 1. Disconnect push control unit harness connector.
+- 2. Connect ohmmeter from harness side.
+
+Auto amp. Pa .
+connector 3. Check for continuity between terminal 8 and body ground.
+=
+TT = I Ohmmeter terminal
+CLT 13] 1] ® 5 Continuity
+Body ground Yes
+
+LEN
+
+RHA430GC
+
+HA-94
+===== PDF page 96 =====
+TROUBLE DIAGNOSES
+
+Ambient sensor
+
+Diagnostic Procedure 1
+
+SYMPTOM: Ambient sensor circuit is open or shorted. (2; or
+-2! is indicated on display as a result of conducting Self-diag-
+
+nosis STEP 2.)
+
+connector
+i)
+B/Y
+|
+> © §y
+RHA030G
+IB] ag) DISCONNECT G )
+4 & &
+Ambient sensor Auto amp.
+connector connecto
+BH =
+B/Y Ix
+B/Y
+=
+RHA399GB
+
+" CAE) [A
+
+Ambient sensor Auto amp.
+connector connector
+ah op
+HHT
+33)
+OR/B |
+OR/B
+RHA400GB
+
+CHECK AMBIENT SENSOR CIRCUIT No R Disconnect auto amp.
+BETWEEN AMBIENT SENSOR AND "| (LCU) harness connector.
+AUTO AMP. (LCU).
+Disconnect ambient sensor harness con-
+nector.
+Do approx. 5 volts exist between ambien v Note
+sensor harness terminal @ and body rr —
+ground? Check circuit continuity
+between ambient sensor
+Yes hamess terminal @ and
+auto amp. (LCU} harness
+terminal @.
+Continuity should exist.
+If OK, check harness for
+short.
+OK
+v Y
+Disconnect auto amp. (LCU) harness con- Replace auto amp. (LCU).
+nector.
+Bj \ 4 Note
+Check circuit continuity between ambient
+sensor harness terminal @ and auto amp.
+(LCU) harness terminal @.
+Continuity should exist.
+If OK, check harness for short.
+OK
+v
+NG | Replace ambient sensor.
+
+CHECK AMBIENT SENSOR.
+
+(Refer to Control System Input Compo-
+nents.) (HA-111)
+
+OK
+
+4
+
+Replace auto amp. (LCU).
+
+Note:
+
+If the result is NG or No after checking circuit continuity, repair harness
+
+or connector.
+
+HA-95
+
+MA
+
+EM
+
+LC
+
+EC
+
+1325
+===== PDF page 97 =====
+TROUBLE DIAGNOSES
+
+Diagnostic Procedure 2
+
+1326
+
+DISCONNECT y
+W. EE ) SYMPTOM: In-vehicle sensor circuit is open or shorted. (22 or
+In-vehicle sensor -2¢ is indicated on display as a result of conducting Self-diag-
+connector nosis STEP 2.)
+©
+BN CHECK IN-VEHICLE SENSOR CIRCUIT | No | Disconnect auto amp.
+BETWEEN IN-VEHICLE SENSOR AND "| (LCU) harness connector.
+— AUTO AMP. (LCU).
+— = Disconnect in-vehicle sensor harness con-
+RHA033G| | nector.
+. it ist pet in-vehic!
+Do approx. 5 volts exis between in-vehicle i Note
+B DISCONNECT sensor harness terminal 2 and body
+EE 3) ground? Check circuit continuity
+HS. between in-vehicle sensor
+In-vehicle sensor Auto amp. Yes harness terminal 3 and
+connector connector auto amp. (LCU) hamess
+5 TT = terminal 3 .
+oo dl | [1] Continuity should exist.
+BY If OK, check harness for
+BY
+[a] short.
+J OK
+RHA401GB
+y y
+DISCONNEGT 772 Disconnect auto amp. (LCU) harness con- Replace auto amp. (LCU).
+€ @ ||
+in-vehicle sensor Auto amp.
+connector connector
+=
+1] 3 IIT T1171]
+1 |B v Note
+ORAL OR/L Check circuit continuity between in-vehicle
+[Q] sensor harness terminal @ and auto amp.
+| (LCU) harness terminal (i).
+RUA402GE Continuity should exist.
+If OK, check harness for short.
+OK
+CHECK IN-VEHICLE SENSOR. NG | Replace in-vehicle sensor.
+
+(Refer to Control System Input Compo-
+nents.) (HA-110)
+
+OK
+
+Replace auto amp. (LCU).
+
+Note:
+If the result is NG or No after checking
+or connector.
+
+HA-96
+
+circuit continuity, repair harness
+===== PDF page 98 =====
+TROUBLE DIAGNOSES
+
+AE
+
+Intake sensor
+
+connector (M54)
+
+: RAW
+| ee —
+
+I
+
+0)
+
+@®
+
+RHA431G
+
+Diagnostic Procedure 3
+
+diagnosis STEP 2.)
+
+SYMPTOM: Intake sensor circuit is open or shorted. (74 or
+-24is indicated on auto amp. as a result of conducting Self-
+
+CHECK INTAKE SENSOR CIRCUIT
+
+No
+
+| Disconnect auto amp.
+
+BETWEEN INTAKE SENSOR AND AUTO
+AMP. (LCU).
+
+Disconnect intake sensor harness connec-
+tor.
+
+Do approx. 5 volts exist between intake
+
+E
+
+Intake sensor
+
+connector
+
+:
+
+Auto amp. connector
+—
+| [im] ||
+
+[11]
+TTT
+
+R/W
+
+[]
+[1]
+
+sensor harness terminal No.) and body
+ground?
+
+Yes
+
+"| (LCU) harness connector.
+
+v
+
+Note
+
+Check circuit continuity
+between intake sensor har-
+ness terminal No.(® and
+auto amp. (LCU) harness
+terminal No. .
+Continuity should exist.
+if OK, check harness for
+short.
+
+OK
+
+A 4
+
+R/W
+
+1 ]
+1 IL J
+RW
+
+[Q]
+
+RHA433GB
+
+B/Y Q
+\4
+RHA432G8| | Disconnect auto amp. (LCU} harness con-
+nector.
+mm
+or) DISCONNECT
+AEE
+Intake sensor Auto amp. connector E \ 4 Note
+nnector (M54 — Pa -
+connecto [=]! Check circuit continuity between intake
+
+sensor harness terminal No.@ and auto
+amp. (LCU) harness terminal No.{).
+Continuity should exist.
+
+If OK, check harness for short.
+
+OK
+
+Replace auto amp. (LCU).
+
+CHECK INTAKE SENSOR.
+
+NG
+
+y
+
+(Refer to HA-112.)
+
+OK
+
+Replace auto amp. (LCU).
+
+Note:
+
+If the result is NG or No after checking circuit continuity, repair harness
+
+or connector.
+
+HA-97
+
+Replace intake sensor.
+
+@l
+
+VIA
+
+LC
+
+EG
+
+RE
+
+@)
+
+=)
+=
+=
+
+AT
+
+EL
+
+IDX
+
+1327
+===== PDF page 99 =====
+TROUBLE DIAGNOSES
+
+1328
+
+CHECK SUNLOAD SENSOR.
+
+A 4
+
+(Refer to Control System Input Compo-
+
+nents.) (HA-111)
+
+OK
+
+\4
+
+Replace auto amp. (LCU).
+
+Note:
+
+Eh Te Diagnostic Procedure 4
+Vr. EE « SYMPTOM: Sunload sensor circuit is open or shorted. (25 or
+Sunload sensor -2¢ is indicated on display as a result of conducting Self-diag-
+connector nosis STEP 2.)
+5
+) B/Y CHECK SUNLOAD SENSOR CIRCUIT No | Disconnect auto amp.
+BETWEEN SUNLOAD SENSOR AND "[ {LCU) harness connector.
+AUTO AMP. (LCU).
+® Of = Disconnect sunload sensor harness con-
+RHA034G| | hector.
+Do approx. 5 volts exist between sunload I Note
+EB DISCONNECT sensor harness terminal @ and body A —
+“A E> (&) ground? Check circuit continuity
+HS. y between sunload sensor
+Sunload sensor Auto amp. Yes harness terminal @ and
+connector connector auto amp. (LCU) harness
+= ;
+= EREEN 0] terminal @.
+FT I] Continuity should exist.
+BY If OK, check harness for
+B/Y
+a short.
+OK
+RHA403GB
+v
+DISCONNECT 72) Disconnect auto amp. (LCU) harness con- Replace auto amp. (LCU).
+AE @ ||
+Sunload sensor Auto amp.
+connector connector
+iT [1] T
+1 PITT 1]
+iF [TT F1] E 4 Note
+OR OR Check circuit continuity between sunload
+[al sensor harness terminal @ and auto amp.
+(LCU) harness terminal Gi.
+RHACO4GE Continuity should exist.
+If OK, check harness for short.
+OK
+4
+NG | Replace sunload sensor.
+
+If the result is NG or No after checking circuit continuity, repair harness
+
+or connector.
+
+HA-98
+===== PDF page 100 =====
+TROUBLE DIAGNOSES
+
+CONNECT
+® EE
+Auto amp.
+connector
+
+[=
+|
+[
+
+I1
+[|
+
+BT]
+iam
+
+Diagnostic Procedure 5
+
+operate normally.
+{2g or -2§ is indicated on auto am
+Self-diagnosis STEP 2.)
+
+SYMPTOM: Mode door motor and/or air mix door motor do not
+
+p. as a result of conducting
+
+HA-99
+
+L/w No fi
+Sl pC mE. PPE FOR AUTO | Replace auto amp. (LCU). MA
+[DO Do approx. 12 volts exist between auto
+= amp. (LCU) terminal @ and body ground? =
+SHAQS7EA EM
+Yes
+E [) CONNECT p— B \4
+4 E 3) CHECK SIGNAL AUTO AMP. (LcU) SIDE. | N° [Replace auto amp. (LCU). LC
+ad J Do approx. 5.5 volts exist between auto v
+Auto amp. amp. (LCU) terminal @» and body ground?
+connector
+= pe EC
+[i]
+EERE Note
+CHECK POWER SUPPLY FOR MOTOR FE
+SIDE.
+LB Do approx. 12 volts exist between door
+motor (LCU) harness terminal (I and body ,
+® On ground? GL
+= SHA958EA
+| Yes
+CONNECT G pay ID] Note MT
+HS. & Co) CHECK SIGNAL MOTOR SIDE.
+Mode door motor Do approx. 5.5 volts exist between door
+connector motor (LCU) terminal @ and body AT
+or air mix door ground?
+motor
+connector Yes
+I’
+Lw v Note FA
+CHECK MOTOR GROUND CIRCUIT.
+E Check harness continuity between door
+motor (LCU)} harness terminal & and body =r
+PD © ground.
+= SHA959EA
+2 BR
+Io] £ &) oo Disconnect the mode door motor and air
+HS. ] mix door motor connector.
+Mode door motor Sil
+connector I
+or air mix door motor CHECK THE MODE DOOR MOTOR Mode door motor operates nor-
+connector OPERATION. mally. BS
+® Reconnect the mode door motor and con- | OK A
+& firm the motor operation. > Replace the air mix door
+UB :
+NG
+EUs © RE BY
+= Disconnect the mode door motor,
+SHAQ60EA
+[7 m= -— Y Air mix door motor operates nor- 3
+V,. ED « CHECK THE AIR MIX DOOR MOTOR ol P
+HS. OPERATION. y a
+Mode door motor Reconnect the air mix door motor and con- | OK =
+connector firm the motor operation. > Replace the mode door
+or air mix door motor NG
+connector v IDX
+Replace the auto amp. (LCU).
+Note:
+If the result is NG or No after checking circuit continuity, repair harness
+SHAS61EA| or connector.
+1329
+===== PDF page 101 =====
+1330
+
+TROUBLE DIAGNOSES
+
+Intake door DISCONNECT
+LLTTS connector (M69) LAER
+B 6)
+- SHA971E
+[B] (=) CONNECT
+AE C
+Auto amp.
+connector
+{
+I 8 Seif-diagnosis
+[ i STEP 4
+@®
+RHA413GB
+Intake door motor
+connector (Mes) ins) yay
+CTT H.S.
+L H
+G/B
+4 7 511 al H
+1
+1
+/ :
+TTI
+vi YIRE vBBY 1
+a :
+Auto amp. pms.
+connector Ms8) y/R
+=a
+[18] ]
+HEEER
+Y/B Y
+[]
+Auto amp. !
+connector (457) yg Teme we
+—_— .
+Je i
+i 2 :
+36 !
+N08 :
+1
+Nm x
+SHAQ72E
+
+Diagnostic Procedure 6
+
+SYMPTOM: Intake door motor does not operate normally.
+eo Perform Self-diagnosis STEPS 1, 2 and 4 before referring
+
+to the flow chart.
+
+Note
+
+CHECK BODY GROUND CIRCUIT FOR
+INTAKE DOOR MOTOR.
+
+Disconnect intake door motor harness
+connector.
+
+Does continuity exist between intake door
+motor harness terminal & and body
+ground?
+
+Yes
+
+y
+
+Reconnect intake door motor harness
+connector.
+
+8]
+A 4
+
+Note
+
+CHECK FOR AUTO AMP. (LCU) OUT-
+PUT.
+
+Set up Self-diagnosis STEP 4.
+
+Measure voltage across auto amp. (LCU)
+harness terminals and body ground.
+
+NG
+
+_| Check circuit continuity
+
+Code Terminal No. Condi- | Voltage
+No. @ re) tion V
+® 5
+Hi REC
+qo , ® 0
+5
+43 Body 20%
+G9, G® | ground REC 0
+SY ® 5
+4s FRE ——
+48 @, 0
+
+5V: Approx. 5V
+If OK, check harness for short.
+
+OK
+
+y
+
+INSPECTION END
+
+Note:
+
+between each terminal on
+auto amp. (LCU) and on
+intake door motor.
+
+Terminal No.
+Auto Intake | Conti-
+amp. door nuity
+{LCU) motor
+
+® @
+
+@® @
+
+® ®@
+
+Yes
+
+@® @
+
+@ @
+
+@® ®
+
+If OK, check harness for
+
+short.
+! OK
+
+(Go to next page.)
+
+If the result is NG or No after checking circuit continuity, repair harness
+
+or connector.
+
+HA-100
+===== PDF page 102 =====
+TROUBLE DIAGNOSES
+Diagnostic Procedure 6 (Cont'd)
+
+D] CAE CONNECT ®
+&) Self-diagnosis
+STEP 4
+Auto amp. pa D
+connector (M97) - @l
+= CHECK FOR AUTO AMP. (LCU) OUTPUT. [NG | Replace auto amp. (LCU).
+[TTT 2g Set up Self-diagnosis STEP 4. "
+CLIT TT TT] Measure voltage across auto amp. (LCU) MA
+harness terminals and body ground.
+x Terminal N "
+Code érminal NO. | Gondi- | Voltage =M
+No. ® o tion v =
+ij @ 12
+Auto amp. Yi
+=i STEP 4 Body
+EHS di | ® food ;
+5 4s FRE
+CITT TT 15 Ld up @ 12 EC
+G/B OV: Approx. OV
+PD © 12V: Approx. 12V EE
+OK
+] y
+Replace intake door motor. CL
+RHA415GB,
+MT
+AT
+FA
+BR
+ST
+RS
+BT
+
+EL
+
+IDX
+
+1331
+
+HA-101
+===== PDF page 103 =====
+1332
+
+TROUBLE DIAGNOSES
+
+Fan control amp.
+
+connector
+uy
+
+CONN.
+
+HA
+
+E€
+
+Seif-diagnosis
+
+Auto amp. " Diagnostic Procedure 7
+connector €8D hs. SYMPTOM: Blower motor operation is malfunctioning under
+TTT out of Starting Fan Speed Control.
+| ['T] DISCONNECT
+COLT] EE e Perform Preliminary Check 5 before referring to the fol-
+BR/W lowing flow chart.
+5)
+® © CHECK POWER SUPPLY FOR AUTO | N® [ Check power supply circuit
+AMP. "| and 15A fuses (No. [2] and
+Disconnect auto amp. harness connec- , located in the fuse
+= tor. block).
+RHA416GB| | Do approx. 12 voits exist between auto Refer to EL section (“Wiring
+— amp. harness terminal Gd and body Diagram”, “POWER SUPPLY
+B| ground? ROUTING")
+HS. B| \ 4
+im Fan control amp. CHECK POWER SUPPLY FOR FAN No | cHECK POWER SUPPLY
+| connector CONTROL AMP. * FOR BLOWER MOTOR.
+ww Disconnect fan control amp. harness Disconnect blower motor har-
+connector. ness connector.
+Do approx. 12 volts exist between fan Do approx. 12 volts exist
+® Oo control amp. harness terminal @ and between blower motor har-
++ body ground? ness terminal @ and body
+ground?
+RHA536E Yes
+Yes \ No
+C
+C ; Note Check power sup-
+Td am @ ~ CHECK BODY GROUND CIRCUIT FOR ply circuit and 15A
+Hs. EE Cor) FAN CONTROL AMP. fuses (No. [2] and
+Check harness continuity between fan , located in the
+EA Fan control amp. control amp. harness terminal @ and fuse block). Refer
+3] |} connector M59) body ground. to EL section
+Continuity should exist. (“Wiring Diagram”,
+8 if OK, check harness for short. “POWER SUPPLY
+[Q] ROUTING™).
+v OK
+. F
+1 Reconnect fan control amp. harness Ey Note
+RHA537E| | connector and auto amp. harnesses con- Check circuit continuity
+nector. between blower motor har-
+D] ness terminal I and fan con-
+trol amp. harness terminal (D.
+
+Continuity should exist.
+If OK, check harness for
+
+short.
+J
+
+HS.
+STEP 4
+= |Z Y
+DO CHECK FOR OUTPUT OF AUTO AMP. CHECK BLOWER MOTOR.
+_ Set up Self-diagnosis STEP 4. (Refer to Electrical Compo-
+EE ia Measure voltage across fan control amp. nents Inspection.) (HA-107)
+harness terminal & and body ground. NG
+RHA110F Terminal No.
+Code No. HC) hd v
+¢] .
+Yyi-4s | @ around yb Replace blower motor.
+- Body Approx.
+ES) DISCONNECT R ug ®@ 0! NG
+4 E> «@ ground | 91% _|""»® (Go to next page.)
+7-| Blower motor JC
+connector
+SRW Replace fan control amp.
+\'
+Note:
+& 1 If the result is NG or No after checking circuit continuity, repair harness
+- or connector.
+RHAS39E
+
+HA-102
+===== PDF page 104 =====
+TROUBLE DIAGNOSES
+Diagnostic Procedure 7 (Cont'd)
+
+®
+Fon DISCONNECT !
+AE ©
+Blower motor Fan control amp. Disconnect auto amp. (LCU) and fan con-
+connector conneclor (sD trol amp. harness connector. al
+1 |
+i is
+LW mw v Note MA
+(Ql Check harness continuity between auto
+amp. (LCU) harness terminal @G® and fan
+RHAS40E| | control amp. harness terminal @ . EM
+Continuity should exist.
+If OK, check harness for short.
+[3 DISCONNECT G LC
+A & & Ig
+Fan control amp. Auto amp.
+connector connector Replace auto amp. (LCU). EC
+=
+[TILT 11]
+
+LLL CIT 55] Note:
+
+vy | If the result is NG or No after checking circuit continuity, repair harness BE
+a] Ly or connector.
+CL
+RHA417GB]
+
+MT
+AT
+FA
+BR
+ST
+RS
+BT
+
+BL
+
+HA-103 1333
+===== PDF page 105 =====
+1334
+
+TROUBLE DIAGNOSES
+
+igh
+
+SYMPTOM: Magnet clutch does not engage after performing
+
+Perform Preliminary Check 6 before referring to the flow
+
+Eg Case Diagnostic Procedure 8
+
+T.S.
+Compressor Preliminary Check 6.
+connector Self-di . *
+
+elf-diagnosis
+& STEP 4 chart.
+(Code No. 41)
+Y/B CHECK POWER SUPPLY FOR COM-
+
+PRESSOR.
+1. Disconnect compressor harness connec-
+
+C
+“A&E
+
+A/C relay
+connector (E72)
+
+x)
+|
+
+Y/B
+
+[Q]
+
+No
+
+| Disconnect A/C relay har-
+
+LJ tor.
+RHAB24FC]| | 2, Set up code No.4} in Self-diagnosis
+STEP 4.
+
+3. Do approx. 12 volts exist between com-
+pressor hamess terminal (O and body
+ground?
+
+Compressor Yes
+connector
+&)
+BP v
+Check magnet clutch, coil continuity.
+NG
+RHA418GB
+
+© AES
+
+A/C relay
+connector (E72)
+
+LDP
+5
+
+LG
+
+il
+
+RHA419GB
+
+Replace magnet clutch assembly.
+Refer to HA-129.
+
+Turn ignition switch OFF to cancel Self-
+
+"| ness connector.
+
+B] v
+
+Note
+
+Check circuit continuity
+between A/C relay harness
+terminal @ and compres-
+sor harness terminal @ .
+Continuity should exist.
+if OK, check harness for
+short.
+
+OK
+
+diagnosis STEP 4.
+
+4
+CHECK POWER SUPPLY FOR A/C No | Check power supply circuit
+RELAY. ”| and 7.5A fuses (No. [16],
+Disconnect A/C relay. located in_the fuse block
+Do approx. 12 volts exist between A/C and No. 1], located in the
+relay harness terminal @ , ® and body fuse and fusible link box).
+ground? Refer to EL section (“Wiring
+Diagram”, “POWER SUP-
+Je PLY ROUTING").
+NG
+
+CHECK A/C RELAY AFTER DISCON-
+
+Y
+
+NECTING IT.
+(Refer to Electrical Components inspec-
+
+tion.) (HA-107)
+v OK
+
+Reconnect A/C relay.
+
+v
+
+®
+{Go to next page.)
+
+Note:
+
+Replace A/C relay.
+
+If the result is NG or No after checking circuit continuity, repair harness
+
+or connector.
+
+HA-104
+===== PDF page 106 =====
+TROUBLE DIAGNOSES
+
+CONNECT
+
+®, EcH Id] fof GonnECTOR]| “AE
+
+12 ED
+
+Diagnostic Procedure 8 (Cont'd)
+
+®
+
+Note
+
+B/R
+
+CHECK COIL SIDE CIRCUIT OF A/C
+RELAY.
+
+No
+
+Check circuit continuity
+
+> between AIC relay harness
+
+Triple-pressure
+
+switch
+
+pressure switch harness terminal @ and
+body ground?
+
+4D
+gly!
+
+G/B
+
+RHAQ14G,
+
+Yes
+
+\4
+
+@ Da approx. 12 volts exist between ECM terminal @ and ECM
+(t a (ECCS control module) harness terminal (ECCS control module) har-
+(2 and body ground? ness terminal @.
+= Yes Continuity should exist.
+RHAS46E If OK, check harness for
+short.
+DSONNECT CHECK TRIPLE-PRESSURE SWITCH. NG | Replace triple-pressure
+yr. . ED @& (Refer to Electrical Components Inspec- switch.
+A/C relay tion.) (HA-107)
+Co 2 ECM cl CONNECTOR | OK
+2
+BR BR v
+[Q] CHECK TRIPLE-PRESSURE SWITCH No | Disconnect ECM (ECCS
+CIRCUIT BETWEEN TRIPLE-PRESSURE control module) harness
+RHA547EA| | SWITCH AND ECM (ECCS CONTROL connector.
+MODULE).
+Disconnect triple-pressure switch harness
+uo connector.
+Vl. EE (5) Do approx. 12 volts exist between triple- Note
+
+Check circuit continuity
+between ECM (ECCS con-
+trol module) harness termi-
+nal @ and triple-pressure
+switch harness terminal 3).
+Continuity should exist.
+
+If OK, check harness for
+short.
+
+OK
+v
+
+Triple- eure
+
+DISCONNECT
+€
+
+Reconnect triple-pressure switch harness
+
+CHECK ECM (ECCS con-
+
+trol moduie).
+
+switch (E25)
+ECM O| CONNECTOR
+21
+G/B
+“| [@
+RHAO015G
+
+cannector.
+
+(Go to next page.)
+
+Note:
+
+If the result is NG or No after checking circuit continuity, repair harness
+
+or connector.
+
+HA-105
+
+Gl
+
+MA
+
+EM
+
+LC
+
+CL
+
+MT
+
+AT
+
+FA
+
+BR
+
+1335
+===== PDF page 107 =====
+TROUBLE DIAGNOSES
+
+Diagnostic Procedure 8 (Cont'd)
+
+'
+
+Disconnect auto amp. (LCU} harness con-
+nector.
+
+v
+
+Note
+
+CHECK AUTO AMP. (LCU) CIRCUIT
+BETWEEN AUTO AMP. (LCU) AND
+TRIPLE-PRESSURE SWITCH.
+
+Do approx. 12 volts exist between auto
+amp. (LCU) harness terminal @ and body
+ground?
+
+No
+
+A 4
+
+Yes
+
+A 4
+
+Replace auto amp. {(LCU).
+
+=) OISCONNECT G
+AEE
+Auto amp.
+connector
+ — )
+[Tl TT 1111]
+Cri
+LG/R
+o of
+RHA420GB
+[1] Nas (5) DISCONNECT
+A HE®
+Triple-pressure Auto amp.
+switch connector (E25) connector
+=]
+4 [2 1 T 111]
+| I 1]
+RHA421GA|
+
+1336
+
+Note:
+
+Check circuit continuity
+between auto amp. (LCU})
+harness terminal @ and
+triple-pressure switch har-
+ness terminal @ .
+Continuity should exist.
+If OK, check harness for
+short.
+
+If the result is NG or No after checking circuit continuity, repair harness
+
+or connector.
+
+HA-106
+===== PDF page 108 =====
+TROUBLE DIAGNOSES
+
+XO PT Electrical Components Inspection
+_ r= BLOWER MOTOR
+— Sy — Check blower motor for smooth rotation.
+IN ie 3 e Ensure that there are no foreign particles inside the intake unit
+
+| Blower motor
+
+pa | A
+Z A
+" RHA244D SM
+
+TRIPLE-PRESSURE SWITCH
+
+7 Shp switch (E25) High-pressure side line LC
+Liquid tank NS CONNECT Terminals pressure Operation | Continuity
+7) kPa (kg/cm?, psi)
+Increasing to EG
+ly 157 - 226 ON Exists.
+Us. Low-pres- (1.6 - 2.3, 23 - 33)
+sure pros @-@ Decreasing to EE
+750 152.0 - 201.0 OFF Does not
+C43) (1.55 - 2.05, 22.0 - exist.
+29.2) cL
+7) SHAB91E Increasing to
+Medi 1,422 - 1,618 ON Exists.
+Secon @.@ | 145-165, 206-235) i
+ox Decreasing to
+side 1,128 - 1,422 off | Dogs nol
+(11.5 - 14.5, 164 - 206) i}
+Decreasing to AT
+1,667 - 2,059 ON Exists.
+High-pres- @ -@ (17 - 21, 242 - 299)
+sure side Increasing to A
+2,452 - 2,844 off | Does not IPA
+(25 - 29, 356 - 412) :
+* For cooling fan motor operation. BA
+A/C RELAY BR
+Check circuit continuity between terminals by supplying 12 volts to
+coil side terminals of the relay.
+ST
+RS
+BY
+AHA233
+EL
+DX
+1337
+
+HA-107
+===== PDF page 109 =====
+1338
+
+TROUBLE DIAGNOSES
+
+Def. mode, \
+
+—
+
+Mode
+otor
+
+door
+
+RHA439E
+
+RHA438G
+
+Control Linkage Adjustment
+
+MODE DOOR
+1. Install mode door motor on heater unit and connect it to main
+harness.
+
+Make sure lever of mode door motor is fitted into the slit of
+mode door link.
+
+2. Set up code No. yg in Self-diagnosis STEP 4.
+
+3. Make sure mode door operates properly when changing from
+code No. 4; toys by pushing DEF switch.
+
+t [i= [TN iC
+Hil 42 | 43 iH | H5 | HE
+VENT B/L B/L FOOT F/D DEF
+AIR MIX DOOR
+1. Install air mix door motor on heater unit and connect it to main
+harness.
+Make sure lever of air mix door is fitted into the slit of air mix
+door link.
+
+2. Set up code No. y; in Self-diagnosis STEP 4.
+3. Make sure air mix door operates properly when changing from
+code No. 4: toys by pushing DEF switch.
+
+HI] 42] 43] 99] 45
+
+Full cold
+
+Full hot
+
+= (Fresh) -
+TTe— vr
+(Recirculation)
+
+Intake doar motor
+
+ ——
+
+TTre—
+
+RHA442EA
+
+INTAKE DOOR
+1. Install intake door motor on intake unit and connect it to main
+
+harness.
+Make sure lever of intake door motor is fitted in the slit of intake
+
+door link.
+2. Set up code No. y; in Self-diagnosis STEP 4.
+
+3. Make sure intake door operates properly when changing from
+code No. 4; toys by pushing DEF switch.
+
+REECE
+
+REC 20% FRE
+
+HA-108
+===== PDF page 110 =====
+SYSTEM DESCRIPTION
+
+Overview of Control System
+The control system consists of a) input sensors and switches, b)
+the auto amp. (microcomputer), and c¢) outputs. The relationship of
+these components is shown in the diagram below:
+
+A/C control unit (built into auto amp.)
+» Temperature switch ~~ | | | i777 A/C LAN system J-
+(Potentio temperature control) Mode door motor : Ventilator door | MA
+* AUTO switch (LCU: Local Control :
+* ECON switch Unit) +! Floor door |
+» Blower switch PBR (Potentio : EM
+* Recirculation switch Balance Resistor) : ’
+* Mode switch built-in mode door ane Defroster door
+* Defroster switch motor :
+* OFF switch : LG
+« Ambient switch Air mix door motor Air mix door
+(LCU: Local Control
+Unit) S
+intake sensor — PBR (Potentio EC
+Auto amp. Balance Resistor)
+(Micro: , built-in air mix door -
+computer oe
+Ambient sensor P mator TS
+| in-vehite sensor — | Intake door motor Hr] Intake door CL
+Sunload sensor — en] Fan control amplifier | Blower motor MT
+Compressor
+Thermal transmitter a clutch) AT
+SHA973E
+RA
+BR
+BY
+
+HA-109
+
+EL
+
+IDX
+
+1339
+===== PDF page 111 =====
+1340
+
+SYSTEM DESCRIPTION
+
+AUTH Eom a" a
+= | BRE | =
+=
+[oS pd Vm i=)
+
+/
+
+In-vehicle sensor
+
+RHA423G
+
+/ unit case
+
+RHA482A
+
+Control System Input Components
+POTENTIO TEMPERATURE CONTROL (PTC)
+The PTC is built into the A/C control unit. It can be set at an inter-
+
+val of 1°C (2°F) through both @® (HOT) and €@ (COLD) control
+switches. Setting temperature is digitally displayed.
+
+IN-VEHICLE SENSOR
+
+The in-vehicle sensor is attached to A/C control finisher. It converts
+variations in temperature of compartment air drawn from an aspi-
+rator into a resistance value. It is then input into the auto amp.
+After disconnecting in-vehicle sensor harness connector, measure
+resistance between terminals 3 and @ at sensor harness side,
+using the table below.
+
+Temperature °C (°F) Resistance kQ
+-15 (5) 12.73
+~10 (14) 9.92
+-5 (23) 7.80
+0 (32) 6.19
+5 (41) 4.95
+10 (50) 3.99
+15 (59) 3.24
+20 (68) 2.65
+25 (77) 2.19
+30 (86) 1.81
+35 (95) 1.51
+40 (104) 1.27
+45 (113) 1.07
+ASPIRATOR
+
+The aspirator is located on heater unit. It produces vacuum pres-
+sure due to air discharged from the heater unit, continuously tak-
+ing compartment air in the aspirator.
+
+HA-110
+===== PDF page 112 =====
+SYSTEM DESCRIPTION
+
+Control System Input Components (Cont'd)
+
+AMBIENT SENSOR
+The ambient sensor is attached to the radiator core support. It
+detects ambient temperature and converts it into a resistance value
+
+which is then input to the auto amp.
+After disconnecting ambient sensor harness connector, measure Gl
+
+resistance between terminals (OD and @ at sensor harness side,
+using the table below.
+
+N i
+; To Temperature °C (°F) Resistance kQ MIA
+nso’ -15 (5) 12.73
+RHA459E -10 (14) 9.92 EM
+-5 (23) 7.80
+0 (32) 6.19 LC
+5 (41) 4.95
+10 (50) 3.99 Ee
+15 (59) 3.24
+20 (68) 2.65 EE
+25 (77) 2.19
+30 (86) 1.81
+cL
+35 (95) 1.51
+40 (104) 1.27
+45 (113) 1.07 wT
+AT
+FA
+RA
+Defroster _— SUNLOAD SENSOR BR
+grille RH The sunload sensor is located on the right defroster grille. It detects
+== sunload entering through windshield by means of a photo diode
+7 = and converts it into a current value which is then input to the auto ST
+<< amp.
+oS = Measure voltage between terminals 1 and @ at vehicle harness
+side, using the table below. RS
+J Input current Output voltage
+=====""{_ Sunload sensor mA Vv BT
+RHA460E 0 5.0
+x Ix
+0.2 3.1 |
+} 2.
+0.3 2 EL
+0.4 1.3
+0.5 0.4
+IDX
+
+e When checking sunload sensor, select a place where sun
+shines directly on it.
+
+HA-111 1341
+===== PDF page 113 =====
+1342
+
+SYSTEM DESCRIPTION
+
+Intake sensor
+
+RHA434G
+
+Control System Input Components (Cont'd)
+
+INTAKE SENSOR
+
+After disconnecting intake sensor harness connector, measure
+resistance between terminals 3) and @ at sensor harness side,
+
+using the table below.
+
+Temperature °C (°F)
+
+Resistance kQ
+
+-20 (4) 16.2
+-10 (14) 9.8
+
+0 (32) 6.0
+10 (50) 3.94
+20 (68) 2.64
+25 (77) 2.12
+30 (86) 1.82
+40 (104) 1.27
+
+HA-112
+===== PDF page 114 =====
+SYSTEM DESCRIPTION
+
+amp.)
+
+od
+
+i
+
+ra
+
+x
+®
+<u>
+
+I
+
+pod oF - =
+Bl 2 ld] 7 ver A bs
+/
+
+In-vehicle sensor
+
+b
+
+RHA423G
+
+AMBIENT TEMPERATURE INPUT
+PROCESS
+
+The auto amp. includes a “processing circuit” for the
+ambient sensor input. When the ambient tempera-
+ture increases quickly, the processing circuit con-
+trols the input from the ambient sensor. It allows the
+auto amp. to recognize the increase of temperature
+only 0.2°C (0.4°F) per 100 seconds.
+
+As an example, consider stopping for a cup of cof-
+fee after high speed driving. Even though the ambi-
+ent temperature has not changed, the ambient sen-
+sor will detect the increase of temperature. The heat
+radiated from the engine compartment can radiate
+to the front grille area. The ambient sensor is
+located there.
+
+Control System Automatic Amplifier (Auto
+
+The auto amplifier has a built-in microcomputer which processes
+information sent from various sensors needed for air conditioning
+operation. The air mix door motor, mode door motor, intake door
+= motor, blower motor, bi-level door motor and compressor are then
+controlled.
+
+The auto amp. is unitized with control mechanisms. Signals from
+various switches and Potentio Temperature Control (PTC) are
+directly entered into auto amplifier.
+
+Self-diagnostic functions are also built into auto amp. to provide E
+quick check of malfunctions in the auto air conditioning system.
+
+SUNLOAD INPUT PROCESS
+
+The auto amp. also includes a processing circuit
+which “average” the variations in detected sunload
+over a period of time. This prevents drastic swings
+in the ATC system operation due to small or quick
+variations in detected sunload.
+
+For example, consider driving along a road bor-
+dered by an occasional group of large trees. The
+sunload detected by the sunioad sensor will vary
+whenever the trees obstruct the sunlight. The pro-
+cessing circuit averages the detected sunload over
+a period of time. As a result, the effect the above
+mentioned does not cause any change in the ATC
+system operation. On the other hand, shortly after
+entering a long tunnel, the system will recognize the
+change in sunload, and the system will react accord-
+
+ingly.
+
+Control System Output Components
+AIR MIX DOOR CONTROL (Automatic temperature control)
+
+Component parts
+
+Air mix door control system components are:
+1) Auto amp.
+
+2) Air mix door motor (LCU)
+
+3) In-vehicle sensor
+
+4) Ambient sensor
+
+5) Sunload sensor
+
+6) Intake sensor
+
+System operation
+
+The auto amplifier receives data from each of the
+sensors. The amplifier sends air mix door and mode
+door opening angle data to the air mix door motor
+LCU and mode door motor LCU.
+
+The air mix door motor and mode door motor read
+their respective signals according to the address
+signal. Opening angle indication signals received
+from the auto amplifier and each of the motor posi-
+tion sensors are compared by the LCUs in each
+motor with the existing decision and opening angles.
+Subsequently, HOT/COLD or DEFROST/VENT
+operation is selected. The new selection data is
+returned to the auto amplifier.
+
+HA-113
+
+CL
+
+AT
+
+[RA
+
+BR
+|S)
+
+ST
+
+1343
+===== PDF page 115 =====
+1344
+
+SYSTEM DESCRIPTION
+
+Control System Output Components (Cont'd)
+
+NN TY
+
+Intake sensor
+
+A/C control unit
+PTC (built into auto amp.)
+
+Auto amp.
+mm mmm mmm —_— —
+! |]
+| t
+1 1
+1 1
+} i
+. a ) []
+In-vehicle sensor J |
+] |
+| not i -—{ Air mix door motor |---
+! npu ! ! !
+Ambient sensor Nd signal | Miro- |
+J ' | orocess computer ) | '
+i p = Output ! Lou
+! signal ! (Local Control Unit)
+| | PBR
+Sunload sensor ) process) {
+J | 1 1
+1 I) 1 1
+t 1 1 1
+I 1 1
+1 1 1 1
+i i
+|
+I
+1
+1
+1
+1
+1]
+|
+1
+
+i
+
+Temperature setting
+correction
+
+SHA974E
+
+Air mix door control specification
+
+I 7
+Full hot Air mix door Full cold 15 20 25
+position opening position position (59) (68) 77) (86) (95) (104)
+Example: In-vehicle temperature °C (°F)
+® If temperature setting is set at 25°C (77°F) under no sunload condition when ambient and in-vehicle temperature are 30°C (86°F),
+
+Without sunload
+
+Position NU
+
+Condition:
+PTC 25°C (77°F)
+
+With sunioad
+0.768 kW (660 kcal/h, 2,619 BTU/h)/m’
+[0.0713 kW (61.31 kcal/h, 243.3 BTU/h)/sq fi]
+
+air mix door is initially automatical
+Within some period, in-vehicle tem
+
+incrementally towards the hot side
+Air mix door opening position Is a
+
+Ej T 1
+30 35 40
+
+ly set in full cold position.
+
+perature will lower towards the objective temperature, and the air mix door position will shift
+and finally stay in this position {A) if intake temperature is 10°C (50°F).
+
+lways fed back to auto amp. by PBR built-in air mix door motor.
+
+RHASG8E
+
+aN
+
+AIR MIX DOOR MOTOR
+
+The air mix door motor is attached to the bottom of the heater unit.
+It rotates so that the air mix door is opened to a position set by the
+auto amp. Motor rotation is then conveyed through a shaft and air
+mix door position is then fed back to the auto amp. by PBR built-in
+air mix door motor (LCU).
+
+RHA437G
+
+HA-114
+===== PDF page 116 =====
+SYSTEM DESCRIPTION [AUTO]
+Control System Output Components (Cont'd)
+
+MODE DOOR CONTROL System operation
+
+Component parts The auto amplifier receives data from each of the
+sensors. The amplifier sends air mix door and mode
+
+Mode door control system components are: door opening angle data to the air mix door motor
+
+1) Auto amp. LCU and mode door motor LCU. al
+
+2) Mode door motor (LCU) The air mix door motor and mode door motor read
+
+their respective signals according to the address
+
+4) Ambient sensor signal. Opening angle indication signals received [ya
+
+5) Sunload sensor from the auto amplifier and each of the motor posi-
+
+6) Intake sensor tion sensors are compared by the LCUs in each
+motor with the existing decision and opening angles. [Ej
+
+Subsequently, HOT/COLD or DEFROST/VENT
+
+operation is selected. The new selection data is
+
+3) In-vehicle sensor
+
+returned to the auto amplifier. LG
+Auto amp. EC
+C In-vehicle sensor — — r---| Mode door motor _|--= FE
+: § 1 1
+» | 1
+: (nput Output T J
+( Sunload sensor —— signal signal i Lcu :
+' 1 1
+: process process ! {Local Control Unit} i CL
+( Ambient sensor RA - } PBR
++ 1
+Micro- | |
+( Intake sensor dL . computer MT
+A/C control unit
+A
+(built into auto amp.) AT
+* PTC
+* AUTO switch
+* ECON switch FA
+* MODE switch
+* DEF switch
+ee RIA
+SHA975E BR
+
+1345
+
+HA-115
+===== PDF page 117 =====
+SYSTEM DESCRIPTION
+
+Control System Output Components (Cont’d)
+Mode door control specification
+
+1346
+
+Condition:
+PTC 25°C (77°F)
+—— Without sunioad
+
+——— With sunload
+0.768 kW (660 kcal/h, 2,619 BTU/h)/m’
+
+—tO
+F/D
+
+[0.0713 kW (61.31 kcal/h, 243.3 BTU/h)/sq ft]
+J
+[11]
+en
+nll
+!
+| | [—
+r4 Zz
+gl g
+|
+U T
+Discharge mode 15 20 25 30 35 40
+9 (59) (68) an (86) (95) (104)
+
+Example: in-vehicle temperature °C (°F)
+® If temperature setting is set at 25°C (77°F) under no sunload condition when ambient and in-vehicle temperature are 30°C (86°F),
+
+mode door is set automatically at VENT position.
+® Then in-vehicle temperature will lower and when objective temperature 25°C (77°F) is reached mode door will shift from VENT
+
+position to B/L.
+
+RHAS73E
+Def. mode n MODE DOOR MOTOR
+IR Vent mods The mode door motor is attached to the heater unit. It rotates so
+0d A that air is discharged from the outlet set by the auto amp. Motor
+rotation is conveyed to a link which activates the mode door.
+
+Mode door
+
+otor
+RHA439E
+
+HA-116
+===== PDF page 118 =====
+SYSTEM DESCRIPTION
+
+INTAKE DOOR CONTROL
+Components parts
+
+Control System Output Components (Cont'd)
+
+System operation
+
+The intake door control determines intake door posi-
+tion based on the ambient temperature and the in-
+
+Intake door control system components are: vehicle temperature. When the ECON, DEF, or OFF
+
+1) Auto amp.
+2) Intake door motor
+
+3) A/C LAN system (PBR built-in mode door motor
+
+and air mix door motor)
+4) In-vehicle sensor
+5) Ambient sensor
+6) Sunioad sensor
+7) Intake sensor
+
+buttons are pushed, the auto amp. sets the intake
+door at the “Fresh” position.
+
+A/C LAN system
+
+{PBR built-in
+
+mode door motor
+
+and air mix door motor)
+
+In-vehicle sensor
+
+Sunload sensor
+
+Ambient sensor
+
+A/C control unit
+« PTC
+
+* AUTO switch
+* ECON switch
+* REC switch
+
+*« DEF switch
+
++ OFF switch
+
+C
+C
+C
+(intake sensor
+
+Auto amp. IGN
+Input Micro- |
+signal | |
+Proves computer Output : i
+signal T i | Position switch
+process :
+= |
+
+Intake door motor
+
+SHA976E
+
+Intake door control specification
+
+FRE
+FRE
+
+20% FRE
+
+en FRE
+i NE
+R
+
+|
+
+Condition:
+PTC 25°C (77°F)
+—— Without sunload
+—— = With sunload
+0.768 kW (660 kcal/h, 2,619 BTU/h)/m’
+[0.0713 kW (61.31 kcal/h, 243.3 BTU/h})/sq ft]
+
+Intake door mode
+Example:
+
+efficiently.
+
+(59)
+
+® If temperature setting is set at 25°C (77°F) under no sunload condition when amblent temperature is 30°C (86°F) and in-vehicle
+temperature is 35°C (95°F), intake door is set automatically at REC position to make in-vehicle temperature cool down
+
+® In-vehicle temperature will lower and when 30°C (86°F) is reached, intake door will shift to 20% FRE position.
+® In the state when in-vehicle temperature reaches the objective temperature 25°C (77°F), intake door is set at FRE position. RHAS76EB
+
+20 25 35 40
+(68) 77) (86) {95) (104)
+In-vehicle temperature °C (°F)
+
+@l
+
+MA
+
+LC
+
+2
+
+Go)
+50
+
+3
+
+HA-117 1347
+===== PDF page 119 =====
+1348
+
+SYSTEM DESCRIPTION
+
+& (Fresh) :
+
+Control System Output Components (Cont'd)
+INTAKE DOOR MOTOR
+
+The intake door motor is attached to the intake unit. It rotates so
+that air is drawn from iniets set by the auto amp. Motor rotation is
+conveyed to a lever which activates the intake door.
+
+Intake door motor operation
+
+Il
+
+RHA502G
+
+FAN SPEED CONTROL
+Component parts
+
+Fan speed control system components are:
+
+1} Auto amp.
+
+2) Fan control amplifier
+
+4
+5
+6
+7
+
+3) A/C LAN system (PBR built-in mode door motor
+
+and air mix door motor)
+
+In-vehicle sensor
+Ambient sensor
+Sunload sensor
+Intake sensor
+
+System operation
+
+“(Reciroulation) 6 7 Intake door operation Movement of link rotation
+Snr ® | © REC — FRE Clockwise
+Intake door motor J —_— STOP STOP
+— N=" nasoen o| @ FRE — REC Counterclockwise
+
+Auto amp.
+
+8 18 19 36 28
+
+5 4 7 6
+Intake door motor LImIH
+1
+
+A/C LAN system
+(PBR built-in
+mode door motor
+
+and air mix door motor)
+
+In-vehicle sensor
+
+! Input
+
+Sunload sensor
+
+1
+| signal
+—— process
+
+Ambient sensor
+
+y Auto amp.
+tt
+H
+|
+$
+i
+1
+1
+
+intake sensor
+
+NON
+
+A/C control unit
+(built inte auto amp.)
+* PTC
+
+* AUTO switch
+
+* ECON switch
+
+* MODE switch
+
+* DEF switch
+
+* FAN switch
+
+* OFF switch
+
+Micro-
+
+computer
+Output
+signal
+process
+
+Fan
+control
+
+amp.
+
+SHAS70E
+
+HA-118
+===== PDF page 120 =====
+SYSTEM DESCRIPTION
+
+Control System Output Components (Cont'd)
+
+AUTOMATIC MODE
+
+In the automatic mode, the blower motor speed is
+calculated by the auto amp. based on inputs from
+the PBR, in-vehicle sensor, sunload sensor, and
+
+delay, the blower will operate at low speed until the
+engine coolant temperature rises above 50°C
+(122°F). Then the blower speed will increase to the
+objective speed.
+
+ambient sensor. The blower motor applied voltage ll
+ranges from approximately 4.5 volts (lowest speed) Start up from normal or “HOT SOAK”
+to 12 volts (highest speed). condition (Automatic mode)
+0 control blower speed, the auto amp. supplies a The blower will beqi : i MA
+) : gin operation momentarily after
+re armies, Based or is Sanat tho ton eon the AUTO button is pushed. The blower speed wil
+wh : gradually rise to the objective speed over a time
+amplifier controls the current flow from the blower period of 5 seconds or less (actual time depends on EM
+motor to ground. So
+the objective blower speed).
+STARTING FAN SPEED CONTROL i
+0 S BLOWER SPEED COMPENSATION LG
+Start up from “COLD SOAK” condition
+(Automatic mode) Sunioad EC
+In a cold start up condition where the engine cool- When the in-vehicle temperature and the set tem-
+ant temperature is below 50°C (122°F), the blower perature are very close, the blower will operate at
+will not operate for a short period of time (up to 150 low speed. The low speed varies depending on the [52
+seconds). The exact start delay time varies depend- sunload. During conditions of high sunload, the
+ing on the ambient and engine coolant temperature. blower low speed is “normal” low speed (approx.
+In the most extreme case (very low ambient) the 5.5V). During lesser sunload conditions, the low (Gl.
+blower starting delay will be 150 seconds. After this speed will drop to “low” low speed (approx. 4.5V).
+Fan speed control specification MT
+Condition:
+PTC 25°C (77°F) AT
+— Without sunlocad
+=== With sunload
+0.768 kW (660 kcal/h, 2,619 BTU/h)/m’ FA
+[0.0713 kW (61.31 kcal/h, 243.3 BTU/h)/sq ft]
+BA
+BR
+ST
+15 1 T 1 T T I=)
+G5  @ Gh Ge @n on RS
+Example: Voltage (V) in-vehicle temperature °C (°F)
+® it t i o o o _
+0 ash tre Seung vottag hy = z 7 i) under no sunload condition when ambient and in-vehicle temperature are 40°C BT
+L J bi 0, [J R or, 0, © =
+nen revert motor volt bi . fon ana in vehicle temperature is reduced to 25°C (77°F) under the same condition RHAS79ER
+
+FAN CONTROL AMPLIFIER
+
+The fan control amplifier is located on the cooling unit. It amplifies
+the base current flowing from the auto amp. to change the blower [g],
+speed within the range of 4V to 12V.
+
+IDX
+
+Fan control amplifier
+
+SS
+
+AHA191
+
+1349
+
+HA-119
+===== PDF page 121 =====
+SYSTEM DESCRIPTION
+
+Control System Output Components (Cont'd)
+MAGNET CLUTCH CONTROL
+
+The ECM (ECCS control module) controls compressor operation
+using inputs from the throttle position sensor and auto amplifier.
+
+on Low temperature protection control
+Auto amplifier will turn the compressor “ON” or “OFF” as deter-
+mined by a signal detected by ambient temperature sensor.
+The compressor turns “OFF” when ambient temperatures are less
+OFF than —1°C (30°F).
+: Acceleration cut control
+peo) i bd eo o The ECM (ECCS control module) will turn the compressor “ON” or
+ent temperature °C (°F) “OFF” based on the signal from the throttle position sensor.
+Low temperature protection
+control specification SHABS0E
+
+1350 HA-120
+===== PDF page 122 =====
+SERVICE PROCEDURES [ MANUAL AND AUTO |
+
+HFC-134a (R-134a) Service Procedure
+SETTING OF SERVICE TOOLS AND EQUIPMENT
+
+DISCHARGING REFRIGERANT
+
+WARNING:
+
+Avoid breathing A/C refrigerant and lubricant vapor or mist. Exposure may irritate eyes, nose and
+throat. Remove R-134a from A/C system, using certified service equipment meeting requirements of
+SAE J2210 (R-134a recycling equipment), or J2209 (R-134a recovery equipment). If accidental system [MA
+discharge occurs, ventilate work area before resuming service. Additional health and safety informa-
+
+tion may be obtained from refrigerant and lubricant manufacturers. a
+i
+p) Shut-off valve
+LG
+A/C service
+T valve EC
+FE
+CL
+MIT
+AT
+Recovery/Recycling
+equipment (ACR4) IA
+(J-39500-N1) RHA275DF
+EVACUATING SYSTEM AND CHARGING REFRIGERANT
+Preferred (Best) method Alternative method Liao10% gauge set ER
+
+op <§ Shut-off
+
+Shut-off
+valve
+
+A/C service
+
+pe
+
+For charging
+A pr ~
+Recovery/Recycling (J-39650) For evacuating
+
+equipment (ACR4) = vacuum pump
+{J-39500-NI) (J39649)
+
+Refrigerant
+container
+(HFC-134a)
+
+RHA276DG
+
+1351
+
+HA-121
+===== PDF page 123 =====
+1352
+
+SERVICE PROCEDURES [ MANUAL AND AUTO |
+HFC-134a (R-134a) Service Procedure (Cont'd)
+
+| Set the recovery/recycling equipment.
+
+'
+
+Recovered lubricant Discharge refrigerant into recovery/
+Refer to (HA-123). recycling equipment.
+
+'
+
+Repair or replace parts.
+
+'
+
+Evacuate (over 25 minutes).
+
+Check air tightness. he" Repair.
+
+J ox 4
+*
+
+Partial charging [approx. 200 g
+(7.05 oz)).
+
+'
+
+Preliminary refrigerant leak check.
+Refer to “PRELIMINARY CHECK”, |NG
+HA-126.
+
+OK
+*1
+
+Complete charging (specified amount
+less partial charge amount)
+(Refer to SDS).
+
+' ;
+
+Check for refrigerant leaks.
+Refer to “CHECKING PROCEDURE”, |NG
+
+Y
+
+A 4
+
+HA-127.
+IE
+Check for A/C operation and A/C COOk |....euuvvunnsd Performance Test Diagnoses
+ing performance (Refer to HA-31)
+
+v
+
+Remove service couplers from A/C
+service valves
+
+'
+
+Recover refrigerant in charging hoses.
+
+| Remove service tools.
+
+'
+
+Reinstall service valve caps.
+
+Note: *1 Before charging refrigerant, ensure engine is off.
+*2 Before checking for leaks, start engine to activate air conditioning system then turn engine off.
+Service valve caps must be installed to prevent leakage.
+
+HA-122
+===== PDF page 124 =====
+SERVICE PROCEDURES
+
+| MANUAL AND AUTO |
+
+START
+
+v
+
+Maintenance of Lubricant Quantity in
+Compressor
+
+The lubricant in the compressor circulates through the system with
+the refrigerant. Add lubricant to compressor when replacing any
+component or after a large gas leakage occurred. It is important to
+
+maintain the specified amount.
+If lubricant quantity is not maintained properly, the following mal-
+
+functions may result:
+
+eo | ack of lubricant: May lead to a seized compressor
+
+® Excessive lubricant: Inadequate cooling (thermal exchange
+interference)
+
+LUBRICANT
+
+Name: Nissan A/C System Oil Type S
+
+Part number: KLHO0-PAGSO0
+
+CHECKING AND ADJUSTING
+
+Adjust the lubricant quantity according to the flowchart shown
+below.
+
+Can lubricant return operation be per-
+
+ves Perform lubricant return operation, proceeding as follows:
+
+formed?
+
+® A/C system works properly.
+
+® There is no evidence of a large amount of
+lubricant leakage.
+
+No
+
+A 4
+
+Should the compressor be replaced?
+
+A
+
+1. Start engine, and set the following conditions:
+e Test condition
+Engine speed: Idling to 1,200 rpm
+A/C or AUTO switch: ON
+Blower speed: Max. position
+Temp. control: Optional [Set so that intake air temperature is
+25 to 30°C (77 to 86°F).]
+2. Next item is for V-5 or V-6 compressor. Connect the manifold
+gauge, and check that the high pressure side pressure is 588 kPa
+(6 kg/cm?, 85 psi) or higher.
+If less than the reference level, attach a cover to the front face of
+the condenser to raise the pressure.
+3. Perform lubricant return operation for about 10 minutes.
+
+No Yes
+
+(Go to next page.)
+
+4. Stop engine.
+
+CAUTION:
+If excessive lubricant leakage is noted, do not perform the lubricant
+
+return operation.
+
+y
+
+Yes After replacing any of the following major components, add the correct
+
+Is there any part to be replaced?
+(Evaporator, condenser, liquid tank or in
+case there is evidence of a large amount of
+lubricant leakage.)
+
+No
+
+A 4
+
+Carry out the A/C performance test.
+
+"| amount of lubricant to the system.
+Amount of lubricant to be added
+
+Lubricant to be added to
+system
+Amount of lubricant
+mé (US fl oz, Imp fl oz)
+
+Remarks
+
+Part replaced
+
+Evaporator 75 (2.5, 2.6} —
+
+Condenser 75 (2.5, 2.6) —
+
+Liquid tank 5(0.2, 0.2) Add Pio is not
+< In case of refrigerant leak 30 (1.0. 1.1) Sage look
+
+*1: If compressor is replaced, addition of lubricant is included in the flow
+
+chart.
+*2: If refrigerant leak is small, no addition of lubricant is needed.
+
+HA-123
+
+LG
+
+E¢
+pm]
+=
+
+[PIE
+
+CL
+
+VU)
+
+AT
+
+1353
+===== PDF page 125 =====
+SERVICE PROCEDURES [ MANUAL AND AUTO |
+
+Maintenance of Lubricant Quantity in
+Compressor (Cont'd)
+®
+
+1. Discharge refrigerant into the refrigerant recovery/recycling equipment. Measure iubricant discharged into the recovery/
+recycling equipment.
+
+2. Remove the drain plug of the “old” (removed) compressor (applicable only to V-5, V-6 or DKS-16H compressor). Drain the
+lubricant into a graduated container and record the amount of drained lubricant.
+
+3. Remove the drain plug and drain the lubricant from the “new” compressor into a separate, clean container.
+
+4. Measure an amount of new lubricant installed equal to amount drained from “old” compressor. Add this lubricant to “new”
+compressor through the suction port opening.
+
+5. Measure an amount of new lubricant equal to the amount recovered during discharging. Add this lubricant to “new” compres-
+sor through the suction port opening.
+
+6. Torque the drain plug.
+V-5 or V-6 compressor: 18 - 19 N-m (1.8 - 1.9 kg-m, 13 - 14 ft-lb)
+DKS-16H compressor: 14 - 16 N'm (1.4 - 1.6 kg-m, 10 - 12 ft-lb)
+
+7. if the liquid tank also needs to be replaced, add an additional 5 m¢ (0.2 US fi oz, 0.2 Imp fl oz) of lubricant at this time.
+Do not add this 5 m¢ {0.2 US fl oz, 0.2 Imp fl oz) of lubricant if only replacing the compressor.
+
+Lubricant adjusting procedure for compressor replacement
+
+1 1 O
+Recovery/ Old New
+Recycling compressor compressor
+equipment
+Record amount
+Record amount Drain lubricant
+from new
+ee A ss compressor
+into clean
+| | container
+|
+| X mg
+| mg | Y
+ee _— |
+Reinstall
+“X'mgQ + "Y'mg New
+of new lubricant lubricant
+New
+compressor
+
+I § mg (0.2 US fl oz, |
+| 0.2 Imp fl oz) of |
+
+new lubricant when |
+| replacing liquid |
+
+' tank.
+JU {
+
+RHA065DD
+
+1354 HA-124
+===== PDF page 126 =====
+SERVICE PROCEDURES | MANUAL AND AUTO |
+
+Refrigerant Lines
+. Refer to Precautions for Refrigerant Connection (HA-4).
+
+SEC. 271274+276
+
+@l
+
+3 UA ®)] 10 - 20 (1.0 - 2.0, 87 - 174)
+NY mm (0.24 in) dia MA
+10 - 20 EY
+
+(1.0 - 2.0, 87 - 174)
+
+8 mm (0.31 in) dia.
+= LG
+
+[20-25 |
+(2.0 - 2.5, 14 - 18) em Cool ;
+12 mm (0.47 in) dia. paling un EC
+FE
+® Low-pressure (Suction) service valve
+CL
+Vi
+NS AT
+All
+d _ a (f) Triple-pressure switch
+ERT
+
+RA
+
+SN
+ST
+NN
+RS
+NS “=~ Liquid tank
+Condenser O : Refrigerant leak checking order BT
+
+[J] (Tightening torque)
+
+[J] wrench size)
+
+{O-ring size)
+: Nem (kg-m, ft-lb) EL
+5
+$20 - 29 (2.0 - 3.0, 14 - 22)
+: N-m (kg-m, in-lb)
+IDX
+
+: 3.8 - 45 (0.39 - 0.46, 33.9 - 39.9)
+:3- 4 (0.3 - 0.4, 26 - 35)
+
+: 8-11 (0.8 - 1.1, 69 - 95)
+
+: 8.3 - 10.8 (0.95 - 1.1, 82.5 - 95.5)
+
+im © 0] [@ el 2g []
+
+SHAB75E
+
+HA-125 1355
+===== PDF page 127 =====
+1356
+
+SERVICE PROCEDURES [MANUAL AND AUTO |
+
+J39400 (A/C leak detector)
+
+SHA705E
+
+Approx.
+
+5 mm (3/16 in)
+
+[|
+
+SHA7Q7EA
+
+SHA706E
+
+Checking Refrigerant Leaks
+
+PRELIMINARY CHECK
+
+Perform a visual inspection of all refrigeration parts, fittings, hoses,
+and components for signs of A/C lubricant leakage, damage and
+corrosion.
+
+PRECAUTIONS FOR HANDLING LEAK DETECTOR
+When performing a refrigerant leak check, use a J39400 A/C leak
+detector or equivalent. Ensure that the instrument is calibrated and
+set properly per the operating instructions.
+
+The leak detector is a delicate device. In order to use the leak
+detector properly, read the operating instructions and perform any
+specified maintenance.
+
+Other gases in the work area or substances on the A/C
+components, for example, anti-freeze, windshield washer
+fluid, solvents and cleaners, may falsely trigger the leak detec-
+tor. Make sure the surfaces to be checked are clean. Do not
+allow the sensor tip of the detector to come into contact with
+any substance. This can also cause false readings and may
+damage the detector.
+
+1. Position probe approximately 5 mm (3/16 in) away from point
+to be checked.
+
+2. When testing, circle each fitting completely with probe.
+
+HA-126
+===== PDF page 128 =====
+SERVICE PROCEDURES [ MANUAL AND AUTO |
+Checking Refrigerant Leaks (Cont'd)
+
+3. Move probe along component approximately 25 to 50 mm (1
+to 2 in)/sec.
+
+MIA
+
+SHA708EA|
+
+CHECKING PROCEDURE
+
+To prevent inaccurate or false readings, make sure there is no LGC
+
+refrigerant vapor or tobacco smoke in the vicinity of the
+
+vehicle. Perform the leak test in calm area (low air/wind move- _
+
+ment so that the leaking refrigerant is not dispersed. EC
+
+1. Charge the system with the specified amount of refrigerant.
+
+2. Run the engine with the A/C compressor ON for at least 2 _.
+minutes. FE
+
+3. Stop engine.
+
+Pressure in high | Refrigerant leaks should be checked immediately after stop- MT
+ping the engine. Begin with the leak detector on the high pres- !
+sure line. The pressure in the high pressure line will gradually
+drop after refrigerant circulation stops and pressure in the low AT
+pressure line will gradually rise, as shown in the graph. Leaks
+
+are more easily detected when pressure is high.
+
+pressure line
+
+Pressure
+
+em -————
+
+pressure line
++ Time
+Compressor Compressor RA
+starts. stops. SHA839E
+
+4. Conduct the leak test from the high side to the low side at gg
+points @ through @ . Refer to HA-125.
+Perform a leak check for the following areas carefully. Clean
+the component to be checked and move the leak detector §T
+probe completely around the connection/component.
+
+e Compressor
+Check the fitting of high and low pressure hoses, relief valve RS
+and shaft seal.
+
+e¢ Liquid tank Ell
+Check the pressure switch, tube fitting and the fusible plug
+mounts.
+
+e Service valves
+Check all around the service valves. Ensure service valve caps
+are secured on the service valves (to prevent leaks).
+
+eo Cooling unit
+Turn blower fan on “High” for at least 15 seconds to dissipate
+any refrigerant trace in the cooling unit. Insert the leak detec- DX
+tor probe into the drain hose immediately after stopping the
+engine. (Keep the probe inserted for at least ten seconds.)
+
+HA-127 1357
+===== PDF page 129 =====
+SERVICE PROCEDURES [ MANUAL AND AUTO |
+
+Compressor Mounting
+
+SEC. 274.275
+
+[C] 45 - 60
+
+(4.6 - 6.1, 33 - 49)
+
+Ii & >
+Qe [4s - 60
+(46 - 6.1, 33 - 44)
+SN
+[CG : Nem (kg-m, ft-Ib)
+
+Belt Tension
+
+eo Refer to MA section (“Checking Drive Belts”, “ENGINE
+MAINTENANCE”).
+
+Fast Idle Control Device (FICD)
+
+eo Refer to EC section (“IACV-FICD SOLENOID VALVE”,
+“TROUBLE DIAGNOSES FOR NON-DETECTIVE ITEMS”).
+
+RHA463E
+
+23 HA-128
+===== PDF page 130 =====
+SERVICE PROCEDURES [ MANUAL AND AUTO |
+
+Compressor
+
+SEC. 274
+
+Center bolt
+[0 14 Nem (1.4 kg-m, 10 ft-ib)
+
+Clutch disc
+
+Snap ring
+
+=
+
+710A)
+
+RR)
+
+Compressor unit
+
+Field coil /
+Snap ring
+
+Pulley assembly
+
+Shim
+RHA122F
+, KVS9106100 Compressor Clutch
+\ » REMOVAL
+e When removing center bolt, hold clutch disc with clutch disc
+wrench.
+
+RHA136EB|
+
+RHA123F
+
+[EE
+
+CL
+
+AT
+
+HA-129 1359
+===== PDF page 131 =====
+SERVICE PROCEDURES
+
+{ MANUAL AND AUTO |
+
+RHA124F
+
+External
+snap ring
+
+RHA139E
+
+1360
+
+nd
+Snap NE RHA145E
+
+Compressor Clutch (Cont'd)
+
+® Remove the clutch disc using the clutch disc pulier.
+Insert the holder’s three pins into the holes in the clutch disc.
+Rotate the holder clockwise to hook it onto the plate. Then,
+tighten the center bolt to remove the clutch disc.
+After removing the clutch disc, remove the shims from either
+the drive shaft or the clutch disc.
+
+® Remove the snap ring using external snap ring pliers.
+
+eo Pulley removal
+Position the center pulley puller on the end of the drive shaft,
+
+and remove the pulley assembly using any commercially avail-
+
+able pulley puller.
+To prevent the pulley groove from being deformed, the
+
+puller claws should be positioned onto the edge of the
+pulley assembly.
+
+eo Remove the field coil harness clip using a pair of pliers.
+
+e Remove the snap ring using external snap ring pliers.
+
+HA-130
+===== PDF page 132 =====
+SERVICE PROCEDURES [ MANUAL AND AUTO |
+Compressor Clutch (Cont'd)
+INSPECTION
+
+Clutch disc
+
+If the contact surface shows signs of damage due to excessive
+heat, replace clutch disc and pulley. al
+
+Pulley
+
+Check the appearance of the pulley assembly. If the contact sur- ja
+face of pulley shows signs of excessive grooving, replace clutch
+
+Clutch disc disc and pulley. The contact surfaces of the pulley assembly should
+ruatoee|  D€ cleaned with a suitable solvent before reinstallation. EM
+Field coil Coil
+‘ Check lubricant for loose connection or cracked insulation. LG
+INSTALLATION
+EC
+
+e Install the field coil.
+
+Be sure to align the coil’s pin with the hole in the
+
+compressor’s front head. EE
+e Install the field coil harness clip using a screwdriver.
+
+CL
+
+RHA142E
+
+e Install the pulley assembly using the installer and a hand
+press, and then install the snap ring using snap ring pliers. MIT
+
+KV99106200
+
+{J-41261)
+. AT
+
+2 7)
+Snap ring
+Pulley BA
+assembly
+
+RHA143EA
+
+e Install the clutch disc on the drive shaft, together with the BR
+original shim(s). Press the clutch disc down by hand.
+
+ST
+
+RHA127F
+
+e Using the holder to prevent clutch disc rotation, tighten the bolt
+to 14 N-m (1.4 kg-m, 10 ft-lb) torque.
+
+After tightening the bolt, check that the pulley rotates =
+
+smoothly.
+
+RHAQ86E
+
+HA-131 1361
+===== PDF page 133 =====
+SERVICE PROCEDURES [ MANUAL AND AUTO |
+
+Compressor Clutch (Cont'd)
+
+e (Check clearance around the entire periphery of clutch disc.
+Disc-to-pulley clearance:
+0.3 - 0.6 mm (0.012 - 0.024 in)
+If the specified clearance is not obtained, replace adjusting
+
+spacer and readjust.
+
+BREAK-IN OPERATION
+
+When replacing compressor clutch assembly, always carry out the
+break-in operation. This is done by engaging and disengaging the
+clutch about thirty times. Break-in operation raises the level of
+transmitted torque.
+
+Feeler gauge RHAQB7E
+
+1362 HA-132
+===== PDF page 134 =====
+SERVICE DATA AND SPECIFICATIONS (SDS) [MANUAL AnD Auto]
+
+General Specifications
+
+COMPRESSOR LUBRICANT
+CALSONIC make CALSONIC make
+Model V-6 Model V-6
+Type V-6 variable dispiacement Name Nissan A/C System Oil
+Type S
+Displacement cm? (cu in)/rev. ype
+KLHO0-PAGSO
+Max. 184 (11.228) Part number
+; Capacity
+Min. 10.5 (0.641) m¢ {US ff oz, Imp fl 0z)
+Cylinder bore x stroke 37 (1.46) Total i 200 (6.8. 7.0
+mm (in) | x [1.6 - 28.6 (0.063 - 1.126)] otal in system ©3, 70)
+Clockwise Compressor (Service part) 200 (6.8, 7.0)
+
+Direction of rotation
+
+{viewed from drive end)
+
+charging amount
+
+Drive belt
+
+Poly V
+
+eo Refer to EC section.
+
+BELT TENSION
+
+REFRIGERANT
+
+Type
+
+HFC-134a (R-134a)
+
+Capacity kg (ib)
+
+0.65+0.05 (1.43+0.11)
+
+inspection and Adjustment
+ENGINE IDLING SPEED (When A/C is ON)
+
+® Refer to Checking Drive Belts (MA section).
+
+HA-133
+
+[FA
+
+RA
+
+BR
+
+1363

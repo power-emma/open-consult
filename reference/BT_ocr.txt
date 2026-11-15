@@ -1,0 +1,2441 @@
+===== PDF page 1 =====
+BODY & TRIM
+
+soon B T
+
+MA
+
+CONTENTS
+
+PRECAUTIONS ............ccovverrerrerteereverrrresrrens sre vneeneenns 2
+Precaution uci ceteris screens seene see sennn eens
+Supplemental Restraint System (SRS) “AIR
+TC 2
+
+GENERAL SERVICING ..........cooceeveeeeeee ieee eee 3
+Clip and Fastener ..........coievveeinveiineeeene nine ennneeseesineeenes 3
+
+BODY END... eccrine eens snn ss sresnens sens 6
+Body Front ENd.........cocovvrrieeerncrinccinennenenenreneenns 6
+Body Rear End and Opener ........ccccevvcervennceeennnensiaen 9
+
+[1010 | 5 FS 11
+[(e1a] 08 3 oo] SOOO 11
+Bear DOOK ......covcrrreer irene nneee nesses ccnesesnss sane 12
+
+INSTRUMENT PANEL ...........cccoviieeeeeeeaae 13
+
+INTERIOR TRIM ......oooniiee cece eee eres 16
+Side and Floor THM uuvueeeeeeeceeeeeeeeeeeee messes essmnee ieee 16
+[Be To gi I 11 1 [OPO TOURS 19
+
+* For seat belt, refer to MA and RS section.
+
+ROO THM cece eecccnirireceee rss eevee sree eee se enaas 20
+Trunk ROOM THM .uuueerreieie eee ecerer sees sre ecssnnnsnanas 21
+EXTERIOR .......ocooeeeeeee creer rraee ee snemse eee ene eee nemnae eas 22
+SEAT ote eee eres reeves esr naa arenes 27
+Front Seat .....ciivvviverorveerinreeeeeeee serene ren ravoases 27
+Heated Seat.....cooceeecrireiiiieerieeirirerer seers smmeren esas 31
+Rear Seat... irae cesses 32
+SUNROOF ........eeeeeeeeeeeeeeeereee cesta evaeeeresebbr eras nieae 33
+Trouble Diagnoses. .....ccueeeceiriereeeriimeeerenescncvseess naa 37
+WINDSHIELD AND WINDOWS ........ccooooiiiieceeeenes M1
+Windshield and Rear Window .......ccoceeoeenivvveeninnnnee. 42
+MIRROR .......ooiicviirieereeree eerie sees estes sess ener assesses assssnnnens 43
+[Bo To) 8 Y,[1 1 Co} RUST 1
+BODY ALIGNMENT ........ooiiiiiieeeerieeeeeee cere cece 44
+Engine Companment.....c...ccceveriniemmnnnicnniiennieneeienans 44
+Underbody ...cooeceeiecereice es 46
+
+* For wiring diagrams of body electrical systems, refer to EL section.
+
+[EM
+
+LG
+
+EC
+
+BR
+
+ST
+
+RS
+
+HA
+
+EL
+
+IDX
+
+1183
+===== PDF page 2 =====
+1184
+
+PRECAUTIONS
+
+Precaution
+
+eo When removing or installing various parts, place a cloth or padding onto the vehicle body to prevent
+scratches.
+
+e Handle trim, molding, instruments, grille, etc. carefully during removing or installing. Be careful not to soil
+or damage them.
+
+® Apply sealing compound where necessary when installing parts.
+
+eo When applying sealing compound, be careful that the sealing compound does not protrude from parts.
+
+eo When replacing any metal parts {for example body outer panel, members, etc.), be sure to take rust pre-
+
+vention measures.
+
+Supplemental Restraint System (SRS) “AIR
+BAG”
+
+The Supplemental Restraint System “AIR BAG”, used along with a seat belt, helps to reduce the risk or
+
+severity of injury to the driver and front passenger in a frontal collision. The Supplemental Restraint System
+
+consists of air bag modules (located in the center of the steering wheel and on the instrument panel on the
+
+passenger side), a diagnosis sensor unit, warning lamp, wiring harness and spiral cable.
+
+if the vehicle is equipped with side air bag as the Supplemental Restraint System, the supplemental side air
+
+bag used along with the seat belt helps to reduce the risk or severity of injury to the driver and front passen-
+
+ger in a side collision. The supplemental side air bag consists of air bag modules (located in the outer side
+
+of front seats), satellite sensor, diagnosis sensor unit (which is one of components of supplemental air bags
+
+for a frontal collision), wiring harness, warning lamp {which is one of components of supplemental air bags for
+
+a frontal collision). Information necessary to service the system safely is included in the RS section of this
+
+Service Manual.
+
+WARNING:
+
+¢ To avoid rendering the SRS inoperative, which could increase the risk of personal injury or death
+in the event of a collision which would result in air bag inflation, all maintenance must be performed
+by an authorized NISSAN dealer.
+
+J Improper maintenance, including incorrect removal and installation of the SRS, can lead to per-
+
+sonal injury caused by unintentional activation of the system.
+¢ Do not use electrical test equipment on any circuit related to the SRS unless instructed to in this
+Service Manual. SRS wiring harnesses can be identified with yellow harness protector or yellow
+
+insulation tape before the harness connectors.
+
+BT-2
+===== PDF page 3 =====
+GENERAL SERVICING
+
+Clip and Fastener
+
+o Clips and fasteners in BT section correspond to the following numbers and symbols.
+® Replace any clips and/or fasteners which are damaged during removal or installation.
+
+SBF085
+
+Symbol
+ro Shapes Removal & Installation
+Removal:
+Remove by bending up with
+flat-bladed screwdrivers or
+clip remover.
+<
+— —
+SBF302H SBF367BA
+: )
+vi Removal:
+Remove with a clip remover.
+SBF423H
+
+Push center pin to
+catching position.
+
+{Do not remove
+
+3 center pin by hitting it.)
+
+Installation:
+SBF708E
+
+==) §
+
+&
+
+MBTO80A
+
+Removal:
+
+a Screwdriver
+
+)
+
+Finisher
+
+SBF638C
+
+MA
+
+EM
+
+LC
+
+Ee
+
+FE
+
+CL
+
+(vIn
+
+AT
+
+FA
+
+BR
+
+BT-3
+
+1185
+===== PDF page 4 =====
+1186
+
+GENERAL SERVICING
+
+Clip and Fastener (Cont’d)
+
+Symbol
+No.
+
+Shapes
+
+Removal & Installation
+
+5
+ES
+=
+
+MBF519B MBF5208
+Removal:
+= |lc—
+@® /
+SBF1048 SBF147B
+Panel Flat-bladed
+screwdriver
+Molding
+CE!
+3) Clip
+SBF411H SBF767B
+Removal:
+
+wv
+
+Remove by bending up with a
+flat-bladed screwdriver or pliers.
+
+r —
+
+(CE
+~~
+SBF174D SBF175DA
+1H
+Removal Clip-A
+Clip-A i.
+< Finisher
+Ee EE
+=
+g Seal rubber
+D Weatherstrip
+= Clip-B
+Clip-B Rubber seal
+SBF648B Flat-bladed screwdriver SBE649B
+
+BT-4
+
+===== PDF page 5 =====
+GENERAL SERVICING
+
+Clip and Fastener (Cont'd)
+
+Symbol .
+Ne Shapes Removal & Installation
+Clip-A Removal:
+Flat-bladed screwdriver
+< Finisher @
+EL: E
+- Clip-B MA
+Nid {Grommet) Clip-B
+Body (Grommet)
+panel Clip-A EM
+Sealing
+SBF151D washers SBF259G
+LC
+Removal: Installation:
+« =
+Rotate 45° J
+NES to remove. K EE
+hg
+CL
+(38)
+SBF145B Removal: SBF085B
+Removal: ber
+Holder portion of clip must be
+spread out to remove rod.
+SI
+->
+| FA
+=
+SBF768B SBF770B
+Removal: BR
+1. Screw out with a Phillips
+screwdriver.
+2. Remove FL
+portion with Sil
+GE flat-bladed
+screwdriver.
+& ir RS
+SBF078B SBF992G
+[HA
+EL
+IDX
+BT-5 1187
+===== PDF page 6 =====
+1188
+
+BODY END
+
+Body Front End
+When removing or installing hood, place a cloth or other padding on hood. This prevents vehicle body from
+
+®
+being scratched.
+
+e Bumper fascia is made of plastic. Do not use excessive force and be sure to keep oil away from it.
+
+® Hood adjustment: Adjust at hinge portion.
+
+e Hood lock adjustment: After adjusting, check hood lock control operation. Apply a coat of grease to hood
+tocks engaging mechanism.
+
+e Hood opener: Do not attempt to bend cable forcibly. Doing so increases effort required to unlock hood.
+
+WARNING:
+
+® Be careful not to scratch hood stay when installing hood. A scratched stay may cause gas leak-
+
+age.
+The contents of the hood stay are under pressure. Do not take apart, puncture, apply heat or allow
+
+fire near it.
+
+REMOVAL — Front bumper assembly
+
+POR00ee QB 66 ©
+
+Remove bolts securing engine undercover from the front side. [ly
+
+Remove bolts, screws and clips securing fender protectors in the wheelhouse. Then remove left and right
+fender protectors.[5
+
+Remove clip securing grille and remove the grille.[d
+
+Remove screws securing left and right side combination lamps and remove the lamps. [8]
+
+insert a aded screwdriver between side marker lamps and turn signal lamps. Then remove side marker
+amps.[3
+
+Remove screws securing left and right turn signal lamps and remove the lamps.[@
+
+Remove the clip securing fog lamp finisher and remove the finisher. Then remove the bolts securing fog
+lamps and remove the lamps.[€]
+
+Remove nuts and bolts securing headlamps. Then remove left and right headlamps. [gl
+
+Remove bolts securing both bumper side brackets and remove the brackets. lB
+
+Remove bolts and clips securing bumper fascia.
+
+Remove nuts securing fascia from both bumper sides. Then pull bumper fascia out. [4
+
+Remove nuts and bolfs securing retainer from center and both sides and remove retainer. [li
+
+Remove nuts securing bumper reinforcement and remove the reinforcement.
+
+Remove bolts and nuts securing bumper stay and remove the bumper stay.[¥
+
+SBT338
+
+BT-6
+===== PDF page 7 =====
+BODY END
+
+Body Front End (Cont'd)
+
+SEC. 260°261262620°630+650
+
+Hood lock adjustment Gl
+* Adjust hood so that hood primary lock
+meshes at a position 1 to 1.5 mm (0.039 to
+
+0.059 in) lower than fender. MA
+* After hood lock adjustment, adjust bumper
+rubber.
++ When securing hood lock, ensure it does
+Ev
+
+not tilt. Striker must be positicned at the
+
+center of hood primary lock.
+
+After adjustment, ensure that hood primary
+
+and secondary lock operate properly. LE
+Hood lock secondary latch hooking length
+
+More than 5.0 mm {0.197 in)
+
+Hood adjustment EC
+and hood stay Installation [8]
+
+Hood
+
+Secondary latch FE
+Bumper rubber adjustment
++ Adjust so that hood is aligned with CL
+_ fender. At that time deflection is
+approx. 2 mm {0.08 in).
+[Bumper rubber free height MT
+
+is approx. 13 mm (0.51 in)]
+[3] 21 - 26 Nem
+
+—
+{2.1 - 2.7 kg-m, 15 - 20 ft-Ib) 2X RE — AT
+Bumper fascia assembly |. 1 1 | 7}
+
+SBT337
+
+BT-7 1189
+===== PDF page 8 =====
+1190
+
+BODY END
+
+Body Front End (Cont'd)
+
+a7 0]
+
+137-16 A
+(1.3 - 1.6, 9 - 12)
+—|
+
+!
+[0] 2s -
+
+ih A~ MH
+32 (2.6 - 3.3, 19 - 24)
+A
+
+IAN
+
+(1.6 - 21,777
+12 - 15)
+
+Hood stay x
+op (CE
+Hood
+= / S07 adjustment
+
+[0] 16 - 21 hI - 21
+
+16 - 21
+(16 - 2.1, 12 - 15)
+[O16 - 21
+(1.6 - 2.1,
+—12 - 15)
+
+1.6 - 2.1,
+12 - 15)
+
+BT-8
+
+% : Bumper assembly mounting clips, bolts & nuts
+
+[A : Nem (kg-m, ft-Ib)
+
+SBT339
+===== PDF page 9 =====
+BODY END
+
+% ®
+
+Body Rear End and Opener
+
+When removing or installing trunk lid, place a cloth or other padding on trunk lid. This prevents vehicle
+
+body from being scratched.
+
+Bumper fascia is made of plastic. Do not use excessive force and be sure to keep oil away from it.
+Trunk lid adjustment: Adjust at hinge-trunk lid portion for proper trunk lid fit.
+
+Trunk iid lock system adjustment: Adjust striker so that it is in the center of the lock. After adjustment,
+check trunk lid lock operation.
+
+After installation, make sure that trunk lid and fuel filler lid open smoothly.
+
+For Wiring Diagram, refer to “TRUNK LID AND FUEL FILLER LID OPENER” in EL section.
+
+REMOVAL — Rear bumper assembly
+
+CRICICICICITIO
+
+Remove bolts from lower side of rear bumper fascia.
+Remove trunk trim. Refer to “Trunk Room Trim” in “INTERIOR TRIM” for details, BT-21.
+
+Remove clips securing upper side of bumper fascia. [El
+
+Remove nuts from each fender side.[®
+Remove nuts securing fascia bracket from trunk compartment. [8]
+
+Pull bumper fascia out.
+Remove left and right plugs from floor and then remove reinforcement mounting bolts. @
+
+Pull reinforcement out.
+
+Trunk lid torsion bar removal & installation Trunk lid jock [IJ
+Fuel filler lid control Trunk lid lock key cylinder [[{
+O]C] 7
+
+Bumper fascia assembly
+
+SEC. 843-850
+
+Bumper reinforcement
+
+Energy absorber
+
+Trunk lid hinge removal [g
+
+Trunk lid striker & opener
+cable adjustment [5]
+
+SBT340
+
+BT-9
+
+EM
+LC
+
+EC
+
+cL
+
+MIT
+
+FA
+BR
+ST
+RS
+
+FHA
+
+1191
+===== PDF page 10 =====
+BODY END
+
+Body Rear End and Opener (Cont'd)
+
+—_———
+
+Removal
+
+oY
+
+1G Driver side Manual (type II) Unit: mm (in)
+TIES SLATS UITCR UE SIRSS SION } _
+Steller . 0) Nl — Striker
+(5% — = adjustmen ( adjustment
+le PY Dy
+2 Front f ,
+0 (py 0 > A=:
+— &
+‘ 51-65
+(0.52 - 0.66, 05-15 Opener cable 0.5 - 1.5 Opener cable
+45.1 - 57.3) (0.020 - 0.059) adjustment (0.020 - 0.059) adjustment
+n | [@]5.1 - 6.5 NJ Type | (For fuel filler and trunk lid) Type Ii (For fuel filler lid)
+fun lid ~~ (0.52 - 0.66, H Opener cable
+
+45.1 - 57.3)
+tl
+
+|
+
+@liy out
+Ah ¢
+
+Fuel filler lid opener & control
+
+Bel cnt Nl
+
+Key cylinder tamper switch
+
+Pull out
+
+Key cylinder
+
+=) lock plate
+= a
+: Nem (kg-m, in-Ib) ©! : Nem (kg-m, ft-Ib) * : Bumper assembly mounting bolts, nuts and clips
+
+SBT341
+
+1162 | BT-10
+===== PDF page 11 =====
+DOOR
+
+Front Door
+
+e For removal of door trim, refer to “Door Trim” in “INTERIOR TRIM”, BT-19.
+e After adjusting door or door lock, check door lock operation.
+
+SEC. 800803+805+998 @
+5.2 - 7.0 (0.53 - 0.71, 46.0 - 61.6)
+Bell crank MIA
+adjustment [Y
+EM
+[CO] 18-24
+(1.8 - 2.4, 13 - 17)
+4.3 - 5.9 LGC
+(0.44 - 0.60,
+38.2 - 52.1)
+7 ry [0] 13 - 17 EG
+N (1.3 - 1.7,
+5
+“es 9 - 12)
+FE
+CL
+18 - 24
+(1.8 - 2.4, 13 - 17)
+MT
+52 -7.0
+{0.53 - 0.71,
+46.0 - 61.6
+5.2 - 7.0 ) AT
+CIP) 51-65 (0.53 - 0.71,
+(0.52 - 0.66, 45.1 - 57.3) 46.0 - 61.6)
+Door glass adjustment E A
++ Adjust guide rail mounting position by rotating it.
+I Be! crank adjustment IZ] poor-hinge adjustment
+Bell crank
+/ o / Lock knob BR
+[i .
+Lock door after setting door lock ST
+assembly and inside handle in position.
+Move bell crank in direction of arrow
+(shown in figure at (eft) to take up [©] 18 - 24 RS
+knob free play, and secure with bolts. (1.8 - 2.4, 13 - 17)
+
+Striker adjustment
+
+Outside handle adjustment
+
+| | Rod 4 }
+Q¢ older 0.020 + TN © 2 o A, HA
+T
+
+0.094 in) iN “« = 9 - 15)
+4 El
+| iy
+
+Rod
+Release lever
+
+: Nem (kg-m, in-Ib)
+
+[@] : Nem (kg-m, fi-Ib) SBT479
+
+BT-11 1193
+===== PDF page 12 =====
+DOOR
+
+Rear Door
+
+SEC. 820-823-825
+
+Guide rail adjustment
+
+@] 5.2 - 7.0 (0.53 - 0.71, 46.0 - 61.6)
+
+[O] 18 - 24 (1.8 - 2.4, 13 - 17)
+
+[0] 18 - 24 (1.8 - 2.4, 13 - 17)
+re py 4.3 - 5.9
+
+§ = {0.44 - 0.60,
+a of 38.2 - 52.1)
+[§
+
+QQ) 51-65 A Er ([@ 13-17 (1.3 - 1.7, 9 - 12)
+
+[OC] 18 - 24
+ro 824,13 - 17)
+
+. )
+(0.53 - 0.71, |
+
+46.0 - 61.6)
+
+Door glass adjustment
+* Adjust guide rail mounting position by rotating it.
+
+Outside handle adjustment B| Door-hinge adjustment
+
+Outside handle
+ascutcheon
+
+{0.020 - 0.094 in)
+Release lever
+
+Vo
+
+[ ¢ By Outside handle adjustment {Turn holder as the
+
+clearanse between holder & rod is specified value.) 13 - 17)
+
+Striker adjustment
+
+t*
+
+w 3
+=>
+QM 13-21 © / -
+(13-21, 9 - 15) 4
+Cl : Nem (kg-m, in-ib)
+
+[A : Nem (kg-m, ft-Ib)
+
+BT-12
+
+SBT480
+===== PDF page 13 =====
+INSTRUMENT PANEL
+
+CAUTION:
+
+e Disconnect ground terminal from battery in advance.
+
+e Disconnect air bag system line in advance.
+
+eo Never tamper with or force air bag lid open, as this may adversely affect air bag performance.
+
+e Be careful not to scratch pad and other parts. Gl
+REMOVAL — Instrument panel assembly
+Instrument panel assembly Combination meter Audio & A/C control Console box M A
+Remove air bag module (driver) and steering wheel.
+Refer to “SUPPLEMENTAL RESTRAINT SYSTEM” in RS section for details. EM
+
+1
+
+@ Glove box assembly
+© Remove upper screws and lower screws. LG
+© Then disconnect passenger air bag module connector.
+
+|
+
+@ Instrument lower panel on driver side EG
+® Remove screws.
+
+|
+
+@ Knee protector assembly FE
+¢ Remove screws.
+
+@ Steering column cover & combination switch CL
+® Remove screws.
+
+| |
+® Cluster lid A B] MT
+
+® Remove screws.
+
+1
+
+® Combination meter
+® Remove screws then disconnect harness connectors.
+
+@ Center ventilator with switch panel
+® Pull out with a miniature flat-bladed screwdriver.
+
+m
+
+A/T shifter cover plate or M/T shifter cover plate
+
+@ Audio & A/C control unit assembly
+® Remove upper & lower screws from the instrument panel. SY
+
+®-1 A/C or heater control
+(w-2 Cluster lid C RS
+1-3 Audio
+
+(10-4 Card & coin case
+
+AT
+
+EA
+
+BR
+
+Ashtray
+
+BT
+
+(» Console box
+® Remove screws under the shifter cover plate and also remove rear screws.
+
+@ Front pillar garnish a A
+I
+
+@® Instrument dash: Lower cover and center lower cover on LH, RH & El
+
+(® Defroster grille IG
+
+IDX
+
+® Instrument panel assembly
+© Remove instrument panel by unscrewing bolts & nuts marked with +.
+
+I
+
+@-1 Passenger air bag module
+® Remove bolts.
+
+BT-13 1195
+===== PDF page 14 =====
+INSTRUMENT PANEL
+
+SEC. 248+2804487+680685°769069
+
+* : Instrument panel assembly mounting bolts and nuts
+
+SBT342
+
+1196 BT-14
+===== PDF page 15 =====
+INSTRUMENT PANEL
+
+Metal clip
+
+MA
+
+Metal clip
+
+Metal clip EM
+Cloth tnstrument panel LGC
+Metal clip
+
+Center ventilator
+EC
+
+FE
+
+*» Remove center ventilator carefully
+so that its metal clips may not be CL
+caught by instrument panel.
+Otherwise they will be damaged
+or loosened. MT
+
+Cloth
+* Pry open with miniature
+flat-bladed screwdriver.
+
+CAUTION:
+* Do not pull the center ventilator horizontally, but do so slightly downwards. AT
+«If it is pulled upwards, the metal clips on the upper side of the center ventllator can be caught by the instrument
+panel, and if it is pulled out forcefully, the clips may be loosened or damaged.
+* If it Is inadvertently pulled out in the upward direction, check the metal clips for any looseness or detachment. BA
+= If the center ventilator is dropped or knocked, check it for damage, and looseness or detachment of defroster
+
+grille, before reinstalling it.
+
+Metal clip
+
+Metal clip
+
+RS
+
+BT
+
+FA
+
+EL
+
+SBT364
+
+BT-15 1197
+===== PDF page 16 =====
+INTERIOR TRIM
+
+Side and Floor Trim
+
+CAUTION:
+Wrap the tip of flat-bladed screwdriver with a cloth when removing metal clips from garnishes.
+
+REMOVAL — Body side trim
+
+Remove front and rear seats. Refer to “SEAT” for details, BT-27, 32.
+
+Remove front and rear kicking plates.
+
+Remove dash side lower finishers.
+
+Remove front and rear body side welts. Refer to “Body side weit” in “EXTERIOR?” for details, BT-23.
+Remove front pillar garnishes.
+
+Remove center pillar upper garnishes.
+
+Remove center pillar lower garnishes.
+
+Remove rear pillar garnishes.
+
+Remove high-mounted stop lamp.
+
+Remove rear parcel shelf finisher.
+
+SICICRICICISIEIIS)
+
+1198 BT-16
+===== PDF page 17 =====
+INTERIOR TRIM
+Side and Floor Trim (Cont'd)
+
+SEC. 268+284+678°749°769+799
+
+@ME 0 or. clie Metal ctip [8] |
+= 729 Metal clip [§
+
+© Pawl [5]
+
+MA
+
+Metal clip [E] Se clip [gf
+
+0) 3 +2 J etal clip A] etal clip [8]
+¢ Cod o> =F
+
+Rear backseat
+center support
+
+8.4 - 10.8 Y/
+(0.86 - 1.1, 74.6 - 95.5)
+8.4 - 10.8 *X S\ ES
+{0.86 - 1.1, 74.6 - 95.5) A
+Front
+FE
+: Nem (kg-m, in-Ib)
+
+Metal clip = clip WIT
+
+AT
+
+A 2
+
+H
+
+Metal clip
+© )
+rm
+: ~N
+Hs “Af — | ow
+a } Garnish
+RS
+SBT367
+
+HA
+
+EL
+IDX
+
+BT-17 1199
+===== PDF page 18 =====
+INTERIOR TRIM
+
+Side and Floor Trim (Cont'd)
+
+[Bremoval
+
+Ly
+
+{
+”
+@
+
+Hook A (This can be sagged.)
+
+» Be careful not to break
+
+* When removing, disconnect
+
+- JE
+
+VES
+
+» @
+
+pA
+
+the hooks when removing
+the high-mounted stop lamp.
+
+the high-mounted stop lamp
+connector.
+
+SBT366
+
+1200
+
+BT-18
+===== PDF page 19 =====
+INTERIOR TRIM
+
+Door Trim
+
+Removal — Door trim
+
+@ Remove inside handle escutcheon.
+@ Remove power window switches, then disconnect the connectors. al
+@ Remove screw securing pull handle, and then remove pull handle.
+@ Remove step lamp lens and screws securing step lamp, and then disconnect step lamp connector.
+® Remove screws. (Front door only) MA
+® Remove clips securing door finisher.
+@ Lift out door finisher. Disconnect harness connectors.
+SEC. 2514267809828 EM
+LC
+EC
+FE
+GL
+MT
+AT
+FA
+B
+BR
+—— ST
+Metal cli er 4
+= = N ~~ =
+flat-bladed To TS - ® Pry open with a RS
+¢ Pry open with a crewdriver. flat-bladed
+flat-bladed Hook s screwdriver.
+screwdriver. oo & )
+Metal clip
+Pawl
+7 HA
+25 Paw
+EL
+IDX
+
+SBT368
+
+BT-19 1201
+===== PDF page 20 =====
+INTERIOR TRIM
+
+Roof Trim
+
+REMOVAL — Headiining
+
+Remove front and rear seats. Refer to “SEAT” for details, BT-27, 32.
+Remove front and rear seat belts. Refer to “SEAT BELTS” in RS section for details.
+Remove body side trim. Refer to “Side and Floor Trim” for details, BT-16.
+Remove sunroof switch or spot lamp switch.
+
+Remove inside mirror assembly.
+
+Remove sun visors.
+
+Remove interior lamp assembly.
+
+Remove assist grips.
+
+Remove metal clips securing headlining.
+
+Remove headlining from vehicle through front passenger side.
+
+SCICRIGICICIEINIO)
+
+SEC. 264.738.963.964
+
+12
+
+36 =
+ast
+CY Metal clip (9)
+
+MBTOGOA
+
+1202 BT-20
+===== PDF page 21 =====
+INTERIOR TRIM
+
+Trunk Room Trim
+
+SEC. 849
+Trunk lid trim Gl
+
+MA
+EM
+
+LG
+
+EC
+
+FE
+
+Trunk room side trim
+CL
+
+MT
+
+AT
+
+FA
+
+BR
+
+Trunk floor trim
+
+EL
+
+Trunk rear trim
+
+1)
+
+SBF337H
+
+BT-21 1203
+===== PDF page 22 =====
+1204
+
+EXTERIOR
+
+SBT345
+
+@ @ Hood molding and hood front seal
+
+SEC. 650
+
+SBT343
+
+Q @ Cow! top seal and cowl top grille
+
+SEC. 660 |
+
+Cow! top seal
+
+SBF341HB
+
+® Windshield side molding
+Mounted with screws.
+
+BT-22
+===== PDF page 23 =====
+EXTERIOR
+
+® Windshield upper molding @® Body side welt
+SEC. 720 SEC. 767
+1. Cut off urethane adhesive at glass end.
+2. Remove old urethane adhesive from panel surface. Gill
+3. Set molding fastener and apply primer to body
+panel, and apply urethane adhesive to body.
+
+Outside
+
+ap LG
+
+Molding
+Clip SBF454EA EG
+Fastener -
+©@ Door weatherstrip
+FE
+SEC. 800-820
+»—— Double-faced
+adhesive CL
+tape
+Apply primer, MT
+Open cell foam dam
+Apply urethane adhesive.
+; More than
+Urethane adhesive a mm Cut off AT
+; _— ] (0.16 in) hatched
+4. Install molding by aligning the molding mark " ;
+located on center with vehicle center. partion.
+Be sure to install tightly so that there is no / FA
+gap around the corner. SBF342HF
+SBF455EA
+
+@ Drip weatherstrip
+
+SEC. 767
+Front pillar Door panel < Upper BR
+Body panel
+Windshield
+side molding ST
+Drip weatherstrip
+RS
+
+Ve
+~~ Ny
+<9
+
+{J
+
+v,
+A) i
+= SBF343HA
+BL
+OX
+
+BT-23 1205
+===== PDF page 24 =====
+1206
+
+EXTERIOR
+
+@ Door sash molding
+
+G2 Rear door corner molding
+
+SEC. 800-820
+
+Door sash
+molding
+
+: molding
+
+Door panel
+
+Rear door
+corner
+
+i
+
+SEC. 820
+Clip
+(=
+od
+SN N
+Rear door \ Q
+corner molding N\
+
+Door panel
+
+L oor panel
+Door sash molding
+
+SBF345H
+
+Rear door comer molding
+SBF347H
+
+d@ Door outside molding
+
+Front door
+
+@ Front door parting seal
+
+SEC. 800
+
+|
+1
+
+I
+
+Double adhesive tape
+
+SBF346HA
+
+Door outer molding: —
+— jo Clip
+===
+= Door outer panel
+x
+
+Rear door
+
+Door panel —
+
+~N
+
+4 [2 outer molding
+
+SBF348H
+
+BT-24
+===== PDF page 25 =====
+EXTERIOR
+
+3 Sunroof lid weatherstrip @® Rear window lower molding
+SEC. 797
+
+SEC. 736
+
+Sunroof lid
+Weatherstrip Glass Rear window lower molding @
+
+Holder
+- Screw
+/ Trunk panel MIA
+Td
+
+Roof panel
+
+1
+
+Giass lid
+
+\
+
+Dam rubber EM
+Sunroof rail Sealant
+assembi
+= or 1
+Front
+SBF349HA SBF350H | BE
+435 Side guard molding 4 Trunk lid weatherstrip
+; FE
+SEC. 766 SEC. 843 There is a marking at
+vehicle center.
+
+Vehicle center
+
+ay IB cL
+
+MIT
+
+Bonding portion
+
+0,
+SBF461EA RA
+
+@ Mudguard
+
+Front Rear
+SEC. 767 SEC. 767
+
+RS
+
+&
+
+HA
+For Canada For Canada
+SBF460EA :
+. . EL
+3 4 Rear window upper molding and SBF357H
+side molding
+0X
+
+Basically the same as windshield upper molding.
+Refer to ® Windshield upper molding.
+
+BT-25 1207
+===== PDF page 26 =====
+1208
+
+EXTERIOR
+
+@ Rear combination lamp
+® Rear combination lamps are installed with nuts and butyl seal.
+
+SEC. 265
+
+Heat gun
+
+Trunk Hd
+Buty! =~
+seal | SN
+
+® Apply butyl seal evenly as it tends to become thin in the
+
+} Butyl seal comers.
+{Inside of trunk room) ® Warm up lamp assembly area to a temperature of a little
+below 60°C (140°F), SBF358H
+
+@ Rear air spoiler
+
+e When removing, first disconnect high-mounted stop lamp connector located on the back of trunk lid, then
+remove air spoiler taking care the stop lamp harness does not get caught.
+
+eo When installing, make sure that there are not gaps or waves at ends of air spoiler.
+
+e Before installing spoiler, clean and remove oil from surface where spoiler will be mounted.
+
+SEC. 960
+
+High-mounted stop tamp
+
+High-mounted stop lamp
+
+Connector
+
+High-mounted 8
+
+stop lamp . SBT941
+
+BT-26
+
+===== PDF page 27 =====
+SEAT
+
+eo When removing or installing the seat trim, carefully handle it to keep dirt out and avoid damage.
+* For Wiring Diagram, refer to “POWER SEAT” in EL section.
+
+Front Seat
+POWER SEAT el
+
+SEC. 870
+
+MA
+EM
+LG
+EC
+PE
+GL
+
+MT
+
+[021-26 21-22,15 - 20)
+43 - 55 (4.4 - 56, 32 - 41 =
+
+_ Stide rail cover - a RA
+| h py Z
+43 - 55 Seat lift motor !
+5 | 4-58, Foe -55 Ee
+P= - 41) y (4.4 - 5.6, 32 - 41)
+Z Slide rail cover IX
+
+A
+[0] 21 - 26 (2.1 - 2.7, 15 - 20)
+
+[Cas - 55 44 - 55, 32 - 41)
+SBF351H
+
+BT-27 1209
+
+[Q) : Nem (kg-m, ft-Ib)
+===== PDF page 28 =====
+SEAT
+Front Seat (Cont'd)
+
+POWER SEAT (With SRS side air bag)
+
+CAUTION:
+eo Before removing the front seat, turn the ignition switch off, disconnect both battery cables and wait
+
+at least 3 minutes.
+
+eo When checking the power seat circuit for continuity using a circuit tester, do not confuse its con-
+nector with the side air bag module connector. Such an error may cause the air bag to deploy.
+
+eo Do not drop, tilt, or bump the side air bag module installed in the seat. Always handle it with care.
+
+1210 BT-28
+===== PDF page 29 =====
+SEAT
+Front Seat (Cont'd)
+
+SEC. 870
+
+Air bag module connector
+
+6]
+
+MA
+
+EM
+
+LC
+
+EC
+
+FE
+
+CL
+
+MIT
+
+AT
+
+Seat lift motor
+
+| [CO] 43 - 55 HA
+
+(4.4 - 5.56, 32 - 41)
+
+Rad
+
+Slide rail cover EL
+
+§ r= iy 2a, 15 - 20) IDX
+
+[O] 43 - 55
+
+[0] : N-m (kg-m, ft-lb) (4.4 - 5.6, 32 - 41)
+
+SBT481
+
+BT-29 11
+===== PDF page 30 =====
+SEAT
+
+Front Seat (Cont'd)
+
+MANUAL SEAT
+
+SEC. 870
+
+43 - 55 (4.4 - 5.6, 32 - 41)
+
+[0] 43 - 55 (4.4 - 5.5, 32 - 41)
+
+(4.4 - 5.6, 32 - 41)
+
+&) 29 26 A INE SS =
+(2.1 - 2.7, 15 - 20) a ©
+= ~~; -
+’ RE
+[O43 - 55 ~
+(4.4 - 5.6, 32 - 41) \ 4 Sep
+
+[3 : Nem (kg-m, ft-lb)
+
+SBT344
+
+1212 BT-30
+===== PDF page 31 =====
+SEAT
+
+Heated Seat
+
+e When handling seat, be extremely careful not to scratch heating unit.
+® To replace heating unit, seat trim and pad should be separated.
+e® Do not use any organic solvent, such as thinner, benzene, alcohol, gasoline, etc. to clean trims.
+* For Wiring Diagram, refer to “HEATED SEAT” in EL section. Gil
+Seatback heating unit removal & installation
+SEC. 870 Seatback trim MA
+EM
+LC
+Heating —
+unit
+EC
+FE
+CL
+Thermostat Trim temperature Rshngt- to De to
+°C (°F) (95 - 113) (59 - 77)
+MT
+Thermostat OFF ON
+operation
+Seat cushion trim SBFA24HA AT
+FA
+RA
+BR
+§T
+RS
+
+EL
+
+BT-31 1213
+===== PDF page 32 =====
+1214
+
+SEAT
+
+Rear Seat
+
+SEC. 880
+
+[®s.1 - 6.5 (0.52 - 0.66, 45.1 - 57.3)
+
+5.1 - 6.5 (0.52 - 0.66, 45.1 - 57.3)
+
+: N-m (kg-m, in-Ib)
+
+MBTO77AA
+
+BT-32
+
+===== PDF page 33 =====
+SUNROOF
+
+ADJUSTMENT
+Install motor & limit SW assembly and sunroof rail assembly in the following sequence:
+
+1. Arrange equal lengths of link and wire assemblies on both sides of sunroof opening.
+2. Connect sunroof connector to sunroof switch and positive (+) power supply.
+3. Set lid assembly to fully closed position by operating OPEN switch and TILT switch. @
+4. Fit outer side of lid assembly to the surface of roof on body outer panel.
+5. Remove motor, and keep OPEN switch pressed until motor pinion gear reaches the end of its rotating MIA
+range.
+6. Install motor.
+7. Check that motor drive gear fits properly in wires. EM
+8. Press TILT-UP switch to check lid assembly for normal tilting.
+9. Check sunroof lid assembly for normal operations (tilt-up, tilt-down, open, and close).
+LG
+Front <= => Rear
+Lid assembly — Tilting up & down range
+i &6
+=== outer body panel
+
+=
+TN losing & opening range FE
+
+Closing & opening range -
+
+SBF920F
+
+BT-33 1215
+===== PDF page 34 =====
+SUNROOF
+
+REMOVAL
+
+e After any adjustment, check sunroof operation and lid alignment.
+
+e Handle finisher plate and glass lid with care so not to cause damage.
+e lt is desirable for easy installation to mark each point before removal.
+CAUTION:
+
+Always work with a helper.
+
+Link and wire assem- Sunroof frame Shade assembly Lid assembly Motor assembly
+bly assembly
+[ | [ i
+Tilt glass lid up.
+I I I i
+@ Side trim
+
+® Remove side trim clips.
+| I ] [
+(® Sunroof lid mount nuts
+| | |
+@ Lid assembly
+[ | I
+(4 Rear drain assembly
+
+i | |
+Operate sunroof switch to tilt glass lid down.
+
+| |
+:
+
+(® Shade assembly
+[ |
+
+Sunroof switch/interior accessories/headlining
+® Refer to “Roof Trim”, BT-20.
+
+] I I
+
+Motor switch bracket
+
+| | ]
+
+® Motor assembly
+
+I [
+@ Wind deflector holder B1-B3
+
+] I
+Wind deflector assembly
+
+| |
+@ Drain hoses
+
+[ |
+(9 Sunroof unit bracket
+
+{ |
+@ Sunroof frame assembly
+
+|
+@ Link and wire assembly
+
+1216 BT-34
+===== PDF page 35 =====
+SUNROOF
+
+% For Wiring Diagram, refer to “ELECTRIC SUNROOF” in EL section.
+
+SEC. 736
+
+® Lid assembly
+
+EM
+LC
+
+EC
+
+(® shade assembly [Y EL
+
+MT
+
+AT
+Wind deflector @® Link and wire assembly
+FA
+
+(@D sunroof frame assembly
+
+BR
+@® Rear drain assembly
+ST
+RS
+
+Sunroof unit
+bracket BT
+
+HA
+
+® Motor assembly Sa EL
+IDX
+
+f
+iL —@ Side trim clip
+
+@ side trim
+
+SBT516
+
+BT-35 1217
+===== PDF page 36 =====
+1218
+
+SUNROOF
+
+2
+
+Rear drain mounting hole
+Inside
+
+vr) © p
+Rear MENG 4
+74 MBF4928
+
+Link assembly
+
+MBF493B|
+
+Using flat-bladed screwdriver, pry shade assembly holder off
+rail. Then pull shade assembly forward to remove it from rail.
+
+EX] Disengage pawls from rail, then remove wind deflector
+
+holder.
+
+Using flat-bladed screwdriver, pry stopper spring off rail
+groove. Then slide rear guide backward to remove it from rail.
+
+Remove wire and link assembly from rail while pushing link
+
+back with flat-bladed screwdriver.
+
+BT-36
+===== PDF page 37 =====
+SUNROOF
+
+DIAGNOSTIC TABLE
+
+Trouble Diagnoses
+
+NOTE: For diagnosing electric problem, refer to “ELECTRIC SUNROOF” in EL section.
+
+Wind deflector
+
+Check items (Components) Gl
+Wind deflector Adjustment Drain hoses Weatherstrip Link and wire
+assembly M A
+Reference page BT-37 BT-38 BT-39 BT-39 BT-40
+Excessive wind
+noise ! 2 3 EM
+a X Walter leaks 1 2 3
+ymptom
+Sunroof rattles 1 4 2 3 LG
+Excessive opera- ] 5 3
+tion noise Ee
+The numbers in this table mean checking order.
+FE
+GL
+WIND DEFLECTOR MT
+Roof panel 1 Open lid.
+/ 2. Check visually for proper installation.
+TT 3. Check to ensure a proper amount of petroleum jelly has been Af
+applied to wind deflector connection points; apply if necessary.
+DD FA
+Wind deflector arm NA
+RS
+
+Wind deflector arm
+
+Wind deflector.
+
+Check that wind deflector is properly retracted by hand. If itis gg
+not, remove and visually check condition. (Refer to removal
+procedures, BT-34.) if wind deflector is damaged, replace with
+
+new one. If wind deflector is not damaged, re-install properly.
+
+BT-37
+
+SU
+
+RS
+
+HA
+
+1219
+===== PDF page 38 =====
+1220
+
+SUNROOF
+
+Trouble Diagnoses (Cont'd)
+ADJUSTMENT
+
+If any gap or height difference between glass lid and roof is found,
+check glass lid fit and adjust as follows:
+
+SEC. 736
+
+14.6 - 16.0 (0.575 - 0.630)
+
+Unit: mm (in)
+
+51.6 (2.031) Roof panel
+
+—rr———
+
+[ga Ser wy Se M :
+& Glass lid
+
+Shade assembly 29.2 (1.150)
+dl : Glass lid oT
+
+16.0 (0.630) Headlining
+
+B - B {When sunroof is open) B - B (When sunroof is tilted up)
+
+SBT482
+
+Gap adjustment
+
+1. Open shade assembly.
+
+2. Tilt glass lid up then remove side trim.
+
+3. Loosen glass lid securing nuts (3 each on left and right sides),
+then tilt glass lid down.
+
+4. Adjust glass lid from outside of vehicle so it resembles “A-A”
+as shown in the figure above.
+
+5. Tilt glass lid up and down until it is adjusted to “B-B” as shown
+in the figure above.
+
+6. After adjusting glass lid, tilt glass lid up and tighten nuts.
+
+7. Tilt glass lid up and down several times to check that it moves
+smoothly.
+
+Height difference adjustment
+
+1. Tilt glass lid up and down.
+
+2. Check height difference between roof panel and glass lid to
+see if it is as “A-A” as shown in the figure above.
+
+3. If necessary, adjust it by using one of following procedures.
+
+e Adjust by adding or removing adjustment shim(s) between
+
+glass lid and link assembly.
+
+If glass lid protrudes above roof panel, add shim(s) or plain
+
+washer(s) at sunroof mounting bracket or stud bolt locations to
+
+adjust sunroof installation as required.
+
+BT-38
+===== PDF page 39 =====
+SUNROOF
+Trouble Diagnoses (Cont'd)
+
+DRAIN HOSES
+
+MA
+EM
+0) LG
+EC
+
+a FE
+
+Drain hose SBT483 CL
+
+= 1. Remove headlining to access drain hose connections. (Refer yi
+SS to “REMOVAL — Headlining” in “INTERIOR TRIM”, BT-20, for
+
+= detail.)
+—-— 2. Check visually for proper connections, damage or deteriora- AT
+| tion.[¥ (The figure shows only the front side.)
+
+Sunroof flame»
+
+___assembly
+ves — RA
+SBT333
+@ Front 3. If leakage occurs around luggage room, remove luggage room BR
+Sunroof side trim and check connecting area. Check for proper
+
+drain hose connection, damage or tear. El ST
+
+4. Remove drain hoses and check visually for any damage,
+cracks, or deterioration.
+
+5. Pour water into drain hoses and find damaged portion. RS
+
+e If any damaged portion is found at each step, replace the
+
+damaged part.
+
+WEATHERSTRIP
+
+e Inthe case of leakage around glass lid, close glass lid and pour [EL
+water over glass lid to find damaged or gap portion.
+
+1. Remove glass lid assembly. (Refer to removal procedures,
+BT-34, for details.) [D4
+
+2. Visually check weatherstrip for proper installation. If a gap
+exists between glass lid and weatherstrip, check for sufficient
+amount of butyl seal. If required, remove weatherstrip and
+apply butyl seal.
+Refer to “EXTERIOR”, BT-22, for details.
+
+BT-39 1221
+===== PDF page 40 =====
+SUNROOF
+
+1222
+
+Trouble Diagnoses (Cont’d)
+3. Check weatherstrip visually for any damage, deterioration, or
+
+flattening.
+¢ |f any damage is found, replace weatherstrip.
+CAUTION:
+
+Do not remove weatherstrip except when replacing, or filling
+up butyl seal.
+
+LINK AND WIRE ASSEMBLY
+
+NOTE:
+Before replacing a suspect part, carefully ensure it is the
+
+source of noise being experienced.
+
+1. Check link to determine if coating film has peeled off to such
+an extent that substrate is visible. Check also to determine if
+link is the source of noise. If it is, replace it.
+
+2. Visually check to determine if a sufficient amount of petroleum
+jelly has been applied to wire or rail groove. If not, add petro-
+ileum jelly as required.
+
+3. Check wire for any damage or deterioration. If any damage is
+found, remove rear guide (refer to removal procedures, BT-34,
+for details), then replace wire.
+
+BT-40
+===== PDF page 41 =====
+WINDSHIELD AND WINDOWS
+
+Cutting sealant
+
+SBF034B
+
+Windshield glass
+
+Interior auto glass
+
+cut-out knife kit SBT472
+
+Inflatable
+pump bag
+
+Windshield
+
+SBT473
+
+REMOVAL
+
+After removing moldings, remove glass using piano wire or power
+cutting tool and an inflatable pump bag.
+
+WARNING:
+
+When cutting the glass from the vehicle, always wear safety
+glasses and heavy gloves to help prevent glass splinters from
+entering your eyes or cutting your hands.
+
+CAUTION:
+
+e Be careful not to scratch the glass when removing.
+
+eo Do not set or stand the glass on its edge. Small chips may
+develop into cracks.
+
+INSTALLATION
+
+eo Use a genuine Nissan Urethane Adhesive Kit or equivalent
+and follow the instructions furnished with it.
+
+e While the urethane adhesive is curing, open a door win-
+dow. This will prevent the glass from being forced out by
+passenger compartment air pressure when a door is
+closed.
+
+e The molding must be installed securely so that it is in
+position and leaves no gap.
+
+oe Inform the customer that the vehicle should remain sta-
+tionary until the urethane adhesive has completely cured
+(preferably 24 hours). Curing time varies with temperature
+and humidity.
+
+WARNING:
+
+e Keep heat and open flames away as primers and adhesive
+are flammable.
+
+e The materials contained in the kit are harmful if
+swallowed, and may irritate skin and eyes. Avoid contact
+with the skin and eyes.
+
+eo Use in an open, well ventilated location. Avoid breathing
+the vapors. They can be harmful if inhaled. If affected by
+vapor inhalation, immediately move to an area with fresh
+air.
+
+® Driving the vehicle before the urethane adhesive has com-
+pletely cured may affect the performance of the wind-
+shield in case of an accident.
+
+CAUTION: :
+eo Do not use an adhesive which is past its usable term.
+
+Shelf life of this product is limited to six months after the
+date of manufacture. Carefully adhere to the expiration or
+manufacture date printed on the box.
+
+eo Keep primers and adhesive in a cool, dry place. Ideally,
+they should be stored in a refrigerator.
+
+e Do not leave primers or adhesive cartridge unattended
+with their caps open or off.
+
+e The vehicle should not be driven for at least 24 hours or
+until the urethane adhesive has completely cured. Curing
+time varies depending on temperature and humidities. The
+curing time will increase under higher temperatures and
+lower humidities.
+
+BT-41
+
+@l
+
+MIA
+
+EM
+
+LC
+
+EC
+
+FE
+
+cL
+
+MT
+
+AT
+
+FA
+
+BR
+
+RS
+
+EL
+
+1223
+===== PDF page 42 =====
+WINDSHIELD AND WINDOWS
+
+Windshield and Rear Window
+
+Body side
+Install spacer to panei.
+Windshield
+
+EAR
+
+400 (15.75)
+
+1!
+
+le ———
+
+Rear window
+
+—
+
+Spacer position
+marking
+
+VER
+
+400 (15.75)
+
+|
+Cowl Glass
+
+top cover
+
+Qpen cell
+
+foam dam
+Spacer
+
+Dash upper panel
+
+Glass
+
+Molding
+
+WITH VN =
+Open cell
+foam dam
+
+Glass side
+Install open cell foam dam.
+
+Windshield Vehicle center paar window Vehicle center
+
+Joint portion
+
+8 (0.31) 8 {0.31)
+3 8 (0.31)
+: 8 (0. ir:
+[ee = on ff +0
+
+Open “\
+
+foam dam 3%
+
+Double-faced
+adhesive tape
+
+= Glass
+
+8 (0.31)
+or 15 (0.59)
+
+Urethane
+adhesive
+
+Spacer
+
+Install molding fastener.
+
+When installing it, heat body panel and
+fastener to approx. 30 to 40°C (86 to 104°F).
+
+~
+
+Upper & side
+molding fasteners
+
+Io
+
+on
+[Pans ces
+
+adhesive tape
+
+Apply urethane adhesive evenly.
+Windshield and rear window
+
+7 - 8 (0.28 - 0.31)
+
+= Unit: mm (in)
+
+SBF355HA
+
+REPAIRING WATER LEAKS FOR WINDSHIELD
+
+Leaks can be repaired without removing and reinstalling glass.
+If water is leaking between the urethane adhesive material and body or glass, determine the extent of
+leakage. This can be done by applying water to the windshield area while pushing glass outward.
+
+To stop the leak, apply primer (if necessary) and then urethane adhesive to the leak point.
+
+1224
+
+BT-42
+===== PDF page 43 =====
+MIRROR
+
+CAUTION: Door Mirror
+
+Be careful not to scratch door rearview mirror body.
+% For Wiring Diagram, refer to “POWER DOOR MIRROR” in EL section.
+
+REMOVAL — Door mirror
+
+Remove door trim. Refer to “Door Trim” in “INTERIOR TRIM” for details, BT-19.
+Remove inner cover front corner of door.
+
+Disconnect door mirror harness connector.
+
+Remove door mirror harness clips.
+
+Remove bolts securing door mirror assembly.
+
+Remove the mirror glass. Do not insert screwdriver too far.
+
+SOR
+
+SEC. 963
+
+Bolts
+®)29 - 4.1 Nem (0.30 - 0.42 kg-m, 26.0 - 36.5 in-Ib)
+
+Cloth
+
+Flat-bladed
+screwdriver
+
+SBF356HA
+
+@ Mirror glass @ Inner cover @ Door mirror harness
+@ Mirror body
+
+BT-43
+
+@f
+
+MA
+
+EM
+
+LGC
+
+EC
+
+FE
+
+CL
+
+Mv
+
+AT
+
+1225
+===== PDF page 44 =====
+BODY ALIGNMENT
+
+e All dimensions indicated in figures are actual ones.
+eo When using a tracking gauge, adjust both pointers to equal length. Then check the pointers and gauge
+
+itself to make sure there is no free play.
+® When a measuring tape is used, check to be sure there is no elongation, twisting or bending.
+eo Measurements should be taken at the center of the mounting holes.
+® An asterisk (*) following the value at the measuring point indicates that the measuring point on the other
+
+side is symmetrically the same value.
+e The coordinates of the measurement points are the distances measured from the standard line of “X”, “Y”
+
+and “2”,
+
+Imaginary base line
+
+Vehicle center d ~ y
+“Z": Imaginary base line
+AY [200 mm below datum line
+(*'0Z" at design plan}]
+
+Front axle center
+
+SBF874GB
+
+MEASUREMENT
+
+Unit: mm
+
+SBF380HC
+
+1226 BT-44
+===== PDF page 45 =====
+BODY ALIGNMENT
+Engine Compartment (Cont'd)
+
+MEASUREMENT POINTS
+
+Hoodled ei @ @ convex mark |
+g os
+TT
+MIA
+EM
+LG
+EC
+FE
+CL
+MT
+AT
+FA
+BR
+ST
+RS
+Front side member 2 Fix NN
+yo HA
+EL
+DX
+
+SBF391HA
+
+BT-45 127
+===== PDF page 46 =====
+BODY ALIGNMENT
+
+Underbody
+
+MEASUREMENT
+
+JOGWIBL BU} JO BPS 1BMO| BY] WOJ) PLINSEILL BIE SUOISUBWIP Bsayl { )
+
+Bay <z
+
+WW Thun
+
+778
+
+apis Hy ie
+SLPL
+z8e'L OH 2921
+sLL'} +8E9
+EY’) 526 LIE
+»0LS «CEE |
+go =" re
+~~ ©) @1 »
+200.9 o_O |g 5 [ON
+D; NF. > Ue
+Rl. oP NR
+£3 3 EIR RN
+
+~| wn ’ © -
+
+3k: 8 2 $ $ T
+
+- - ~ oN
+
+Ww AG 3/\ §
+EZ * 2\8) 7)
+
+CAE EIN — “o\[ 3
+wa © HD) ® ® @ (ON
+vw aud 205
+
+229 ib
+rts
+yo opis HY
+228°)
+
+| men Jepun si ainbBy sy
+
+peay jog
+
+(‘suoisuawip paosloid ou ele assy)
+‘S3U0 [eno Ae
+anbly sy} wi paredipul suoisuBWIp IY
+
+MBTO71AA
+
+BT-46
+
+1228
+===== PDF page 47 =====
+BODY ALIGNMENT
+Underbody (Cont’d)
+
+MEASUREMENT POINTS
+
+Coordinates
+
+®.@ @. ®
+X : 330 Radius rod @l
+Y 710 bracket mounting
+Z : 188.8 hole
+, X : 555
+X :513 Y : 2,186 MA
+Y : -540 Z :2395
+& : & ®
+, X :512
+X : 450 Y : 3,000 EM
+Y :68 & : 326.6
+Zz : 184
+®. @ X : 544 LG
+X : a4 Y : 2,982
+Y : 354 5 : 328.2
+Zz : 1115
+®, © X : 540 =
+X : 500 Y : 3,272
+Y : 430 Z : 326.6
+z :1549 (OD FE
+®.® X :575
+X : 398 Y : 3,280
+Y : 700 Z : 326.6 CL
+Z :109 @)
+@. X : 546
+X : 4145 Y : 3,454
+Y 1,210 Z :2954 MY
+Zz :1084 @
+®. X : 570.5
+16 dia X : 4125 Y : 3,450 AT
+RH side Y :1,625 Z : 326.6
+Bottom | LH side Z :104 ®
+view of = > . Yo .
+vehicle Y : 700.5 FA
+Z : 188.8
+Front and rear strut tower centers
+Coordinates: / BR
+® ® 1d “gt
+X : 548.8 \)
+Y 287
+Z :7793 ST
+©. © Front: ) ,(R) 87 dia.
+X : 490.3 ® ®
+Y :2624 pear: ©, 61.4 dia. R
+Z :537.2 ©.@ S
+
+FA
+
+EL
+
+Unit: mm
+
+MBTO72AC
+
+BT-47 1229

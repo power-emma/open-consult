@@ -1,0 +1,3794 @@
+  0.000000 ## open COM4 at 2026-11-14T12:28:25
+  0.000000 ## cmd: --dev COM4 --test-id 3.1-koer-rescan reg-scan -v
+  0.000000 TX 30
+  0.000000 RX cf
+  0.219000 TX ff
+  0.500000 TX ff
+  0.562000 TX ed
+  0.562000 RX 00
+  0.562000 RX 00
+  0.578000 RX 12
+  0.578000 ## init ok id=ED attempt=1 secs=0.016
+  0.578000 TX 5a 00
+  0.609000 RX a5 00
+  0.609000 TX f0
+  0.625000 RX ff
+  0.625000 RX 01
+  0.625000 RX 00
+  0.625000 TX 30
+  0.625000 RX ff
+  0.625000 RX 01
+  0.625000 RX 00
+  0.625000 RX cf
+  0.625000 ## reg 00 supported value=00
+  0.625000 TX 5a 01
+  0.656000 RX a5 01
+  0.656000 TX f0
+  0.672000 RX ff
+  0.672000 RX 01
+  0.672000 RX 5b
+  0.672000 TX 30
+  0.672000 RX ff
+  0.672000 RX 01
+  0.687000 RX 5b
+  0.687000 RX fe
+  0.687000 ## reg 01 supported value=5B
+  0.687000 TX 5a 02
+  0.703000 RX a5 02
+  0.703000 TX f0
+  0.719000 RX ff
+  0.719000 RX 01
+  0.719000 RX 08
+  0.719000 TX 30
+  0.719000 RX ff
+  0.734000 RX 01
+  0.734000 RX 08
+  0.734000 RX cf
+  0.734000 ## reg 02 supported value=08
+  0.734000 TX 5a 03
+  0.750000 RX a5 03
+  0.750000 TX f0
+  0.750000 RX ff
+  0.750000 RX 01
+  0.766000 RX 74
+  0.766000 TX 30
+  0.766000 RX ff
+  0.766000 RX 01
+  0.781000 RX ab
+  0.781000 RX fe
+  0.781000 ## reg 03 supported value=74
+  0.781000 TX 5a 04
+  0.781000 RX a5 04
+  0.781000 TX f0
+  0.797000 RX fe
+  1.812000 TX 30
+  1.812000 RX cf
+  1.812000 ## reg 04 unsupported: no frame
+  2.031000 TX 5a 05
+  2.031000 RX a5 05
+  2.031000 TX f0
+  2.047000 RX ff
+  2.047000 RX 01
+  2.062000 RX 21
+  2.062000 TX 30
+  2.062000 RX ff
+  2.062000 RX 01
+  2.078000 RX 21
+  2.078000 RX cf
+  2.078000 ## reg 05 supported value=21
+  2.078000 TX 5a 06
+  2.078000 RX fe fe
+  2.078000 ## bad echo try 1: fe fe
+  2.078000 TX 30
+  2.094000 RX cf
+  2.203000 TX 5a 06
+  2.219000 RX a5 fe
+  2.219000 ## bad echo try 2: a5 fe
+  2.219000 TX 30
+  2.234000 RX cf
+  2.344000 TX 5a 06
+  2.359000 RX a5 fe
+  2.359000 ## bad echo try 3: a5 fe
+  2.359000 TX 30
+  2.375000 RX cf
+  2.484000 ## reg 06 unsupported: bad echo a5 fe, expected a5 06
+  2.687000 TX 5a 07
+  2.719000 RX a5 fe
+  2.719000 ## bad echo try 1: a5 fe
+  2.719000 TX 30
+  2.734000 RX cf
+  2.828000 TX 5a 07
+  2.844000 RX a5 fe
+  2.844000 ## bad echo try 2: a5 fe
+  2.844000 TX 30
+  2.859000 RX cf
+  2.953000 TX 5a 07
+  2.969000 RX a5 fe
+  2.969000 ## bad echo try 3: a5 fe
+  2.969000 TX 30
+  2.984000 RX cf
+  3.094000 ## reg 07 unsupported: bad echo a5 fe, expected a5 07
+  3.312000 TX 5a 08
+  3.312000 RX a5 08
+  3.312000 TX f0
+  3.328000 RX ff
+  3.328000 RX 01
+  3.344000 RX 60
+  3.344000 TX 30
+  3.344000 RX ff
+  3.344000 RX 01
+  3.344000 RX 60
+  3.344000 RX cf
+  3.344000 ## reg 08 supported value=60
+  3.344000 TX 5a 09
+  3.375000 RX a5 09
+  3.375000 TX f0
+  3.391000 RX ff
+  3.391000 RX 01
+  3.391000 RX 11
+  3.391000 TX 30
+  3.406000 RX ff
+  3.406000 RX 01
+  3.406000 RX 11
+  3.406000 RX cf
+  3.406000 ## reg 09 supported value=11
+  3.406000 TX 5a 0a
+  3.422000 RX a5 0a
+  3.422000 TX f0
+  3.437000 RX ff
+  3.437000 RX 01
+  3.437000 RX 31
+  3.437000 TX 30
+  3.453000 RX cf
+  3.453000 ## reg 0A supported value=31
+  3.453000 TX 5a 0b
+  3.469000 RX a5 0b
+  3.469000 TX f0
+  3.469000 RX ff
+  3.484000 RX 01
+  3.484000 RX 00
+  3.484000 TX 30
+  3.500000 RX ff
+  3.500000 RX 01
+  3.500000 RX 00
+  3.500000 RX cf
+  3.500000 ## reg 0B supported value=00
+  3.500000 TX 5a 0c
+  3.516000 RX a5 0c
+  3.516000 TX f0
+  3.531000 RX ff
+  3.531000 RX 01
+  3.531000 RX af
+  3.531000 TX 30
+  3.547000 RX ff
+  3.547000 RX 01
+  3.547000 RX af
+  3.547000 RX cf
+  3.547000 ## reg 0C supported value=AF
+  3.547000 TX 5a 0d
+  3.547000 RX a5 0d
+  3.562000 TX f0
+  3.578000 RX ff
+  3.578000 RX 01
+  3.578000 RX 1d
+  3.578000 TX 30
+  3.578000 RX ff
+  3.578000 RX 01
+  3.578000 RX 1d
+  3.594000 RX cf
+  3.594000 ## reg 0D supported value=1D
+  3.594000 TX 5a 0e
+  3.609000 RX a5 fe
+  3.609000 ## bad echo try 1: a5 fe
+  3.609000 TX 30
+  3.625000 RX cf
+  3.734000 TX 5a 0e
+  3.734000 RX a5 fe
+  3.734000 ## bad echo try 2: a5 fe
+  3.734000 TX 30
+  3.750000 RX cf
+  3.859000 TX 5a 0e
+  3.875000 RX a5 fe
+  3.875000 ## bad echo try 3: a5 fe
+  3.875000 TX 30
+  3.891000 RX cf
+  4.000000 ## reg 0E unsupported: bad echo a5 fe, expected a5 0e
+  4.219000 TX 5a 0f
+  4.234000 RX a5 fe
+  4.234000 ## bad echo try 1: a5 fe
+  4.234000 TX 30
+  4.250000 RX cf
+  4.359000 TX 5a 0f
+  4.375000 RX a5 fe
+  4.375000 ## bad echo try 2: a5 fe
+  4.375000 TX 30
+  4.391000 RX cf
+  4.500000 TX 5a 0f
+  4.500000 RX a5 fe
+  4.500000 ## bad echo try 3: a5 fe
+  4.500000 TX 30
+  4.516000 RX cf
+  4.625000 ## reg 0F unsupported: bad echo a5 fe, expected a5 0f
+  4.828000 TX 5a 10
+  4.828000 RX a5 10
+  4.828000 TX f0
+  4.859000 RX ff
+  4.859000 RX 01
+  4.859000 RX c9
+  4.859000 TX 30
+  4.859000 RX ff
+  4.859000 RX 01
+  4.859000 RX c9
+  4.875000 RX cf
+  4.875000 ## reg 10 supported value=C9
+  4.875000 TX 5a 11
+  4.891000 RX a5 11
+  4.891000 TX f0
+  4.906000 RX ff
+  4.906000 RX 01
+  4.906000 RX 44
+  4.906000 TX 30
+  4.922000 RX ff
+  4.922000 RX 01
+  4.922000 RX 44
+  4.922000 RX cf
+  4.922000 ## reg 11 supported value=44
+  4.922000 TX 5a 12
+  4.937000 RX a5 fe
+  4.937000 ## bad echo try 1: a5 fe
+  4.937000 TX 30
+  4.953000 RX cf
+  5.062000 TX 5a 12
+  5.062000 RX a5 fe
+  5.062000 ## bad echo try 2: a5 fe
+  5.062000 TX 30
+  5.078000 RX cf
+  5.187000 TX 5a 12
+  5.203000 RX a5 fe
+  5.203000 ## bad echo try 3: a5 fe
+  5.203000 TX 30
+  5.219000 RX cf
+  5.328000 ## reg 12 unsupported: bad echo a5 fe, expected a5 12
+  5.547000 TX 5a 13
+  5.562000 RX a5 13
+  5.562000 TX f0
+  5.578000 RX ff
+  5.578000 RX 01
+  5.578000 RX 85
+  5.578000 TX 30
+  5.578000 RX ff
+  5.578000 RX 01
+  5.594000 RX 85
+  5.594000 RX cf
+  5.594000 ## reg 13 supported value=85
+  5.594000 TX 5a 14
+  5.609000 RX a5 14
+  5.609000 TX f0
+  5.609000 RX ff
+  5.609000 RX 01
+  5.609000 RX 01
+  5.609000 TX 30
+  5.625000 RX ff
+  5.625000 RX 01
+  5.625000 RX 01
+  5.625000 RX cf
+  5.625000 ## reg 14 supported value=01
+  5.625000 TX 5a 15
+  5.641000 RX a5 15
+  5.641000 TX f0
+  5.672000 RX ff
+  5.672000 RX 01
+  5.672000 RX 2c
+  5.672000 TX 30
+  5.687000 RX ff
+  5.687000 RX 01
+  5.687000 RX 2c
+  5.687000 RX cf
+  5.687000 ## reg 15 supported value=2C
+  5.687000 TX 5a 16
+  5.703000 RX a5 16
+  5.703000 TX f0
+  5.719000 RX ff
+  5.719000 RX 01
+  5.719000 RX 60
+  5.719000 TX 30
+  5.734000 RX ff
+  5.734000 RX 01
+  5.734000 RX 60
+  5.734000 RX cf
+  5.734000 ## reg 16 supported value=60
+  5.734000 TX 5a 17
+  5.750000 RX a5 fe
+  5.750000 ## bad echo try 1: a5 fe
+  5.750000 TX 30
+  5.766000 RX cf
+  5.875000 TX 5a 17
+  5.891000 RX a5 fe
+  5.891000 ## bad echo try 2: a5 fe
+  5.891000 TX 30
+  5.906000 RX cf
+  6.016000 TX 5a 17
+  6.031000 RX a5 fe
+  6.031000 ## bad echo try 3: a5 fe
+  6.031000 TX 30
+  6.047000 RX cf
+  6.156000 ## reg 17 unsupported: bad echo a5 fe, expected a5 17
+  6.375000 TX 5a 18
+  6.391000 RX a5 18
+  6.391000 TX f0
+  6.406000 RX ff
+  6.406000 RX 01
+  6.406000 RX 18
+  6.406000 TX 30
+  6.422000 RX ff
+  6.422000 RX 01
+  6.422000 RX 18
+  6.422000 RX cf
+  6.422000 ## reg 18 supported value=18
+  6.422000 TX 5a 19
+  6.437000 RX a5 fe
+  6.437000 ## bad echo try 1: a5 fe
+  6.437000 TX 30
+  6.453000 RX cf
+  6.562000 TX 5a 19
+  6.562000 RX a5 fe
+  6.562000 ## bad echo try 2: a5 fe
+  6.562000 TX 30
+  6.578000 RX cf
+  6.687000 TX 5a 19
+  6.687000 RX fe fe
+  6.687000 ## bad echo try 3: fe fe
+  6.687000 TX 30
+  6.703000 RX cf
+  6.812000 ## reg 19 unsupported: bad echo fe fe, expected a5 19
+  7.031000 TX 5a 1a
+  7.047000 RX a5 1a
+  7.047000 TX f0
+  7.062000 RX ff
+  7.062000 RX 01
+  7.062000 RX 69
+  7.062000 TX 30
+  7.078000 RX ff
+  7.078000 RX 01
+  7.078000 RX 69
+  7.078000 RX cf
+  7.078000 ## reg 1A supported value=69
+  7.078000 TX 5a 1b
+  7.094000 RX a5 1b
+  7.094000 TX f0
+  7.109000 RX ff
+  7.109000 RX 01
+  7.109000 RX 6a
+  7.109000 TX 30
+  7.109000 RX ff
+  7.125000 RX 01
+  7.125000 RX 6a
+  7.141000 RX cf
+  7.141000 ## reg 1B supported value=6A
+  7.141000 TX 5a 1c
+  7.141000 RX a5 1c
+  7.141000 TX f0
+  7.156000 RX ff
+  7.156000 RX 01
+  7.156000 RX 6d
+  7.156000 TX 30
+  7.172000 RX ff
+  7.172000 RX 01
+  7.172000 RX 6d
+  7.187000 RX cf
+  7.187000 ## reg 1C supported value=6D
+  7.187000 TX 5a 1d
+  7.187000 RX a5 1d
+  7.187000 TX f0
+  7.203000 RX ff
+  7.203000 RX 01
+  7.203000 RX 68
+  7.203000 TX 30
+  7.219000 RX ff
+  7.219000 RX 01
+  7.219000 RX 68
+  7.234000 RX cf
+  7.234000 ## reg 1D supported value=68
+  7.234000 TX 5a 1e
+  7.234000 RX a5 1e
+  7.234000 TX f0
+  7.250000 RX ff
+  7.250000 RX 01
+  7.250000 RX 40
+  7.250000 TX 30
+  7.266000 RX ff
+  7.266000 RX 01
+  7.281000 RX 40
+  7.281000 RX cf
+  7.281000 ## reg 1E supported value=40
+  7.281000 TX 5a 1f
+  7.281000 RX a5 1f
+  7.281000 TX f0
+  7.297000 RX ff
+  7.297000 RX 01
+  7.297000 RX 00
+  7.297000 TX 30
+  7.312000 RX ff
+  7.312000 RX 01
+  7.312000 RX 00
+  7.312000 RX cf
+  7.312000 ## reg 1F supported value=00
+  7.328000 TX 5a 20
+  7.328000 RX a5 20
+  7.328000 TX f0
+  7.344000 RX ff
+  7.344000 RX 01
+  7.344000 RX 00
+  7.344000 TX 30
+  7.359000 RX ff
+  7.359000 RX 01
+  7.359000 RX 00
+  7.375000 RX cf
+  7.375000 ## reg 20 supported value=00
+  7.375000 TX 5a 21
+  7.375000 RX a5 21
+  7.391000 TX f0
+  7.391000 RX ff
+  7.391000 RX 01
+  7.391000 RX f0
+  7.391000 TX 30
+  7.406000 RX cf
+  7.406000 ## reg 21 supported value=F0
+  7.406000 TX 5a 22
+  7.422000 RX a5 22
+  7.422000 TX f0
+  7.437000 RX ff
+  7.453000 RX 01
+  7.453000 RX 01
+  7.453000 TX 30
+  7.453000 RX ff
+  7.453000 RX 01
+  7.469000 RX 01
+  7.469000 RX cf
+  7.469000 ## reg 22 supported value=01
+  7.469000 TX 5a 23
+  7.484000 RX fe fe
+  7.484000 ## bad echo try 1: fe fe
+  7.484000 TX 30
+  7.500000 RX cf
+  7.609000 TX 5a 23
+  7.625000 RX a5 23
+  7.625000 TX f0
+  7.641000 RX ff
+  7.641000 RX 01
+  7.641000 RX 25
+  7.641000 TX 30
+  7.656000 RX ff
+  7.656000 RX 01
+  7.656000 RX 24
+  7.656000 RX cf
+  7.656000 ## reg 23 supported value=25
+  7.656000 TX 5a 24
+  7.672000 RX a5 fe
+  7.672000 ## bad echo try 1: a5 fe
+  7.672000 TX 30
+  7.687000 RX cf
+  7.797000 TX 5a 24
+  7.812000 RX a5 fe
+  7.812000 ## bad echo try 2: a5 fe
+  7.812000 TX 30
+  7.828000 RX cf
+  7.937000 TX 5a 24
+  7.953000 RX a5 fe
+  7.953000 ## bad echo try 3: a5 fe
+  7.953000 TX 30
+  7.969000 RX cf
+  8.094000 ## reg 24 unsupported: bad echo a5 fe, expected a5 24
+  8.297000 TX 5a 25
+  8.312000 RX a5 fe
+  8.312000 ## bad echo try 1: a5 fe
+  8.312000 TX 30
+  8.328000 RX fe
+  8.422000 TX 5a 25
+  8.437000 RX a5 fe
+  8.437000 ## bad echo try 2: a5 fe
+  8.437000 TX 30
+  8.453000 RX cf
+  8.562000 TX 5a 25
+  8.578000 RX a5 fe
+  8.578000 ## bad echo try 3: a5 fe
+  8.578000 TX 30
+  8.594000 RX cf
+  8.703000 ## reg 25 unsupported: bad echo a5 fe, expected a5 25
+  8.906000 TX 5a 26
+  8.906000 RX a5 fe
+  8.906000 ## bad echo try 1: a5 fe
+  8.906000 TX 30
+  8.922000 RX cf
+  9.047000 TX 5a 26
+  9.062000 RX a5 fe
+  9.062000 ## bad echo try 2: a5 fe
+  9.062000 TX 30
+  9.078000 RX cf
+  9.187000 TX 5a 26
+  9.203000 RX a5 fe
+  9.203000 ## bad echo try 3: a5 fe
+  9.203000 TX 30
+  9.219000 RX cf
+  9.328000 ## reg 26 unsupported: bad echo a5 fe, expected a5 26
+  9.547000 TX 5a 27
+  9.547000 RX a5 fe
+  9.547000 ## bad echo try 1: a5 fe
+  9.547000 TX 30
+  9.562000 RX cf
+  9.672000 TX 5a 27
+  9.687000 RX a5 fe
+  9.687000 ## bad echo try 2: a5 fe
+  9.687000 TX 30
+  9.687000 RX cf
+  9.812000 TX 5a 27
+  9.812000 RX a5 fe
+  9.812000 ## bad echo try 3: a5 fe
+  9.812000 TX 30
+  9.828000 RX cf
+  9.937000 ## reg 27 unsupported: bad echo a5 fe, expected a5 27
+ 10.141000 TX 5a 28
+ 10.156000 RX a5 28
+ 10.156000 TX f0
+ 10.172000 RX ff
+ 10.172000 RX 01
+ 10.187000 RX b4
+ 10.187000 TX 30
+ 10.187000 RX ff
+ 10.187000 RX 01
+ 10.203000 RX b4
+ 10.203000 RX cf
+ 10.203000 ## reg 28 supported value=B4
+ 10.203000 TX 5a 29
+ 10.203000 RX a5 29
+ 10.203000 TX f0
+ 10.219000 RX ff
+ 10.234000 RX 01
+ 10.234000 RX 00
+ 10.234000 TX 30
+ 10.234000 RX ff
+ 10.250000 RX 01
+ 10.250000 RX 00
+ 10.250000 RX cf
+ 10.250000 ## reg 29 supported value=00
+ 10.250000 TX 5a 2a
+ 10.250000 RX fe fe
+ 10.250000 ## bad echo try 1: fe fe
+ 10.250000 TX 30
+ 10.266000 RX cf
+ 10.375000 TX 5a 2a
+ 10.391000 RX a5 2a
+ 10.391000 TX f0
+ 10.391000 RX ff
+ 10.406000 RX 01
+ 10.406000 RX 3d
+ 10.406000 TX 30
+ 10.422000 RX ff
+ 10.422000 RX 01
+ 10.422000 RX 3d
+ 10.422000 RX cf
+ 10.422000 ## reg 2A supported value=3D
+ 10.422000 TX 5a 2b
+ 10.422000 RX a5 fe
+ 10.422000 ## bad echo try 1: a5 fe
+ 10.422000 TX 30
+ 10.453000 RX fe
+ 10.562000 TX 5a 2b
+ 10.578000 RX a5 fe
+ 10.578000 ## bad echo try 2: a5 fe
+ 10.578000 TX 30
+ 10.594000 RX cf
+ 10.703000 TX 5a 2b
+ 10.719000 RX a5 fe
+ 10.719000 ## bad echo try 3: a5 fe
+ 10.719000 TX 30
+ 10.734000 RX cf
+ 10.828000 ## reg 2B unsupported: bad echo a5 fe, expected a5 2b
+ 11.047000 TX 5a 2c
+ 11.062000 RX a5 fe
+ 11.062000 ## bad echo try 1: a5 fe
+ 11.062000 TX 30
+ 11.078000 RX cf
+ 11.172000 TX 5a 2c
+ 11.187000 RX a5 fe
+ 11.187000 ## bad echo try 2: a5 fe
+ 11.187000 TX 30
+ 11.203000 RX cf
+ 11.312000 TX 5a 2c
+ 11.328000 RX fe fe
+ 11.328000 ## bad echo try 3: fe fe
+ 11.328000 TX 30
+ 11.344000 RX cf
+ 11.453000 ## reg 2C unsupported: bad echo fe fe, expected a5 2c
+ 11.687000 TX 5a 2d
+ 11.703000 RX a5 fe
+ 11.703000 ## bad echo try 1: a5 fe
+ 11.703000 TX 30
+ 11.703000 RX cf
+ 11.812000 TX 5a 2d
+ 11.828000 RX a5 fe
+ 11.828000 ## bad echo try 2: a5 fe
+ 11.828000 TX 30
+ 11.844000 RX cf
+ 11.953000 TX 5a 2d
+ 11.969000 RX a5 fe
+ 11.969000 ## bad echo try 3: a5 fe
+ 11.969000 TX 30
+ 11.984000 RX cf
+ 12.094000 ## reg 2D unsupported: bad echo a5 fe, expected a5 2d
+ 12.297000 TX 5a 2e
+ 12.297000 RX a5 fe
+ 12.297000 ## bad echo try 1: a5 fe
+ 12.297000 TX 30
+ 12.312000 RX cf
+ 12.422000 TX 5a 2e
+ 12.453000 RX fe fe
+ 12.453000 ## bad echo try 2: fe fe
+ 12.453000 TX 30
+ 12.469000 RX cf
+ 12.578000 TX 5a 2e
+ 12.594000 RX a5 fe
+ 12.594000 ## bad echo try 3: a5 fe
+ 12.594000 TX 30
+ 12.609000 RX cf
+ 12.703000 ## reg 2E unsupported: bad echo a5 fe, expected a5 2e
+ 12.922000 TX 5a 2f
+ 12.922000 RX a5 fe
+ 12.922000 ## bad echo try 1: a5 fe
+ 12.922000 TX 30
+ 12.937000 RX cf
+ 13.047000 TX 5a 2f
+ 13.047000 RX a5 fe
+ 13.047000 ## bad echo try 2: a5 fe
+ 13.047000 TX 30
+ 13.062000 RX cf
+ 13.187000 TX 5a 2f
+ 13.187000 RX fe fe
+ 13.187000 ## bad echo try 3: fe fe
+ 13.187000 TX 30
+ 13.219000 RX cf
+ 13.312000 ## reg 2F unsupported: bad echo fe fe, expected a5 2f
+ 13.516000 TX 5a 30
+ 13.531000 RX a5 30
+ 13.531000 TX f0
+ 13.547000 RX ff
+ 13.547000 RX 01
+ 13.547000 RX 64
+ 13.547000 TX 30
+ 13.562000 RX ff
+ 13.562000 RX 01
+ 13.562000 RX 64
+ 13.578000 RX cf
+ 13.578000 ## reg 30 supported value=64
+ 13.578000 TX 5a 31
+ 13.578000 RX a5 31
+ 13.578000 TX f0
+ 13.594000 RX ff
+ 13.594000 RX 01
+ 13.609000 RX 82
+ 13.609000 TX 30
+ 13.609000 RX ff
+ 13.609000 RX 01
+ 13.609000 RX 82
+ 13.609000 RX cf
+ 13.609000 ## reg 31 supported value=82
+ 13.609000 TX 5a 32
+ 13.625000 RX a5 32
+ 13.625000 TX f0
+ 13.641000 RX ff
+ 13.641000 RX 01
+ 13.656000 RX 3f
+ 13.656000 TX 30
+ 13.656000 RX ff
+ 13.656000 RX 01
+ 13.656000 RX 3f
+ 13.656000 RX fe
+ 13.656000 ## reg 32 supported value=3F
+ 13.656000 TX 5a 33
+ 13.672000 RX a5 33
+ 13.672000 TX f0
+ 13.687000 RX ff
+ 13.687000 RX 01
+ 13.687000 RX 18
+ 13.687000 TX 30
+ 13.703000 RX cf
+ 13.703000 ## reg 33 supported value=18
+ 13.703000 TX 5a 34
+ 13.719000 RX a5 34
+ 13.719000 TX f0
+ 13.734000 RX ff
+ 13.750000 RX 01
+ 13.750000 RX 44
+ 13.750000 TX 30
+ 13.750000 RX ff
+ 13.750000 RX 01
+ 13.766000 RX 42
+ 13.766000 RX cf
+ 13.766000 ## reg 34 supported value=44
+ 13.766000 TX 5a 35
+ 13.766000 RX a5 35
+ 13.766000 TX f0
+ 13.797000 RX ff
+ 13.797000 RX 01
+ 13.797000 RX 3f
+ 13.797000 TX 30
+ 13.797000 RX ff
+ 13.812000 RX 01
+ 13.812000 RX 3f
+ 13.812000 RX cf
+ 13.812000 ## reg 35 supported value=3F
+ 13.812000 TX 5a 36
+ 13.812000 RX a5 fe
+ 13.812000 ## bad echo try 1: a5 fe
+ 13.812000 TX 30
+ 13.828000 RX cf
+ 13.937000 TX 5a 36
+ 13.953000 RX a5 fe
+ 13.953000 ## bad echo try 2: a5 fe
+ 13.953000 TX 30
+ 13.969000 RX cf
+ 14.078000 TX 5a 36
+ 14.078000 RX a5 fe
+ 14.078000 ## bad echo try 3: a5 fe
+ 14.078000 TX 30
+ 14.094000 RX cf
+ 14.203000 ## reg 36 unsupported: bad echo a5 fe, expected a5 36
+ 14.422000 TX 5a 37
+ 14.422000 RX a5 37
+ 14.422000 TX f0
+ 14.453000 RX fe
+ 15.453000 TX 30
+ 15.469000 RX cf
+ 15.469000 ## reg 37 unsupported: no frame
+ 15.672000 TX 5a 38
+ 15.687000 RX a5 38
+ 15.687000 TX f0
+ 15.703000 RX ff
+ 15.703000 RX 01
+ 15.703000 RX 02
+ 15.703000 TX 30
+ 15.703000 RX ff
+ 15.703000 RX 01
+ 15.719000 RX 02
+ 15.719000 RX fe
+ 15.719000 ## reg 38 supported value=02
+ 15.719000 TX 5a 39
+ 15.734000 RX a5 39
+ 15.734000 TX f0
+ 15.750000 RX ff
+ 15.750000 RX 01
+ 15.750000 RX 9d
+ 15.750000 TX 30
+ 15.766000 RX ff
+ 15.781000 RX 01
+ 15.781000 RX a3
+ 15.781000 RX cf
+ 15.781000 ## reg 39 supported value=9D
+ 15.781000 TX 5a 3a
+ 15.781000 RX a5 3a
+ 15.781000 TX f0
+ 15.797000 RX ff
+ 15.797000 RX 01
+ 15.812000 RX ab
+ 15.812000 TX 30
+ 15.812000 RX ff
+ 15.812000 RX 01
+ 15.828000 RX ab
+ 15.828000 RX cf
+ 15.828000 ## reg 3A supported value=AB
+ 15.828000 TX 5a 3b
+ 15.828000 RX a5 3b
+ 15.828000 TX f0
+ 15.844000 RX ff
+ 15.844000 RX 01
+ 15.844000 RX 13
+ 15.844000 TX 30
+ 15.844000 RX ff
+ 15.844000 RX 01
+ 15.875000 RX 13
+ 15.875000 RX cf
+ 15.875000 ## reg 3B supported value=13
+ 15.875000 TX 5a 3c
+ 15.875000 RX a5 3c
+ 15.875000 TX f0
+ 15.891000 RX ff
+ 15.891000 RX 01
+ 15.891000 RX 20
+ 15.891000 TX 30
+ 15.906000 RX ff
+ 15.906000 RX 01
+ 15.906000 RX 20
+ 15.906000 RX cf
+ 15.906000 ## reg 3C supported value=20
+ 15.906000 TX 5a 3d
+ 15.922000 RX a5 3d
+ 15.922000 TX f0
+ 15.937000 RX ff
+ 15.937000 RX 01
+ 15.937000 RX 04
+ 15.937000 TX 30
+ 15.969000 RX ff
+ 15.969000 RX 01
+ 15.969000 RX 04
+ 15.969000 RX cf
+ 15.969000 ## reg 3D supported value=04
+ 15.969000 TX 5a 3e
+ 15.984000 RX a5 3e
+ 15.984000 TX f0
+ 15.984000 RX ff
+ 15.984000 RX 01
+ 15.984000 RX 04
+ 15.984000 TX 30
+ 16.016000 RX cf
+ 16.016000 ## reg 3E supported value=04
+ 16.016000 TX 5a 3f
+ 16.031000 RX a5 3f
+ 16.031000 TX f0
+ 16.047000 RX ff
+ 16.047000 RX 01
+ 16.047000 RX 4a
+ 16.047000 TX 30
+ 16.062000 RX ff
+ 16.062000 RX 01
+ 16.062000 RX 4a
+ 16.062000 RX fe
+ 16.062000 ## reg 3F supported value=4A
+ 16.062000 TX 5a 40
+ 16.078000 RX a5 40
+ 16.078000 TX f0
+ 16.094000 RX ff
+ 16.094000 RX 01
+ 16.094000 RX 7e
+ 16.094000 TX 30
+ 16.109000 RX ff
+ 16.109000 RX 01
+ 16.109000 RX 7e
+ 16.109000 RX cf
+ 16.109000 ## reg 40 supported value=7E
+ 16.109000 TX 5a 41
+ 16.125000 RX a5 41
+ 16.125000 TX f0
+ 16.141000 RX ff
+ 16.141000 RX 01
+ 16.141000 RX 88
+ 16.141000 TX 30
+ 16.156000 RX ff
+ 16.156000 RX 01
+ 16.156000 RX 88
+ 16.156000 RX fe
+ 16.156000 ## reg 41 supported value=88
+ 16.156000 TX 5a 42
+ 16.172000 RX fe fe
+ 16.172000 ## bad echo try 1: fe fe
+ 16.172000 TX 30
+ 16.187000 RX cf
+ 16.297000 TX 5a 42
+ 16.312000 RX a5 42
+ 16.312000 TX f0
+ 16.328000 RX ff
+ 16.328000 RX 01
+ 16.328000 RX 8a
+ 16.328000 TX 30
+ 16.344000 RX ff
+ 16.344000 RX 01
+ 16.344000 RX 8a
+ 16.344000 RX cf
+ 16.344000 ## reg 42 supported value=8A
+ 16.344000 TX 5a 43
+ 16.359000 RX a5 43
+ 16.359000 TX f0
+ 16.375000 RX ff
+ 16.375000 RX 01
+ 16.375000 RX 10
+ 16.375000 TX 30
+ 16.391000 RX ff
+ 16.391000 RX 01
+ 16.391000 RX 10
+ 16.406000 RX cf
+ 16.406000 ## reg 43 supported value=10
+ 16.406000 TX 5a 44
+ 16.406000 RX a5 44
+ 16.406000 TX f0
+ 16.422000 RX ff
+ 16.422000 RX 01
+ 16.422000 RX cc
+ 16.422000 TX 30
+ 16.437000 RX ff
+ 16.437000 RX 01
+ 16.437000 RX cc
+ 16.453000 RX cf
+ 16.453000 ## reg 44 supported value=CC
+ 16.453000 TX 5a 45
+ 16.453000 RX a5 45
+ 16.453000 TX f0
+ 16.469000 RX ff
+ 16.484000 RX 01
+ 16.484000 RX 00
+ 16.484000 TX 30
+ 16.484000 RX ff
+ 16.484000 RX 01
+ 16.484000 RX 00
+ 16.484000 RX cf
+ 16.484000 ## reg 45 supported value=00
+ 16.484000 TX 5a 46
+ 16.500000 RX a5 46
+ 16.500000 TX f0
+ 16.531000 RX fe
+ 17.531000 TX 30
+ 17.547000 RX fe
+ 17.547000 ## reg 46 unsupported: no frame
+ 17.750000 TX 5a 47
+ 17.766000 RX a5 47
+ 17.766000 TX f0
+ 17.781000 RX ff
+ 17.781000 RX 01
+ 17.797000 RX 80
+ 17.797000 TX 30
+ 17.797000 RX ff
+ 17.797000 RX 01
+ 17.797000 RX 80
+ 17.797000 RX cf
+ 17.797000 ## reg 47 supported value=80
+ 17.797000 TX 5a 48
+ 17.812000 RX a5 fe
+ 17.812000 ## bad echo try 1: a5 fe
+ 17.812000 TX 30
+ 17.828000 RX cf
+ 17.937000 TX 5a 48
+ 17.937000 RX a5 fe
+ 17.937000 ## bad echo try 2: a5 fe
+ 17.937000 TX 30
+ 17.969000 RX cf
+ 18.078000 TX 5a 48
+ 18.094000 RX a5 fe
+ 18.094000 ## bad echo try 3: a5 fe
+ 18.094000 TX 30
+ 18.109000 RX cf
+ 18.219000 ## reg 48 unsupported: bad echo a5 fe, expected a5 48
+ 18.422000 TX 5a 49
+ 18.437000 RX a5 49
+ 18.437000 TX f0
+ 18.469000 RX ff
+ 18.469000 RX 01
+ 18.469000 RX 08
+ 18.469000 TX 30
+ 18.469000 RX ff
+ 18.469000 RX 01
+ 18.469000 RX 08
+ 18.469000 RX cf
+ 18.469000 ## reg 49 supported value=08
+ 18.469000 TX 5a 4a
+ 18.484000 RX a5 4a
+ 18.484000 TX f0
+ 18.500000 RX ff
+ 18.500000 RX 01
+ 18.500000 RX 41
+ 18.500000 TX 30
+ 18.516000 RX cf
+ 18.516000 ## reg 4A supported value=41
+ 18.516000 TX 5a 4b
+ 18.531000 RX a5 fe
+ 18.531000 ## bad echo try 1: a5 fe
+ 18.531000 TX 30
+ 18.547000 RX cf
+ 18.672000 TX 5a 4b
+ 18.687000 RX a5 fe
+ 18.687000 ## bad echo try 2: a5 fe
+ 18.687000 TX 30
+ 18.703000 RX cf
+ 18.812000 TX 5a 4b
+ 18.828000 RX a5 fe
+ 18.828000 ## bad echo try 3: a5 fe
+ 18.828000 TX 30
+ 18.844000 RX cf
+ 18.953000 ## reg 4B unsupported: bad echo a5 fe, expected a5 4b
+ 19.172000 TX 5a 4c
+ 19.172000 RX a5 4c
+ 19.172000 TX f0
+ 19.187000 RX ff
+ 19.203000 RX 01
+ 19.203000 RX 40
+ 19.203000 TX 30
+ 19.203000 RX ff
+ 19.203000 RX 01
+ 19.219000 RX 40
+ 19.219000 RX cf
+ 19.219000 ## reg 4C supported value=40
+ 19.219000 TX 5a 4d
+ 19.219000 RX a5 fe
+ 19.219000 ## bad echo try 1: a5 fe
+ 19.219000 TX 30
+ 19.234000 RX cf
+ 19.359000 TX 5a 4d
+ 19.359000 RX a5 fe
+ 19.359000 ## bad echo try 2: a5 fe
+ 19.359000 TX 30
+ 19.375000 RX cf
+ 19.484000 TX 5a 4d
+ 19.500000 RX a5 fe
+ 19.500000 ## bad echo try 3: a5 fe
+ 19.500000 TX 30
+ 19.516000 RX cf
+ 19.625000 ## reg 4D unsupported: bad echo a5 fe, expected a5 4d
+ 19.844000 TX 5a 4e
+ 19.844000 RX a5 4e
+ 19.844000 TX f0
+ 19.859000 RX ff
+ 19.859000 RX 01
+ 19.859000 RX 80
+ 19.859000 TX 30
+ 19.875000 RX ff
+ 19.875000 RX 01
+ 19.875000 RX 80
+ 19.891000 RX cf
+ 19.891000 ## reg 4E supported value=80
+ 19.891000 TX 5a 4f
+ 19.891000 RX a5 4f
+ 19.891000 TX f0
+ 19.906000 RX ff
+ 19.922000 RX 01
+ 19.922000 RX 00
+ 19.922000 TX 30
+ 19.922000 RX ff
+ 19.937000 RX 01
+ 19.937000 RX 00
+ 19.937000 RX cf
+ 19.937000 ## reg 4F supported value=00
+ 19.937000 TX 5a 50
+ 19.937000 RX fe fe
+ 19.937000 ## bad echo try 1: fe fe
+ 19.937000 TX 30
+ 19.953000 RX cf
+ 20.078000 TX 5a 50
+ 20.078000 RX a5 fe
+ 20.094000 ## bad echo try 2: a5 fe
+ 20.094000 TX 30
+ 20.109000 RX cf
+ 20.219000 TX 5a 50
+ 20.234000 RX a5 fe
+ 20.234000 ## bad echo try 3: a5 fe
+ 20.234000 TX 30
+ 20.250000 RX cf
+ 20.344000 ## reg 50 unsupported: bad echo a5 fe, expected a5 50
+ 20.562000 TX 5a 51
+ 20.562000 RX a5 51
+ 20.562000 TX f0
+ 20.578000 RX ff
+ 20.578000 RX 01
+ 20.594000 RX 01
+ 20.594000 TX 30
+ 20.594000 RX ff
+ 20.609000 RX 01
+ 20.609000 RX 01
+ 20.609000 RX cf
+ 20.609000 ## reg 51 supported value=01
+ 20.609000 TX 5a 52
+ 20.609000 RX a5 fe
+ 20.609000 ## bad echo try 1: a5 fe
+ 20.609000 TX 30
+ 20.625000 RX cf
+ 20.734000 TX 5a 52
+ 20.734000 RX a5 fe
+ 20.734000 ## bad echo try 2: a5 fe
+ 20.734000 TX 30
+ 20.750000 RX cf
+ 20.859000 TX 5a 52
+ 20.859000 RX a5 fe
+ 20.859000 ## bad echo try 3: a5 fe
+ 20.859000 TX 30
+ 20.875000 RX cf
+ 21.000000 ## reg 52 unsupported: bad echo a5 fe, expected a5 52
+ 21.203000 TX 5a 53
+ 21.219000 RX a5 fe
+ 21.219000 ## bad echo try 1: a5 fe
+ 21.219000 TX 30
+ 21.234000 RX cf
+ 21.359000 TX 5a 53
+ 21.359000 RX a5 fe
+ 21.359000 ## bad echo try 2: a5 fe
+ 21.359000 TX 30
+ 21.375000 RX cf
+ 21.484000 TX 5a 53
+ 21.500000 RX fe fe
+ 21.500000 ## bad echo try 3: fe fe
+ 21.500000 TX 30
+ 21.516000 RX cf
+ 21.625000 ## reg 53 unsupported: bad echo fe fe, expected a5 53
+ 21.844000 TX 5a 54
+ 21.844000 RX a5 fe
+ 21.844000 ## bad echo try 1: a5 fe
+ 21.844000 TX 30
+ 21.859000 RX cf
+ 21.969000 TX 5a 54
+ 21.969000 RX a5 fe
+ 21.969000 ## bad echo try 2: a5 fe
+ 21.969000 TX 30
+ 21.984000 RX cf
+ 22.109000 TX 5a 54
+ 22.109000 RX a5 fe
+ 22.109000 ## bad echo try 3: a5 fe
+ 22.109000 TX 30
+ 22.125000 RX cf
+ 22.234000 ## reg 54 unsupported: bad echo a5 fe, expected a5 54
+ 22.453000 TX 5a 55
+ 22.453000 RX a5 fe
+ 22.453000 ## bad echo try 1: a5 fe
+ 22.453000 TX 30
+ 22.469000 RX cf
+ 22.578000 TX 5a 55
+ 22.594000 RX a5 fe
+ 22.594000 ## bad echo try 2: a5 fe
+ 22.594000 TX 30
+ 22.609000 RX cf
+ 22.719000 TX 5a 55
+ 22.719000 RX a5 fe
+ 22.719000 ## bad echo try 3: a5 fe
+ 22.719000 TX 30
+ 22.734000 RX cf
+ 22.859000 ## reg 55 unsupported: bad echo a5 fe, expected a5 55
+ 23.062000 TX 5a 56
+ 23.078000 RX a5 56
+ 23.078000 TX f0
+ 23.094000 RX ff
+ 23.094000 RX 01
+ 23.094000 RX 00
+ 23.094000 TX 30
+ 23.109000 RX ff
+ 23.109000 RX 01
+ 23.109000 RX 00
+ 23.109000 RX cf
+ 23.109000 ## reg 56 supported value=00
+ 23.125000 TX 5a 57
+ 23.125000 RX a5 57
+ 23.125000 TX f0
+ 23.141000 RX ff
+ 23.141000 RX 01
+ 23.141000 RX 00
+ 23.141000 TX 30
+ 23.156000 RX ff
+ 23.156000 RX 01
+ 23.156000 RX 00
+ 23.156000 RX cf
+ 23.156000 ## reg 57 supported value=00
+ 23.156000 TX 5a 58
+ 23.172000 RX a5 58
+ 23.172000 TX f0
+ 23.187000 RX ff
+ 23.187000 RX 01
+ 23.187000 RX 00
+ 23.187000 TX 30
+ 23.203000 RX ff
+ 23.203000 RX 01
+ 23.203000 RX 00
+ 23.219000 RX fe
+ 23.219000 ## reg 58 supported value=00
+ 23.219000 TX 5a 59
+ 23.219000 RX a5 59
+ 23.219000 TX f0
+ 23.234000 RX ff
+ 23.234000 RX 01
+ 23.234000 RX 00
+ 23.234000 TX 30
+ 23.250000 RX cf
+ 23.250000 ## reg 59 supported value=00
+ 23.250000 TX 5a 5a
+ 23.266000 RX a5 5a
+ 23.266000 TX f0
+ 23.281000 RX ff
+ 23.281000 RX 01
+ 23.281000 RX 00
+ 23.281000 TX 30
+ 23.297000 RX ff
+ 23.297000 RX 01
+ 23.297000 RX 00
+ 23.297000 RX cf
+ 23.297000 ## reg 5A supported value=00
+ 23.297000 TX 5a 5b
+ 23.312000 RX a5 5b
+ 23.312000 TX f0
+ 23.328000 RX ff
+ 23.328000 RX 01
+ 23.328000 RX 00
+ 23.328000 TX 30
+ 23.344000 RX ff
+ 23.344000 RX 01
+ 23.359000 RX 00
+ 23.359000 RX cf
+ 23.359000 ## reg 5B supported value=00
+ 23.359000 TX 5a 5c
+ 23.359000 RX a5 5c
+ 23.359000 TX f0
+ 23.375000 RX ff
+ 23.375000 RX 01
+ 23.375000 RX 00
+ 23.375000 TX 30
+ 23.391000 RX ff
+ 23.391000 RX 01
+ 23.406000 RX 00
+ 23.406000 RX cf
+ 23.406000 ## reg 5C supported value=00
+ 23.406000 TX 5a 5d
+ 23.406000 RX a5 5d
+ 23.406000 TX f0
+ 23.422000 RX ff
+ 23.422000 RX 01
+ 23.422000 RX 00
+ 23.422000 TX 30
+ 23.422000 RX ff
+ 23.437000 RX 01
+ 23.437000 RX 00
+ 23.453000 RX cf
+ 23.453000 ## reg 5D supported value=00
+ 23.453000 TX 5a 5e
+ 23.453000 RX a5 5e
+ 23.453000 TX f0
+ 23.469000 RX ff
+ 23.469000 RX 01
+ 23.469000 RX 00
+ 23.469000 TX 30
+ 23.484000 RX ff
+ 23.484000 RX 01
+ 23.500000 RX 00
+ 23.500000 RX cf
+ 23.500000 ## reg 5E supported value=00
+ 23.500000 TX 5a 5f
+ 23.516000 RX a5 5f
+ 23.516000 TX f0
+ 23.516000 RX ff
+ 23.516000 RX 01
+ 23.516000 RX 00
+ 23.516000 TX 30
+ 23.547000 RX ff
+ 23.547000 RX 01
+ 23.547000 RX 00
+ 23.547000 RX cf
+ 23.547000 ## reg 5F supported value=00
+ 23.547000 TX 5a 60
+ 23.562000 RX fe fe
+ 23.562000 ## bad echo try 1: fe fe
+ 23.562000 TX 30
+ 23.578000 RX cf
+ 23.687000 TX 5a 60
+ 23.687000 RX a5 60
+ 23.687000 TX f0
+ 23.703000 RX ff
+ 23.719000 RX 01
+ 23.719000 RX 00
+ 23.719000 TX 30
+ 23.734000 RX ff
+ 23.734000 RX 01
+ 23.750000 RX 00
+ 23.750000 RX cf
+ 23.750000 ## reg 60 supported value=00
+ 23.750000 TX 5a 61
+ 23.750000 RX a5 61
+ 23.750000 TX f0
+ 23.766000 RX ff
+ 23.781000 RX 01
+ 23.781000 RX 83
+ 23.781000 TX 30
+ 23.797000 RX ff
+ 23.797000 RX 01
+ 23.797000 RX 83
+ 23.797000 RX cf
+ 23.797000 ## reg 61 supported value=83
+ 23.797000 TX 5a 62
+ 23.812000 RX a5 fe
+ 23.812000 ## bad echo try 1: a5 fe
+ 23.812000 TX 30
+ 23.828000 RX cf
+ 23.937000 TX 5a 62
+ 23.937000 RX a5 fe
+ 23.937000 ## bad echo try 2: a5 fe
+ 23.937000 TX 30
+ 23.953000 RX cf
+ 24.062000 TX 5a 62
+ 24.078000 RX fe fe
+ 24.078000 ## bad echo try 3: fe fe
+ 24.078000 TX 30
+ 24.094000 RX cf
+ 24.203000 ## reg 62 unsupported: bad echo fe fe, expected a5 62
+ 24.422000 TX 5a 63
+ 24.422000 RX a5 fe
+ 24.422000 ## bad echo try 1: a5 fe
+ 24.422000 TX 30
+ 24.437000 RX cf
+ 24.547000 TX 5a 63
+ 24.562000 RX a5 fe
+ 24.562000 ## bad echo try 2: a5 fe
+ 24.562000 TX 30
+ 24.578000 RX cf
+ 24.687000 TX 5a 63
+ 24.687000 RX a5 fe
+ 24.687000 ## bad echo try 3: a5 fe
+ 24.687000 TX 30
+ 24.703000 RX cf
+ 24.812000 ## reg 63 unsupported: bad echo a5 fe, expected a5 63
+ 25.016000 TX 5a 64
+ 25.031000 RX a5 fe
+ 25.031000 ## bad echo try 1: a5 fe
+ 25.031000 TX 30
+ 25.047000 RX cf
+ 25.156000 TX 5a 64
+ 25.172000 RX a5 fe
+ 25.172000 ## bad echo try 2: a5 fe
+ 25.172000 TX 30
+ 25.187000 RX cf
+ 25.297000 TX 5a 64
+ 25.312000 RX a5 fe
+ 25.312000 ## bad echo try 3: a5 fe
+ 25.312000 TX 30
+ 25.328000 RX cf
+ 25.453000 ## reg 64 unsupported: bad echo a5 fe, expected a5 64
+ 25.672000 TX 5a 65
+ 25.687000 RX a5 fe
+ 25.687000 ## bad echo try 1: a5 fe
+ 25.687000 TX 30
+ 25.703000 RX cf
+ 25.797000 TX 5a 65
+ 25.812000 RX a5 fe
+ 25.812000 ## bad echo try 2: a5 fe
+ 25.812000 TX 30
+ 25.828000 RX cf
+ 25.937000 TX 5a 65
+ 25.953000 RX a5 fe
+ 25.953000 ## bad echo try 3: a5 fe
+ 25.953000 TX 30
+ 25.969000 RX cf
+ 26.078000 ## reg 65 unsupported: bad echo a5 fe, expected a5 65
+ 26.281000 TX 5a 66
+ 26.281000 RX a5 fe
+ 26.281000 ## bad echo try 1: a5 fe
+ 26.281000 TX 30
+ 26.312000 RX cf
+ 26.422000 TX 5a 66
+ 26.422000 RX a5 fe
+ 26.422000 ## bad echo try 2: a5 fe
+ 26.422000 TX 30
+ 26.437000 RX cf
+ 26.562000 TX 5a 66
+ 26.578000 RX a5 fe
+ 26.578000 ## bad echo try 3: a5 fe
+ 26.578000 TX 30
+ 26.594000 RX cf
+ 26.703000 ## reg 66 unsupported: bad echo a5 fe, expected a5 66
+ 26.922000 TX 5a 67
+ 26.922000 RX a5 fe
+ 26.922000 ## bad echo try 1: a5 fe
+ 26.922000 TX 30
+ 26.937000 RX cf
+ 27.047000 TX 5a 67
+ 27.047000 RX a5 fe
+ 27.047000 ## bad echo try 2: a5 fe
+ 27.047000 TX 30
+ 27.062000 RX cf
+ 27.187000 TX 5a 67
+ 27.187000 RX a5 fe
+ 27.187000 ## bad echo try 3: a5 fe
+ 27.187000 TX 30
+ 27.203000 RX cf
+ 27.312000 ## reg 67 unsupported: bad echo a5 fe, expected a5 67
+ 27.516000 TX 5a 68
+ 27.516000 RX a5 fe
+ 27.516000 ## bad echo try 1: a5 fe
+ 27.516000 TX 30
+ 27.531000 RX cf
+ 27.656000 TX 5a 68
+ 27.656000 RX a5 fe
+ 27.656000 ## bad echo try 2: a5 fe
+ 27.656000 TX 30
+ 27.672000 RX cf
+ 27.797000 TX 5a 68
+ 27.797000 RX a5 fe
+ 27.797000 ## bad echo try 3: a5 fe
+ 27.797000 TX 30
+ 27.828000 RX cf
+ 27.937000 ## reg 68 unsupported: bad echo a5 fe, expected a5 68
+ 28.141000 TX 5a 69
+ 28.156000 RX a5 fe
+ 28.156000 ## bad echo try 1: a5 fe
+ 28.156000 TX 30
+ 28.172000 RX cf
+ 28.281000 TX 5a 69
+ 28.297000 RX a5 fe
+ 28.297000 ## bad echo try 2: a5 fe
+ 28.297000 TX 30
+ 28.312000 RX fe
+ 28.437000 TX 5a 69
+ 28.453000 RX a5 fe
+ 28.453000 ## bad echo try 3: a5 fe
+ 28.453000 TX 30
+ 28.469000 RX cf
+ 28.562000 ## reg 69 unsupported: bad echo a5 fe, expected a5 69
+ 28.781000 TX 5a 6a
+ 28.781000 RX a5 fe
+ 28.781000 ## bad echo try 1: a5 fe
+ 28.781000 TX 30
+ 28.797000 RX cf
+ 28.906000 TX 5a 6a
+ 28.922000 RX a5 fe
+ 28.922000 ## bad echo try 2: a5 fe
+ 28.922000 TX 30
+ 28.937000 RX cf
+ 29.047000 TX 5a 6a
+ 29.078000 RX fe fe
+ 29.078000 ## bad echo try 3: fe fe
+ 29.078000 TX 30
+ 29.078000 RX cf
+ 29.187000 ## reg 6A unsupported: bad echo fe fe, expected a5 6a
+ 29.406000 TX 5a 6b
+ 29.406000 RX a5 fe
+ 29.406000 ## bad echo try 1: a5 fe
+ 29.406000 TX 30
+ 29.422000 RX cf
+ 29.531000 TX 5a 6b
+ 29.547000 RX a5 fe
+ 29.547000 ## bad echo try 2: a5 fe
+ 29.547000 TX 30
+ 29.562000 RX cf
+ 29.687000 TX 5a 6b
+ 29.687000 RX a5 fe
+ 29.687000 ## bad echo try 3: a5 fe
+ 29.687000 TX 30
+ 29.703000 RX cf
+ 29.812000 ## reg 6B unsupported: bad echo a5 fe, expected a5 6b
+ 30.016000 TX 5a 6c
+ 30.031000 RX a5 fe
+ 30.031000 ## bad echo try 1: a5 fe
+ 30.031000 TX 30
+ 30.047000 RX cf
+ 30.156000 TX 5a 6c
+ 30.156000 RX fe fe
+ 30.156000 ## bad echo try 2: fe fe
+ 30.156000 TX 30
+ 30.172000 RX cf
+ 30.281000 TX 5a 6c
+ 30.297000 RX a5 fe
+ 30.297000 ## bad echo try 3: a5 fe
+ 30.297000 TX 30
+ 30.312000 RX cf
+ 30.437000 ## reg 6C unsupported: bad echo a5 fe, expected a5 6c
+ 30.641000 TX 5a 6d
+ 30.656000 RX a5 fe
+ 30.656000 ## bad echo try 1: a5 fe
+ 30.656000 TX 30
+ 30.672000 RX cf
+ 30.781000 TX 5a 6d
+ 30.781000 RX a5 fe
+ 30.781000 ## bad echo try 2: a5 fe
+ 30.781000 TX 30
+ 30.812000 RX cf
+ 30.922000 TX 5a 6d
+ 30.922000 RX a5 fe
+ 30.922000 ## bad echo try 3: a5 fe
+ 30.922000 TX 30
+ 30.937000 RX cf
+ 31.047000 ## reg 6D unsupported: bad echo a5 fe, expected a5 6d
+ 31.250000 TX 5a 6e
+ 31.266000 RX a5 fe
+ 31.266000 ## bad echo try 1: a5 fe
+ 31.266000 TX 30
+ 31.266000 RX cf
+ 31.375000 TX 5a 6e
+ 31.391000 RX a5 fe
+ 31.391000 ## bad echo try 2: a5 fe
+ 31.391000 TX 30
+ 31.406000 RX cf
+ 31.516000 TX 5a 6e
+ 31.531000 RX a5 fe
+ 31.531000 ## bad echo try 3: a5 fe
+ 31.531000 TX 30
+ 31.547000 RX cf
+ 31.672000 ## reg 6E unsupported: bad echo a5 fe, expected a5 6e
+ 31.875000 TX 5a 6f
+ 31.891000 RX a5 fe
+ 31.891000 ## bad echo try 1: a5 fe
+ 31.891000 TX 30
+ 31.891000 RX cf
+ 32.000000 TX 5a 6f
+ 32.000000 RX a5 fe
+ 32.000000 ## bad echo try 2: a5 fe
+ 32.000000 TX 30
+ 32.016000 RX cf
+ 32.141000 TX 5a 6f
+ 32.156000 RX a5 fe
+ 32.156000 ## bad echo try 3: a5 fe
+ 32.156000 TX 30
+ 32.172000 RX cf
+ 32.281000 ## reg 6F unsupported: bad echo a5 fe, expected a5 6f
+ 32.500000 TX 5a 70
+ 32.500000 RX a5 fe
+ 32.500000 ## bad echo try 1: a5 fe
+ 32.500000 TX 30
+ 32.516000 RX cf
+ 32.625000 TX 5a 70
+ 32.641000 RX fe fe
+ 32.641000 ## bad echo try 2: fe fe
+ 32.641000 TX 30
+ 32.656000 RX cf
+ 32.766000 TX 5a 70
+ 32.781000 RX a5 fe
+ 32.781000 ## bad echo try 3: a5 fe
+ 32.781000 TX 30
+ 32.797000 RX cf
+ 32.906000 ## reg 70 unsupported: bad echo a5 fe, expected a5 70
+ 33.109000 TX 5a 71
+ 33.125000 RX a5 fe
+ 33.125000 ## bad echo try 1: a5 fe
+ 33.125000 TX 30
+ 33.141000 RX cf
+ 33.266000 TX 5a 71
+ 33.281000 RX a5 fe
+ 33.281000 ## bad echo try 2: a5 fe
+ 33.281000 TX 30
+ 33.281000 RX cf
+ 33.391000 TX 5a 71
+ 33.406000 RX a5 fe
+ 33.406000 ## bad echo try 3: a5 fe
+ 33.406000 TX 30
+ 33.422000 RX cf
+ 33.531000 ## reg 71 unsupported: bad echo a5 fe, expected a5 71
+ 33.750000 TX 5a 72
+ 33.750000 RX a5 fe
+ 33.750000 ## bad echo try 1: a5 fe
+ 33.750000 TX 30
+ 33.766000 RX cf
+ 33.875000 TX 5a 72
+ 33.891000 RX a5 fe
+ 33.891000 ## bad echo try 2: a5 fe
+ 33.891000 TX 30
+ 33.906000 RX cf
+ 34.016000 TX 5a 72
+ 34.031000 RX a5 fe
+ 34.031000 ## bad echo try 3: a5 fe
+ 34.031000 TX 30
+ 34.031000 RX cf
+ 34.141000 ## reg 72 unsupported: bad echo a5 fe, expected a5 72
+ 34.344000 TX 5a 73
+ 34.359000 RX a5 fe
+ 34.359000 ## bad echo try 1: a5 fe
+ 34.359000 TX 30
+ 34.375000 RX fe
+ 34.484000 TX 5a 73
+ 34.484000 RX a5 fe
+ 34.484000 ## bad echo try 2: a5 fe
+ 34.484000 TX 30
+ 34.500000 RX cf
+ 34.609000 TX 5a 73
+ 34.641000 RX a5 fe
+ 34.641000 ## bad echo try 3: a5 fe
+ 34.641000 TX 30
+ 34.641000 RX cf
+ 34.766000 ## reg 73 unsupported: bad echo a5 fe, expected a5 73
+ 34.969000 TX 5a 74
+ 34.984000 RX fe fe
+ 34.984000 ## bad echo try 1: fe fe
+ 34.984000 TX 30
+ 35.000000 RX cf
+ 35.109000 TX 5a 74
+ 35.125000 RX a5 fe
+ 35.125000 ## bad echo try 2: a5 fe
+ 35.125000 TX 30
+ 35.141000 RX cf
+ 35.250000 TX 5a 74
+ 35.250000 RX a5 fe
+ 35.250000 ## bad echo try 3: a5 fe
+ 35.250000 TX 30
+ 35.266000 RX cf
+ 35.375000 ## reg 74 unsupported: bad echo a5 fe, expected a5 74
+ 35.594000 TX 5a 75
+ 35.609000 RX a5 fe
+ 35.609000 ## bad echo try 1: a5 fe
+ 35.609000 TX 30
+ 35.625000 RX cf
+ 35.734000 TX 5a 75
+ 35.734000 RX a5 fe
+ 35.734000 ## bad echo try 2: a5 fe
+ 35.734000 TX 30
+ 35.750000 RX cf
+ 35.859000 TX 5a 75
+ 35.859000 RX a5 fe
+ 35.859000 ## bad echo try 3: a5 fe
+ 35.859000 TX 30
+ 35.875000 RX cf
+ 36.000000 ## reg 75 unsupported: bad echo a5 fe, expected a5 75
+ 36.203000 TX 5a 76
+ 36.219000 RX a5 fe
+ 36.219000 ## bad echo try 1: a5 fe
+ 36.219000 TX 30
+ 36.234000 RX cf
+ 36.344000 TX 5a 76
+ 36.359000 RX a5 fe
+ 36.359000 ## bad echo try 2: a5 fe
+ 36.359000 TX 30
+ 36.375000 RX cf
+ 36.484000 TX 5a 76
+ 36.484000 RX a5 fe
+ 36.484000 ## bad echo try 3: a5 fe
+ 36.484000 TX 30
+ 36.500000 RX cf
+ 36.609000 ## reg 76 unsupported: bad echo a5 fe, expected a5 76
+ 36.812000 TX 5a 77
+ 36.828000 RX a5 fe
+ 36.828000 ## bad echo try 1: a5 fe
+ 36.828000 TX 30
+ 36.844000 RX fe
+ 36.953000 TX 5a 77
+ 36.969000 RX a5 fe
+ 36.969000 ## bad echo try 2: a5 fe
+ 36.969000 TX 30
+ 36.984000 RX cf
+ 37.094000 TX 5a 77
+ 37.109000 RX a5 fe
+ 37.109000 ## bad echo try 3: a5 fe
+ 37.109000 TX 30
+ 37.125000 RX cf
+ 37.234000 ## reg 77 unsupported: bad echo a5 fe, expected a5 77
+ 37.453000 TX 5a 78
+ 37.469000 RX a5 fe
+ 37.469000 ## bad echo try 1: a5 fe
+ 37.469000 TX 30
+ 37.484000 RX cf
+ 37.594000 TX 5a 78
+ 37.594000 RX a5 fe
+ 37.594000 ## bad echo try 2: a5 fe
+ 37.594000 TX 30
+ 37.609000 RX cf
+ 37.734000 TX 5a 78
+ 37.750000 RX a5 fe
+ 37.750000 ## bad echo try 3: a5 fe
+ 37.750000 TX 30
+ 37.766000 RX cf
+ 37.875000 ## reg 78 unsupported: bad echo a5 fe, expected a5 78
+ 38.078000 TX 5a 79
+ 38.078000 RX a5 fe
+ 38.078000 ## bad echo try 1: a5 fe
+ 38.078000 TX 30
+ 38.094000 RX cf
+ 38.203000 TX 5a 79
+ 38.219000 RX a5 fe
+ 38.219000 ## bad echo try 2: a5 fe
+ 38.219000 TX 30
+ 38.219000 RX cf
+ 38.328000 TX 5a 79
+ 38.344000 RX a5 fe
+ 38.344000 ## bad echo try 3: a5 fe
+ 38.344000 TX 30
+ 38.359000 RX cf
+ 38.469000 ## reg 79 unsupported: bad echo a5 fe, expected a5 79
+ 38.672000 TX 5a 7a
+ 38.687000 RX a5 fe
+ 38.687000 ## bad echo try 1: a5 fe
+ 38.687000 TX 30
+ 38.703000 RX cf
+ 38.812000 TX 5a 7a
+ 38.844000 RX a5 fe
+ 38.844000 ## bad echo try 2: a5 fe
+ 38.844000 TX 30
+ 38.859000 RX cf
+ 38.969000 TX 5a 7a
+ 38.984000 RX a5 fe
+ 38.984000 ## bad echo try 3: a5 fe
+ 38.984000 TX 30
+ 39.000000 RX cf
+ 39.109000 ## reg 7A unsupported: bad echo a5 fe, expected a5 7a
+ 39.312000 TX 5a 7b
+ 39.312000 RX a5 fe
+ 39.312000 ## bad echo try 1: a5 fe
+ 39.312000 TX 30
+ 39.328000 RX cf
+ 39.437000 TX 5a 7b
+ 39.437000 RX a5 fe
+ 39.437000 ## bad echo try 2: a5 fe
+ 39.437000 TX 30
+ 39.453000 RX cf
+ 39.578000 TX 5a 7b
+ 39.578000 RX a5 fe
+ 39.578000 ## bad echo try 3: a5 fe
+ 39.578000 TX 30
+ 39.594000 RX cf
+ 39.719000 ## reg 7B unsupported: bad echo a5 fe, expected a5 7b
+ 39.937000 TX 5a 7c
+ 39.937000 RX a5 fe
+ 39.937000 ## bad echo try 1: a5 fe
+ 39.937000 TX 30
+ 39.953000 RX cf
+ 40.062000 TX 5a 7c
+ 40.062000 RX a5 fe
+ 40.062000 ## bad echo try 2: a5 fe
+ 40.062000 TX 30
+ 40.078000 RX cf
+ 40.187000 TX 5a 7c
+ 40.187000 RX a5 fe
+ 40.187000 ## bad echo try 3: a5 fe
+ 40.187000 TX 30
+ 40.203000 RX cf
+ 40.328000 ## reg 7C unsupported: bad echo a5 fe, expected a5 7c
+ 40.531000 TX 5a 7d
+ 40.547000 RX a5 fe
+ 40.547000 ## bad echo try 1: a5 fe
+ 40.547000 TX 30
+ 40.562000 RX cf
+ 40.672000 TX 5a 7d
+ 40.687000 RX a5 fe
+ 40.687000 ## bad echo try 2: a5 fe
+ 40.687000 TX 30
+ 40.703000 RX cf
+ 40.812000 TX 5a 7d
+ 40.844000 RX a5 fe
+ 40.844000 ## bad echo try 3: a5 fe
+ 40.844000 TX 30
+ 40.859000 RX cf
+ 40.969000 ## reg 7D unsupported: bad echo a5 fe, expected a5 7d
+ 41.172000 TX 5a 7e
+ 41.187000 RX a5 fe
+ 41.187000 ## bad echo try 1: a5 fe
+ 41.187000 TX 30
+ 41.203000 RX cf
+ 41.312000 TX 5a 7e
+ 41.328000 RX a5 fe
+ 41.328000 ## bad echo try 2: a5 fe
+ 41.328000 TX 30
+ 41.344000 RX cf
+ 41.453000 TX 5a 7e
+ 41.500000 RX a5 fe
+ 41.500000 ## bad echo try 3: a5 fe
+ 41.500000 TX 30
+ 41.516000 RX cf
+ 41.625000 ## reg 7E unsupported: bad echo a5 fe, expected a5 7e
+ 41.844000 TX 5a 7f
+ 41.859000 RX a5 fe
+ 41.859000 ## bad echo try 1: a5 fe
+ 41.859000 TX 30
+ 41.875000 RX cf
+ 42.000000 TX 5a 7f
+ 42.000000 RX a5 fe
+ 42.000000 ## bad echo try 2: a5 fe
+ 42.000000 TX 30
+ 42.016000 RX cf
+ 42.125000 TX 5a 7f
+ 42.141000 RX a5 fe
+ 42.141000 ## bad echo try 3: a5 fe
+ 42.141000 TX 30
+ 42.156000 RX cf
+ 42.281000 ## reg 7F unsupported: bad echo a5 fe, expected a5 7f
+ 42.500000 TX 5a 80
+ 42.500000 RX a5 fe
+ 42.500000 ## bad echo try 1: a5 fe
+ 42.500000 TX 30
+ 42.516000 RX cf
+ 42.625000 TX 5a 80
+ 42.641000 RX a5 fe
+ 42.641000 ## bad echo try 2: a5 fe
+ 42.641000 TX 30
+ 42.641000 RX fe
+ 42.781000 TX 5a 80
+ 42.781000 RX a5 fe
+ 42.781000 ## bad echo try 3: a5 fe
+ 42.781000 TX 30
+ 42.797000 RX cf
+ 42.906000 ## reg 80 unsupported: bad echo a5 fe, expected a5 80
+ 43.125000 TX 5a 81
+ 43.125000 RX a5 fe
+ 43.125000 ## bad echo try 1: a5 fe
+ 43.125000 TX 30
+ 43.141000 RX fe
+ 43.234000 TX 5a 81
+ 43.250000 RX a5 fe
+ 43.250000 ## bad echo try 2: a5 fe
+ 43.250000 TX 30
+ 43.266000 RX cf
+ 43.375000 TX 5a 81
+ 43.375000 RX a5 fe
+ 43.375000 ## bad echo try 3: a5 fe
+ 43.375000 TX 30
+ 43.391000 RX cf
+ 43.500000 ## reg 81 unsupported: bad echo a5 fe, expected a5 81
+ 43.719000 TX 5a 82
+ 43.734000 RX a5 fe
+ 43.734000 ## bad echo try 1: a5 fe
+ 43.734000 TX 30
+ 43.734000 RX cf
+ 43.844000 TX 5a 82
+ 43.844000 RX a5 fe
+ 43.844000 ## bad echo try 2: a5 fe
+ 43.844000 TX 30
+ 43.875000 RX cf
+ 43.984000 TX 5a 82
+ 43.984000 RX a5 fe
+ 43.984000 ## bad echo try 3: a5 fe
+ 43.984000 TX 30
+ 44.000000 RX cf
+ 44.109000 ## reg 82 unsupported: bad echo a5 fe, expected a5 82
+ 44.312000 TX 5a 83
+ 44.312000 RX a5 fe
+ 44.312000 ## bad echo try 1: a5 fe
+ 44.312000 TX 30
+ 44.328000 RX cf
+ 44.453000 TX 5a 83
+ 44.469000 RX a5 fe
+ 44.469000 ## bad echo try 2: a5 fe
+ 44.469000 TX 30
+ 44.484000 RX cf
+ 44.594000 TX 5a 83
+ 44.609000 RX a5 fe
+ 44.609000 ## bad echo try 3: a5 fe
+ 44.609000 TX 30
+ 44.625000 RX cf
+ 44.734000 ## reg 83 unsupported: bad echo a5 fe, expected a5 83
+ 44.937000 TX 5a 84
+ 44.953000 RX a5 fe
+ 44.953000 ## bad echo try 1: a5 fe
+ 44.969000 TX 30
+ 44.969000 RX cf
+ 45.094000 TX 5a 84
+ 45.109000 RX a5 fe
+ 45.109000 ## bad echo try 2: a5 fe
+ 45.109000 TX 30
+ 45.125000 RX cf
+ 45.219000 TX 5a 84
+ 45.234000 RX a5 fe
+ 45.234000 ## bad echo try 3: a5 fe
+ 45.234000 TX 30
+ 45.250000 RX cf
+ 45.359000 ## reg 84 unsupported: bad echo a5 fe, expected a5 84
+ 45.562000 TX 5a 85
+ 45.562000 RX a5 fe
+ 45.562000 ## bad echo try 1: a5 fe
+ 45.562000 TX 30
+ 45.578000 RX cf
+ 45.687000 TX 5a 85
+ 45.703000 RX a5 fe
+ 45.703000 ## bad echo try 2: a5 fe
+ 45.703000 TX 30
+ 45.703000 RX cf
+ 45.812000 TX 5a 85
+ 45.812000 RX a5 fe
+ 45.812000 ## bad echo try 3: a5 fe
+ 45.812000 TX 30
+ 45.844000 RX cf
+ 45.937000 ## reg 85 unsupported: bad echo a5 fe, expected a5 85
+ 46.156000 TX 5a 86
+ 46.156000 RX a5 fe
+ 46.156000 ## bad echo try 1: a5 fe
+ 46.156000 TX 30
+ 46.172000 RX cf
+ 46.281000 TX 5a 86
+ 46.297000 RX a5 fe
+ 46.297000 ## bad echo try 2: a5 fe
+ 46.297000 TX 30
+ 46.312000 RX cf
+ 46.422000 TX 5a 86
+ 46.422000 RX a5 fe
+ 46.422000 ## bad echo try 3: a5 fe
+ 46.422000 TX 30
+ 46.437000 RX cf
+ 46.547000 ## reg 86 unsupported: bad echo a5 fe, expected a5 86
+ 46.750000 TX 5a 87
+ 46.766000 RX a5 fe
+ 46.766000 ## bad echo try 1: a5 fe
+ 46.766000 TX 30
+ 46.781000 RX cf
+ 46.891000 TX 5a 87
+ 46.906000 RX a5 fe
+ 46.922000 ## bad echo try 2: a5 fe
+ 46.922000 TX 30
+ 46.922000 RX cf
+ 47.031000 TX 5a 87
+ 47.047000 RX a5 fe
+ 47.047000 ## bad echo try 3: a5 fe
+ 47.047000 TX 30
+ 47.078000 RX fe
+ 47.172000 ## reg 87 unsupported: bad echo a5 fe, expected a5 87
+ 47.391000 TX 5a 88
+ 47.406000 RX a5 fe
+ 47.406000 ## bad echo try 1: a5 fe
+ 47.406000 TX 30
+ 47.422000 RX cf
+ 47.531000 TX 5a 88
+ 47.531000 RX a5 fe
+ 47.531000 ## bad echo try 2: a5 fe
+ 47.531000 TX 30
+ 47.547000 RX cf
+ 47.656000 TX 5a 88
+ 47.672000 RX a5 fe
+ 47.672000 ## bad echo try 3: a5 fe
+ 47.672000 TX 30
+ 47.687000 RX cf
+ 47.812000 ## reg 88 unsupported: bad echo a5 fe, expected a5 88
+ 48.016000 TX 5a 89
+ 48.016000 RX a5 fe
+ 48.016000 ## bad echo try 1: a5 fe
+ 48.016000 TX 30
+ 48.031000 RX cf
+ 48.141000 TX 5a 89
+ 48.156000 RX a5 fe
+ 48.156000 ## bad echo try 2: a5 fe
+ 48.156000 TX 30
+ 48.172000 RX fe
+ 48.281000 TX 5a 89
+ 48.281000 RX a5 fe
+ 48.281000 ## bad echo try 3: a5 fe
+ 48.281000 TX 30
+ 48.297000 RX cf
+ 48.406000 ## reg 89 unsupported: bad echo a5 fe, expected a5 89
+ 48.625000 TX 5a 8a
+ 48.625000 RX a5 fe
+ 48.625000 ## bad echo try 1: a5 fe
+ 48.625000 TX 30
+ 48.656000 RX cf
+ 48.766000 TX 5a 8a
+ 48.766000 RX a5 fe
+ 48.766000 ## bad echo try 2: a5 fe
+ 48.766000 TX 30
+ 48.781000 RX cf
+ 48.875000 TX 5a 8a
+ 48.891000 RX a5 fe
+ 48.891000 ## bad echo try 3: a5 fe
+ 48.891000 TX 30
+ 48.906000 RX cf
+ 49.016000 ## reg 8A unsupported: bad echo a5 fe, expected a5 8a
+ 49.219000 TX 5a 8b
+ 49.234000 RX a5 fe
+ 49.234000 ## bad echo try 1: a5 fe
+ 49.234000 TX 30
+ 49.250000 RX cf
+ 49.359000 TX 5a 8b
+ 49.375000 RX fe fe
+ 49.375000 ## bad echo try 2: fe fe
+ 49.375000 TX 30
+ 49.375000 RX cf
+ 49.484000 TX 5a 8b
+ 49.500000 RX a5 fe
+ 49.500000 ## bad echo try 3: a5 fe
+ 49.500000 TX 30
+ 49.516000 RX cf
+ 49.625000 ## reg 8B unsupported: bad echo a5 fe, expected a5 8b
+ 49.844000 TX 5a 8c
+ 49.859000 RX a5 fe
+ 49.859000 ## bad echo try 1: a5 fe
+ 49.859000 TX 30
+ 49.875000 RX cf
+ 49.969000 TX 5a 8c
+ 49.984000 RX a5 fe
+ 49.984000 ## bad echo try 2: a5 fe
+ 49.984000 TX 30
+ 50.000000 RX cf
+ 50.094000 TX 5a 8c
+ 50.109000 RX fe fe
+ 50.109000 ## bad echo try 3: fe fe
+ 50.109000 TX 30
+ 50.125000 RX cf
+ 50.219000 ## reg 8C unsupported: bad echo fe fe, expected a5 8c
+ 50.437000 TX 5a 8d
+ 50.437000 RX a5 fe
+ 50.437000 ## bad echo try 1: a5 fe
+ 50.437000 TX 30
+ 50.453000 RX cf
+ 50.578000 TX 5a 8d
+ 50.578000 RX a5 fe
+ 50.578000 ## bad echo try 2: a5 fe
+ 50.594000 TX 30
+ 50.594000 RX cf
+ 50.703000 TX 5a 8d
+ 50.734000 RX a5 fe
+ 50.734000 ## bad echo try 3: a5 fe
+ 50.734000 TX 30
+ 50.750000 RX fe
+ 50.844000 ## reg 8D unsupported: bad echo a5 fe, expected a5 8d
+ 51.062000 TX 5a 8e
+ 51.078000 RX a5 fe
+ 51.078000 ## bad echo try 1: a5 fe
+ 51.078000 TX 30
+ 51.094000 RX cf
+ 51.203000 TX 5a 8e
+ 51.234000 RX a5 fe
+ 51.234000 ## bad echo try 2: a5 fe
+ 51.234000 TX 30
+ 51.234000 RX cf
+ 51.359000 TX 5a 8e
+ 51.359000 RX a5 fe
+ 51.359000 ## bad echo try 3: a5 fe
+ 51.359000 TX 30
+ 51.375000 RX cf
+ 51.500000 ## reg 8E unsupported: bad echo a5 fe, expected a5 8e
+ 51.703000 TX 5a 8f
+ 51.719000 RX a5 fe
+ 51.719000 ## bad echo try 1: a5 fe
+ 51.719000 TX 30
+ 51.719000 RX cf
+ 51.844000 TX 5a 8f
+ 51.844000 RX a5 fe
+ 51.844000 ## bad echo try 2: a5 fe
+ 51.844000 TX 30
+ 51.859000 RX cf
+ 51.969000 TX 5a 8f
+ 51.984000 RX a5 fe
+ 51.984000 ## bad echo try 3: a5 fe
+ 51.984000 TX 30
+ 52.000000 RX fe
+ 52.109000 ## reg 8F unsupported: bad echo a5 fe, expected a5 8f
+ 52.328000 TX 5a 90
+ 52.328000 RX a5 fe
+ 52.328000 ## bad echo try 1: a5 fe
+ 52.328000 TX 30
+ 52.344000 RX cf
+ 52.453000 TX 5a 90
+ 52.469000 RX a5 fe
+ 52.469000 ## bad echo try 2: a5 fe
+ 52.469000 TX 30
+ 52.484000 RX cf
+ 52.594000 TX 5a 90
+ 52.594000 RX a5 fe
+ 52.594000 ## bad echo try 3: a5 fe
+ 52.594000 TX 30
+ 52.609000 RX cf
+ 52.734000 ## reg 90 unsupported: bad echo a5 fe, expected a5 90
+ 52.937000 TX 5a 91
+ 52.953000 RX a5 fe
+ 52.953000 ## bad echo try 1: a5 fe
+ 52.953000 TX 30
+ 52.969000 RX cf
+ 53.078000 TX 5a 91
+ 53.078000 RX a5 fe
+ 53.078000 ## bad echo try 2: a5 fe
+ 53.078000 TX 30
+ 53.094000 RX cf
+ 53.219000 TX 5a 91
+ 53.219000 RX fe fe
+ 53.219000 ## bad echo try 3: fe fe
+ 53.219000 TX 30
+ 53.234000 RX cf
+ 53.359000 ## reg 91 unsupported: bad echo fe fe, expected a5 91
+ 53.562000 TX 5a 92
+ 53.578000 RX a5 fe
+ 53.578000 ## bad echo try 1: a5 fe
+ 53.578000 TX 30
+ 53.594000 RX cf
+ 53.687000 TX 5a 92
+ 53.703000 RX a5 fe
+ 53.703000 ## bad echo try 2: a5 fe
+ 53.703000 TX 30
+ 53.719000 RX fe
+ 53.828000 TX 5a 92
+ 53.828000 RX a5 fe
+ 53.828000 ## bad echo try 3: a5 fe
+ 53.828000 TX 30
+ 53.844000 RX cf
+ 53.953000 ## reg 92 unsupported: bad echo a5 fe, expected a5 92
+ 54.172000 TX 5a 93
+ 54.219000 RX a5 fe
+ 54.219000 ## bad echo try 1: a5 fe
+ 54.219000 TX 30
+ 54.234000 RX cf
+ 54.344000 TX 5a 93
+ 54.359000 RX a5 fe
+ 54.359000 ## bad echo try 2: a5 fe
+ 54.359000 TX 30
+ 54.375000 RX cf
+ 54.484000 TX 5a 93
+ 54.500000 RX a5 fe
+ 54.500000 ## bad echo try 3: a5 fe
+ 54.500000 TX 30
+ 54.516000 RX cf
+ 54.625000 ## reg 93 unsupported: bad echo a5 fe, expected a5 93
+ 54.844000 TX 5a 94
+ 54.844000 RX a5 fe
+ 54.844000 ## bad echo try 1: a5 fe
+ 54.844000 TX 30
+ 54.859000 RX cf
+ 54.969000 TX 5a 94
+ 54.984000 RX fe fe
+ 54.984000 ## bad echo try 2: fe fe
+ 54.984000 TX 30
+ 55.000000 RX cf
+ 55.109000 TX 5a 94
+ 55.125000 RX a5 fe
+ 55.125000 ## bad echo try 3: a5 fe
+ 55.125000 TX 30
+ 55.141000 RX cf
+ 55.250000 ## reg 94 unsupported: bad echo a5 fe, expected a5 94
+ 55.469000 TX 5a 95
+ 55.484000 RX a5 fe
+ 55.484000 ## bad echo try 1: a5 fe
+ 55.484000 TX 30
+ 55.500000 RX cf
+ 55.609000 TX 5a 95
+ 55.625000 RX a5 fe
+ 55.625000 ## bad echo try 2: a5 fe
+ 55.625000 TX 30
+ 55.641000 RX cf
+ 55.750000 TX 5a 95
+ 55.766000 RX a5 fe
+ 55.766000 ## bad echo try 3: a5 fe
+ 55.766000 TX 30
+ 55.781000 RX cf
+ 55.891000 ## reg 95 unsupported: bad echo a5 fe, expected a5 95
+ 56.094000 TX 5a 96
+ 56.094000 RX a5 fe
+ 56.094000 ## bad echo try 1: a5 fe
+ 56.094000 TX 30
+ 56.109000 RX cf
+ 56.203000 TX 5a 96
+ 56.203000 RX a5 fe
+ 56.203000 ## bad echo try 2: a5 fe
+ 56.219000 TX 30
+ 56.219000 RX cf
+ 56.344000 TX 5a 96
+ 56.344000 RX a5 fe
+ 56.344000 ## bad echo try 3: a5 fe
+ 56.344000 TX 30
+ 56.359000 RX cf
+ 56.469000 ## reg 96 unsupported: bad echo a5 fe, expected a5 96
+ 56.672000 TX 5a 97
+ 56.672000 RX a5 fe
+ 56.672000 ## bad echo try 1: a5 fe
+ 56.672000 TX 30
+ 56.687000 RX cf
+ 56.797000 TX 5a 97
+ 56.812000 RX a5 fe
+ 56.812000 ## bad echo try 2: a5 fe
+ 56.812000 TX 30
+ 56.828000 RX cf
+ 56.937000 TX 5a 97
+ 56.953000 RX a5 fe
+ 56.953000 ## bad echo try 3: a5 fe
+ 56.953000 TX 30
+ 56.969000 RX cf
+ 57.062000 ## reg 97 unsupported: bad echo a5 fe, expected a5 97
+ 57.266000 TX 5a 98
+ 57.281000 RX a5 fe
+ 57.281000 ## bad echo try 1: a5 fe
+ 57.281000 TX 30
+ 57.297000 RX cf
+ 57.406000 TX 5a 98
+ 57.406000 RX a5 fe
+ 57.406000 ## bad echo try 2: a5 fe
+ 57.406000 TX 30
+ 57.422000 RX cf
+ 57.531000 TX 5a 98
+ 57.547000 RX a5 fe
+ 57.547000 ## bad echo try 3: a5 fe
+ 57.547000 TX 30
+ 57.562000 RX cf
+ 57.672000 ## reg 98 unsupported: bad echo a5 fe, expected a5 98
+ 57.875000 TX 5a 99
+ 57.891000 RX a5 fe
+ 57.891000 ## bad echo try 1: a5 fe
+ 57.891000 TX 30
+ 57.906000 RX cf
+ 58.016000 TX 5a 99
+ 58.016000 RX a5 fe
+ 58.016000 ## bad echo try 2: a5 fe
+ 58.016000 TX 30
+ 58.016000 RX fe
+ 58.141000 TX 5a 99
+ 58.141000 RX a5 fe
+ 58.141000 ## bad echo try 3: a5 fe
+ 58.141000 TX 30
+ 58.156000 RX fe
+ 58.266000 ## reg 99 unsupported: bad echo a5 fe, expected a5 99
+ 58.484000 TX 5a 9a
+ 58.484000 RX fe fe
+ 58.484000 ## bad echo try 1: fe fe
+ 58.484000 TX 30
+ 58.516000 RX cf
+ 58.625000 TX 5a 9a
+ 58.625000 RX fe fe
+ 58.625000 ## bad echo try 2: fe fe
+ 58.625000 TX 30
+ 58.641000 RX cf
+ 58.750000 TX 5a 9a
+ 58.750000 RX a5 fe
+ 58.750000 ## bad echo try 3: a5 fe
+ 58.750000 TX 30
+ 58.766000 RX cf
+ 58.875000 ## reg 9A unsupported: bad echo a5 fe, expected a5 9a
+ 59.094000 TX 5a 9b
+ 59.109000 RX a5 fe
+ 59.109000 ## bad echo try 1: a5 fe
+ 59.109000 TX 30
+ 59.125000 RX cf
+ 59.219000 TX 5a 9b
+ 59.219000 RX fe fe
+ 59.219000 ## bad echo try 2: fe fe
+ 59.219000 TX 30
+ 59.250000 RX cf
+ 59.359000 TX 5a 9b
+ 59.359000 RX fe fe
+ 59.359000 ## bad echo try 3: fe fe
+ 59.359000 TX 30
+ 59.375000 RX cf
+ 59.484000 ## reg 9B unsupported: bad echo fe fe, expected a5 9b
+ 59.687000 TX 5a 9c
+ 59.703000 RX a5 fe
+ 59.703000 ## bad echo try 1: a5 fe
+ 59.703000 TX 30
+ 59.703000 RX cf
+ 59.812000 TX 5a 9c
+ 59.828000 RX a5 fe
+ 59.828000 ## bad echo try 2: a5 fe
+ 59.828000 TX 30
+ 59.844000 RX cf
+ 59.953000 TX 5a 9c
+ 59.953000 RX a5 fe
+ 59.953000 ## bad echo try 3: a5 fe
+ 59.953000 TX 30
+ 59.969000 RX cf
+ 60.062000 ## reg 9C unsupported: bad echo a5 fe, expected a5 9c
+ 60.266000 TX 5a 9d
+ 60.297000 RX fe fe
+ 60.297000 ## bad echo try 1: fe fe
+ 60.297000 TX 30
+ 60.312000 RX cf
+ 60.422000 TX 5a 9d
+ 60.437000 RX a5 fe
+ 60.437000 ## bad echo try 2: a5 fe
+ 60.437000 TX 30
+ 60.453000 RX cf
+ 60.547000 TX 5a 9d
+ 60.562000 RX a5 fe
+ 60.562000 ## bad echo try 3: a5 fe
+ 60.562000 TX 30
+ 60.578000 RX cf
+ 60.687000 ## reg 9D unsupported: bad echo a5 fe, expected a5 9d
+ 60.891000 TX 5a 9e
+ 60.906000 RX a5 fe
+ 60.906000 ## bad echo try 1: a5 fe
+ 60.906000 TX 30
+ 60.937000 RX cf
+ 61.031000 TX 5a 9e
+ 61.047000 RX a5 fe
+ 61.047000 ## bad echo try 2: a5 fe
+ 61.047000 TX 30
+ 61.062000 RX fe
+ 61.172000 TX 5a 9e
+ 61.172000 RX a5 fe
+ 61.172000 ## bad echo try 3: a5 fe
+ 61.172000 TX 30
+ 61.203000 RX cf
+ 61.312000 ## reg 9E unsupported: bad echo a5 fe, expected a5 9e
+ 61.531000 TX 5a 9f
+ 61.547000 RX a5 fe
+ 61.547000 ## bad echo try 1: a5 fe
+ 61.547000 TX 30
+ 61.562000 RX cf
+ 61.672000 TX 5a 9f
+ 61.687000 RX a5 fe
+ 61.687000 ## bad echo try 2: a5 fe
+ 61.687000 TX 30
+ 61.687000 RX cf
+ 61.797000 TX 5a 9f
+ 61.812000 RX a5 fe
+ 61.812000 ## bad echo try 3: a5 fe
+ 61.812000 TX 30
+ 61.828000 RX cf
+ 61.922000 ## reg 9F unsupported: bad echo a5 fe, expected a5 9f
+ 62.125000 TX 5a a0
+ 62.141000 RX fe fe
+ 62.141000 ## bad echo try 1: fe fe
+ 62.141000 TX 30
+ 62.156000 RX cf
+ 62.266000 TX 5a a0
+ 62.266000 RX a5 fe
+ 62.266000 ## bad echo try 2: a5 fe
+ 62.266000 TX 30
+ 62.281000 RX cf
+ 62.406000 TX 5a a0
+ 62.406000 RX a5 fe
+ 62.406000 ## bad echo try 3: a5 fe
+ 62.406000 TX 30
+ 62.437000 RX cf
+ 62.547000 ## reg A0 unsupported: bad echo a5 fe, expected a5 a0
+ 62.750000 TX 5a a1
+ 62.766000 RX a5 fe
+ 62.766000 ## bad echo try 1: a5 fe
+ 62.766000 TX 30
+ 62.781000 RX cf
+ 62.891000 TX 5a a1
+ 62.891000 RX a5 fe
+ 62.891000 ## bad echo try 2: a5 fe
+ 62.891000 TX 30
+ 62.906000 RX fe
+ 63.016000 TX 5a a1
+ 63.016000 RX a5 fe
+ 63.016000 ## bad echo try 3: a5 fe
+ 63.016000 TX 30
+ 63.031000 RX cf
+ 63.141000 ## reg A1 unsupported: bad echo a5 fe, expected a5 a1
+ 63.359000 TX 5a a2
+ 63.359000 RX a5 fe
+ 63.359000 ## bad echo try 1: a5 fe
+ 63.359000 TX 30
+ 63.375000 RX cf
+ 63.484000 TX 5a a2
+ 63.484000 RX a5 fe
+ 63.484000 ## bad echo try 2: a5 fe
+ 63.484000 TX 30
+ 63.500000 RX cf
+ 63.594000 TX 5a a2
+ 63.609000 RX a5 fe
+ 63.609000 ## bad echo try 3: a5 fe
+ 63.609000 TX 30
+ 63.625000 RX cf
+ 63.734000 ## reg A2 unsupported: bad echo a5 fe, expected a5 a2
+ 63.953000 TX 5a a3
+ 63.953000 RX a5 fe
+ 63.953000 ## bad echo try 1: a5 fe
+ 63.953000 TX 30
+ 63.969000 RX cf
+ 64.094000 TX 5a a3
+ 64.094000 RX a5 fe
+ 64.094000 ## bad echo try 2: a5 fe
+ 64.094000 TX 30
+ 64.125000 RX cf
+ 64.234000 TX 5a a3
+ 64.234000 RX a5 fe
+ 64.234000 ## bad echo try 3: a5 fe
+ 64.234000 TX 30
+ 64.250000 RX cf
+ 64.375000 ## reg A3 unsupported: bad echo a5 fe, expected a5 a3
+ 64.578000 TX 5a a4
+ 64.594000 RX a5 fe
+ 64.594000 ## bad echo try 1: a5 fe
+ 64.594000 TX 30
+ 64.609000 RX cf
+ 64.703000 TX 5a a4
+ 64.719000 RX a5 fe
+ 64.719000 ## bad echo try 2: a5 fe
+ 64.719000 TX 30
+ 64.734000 RX cf
+ 64.828000 TX 5a a4
+ 64.844000 RX a5 fe
+ 64.844000 ## bad echo try 3: a5 fe
+ 64.844000 TX 30
+ 64.859000 RX cf
+ 64.984000 ## reg A4 unsupported: bad echo a5 fe, expected a5 a4
+ 65.187000 TX 5a a5
+ 65.187000 RX a5 fe
+ 65.187000 ## bad echo try 1: a5 fe
+ 65.187000 TX 30
+ 65.203000 RX cf
+ 65.312000 TX 5a a5
+ 65.328000 RX a5 fe
+ 65.328000 ## bad echo try 2: a5 fe
+ 65.328000 TX 30
+ 65.344000 RX fe
+ 65.453000 TX 5a a5
+ 65.469000 RX a5 fe
+ 65.469000 ## bad echo try 3: a5 fe
+ 65.469000 TX 30
+ 65.484000 RX cf
+ 65.594000 ## reg A5 unsupported: bad echo a5 fe, expected a5 a5
+ 65.812000 TX 5a a6
+ 65.844000 RX a5 fe
+ 65.844000 ## bad echo try 1: a5 fe
+ 65.844000 TX 30
+ 65.844000 RX cf
+ 65.969000 TX 5a a6
+ 65.969000 RX a5 fe
+ 65.969000 ## bad echo try 2: a5 fe
+ 65.969000 TX 30
+ 66.000000 RX cf
+ 66.109000 TX 5a a6
+ 66.109000 RX a5 fe
+ 66.109000 ## bad echo try 3: a5 fe
+ 66.109000 TX 30
+ 66.125000 RX cf
+ 66.234000 ## reg A6 unsupported: bad echo a5 fe, expected a5 a6
+ 66.437000 TX 5a a7
+ 66.437000 RX a5 fe
+ 66.437000 ## bad echo try 1: a5 fe
+ 66.437000 TX 30
+ 66.453000 RX cf
+ 66.547000 TX 5a a7
+ 66.578000 RX a5 fe
+ 66.578000 ## bad echo try 2: a5 fe
+ 66.578000 TX 30
+ 66.594000 RX cf
+ 66.703000 TX 5a a7
+ 66.703000 RX a5 fe
+ 66.703000 ## bad echo try 3: a5 fe
+ 66.703000 TX 30
+ 66.719000 RX fe
+ 66.844000 ## reg A7 unsupported: bad echo a5 fe, expected a5 a7
+ 67.047000 TX 5a a8
+ 67.062000 RX a5 fe
+ 67.062000 ## bad echo try 1: a5 fe
+ 67.062000 TX 30
+ 67.078000 RX cf
+ 67.187000 TX 5a a8
+ 67.187000 RX a5 fe
+ 67.187000 ## bad echo try 2: a5 fe
+ 67.187000 TX 30
+ 67.203000 RX cf
+ 67.312000 TX 5a a8
+ 67.312000 RX a5 fe
+ 67.312000 ## bad echo try 3: a5 fe
+ 67.312000 TX 30
+ 67.344000 RX cf
+ 67.453000 ## reg A8 unsupported: bad echo a5 fe, expected a5 a8
+ 67.656000 TX 5a a9
+ 67.672000 RX a5 fe
+ 67.672000 ## bad echo try 1: a5 fe
+ 67.672000 TX 30
+ 67.687000 RX cf
+ 67.797000 TX 5a a9
+ 67.812000 RX fe fe
+ 67.812000 ## bad echo try 2: fe fe
+ 67.812000 TX 30
+ 67.828000 RX cf
+ 67.953000 TX 5a a9
+ 67.953000 RX fe fe
+ 67.953000 ## bad echo try 3: fe fe
+ 67.953000 TX 30
+ 67.984000 RX cf
+ 68.094000 ## reg A9 unsupported: bad echo fe fe, expected a5 a9
+ 68.297000 TX 5a aa
+ 68.297000 RX a5 fe
+ 68.297000 ## bad echo try 1: a5 fe
+ 68.297000 TX 30
+ 68.312000 RX cf
+ 68.422000 TX 5a aa
+ 68.422000 RX a5 fe
+ 68.422000 ## bad echo try 2: a5 fe
+ 68.422000 TX 30
+ 68.437000 RX cf
+ 68.547000 TX 5a aa
+ 68.547000 RX a5 fe
+ 68.547000 ## bad echo try 3: a5 fe
+ 68.547000 TX 30
+ 68.562000 RX cf
+ 68.687000 ## reg AA unsupported: bad echo a5 fe, expected a5 aa
+ 68.891000 TX 5a ab
+ 68.891000 RX a5 fe
+ 68.891000 ## bad echo try 1: a5 fe
+ 68.891000 TX 30
+ 68.906000 RX cf
+ 69.016000 TX 5a ab
+ 69.016000 RX a5 fe
+ 69.016000 ## bad echo try 2: a5 fe
+ 69.016000 TX 30
+ 69.031000 RX cf
+ 69.141000 TX 5a ab
+ 69.156000 RX a5 fe
+ 69.156000 ## bad echo try 3: a5 fe
+ 69.156000 TX 30
+ 69.172000 RX cf
+ 69.281000 ## reg AB unsupported: bad echo a5 fe, expected a5 ab
+ 69.500000 TX 5a ac
+ 69.500000 RX a5 fe
+ 69.500000 ## bad echo try 1: a5 fe
+ 69.500000 TX 30
+ 69.516000 RX cf
+ 69.641000 TX 5a ac
+ 69.641000 RX a5 fe
+ 69.641000 ## bad echo try 2: a5 fe
+ 69.641000 TX 30
+ 69.656000 RX cf
+ 69.766000 TX 5a ac
+ 69.766000 RX a5 fe
+ 69.766000 ## bad echo try 3: a5 fe
+ 69.766000 TX 30
+ 69.781000 RX cf
+ 69.891000 ## reg AC unsupported: bad echo a5 fe, expected a5 ac
+ 70.094000 TX 5a ad
+ 70.094000 RX a5 fe
+ 70.094000 ## bad echo try 1: a5 fe
+ 70.094000 TX 30
+ 70.125000 RX fe
+ 70.219000 TX 5a ad
+ 70.234000 RX a5 fe
+ 70.234000 ## bad echo try 2: a5 fe
+ 70.234000 TX 30
+ 70.250000 RX cf
+ 70.344000 TX 5a ad
+ 70.359000 RX a5 fe
+ 70.359000 ## bad echo try 3: a5 fe
+ 70.359000 TX 30
+ 70.375000 RX cf
+ 70.484000 ## reg AD unsupported: bad echo a5 fe, expected a5 ad
+ 70.703000 TX 5a ae
+ 70.719000 RX a5 fe
+ 70.719000 ## bad echo try 1: a5 fe
+ 70.719000 TX 30
+ 70.734000 RX cf
+ 70.844000 TX 5a ae
+ 70.859000 RX a5 fe
+ 70.859000 ## bad echo try 2: a5 fe
+ 70.859000 TX 30
+ 70.875000 RX cf
+ 70.984000 TX 5a ae
+ 71.000000 RX a5 fe
+ 71.000000 ## bad echo try 3: a5 fe
+ 71.000000 TX 30
+ 71.016000 RX cf
+ 71.125000 ## reg AE unsupported: bad echo a5 fe, expected a5 ae
+ 71.328000 TX 5a af
+ 71.328000 RX a5 fe
+ 71.328000 ## bad echo try 1: a5 fe
+ 71.328000 TX 30
+ 71.344000 RX cf
+ 71.453000 TX 5a af
+ 71.453000 RX a5 fe
+ 71.453000 ## bad echo try 2: a5 fe
+ 71.453000 TX 30
+ 71.469000 RX cf
+ 71.578000 TX 5a af
+ 71.594000 RX a5 fe
+ 71.594000 ## bad echo try 3: a5 fe
+ 71.594000 TX 30
+ 71.594000 RX cf
+ 71.703000 ## reg AF unsupported: bad echo a5 fe, expected a5 af
+ 71.922000 TX 5a b0
+ 71.922000 RX a5 fe
+ 71.922000 ## bad echo try 1: a5 fe
+ 71.922000 TX 30
+ 71.937000 RX cf
+ 72.047000 TX 5a b0
+ 72.047000 RX a5 fe
+ 72.047000 ## bad echo try 2: a5 fe
+ 72.047000 TX 30
+ 72.062000 RX fe
+ 72.172000 TX 5a b0
+ 72.172000 RX a5 fe
+ 72.172000 ## bad echo try 3: a5 fe
+ 72.187000 TX 30
+ 72.187000 RX cf
+ 72.312000 ## reg B0 unsupported: bad echo a5 fe, expected a5 b0
+ 72.531000 TX 5a b1
+ 72.531000 RX a5 fe
+ 72.531000 ## bad echo try 1: a5 fe
+ 72.531000 TX 30
+ 72.547000 RX cf
+ 72.656000 TX 5a b1
+ 72.672000 RX a5 fe
+ 72.672000 ## bad echo try 2: a5 fe
+ 72.672000 TX 30
+ 72.687000 RX cf
+ 72.797000 TX 5a b1
+ 72.812000 RX a5 fe
+ 72.812000 ## bad echo try 3: a5 fe
+ 72.812000 TX 30
+ 72.812000 RX cf
+ 72.937000 ## reg B1 unsupported: bad echo a5 fe, expected a5 b1
+ 73.141000 TX 5a b2
+ 73.156000 RX a5 fe
+ 73.156000 ## bad echo try 1: a5 fe
+ 73.156000 TX 30
+ 73.172000 RX cf
+ 73.281000 TX 5a b2
+ 73.281000 RX a5 fe
+ 73.281000 ## bad echo try 2: a5 fe
+ 73.281000 TX 30
+ 73.297000 RX cf
+ 73.422000 TX 5a b2
+ 73.422000 RX a5 fe
+ 73.422000 ## bad echo try 3: a5 fe
+ 73.422000 TX 30
+ 73.437000 RX cf
+ 73.562000 ## reg B2 unsupported: bad echo a5 fe, expected a5 b2
+ 73.766000 TX 5a b3
+ 73.781000 RX a5 fe
+ 73.781000 ## bad echo try 1: a5 fe
+ 73.781000 TX 30
+ 73.797000 RX cf
+ 73.906000 TX 5a b3
+ 73.906000 RX fe fe
+ 73.906000 ## bad echo try 2: fe fe
+ 73.906000 TX 30
+ 73.922000 RX cf
+ 74.031000 TX 5a b3
+ 74.031000 RX a5 fe
+ 74.031000 ## bad echo try 3: a5 fe
+ 74.031000 TX 30
+ 74.047000 RX cf
+ 74.172000 ## reg B3 unsupported: bad echo a5 fe, expected a5 b3
+ 74.375000 TX 5a b4
+ 74.391000 RX a5 fe
+ 74.391000 ## bad echo try 1: a5 fe
+ 74.391000 TX 30
+ 74.406000 RX cf
+ 74.516000 TX 5a b4
+ 74.531000 RX a5 fe
+ 74.531000 ## bad echo try 2: a5 fe
+ 74.531000 TX 30
+ 74.547000 RX cf
+ 74.656000 TX 5a b4
+ 74.672000 RX a5 fe
+ 74.672000 ## bad echo try 3: a5 fe
+ 74.672000 TX 30
+ 74.687000 RX cf
+ 74.797000 ## reg B4 unsupported: bad echo a5 fe, expected a5 b4
+ 75.016000 TX 5a b5
+ 75.031000 RX a5 fe
+ 75.031000 ## bad echo try 1: a5 fe
+ 75.031000 TX 30
+ 75.047000 RX cf
+ 75.141000 TX 5a b5
+ 75.156000 RX fe fe
+ 75.156000 ## bad echo try 2: fe fe
+ 75.156000 TX 30
+ 75.172000 RX cf
+ 75.281000 TX 5a b5
+ 75.281000 RX a5 fe
+ 75.281000 ## bad echo try 3: a5 fe
+ 75.281000 TX 30
+ 75.297000 RX cf
+ 75.406000 ## reg B5 unsupported: bad echo a5 fe, expected a5 b5
+ 75.625000 TX 5a b6
+ 75.641000 RX a5 fe
+ 75.641000 ## bad echo try 1: a5 fe
+ 75.641000 TX 30
+ 75.656000 RX cf
+ 75.766000 TX 5a b6
+ 75.781000 RX a5 fe
+ 75.781000 ## bad echo try 2: a5 fe
+ 75.781000 TX 30
+ 75.797000 RX cf
+ 75.891000 TX 5a b6
+ 75.906000 RX a5 fe
+ 75.906000 ## bad echo try 3: a5 fe
+ 75.906000 TX 30
+ 75.922000 RX cf
+ 76.031000 ## reg B6 unsupported: bad echo a5 fe, expected a5 b6
+ 76.234000 TX 5a b7
+ 76.250000 RX a5 fe
+ 76.250000 ## bad echo try 1: a5 fe
+ 76.250000 TX 30
+ 76.266000 RX cf
+ 76.375000 TX 5a b7
+ 76.391000 RX a5 fe
+ 76.391000 ## bad echo try 2: a5 fe
+ 76.391000 TX 30
+ 76.406000 RX cf
+ 76.516000 TX 5a b7
+ 76.531000 RX a5 fe
+ 76.531000 ## bad echo try 3: a5 fe
+ 76.531000 TX 30
+ 76.547000 RX cf
+ 76.656000 ## reg B7 unsupported: bad echo a5 fe, expected a5 b7
+ 76.875000 TX 5a b8
+ 76.875000 RX a5 fe
+ 76.875000 ## bad echo try 1: a5 fe
+ 76.875000 TX 30
+ 76.891000 RX cf
+ 77.016000 TX 5a b8
+ 77.031000 RX a5 fe
+ 77.031000 ## bad echo try 2: a5 fe
+ 77.031000 TX 30
+ 77.047000 RX cf
+ 77.156000 TX 5a b8
+ 77.156000 RX a5 fe
+ 77.156000 ## bad echo try 3: a5 fe
+ 77.156000 TX 30
+ 77.172000 RX cf
+ 77.281000 ## reg B8 unsupported: bad echo a5 fe, expected a5 b8
+ 77.484000 TX 5a b9
+ 77.500000 RX a5 fe
+ 77.500000 ## bad echo try 1: a5 fe
+ 77.500000 TX 30
+ 77.516000 RX cf
+ 77.641000 TX 5a b9
+ 77.641000 RX a5 fe
+ 77.641000 ## bad echo try 2: a5 fe
+ 77.641000 TX 30
+ 77.672000 RX cf
+ 77.781000 TX 5a b9
+ 77.797000 RX a5 fe
+ 77.797000 ## bad echo try 3: a5 fe
+ 77.797000 TX 30
+ 77.812000 RX cf
+ 77.906000 ## reg B9 unsupported: bad echo a5 fe, expected a5 b9
+ 78.109000 TX 5a ba
+ 78.125000 RX a5 fe
+ 78.125000 ## bad echo try 1: a5 fe
+ 78.125000 TX 30
+ 78.141000 RX cf
+ 78.250000 TX 5a ba
+ 78.250000 RX a5 fe
+ 78.250000 ## bad echo try 2: a5 fe
+ 78.250000 TX 30
+ 78.266000 RX cf
+ 78.375000 TX 5a ba
+ 78.391000 RX a5 fe
+ 78.391000 ## bad echo try 3: a5 fe
+ 78.391000 TX 30
+ 78.406000 RX cf
+ 78.516000 ## reg BA unsupported: bad echo a5 fe, expected a5 ba
+ 78.719000 TX 5a bb
+ 78.734000 RX a5 fe
+ 78.734000 ## bad echo try 1: a5 fe
+ 78.734000 TX 30
+ 78.750000 RX cf
+ 78.859000 TX 5a bb
+ 78.859000 RX a5 fe
+ 78.859000 ## bad echo try 2: a5 fe
+ 78.859000 TX 30
+ 78.875000 RX cf
+ 78.984000 TX 5a bb
+ 79.000000 RX a5 fe
+ 79.000000 ## bad echo try 3: a5 fe
+ 79.000000 TX 30
+ 79.016000 RX cf
+ 79.141000 ## reg BB unsupported: bad echo a5 fe, expected a5 bb
+ 79.344000 TX 5a bc
+ 79.344000 RX a5 fe
+ 79.344000 ## bad echo try 1: a5 fe
+ 79.344000 TX 30
+ 79.375000 RX cf
+ 79.484000 TX 5a bc
+ 79.500000 RX a5 fe
+ 79.500000 ## bad echo try 2: a5 fe
+ 79.500000 TX 30
+ 79.516000 RX cf
+ 79.625000 TX 5a bc
+ 79.625000 RX a5 fe
+ 79.625000 ## bad echo try 3: a5 fe
+ 79.625000 TX 30
+ 79.641000 RX cf
+ 79.766000 ## reg BC unsupported: bad echo a5 fe, expected a5 bc
+ 79.969000 TX 5a bd
+ 79.984000 RX a5 fe
+ 79.984000 ## bad echo try 1: a5 fe
+ 79.984000 TX 30
+ 80.000000 RX cf
+ 80.109000 TX 5a bd
+ 80.109000 RX a5 fe
+ 80.109000 ## bad echo try 2: a5 fe
+ 80.109000 TX 30
+ 80.125000 RX cf
+ 80.234000 TX 5a bd
+ 80.234000 RX a5 fe
+ 80.234000 ## bad echo try 3: a5 fe
+ 80.234000 TX 30
+ 80.250000 RX cf
+ 80.359000 ## reg BD unsupported: bad echo a5 fe, expected a5 bd
+ 80.562000 TX 5a be
+ 80.578000 RX a5 fe
+ 80.578000 ## bad echo try 1: a5 fe
+ 80.578000 TX 30
+ 80.594000 RX cf
+ 80.687000 TX 5a be
+ 80.703000 RX a5 fe
+ 80.703000 ## bad echo try 2: a5 fe
+ 80.703000 TX 30
+ 80.719000 RX cf
+ 80.828000 TX 5a be
+ 80.844000 RX a5 fe
+ 80.844000 ## bad echo try 3: a5 fe
+ 80.844000 TX 30
+ 80.859000 RX cf
+ 80.969000 ## reg BE unsupported: bad echo a5 fe, expected a5 be
+ 81.187000 TX 5a bf
+ 81.203000 RX a5 fe
+ 81.203000 ## bad echo try 1: a5 fe
+ 81.203000 TX 30
+ 81.219000 RX cf
+ 81.328000 TX 5a bf
+ 81.344000 RX fe fe
+ 81.344000 ## bad echo try 2: fe fe
+ 81.344000 TX 30
+ 81.359000 RX cf
+ 81.453000 TX 5a bf
+ 81.469000 RX a5 fe
+ 81.469000 ## bad echo try 3: a5 fe
+ 81.469000 TX 30
+ 81.484000 RX cf
+ 81.594000 ## reg BF unsupported: bad echo a5 fe, expected a5 bf
+ 81.797000 TX 5a c0
+ 81.797000 RX a5 fe
+ 81.797000 ## bad echo try 1: a5 fe
+ 81.797000 TX 30
+ 81.812000 RX cf
+ 81.922000 TX 5a c0
+ 81.937000 RX a5 fe
+ 81.937000 ## bad echo try 2: a5 fe
+ 81.937000 TX 30
+ 81.953000 RX cf
+ 82.062000 TX 5a c0
+ 82.078000 RX a5 fe
+ 82.078000 ## bad echo try 3: a5 fe
+ 82.078000 TX 30
+ 82.094000 RX cf
+ 82.203000 ## reg C0 unsupported: bad echo a5 fe, expected a5 c0
+ 82.406000 TX 5a c1
+ 82.422000 RX a5 fe
+ 82.422000 ## bad echo try 1: a5 fe
+ 82.422000 TX 30
+ 82.437000 RX cf
+ 82.547000 TX 5a c1
+ 82.562000 RX a5 fe
+ 82.562000 ## bad echo try 2: a5 fe
+ 82.562000 TX 30
+ 82.578000 RX cf
+ 82.687000 TX 5a c1
+ 82.703000 RX a5 fe
+ 82.703000 ## bad echo try 3: a5 fe
+ 82.703000 TX 30
+ 82.719000 RX cf
+ 82.828000 ## reg C1 unsupported: bad echo a5 fe, expected a5 c1
+ 83.031000 TX 5a c2
+ 83.047000 RX a5 fe
+ 83.047000 ## bad echo try 1: a5 fe
+ 83.047000 TX 30
+ 83.062000 RX cf
+ 83.172000 TX 5a c2
+ 83.187000 RX a5 fe
+ 83.187000 ## bad echo try 2: a5 fe
+ 83.187000 TX 30
+ 83.219000 RX cf
+ 83.328000 TX 5a c2
+ 83.344000 RX a5 fe
+ 83.344000 ## bad echo try 3: a5 fe
+ 83.344000 TX 30
+ 83.359000 RX cf
+ 83.469000 ## reg C2 unsupported: bad echo a5 fe, expected a5 c2
+ 83.672000 TX 5a c3
+ 83.687000 RX a5 fe
+ 83.687000 ## bad echo try 1: a5 fe
+ 83.687000 TX 30
+ 83.703000 RX cf
+ 83.812000 TX 5a c3
+ 83.812000 RX a5 fe
+ 83.812000 ## bad echo try 2: a5 fe
+ 83.812000 TX 30
+ 83.828000 RX cf
+ 83.937000 TX 5a c3
+ 83.937000 RX a5 fe
+ 83.937000 ## bad echo try 3: a5 fe
+ 83.937000 TX 30
+ 83.969000 RX cf
+ 84.078000 ## reg C3 unsupported: bad echo a5 fe, expected a5 c3
+ 84.297000 TX 5a c4
+ 84.297000 RX fe fe
+ 84.297000 ## bad echo try 1: fe fe
+ 84.297000 TX 30
+ 84.312000 RX fe
+ 84.422000 TX 5a c4
+ 84.437000 RX a5 fe
+ 84.437000 ## bad echo try 2: a5 fe
+ 84.437000 TX 30
+ 84.453000 RX cf
+ 84.562000 TX 5a c4
+ 84.578000 RX a5 fe
+ 84.578000 ## bad echo try 3: a5 fe
+ 84.578000 TX 30
+ 84.594000 RX cf
+ 84.687000 ## reg C4 unsupported: bad echo a5 fe, expected a5 c4
+ 84.891000 TX 5a c5
+ 84.891000 RX a5 fe
+ 84.891000 ## bad echo try 1: a5 fe
+ 84.891000 TX 30
+ 84.906000 RX cf
+ 85.016000 TX 5a c5
+ 85.031000 RX a5 fe
+ 85.031000 ## bad echo try 2: a5 fe
+ 85.031000 TX 30
+ 85.047000 RX cf
+ 85.156000 TX 5a c5
+ 85.156000 RX a5 fe
+ 85.156000 ## bad echo try 3: a5 fe
+ 85.156000 TX 30
+ 85.172000 RX fe
+ 85.281000 ## reg C5 unsupported: bad echo a5 fe, expected a5 c5
+ 85.500000 TX 5a c6
+ 85.500000 RX a5 fe
+ 85.500000 ## bad echo try 1: a5 fe
+ 85.500000 TX 30
+ 85.516000 RX cf
+ 85.625000 TX 5a c6
+ 85.641000 RX a5 fe
+ 85.641000 ## bad echo try 2: a5 fe
+ 85.641000 TX 30
+ 85.656000 RX cf
+ 85.766000 TX 5a c6
+ 85.781000 RX a5 fe
+ 85.781000 ## bad echo try 3: a5 fe
+ 85.781000 TX 30
+ 85.797000 RX cf
+ 85.906000 ## reg C6 unsupported: bad echo a5 fe, expected a5 c6
+ 86.109000 TX 5a c7
+ 86.109000 RX fe fe
+ 86.109000 ## bad echo try 1: fe fe
+ 86.109000 TX 30
+ 86.141000 RX cf
+ 86.250000 TX 5a c7
+ 86.266000 RX a5 fe
+ 86.266000 ## bad echo try 2: a5 fe
+ 86.266000 TX 30
+ 86.281000 RX cf
+ 86.375000 TX 5a c7
+ 86.375000 RX a5 fe
+ 86.375000 ## bad echo try 3: a5 fe
+ 86.375000 TX 30
+ 86.406000 RX cf
+ 86.531000 ## reg C7 unsupported: bad echo a5 fe, expected a5 c7
+ 86.734000 TX 5a c8
+ 86.750000 RX a5 fe
+ 86.750000 ## bad echo try 1: a5 fe
+ 86.750000 TX 30
+ 86.766000 RX fe
+ 86.875000 TX 5a c8
+ 86.875000 RX a5 fe
+ 86.875000 ## bad echo try 2: a5 fe
+ 86.875000 TX 30
+ 86.906000 RX cf
+ 87.000000 TX 5a c8
+ 87.016000 RX a5 fe
+ 87.016000 ## bad echo try 3: a5 fe
+ 87.016000 TX 30
+ 87.031000 RX cf
+ 87.141000 ## reg C8 unsupported: bad echo a5 fe, expected a5 c8
+ 87.359000 TX 5a c9
+ 87.359000 RX a5 fe
+ 87.359000 ## bad echo try 1: a5 fe
+ 87.359000 TX 30
+ 87.375000 RX cf
+ 87.484000 TX 5a c9
+ 87.500000 RX a5 fe
+ 87.500000 ## bad echo try 2: a5 fe
+ 87.500000 TX 30
+ 87.516000 RX cf
+ 87.625000 TX 5a c9
+ 87.641000 RX a5 fe
+ 87.641000 ## bad echo try 3: a5 fe
+ 87.641000 TX 30
+ 87.656000 RX fe
+ 87.781000 ## reg C9 unsupported: bad echo a5 fe, expected a5 c9
+ 87.984000 TX 5a ca
+ 87.984000 RX a5 fe
+ 87.984000 ## bad echo try 1: a5 fe
+ 87.984000 TX 30
+ 88.000000 RX fe
+ 88.125000 TX 5a ca
+ 88.141000 RX a5 fe
+ 88.141000 ## bad echo try 2: a5 fe
+ 88.141000 TX 30
+ 88.156000 RX cf
+ 88.250000 TX 5a ca
+ 88.266000 RX a5 fe
+ 88.266000 ## bad echo try 3: a5 fe
+ 88.266000 TX 30
+ 88.281000 RX cf
+ 88.391000 ## reg CA unsupported: bad echo a5 fe, expected a5 ca
+ 88.594000 TX 5a cb
+ 88.609000 RX a5 fe
+ 88.609000 ## bad echo try 1: a5 fe
+ 88.609000 TX 30
+ 88.625000 RX cf
+ 88.734000 TX 5a cb
+ 88.750000 RX a5 fe
+ 88.750000 ## bad echo try 2: a5 fe
+ 88.750000 TX 30
+ 88.750000 RX fe
+ 88.859000 TX 5a cb
+ 88.859000 RX a5 fe
+ 88.859000 ## bad echo try 3: a5 fe
+ 88.859000 TX 30
+ 88.891000 RX cf
+ 88.984000 ## reg CB unsupported: bad echo a5 fe, expected a5 cb
+ 89.187000 TX 5a cc
+ 89.203000 RX fe fe
+ 89.203000 ## bad echo try 1: fe fe
+ 89.203000 TX 30
+ 89.219000 RX cf
+ 89.328000 TX 5a cc
+ 89.344000 RX a5 fe
+ 89.344000 ## bad echo try 2: a5 fe
+ 89.344000 TX 30
+ 89.359000 RX cf
+ 89.484000 TX 5a cc
+ 89.500000 RX a5 fe
+ 89.500000 ## bad echo try 3: a5 fe
+ 89.500000 TX 30
+ 89.516000 RX cf
+ 89.625000 ## reg CC unsupported: bad echo a5 fe, expected a5 cc
+ 89.828000 TX 5a cd
+ 89.828000 RX fe fe
+ 89.828000 ## bad echo try 1: fe fe
+ 89.828000 TX 30
+ 89.844000 RX cf
+ 89.953000 TX 5a cd
+ 89.969000 RX a5 fe
+ 89.969000 ## bad echo try 2: a5 fe
+ 89.969000 TX 30
+ 89.984000 RX cf
+ 90.109000 TX 5a cd
+ 90.109000 RX a5 fe
+ 90.109000 ## bad echo try 3: a5 fe
+ 90.109000 TX 30
+ 90.141000 RX cf
+ 90.234000 ## reg CD unsupported: bad echo a5 fe, expected a5 cd
+ 90.453000 TX 5a ce
+ 90.469000 RX a5 fe
+ 90.469000 ## bad echo try 1: a5 fe
+ 90.469000 TX 30
+ 90.484000 RX cf
+ 90.594000 TX 5a ce
+ 90.594000 RX a5 fe
+ 90.594000 ## bad echo try 2: a5 fe
+ 90.594000 TX 30
+ 90.609000 RX cf
+ 90.719000 TX 5a ce
+ 90.734000 RX a5 fe
+ 90.734000 ## bad echo try 3: a5 fe
+ 90.734000 TX 30
+ 90.750000 RX cf
+ 90.859000 ## reg CE unsupported: bad echo a5 fe, expected a5 ce
+ 91.062000 TX 5a cf
+ 91.078000 RX a5 fe
+ 91.078000 ## bad echo try 1: a5 fe
+ 91.078000 TX 30
+ 91.094000 RX cf
+ 91.203000 TX 5a cf
+ 91.219000 RX a5 fe
+ 91.219000 ## bad echo try 2: a5 fe
+ 91.219000 TX 30
+ 91.234000 RX cf
+ 91.344000 TX 5a cf
+ 91.344000 RX a5 fe
+ 91.344000 ## bad echo try 3: a5 fe
+ 91.344000 TX 30
+ 91.359000 RX fe
+ 91.469000 ## reg CF unsupported: bad echo a5 fe, expected a5 cf
+ 91.672000 TX 5a d0
+ 91.687000 RX a5 fe
+ 91.687000 ## bad echo try 1: a5 fe
+ 91.687000 TX 30
+ 91.703000 RX cf
+ 91.812000 TX 5a d0
+ 91.828000 RX fe 2f
+ 91.828000 ## bad echo try 2: fe 2f
+ 91.828000 TX 30
+ 91.844000 RX cf
+ 91.953000 TX 5a d0
+ 91.969000 RX a5 fe
+ 91.969000 ## bad echo try 3: a5 fe
+ 91.969000 TX 30
+ 91.984000 RX cf
+ 92.094000 ## reg D0 unsupported: bad echo a5 fe, expected a5 d0
+ 92.297000 TX 5a d1
+ 92.297000 RX a5 fe
+ 92.312000 ## bad echo try 1: a5 fe
+ 92.312000 TX 30
+ 92.312000 RX cf
+ 92.422000 TX 5a d1
+ 92.422000 RX a5 fe
+ 92.422000 ## bad echo try 2: a5 fe
+ 92.422000 TX 30
+ 92.437000 RX cf
+ 92.547000 TX 5a d1
+ 92.562000 RX a5 fe
+ 92.562000 ## bad echo try 3: a5 fe
+ 92.562000 TX 30
+ 92.578000 RX cf
+ 92.687000 ## reg D1 unsupported: bad echo a5 fe, expected a5 d1
+ 92.906000 TX 5a d2
+ 92.922000 RX fe fe
+ 92.922000 ## bad echo try 1: fe fe
+ 92.922000 TX 30
+ 92.922000 RX fe
+ 93.031000 TX 5a d2
+ 93.047000 RX a5 fe
+ 93.047000 ## bad echo try 2: a5 fe
+ 93.047000 TX 30
+ 93.062000 RX cf
+ 93.172000 TX 5a d2
+ 93.187000 RX a5 fe
+ 93.187000 ## bad echo try 3: a5 fe
+ 93.187000 TX 30
+ 93.203000 RX cf
+ 93.297000 ## reg D2 unsupported: bad echo a5 fe, expected a5 d2
+ 93.516000 TX 5a d3
+ 93.531000 RX a5 fe
+ 93.531000 ## bad echo try 1: a5 fe
+ 93.531000 TX 30
+ 93.547000 RX cf
+ 93.656000 TX 5a d3
+ 93.656000 RX a5 fe
+ 93.656000 ## bad echo try 2: a5 fe
+ 93.656000 TX 30
+ 93.672000 RX cf
+ 93.781000 TX 5a d3
+ 93.797000 RX a5 fe
+ 93.797000 ## bad echo try 3: a5 fe
+ 93.797000 TX 30
+ 93.812000 RX cf
+ 93.922000 ## reg D3 unsupported: bad echo a5 fe, expected a5 d3
+ 94.141000 TX 5a d4
+ 94.141000 RX a5 fe
+ 94.141000 ## bad echo try 1: a5 fe
+ 94.141000 TX 30
+ 94.156000 RX fe
+ 94.266000 TX 5a d4
+ 94.297000 RX a5 fe
+ 94.297000 ## bad echo try 2: a5 fe
+ 94.297000 TX 30
+ 94.312000 RX cf
+ 94.422000 TX 5a d4
+ 94.422000 RX a5 fe
+ 94.422000 ## bad echo try 3: a5 fe
+ 94.422000 TX 30
+ 94.437000 RX cf
+ 94.547000 ## reg D4 unsupported: bad echo a5 fe, expected a5 d4
+ 94.750000 TX 5a d5
+ 94.766000 RX a5 fe
+ 94.766000 ## bad echo try 1: a5 fe
+ 94.766000 TX 30
+ 94.781000 RX cf
+ 94.891000 TX 5a d5
+ 94.891000 RX a5 fe
+ 94.891000 ## bad echo try 2: a5 fe
+ 94.891000 TX 30
+ 94.906000 RX cf
+ 95.016000 TX 5a d5
+ 95.031000 RX a5 fe
+ 95.031000 ## bad echo try 3: a5 fe
+ 95.031000 TX 30
+ 95.047000 RX cf
+ 95.156000 ## reg D5 unsupported: bad echo a5 fe, expected a5 d5
+ 95.359000 TX 5a d6
+ 95.375000 RX a5 fe
+ 95.375000 ## bad echo try 1: a5 fe
+ 95.375000 TX 30
+ 95.391000 RX cf
+ 95.500000 TX 5a d6
+ 95.516000 RX a5 fe
+ 95.516000 ## bad echo try 2: a5 fe
+ 95.516000 TX 30
+ 95.531000 RX cf
+ 95.656000 TX 5a d6
+ 95.656000 RX a5 fe
+ 95.656000 ## bad echo try 3: a5 fe
+ 95.656000 TX 30
+ 95.672000 RX cf
+ 95.781000 ## reg D6 unsupported: bad echo a5 fe, expected a5 d6
+ 95.984000 TX 5a d7
+ 96.000000 RX a5 fe
+ 96.000000 ## bad echo try 1: a5 fe
+ 96.000000 TX 30
+ 96.016000 RX cf
+ 96.109000 TX 5a d7
+ 96.125000 RX a5 fe
+ 96.125000 ## bad echo try 2: a5 fe
+ 96.125000 TX 30
+ 96.141000 RX cf
+ 96.250000 TX 5a d7
+ 96.250000 RX a5 fe
+ 96.250000 ## bad echo try 3: a5 fe
+ 96.250000 TX 30
+ 96.266000 RX cf
+ 96.391000 ## reg D7 unsupported: bad echo a5 fe, expected a5 d7
+ 96.594000 TX 5a d8
+ 96.609000 RX a5 fe
+ 96.609000 ## bad echo try 1: a5 fe
+ 96.609000 TX 30
+ 96.625000 RX cf
+ 96.734000 TX 5a d8
+ 96.750000 RX a5 fe
+ 96.750000 ## bad echo try 2: a5 fe
+ 96.750000 TX 30
+ 96.766000 RX cf
+ 96.875000 TX 5a d8
+ 96.875000 RX a5 fe
+ 96.875000 ## bad echo try 3: a5 fe
+ 96.875000 TX 30
+ 96.891000 RX cf
+ 97.000000 ## reg D8 unsupported: bad echo a5 fe, expected a5 d8
+ 97.203000 TX 5a d9
+ 97.203000 RX a5 fe
+ 97.203000 ## bad echo try 1: a5 fe
+ 97.203000 TX 30
+ 97.234000 RX cf
+ 97.328000 TX 5a d9
+ 97.344000 RX a5 fe
+ 97.344000 ## bad echo try 2: a5 fe
+ 97.344000 TX 30
+ 97.359000 RX cf
+ 97.469000 TX 5a d9
+ 97.484000 RX a5 fe
+ 97.484000 ## bad echo try 3: a5 fe
+ 97.484000 TX 30
+ 97.500000 RX fe
+ 97.609000 ## reg D9 unsupported: bad echo a5 fe, expected a5 d9
+ 97.828000 TX 5a da
+ 97.828000 RX a5 fe
+ 97.828000 ## bad echo try 1: a5 fe
+ 97.828000 TX 30
+ 97.844000 RX cf
+ 97.969000 TX 5a da
+ 97.984000 RX a5 fe
+ 97.984000 ## bad echo try 2: a5 fe
+ 97.984000 TX 30
+ 98.000000 RX cf
+ 98.109000 TX 5a da
+ 98.125000 RX a5 fe
+ 98.125000 ## bad echo try 3: a5 fe
+ 98.125000 TX 30
+ 98.141000 RX cf
+ 98.250000 ## reg DA unsupported: bad echo a5 fe, expected a5 da
+ 98.453000 TX 5a db
+ 98.484000 RX a5 fe
+ 98.484000 ## bad echo try 1: a5 fe
+ 98.484000 TX 30
+ 98.484000 RX cf
+ 98.594000 TX 5a db
+ 98.609000 RX a5 fe
+ 98.609000 ## bad echo try 2: a5 fe
+ 98.609000 TX 30
+ 98.625000 RX cf
+ 98.734000 TX 5a db
+ 98.734000 RX a5 fe
+ 98.734000 ## bad echo try 3: a5 fe
+ 98.734000 TX 30
+ 98.766000 RX cf
+ 98.875000 ## reg DB unsupported: bad echo a5 fe, expected a5 db
+ 99.078000 TX 5a dc
+ 99.094000 RX a5 fe
+ 99.094000 ## bad echo try 1: a5 fe
+ 99.094000 TX 30
+ 99.109000 RX cf
+ 99.219000 TX 5a dc
+ 99.219000 RX a5 fe
+ 99.219000 ## bad echo try 2: a5 fe
+ 99.219000 TX 30
+ 99.234000 RX cf
+ 99.359000 TX 5a dc
+ 99.359000 RX a5 fe
+ 99.359000 ## bad echo try 3: a5 fe
+ 99.359000 TX 30
+ 99.375000 RX cf
+ 99.484000 ## reg DC unsupported: bad echo a5 fe, expected a5 dc
+ 99.687000 TX 5a dd
+ 99.687000 RX a5 fe
+ 99.687000 ## bad echo try 1: a5 fe
+ 99.687000 TX 30
+ 99.703000 RX cf
+ 99.812000 TX 5a dd
+ 99.812000 RX a5 fe
+ 99.812000 ## bad echo try 2: a5 fe
+ 99.812000 TX 30
+ 99.828000 RX cf
+ 99.953000 TX 5a dd
+ 99.969000 RX a5 fe
+ 99.969000 ## bad echo try 3: a5 fe
+ 99.969000 TX 30
+ 99.984000 RX cf
+100.078000 ## reg DD unsupported: bad echo a5 fe, expected a5 dd
+100.297000 TX 5a de
+100.297000 RX fe fe
+100.297000 ## bad echo try 1: fe fe
+100.297000 TX 30
+100.328000 RX cf
+100.453000 TX 5a de
+100.453000 RX a5 fe
+100.453000 ## bad echo try 2: a5 fe
+100.453000 TX 30
+100.469000 RX cf
+100.578000 TX 5a de
+100.594000 RX a5 fe
+100.594000 ## bad echo try 3: a5 fe
+100.594000 TX 30
+100.609000 RX cf
+100.719000 ## reg DE unsupported: bad echo a5 fe, expected a5 de
+100.922000 TX 5a df
+100.937000 RX a5 fe
+100.937000 ## bad echo try 1: a5 fe
+100.937000 TX 30
+100.953000 RX fe
+101.062000 TX 5a df
+101.062000 RX a5 fe
+101.062000 ## bad echo try 2: a5 fe
+101.062000 TX 30
+101.078000 RX cf
+101.187000 TX 5a df
+101.187000 RX a5 fe
+101.187000 ## bad echo try 3: a5 fe
+101.187000 TX 30
+101.203000 RX cf
+101.312000 ## reg DF unsupported: bad echo a5 fe, expected a5 df
+101.531000 TX 5a e0
+101.547000 RX a5 fe
+101.547000 ## bad echo try 1: a5 fe
+101.547000 TX 30
+101.547000 RX cf
+101.672000 TX 5a e0
+101.672000 RX a5 fe
+101.672000 ## bad echo try 2: a5 fe
+101.672000 TX 30
+101.687000 RX cf
+101.797000 TX 5a e0
+101.797000 RX a5 fe
+101.797000 ## bad echo try 3: a5 fe
+101.797000 TX 30
+101.812000 RX cf
+101.937000 ## reg E0 unsupported: bad echo a5 fe, expected a5 e0
+102.141000 TX 5a e1
+102.156000 RX a5 fe
+102.156000 ## bad echo try 1: a5 fe
+102.156000 TX 30
+102.172000 RX cf
+102.281000 TX 5a e1
+102.297000 RX a5 fe
+102.297000 ## bad echo try 2: a5 fe
+102.297000 TX 30
+102.312000 RX cf
+102.437000 TX 5a e1
+102.437000 RX fe fe
+102.437000 ## bad echo try 3: fe fe
+102.437000 TX 30
+102.453000 RX cf
+102.562000 ## reg E1 unsupported: bad echo fe fe, expected a5 e1
+102.781000 TX 5a e2
+102.797000 RX a5 fe
+102.797000 ## bad echo try 1: a5 fe
+102.797000 TX 30
+102.812000 RX cf
+102.922000 TX 5a e2
+102.937000 RX a5 fe
+102.937000 ## bad echo try 2: a5 fe
+102.937000 TX 30
+102.953000 RX cf
+103.047000 TX 5a e2
+103.062000 RX a5 fe
+103.062000 ## bad echo try 3: a5 fe
+103.062000 TX 30
+103.078000 RX cf
+103.187000 ## reg E2 unsupported: bad echo a5 fe, expected a5 e2
+103.406000 TX 5a e3
+103.422000 RX a5 fe
+103.422000 ## bad echo try 1: a5 fe
+103.422000 TX 30
+103.437000 RX fe
+103.547000 TX 5a e3
+103.562000 RX a5 fe
+103.562000 ## bad echo try 2: a5 fe
+103.562000 TX 30
+103.562000 RX cf
+103.672000 TX 5a e3
+103.687000 RX a5 fe
+103.687000 ## bad echo try 3: a5 fe
+103.687000 TX 30
+103.703000 RX cf
+103.812000 ## reg E3 unsupported: bad echo a5 fe, expected a5 e3
+104.031000 TX 5a e4
+104.047000 RX a5 fe
+104.047000 ## bad echo try 1: a5 fe
+104.047000 TX 30
+104.062000 RX cf
+104.172000 TX 5a e4
+104.187000 RX a5 fe
+104.187000 ## bad echo try 2: a5 fe
+104.187000 TX 30
+104.203000 RX cf
+104.312000 TX 5a e4
+104.312000 RX a5 fe
+104.312000 ## bad echo try 3: a5 fe
+104.312000 TX 30
+104.344000 RX cf
+104.453000 ## reg E4 unsupported: bad echo a5 fe, expected a5 e4
+104.656000 TX 5a e5
+104.656000 RX a5 fe
+104.656000 ## bad echo try 1: a5 fe
+104.656000 TX 30
+104.672000 RX cf
+104.781000 TX 5a e5
+104.797000 RX a5 fe
+104.797000 ## bad echo try 2: a5 fe
+104.797000 TX 30
+104.812000 RX cf
+104.922000 TX 5a e5
+104.937000 RX a5 fe
+104.937000 ## bad echo try 3: a5 fe
+104.937000 TX 30
+104.953000 RX fe
+105.047000 ## reg E5 unsupported: bad echo a5 fe, expected a5 e5
+105.266000 TX 5a e6
+105.266000 RX a5 fe
+105.266000 ## bad echo try 1: a5 fe
+105.266000 TX 30
+105.281000 RX cf
+105.406000 TX 5a e6
+105.406000 RX a5 fe
+105.406000 ## bad echo try 2: a5 fe
+105.406000 TX 30
+105.437000 RX cf
+105.547000 TX 5a e6
+105.562000 RX a5 fe
+105.562000 ## bad echo try 3: a5 fe
+105.562000 TX 30
+105.578000 RX cf
+105.672000 ## reg E6 unsupported: bad echo a5 fe, expected a5 e6
+105.891000 TX 5a e7
+105.891000 RX a5 fe
+105.891000 ## bad echo try 1: a5 fe
+105.891000 TX 30
+105.906000 RX cf
+106.016000 TX 5a e7
+106.031000 RX a5 fe
+106.031000 ## bad echo try 2: a5 fe
+106.031000 TX 30
+106.047000 RX cf
+106.156000 TX 5a e7
+106.172000 RX a5 fe
+106.172000 ## bad echo try 3: a5 fe
+106.172000 TX 30
+106.172000 RX cf
+106.297000 ## reg E7 unsupported: bad echo a5 fe, expected a5 e7
+106.500000 TX 5a e8
+106.516000 RX a5 fe
+106.516000 ## bad echo try 1: a5 fe
+106.516000 TX 30
+106.531000 RX cf
+106.641000 TX 5a e8
+106.641000 RX a5 fe
+106.641000 ## bad echo try 2: a5 fe
+106.641000 TX 30
+106.656000 RX cf
+106.766000 TX 5a e8
+106.766000 RX a5 fe
+106.766000 ## bad echo try 3: a5 fe
+106.766000 TX 30
+106.781000 RX cf
+106.906000 ## reg E8 unsupported: bad echo a5 fe, expected a5 e8
+107.109000 TX 5a e9
+107.125000 RX a5 fe
+107.125000 ## bad echo try 1: a5 fe
+107.125000 TX 30
+107.141000 RX fe
+107.250000 TX 5a e9
+107.250000 RX a5 fe
+107.250000 ## bad echo try 2: a5 fe
+107.250000 TX 30
+107.266000 RX cf
+107.375000 TX 5a e9
+107.391000 RX a5 fe
+107.391000 ## bad echo try 3: a5 fe
+107.391000 TX 30
+107.406000 RX cf
+107.531000 ## reg E9 unsupported: bad echo a5 fe, expected a5 e9
+107.734000 TX 5a ea
+107.734000 RX a5 fe
+107.734000 ## bad echo try 1: a5 fe
+107.734000 TX 30
+107.750000 RX cf
+107.859000 TX 5a ea
+107.875000 RX a5 fe
+107.875000 ## bad echo try 2: a5 fe
+107.875000 TX 30
+107.891000 RX cf
+108.000000 TX 5a ea
+108.000000 RX fe fe
+108.000000 ## bad echo try 3: fe fe
+108.000000 TX 30
+108.016000 RX cf
+108.125000 ## reg EA unsupported: bad echo fe fe, expected a5 ea
+108.344000 TX 5a eb
+108.359000 RX a5 fe
+108.359000 ## bad echo try 1: a5 fe
+108.359000 TX 30
+108.375000 RX cf
+108.484000 TX 5a eb
+108.484000 RX a5 fe
+108.484000 ## bad echo try 2: a5 fe
+108.484000 TX 30
+108.500000 RX cf
+108.609000 TX 5a eb
+108.625000 RX a5 fe
+108.625000 ## bad echo try 3: a5 fe
+108.625000 TX 30
+108.641000 RX cf
+108.750000 ## reg EB unsupported: bad echo a5 fe, expected a5 eb
+108.953000 TX 5a ec
+108.969000 RX a5 fe
+108.969000 ## bad echo try 1: a5 fe
+108.969000 TX 30
+108.969000 RX cf
+109.094000 TX 5a ec
+109.109000 RX a5 fe
+109.109000 ## bad echo try 2: a5 fe
+109.109000 TX 30
+109.125000 RX cf
+109.219000 TX 5a ec
+109.234000 RX a5 fe
+109.234000 ## bad echo try 3: a5 fe
+109.234000 TX 30
+109.250000 RX cf
+109.359000 ## reg EC unsupported: bad echo a5 fe, expected a5 ec
+109.562000 TX 5a ed
+109.562000 RX a5 fe
+109.562000 ## bad echo try 1: a5 fe
+109.562000 TX 30
+109.578000 RX cf
+109.687000 TX 5a ed
+109.703000 RX a5 fe
+109.703000 ## bad echo try 2: a5 fe
+109.703000 TX 30
+109.719000 RX cf
+109.828000 TX 5a ed
+109.844000 RX a5 fe
+109.844000 ## bad echo try 3: a5 fe
+109.844000 TX 30
+109.859000 RX cf
+109.969000 ## reg ED unsupported: bad echo a5 fe, expected a5 ed
+110.172000 TX 5a ee
+110.172000 RX a5 fe
+110.172000 ## bad echo try 1: a5 fe
+110.172000 TX 30
+110.187000 RX cf
+110.312000 TX 5a ee
+110.312000 RX a5 fe
+110.312000 ## bad echo try 2: a5 fe
+110.312000 TX 30
+110.328000 RX cf
+110.437000 TX 5a ee
+110.437000 RX a5 fe
+110.437000 ## bad echo try 3: a5 fe
+110.437000 TX 30
+110.469000 RX cf
+110.578000 ## reg EE unsupported: bad echo a5 fe, expected a5 ee
+110.797000 TX 5a ef
+110.797000 RX a5 fe
+110.797000 ## bad echo try 1: a5 fe
+110.797000 TX 30
+110.812000 RX cf
+110.922000 TX 5a ef
+110.937000 RX a5 fe
+110.937000 ## bad echo try 2: a5 fe
+110.937000 TX 30
+110.953000 RX cf
+111.078000 TX 5a ef
+111.094000 RX a5 fe
+111.094000 ## bad echo try 3: a5 fe
+111.094000 TX 30
+111.109000 RX cf
+111.219000 ## reg EF unsupported: bad echo a5 fe, expected a5 ef
+111.422000 TX 5a f0
+111.437000 RX a5 fe
+111.437000 ## bad echo try 1: a5 fe
+111.437000 TX 30
+111.453000 RX cf
+111.562000 TX 5a f0
+111.562000 RX a5 fe
+111.562000 ## bad echo try 2: a5 fe
+111.562000 TX 30
+111.578000 RX cf
+111.687000 TX 5a f0
+111.719000 RX a5 fe
+111.719000 ## bad echo try 3: a5 fe
+111.719000 TX 30
+111.734000 RX cf
+111.844000 ## reg F0 unsupported: bad echo a5 fe, expected a5 f0
+112.062000 TX 5a f1
+112.062000 RX a5 fe
+112.062000 ## bad echo try 1: a5 fe
+112.062000 TX 30
+112.078000 RX fe
+112.187000 TX 5a f1
+112.203000 RX a5 fe
+112.203000 ## bad echo try 2: a5 fe
+112.203000 TX 30
+112.219000 RX cf
+112.328000 TX 5a f1
+112.328000 RX a5 fe
+112.328000 ## bad echo try 3: a5 fe
+112.328000 TX 30
+112.359000 RX cf
+112.453000 ## reg F1 unsupported: bad echo a5 fe, expected a5 f1
+112.672000 TX 5a f2
+112.687000 RX a5 fe
+112.687000 ## bad echo try 1: a5 fe
+112.687000 TX 30
+112.703000 RX cf
+112.812000 TX 5a f2
+112.812000 RX fe fe
+112.812000 ## bad echo try 2: fe fe
+112.812000 TX 30
+112.828000 RX cf
+112.937000 TX 5a f2
+112.937000 RX a5 fe
+112.937000 ## bad echo try 3: a5 fe
+112.937000 TX 30
+112.953000 RX cf
+113.078000 ## reg F2 unsupported: bad echo a5 fe, expected a5 f2
+113.281000 TX 5a f3
+113.281000 RX a5 fe
+113.281000 ## bad echo try 1: a5 fe
+113.281000 TX 30
+113.297000 RX cf
+113.406000 TX 5a f3
+113.406000 RX a5 fe
+113.406000 ## bad echo try 2: a5 fe
+113.406000 TX 30
+113.422000 RX cf
+113.531000 TX 5a f3
+113.531000 RX a5 fe
+113.531000 ## bad echo try 3: a5 fe
+113.531000 TX 30
+113.547000 RX cf
+113.672000 ## reg F3 unsupported: bad echo a5 fe, expected a5 f3
+113.875000 TX 5a f4
+113.891000 RX a5 fe
+113.891000 ## bad echo try 1: a5 fe
+113.891000 TX 30
+113.906000 RX cf
+114.000000 TX 5a f4
+114.016000 RX a5 fe
+114.016000 ## bad echo try 2: a5 fe
+114.016000 TX 30
+114.031000 RX cf
+114.141000 TX 5a f4
+114.156000 RX a5 fe
+114.156000 ## bad echo try 3: a5 fe
+114.156000 TX 30
+114.172000 RX cf
+114.281000 ## reg F4 unsupported: bad echo a5 fe, expected a5 f4
+114.500000 TX 5a f5
+114.516000 RX a5 fe
+114.516000 ## bad echo try 1: a5 fe
+114.516000 TX 30
+114.531000 RX cf
+114.641000 TX 5a f5
+114.656000 RX a5 fe
+114.656000 ## bad echo try 2: a5 fe
+114.656000 TX 30
+114.672000 RX cf
+114.781000 TX 5a f5
+114.781000 RX a5 fe
+114.781000 ## bad echo try 3: a5 fe
+114.781000 TX 30
+114.797000 RX cf
+114.906000 ## reg F5 unsupported: bad echo a5 fe, expected a5 f5
+115.125000 TX 5a f6
+115.125000 RX a5 fe
+115.125000 ## bad echo try 1: a5 fe
+115.125000 TX 30
+115.141000 RX cf
+115.266000 TX 5a f6
+115.281000 RX a5 fe
+115.281000 ## bad echo try 2: a5 fe
+115.281000 TX 30
+115.297000 RX cf
+115.391000 TX 5a f6
+115.391000 RX a5 fe
+115.391000 ## bad echo try 3: a5 fe
+115.391000 TX 30
+115.422000 RX cf
+115.531000 ## reg F6 unsupported: bad echo a5 fe, expected a5 f6
+115.750000 TX 5a f7
+115.750000 RX a5 fe
+115.750000 ## bad echo try 1: a5 fe
+115.750000 TX 30
+115.766000 RX cf
+115.875000 TX 5a f7
+115.891000 RX a5 fe
+115.891000 ## bad echo try 2: a5 fe
+115.891000 TX 30
+115.906000 RX cf
+116.000000 TX 5a f7
+116.016000 RX a5 fe
+116.016000 ## bad echo try 3: a5 fe
+116.016000 TX 30
+116.031000 RX fe
+116.125000 ## reg F7 unsupported: bad echo a5 fe, expected a5 f7
+116.328000 TX 5a f8
+116.344000 RX a5 fe
+116.344000 ## bad echo try 1: a5 fe
+116.344000 TX 30
+116.359000 RX cf
+116.469000 TX 5a f8
+116.469000 RX a5 fe
+116.469000 ## bad echo try 2: a5 fe
+116.469000 TX 30
+116.484000 RX cf
+116.609000 TX 5a f8
+116.625000 RX a5 fe
+116.625000 ## bad echo try 3: a5 fe
+116.625000 TX 30
+116.641000 RX cf
+116.750000 ## reg F8 unsupported: bad echo a5 fe, expected a5 f8
+116.953000 TX 5a f9
+116.969000 RX a5 fe
+116.969000 ## bad echo try 1: a5 fe
+116.969000 TX 30
+116.984000 RX cf
+117.094000 TX 5a f9
+117.094000 RX a5 fe
+117.094000 ## bad echo try 2: a5 fe
+117.094000 TX 30
+117.109000 RX cf
+117.234000 TX 5a f9
+117.250000 RX a5 fe
+117.250000 ## bad echo try 3: a5 fe
+117.250000 TX 30
+117.250000 RX cf
+117.375000 ## reg F9 unsupported: bad echo a5 fe, expected a5 f9
+117.578000 TX 5a fa
+117.594000 RX a5 fe
+117.594000 ## bad echo try 1: a5 fe
+117.594000 TX 30
+117.609000 RX cf
+117.719000 TX 5a fa
+117.719000 RX a5 fe
+117.719000 ## bad echo try 2: a5 fe
+117.719000 TX 30
+117.734000 RX cf
+117.859000 TX 5a fa
+117.859000 RX fe fe
+117.859000 ## bad echo try 3: fe fe
+117.859000 TX 30
+117.875000 RX cf
+117.984000 ## reg FA unsupported: bad echo fe fe, expected a5 fa
+118.203000 TX 5a fb
+118.219000 RX a5 fe
+118.219000 ## bad echo try 1: a5 fe
+118.219000 TX 30
+118.234000 RX cf
+118.344000 TX 5a fb
+118.344000 RX a5 fe
+118.344000 ## bad echo try 2: a5 fe
+118.344000 TX 30
+118.359000 RX cf
+118.469000 TX 5a fb
+118.484000 RX a5 fe
+118.484000 ## bad echo try 3: a5 fe
+118.484000 TX 30
+118.500000 RX cf
+118.609000 ## reg FB unsupported: bad echo a5 fe, expected a5 fb
+118.828000 TX 5a fc
+118.844000 RX a5 fe
+118.844000 ## bad echo try 1: a5 fe
+118.844000 TX 30
+118.859000 RX cf
+118.969000 TX 5a fc
+118.984000 RX a5 fe
+118.984000 ## bad echo try 2: a5 fe
+118.984000 TX 30
+119.000000 RX cf
+119.094000 TX 5a fc
+119.109000 RX a5 fe
+119.109000 ## bad echo try 3: a5 fe
+119.109000 TX 30
+119.109000 RX cf
+119.234000 ## reg FC unsupported: bad echo a5 fe, expected a5 fc
+119.453000 TX 5a fd
+119.469000 RX a5 fe
+119.469000 ## bad echo try 1: a5 fe
+119.469000 TX 30
+119.484000 RX cf
+119.594000 TX 5a fd
+119.594000 RX a5 fe
+119.594000 ## bad echo try 2: a5 fe
+119.594000 TX 30
+119.609000 RX cf
+119.719000 TX 5a fd
+119.734000 RX a5 fe
+119.734000 ## bad echo try 3: a5 fe
+119.734000 TX 30
+119.750000 RX cf
+119.859000 ## reg FD unsupported: bad echo a5 fe, expected a5 fd
+120.062000 TX 5a fe
+120.062000 RX a5 fe
+120.062000 TX f0
+120.078000 RX fe
+121.094000 TX 30
+121.094000 RX cf
+121.094000 ## reg FE unsupported: no frame
+121.297000 TX 5a ff
+121.312000 RX a5 fe
+121.312000 ## bad echo try 1: a5 fe
+121.312000 TX 30
+121.328000 RX cf
+121.437000 TX 5a ff
+121.437000 RX a5 fe
+121.437000 ## bad echo try 2: a5 fe
+121.437000 TX 30
+121.469000 RX cf
+121.578000 TX 5a ff
+121.594000 RX a5 fe
+121.594000 ## bad echo try 3: a5 fe
+121.594000 TX 30
+121.609000 RX cf
+121.703000 ## reg FF unsupported: bad echo a5 fe, expected a5 ff
+121.906000 ## close

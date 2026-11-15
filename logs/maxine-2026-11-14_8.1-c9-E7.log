@@ -1,0 +1,27 @@
+  0.000112 ## open /dev/ttyUSB0 at 2026-11-14T15:23:17
+  0.000502 ## cmd: --test-id 8.1-c9-E7 --ecu E7 mem 8000 -n 1
+  0.000570 TX 30
+  0.007583 RX cf
+  0.208194 TX ff
+  0.488772 TX ff
+  0.559022 TX e7
+  0.559230 RX 00
+  0.559254 RX 00
+  0.562237 RX 18
+  0.562288 ## init ok id=E7 attempt=1 secs=0.003
+  0.562381 TX c9
+  0.565437 RX fe
+  0.565482 ## command try 1 failed: bad echo fe, expected 36 80 00
+  0.565513 TX 30
+  0.569151 RX cf
+  0.669819 TX c9
+  0.673056 RX fe
+  0.673097 ## command try 2 failed: bad echo fe, expected 36 80 00
+  0.673127 TX 30
+  0.676081 RX cf
+  0.776351 TX c9
+  0.780024 RX fe
+  0.780074 ## command try 3 failed: bad echo fe, expected 36 80 00
+  0.780103 TX 30
+  0.782835 RX cf
+  0.883395 ## close

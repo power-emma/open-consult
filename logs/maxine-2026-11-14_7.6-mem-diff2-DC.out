@@ -1,0 +1,33 @@
+init ok: id DC, attempt 1, 23 after 9 ms
+0 sweeps in 2 s (2.14 s each)
+log: /home/emma/Documents/GitHub/open-consult/logs/2026-11-14_7.6-mem-diff2-DC.log
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/emma/Documents/GitHub/open-consult/consult/__main__.py", line 441, in <module>
+    main()
+    ~~~~^^
+  File "/home/emma/Documents/GitHub/open-consult/consult/__main__.py", line 432, in main
+    globals()["cmd_" + args.cmd.replace("-", "_")](c, args)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/emma/Documents/GitHub/open-consult/consult/__main__.py", line 184, in cmd_watch_mem
+    cur = b"".join(c.read_memory(addrs[i:i + step]) for i in range(0, len(addrs), step))
+  File "/home/emma/Documents/GitHub/open-consult/consult/__main__.py", line 184, in <genexpr>
+    cur = b"".join(c.read_memory(addrs[i:i + step]) for i in range(0, len(addrs), step))
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/emma/Documents/GitHub/open-consult/consult/protocol.py", line 202, in read_memory
+    return self.one_shot(payload, expected_len=len(addrs))
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/emma/Documents/GitHub/open-consult/consult/protocol.py", line 175, in one_shot
+    self.command(payload)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/emma/Documents/GitHub/open-consult/consult/protocol.py", line 116, in command
+    got = self._send(payload, want)
+  File "/home/emma/Documents/GitHub/open-consult/consult/protocol.py", line 144, in _send
+    e = self.t.read(1, timeout=0.3)
+  File "/home/emma/Documents/GitHub/open-consult/consult/transport.py", line 89, in read
+    chunk = self._read_chunk(n - len(buf), timeout)
+  File "/home/emma/Documents/GitHub/open-consult/consult/transport.py", line 83, in _read_chunk
+    return os.read(self.fd, n) if r else b""
+           ~~~~~~~^^^^^^^^^^^^
+BlockingIOError: [Errno 11] Resource temporarily unavailable

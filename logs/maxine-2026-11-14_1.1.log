@@ -1,0 +1,49 @@
+  0.000150 ## open /dev/ttyUSB0 at 2026-11-14T11:26:30
+  0.000208 ## cmd: --test-id 1.1 init
+  0.000242 TX 30
+  0.801336 TX ff ff ef
+  2.807286 TX 30
+  3.608615 TX ff ff ef
+  5.613296 TX 30
+  6.414864 TX ff ff ef
+  8.416302 TX 30
+  8.416379 ## close
+  0.000050 ## open /dev/ttyUSB0 at 2026-11-14T11:26:53
+  0.000124 ## cmd: --test-id 1.1 init
+  0.000156 TX 30
+  0.801364 TX ff ff ef
+  2.808143 TX 30
+  3.609428 TX ff ff ef
+  5.612523 TX 30
+  6.413838 TX ff ff ef
+  8.416597 TX 30
+  9.217740 TX ff ff ef
+ 11.222958 TX 30
+ 12.024128 TX ff ff ef
+ 14.030058 ## close
+  0.000050 ## open /dev/ttyUSB0 at 2026-11-14T11:27:41
+  0.000085 ## cmd: --test-id 1.1 init
+  0.000137 TX 30
+  0.801655 TX ff ff ef
+  2.806288 TX 30
+  3.609920 TX ff ff ef
+  5.612447 TX 30
+  6.413848 TX ff ff ef
+  8.418730 TX 30
+  9.219936 TX ff ff ef
+ 11.225138 TX 30
+ 12.027339 TX ff ff ef
+ 14.031300 ## close
+  0.000097 ## open /dev/ttyUSB0 at 2026-11-14T11:32:36
+  0.000179 ## cmd: --test-id 1.1 init
+  0.000213 TX 30
+  0.801027 TX ff ff ef
+  2.806405 TX 30
+  3.607277 TX ff ff ef
+  5.611423 TX 30
+  6.412847 TX ff ff ef
+  8.415799 TX 30
+  9.217186 TX ff ff ef
+ 11.221456 TX 30
+ 12.022461 TX ff ff ef
+ 14.025271 ## close

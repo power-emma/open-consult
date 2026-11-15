@@ -1,0 +1,371 @@
+# Annotations for rom/23710-2L904_1000-FFFF.bin (1998 Maxima VQ30DE M/T engine ECU).
+# Regenerate the listing with:
+#   python3 tools/m7700dis.py rom/23710-2L904_1000-FFFF.bin --ann rom/23710-2L904.ann -o rom/23710-2L904.asm
+#
+# Conventions: "?" marks an inference not yet checked on the car. Everything else is read
+# from the code/tables or confirmed on the car (see ROM_ANALYSIS.md, CAR_TEST_CHECKLIST.md).
+
+head - 1998 Nissan Maxima (A32) VQ30DE, M/T. ECU 23710-2L904, calibration ID "J8ZM06" at $FFCA.
+head - Write-up: ROM_ANALYSIS.md. "?" in a comment = inferred, not yet confirmed on the car.
+head -
+head - Memory map (from Consult C9 reads): $0000-$007F I/O (not read), $0080-$0FFF RAM,
+head - $1000-$2BFF calibration tables, $3000-$3BFF reads as 00 (the code writes copies of
+head - some values to $39xx/$3Axx: a write-only debug/trace window?), $3C00-$FFFF code.
+
+# ---------------------------------------------------------------- CPU I/O as used here
+ram 0020 adcon        A/D control: channel select + start; bit $20 = conversion done
+ram 0022 adres        A/D result (10-bit, adc_read returns >>2)
+ram 0032 sio_tx       Consult serial transmit data
+ram 0035 sio_status   Consult serial status (bit $02 = TX ready)
+ram 0036 sio_rx       Consult serial receive data
+ram 00A8 ref_capture  REF period capture (copied to ref_period)
+ram 00B9 ta2_flags    Timer A2 event flags
+ram 00F0 sio_txctl    Consult TX enable/IRQ (low 3 bits)
+ram 00F1 sio_rxctl    Consult RX enable (low 3 bits)
+
+ram 000A port4        CPU port P4 data; bit 3 = ignition primary check input (P1320) ?
+
+# ---------------------------------------------------------------- shared RAM with the second CPU
+ram 0202 mb_out       To second CPU: live data block, every second byte ($0202-$025E)
+ram 024C mb_c9_addr   To second CPU: forwarded C9 address (lo/hi at $024C/$024E)
+ram 029C mb_status    Shared RAM status byte
+ram 029E mb_handshake Handshake / message type (A5 = ready; low 3 bits = message type)
+ram 02A0 mb_in        From second CPU: message block, every second byte ($02A0-$02FE)
+ram 02B6 mb_c9_value  From second CPU: byte for the forwarded C9 address
+ram 07E7 c9_sub_value C9 forward: latest byte from the second CPU
+ram 0E51 sub_dtc_flags Detection flags received from the second CPU ($0E51-$0E58)
+ram 0C6F p1320_tick   P1320 monitor sample counter
+ram 0C60 p1320_misses P1320 miss count (10 -> fault)
+
+# ---------------------------------------------------------------- Consult protocol state
+ram 071B cs_state     Consult state: 01 saw FF, 02 saw FF FF, 04 ready for command, 08 expecting argument, 10 command parsed (await F0 or another), 20 streaming, 80 first FF seen
+ram 071C cs_flags     01 re-init, 02 stop request, 08 5A list, 10 TX busy, 20 TX ready, 40 C9 list, 80 0A waiting for value
+ram 071D cs_flags2    01 C9 high byte received, 04 C1 clear pending, 08 0A direct mode, 10 word mode, 20 direct value >= 80
+ram 0734 dtc_scan_mask  Bit mask while scanning fault arrays
+ram 0735 dtc_scan_count Codes written to the reply so far
+ram 0736 cs_timeout   Consult inactivity counter (reset at 80)
+ram 0737 cs_rx_byte   Last received byte
+ram 0738 cs_echo      Echo byte to send
+ram 0739 cs_tx_index  Index into cs_txbuf while sending
+ram 073A cs_cmd       Stored no-argument command (D0/D1/C1/51)
+ram 073B cs_argc      Argument bytes collected in cs_argbuf (max 28h)
+ram 073C at_count     Active tests requested
+ram 073D at_slot      Value slot for the pending 0A value byte
+ram 073E cs_txbuf     Reply frame: FF, length, payload at $0740
+ram 0740 cs_payload   Reply payload (up to $0767)
+ram 076A at_direct    0A direct mode (first arg < 08): 1 << arg
+ram 076B at_direct_val Value byte for direct mode
+ram 076C at_stream_n  Entries in cs_streamlist (direct mode)
+ram 076D at_stream_i  Index while sending cs_streamlist
+ram 076E dtc_pass     1 = scanning confirmed codes, 0 = 1st-trip codes
+ram 076F at_values    Active test value slots ($076F + slot, see ACTIVE_TEST_DESC)
+ram 07A0 cs_streamlist RAM addresses streamed in 0A direct mode
+ram 07AC at_req       Active test flags being requested (6 bytes)
+ram 07B7 at_active    Active test flags in force (copied from at_req on F0)
+ram 07C2 cs_uart_snap Serial status snapshot at ISR entry
+ram 07C3 c9_hidden_addr C9 addresses in hidden ranges (list)
+ram 07D7 c9_hidden_idx  Their positions in the request
+ram 07E1 c9_hidden_n    Count of hidden addresses
+ram 08D2 cs_argbuf    Arguments: 5A register numbers or C9 addresses (40 bytes)
+
+# ---------------------------------------------------------------- fault codes
+ram 0580 dtc_1st      1st-trip (pending) fault flags, 19 bytes = 152 slots, bit 80 first. D1 reports these with starts byte F5
+ram 05A0 dtc_conf     Confirmed fault flags (MIL), 19 bytes. D1 reports these first, starts byte = counter
+ram 05C0 dtc_hist     Confirmed-ever flags, 19 bytes
+ram 0810 dtc_seen     Detected this ignition cycle, 19 bytes. Reported and cleared by the hidden 51 command
+ram 0830 dtc_1st_seen 1st-trip detection already handled this cycle, 19 bytes
+ram 0852 dtc_byte     Scratch: slot >> 3
+ram 0685 dtc_snapshot Conditions at last detection: coolant, rpm, load, speed, trims, switches ($0685-$069C)
+ram 0687 dtc_snap_pcode P-code of last detection
+ram 05E0 ffrm         OBD freeze frame ($05E0-$05ED, Consult 3B-47, 51)
+ram 05E2 ffrm_pcode   Freeze-frame DTC, BCD (Consult 3B/3C)
+ram 0F70 ffrm_1st     1st-trip freeze frame in backup RAM ($0F70-$0F79, Consult 56-5F)
+
+# ---------------------------------------------------------------- live data (Consult register -> RAM, table at $1000)
+ram 0995 rpm_hi       Consult 00: RPM word x12.5
+ram 0994 rpm_lo       Consult 01
+ram 097A ref_period_hi Consult 02: 120 deg REF period, rpm = 2.5e6/word ?
+ram 0979 ref_period_lo Consult 03
+ram 09D6 maf_hi       Consult 04: MAF x5 mV
+ram 09D5 maf_lo       Consult 05
+ram 0980 coolant      Consult 08: -50 C
+ram 0B18 o2_09        Consult 09: front O2 x10 mV
+ram 0B36 o2_0A        Consult 0A: front O2, other bank
+ram 098B vss          Consult 0B: vehicle speed x2 km/h
+ram 09F4 battery      Consult 0C: x80 mV
+ram 09F0 tps          Consult 0D: x20 mV
+ram 0895 reg10        Consult 10: ?
+ram 0866 iat          Consult 11: -50 C
+ram 072A sw13         Consult 13: switches (b4 A/C, b3 PS, b2 neutral, b5 elec load, b0 closed throttle)
+ram 0DAA inj_a_hi     Consult 14: injection pulse /100 ms
+ram 0DA9 inj_a_lo     Consult 15
+ram 0732 ign_timing   Consult 16: 110 - v deg BTDC
+ram 0BD9 iacv_step    Consult 18: IACV-AAC position (steps); written by idle control, forced by test 85
+ram 0730 alpha_a      Consult 1A: A/F alpha %, forced by test 81
+ram 0731 alpha_b      Consult 1B
+ram 0B45 learn_a      Consult 1C: self-learn alpha %
+ram 0B5B learn_b      Consult 1D
+ram 0721 out1E        Consult 1E: outputs (b6 fuel pump relay, b1/b7 A/C relay + fan)
+ram 0722 out1F        Consult 1F: outputs
+ram 0723 out20        Consult 20: outputs
+ram 072B mon21        Consult 21: O2 rich/lean monitor bits
+ram 0DAC inj_b_hi     Consult 22: injection pulse other bank
+ram 0DAB inj_b_lo     Consult 23
+ram 0806 purge_step   Consult 29: EVAP purge volume control valve step ? (forced by test 98, drives the stepper)
+ram 0C4C reg32_flag   Consult 32: 00/FF flag from MAF vs $22FB at $DD8A (not CAL/LD)
+ram 09B4 reg37        Consult 37: absolute throttle position, v/2.55 % (PLMS)
+
+# ---------------------------------------------------------------- misc
+ram 0906 sum_lo       Scratch / running sum
+ram 0907 sum_hi       Scratch
+ram 0A0C coil_fire_mask Coils to fire, set by the REF interrupt, used by the TA3 interrupt
+ram 0F69 backup_flags Backup-RAM status flags
+
+# ================================================================ calibration tables
+table 1000 C4 CONSULT_REG_PTRS  Consult register (00-61) -> RAM address, 2 bytes LE each, FFFF = unsupported
+head  1000 Read by consult_reply_5a. The 73 non-FFFF entries are exactly the registers the car answers.
+table 1160 5C ACTIVE_TEST_DESC  Active test 80-AD: (flag mask, ctl). ctl>>4 = flag byte (at_req+n), (ctl&7F)>>1 = value slot. FFFF = unsupported
+head  1160 Known: 80 coolant, 81 fuel injection (75-125%), 82 ign timing, 85 IACV-AAC opening, 88 power balance,
+head  1160 89 fuel pump relay, 8B self-learn clear, 93/94 fan low/high, 98 purge volume control ?. Others unknown.
+table 11C0 20 D0_REPLY  Sent verbatim as the D0 reply; ends in ASCII "2L904" (part number 23710-2L904)
+table 1200 20 CONFIG  Configuration bytes; bits tested by code ($1206.0 debug hook, $1207.5 C9 hides FE00-FFCF, ...)
+table 1220 80 VQ_MAP  MAF voltage -> flow, 64 rising words (layout from PLMS 1999 A32 notes; ROM_ANALYSIS 7b)
+table 1400 100 VE_MAP  Volumetric efficiency 16x16 (PLMS layout)
+table 1500 10 VE_LOAD_SCALE
+table 1510 10 VE_RPM_SCALE
+table 1700 100 FUEL_MAP  Fuel map 16x16 (PLMS layout)
+table 1800 100 FUEL_MAP_KNOCK  Knock fuel map 16x16 (PLMS layout)
+table 1900 10 FUEL_LOAD_SCALE
+table 1910 10 FUEL_RPM_SCALE
+table 19A0 10 AFTER_START_ENRICH  vs temperature (PLMS layout)
+table 19C0 10 COLD_START_ENRICH  vs temperature (PLMS layout)
+table 1D00 100 TIMING_MAP  Ignition timing 16x16, degrees; bit 7 set in some low-row cells (meaning open)
+table 1E00 100 TIMING_MAP_KNOCK  Knock timing 16x16, mostly lower than TIMING_MAP
+table 1F00 10 TIMING_RPM_SCALE
+table 1F10 10 TIMING_LOAD_SCALE
+table 9E0E 98 DTC_CODE_BYTES  Fault slot i -> Consult D1 code byte (11..18, 21..28, ... E8, 19..1F, 10, ...)
+table E086 130 DTC_PCODES  Fault slot i -> OBD-II P-code, 2 bytes BCD big-endian (00 00 = slot unused)
+head  E086 This car's codes: slot 8 = 21 = P1320, slot 19 = 34 = P0325, slot 79 = A8 = P0443.
+table E1C6 130 DTC_COUNTER_PTRS  Fault slot i -> RAM address of its starts counter (FFFF = none)
+table EA3F 1C DIRECT_TABLE_A  0A direct mode (value 01-07): pairs of RAM addresses to stream (OBD Mode 6 results ?)
+table EA5B 1C DIRECT_TABLE_B  0A direct mode (value 81-87): same, second set
+
+# ================================================================ vectors / interrupts
+label 3D75 reset
+head  3D75 ===== Power-on reset: hardware init, RAM setup, then the main loop.
+label 447C isr_unused
+note  447C unused vectors land here
+label 4476 isr_zero_div
+label 4495 isr_ta3_coils
+head  4495 ===== Timer A3: fires the coils queued in coil_fire_mask (ignition) ?
+label 44B6 isr_tb2
+head  44B6 ===== Timer B2 interrupt (purpose not verified)
+label 4540 isr_ta4
+head  4540 ===== Timer A4 interrupt (purpose not verified)
+label 46C0 isr_ta2
+head  46C0 ===== Timer A2 interrupt: dispatches on ta2_flags (crank POS / timing events ?)
+label 473F isr_nmi
+label 4797 isr_int2_ref
+head  4797 ===== INT2: crank REF (120 deg) edge. Captures the REF period (ref_period, Consult 02/03)
+head  4797 and schedules ignition (coil_fire_mask). The old listing called this "knock": it isn't.
+note  4AC3 ref_period = captured timer value (FFFF when stalled)
+label 4BC2 sched_tick
+head  4BC2 ===== Main scheduler tick (UART0 TX interrupt used as a periodic timer), then the
+head  4BC2 task list: sensor reads, fuel, ignition, idle, diagnostics, Consult replies.
+
+# ================================================================ Consult ISR
+label 4EF5 consult_isr
+head  4EF5 ===== Consult serial interrupt (RX and TX share this vector)
+head  4EF5 Init: FF FF ED -> 12. Commands: FF re-init, 30 stop, 5A reg, C9 mem, 0A test,
+head  4EF5 D0 part no, D1 codes, C1 codes+clear, 51 (hidden: report+clear dtc_seen).
+head  4EF5 Anything else -> FE. F0 starts the reply; only FF / 30 are accepted while streaming.
+note  4EFA config bit $1206.0 -> jump to bank 1 (not fitted: debug hook)
+label 4F03 cs_rx_entry
+note  4F03 read status
+note  4F05 read received byte
+label 4F2F cs_tx_next
+note  4F2F send next byte of cs_txbuf
+label 4F61 cs_rx_check
+label 4FA4 cs_wait_id
+note  4FAE only ED is accepted as the ECU ID (ECUTalk's EF never works)
+note  4FBB reply ~ED = 12
+label 4FBF cs_have_init
+label 4FC8 cs_cmd_byte
+label 4FD6 cs_parse_cmd
+label 4FDB cs_cmd_ff
+label 4FF3 cs_cmd_stop
+note  4FF3 30: stop request, reset state
+label 4FFD cs_check_c9
+label 5008 cs_check_5a
+label 5013 cs_check_0a
+label 5024 cs_check_noarg
+note  5024 51 = hidden command: clears every fault/test flag
+note  5029 D1 = read codes
+note  502E C1 = read codes, then clear
+note  5033 D0 = part number
+label 5038 cs_reject
+note  5038 unknown command -> FE
+label 503C cs_cmd_51
+head  503C 51: zero dtc_seen ($0810-$0822) and test state ($0E51-$0E57, $0E78-$0E7A)
+label 508F cs_store_cmd
+label 509D cs_arg_byte
+note  509D C9 address byte
+label 50C2 cs_c9_addr_done
+label 50D2 cs_arg_5a
+note  50D7 register must be < 62
+note  50EA look up CONSULT_REG_PTRS
+note  50F0 FFFF -> unsupported -> FE
+label 510D cs_arg_0a
+note  5112 0A first byte < 08 -> direct mode
+note  511D test must be 80-AD
+note  5129 look up ACTIVE_TEST_DESC
+label 5169 cs_0a_direct
+label 518B cs_0a_value
+note  519D store value in at_values + slot
+label 51A7 cs_arg_done
+label 51AF cs_echo_arg
+note  51AF echo the argument byte unchanged
+label 5342 cs_after_cmd
+head  5342 After a parsed command: F0 starts the reply, or another 5A/C9/0A extends the list.
+note  5362 F0: start streaming / reply
+note  536F commit requested active tests (at_req -> at_active)
+note  53BF more than 40 argument bytes -> FE
+label 53A9 cs_reply_fe
+note  53B1 reply FE (error / unsupported)
+label 53EE cs_streaming
+note  53EE while streaming, only FF and 30 are accepted
+note  5406 test AA active at stop -> backup flag
+label 5413 cs_echo_cmd
+label 5417 cs_echo_complement
+note  5417 echo = ~command byte (5A -> A5, D1 -> 2E, ...)
+label 541A cs_send
+label 5437 cs_isr_exit
+label 543F c9_find_hidden
+head  543F C9: queue addresses in $5D40-$623F (and FE00-FFCF if CONFIG $1207.5) as addr-$5000 for the
+head  543F second CPU. consult_reply_c9 fills one of them per frame from c9_sub_value.
+label 54C7 consult_reset
+head  54C7 Reset Consult state after stop / re-init (keeps init if 30 was sent).
+note  550A keep or clear backup_flags bits
+
+# ================================================================ Consult reply builder (main loop)
+label 996A consult_task
+head  996A ===== Consult reply builder, run from the scheduler. Builds cs_payload for the
+head  996A command received, then consult_send_frame queues it.
+note  9975 inactivity timeout
+label 99A3 consult_build_reply
+label 99B7 consult_reply_d0
+note  99BA copy D0_REPLY ($11C0-$11DF) into the payload
+label 99D2 consult_reply_c1
+note  99D7 request the clear (done after this reply, so the reply shows the old codes)
+label 99DF consult_reply_d1
+head  99DF D1/C1: confirmed codes first (dtc_conf, starts byte = counter, dropped once >= 40),
+head  99DF then 1st-trip codes (dtc_1st, starts byte F5). No codes -> 55 00.
+note  99E7 first pass: confirmed codes
+note  9A1F second pass: 1st-trip codes
+note  9A43 slot -> DTC_CODE_BYTES
+note  9A67 counter for this slot
+note  9A6E counter >= 40 -> not reported
+note  9A77 1st-trip code: starts byte F5
+label 9AC2 consult_reply_no_codes
+note  9AC2 55 00 = no malfunction
+label 9AD6 consult_reply_data
+label 9AEB consult_reply_c9
+note  9AFB $5D40-$623F: not read here, forwarded to the second CPU
+note  9B3F put the second CPU's byte into its slot, request the next address
+label 9B8D consult_reply_5a
+note  9BB0 CONSULT_REG_PTRS[reg] -> RAM -> payload
+label 9BE6 consult_reply_finish
+label 9C04 consult_reply_51
+note  9C04 any dtc_seen bit set?
+note  9C45 report and clear dtc_seen bits
+label 9CBC consult_send_frame
+note  9CBC frame header FF, length; start TX if idle
+label 9CDD consult_reply_direct
+head  9CDD 0A direct mode: stream the RAM addresses in cs_streamlist.
+
+# ================================================================ fault code handling
+label D371 dtc_confirm
+head  D371 ===== Confirm fault slot A: dtc_seen, clear dtc_1st, set dtc_conf + dtc_hist (MIL), counters.
+label DE86 dtc_detect
+head  DE86 ===== Fault slot A detected: dtc_seen; if already pending from an earlier trip -> confirm
+head  DE86 (2nd trip), else set dtc_1st + dtc_1st_seen and take the 1st-trip freeze frame.
+label DE7D dtc_clear_pending_state
+label DFBB dtc_snapshot
+head  DFBB Snapshot of conditions + P-code at detection into dtc_snapshot ($0685-$069C).
+note  DFC4 slot -> DTC_PCODES
+label DFAC dtc_reset_counter
+note  DFAF slot -> DTC_COUNTER_PTRS, zero the counter
+label E04F dtc_bit
+head  E04F A = array base, $0852/Y = slot -> X = byte address, A = bit mask.
+label E1B6 dtc_counter_ptr
+note  E1BC slot -> DTC_COUNTER_PTRS
+label DC52 ffrm_capture
+head  DC52 ===== Freeze frame: P-code -> ffrm_pcode, then fuel status, load, coolant, trims, speed.
+note  DC74 slot -> DTC_PCODES
+label D604 dtc_find_pcode
+note  D60D scan dtc_conf ($05A0-$05B2)
+label D1E8 dtc_from_subcpu
+head  D1E8 ===== Detection flags from the second CPU ($0E52-$0E57): bit n -> dtc_detect(slot 30h + n).
+label D237 dtc_from_subcpu_2
+head  D237 More flags from the second CPU ($0E58 bits -> slots 22h, 12h, 14h, ...).
+label E2F6 p1320_monitor
+head  E2F6 ===== P1320 ignition signal monitor (slot 8). Engine running, past start, load index >= 4:
+head  E2F6 every 2nd call sample port P4 bit 3; each high sample = one miss (accumulates while the
+head  E2F6 conditions hold); 10 misses -> dtc_detect(8). Enabled by CONFIG $120C.7.
+note  E331 P4.3 low = ignition OK, skip
+note  E341 10 misses?
+label D128 dtc_task
+head  D128 ===== Fault bookkeeping task (writes dtc_conf / dtc_1st / ffrm).
+label A4DB diag_task_a4db
+head  A4DB Diagnostic monitor (sets dtc_conf / dtc_seen; uses coolant, speed, load).
+
+# ================================================================ sensors / outputs
+label F306 adc_read
+head  F306 A = A/D control value (channel). Starts a conversion, waits, returns result >> 2 (8 bits).
+label F19E read_tps
+head  F19E Reads TPS (tps) and related A/D inputs.
+label F1DE read_battery
+label 551F adc_read_maf
+label 5624 calc_rpm
+head  5624 Writes rpm_hi/rpm_lo (Consult 00/01).
+label 6A20 calc_injection
+head  6A20 Writes inj_a / inj_b (Consult 14/15, 22/23).
+label 6D65 fuel_feedback
+head  6D65 A/F feedback: writes alpha_a/alpha_b (Consult 1A/1B); test 81 overrides alpha.
+note  6E1A test 81: value clamped to 4B-7D (75-125 %)
+label 8440 calc_switches
+head  8440 Writes sw13 (Consult 13 switch bits).
+label 9D3F calc_outputs
+head  9D3F Writes out1E/out1F/out20 (Consult 1E/1F/20) and registers 30, 49, 4E, 4F.
+label AC54 idle_control
+head  AC54 ===== Idle air control: writes iacv_step (Consult 18). Test 85 forces the step (max 81), test 8C forces a fixed path.
+label BD00 purge_control
+head  BD00 ===== EVAP purge volume control (P0443's valve) ?: writes purge_step (Consult 29). Test 98 forces the step.
+label 9488 purge_stepper_out
+head  9488 Drives output ports from purge_step: 4-phase stepper (ECM pins 26/27/110/118) ?
+label C7F5 mailbox_receive
+head  C7F5 ===== Takes a message from the second CPU ($02A0-$02FE, even bytes), type = $029E & 7.
+head  C7F5 Type 0 fills the detection flags $0E51-$0E58 (misfire, catalyst, EVAP incl. P0443, O2, EGR...).
+label CC52 mailbox_send
+head  CC52 ===== Sends live data to the second CPU through the shared RAM ($0202, $0204, ... every
+head  CC52 second byte): rpm, load, trims, purge step, timing, CAL/LD, speed, battery, bits,
+head  CC52 and the pending C9 address. $029E = A5 means the other side is ready. (ROM_ANALYSIS.md §6)
+label F468 diag_task_f468
+note  F4C0 test A2: on/off (value 0 / non-0)
+
+# ================================================================ helpers
+label EA77 interp16
+head  EA77 1D table interpolation, 16 entries (also entries EA82 = 32, EA8D = 8).
+label EA82 interp32
+label EA8D interp8
+label E915 sio_irq_ack
+label A438 checksum_add
+note  A43B write to $03:0266 (outside fitted memory: trace port ?)
+label B964 add16
+label B986 sub16
+label B97A sub16_x4
+
+# ================================================================ dump hole
+# C9 on $5D40-$623F is forwarded to the second CPU (address - $5000, one byte per frame from
+# the second frame), so our one-frame-per-request dump holds stale bytes here. See sub-dump.
+hole 5D40 500 Consult C9 forwards these addresses to the second CPU, so the dump holds stale reply bytes. This CPU's own code here (e.g. $5F1B) can only be read off the chip.

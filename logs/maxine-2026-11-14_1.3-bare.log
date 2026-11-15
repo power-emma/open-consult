@@ -1,0 +1,7 @@
+  0.000254 ## open /dev/ttyUSB0 at 2026-11-14T11:33:03
+  0.000366 ## bare init, no pre-stop
+  0.000409 TX ff ff ef
+  2.003679 TX ff ff ef
+  4.006877 TX ff ff ef
+  6.011416 ## listen only 3s
+  9.013671 ## close

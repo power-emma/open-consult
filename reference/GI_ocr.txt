@@ -1,0 +1,3248 @@
+===== PDF page 1 =====
+GENERAL INFORMATION
+
+SECTION G
+
+CONTENTS
+
+PRECAUTIONS .......ccooiiierirciiennereecesinees evens cansnens 2
+Supplemental Restraint System (SRS) “AIR
+BAG cca eee eens 2
+General Precautions.....cc.cceeeeciiceceereeeceeeeeceeeeeenen 2
+Precautions for Multiport Fuel Injection System
+Or ECCS ENGINE ceiver eee eee 4
+Precautions for Three Way Catalyst......ccccceevvennneeee. 5
+Precautions for Engine OilS........ccoovevcvnceririannniceiinnnns 5
+Precautions for FUEL... eee 6
+Precautions for Air Conditioning ........cccccceviierierniienne. 6
+
+HOW TO USE THIS MANUAL .............ccoivrrirecinrineenns 7
+
+HOW TO READ WIRING DIAGRAMS. ................c.......... 9
+Sample/Wiring Diagram — EXAMPL —...................... 9
+DESCHPHON correctness eerste sree 11
+
+HOW TO CHECK TERMINAL ................ooeeiieeerreennnnne 18
+Connector and Terminal Pin Kit.........cccoovvvriiceennnanen. 18
+How to Probe Connectors .........cceceenvncenncnnnnienens 18
+How to Check Enlarged Contact Spring of
+TErMINA cc. reer esns 19
+Waterproof Connector Inspection........c..c.ceveeeneeen. 20
+Terminal Lock Inspection... cocci, 20
+
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR
+
+AN ELECTRICAL INCIDENT ........ccooieirereccernreeenns 21
+WOK FIOW ceiver eee eee 21
+incident Simulation TestS......ccccvveeiccccerieieeeee eee, 22
+
+Circuit INSPECioN ....ccceivveeererree errr cece 25
+HOW TO FOLLOW FLOW CHART IN TROUBLE
+DIAGNOSES. ..........cccirrerrrerraeree eres reese 31
+
+How to Follow This Flow Chart ........cccceeiiieeennniennenee 32
+CONSULT CHECKING SYSTEM ...........ccovvrrecienn 34
+
+Function and System Application ........ccccccccoovnnvnnnnen 34
+
+Lithium Battery Replacement .........ccooeernnniiienennen. 34
+
+Checking EQUIPMENt.....c...ivieiee eccrine vines 34
+
+Loading Procedure ...c.cccooieeceviecc vinnie 35
+
+CONSULT Data Link Connector (DLC) Circuit.......... 35
+IDENTIFICATION INFORMATION..........cceoinieiienn, 36
+
+Model Variation ..........ccceeeeeereeimmeens seers 36
+
+Identification NUMber........cccoocvriiiiiiinmienee 37
+
+DIMENSIONS c..eeeierie eee rire 39
+
+Wheels and TireS......ccceceericee nieces snines 39
+LIFTING POINTS AND TOW TRUCK TOWING........... 40
+
+Preparation .........commmeceniccmnin neers 40
+
+Board-on Lift .....coeevieeririee cree 40
+
+Garage Jack and Safety Stand ........cccooovvvenniiennnen 41
+
+2-POlE Lift cee 42
+
+TOW TruCK TOWING cevvveeeeereee er ee eerie eicccsenn senna 43
+TIGHTENING TORQUE OF STANDARD BOLTS ........ 44
+SAE J1930 TERMINOLOGY LIST ......ccoovvimiiiiireiiinn 45
+
+SAE J1930 Terminology List ......c..ceveviiiminnniicnninnnnn, 45
+
+MA
+LC
+Ee
+FE
+CL
+
+MIT
+
+IDX
+===== PDF page 2 =====
+PRECAUTIONS
+
+Sof)
+
+SGi285
+
+Observe the following precautions to ensure safe and proper
+servicing. These precautions are not described in each indi-
+
+vidual section.
+
+Supplemental Restraint System (SRS) “AIR
+BAG”
+
+The Supplemental Restraint System “AIR BAG”, used along with
+a seat belt, helps to reduce the risk or severity of injury to the driver
+and front passenger in a frontal collision. The Supplemental
+Restraint System consists of air bag modules (located in the cen-
+ter of the steering wheel and on the instrument panel on the pas-
+senger side), a diagnosis sensor unit, warning lamp, wiring harness
+and spiral cable. In addition to the supplemental air bags for a
+frontal collision, the supplemental side air bag (if so equipped) used
+along with the seat belt helps to reduce the risk or severity of injury
+to the driver and front passenger in a side collision. The supple-
+mental side air bag consists of air bag modules (located in the outer
+side of front seats), satellite sensor, diagnosis sensor unit (which
+is one of components of supplemental air bags for a frontal
+collision), wiring harness, warning lamp (which is one of compo-
+nents of supplemental air bags for a frontal collision). Information
+necessary to service the system safely is included in the RS sec-
+tion in this Service Manual.
+
+WARNING:
+
+e To avoid rendering the SRS inoperative, which could
+increase the risk of personal injury or death in the event
+of a collision which would result in air bag inflation, all
+maintenance must be performed by an authorized NISSAN
+dealer.
+
+e Improper maintenance, including incorrect removal and
+installation of the SRS, can lead to personal injury caused
+by unintentional activation of the system.
+
+e Do not use electrical test equipment on any circuit related
+to the SRS unless instructed to in this Service Manual.
+SRS wiring harnesses can be identified with yellow har-
+ness protector or yellow insulation tape before the har-
+ness connectors.
+
+General Precautions
+
+e Do not operate the engine for an extended period of time
+without proper exhaust ventilation.
+Keep the work area well ventilated and free of any inflammable
+materials. Special care should be taken when handling any
+inflammable or poisonous materials, such as gasoline, refrig-
+erant gas, etc. When working in a pit or other enclosed area,
+be sure to properly ventilate the area before working with haz-
+ardous materials.
+Do not smoke while working on the vehicle.
+
+Gl-2
+===== PDF page 3 =====
+PRECAUTIONS
+General Precautions (Cont'd)
+
+e Before jacking up the vehicle, apply wheel chocks or other tire
+blocks to the wheels to prevent the vehicle from moving. After
+jacking up the vehicle, support the vehicle weight with safety
+stands at the points designated for proper lifting before work-
+ing on the vehicle. al
+These operations should be done on a level surface.
+e When removing a heavy component such as the engine or
+transaxle, be careful not to lose your balance and drop them. [A
+Also, do not allow them to strike adjacent parts, especially the
+brake tubes and master cylinder.
+SGI231 EM
+eo Before starting repairs which do not require battery power: LC
+Turn off ignition switch.
+Disconnect the negative battery terminal.
+EE
+FE
+CL
+SEF289H
+eo To prevent serious burns: A)
+Avoid contact with hot metal parts.
+Do not remove the radiator cap when the engine is hot. AT
+FA
+SGI233
+BR
+Seat cover e Before servicing the vehicle:
+Protect fenders, upholstery and carpeting with appropriate cov- -
+ers.
+Take caution that keys, buckles or buttons do not scratch paint.
+RS |
+57 |
+Fender cover
+SGI234 FA |
+
+o (Clean all disassembled parts in the designated liquid or solvent
+prior to inspection or assembly. BL |
+
+eo Replace oil seals, gaskets, packings, O-rings, locking washers,
+cotter pins, self-locking nuts, etc. with new ones.
+
+e Replace inner and outer races of tapered roller bearings and IDX
+
+needle bearings as a set.
+e Arrange the disassembled parts in accordance with their |
+
+assembled locations and sequence.
+
+e¢ Do not touch the terminals of electrical components which use
+microcomputers (such as ECMs).
+Static electricity may damage internal electronic components.
+
+GI-3 7; |
+===== PDF page 4 =====
+PRECAUTIONS
+
+General Precautions (Cont'd)
+
+e After disconnecting vacuum or air hoses, attach a tag to indi-
+cate the proper connection.
+
+e Use only the fluids and lubricants specified in this manual.
+
+e Use approved bonding agent, sealants or their equivalents
+when required.
+
+e Use tools and recommended special tools where specified for
+safe and efficient service repairs.
+
+e When repairing the fuel, oil, water, vacuum or exhaust
+systems, check all affected lines for leaks.
+
+e Dispose of drained oil or the solvent used for cleaning parts in
+an appropriate manner.
+
+WARNING:
+
+To prevent ECM from storing the diagnostic trouble codes, do
+
+not carelessly disconnect the harness connectors which are
+
+related to the ECCS system and TCM (Transmission Control
+
+Module) system. The connectors should be disconnected only
+
+when working according to the WORK FLOW of TROUBLE
+
+DIAGNOSES in EC and AT sections.
+
+Precautions for Multiport Fuel Injection System
+or ECCS Engine
+
+e Before connecting or disconnecting any harness connector for
+the multiport fuel injection system or ECM (Engine Control
+Module):
+
+Turn ignition switch to “OFF” position.
+Disconnect negative battery terminal.
+Otherwise, there may be damage to ECM.
+
+e Before disconnecting pressurized fuel line from fuel pump to
+injectors, be sure to release fuel pressure.
+
+® Be careful not to jar components such as ECM and mass air
+
+flow sensor.
+
+Gl-4
+===== PDF page 5 =====
+PRECAUTIONS
+
+Precautions for Three Way Catalyst
+
+If a large amount of unburned fuel flows into the catalyst, the cata-
+lyst temperature will be excessively high. To prevent this, follow the
+instructions below:
+
+Use unleaded gasoline only. Leaded gasoline will seriously
+damage the three way catalyst.
+
+When checking for ignition spark or measuring engine
+compression, make tests quickly and only when necessary.
+Do not run engine when the fuel tank level is low, otherwise the
+engine may misfire, causing damage to the catalyst.
+
+Do not place the vehicle on flammable material. Keep flammable
+material off the exhaust pipe and the three way catalyst.
+
+Precautions for Engine Oils
+
+Prolonged and repeated contact with used engine oil may cause
+skin cancer. Try to avoid direct skin contact with used oil.
+If skin contact is made, wash thoroughly with soap or hand cleaner
+
+as soon as possible.
+
+HEALTH PROTECTION PRECAUTIONS
+
+Avoid prolonged and repeated contact with oils, particularly
+used engine oils.
+
+Wear protective clothing, including impervious gloves where
+practicable.
+
+Do not put oily rags in pockets.
+
+Avoid contaminating clothes, particularly underclothing, with
+oil.
+
+Heavily soiled clothing and oil-impregnated footwear should
+not be worn. Overalls must be cleaned regularly.
+
+First Aid treatment should be obtained immediately for open
+cuts and wounds.
+
+Use barrier creams, applying them before each work period, to
+help the removal of oil from the skin.
+
+Wash with soap and water to ensure all oil is removed (skin
+cleansers and nail brushes will help). Preparations containing
+lanolin replace the natural skin oils which have been removed.
+Do not use gasoline, kerosine, diesel fuel, gas oil, thinners. or
+solvents for cleaning skin.
+
+If skin disorders develop, obtain medical advice without delay.
+Where practicable, degrease components prior to handling.
+Where there is a risk of eye contact, eye protection should be
+worn, for example, chemical goggles or face shields; in addi-
+tion an eye wash facility should be provided.
+
+GI-5
+
+MA
+EM
+LC
+EC
+FE
+CL
+MT
+AT
+
+FA
+
+ST
+RS
+BT
+HA
+EL
+
+[DX
+===== PDF page 6 =====
+10
+
+PRECAUTIONS
+
+Precautions for Engine Qils (Cont'd)
+ENVIRONMENTAL PROTECTION PRECAUTIONS
+
+Burning used engine oil in small space heaters or boilers can be
+recommended only for units of approved design. The heating sys-
+tem must meet the requirements of HM Inspectorate of Pollution for
+small burners of less than 0.4 MW. If in doubt, check with the
+appropriate local authority and/or manufacturer of the approved
+appliance.
+
+Dispose of used oil and used oil filters through authorized waste
+disposal contractors to licensed waste disposal sites, or to the
+waste oil reclamation trade. If in doubt, contact the local authority
+for advice on disposal facilities.
+
+It is illegal to pour used oil on to the ground, down sewers or drains,
+or into water courses.
+
+The regulations concerning the pollution of the environment
+will vary between regions.
+
+Precautions for Fuel
+
+Use premium unleaded gasoline with an octane rating of at least
+91 AKI (Anti-Knock Index) number (research octane number 96).
+If premium unleaded gasoline is not available, regular unleaded
+gasoline with an octane rating of at least 87 AKI (research octane
+
+number 91) can be used.
+However, for maximum vehicle performance, the use of premium
+
+unleaded gasoline is recommended.
+
+CAUTION:
+
+Using a fuel other than that specified could adversely affect
+the emission control devices and systems, and could also
+
+affect the warranty coverage.
+Under no circumstances should a leaded gasoline be used,
+
+since this will damage the three way catalyst.
+
+Precautions for Air Conditioning
+
+Use an approved refrigerant recovery unit any time the air condi-
+tioning system must be discharged. Refer to HA section (“HFC-
+134a (R-134a) Service Procedure”, “SERVICE PROCEDURES”)
+
+for specific instructions.
+
+Gl-6
+===== PDF page 7 =====
+HOW TO USE THIS MANUAL
+
+e ALPHABETICAL INDEX is provided at the end of this manual so that you can rapidly find the.item and
+
+page you are searching for.
+e A QUICK REFERENCE INDEX, a black tab (e.g.EIq ) is provided on the first page. You can quickly find
+the first page of each section by mating it to the section’s black tab.
+¢ THE CONTENTS are listed on the first page of each section.
+e THE TITLE is indicated on the upper portion of each page and shows the part or system. Gl
+eo THE PAGE NUMBER of each section consists of two letters which designate the particular section and a
+number (e.g. “BR-5").
+e THE LARGE ILLUSTRATIONS are exploded views (See below.) and contain tightening torques, lubrica- MA
+tion points, section number of the PARTS CATALOG (e.g. SEC. 440) and other information necessary to
+
+perform repairs. EM
+The illustrations should be used in reference to service matters only. When ordering parts, refer to the
+
+appropriate PARTS CATALOG.
+
+“Example” LC
+SEC. 440
+Pad retainer
+(Upper side)
+(Upp [CO] 54 - 64 (55 - 6.5, 40 - 47) EC
+|
+) FE
+9 PEO Main pin
+Torque i > Pe Pin boot to sliding portion
+GL
+5 inner shim Copper washer |
+< W, A Wr
+S 17 - 20 !
+oN oD / 2 (1.7 - 20, 12 - 14)
+Pad retainer = => |
+(Lower EE J o AT
+FA
+) Brake hose
+Air bleeder Sn
+| ®7-9(07-0961-78 RA
+Outer shim Fin bolt
+i. | cyinder body [0] 22 - 31 (2.2 - 3.2, 16 - 23)
+Dust seal _—y Piston seal EEO BR |
+\ piston IF] [Q): Nem (kg-m. ft-ib) |
+IE N.m (kg-m, in-ib) ST |
+SBR364AC |
+RS |
+
+e THE SMALL ILLUSTRATIONS show the important steps such as inspection, use of special tools, knacks
+of work and hidden or tricky steps which are not shown in the previous large illustrations. =
+Assembly, inspection and adjustment procedures for the complicated units such as the automatic transaxle Bi
+or transmission, etc. are presented in a step-by-step format where necessary. |
+
+GI-7 11
+===== PDF page 8 =====
+12
+
+HOW TO USE THIS MANUAL
+
+e The following SYMBOLS AND ABBREVIATIONS are used:
+: Tightening torque
+: Should be lubricated with grease.
+
+© @
+
+DOD
+
+Unless otherwise indicated, use rec-
+ommended multi-purpose grease.
+
+: Should be lubricated with oil.
+
+: Sealing point
+
+: Checking point
+
+:Always replace after every disassem-
+
+bly.
+
+: Left-Hand, Right-Hand
+
+: Front, Rear
+
+:2-Wheel Drive
+
+:Apply petroleum jelly.
+
+:Apply ATF.
+
+: Select with proper thickness.
+
+: Adjustment is required.
+:Manual Transaxle/Transmission
+
+AIT
+A/C
+PIS
+
+: Automatic Transaxle/Transmission
+: Air Conditioner
+
+: Power Steering
+
+: Special Service Tools
+
+: Service Data and Specifications
+
+: Society of Automotive Engineers, Inc.
+:Left-Hand Drive
+
+:Right-Hand Drive
+
+: Automatic Transmission Fluid
+
+: Drive range 1st gear
+
+: Drive range 2nd gear
+
+: Drive range 3rd gear
+
+: Drive range 4th gear
+
+: Overdrive
+
+:2nd range 2nd gear
+
+:2nd range 1st gear
+
+: 1st range 2nd gear
+
+1st range 1st gear
+
+eo The UNITS given in this manual are primarily expressed as SI UNITS (International System of Unit), and
+alternatively expressed in the metric system and in the yard/pound system.
+“Example”
+
+data.
+
+Tightening torque:
+
+59 - 78 N'm (6.0 - 8.0 kg-m, 43 - 58 ft-lb)
+e TROUBLE DIAGNOSES are included in sections dealing with complicated components.
+e SERVICE DATA AND SPECIFICATIONS are contained at the end of each section for quick reference of
+
+e The captions WARNING and CAUTION warn you of steps that must be followed to prevent personal injury
+and/or damage to some part of the vehicle.
+WARNING indicates the possibility of personal injury if instructions are not followed.
+CAUTION indicates the possibility of component damage if instructions are not followed.
+BOLD TYPED STATEMENTS except WARNING and CAUTION give you helpful information.
+
+GI-8
+===== PDF page 9 =====
+HOW TO READ WIRING DIAGRAMS
+
+Sample/Wiring Diagram — EXAMPL —
+GI-EXAMPL-02
+
+CONNECTOR. 1 (20) WA
+jc
++ ’ 2 [js oR wR Wp OE EM
+| G/R G/R UG = Next page LG
+| — Ew
+| (16) SWITCH Nm So” 04 -
+| CID wf fi
+Tr i —
+: ; -1 oy rf! cL
+| ed 1k
+. = | OR 1g!
+| 3 1] i le or [ to iT
+| RELAY &
+ol, Jl | A
+= [=] GR LG OR BR .
+@ HE c= i I vx Bx a1
+a te ——— — POWER POSITION POSITION SIGNAL
+UNIT
+(—o 1 [FA
+(19 5 i GND GND
+ia il Lol I] © RA
+MOTOR | GONTAOL A
+MODULE |(M1T)
+BR
+y
+CAD AT models | H 3
+{vy : M/T models oa | RS
+.
+—— . Refer to last page (Foldout page). =
+I = I CR |
+27 ur i
+; TTT TT : 28 | RA
+| 5 5 | 29 deff £30 MD
+Lom mr or om — a — —— — | l IN Vv J
+®; TT TLE = EET (To TTT 17) @ eL
+3714 M5) al2]2 M6) C1) J
+® w 4 IDX
+B GY w
+
+YGI001
+
+GI-9 5
+===== PDF page 10 =====
+14
+
+HOW TO READ WIRING DIAGRAMS
+
+Sample/Wiring Diagram — EXAMPL — (Cont'd)
+OPTIONAL SPLICE
+
+Optional splice
+
+M/T models A/T models
+
+BATTERY BATTERY
+
+GIR
+
+WEST
+G/R :
+— Se
+HT HE]
+5 Sp a
+
+S5Gi942
+
+Gl-10
+===== PDF page 11 =====
+HOW TO READ WIRING DIAGRAMS
+
+Description
+
+Number
+
+Item
+
+Description
+
+©
+
+Power condition
+
+This shows the condition when the system receives battery positive voltage (can
+be operated).
+
+Fusible link
+
+The double line shows that this is a fusible link.
+The open circle shows current flow in, and the shaded circle shows current flow
+
+out.
+
+Fusible tink/fuse location
+
+This shows the location of the fusible link or fuse in the fusible link or fuse box.
+For arrangement, refer to EL section (“POWER SUPPLY ROUTING”).
+
+Fuse
+
+The single line shows that this is a fuse.
+The open circle shows current flow in, and the shaded circle shows current flow
+
+out.
+
+Current rating
+
+This shows the current rating of the fusible link or fuse.
+
+Connectors
+
+This shows that connector (£3) is female and connector (M1) is male.
+
+The G/R wire is located in the 1A terminal of both connectors.
+
+Terminal number with an alphabet (1A, 5B, etc.) indicates that the connector is
+SMJ connector. Refer to Gi-17.
+
+Optional splice
+
+The open circle shows that the splice is optional depending on vehicle application.
+
+Splice
+
+The shaded circle shows that the splice is always on the vehicle.
+
+Page crossing
+
+This arrow shows that the circuit continues to an adjacent page.
+The A will match with the A on the preceding or next page.
+
+Common connector
+
+The dotted lines between terminals show that these terminals are part of the same
+connector.
+
+Option abbreviation
+
+This shows that the circuit is optional depending on vehicle application.
+
+This shows an internal representation of the relay. For details, refer to EL section
+
+© Pe vec @ 8 & 8] 6
+
+Relay (“STANDARDIZED RELAY").
+
+Connectors This shows that the connector is connected to the body or a terminal with bolt or
+nut,
+This shows a code for the color of the wire.
+B = Black BR = Brown
+W = White OR = Orange
+R = Red P = Pink
+G = Green PU = Purple
+
+i L = Blue GY = Gray
+® Wire color Y = Yellow SB = Sky Blue
+
+CH = Dark Brown
+
+DG = Dark Green
+
+When the wire color is striped, the base color is given first, followed by the stripe
+color as shown below:
+
+Example: L/W = Blue with White Stripe
+
+LG = Light Green
+
+Option description
+
+This shows a description of the option abbreviation used on the page.
+
+Switch
+
+This shows that continuity exists between terminals 1 and 2 when the switch is in
+the A position. Continuity exists between terminals 1 and 3 when the switch is in
+the B position.
+
+Assembly parts
+
+Connector terminal in component shows that it is a harness incorporated assem-
+bly.
+
+®@|9| @ |@
+
+Cell code
+
+This identifies each page of the wiring diagram by section, system and wiring dia-
+gram page number.
+
+Gl-11
+
+MA
+
+EM
+
+LG
+
+EC
+
+FE
+
+CL
+
+AT
+
+FA
+
+15
+===== PDF page 12 =====
+16
+
+HOW TO READ WIRING DIAGRAMS
+
+Description (Cont’d)
+
+Number
+
+Item
+
+Description
+
+Current flow arrow
+
+Arrow indicates electric current flow, especially where the direction of standard
+flow (vertically downward or horizontally from left to right) is difficult to follow.
+
+A double arrow “<4” shows that current can flow in either direction depending
+on circuit operation.
+
+System branch
+
+This shows that the system branches to another system identified by cell code
+(section and system).
+
+Page crossing
+
+This arrow shows that the circuit continues to another page identified by cell code.
+The C will match with the C on another page within the system other than the
+next or preceding pages.
+
+Shielded line
+
+The line enclosed by broken line circle shows shield wire.
+
+Component box in wave
+line
+
+This shows that another part of the component is also shown on another page
+{indicated by wave line) within the system.
+
+®®® © [8
+
+Component name
+
+This shows the name of a component.
+
+®
+
+Connector number
+
+This shows the connector number.
+
+e The letter shows which harness the connector is located in.
+
+Example: M: main harness. For detail and to locate the connector, refer io EL sec-
+tion (“Main Harness”, “HARNESS LAYOUT”). A coordinate grid is included for
+complex harnesses to aid in locating connectors.
+
+Ground (GND)
+
+The line spliced and grounded under wire color shows that ground line is spliced
+at the grounded connector.
+
+Ground (GND)
+
+This shows the ground connection.
+
+Connector views
+
+This area shows the connector faces of the components in the wiring diagram on
+the page.
+
+Common component
+
+Connectors enciosed in broken line show that these connectors belong to the
+same component.
+
+© 1® | ® 8
+
+Connector color
+
+This shows a code for the color of the connector. For code meaning, refer to wire
+colar codes, Number G3 of this chart.
+
+@
+
+Fusible link and fuse box
+
+This shows the arrangement of fusible link(s) and fuse(s), used for connector
+views of “POWER SUPPLY ROUTING” in EL section.
+The open square shows current flow in, and the shaded square shows current
+
+flow out.
+
+Reference area
+
+This shows that more information on the Super Multiple Junction (SMJ} and Joint
+Connectors (J/C) exists on the foldout page. Refer to GI-17 for details.
+
+Gi-12
+===== PDF page 13 =====
+HOW TO READ WIRING DIAGRAMS
+
+Example
+View from terminal side
+
+a
+
+Single line
+Direction mark
+
+View from harness side
+Connector symbol
+fo)
+(NEEEREEN)
+(Cl
+
+Double line
+
+Direction mark
+
+Connector
+
+SGI364,
+
+Example
+D
+
+—™
+Guide ———
+[mje— a
+
+Connector
+
+Male terminal
+
+Connector symbol
+
+Female terminal
+
+D Guide ——
+| —
+
+Connector
+
+Connector symbol
+SGI363
+
+Description (Cont'd)
+CONNECTOR SYMBOLS
+
+Most of connector symbols in wiring diagrams are shown from the
+terminal side.
+e Connector symbols shown from the terminal side are enclosed
+
+by a single line and followed by the direction mark V.
+
+TS.
+
+e Connector symbols shown from the harness side are enclosed 3
+by a double line and followed by the direction mark “id
+
+HS.
+
+E00
+LGC
+=
+FE
+
+CL
+
+e Male and female terminals y
+Connector guides for male terminals are shown in black and [MI
+female terminals in white in wiring diagrams.
+
+AT
+
+Gl-13 17
+
+===== PDF page 14 =====
+18
+
+HOW TO READ WIRING DIAGRAMS
+
+Description (Cont'd)
+MULTIPLE SWITCH
+
+The continuity of multiple switch is described in two ways as shown
+
+below.
+e The switch chart is used in schematic diagrams.
+e The switch diagram is used in wiring diagrams.
+
+Example
+
+(SWITCH CHART)
+
+WIPER SWITCH
+
+OFFINT(LO
+
+HI |WASH
+
+®)
+
+®)
+O
+
+DO PIWIN|=
+
+O1O|010
+
+(SWITCH DIAGRAM)
+
+OH er LO “ WIPER
+
+W®WASH OFF WASH SWITCH
+
+Both switches are turned in
+combination.
+
+Continuity circuit of wiper switch
+
+SWITCH POSITION CONTINUITY CIRCUIT
+OFF 3-4
+INT 3-4,5-6
+LO 3-6
+HI 2-6
+WASH 1-6
+
+SGI875
+
+Gi-16
+===== PDF page 15 =====
+HOW TO READ WIRING DIAGRAMS
+
+FOLDOUT PAGE
+
+The foldout page should be opened when reading wiring diagram.
+Super multiple junction (SMJ)
+
+In wiring diagram, connectors consisting of terminals having terminal numbers with an alphabet (1B, 0D, etc.)
+
+are SMJ connectors.
+
+If connector numbers are shown in Reference Area, these connector symbols are not shown in Connector
+
+Description (Cont’d)
+
+Area. For terminal arrangement of these connectors, refer to the foldout page at the end of this manual.
+Joint connector
+
+Joint connector symbols are shown in Connector Area in the wiring diagram concerned. Foldout page also
+
+carries inside wiring layout together with such joint connector symbols.
+
+Example
+
+{Main
+ping
+
+eo 5
+
+L BR
+(Engine
+
+room |
+harness}
+
+Wirinff Diagram
+
+[ BaTTESY ]
+
+{ BATILY |
+
+]
+
+jel
+
+|
+
+Ii
+
+|
+
+i (E102)
+
+TT @ en oe?
+
+@
+E20
+
+A
+
+=)
+
+—
+
+(Main harness)
+
+Super Multipie Junction
+
+(SMU)
+— +t
+rrr
+1A[1B[1C[1D[1E|TF[IG 1G1F 1 o|1cfiBhA
+7 _
+2Al2B|2C S20 E[2F|2G 2G|2F 2 0125128)2A
+Ja(3B(3 Ei3F|3G 3G|3F .—3C3B|3A
+4A|4B 4F 4G 4Gl4 F 4B(4A
+5A|SB 5F(5G 5GI5F 58[5A
+6A|6B O 6F 6G 6GI6F 6B|6
+7A|7B 7FI7G 76|7F 78|7A
+8A|88(8 E|8F|8G 8G|8F —8CIBB|8A
+oa pL 90
+SA|9B|9C| __|9E|9F (9G 9G|9F 9C|98B(9A
+0A|08[0C{0 D |o€j0F|0G oG|or[oE| 9 DjocjoBjoa
+EN
+
+~ Check
+
+Check
+
+STARTS HEC, git STARTING SYSTEM
+
+(Engine room harness)
+
+li
+
+SUPER MULTIPLE JUUNCTION (SMJ)
+
+JOINT CONNECTOR
+
+Terminal Arfangement
+
+Terminal Arrangement
+
+¥
+
+1]2]3}14p
+[5181718]
+
+ZED
+Alle ED
+
+delciclcn
+
+CID)
+
+Connector Area
+
+) LUE
+
+Reference Area:
+
+Refer to the foldout page for the terminal arrangement
+of the connectors shown here in the “Reference Area”.
+
+SGI943
+
+Gl-17
+
+MA
+EV
+LG
+EE
+[FE
+CL
+MT
+AT
+FA
+
+RS
+BT
+
+FA
+
+19
+===== PDF page 16 =====
+20
+
+HOW TO CHECK TERMINAL
+
+Connector and Terminal Pin Kit
+
+Use the connector and terminal pin kit listed below when replacing connectors or terminals.
+The connector and termina! pin kit contains some of the most commonly used NISSAN connectors and ter-
+
+minals.
+
+Tool number
+
+(Kent-Moore No.} Description
+
+Tool name
+
+(J38751-95NlI)
+Connector and terminal pin kit
+
+AGI063
+
+SGig4
+
+Sectional view (Female)
+
+SEL265V
+
+How to Probe Connectors
+
+Connector damage and an intermittent connection can result from
+improperly probing of the connector during circuit checks.
+
+The probe of a digital multimeter (DMM) may not correctly fit the
+connector cavity. To correctly probe the connector, follow the pro-
+cedures below using a “T” pin. For the best contact grasp the “T”
+pin using an alligator clip.
+
+PROBING FROM HARNESS SIDE
+
+Standard type (not waterproof type) connector should be probed
+
+from harness side with “T” pin.
+
+e If the connector has a rear cover such as a ECM
+connector, remove the rear cover before probing the ter-
+minal.
+
+e Do not probe waterproof connector from harness side.
+Damage to the seal between wire and connector may
+result.
+
+PROBING FROM TERMINAL SIDE
+
+Female terminal
+
+e There is a small notch above each female terminal. Probe
+each terminal with the “T” pin through the notch.
+
+Do not insert any object other than the same type male termi-
+nal into female terminal.
+
+Gl-18
+===== PDF page 17 =====
+HOW TO CHECK TERMINAL
+How to Probe Connectors (Cont'd)
+
+e Some connectors do not have a notch above each terminal. To
+probe each terminal, remove the connector retainer to make
+
+contact space for probing.
+
+SEL266V|
+
+Male terminal
+
+Sectional view (Male)
+Carefully probe the contact surface of each terminal using a “T” LG
+
+pin.
+Do not bend terminal. Ee
+FE
+terminal
+CL
+SEL267V|
+How to Check Enlarged Contact Spring of IT
+Terminal
+An enlarged contact spring of a terminal may create intermittent
+signals in the circuit. AT
+If the intermittent open circuit occurs, follow the procedure below
+to inspect for open wires and enlarged contact spring of female
+terminal. FA
+RA
+1. Assemble a male terminal and approx. 10 cm (3.9 in) of wire. BR
+Use a male terminal which matches the female terminal.
+2. Disconnect the suspected faulty connector and hold it terminal .
+side up. St
+c =
+Male terminal Wire RS
+BT
+SEL270V
+
+[FIA
+
+3. While holding the wire of the male terminal, try to insert the
+male terminal into the female terminal.
+Do not force the male terminal into the female terminal with EL
+
+your hands.
+Do not apply force
+against the terminal
+
+IDX
+
+SEL271V
+
+GI-19 21
+===== PDF page 18 =====
+22
+
+HOW TO CHECK TERMINAL
+
+SEL272V
+
+Male connector
+
+} Female connector
+Locked terminal
+
+Intermittent contact
+
+Unlocked terminal
+
+SEL330V
+
+How to Check Enlarged Contact Spring of
+Terminal (Cont’d)
+
+4. While moving the connector, check whether the male terminal
+can be easily inserted or not.
+
+e If the male terminal can be easily inserted into the female
+terminal, replace the female terminal.
+
+Waterproof Connector Inspection
+
+If water enters the connector, it can short interior circuits. This may
+lead to intermittent problems.
+
+Check the following items to maintain the original waterproof char-
+acteristics.
+
+RUBBER SEAL INSPECTION
+
+e Most waterproof connectors are provided with a rubber seal
+between the male and female connectors. If the seal is
+missing, the waterproof performance may not meet specifica-
+tions.
+
+® The rubber seal may come off when connectors are discon-
+nected. Whenever connectors are reconnected, make sure the
+rubber seal is properly installed on either side of male or
+female connector.
+
+WIRE SEAL INSPECTION
+
+The wire seal must be installed on the wire insertion area of a
+waterproof connector. Be sure that the seal is installed properly.
+
+Terminal Lock Inspection
+
+Check for unlocked terminals by pulling wire at the end of connec-
+tor. An unlocked terminal may create intermittent signals in the cir-
+cuit.
+
+Gl-20
+===== PDF page 19 =====
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN ELECTRICAL INCIDENT
+
+Work Flow
+
+= LISTEN TO CUSTOMER COMPLAINTS f= == mmm momo moo occ
+[VERIFY THE SYMPTOM K— mmm mt 01 tt te rt
+IL { SYMPTOM SIMULATION
+
+NARROW THE POSSIBLE CAUSE |= === =m memmm on imeem
+
+L
+L <_-
+INSPECT THE CIRCUIT b= mmo soe sm soe mooie
+<>
+
+| REPAIR THE GIRGUIT |-- = === m= mmm mmm ceo
+
+| MAKE SURE THE CIRCUIT WORKS |= = === mmm =m mmm mimeo
+
+END
+
+SGI838
+
+STEP
+
+DESCRIPTION
+
+STEP 1
+
+Get detailed information about the conditions and the environment when the incident occurred.
+The following are key pieces of information required to make a goed analysis:
+
+WHAT Vehicle Model, Engine, Transmission and the System (i.e. Radio).
+WHEN Date, Time of Day, Weather Conditions, Frequency.
+WHERE Road Conditions, Altitude and Traffic Situation.
+
+HOW System Symptoms, Operating Conditions (Other Components Interaction).
+Service History and if any After Market Accessories have been installed.
+
+STEP 2
+
+Operate the system, road test if necessary.
+Verify the parameter of the incident.
+If the problem can not be duplicated, refer to “Incident Simulation Tests” next page.
+
+STEP 3
+
+Get the proper diagnosis materials together including:
+
+POWER SUPPLY RCUTING
+System Operation Descriptions
+Applicable Service Manual Sections
+Check For Any Service Bultetin®
+
+identify where to begin diagnosis based upon your knowledge of the system operation and the customer comments.
+
+STEP 4
+
+Inspect the system for mechanical binding, loose connectors or wiring damage.
+
+Determine which circuits and components are involved and diagnose using the Power Supply Routing and Harness
+
+Layouts.
+
+STEP 5
+
+Repair or replace the incident circuit or component.
+
+STEP 6
+
+Operate the system in all modes. Verify the system works properly under all conditions. Make sure you have not inad-
+
+vettently created a new incident during your diagnosis or repair steps.
+
+Gl-21
+
+ud
+
+A
+
+i
+A
+
+23
+===== PDF page 20 =====
+24
+
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN ELECTRICAL INCIDENT
+
+Incident Simulation Tests
+
+INTRODUCTION
+
+Sometimes the symptom is not present when the vehicle is brought in for service. If possible, re-create the
+conditions present at the time of the incident. Doing so may help avoid a No Trouble Found Diagnosis. The
+following section illustrates ways to simulate the conditions/environment under which the owner experiences
+an electrical incident.
+
+The section is broken into the six following topics:
+e Vehicle vibration
+
+Heat sensitive
+
+Freezing
+
+Water intrusion
+
+Electrical load
+
+Cold or hot start up
+
+Get a thorough description of the incident from the customer. It is important for simulating the conditions of
+the problem.
+
+VEHICLE VIBRATION
+
+The problem may occur or become worse while driving on a rough road or when engine is vibrating (idle with
+A/C on). In such a case, you will want to check for a vibration related condition. Refer to the illustration below.
+
+Connectors & harness
+
+Determine which connectors and wiring harness would affect the electrical system you are inspecting. Gen-
+tly shake each connector and harness while monitoring the system for the incident you are trying to dupli-
+cate. This test may indicate a loose or poor electrical connection.
+
+Hint
+Connectors can be exposed to moisture. It is possible to get a thin film of corrosion on the connector termi-
+nals. A visual inspection may not reveal this without disconnecting the connector. If the problem occurs
+intermittently, perhaps the problem is caused by corrosion. It is a good idea to disconnect, inspect and clean
+the terminals on related connectors in the system.
+
+Sensors & relays
+
+Gently apply a slight vibration to sensors and relays in the system you are inspecting.
+This test may indicate a loose or poorly mounted sensor or relay.
+
+Vibration test Tap gently.
+
+Bend gently.
+
+SGI839
+
+Gl-22
+===== PDF page 21 =====
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN ELECTRICAL INCIDENT
+
+Heating test
+
+Heat gun
+
+Do not heat above 60°C (140°F).
+
+SGi842)
+
+Incident Simulation Tests (Cont'd)
+
+Engine compartment
+
+There are several reasons a vehicle or engine vibration could
+cause an electrical complaint. Some of the things to check for are:
+
+eo Connectors not fully seated.
+
+eo Wiring harness not long enough and is being stressed due to
+engine vibrations or rocking.
+
+eo Wires laying across brackets or moving components.
+
+e& Loose, dirty or corroded ground wires.
+
+eo Wires routed too close to hot components.
+
+To inspect components under the hood, start by verifying the integ-
+rity of ground connections. (Refer to GROUND INSPECTION
+described later.) First check that the system is properly grounded.
+Then check for loose connection by gently shaking the wiring or
+components as previously explained. Using the wiring diagrams
+inspect the wiring for continuity.
+
+Behind the instrument panel
+
+An improperly routed or improperly clamped harness can become
+pinched during accessory installation. Vehicle vibration can aggra-
+vate a harness which is routed along a bracket or near a screw.
+
+Under seating areas
+
+An unclamped or loose harness can cause wiring to be pinched by
+seat components (such as slide guides) during vehicle vibration. If
+the wiring runs under seating areas, inspect wire routing for pos-
+sible damage or pinching.
+
+HEAT SENSITIVE
+The owner’s problem may occur during hot weather or after car has
+sat for a short time. In such cases you will want to check for a heat
+
+sensitive condition.
+To determine if an electrical component is heat sensitive, heat the
+
+component with a heat gun or equivalent.
+
+Do not heat components above 60°C (140°F). If incident occurs
+while heating the unit, either replace or properly insulate the com-
+ponent.
+
+Gl-23
+
+MA
+
+RA
+
+BR
+
+ST
+
+RS
+
+foX
+
+25
+===== PDF page 22 =====
+26
+
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN ELECTRICAL INCIDENT
+
+Freezing test
+
+yo
+
+MAS
+
+Water in
+connector
+
+SG1843|
+
+Water intrusion test
+
+SGI844
+Electrical load test
+= =
+Rear
+Rear Light switch
+defogger
+SGI845
+
+incident Simulation Tests (Cont'd)
+
+FREEZING
+
+The customer may indicate the incident goes away after the car
+warms up (winter time). The cause could be related to water freez-
+ing somewhere in the wiring/electrical system.
+
+There are two methods to check for this. The first is to arrange for
+the owner to leave his car overnight. Make sure it will get cold
+enough to demonstrate his complaint. Leave the car parked out-
+side overnight. In the morning, do a quick and thorough diagnosis
+of those electrical components which could be affected.
+
+The second method is to put the suspect component into a freezer
+long enough for any water to freeze. Reinstall the part into the car
+and check for the reoccurrence of the incident. If it occurs, repair
+or replace the component.
+
+WATER INTRUSION
+
+The incident may occur only during high humidity or in rainy/snowy
+weather. In such cases the incident could be caused by water
+intrusion on an electrical part. This can be simulated by soaking the
+car or running it through a car wash.
+
+Do not spray water directly on any electrical components.
+
+ELECTRICAL LOAD
+
+The incident may be electrical load sensitive. Perform diagnosis
+with all accessories (including A/C, rear window defogger, radio,
+fog lamps) turned on.
+
+COLD OR HOT START UP
+
+On some occasions an electrical incident may occur only when the
+car is started cold. Or it may occur when the car is restarted hot
+shortly after being turned off. In these cases you may have to keep
+the car overnight to make a proper diagnosis.
+
+Gl-24
+===== PDF page 23 =====
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN ELECTRICAL INCIDENT
+
+Circuit Inspection
+
+INTRODUCTION
+
+In general, testing electrical circuits is an easy task if it is approached in a logical and organized method. Before
+beginning it is important to have all available information on the system to be tested. Also, get a thorough
+understanding of system operation. Then you will be able to use the appropriate equipment and foliow the
+
+correct test procedure.
+You may have to simulate vehicle vibrations while testing electrical components. Gently shake the wiring
+
+harness or electrical component to do this.
+OPEN A circuit is open when there is no continuity through a section of the circuit.
+
+SHORT There are two types of shorts.
+
+When a circuit contacts another circuit and causes the
+* SHORT CIRCUIT normal resistance to change.
+
+When a circuit contacts a ground source and grounds the
+
+e SHORT TO GROUND circuit.
+
+Note: Refer to “HOW TO CHECK TERMINAL” in GI-18 to probe or check terminal.
+
+TESTING FOR “OPENS” IN THE CIRCUIT
+
+Before you begin to diagnose and test the system, you should rough sketch a schematic of the system. This
+will help you to logically walk through the diagnosis process. Drawing the sketch will also reinforce your work-
+
+ing knowledge of the system.
+
+inspection for opens
+{Voltage check)
+
+©
+DMM
+FUSE BLOCK
+u; Cl sw N.C. RELAY SOLENOID
+
+| - Ss o EE 900
+OPEN ? OTT OPEN 1 = OPEN
+B —— 0200 — C
+
+|
+! |
+To
+a A 1
+DMM DMM Jswe =
+
+in ity check =
+
+Continuity check method
+The continuity check is used to find an open in the circuit. The Digital Multimeter (DMM) set on the resistance
+function will indicate an open circuit as over limit (OL, no beep tone or no ohms symbol). Make sure to always
+
+start with the DMM at the highest resistance level.
+To help in understanding the diagnosis of open circuits please refer to the schematic above.
+
+PN
+
+Disconnect the battery negative cable.
+
+Start at one end of the circuit and work your way to the other end. (At the fuse biock in this example)
+Connect one probe of the DMM to the fuse block terminal on the load side.
+
+Connect the other probe to the fuse block (power) side of SW1. Little or no resistance will indicate that
+portion of the circuit has good continuity. If there were an open in the circuit, the DMM would indicate an
+over limit or infinite resistance condition. (point A)
+
+Connect the probes between SW1 and the relay. Littie or no resistance will indicate that portion of the cir-
+cuit has good continuity. If there were an open in the circuit, the DMM would indicate an over limit or infi-
+nite resistance condition. (point B)
+
+Connect the probes between the relay and the solenoid. Little or no resistance will indicate that portion of
+the circuit has good continuity. If there were an open in the circuit, the DMM would indicate an over limit
+
+or infinite resistance condition. {point C)
+
+Any circuit can be diagnosed using the approach in the above example.
+
+Gl-25
+
+MA
+
+EM
+
+EC
+FE
+
+GL
+
+FA
+
+BR
+
+27
+===== PDF page 24 =====
+28
+
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN ELECTRICAL INCIDENT
+Circuit Inspection (Cont'd)
+
+Voltage check method
+
+To help in understanding the diagnosis of open circuits please refer to the previous schematic.
+In any powered circuit, an open can be found by methodically checking the system for the presence of volt-
+age. This is done by switching the DMM to the voltage function.
+1. Connect one probe of the DMM to a known good ground.
+2. Begin probing at one end of the circuit and work your way to the other end.
+3. With SW1 open, probe at SW1 to check for voltage.
+voltage; open is further down the circuit than SW1.
+no voltage; open is between fuse block and SW1 (point A).
+4. Close SW1 and probe at relay.
+voltage; open is further down the circuit than the relay.
+no voltage; open is between SW1 and relay (point B).
+5. Close the relay and probe at the solenoid.
+voltage; open is further down the circuit than the solenoid.
+no voltage; open is between relay and solenoid (point C).
+Any powered circuit can be diagnosed using the approach in the above example.
+
+TESTING FOR “SHORTS” IN THE CIRCUIT
+To simplify the discussion of shorts in the system please refer to the schematic below.
+
+Inspection for shorts
+" {Resistance check)
+IGN “ON ST
+OR “START J FUSE BLOCK RELAY
+! SW SOLENOID
+| | PY
+7 © L 5 o [le ad &-—
+B+ SIDE! ! 1 —
+SHORT = Ji SHORT ;
+A B se Cc
+DMM 7
+{Voltage check) = SGI847
+
+Resistance check method
+
+1. Disconnect the battery negative cable and remove the blown fuse.
+
+2. Disconnect all loads (SW1 open, relay disconnected and solenoid disconnected) powered through the
+fuse.
+
+3. Connect one probe of the chmmeter to the load side of the fuse terminal. Connect the other probe to a
+known good ground.
+
+4. With SW1 open, check for continuity.
+continuity; short is between fuse terminal and SW1 (point A).
+no continuity; short is further down the circuit than SW1.
+
+5. Close SW1 and disconnect the relay. Put probes at the load side of fuse terminal and a known good
+ground. Then, check for continuity.
+continuity; short is between SW1 and the relay (point B).
+no continuity; short is further down the circuit than the relay.
+
+6. Close SW1 and jump the relay contacts with jumper wire. Put probes at the load side of fuse terminal and
+a known good ground. Then, check for continuity.
+continuity; short is between relay and solenoid (point C).
+no continuity; check solenoid, retrace steps.
+
+Gl-26
+===== PDF page 25 =====
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN ELECTRICAL INCIDENT
+Circuit Inspection (Cont'd)
+
+Voltage check method
+
+1. Remove the blown fuse and disconnect all loads (i.e. SW1 open, relay disconnected and solenoid discon-
+nected) powered through the fuse.
+
+2. Turn the ignition key to the ON or START position. Verify battery voltage at the B + side of the fuse ter-
+minal (one lead on the B + terminal side of the fuse block and one lead on a known good ground).
+
+3. With SW1 open and the DMM leads across both fuse terminals, check for voltage.
+voltage; short is between fuse block and SW1 (point A).
+no voltage; short is further down the circuit than SW.
+
+4. With SW1 closed, relay and solenoid disconnected and the DMM leads across both fuse terminals, check
+for voltage.
+voltage; short is between SW1 and the relay (point B).
+no voltage; short is further down the circuit than the relay.
+
+5. With SW1 closed, relay contacts jumped with fused jumper wire check for voltage.
+voltage; short is down the circuit of the relay or between the relay and the disconnected solenoid
+
+(point C).
+
+no voltage; retrace steps and check power to fuse block.
+
+GROUND INSPECTION
+Ground connections are very important to the proper operation of electrical and electronic circuits. Ground
+connections are often exposed to moisture, dirt and other corrosive elements. The corrosion (rust) can become
+an unwanted resistance. This unwanted resistance can change the way a circuit works.
+
+Electronically controlled circuits are very sensitive to proper grounding. A loose or corroded ground can dras-
+tically affect an electronically controlled circuit. A poor or corroded ground can easily affect the circuit. Even
+when the ground connection looks clean, there can be a thin film of rust on the surface.
+
+When inspecting a ground connection follow these rules:
+
+Remove the ground bolt screw or clip.
+
+Inspect all mating surfaces for tarnish, dirt, rust, etc.
+
+Clean as required to assure good contact.
+
+Reinstall bolt or screw securely.
+
+Inspect for “add-on” accessories which may be interfering with the ground circuit.
+
+If several wires are crimped into one ground eyelet terminal, check for proper crimps. Make sure all of the
+wires are clean, securely fastened and providing a good ground path. If multiple wires are cased in one
+eyelet make sure no ground wires have excess wire insulation.
+
+EL
+
+Ground Inspection
+
+7
+
+N\
+NC
+
+Reinstall bolt {screw)
+
+for tarnish, dirt, rust, etc. securely.
+Clean as required to
+assure good contact.
+
+Remove bolt (screw). Inspect mating surfaces
+
+SGI8s3
+
+Gl-27
+
+LG
+
+[PIE
+
+BT
+
+29
+===== PDF page 26 =====
+30
+
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN ELECTRICAL INCIDENT
+
+Circuit Inspection (Cont'd)
+
+VOLTAGE DROP TESTS
+Voltage drop tests are often used to find components or circuits which have excessive resistance. A voltage
+drop in a circuit is caused by a resistance when the circuit is in operation.
+Check the wire in the illustration. When measuring resistance with ohmmeter, contact by a single strand of
+wire will give reading of 0 ohms. This would indicate a good circuit. When the circuit operates, this single strand
+of wire is not able to carry the current. The single strand will have a high resistance to the current. This will
+be picked up as a slight voltage drop.
+Unwanted resistance can be caused by many situations as follows:
+
+Undersized wiring (single strand example)
+
+Corrosion on switch contacts
+
+Loose wire connections or splices.
+If repairs are needed always use wire that is of the same or larger gauge.
+
+Measuring voltage drop — Accumulated method
+1. Connect the voltmeter across the connector or part of the circuit you want to check. The positive lead of
+the voltmeter should be closer to power and the negative lead closer to ground.
+
+2. Operate the circuit.
+3. The voltmeter will indicate how many volts are being used to “push” current through that part of the cir-
+
+cuit.
+Note in the illustration that there is an excessive 4.1 volt drop between the battery and the bulb.
+
+Symptom: Dim bulb or no operation
+
+0 (zero) ohm
+resistance
+between switch
+
+and bulb
+Connection with
+high resistance
+JE
+Ground Battery
+—————— A. ~a-—— | Ground
+5GI974
+===== PDF page 27 =====
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN ELECTRICAL INCIDENT
+
+Circuit Inspection (Cont'd)
+
+Measuring voltage drop — Step by step
+
+The step by step method is most useful for isolating excessive drops in low voltage systems (such as those
+in “Computer Controlled Systems”).
+
+Circuits in the “Computer Controlled System” operate on very low amperage.
+
+The (Computer Controlled) system operations can be adversely affected by any variation in resistance in the
+system. Such resistance variation may be caused by poor connection, improper installation, improper wire
+gauge or corrosion.
+
+The step by step voltage drop test can identify a component or wire with too much resistance.
+
+0.1V 7.9v 1. Connect the voltmeter as shown, starting at the
+
+Vv battery and working your way around the circuit.
+
+® of ® Of 2. An unusually large voltage drop will indicate
+Switch
+
+a component or wire that needs to be repaired.
+As you can see the illustration above, the poor
+connection causes a 4 volt drop.
+
+| The chart that follows illustrates some maximum
+0) allowable voltage drops. These values are given
+Connecti ith as a guideline, the exact vaiue for each component
+ction wi
+Batter may vary.
+vj i high resistance y ¥
+D \_ Seen COMPONENT VOLTAGE DROP
+Wire negligible < .001 volts
+En Emm— Ground Connections Approx. 0.1 volts
+Switch Contacts Approx. 0.3 voits
+J
+SGI8S4
+
+Gl-29
+
+MA
+
+31
+===== PDF page 28 =====
+HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN ELECTRICAL INCIDENT
+
+CONTROL UNIT CIRCUIT TEST
+
+Circuit Inspection (Cont'd)
+
+System Description: When the switch is ON, the control unit lights up the lamp.
+
+Inoperative lamp
+
+Case 1 TERMINAL: 1 TERMINAL: 2
+Monitoring Power supply Lamp
+Switch of the switch to light up
+Fuse —— | operation (ON/OFF) the lamp (@
+Battery — 0 2 8
+—— ~~ AN — J ee
+Short to Short to Control Short to ground & Open: Short to
+ground: FUSE blows ground: FUSE blows unit Inoperative lamp ground: No problem
+Open:  Inoperative lamp when switch is ON Open:
+Open: Inoperative lamp
+
+input-output voltage chart
+
+High resistance:
+(Single strand} See below.”
+
+[pin Item Condition Voltage In case of high resistance
+No. value [V] such as single strand [V] *
+1 Switch | Switch Battery Lower than battery voltage
+ON voltage Approx. 8 {Example)
+OFF Approx. 0 Approx. 0
+
+2 Lamp Switch Battery Approx. 0
+ON voltage {Inoperative lamp)
+OFF Approx. 0 : Approx. 0
+
+The voltage value is based on the body ground.
+
+*: If high resistance exists in the switch side circuit (caused by a single strand), terminal 1 does not detect battery voltage. Control unit
+does not detect the switch is ON even if the switch does turn ON. Therefore, the Control unit does not supply power to light up the lamp.
+
+Case 2 TERMINAL: 2
+TERMINAL: 1 Monitoring }
+Lamp Ground control of the switch Switch
+FUSE @ to light up the lamp operation (ON/OFF) | —=
+Battery 1 2 -0 |
+/ ——
+So MY Control —V
+Short to Short to unit Short to Short to
+ground: FUSE blows ground: Lamp stays ON ground: Lamp stays ON ground: No problem
+Open: Inoperative lamp Open:  Inoperative lamp {Same as the switch ON) Open: Inoperative lamp
+Open:  Inoperative lamp
+
+Input-output voltage chart
+
+High resistance: See below.
+(Single strand}*
+
+Pin Item Condition Voltage In case of high resistance
+No. value [V] such as single strand [V] *
+1 Lamp Switch Approx. 0 Battery voltage
+
+ON {inoperative lamp)
+
+OFF Battery Battery voltage
+
+voltage
+|
+
+2 Switch | Switch Approx. 0 Higher than 0
+
+ON Approx. 4 (Example)
+
+OFF Approx. 5 Approx. 5 |
+
+The voltage value is based on the
+
+body ground.
+
+* : If high resistance exists in the switch side circuit (caused by a singte strand), terminal 2 does not detect approx. OV. Control unit does
+
+not detect the switch is ON even if the switch does turn ON. Therefore, the Control unit does not control ground to light up the lamp.
+
+32
+
+GI-30
+
+AGIO59
+===== PDF page 29 =====
+HOW TO FOLLOW FLOW CHART IN TROUBLE DIAGNOSES
+
+NOTICE
+
+The flow chart indicates work procedures required to diagnose
+problems effectively. Observe the following instructions before
+diagnosing.
+
+1) Use the flow chart after locating probable causes of a
+problem following the “Preliminary Check”, the “Symp-
+tom Chart” or the “Work Flow”.
+
+2) After repairs, re-check that the problem has been com- [{A
+pletely eliminated.
+
+3) Refer to Component Parts and Harness Connector Loca-
+tion for the Systems described in each section for [Jf
+identification/location of components and harness con-
+nectors.
+
+4) Refer to the Circuit Diagram for Quick Pinpoint Check. LC
+If you must check circuit continuity between harness con-
+nectors in more detail, such as when a sub-harness is
+used, refer to Wiring Diagram in each individual section EC
+and Harness Layout in EL section for identification of har-
+
+ness connectors. EE
+5) When checking circuit continuity, ignition switch should *
+be “OFF”.
+6) Before checking voltage at connectors, check battery volt- el,
+
+age.
+7) After accomplishing the Diagnostic Procedures and Elec-
+trical Components Inspection, make sure that all harness MI
+
+connectors are reconnected as they were.
+
+Example
+AT
+“13
+> wr Gi INSPECTION START
+4 € am Pani]
+CHECK POWER SUPPLY. NG | Check the following. RA
+V] 1. Stop engine. — » @ Harness connectors
+® © 2. Disconnect IACV-FICD solenoid valve me, E10D os
+, harness connector. ® Harness connectors BR
+acc7es| | 3. Start engine, then turn air conditioner AGED]
+switch and blower fan "ON". e Harness continuity ST
+4. Check voltage between terminal () between IACV-FICD
+and ground with CONSULT or tester. solenoid valve harness
+DISCONNECT ™ ~ Voltage: Battery voltage connector and air BS
+EE: (lr) OK conditioner relay
+1.8. :
+If NG, repair harness or
+gp) connectors. BT
+= .
+CHECK GROUND CIRCUIT. NG | Repair harness or oy
+1. Turn ignition switch “OFF”. connectors. HA
+2. Check harness continuity between
+= AECTES terminal (2) and body ground. EL
+Continuity should exist. }
+OK
+| IDX
+AGI056
+
+GI-31 33
+===== PDF page 30 =====
+34
+
+HOW TO FOLLOW FLOW CHART IN TROUBLE DIAGNOSES
+
+How to Follow This Flow Chart
+
+[1] Work and diagnostic procedure
+
+Start to diagnose a problem using procedures indicated in
+enclosed blocks, as shown in the following example.
+
+CHECK POWER SUPPLY. ¢— Check item being performed.
+1) Turn ignition switch “ON”.
+2} Check voltage between terminal Procedure, steps or
+
+@ and ground. measurement results
+Battery voltage should exist.
+
+[2] Measurement results
+
+Required results are indicated in bold type in the correspond-
+ing block, as shown below:
+These have the following meanings:
+Battery voltage — 11 - 14V or approximately 12V
+Voltage: Approximately OV — Less than 1V
+
+[3] Cross reference of work symbols in the text and
+
+illustrations
+
+Illustrations are provided as visual aids for work procedures.
+For example, symbol indicated in the left upper portion of
+each illustration corresponds with the symbol in the flow chart
+for easy identification. More precisely, the procedure under the
+“CHECK POWER SUPPLY” outlined previously is indicated by
+illustration IY .
+
+[4] Symbols used in illustrations
+
+Symbols included in illustrations refer to measurements or pro-
+cedures. Before diagnosing a problem, familiarize yourself with
+each symbol.
+
+DIRECTION MARK
+Refer to “CONNECTOR SYMBOLS” on GI-13.
+
+Gl-32
+===== PDF page 31 =====
+HOW TO FOLLOW FLOW CHART IN TROUBLE DIAGNOSES
+
+How to Follow This Flow Chart (Cont'd)
+Key to symbols signifying measurements or procedures
+
+Symbol!
+
+Symbol explanation
+
+Symbol
+
+Symbol explanation
+
+DISCONNECT
+
+Check after disconnecting the connector
+to be measured.
+
+Procedure with Generic Scan Tool (GST,
+
+.| OBD-Il scan tool)
+
+CONNECT
+
+Turn ignition switch from “OFF” to “ACC”
+
+Check after connecting the connector to NO |
+be measured. (oaus) Procedure without CONSULT or GST
+CEN Insert key into ignition switch. A/C switch is “OFF”.
+Bax Remove key from ignition switch. B A/C switch is “ON”.
+(69) Turn ignition switch to “OFF” position. 3 REC switch is “ON”.
+&) Turn ignition switch to “ON” position. = REC switch is “OFF”.
+Turn ignition switch to “START” position. DEF switch is “ON”.
+vr 17%
+
+Fan switch is “ON”. (At any position
+
+position.
+
+o Pr
+Fico position. 1) except for “OFF” position)
+Turn ignitio itch 1 “ACC” to “OFF” ofp 1 2 8
+Rap ene Creo © Fan switch is “OFF”.
+
+i
+Js
+2
+
+Turn ignition switch from “OFF” to “ON”
+position.
+
+|
+Cc
+a
+m
+
+Apply positive voltage from battery with
+fuse directly to components.
+
+IO
+=
+ES
+nil
+-
+
+Turn ignition switch from “ON” to “OFF”
+position.
+
+Ey
+
+Drive vehicle.
+
+See
+&
+
+Do not start engine, or check with engine
+stopped.
+
+Disconnect battery negative cable.
+
+>
+-,
+
+Start engine, or check with engine run-
+ning.
+
+Depress brake pedal.
+
+Apply parking brake.
+
+Release brake pedal.
+
+#4
+
+Release parking brake.
+
+Depress accelerator pedal.
+
+O
+xr
+
+Check after engine is warmed up suffi-
+ciently.
+
+Release accelerator pedal.
+
+Voltage should be measured with a volt-
+meter.
+
+Circuit resistance should be measured
+with an ochmmeter.
+
+fl [{B1 (BE |
+
+®
+Q
+
+Current should be measured with an
+ammeter.
+
+)
+
+Procedure with CONSULT
+
+Procedure without CONSULT
+
+Pin terminal check for SMJ type ECM
+and TCM connectors.
+For details regarding the terminal
+
+arrangement, refer to the foldout page.
+
+[T21] o [SEE]
+HOMIE
+
+DISCORNECT
+
+Gl-33
+
+IDX
+
+35
+===== PDF page 32 =====
+36
+
+CONSULT CHECKING SYSTEM
+
+Function and System Application
+
+and also shifts some parameters in a speci-
+fied range.
+
+Diagnostic . ; D “VMS
+test mode Function ECCS AT Air bag ABS ASC
+
+This mode enables a technician to adjust
+
+Work support some devices faster and more accurately by X — — — — —
+following the indications on CONSULT.
+
+Self-diagnostic Self-diagnostic results can be read and
+
+; X X X X pe X
+results erased quickly.
+. : Current seli-diagnostic results and all trouble
+
+Trouble diagnostic diagnostic records previously stored can be — —_ Xx — — —-
+
+record
+read.
+
+I Classification number of a replacement ECU
+ou discriminated can be read to prevent an incorrect ECU —_— — X — — —
+' from being installed.
+
+Data monitor Input/Output data in the ECM can be read. X X — X X X
+This mode enables a technician to set oper-
+
+DTC work support ating conditions to confirm self-diagnosis — x — — — —
+status/results.
+Diagnostic Test Mode in which CONSULT
+
+Active test drives some actuators apart from the ECMs x _ _ x _ x
+
+ECM part number
+
+ECM part number can be read.
+
+Function test
+
+Conducted by CONSULT instead of a tech-
+nician to determine whether each system is
+“OK” or “NG”.
+
+DTC confirmation
+
+The results of SRT (System Readiness Test)
+and the self-diagnosis status/results can be
+confirmed.
+
+x: Applicable
+
+*IVMS: In-vehicle multiplexing system
+
+WARNING:
+
+Lithium Battery Replacement
+CONSULT contains a lithium battery. When replacing the battery obey the following:
+
+Replace the lithium battery with SANYO Electric Co., Ltd., CR2032 only. Use of another battery may
+present a risk of fire or explosion. The battery may present a fire or chemical burn hazard if mistreated.
+
+Do not recharge, disassemble of dispose of in fire. .
+Keep the battery out of reach of children and discard used battery conforming to the local regulations.
+
+Checking Equipment
+
+When ordering the below equipment, contact your NISSAN/INFINITI distributor.
+
+Tool name
+
+Description
+
+NISSAN CONSULT
+
+@ CONSULT unit
+
+and accessories
+
+@ Program card
+
+UES50, UE951 and
+UEOBDS8 (For Engine
+and A/T System)
+
+NTO04
+
+Gl-34
+===== PDF page 33 =====
+CONSULT CHECKING SYSTEM
+
+Loading Procedure
+
+[Initialize By Card] SPAO
+Insert Card, O.K.?® ne MA
+(no [a] [x] Taio "
+miGio|o =
+EOMM EE wie
+E1He
+= [<l [8] IC []
+food [a] se] [4] [3] fos [od [=] [2] [1] [4] fees] 5c
+1. While holding down the upper 2. If the initialization was done 5. Now the program will start EE
+left and right corner keys of the correctly, the following message to load.
+CONSULT touch panel, simulta- will appear at the top of the display: 6. After the “Initialize End”
+neously press the power “ON” “[Initialize By Card] Insert Card, O.K.?” "message appears, touch the
+switch. While pushing the power 3. Insert the program card into the “OFF” switch. CL
+“ON” switch, hold down both corner CONSULT program card reader,
+keys until the next screen appears. 4. Press “Y" on the touch panel.
+MT
+AT
+SGI983
+
+CONSULT Data Link Connector (DLC) Circuit FA
+
+Example
+IGNITION SWITCH | AIR BAG RA
+ON or START ECM DIAGNOSIS
+SENSOR UNIT
+BR
+re | 517] DATA LINK CONNECTOR 8T
+ORERED {DLC) FOR CONSULT
+—— Jo each diagnosed system
+= saioea| RS
+INSPECTION PROCEDURE BT
+If the CONSULT cannot diagnose the system properly, check the following items.
+Symptom Check item A
+CONSULT cannot access ® CONSULT DLC power supply circuit {Terminal 7) and ground circuit (Terminal 8)
+any system. (For detailed circuit, refer to “MIL & Data Link Connectors Wiring Diagram” in EC section.)
+e CONSULT DDL cable BL |
+CONSULT cannot access ® CONSULT program card (Check the appropriate CONSULT program card for the system. Refer
+individual system. (Other sys- to Gl-34.) IDX
+tems can be accessed.) e Power supply and ground circuit for the control unit of the system
+(For detailed circuit, refer to wiring diagram for each system.)
+® Open or short circuit between the system and CONSULT DLC
+{For detailed circuit, refer to wiring diagram for each system.)
+
+Gl-35 37
+===== PDF page 34 =====
+38
+
+IDENTIFICATION INFORMATION
+
+Model Variation
+
+B _LH
+
+B: 4-door sedan
+
+U L
+
+———
+
+E A
+
+Model
+
+T
+
+A: Standard
+
+U: Non-California, U.S.A.
+V: California, U.S.A.
+N: Canada
+
+E: Multiport Fuel injection system engine
+
+A: 4-speed automatic transaxle
+F: 5-speed manual transaxle
+
+E: GXE for U.S.A., GXE & GLE for Canada
+
+G: GLE for U.S.A.
+
+V: SE
+
+L: Left-hand drive
+
+U: 2-wheel drive models
+
+LH: VQ30DE engine
+
+GlI-36
+
+Destination
+Body Engine Grade Transaxle -Californi
+9 Non-California, |. itornia, U.S.A. Canada
+U.S.A
+. BLHULEA- . BLHULEA-
+GXE RE4F04A*1 EUA*3 BLHULEA-EVA™3 ENA*3
+RS5F50A*2 BLHULEF-EUA | BLHULEF-EVA | BLHULEF-ENA
+Sedan VQ30DE GLE RE4F04A"I | BLHULGA-EUA | BLHULGA-EVA | BLHULEA-ENA
+RE4F04A™1 BLHULVA-EUA BLHULVA-EVA BLHULVA-ENA
+SE, SE-S, SE-L
+RS5F50A*2 BLHULVF-EUA BLHULVF-EVA BLHULVF-ENA
+*1: The automatic transaxle with viscous LSD is “RE4F04V".
+*2: The manual transaxle with viscous LSD is “RS5F50V".
+*3: GXE or GXE-L grade
+Prefix and suffix designations:
+_A32 E
+===== PDF page 35 =====
+IDENTIFICATION INFORMATION
+
+Identification Number
+
+Vehicle identification number Vehicle identification number piate
+
+Vehicle identification plate
+
+Emission control information label
+
+Fp]
+
+\/& je
+
+ac 26
+
+FE
+
+Air conditioner specification label
+FMVSS certification label
+} SGI8B69-A CL
+VEHICLE IDENTIFICATION NUMBER ARRANGEMENT i
+INT C A 2 1 A * WwW T 300001 and up
+
+1 7 TT TT 7] 800001 and up AT
+
+1 AL
+
+Vehicle serial number
+Manufacturing plant [FA
+T: Oppama
+M: Tochigi
+RA
+Mode! year
+W: 1998 model year
+Check digit (0 to 9 or X) BR
+The code for the check digit is determined by mathematical
+computation. S
+Restraint system ST
+A: Driver and front passenger SRS air bags, SRS side air bags & 3-point manual
+seat belts 2S
+D: Driver and front passenger SRS air bags & 3-point manual seat belts
+Body type
+1: Sedan
+Model! change
+Vehicle line HA
+A: Nissan Maxima
+Engine type i
+C: VQ30DE gl.
+Manufacturer
+
+JN1: Nissan, Passenger vehicle [D3
+
+Gl-37 39
+===== PDF page 36 =====
+40
+
+IDENTIFICATION INFORMATION
+
+IDENTIFICATION PLATE
+
+Identification Number (Cont'd)
+
+( NISSAN MOTOR CO, LTD. JAPAN
+HN
+no D8 Cok A
+MODEL
+MODELO Pi
+O Mitamomwon A A 0
+27 oro A A «
+Soa Ts tk Ly -S.
+hs PLANTA
+HEADERS SH wow
+
+OOOO HA WN =
+
+Type
+
+Vehicle identification number (Chassis number}
+Modei
+
+Body color code
+
+Trim color code
+
+Engine model
+
+Engine displacement
+
+Transmission model
+
+Axle model
+
+SGI315
+
+ENGINE SERIAL NUMBER
+
+SGI867
+
+MANUAL TRANSAXLE NUMBER
+
+SGI880
+
+AUTOMATIC TRANSAXLE NUMBER
+
+SGI864
+
+Gl-38
+
+===== PDF page 37 =====
+IDENTIFICATION INFORMATION
+
+Dimensions
+Sedan
+Overall length mm (in) 4,810 (189.4)
+Overail width mm (in) 1,770 (69.7)
+Overall height mm (in) 1,415 (65.7)
+. 1,530 (60.2)*1 MA
+Front tread mm (in) 1.520 (59.8)*2
+. 1,510 (59.4)*1
+Rear tread mm (in) 1,500 (59.1)2 EM
+Wheelbase mm (in) 2,700 (106.3)
+Gross vehicle weight rating ~~ kg (Ib) 1G
+
+See the “FMVSS certifi-
+
+Gross axle weight rating
+cation label” on the
+
+Front kg Ib) drivers side lock pillar. E®
+Rear kg (Ib)
+*1: For models with steel wheels EE
+*2: For models with aluminum wheels PIE
+Wheels and Tires cL
+Steel 15 x 6JJ
+Offset mm (in) | 40 (1.57) MT
+Road wheel ] 15 X 8.5JJ
+Aluminum 16 x 6.50
+Offset mm (in) | 45 (1.77) AT
+P205/65R15 92S
+Conventional P205/65R15 92H FA
+P215/55R16 91H
+Tire size
+Conventional*1
+Spare T125/70D16*2 RA
+T125/90D16%2, *3
+*1: For Canada RIE
+*2: For U.S.A. BR
+*3: For models with viscous LSD
+Sr
+RS
+BT
+[iA
+EL
+IDX
+
+Gl-39 41
+===== PDF page 38 =====
+42
+
+LIFTING POINTS AND TOW TRUCK TOWING
+
+SPECIAL SERVICE TOOLS
+
+The actual shapes of Kent-Moore tools may differ from those of special service tools illustrated here.
+
+Preparation
+
+Tool number
+{Kent-Moore number)
+Tool name
+
+Description
+
+LM4086-0200
+( —
+Board on attachment
+
+NTOO1
+
+LM4519-0000
+( —)
+Safety stand attachment
+
+NT002
+
+Side sil!
+
+Attachment
+
+(SST. No. LM4086-0200)
+
+AGIO16
+
+Board-on Lift
+
+CAUTION:
+
+Make sure vehicle is empty when lifting.
+
+e The board-on lift attachment (LM4086-0200) set at front
+end of vehicle should be set on the front of the sill under
+the front door opening.
+
+eo Position attachments at front and rear ends of board-on
+lift.
+
+Gl-40
+===== PDF page 39 =====
+LIFTING POINTS AND TOW TRUCK TOWING
+
+Garage Jack and Safety Stand
+
+WARNING:
+¢ Never get under the vehicle while it is supported only by the jack. Always use safety stands when
+
+you have to get under the vehicle.
+® Place wheel chocks at both front and back of the wheels on the ground.
+
+Garage jack points
+
+SU Note: LGC
+2 Safety stand
+3 19! 7 points are the
+
+‘ll same as panto-
+graph jack EC
+points,
+
+= E
+CL
+
+Use safety stand adapter
+as shown for stable support.
+
+Attachment \
+
+SST No. LM4513-0000
+
+Fit the lower side MT
+
+wil sill into groove.
+
+Safety stand SGI1902
+
+Gl-41 43
+===== PDF page 40 =====
+44
+
+LIFTING POINTS AND TOW TRUCK TOWING
+
+2-pole Lift
+WARNING:
+When lifting the vehicle, open the lift arms as wide as possible and ensure that the front and rear of
+
+the vehicle are well balanced.
+When setting the lift arm, do not allow the arm to contact the brake tubes and fuel lines.
+
+Note:
+
+Lift-up points
+are the same as
+pantograph jack
+points,
+
+Put the sill in the groove of the lift pad to prevent the
+sill from deforming. If the pad does not have a groove,
+
+JER pad prepare a suitable attachment with one.
+Silt
+
+SG1903
+
+Gl-42
+===== PDF page 41 =====
+LIFTING POINTS AND TOW TRUCK TOWING
+
+Tow Truck Towing
+
+CAUTION:
+
+e¢ When towing, make sure that the transaxle, axles, steering
+system, and powertrain are in working condition. If any
+unit is damaged, towing dollies, or a flat bed truck must
+be used.
+
+e Always attach safety chains before towing. MA
+
+NISSAN recommends that the vehicle be towed with the driving
+
+(front) wheels off the ground as illustrated.
+
+CAUTION: EM
+
+e Always release the parking brake when towing the vehicle
+with the front wheels raised with the rear wheels on the
+ground.
+
+eo When towing manual transaxle models with the front
+wheels on the ground (If a towing dollies does not be
+used), turn the ignition key to the OFF position, and EC
+secure the steering wheel in the straight-ahead position
+with a rope or similar device. Never place the ignition key
+in the LOCK position. This will result in damage to the Fiz
+steering lock mechanism.
+Move the shift lever to the N (Neutral) position.
+
+sciossl ® Never tow an automatic transaxle model with the rear CL |
+
+wheels raised and the front wheels on the ground. This
+
+: may cause serious and expensive damage to the tran-
+Aut i | pa . p
+utomatic transaxle mode saxle. If it is necessary to tow the vehicle with the rear bur
+
+wheels raised, always use towing dollies under the front
+
+wheels. o—
+e Never tow an automatic transaxle model from the rear (i.e., AT
+
+backward) with four wheels on the ground. This may |
+
+cause serious and expensive damage to the transaxle. EA |
+
+VEHICLE RECOVERY (Freeing a stuck vehicle) 3A |
+
+e Tow chains or cables must be attached only to the main
+structural members of the vehicle. —
+
+e Pulling devices should be routed so they do not touch any ST
+part of the suspension, steering, brake or cooling sys-
+tems.
+
+e Always pull the cable straight out from the front or rear of RS
+the vehicle. Never pull on the vehicle at a sideways angle.
+
+e Pulling devices such as ropes or canvas straps are not
+recommended for use in vehicle towing or recovery. Br
+
+SGI1987
+
+Gl-43 45 |
+===== PDF page 42 =====
+TIGHTENING TORQUE OF STANDARD BOLTS
+
+i ing t Without lubricant
+Bolt diam- bic Tightening torque (Without lubricant)
+Grade Bolt size eter” fi Hexagon head bolt Hexagon flange bolt
+mm N'm kg-m ft-lb in-Ib N-m kg-m ft-lo in-lb
+M6 6.0 1.0 5.1 0.52 3.8 45.1 6.1 0.62 45 53.8
+1.25 13 1.3 9 — 15 1.5 1 —
+M8 8.0
+1.0 13 1.3 9 — 16 1.6 12 —
+1.5 25 2.5 18 — 29 3.0 22 —
+47 M10 10.0
+1.25 25 2.6 19 — 30 3.1 22 —
+1.75 42 4.3 31 — 51 5.2 38 —
+M12 12.0
+1.25 46 4.7 34 -_ 56 57 41 —
+M14 14.0 1.5 74 7.5 54 — 88 9.0 65 —
+M6 6.0 1.0 8.4 0.86 6.2 74.6 10 1.0 7 87
+1.25 21 2.1 15 — 25 2.5 18 —
+M8 8.0
+1.0 22 22 16 — 26 27 20 -
+1.5 41 4.2 30 — 48 4.9 35 —
+7T M10 10.0
+1.25 43 4.4 32 om 51 5.2 38 —
+1.75 71 7.2 52 _— 84 8.6 62 —
+M12 12.0
+1.25 77 7.9 57 — 92 9.4 68 se
+M14 14.0 15 127 13.0 94 — 147 15.0 108 —_
+M6 6.0 1.0 12 1.2 9 — 15 1.5 kh! —
+1.25 29 3.0 22 — 35 3.6 26 —
+M8 8.0
+1.0 31 3.2 23 — 37 38 27 re
+1.5 59 6.0 43 — 70 71 51 —
+aT M10 10.0
+1.25 62 6.3 46 — 74 75 54 —
+1.75 98 10.0 72 — 118 12.0 87 —
+M12 12.0
+1.25 108 11.0 80 —- 137 14.0 101 —
+M14 14.0 1.5 177 18.0 130 — 206 21.0 152 -_
+
+1. Special parts are excluded.
+2. This standard is applicable to bolts having the follow-
+ing marks embossed on the bolt head.
+
+Grade Mark
+47 .. 4
+771 .. 7
+LS 9
+
+*: Nominal diameter
+
+T
+
+Nominal diameter of bolt threads (Unit: mm)
+
+M
+
+Metric screw threads
+
+46 Gl-44
+===== PDF page 43 =====
+SAE J1930 TERMINOLOGY LIST
+
+SAE J1930 Terminology List
+
+All emission related terms used in this publication in accordance with SAE J1930 are listed. Accordingly, new
+terms, new acronyms/abbreviations and old terms are listed in the following chart.
+
+NEW TERM
+
+NEW ACRONYM /
+
+“**. Not applicable
+Kl
+OLD TERM
+
+ABBREVIATION
+Air cleaner ACL Alr cleaner (MIA
+Barometric pressure BARO hi
+Barometric pressure sensor-BCDD BAROS-BCDD BCDD EN)
+Camshaft position CMP hl
+Camshait position sensor CMPS Crank angle sensor LE
+Canister ha Canister
+Carburetor CARB Carburetor 56
+Charge air cooler CAC Intercooler
+Closed loop CL Closed loop EE |
+Closed throttle position switch CTP switch Idle switch
+Clutch pedal position switch CPP switch Clutch switch
+Continuous fuel injection system CFI system he CL |
+Continuous trap oxidizer system CTOX system fle
+Crankshaft position CKP hl MT
+Crankshaft position sensor CKPS |
+Data link connector DLC ha AT
+Data link connector for CONSULT DLC for CONSULT Diagnostic connector tor CONSULT
+Diagnostic test mode DTM Diagnostic mode BA |
+
+Diagnostic test mode selector
+
+DTM selector
+
+Diagnostic mode selector
+
+Diagnostic test mode | DTM | Mode | RA
+Diagnostic test mode DTM I Mode II |
+Diagnostic trouble code DTC Malfunction code rs
+Direct fuel injection system DFI system hh BR |
+Distributor ignition system DI system fgnition timing control _
+Early fuel evaporation-mixture heater EFE-mixture heater Mixture heater Sl i
+Early fuel evaporation system EFE system Mixture heater control |
+aly erasable programmable read only EEPROM rer RS
+Electronic ignition system El system Ignition timing control BT |
+Engine control EC hel
+Engine control module ECM ECCS control unit HA |
+Engine coolant temperature ECT Engine temperature
+Engine coolant temperature sensor ECTS Engine temperature sensor
+Engine modification EM rr El.
+Engine speed RPM Engine speed
+Erasable programmable read only memory EPROM ha IDX
+Evaporative emission canister EVAP canister Canister |
+Gl-45 47
+===== PDF page 44 =====
+SAE J1930 TERMINOLOGY LIST
+
+SAE J1930 Terminology List (Cont'd)
+
+***: Not applicable
+
+NEW TERM
+
+NEW ACRONYM /
+ABBREVIATION
+
+OLD TERM
+
+Evaporative emission system
+
+EVAP system
+
+Evaporative emission control system
+
+Exhaust gas recirculation valve
+
+EGR valve
+
+EGR valve
+
+Exhaust gas recirculation control-BPT valve
+
+EGRC-BPT valve
+
+BPT valve
+
+Exhaust gas recirculation control-solencid valve
+
+EGRC-solenoid valve
+
+EGR control solenoid valve
+
+Exhaust gas recirculation temperature sensor
+
+EGR temperature sensor
+
+EGRT sensor
+
+Exhaust gas temperature sensor
+
+Flash electrically erasable programmable read
+
+only memory FEEPROM "
+
+Flash erasable programmable read only memory | FEPROM rx
+
+Flexible fuel sensor FFS oe
+
+Flexible fuel system FF system ja
+
+Fuel pressure regulator hel Pressure regulator
+
+Fuel pressure regulator control solenoid valve hd PRVR control solenoid valve
+Fuel trim FT hi
+
+Heated Oxygen sensor HO2S Exhaust gas sensor
+
+Idle air control system IAC system Idle speed control
+
+Idie air control valve-air regulator
+
+IACV-air regulator
+
+Air regulator
+
+Idle air controi valve-auxiliary air control valve
+
+IACV-AAC valve
+
+Auxiliary air control (AAC) valve
+
+Idle air control valve-FICD solenoid valve
+
+IACV-FICD solenoid valve
+
+FICD solenoid valve
+
+Idle air control valve-idle up control solenoid
+valve
+
+IACV-idle up control solenoid
+valve
+
+Idle up control solenoid valve
+
+Idle speed control-FI pot ISC-FI pot Fl pot
+
+Idle speed control system ISC system ax
+
+Ignition control IC ht
+
+Ignition control module ICM a
+
+indirect fuel injection system IFl system oo
+
+Intake air IA Air
+
+Intake air temperature sensor IAT sensor Air temperature sensor
+Knock hi Detonation
+
+Knock sensor KS Detonation sensor
+Malfunction indicator lamp MIL Check engine light
+Manifold absolute pressure MAP ja
+
+Manifold absolute pressure sensor MAPS oe
+
+Manifold differential pressure MDP oe
+
+Manifold differential pressure sensor MDPS x
+
+Gl-46
+===== PDF page 45 =====
+SAE J1930 TERMINOLOGY LIST
+
+SAE J1930 Terminology List (Cont'd)
+
+***: Not applicable
+
+NEW TERM priate OLD TERM
+Manifold surface temperature MST oe
+Manifold surface temperature sensor MSTS
+Manifold vacuum zone MvzZ ha
+Manifold vacuum zone sensor MVZS ha
+Mass air flow sensor MAFS Air flow meter
+
+Mixture control solenoid valve
+
+MC solenoid valve
+
+Air-fuel ratio control solenoid valve
+
+Multiport fue! injection System MFI system Fuel injection control
+Neutral position switch re Neutral switch
+Nonvolatile random access memory NVRAM
+
+On board diagnostic system OBD system Self-diagnosis
+
+Open loop oL Open loop
+Oxidation catalyst oC Catalyst
+
+Oxidation catalytic converter system OC system oe
+
+Oxygen sensor 028 Exhaust gas sensor
+Park position switch had Park switch
+Park/neutral position switch PNP switch Park/neutral switch
+Periodic trap oxidizer system PTOX system re
+
+Positive crankcase ventilation PCV Positive crankcase ventilation
+Positive crankcase ventilation valve PCV valve PCV valve
+Powertrain control module PCM
+
+Programmable read only memory PROM ha
+
+Pulsed secondary air injection control solenoid valve
+
+PAIRC solenoid valve
+
+AlV control solenoid valve
+
+Pulsed secondary air injection system PAIR system Air induction valve (AlV) control
+Pulsed secondary air injection vaive PAIR valve Air induction valve
+Random access memory RAM >
+
+Read only memory ROM hl
+
+Scan tool ST re
+
+Secondary air injection pump AIR pump ex
+
+Secondary air injection system AIR system hi
+
+Sequential multiport fuel injection system SFI system Sequential fuel injection
+Service reminder indicator SRI rer
+
+Simultaneous multiport fuel injection system ha Simultaneous fuel injection
+Smoke puff limiter system SPL system ree
+
+Supercharger SC hi
+
+Supercharger bypass SCB
+
+System readiness test SRT oe
+
+Thermal vacuum valve TV Thermal vacuum valve
+Three way catalyst TWC Catalyst
+
+Three way catalytic converter system TWC system oe
+
+Three way + oxidation catalyst TWC + OC Catalyst
+
+Gl-47
+
+MA
+
+EM
+
+LG
+
+EC
+
+BR
+
+Sr
+
+RS
+
+BI
+
+[FIA
+
+EL
+
+49
+===== PDF page 46 =====
+50
+
+SAE J1930 TERMINOLOGY LIST
+
+SAE J1930 Terminology List (Cont'd)
+
+***: Not applicable
+
+NEW TERM
+
+NEW ACRONYM /
+ABBREVIATION
+
+OLD TERM
+
+~~ Three way + oxidation catalytic converter system
+
+TWC + OC system
+
+ET
+
+Throttle body
+
+TB
+
+Throttle chamber
+SPI body
+
+Throttle body fuel injection system TBI system Fuel injection control
+Throttle position TP Throttle position
+Throttle position sensor TPS Throttle sensor
+Throttle position switch TP switch Throttle switch
+
+Torque converter clutch solenoid valve
+
+TCC solenoid valve
+
+Lock-up cancel solenoid
+
+Lock-up solenoid
+
+Transmission control module TCM A/T control unit
+Turbocharger TC Turbocharger
+
+Vehicle speed sensor VSS Vehicle speed sensor
+Volume air flow sensor VAFS Air flow meter
+
+Warm up oxidation catalyst WU-OC Catalyst
+
+Warm up oxidation catalytic converter system WU-OC system hi
+
+Warm up three way catalyst WU-TWC Catalyst
+
+Warm up three way catalytic converter system WU-TWC system hh
+
+Wide open throttle position switch WOTP switch Full switch
+
+Gl-48

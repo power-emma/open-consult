@@ -1,0 +1,4111 @@
+  0.000115 ## open /dev/ttyUSB0 at 2026-11-14T14:39:32
+  0.000152 ## cmd: --test-id 7.5-reg-scan-DC --ecu DC reg-scan -v
+  0.000173 TX 30
+  0.008646 RX cf
+  0.209183 TX ff
+  0.489473 TX ff
+  0.560016 TX dc
+  0.560274 RX 00
+  0.560301 RX 00
+  0.563254 RX 23
+  0.563303 ## init ok id=DC attempt=1 secs=0.003
+  0.563323 TX 5a 00
+  0.573551 RX fe
+  1.074260 ## command try 1 failed: bad echo fe, expected a5 00
+  1.074297 TX 30
+  1.078966 RX cf
+  1.179433 TX 5a 00
+  1.187662 RX fe
+  1.688335 ## command try 2 failed: bad echo fe, expected a5 00
+  1.688383 TX 30
+  1.692393 RX cf
+  1.792530 TX 5a 00
+  1.801265 RX fe
+  2.302132 ## command try 3 failed: bad echo fe, expected a5 00
+  2.302165 TX 30
+  2.305735 RX cf
+  2.406184 ## reg 00 unsupported: bad echo fe, expected a5 00
+  2.606483 TX 5a 01
+  2.612573 RX fe
+  3.113407 ## command try 1 failed: bad echo fe, expected a5 01
+  3.113441 TX 30
+  3.117662 RX cf
+  3.217902 TX 5a 01
+  3.226891 RX fe
+  3.727466 ## command try 2 failed: bad echo fe, expected a5 01
+  3.727502 TX 30
+  3.731415 RX cf
+  3.831573 TX 5a 01
+  3.840274 RX fe
+  4.340863 ## command try 3 failed: bad echo fe, expected a5 01
+  4.340897 TX 30
+  4.344685 RX cf
+  4.444880 ## reg 01 unsupported: bad echo fe, expected a5 01
+  4.645418 TX 5a 02
+  4.651708 RX fe
+  5.152550 ## command try 1 failed: bad echo fe, expected a5 02
+  5.152584 TX 30
+  5.157218 RX cf
+  5.257595 TX 5a 02
+  5.265771 RX fe
+  5.766384 ## command try 2 failed: bad echo fe, expected a5 02
+  5.766419 TX 30
+  5.770487 RX cf
+  5.870929 TX 5a 02
+  5.879441 RX fe
+  6.379596 ## command try 3 failed: bad echo fe, expected a5 02
+  6.379629 TX 30
+  6.384084 RX cf
+  6.484448 ## reg 02 unsupported: bad echo fe, expected a5 02
+  6.684772 TX 5a 03
+  6.690661 RX fe
+  7.191315 ## command try 1 failed: bad echo fe, expected a5 03
+  7.191349 TX 30
+  7.196233 RX cf
+  7.296680 TX 5a 03
+  7.305151 RX fe
+  7.805999 ## command try 2 failed: bad echo fe, expected a5 03
+  7.806033 TX 30
+  7.809670 RX cf
+  7.910117 TX 5a 03
+  7.918563 RX fe
+  8.419211 ## command try 3 failed: bad echo fe, expected a5 03
+  8.419244 TX 30
+  8.423288 RX cf
+  8.523721 ## reg 03 unsupported: bad echo fe, expected a5 03
+  8.724065 TX 5a 04
+  8.729646 RX fe
+  9.230235 ## command try 1 failed: bad echo fe, expected a5 04
+  9.230268 TX 30
+  9.235315 RX cf
+  9.335768 TX 5a 04
+  9.344099 RX fe
+  9.844814 ## command try 2 failed: bad echo fe, expected a5 04
+  9.844846 TX 30
+  9.848841 RX cf
+  9.949283 TX 5a 04
+  9.957769 RX fe
+ 10.458399 ## command try 3 failed: bad echo fe, expected a5 04
+ 10.458432 TX 30
+ 10.462324 RX cf
+ 10.562773 ## reg 04 unsupported: bad echo fe, expected a5 04
+ 10.763141 TX 5a 05
+ 10.769021 RX fe
+ 11.269605 ## command try 1 failed: bad echo fe, expected a5 05
+ 11.269642 TX 30
+ 11.274580 RX cf
+ 11.375023 TX 5a 05
+ 11.383541 RX fe
+ 11.884136 ## command try 2 failed: bad echo fe, expected a5 05
+ 11.884167 TX 30
+ 11.888064 RX cf
+ 11.988503 TX 5a 05
+ 11.996974 RX fe
+ 12.497563 ## command try 3 failed: bad echo fe, expected a5 05
+ 12.497597 TX 30
+ 12.501611 RX cf
+ 12.602043 ## reg 05 unsupported: bad echo fe, expected a5 05
+ 12.802608 TX 5a 06
+ 12.809216 RX fe
+ 13.309805 ## command try 1 failed: bad echo fe, expected a5 06
+ 13.309839 TX 30
+ 13.313903 RX cf
+ 13.414352 TX 5a 06
+ 13.422639 RX fe
+ 13.923218 ## command try 2 failed: bad echo fe, expected a5 06
+ 13.923252 TX 30
+ 13.927228 RX cf
+ 14.027678 TX 5a 06
+ 14.036074 RX fe
+ 14.536397 ## command try 3 failed: bad echo fe, expected a5 06
+ 14.536436 TX 30
+ 14.540279 RX cf
+ 14.640468 ## reg 06 unsupported: bad echo fe, expected a5 06
+ 14.841024 TX 5a 07
+ 14.848310 RX fe
+ 15.348897 ## command try 1 failed: bad echo fe, expected a5 07
+ 15.348931 TX 30
+ 15.352597 RX cf
+ 15.452771 TX 5a 07
+ 15.461712 RX fe
+ 15.962285 ## command try 2 failed: bad echo fe, expected a5 07
+ 15.962317 TX 30
+ 15.966349 RX cf
+ 16.066823 TX 5a 07
+ 16.075093 RX fe
+ 16.575684 ## command try 3 failed: bad echo fe, expected a5 07
+ 16.575719 TX 30
+ 16.580734 RX cf
+ 16.683925 ## reg 07 unsupported: bad echo fe, expected a5 07
+ 16.884288 TX 5a 08
+ 16.897448 RX fe
+ 17.398303 ## command try 1 failed: bad echo fe, expected a5 08
+ 17.398347 TX 30
+ 17.402032 RX cf
+ 17.502444 TX 5a 08
+ 17.510829 RX fe
+ 18.011689 ## command try 2 failed: bad echo fe, expected a5 08
+ 18.011721 TX 30
+ 18.015350 RX cf
+ 18.115808 TX 5a 08
+ 18.124335 RX fe
+ 18.625189 ## command try 3 failed: bad echo fe, expected a5 08
+ 18.625221 TX 30
+ 18.629728 RX cf
+ 18.730154 ## reg 08 unsupported: bad echo fe, expected a5 08
+ 18.930562 TX 5a 09
+ 18.936453 RX fe
+ 19.437057 ## command try 1 failed: bad echo fe, expected a5 09
+ 19.437092 TX 30
+ 19.440624 RX cf
+ 19.540858 TX 5a 09
+ 19.549511 RX fe
+ 20.050276 ## command try 2 failed: bad echo fe, expected a5 09
+ 20.050310 TX 30
+ 20.054557 RX cf
+ 20.154985 TX 5a 09
+ 20.163447 RX fe
+ 20.664286 ## command try 3 failed: bad echo fe, expected a5 09
+ 20.664320 TX 30
+ 20.668862 RX cf
+ 20.769313 ## reg 09 unsupported: bad echo fe, expected a5 09
+ 20.969656 TX 5a 0a
+ 20.975703 RX fe
+ 21.476542 ## command try 1 failed: bad echo fe, expected a5 0a
+ 21.476578 TX 30
+ 21.480240 RX cf
+ 21.580429 TX 5a 0a
+ 21.589042 RX fe
+ 22.089684 ## command try 2 failed: bad echo fe, expected a5 0a
+ 22.089717 TX 30
+ 22.093705 RX cf
+ 22.194132 TX 5a 0a
+ 22.202504 RX fe
+ 22.703345 ## command try 3 failed: bad echo fe, expected a5 0a
+ 22.703388 TX 30
+ 22.707998 RX cf
+ 22.808433 ## reg 0A unsupported: bad echo fe, expected a5 0a
+ 23.008834 TX 5a 0b
+ 23.014823 RX fe
+ 23.515688 ## command try 1 failed: bad echo fe, expected a5 0b
+ 23.515720 TX 30
+ 23.519327 RX cf
+ 23.619755 TX 5a 0b
+ 23.628196 RX fe
+ 24.128890 ## command try 2 failed: bad echo fe, expected a5 0b
+ 24.128923 TX 30
+ 24.132822 RX cf
+ 24.233257 TX 5a 0b
+ 24.241628 RX fe
+ 24.742485 ## command try 3 failed: bad echo fe, expected a5 0b
+ 24.742520 TX 30
+ 24.747125 RX cf
+ 24.847346 ## reg 0B unsupported: bad echo fe, expected a5 0b
+ 25.047880 TX 5a 0c
+ 25.053829 RX fe
+ 25.554477 ## command try 1 failed: bad echo fe, expected a5 0c
+ 25.554544 TX 30
+ 25.558494 RX cf
+ 25.658652 TX 5a 0c
+ 25.667254 RX fe
+ 26.167891 ## command try 2 failed: bad echo fe, expected a5 0c
+ 26.167924 TX 30
+ 26.172764 RX cf
+ 26.273197 TX 5a 0c
+ 26.281778 RX fe
+ 26.782630 ## command try 3 failed: bad echo fe, expected a5 0c
+ 26.782664 TX 30
+ 26.786192 RX cf
+ 26.891064 ## reg 0C unsupported: bad echo fe, expected a5 0c
+ 27.091393 TX 5a 0d
+ 27.102569 RX fe
+ 27.603205 ## command try 1 failed: bad echo fe, expected a5 0d
+ 27.603238 TX 30
+ 27.607424 RX cf
+ 27.707850 TX 5a 0d
+ 27.716164 RX fe
+ 28.216802 ## command try 2 failed: bad echo fe, expected a5 0d
+ 28.216853 TX 30
+ 28.221811 RX cf
+ 28.322248 TX 5a 0d
+ 28.330829 RX fe
+ 28.831681 ## command try 3 failed: bad echo fe, expected a5 0d
+ 28.831714 TX 30
+ 28.835098 RX cf
+ 28.935324 ## reg 0D unsupported: bad echo fe, expected a5 0d
+ 29.135718 TX 5a 0e
+ 29.141840 RX fe
+ 29.642446 ## command try 1 failed: bad echo fe, expected a5 0e
+ 29.642476 TX 30
+ 29.646504 RX cf
+ 29.746926 TX 5a 0e
+ 29.755467 RX fe
+ 30.256307 ## command try 2 failed: bad echo fe, expected a5 0e
+ 30.256341 TX 30
+ 30.260916 RX cf
+ 30.361288 TX 5a 0e
+ 30.369690 RX fe
+ 30.870391 ## command try 3 failed: bad echo fe, expected a5 0e
+ 30.870425 TX 30
+ 30.874367 RX cf
+ 30.974845 ## reg 0E unsupported: bad echo fe, expected a5 0e
+ 31.175402 TX 5a 0f
+ 31.180924 RX fe
+ 31.681225 ## command try 1 failed: bad echo fe, expected a5 0f
+ 31.681281 TX 30
+ 31.686404 RX cf
+ 31.786845 TX 5a 0f
+ 31.795286 RX fe
+ 32.295996 ## command try 2 failed: bad echo fe, expected a5 0f
+ 32.296030 TX 30
+ 32.299855 RX cf
+ 32.400312 TX 5a 0f
+ 32.408578 RX fe
+ 32.909300 ## command try 3 failed: bad echo fe, expected a5 0f
+ 32.909332 TX 30
+ 32.913442 RX cf
+ 33.013889 ## reg 0F unsupported: bad echo fe, expected a5 0f
+ 33.214473 TX 5a 10
+ 33.220077 RX fe
+ 33.720693 ## command try 1 failed: bad echo fe, expected a5 10
+ 33.720726 TX 30
+ 33.725582 RX cf
+ 33.826026 TX 5a 10
+ 33.834554 RX fe
+ 34.335396 ## command try 2 failed: bad echo fe, expected a5 10
+ 34.335431 TX 30
+ 34.339022 RX cf
+ 34.439233 TX 5a 10
+ 34.447668 RX fe
+ 34.948429 ## command try 3 failed: bad echo fe, expected a5 10
+ 34.948463 TX 30
+ 34.952548 RX cf
+ 35.052997 ## reg 10 unsupported: bad echo fe, expected a5 10
+ 35.253376 TX 5a 11
+ 35.259398 RX fe
+ 35.760254 ## command try 1 failed: bad echo fe, expected a5 11
+ 35.760286 TX 30
+ 35.764605 RX cf
+ 35.865081 TX 5a 11
+ 35.873795 RX fe
+ 36.374459 ## command try 2 failed: bad echo fe, expected a5 11
+ 36.374490 TX 30
+ 36.378426 RX cf
+ 36.478856 TX 5a 11
+ 36.487108 RX fe
+ 36.987746 ## command try 3 failed: bad echo fe, expected a5 11
+ 36.987780 TX 30
+ 36.991388 RX cf
+ 37.096040 ## reg 11 unsupported: bad echo fe, expected a5 11
+ 37.296482 TX 5a 12
+ 37.308588 RX fe
+ 37.809432 ## command try 1 failed: bad echo fe, expected a5 12
+ 37.809467 TX 30
+ 37.813938 RX cf
+ 37.914392 TX 5a 12
+ 37.922854 RX fe
+ 38.423506 ## command try 2 failed: bad echo fe, expected a5 12
+ 38.423538 TX 30
+ 38.427266 RX cf
+ 38.527603 TX 5a 12
+ 38.536269 RX fe
+ 39.036893 ## command try 3 failed: bad echo fe, expected a5 12
+ 39.036925 TX 30
+ 39.040939 RX cf
+ 39.141376 ## reg 12 unsupported: bad echo fe, expected a5 12
+ 39.341949 TX 5a 13
+ 39.347450 RX fe
+ 39.848217 ## command try 1 failed: bad echo fe, expected a5 13
+ 39.848251 TX 30
+ 39.853034 RX cf
+ 39.953244 TX 5a 13
+ 39.961607 RX fe
+ 40.462372 ## command try 2 failed: bad echo fe, expected a5 13
+ 40.462405 TX 30
+ 40.466132 RX cf
+ 40.566418 TX 5a 13
+ 40.575466 RX fe
+ 41.076306 ## command try 3 failed: bad echo fe, expected a5 13
+ 41.076340 TX 30
+ 41.079619 RX cf
+ 41.179897 ## reg 13 unsupported: bad echo fe, expected a5 13
+ 41.380402 TX 5a 14
+ 41.387247 RX fe
+ 41.888097 ## command try 1 failed: bad echo fe, expected a5 14
+ 41.888132 TX 30
+ 41.891765 RX cf
+ 41.992203 TX 5a 14
+ 42.000668 RX fe
+ 42.501497 ## command try 2 failed: bad echo fe, expected a5 14
+ 42.501528 TX 30
+ 42.505545 RX cf
+ 42.605966 TX 5a 14
+ 42.614395 RX fe
+ 43.115240 ## command try 3 failed: bad echo fe, expected a5 14
+ 43.115271 TX 30
+ 43.119659 RX cf
+ 43.220111 ## reg 14 unsupported: bad echo fe, expected a5 14
+ 43.420600 TX 5a 15
+ 43.426481 RX fe
+ 43.927124 ## command try 1 failed: bad echo fe, expected a5 15
+ 43.927158 TX 30
+ 43.931061 RX cf
+ 44.031502 TX 5a 15
+ 44.040065 RX fe
+ 44.540684 ## command try 2 failed: bad echo fe, expected a5 15
+ 44.540718 TX 30
+ 44.544241 RX cf
+ 44.644580 TX 5a 15
+ 44.653400 RX fe
+ 45.154013 ## command try 3 failed: bad echo fe, expected a5 15
+ 45.154047 TX 30
+ 45.159081 RX cf
+ 45.262259 ## reg 15 unsupported: bad echo fe, expected a5 15
+ 45.462618 TX 5a 16
+ 45.475683 RX fe
+ 45.976529 ## command try 1 failed: bad echo fe, expected a5 16
+ 45.976576 TX 30
+ 45.980233 RX cf
+ 46.080614 TX 5a 16
+ 46.089103 RX fe
+ 46.589791 ## command try 2 failed: bad echo fe, expected a5 16
+ 46.589825 TX 30
+ 46.593548 RX cf
+ 46.693922 TX 5a 16
+ 46.702675 RX fe
+ 47.203536 ## command try 3 failed: bad echo fe, expected a5 16
+ 47.203567 TX 30
+ 47.208167 RX cf
+ 47.308555 ## reg 16 unsupported: bad echo fe, expected a5 16
+ 47.509011 TX 5a 17
+ 47.515034 RX fe
+ 48.015641 ## command try 1 failed: bad echo fe, expected a5 17
+ 48.015674 TX 30
+ 48.019455 RX cf
+ 48.119716 TX 5a 17
+ 48.128282 RX fe
+ 48.628653 ## command try 2 failed: bad echo fe, expected a5 17
+ 48.628686 TX 30
+ 48.632642 RX cf
+ 48.732992 TX 5a 17
+ 48.741503 RX fe
+ 49.242180 ## command try 3 failed: bad echo fe, expected a5 17
+ 49.242213 TX 30
+ 49.247394 RX cf
+ 49.347589 ## reg 17 unsupported: bad echo fe, expected a5 17
+ 49.547961 TX 5a 18
+ 49.553852 RX fe
+ 50.054594 ## command try 1 failed: bad echo fe, expected a5 18
+ 50.054627 TX 30
+ 50.058527 RX cf
+ 50.158977 TX 5a 18
+ 50.167479 RX fe
+ 50.667595 ## command try 2 failed: bad echo fe, expected a5 18
+ 50.667629 TX 30
+ 50.672104 RX cf
+ 50.772542 TX 5a 18
+ 50.780843 RX fe
+ 51.281453 ## command try 3 failed: bad echo fe, expected a5 18
+ 51.281485 TX 30
+ 51.286529 RX cf
+ 51.386759 ## reg 18 unsupported: bad echo fe, expected a5 18
+ 51.587332 TX 5a 19
+ 51.593317 RX fe
+ 52.094197 ## command try 1 failed: bad echo fe, expected a5 19
+ 52.094228 TX 30
+ 52.097556 RX cf
+ 52.197958 TX 5a 19
+ 52.206637 RX fe
+ 52.707303 ## command try 2 failed: bad echo fe, expected a5 19
+ 52.707335 TX 30
+ 52.711042 RX cf
+ 52.811492 TX 5a 19
+ 52.820149 RX fe
+ 53.320595 ## command try 3 failed: bad echo fe, expected a5 19
+ 53.320637 TX 30
+ 53.325559 RX cf
+ 53.425931 ## reg 19 unsupported: bad echo fe, expected a5 19
+ 53.626256 TX 5a 1a
+ 53.632372 RX fe
+ 54.132554 ## command try 1 failed: bad echo fe, expected a5 1a
+ 54.132585 TX 30
+ 54.136714 RX cf
+ 54.236911 TX 5a 1a
+ 54.246010 RX fe
+ 54.746852 ## command try 2 failed: bad echo fe, expected a5 1a
+ 54.746887 TX 30
+ 54.750170 RX cf
+ 54.850370 TX 5a 1a
+ 54.859285 RX fe
+ 55.359690 ## command try 3 failed: bad echo fe, expected a5 1a
+ 55.359731 TX 30
+ 55.364836 RX cf
+ 55.467733 ## reg 1A unsupported: bad echo fe, expected a5 1a
+ 55.668015 TX 5a 1b
+ 55.671288 RX a5
+ 55.681269 RX fe
+ 55.681312 ## command try 1 failed: bad echo a5 fe, expected a5 1b
+ 55.681326 TX 30
+ 55.691278 RX cf
+ 55.791477 TX 5a 1b
+ 55.800622 RX fe
+ 56.301403 ## command try 2 failed: bad echo fe, expected a5 1b
+ 56.301439 TX 30
+ 56.304734 RX cf
+ 56.405097 TX 5a 1b
+ 56.413948 RX fe
+ 56.914438 ## command try 3 failed: bad echo fe, expected a5 1b
+ 56.914485 TX 30
+ 56.918546 RX cf
+ 57.018769 ## reg 1B unsupported: bad echo fe, expected a5 1b
+ 57.219060 TX 5a 1c
+ 57.224912 RX fe
+ 57.725588 ## command try 1 failed: bad echo fe, expected a5 1c
+ 57.725621 TX 30
+ 57.730813 RX cf
+ 57.831186 TX 5a 1c
+ 57.839647 RX fe
+ 58.340420 ## command try 2 failed: bad echo fe, expected a5 1c
+ 58.340451 TX 30
+ 58.344059 RX cf
+ 58.444432 TX 5a 1c
+ 58.452674 RX fe
+ 58.953370 ## command try 3 failed: bad echo fe, expected a5 1c
+ 58.953405 TX 30
+ 58.957389 RX cf
+ 59.057757 ## reg 1C unsupported: bad echo fe, expected a5 1c
+ 59.258078 TX 5a 1d
+ 59.265110 RX fe
+ 59.765724 ## command try 1 failed: bad echo fe, expected a5 1d
+ 59.765759 TX 30
+ 59.769753 RX cf
+ 59.870111 TX 5a 1d
+ 59.878722 RX fe
+ 60.379579 ## command try 2 failed: bad echo fe, expected a5 1d
+ 60.379611 TX 30
+ 60.383264 RX cf
+ 60.483702 TX 5a 1d
+ 60.492045 RX fe
+ 60.992685 ## command try 3 failed: bad echo fe, expected a5 1d
+ 60.992718 TX 30
+ 60.996537 RX cf
+ 61.096759 ## reg 1D unsupported: bad echo fe, expected a5 1d
+ 61.297258 TX 5a 1e
+ 61.304220 RX fe
+ 61.804867 ## command try 1 failed: bad echo fe, expected a5 1e
+ 61.804899 TX 30
+ 61.808682 RX cf
+ 61.909140 TX 5a 1e
+ 61.917679 RX fe
+ 62.418307 ## command try 2 failed: bad echo fe, expected a5 1e
+ 62.418342 TX 30
+ 62.422301 RX cf
+ 62.522747 TX 5a 1e
+ 62.531409 RX fe
+ 63.031649 ## command try 3 failed: bad echo fe, expected a5 1e
+ 63.031684 TX 30
+ 63.035542 RX cf
+ 63.135762 ## reg 1E unsupported: bad echo fe, expected a5 1e
+ 63.336295 TX 5a 1f
+ 63.343560 RX fe
+ 63.844189 ## command try 1 failed: bad echo fe, expected a5 1f
+ 63.844221 TX 30
+ 63.848189 RX cf
+ 63.948626 TX 5a 1f
+ 63.957070 RX fe
+ 64.457684 ## command try 2 failed: bad echo fe, expected a5 1f
+ 64.457718 TX 30
+ 64.461268 RX cf
+ 64.561504 TX 5a 1f
+ 64.570158 RX fe
+ 65.070906 ## command try 3 failed: bad echo fe, expected a5 1f
+ 65.070941 TX 30
+ 65.075029 RX cf
+ 65.175487 ## reg 1F unsupported: bad echo fe, expected a5 1f
+ 65.375814 TX 5a 20
+ 65.382585 RX fe
+ 65.883232 ## command try 1 failed: bad echo fe, expected a5 20
+ 65.883268 TX 30
+ 65.887282 RX cf
+ 65.987608 TX 5a 20
+ 65.996102 RX fe
+ 66.496950 ## command try 2 failed: bad echo fe, expected a5 20
+ 66.496984 TX 30
+ 66.500552 RX cf
+ 66.600929 TX 5a 20
+ 66.609443 RX fe
+ 67.110060 ## command try 3 failed: bad echo fe, expected a5 20
+ 67.110093 TX 30
+ 67.114918 RX cf
+ 67.215131 ## reg 20 unsupported: bad echo fe, expected a5 20
+ 67.415702 TX 5a 21
+ 67.421762 RX fe
+ 67.922569 ## command try 1 failed: bad echo fe, expected a5 21
+ 67.922606 TX 30
+ 67.926346 RX cf
+ 68.026824 TX 5a 21
+ 68.035160 RX fe
+ 68.535876 ## command try 2 failed: bad echo fe, expected a5 21
+ 68.535908 TX 30
+ 68.539685 RX cf
+ 68.640134 TX 5a 21
+ 68.648576 RX fe
+ 69.149425 ## command try 3 failed: bad echo fe, expected a5 21
+ 69.149459 TX 30
+ 69.153998 RX cf
+ 69.254320 ## reg 21 unsupported: bad echo fe, expected a5 21
+ 69.454697 TX 5a 22
+ 69.460542 RX fe
+ 69.961336 ## command try 1 failed: bad echo fe, expected a5 22
+ 69.961376 TX 30
+ 69.965218 RX cf
+ 70.065645 TX 5a 22
+ 70.073943 RX fe
+ 70.574708 ## command try 2 failed: bad echo fe, expected a5 22
+ 70.574751 TX 30
+ 70.579762 RX cf
+ 70.680205 TX 5a 22
+ 70.688596 RX fe
+ 71.189213 ## command try 3 failed: bad echo fe, expected a5 22
+ 71.189246 TX 30
+ 71.193250 RX cf
+ 71.293431 ## reg 22 unsupported: bad echo fe, expected a5 22
+ 71.494000 TX 5a 23
+ 71.500057 RX fe
+ 72.000456 ## command try 1 failed: bad echo fe, expected a5 23
+ 72.000491 TX 30
+ 72.004593 RX cf
+ 72.104790 TX 5a 23
+ 72.113497 RX fe
+ 72.614112 ## command try 2 failed: bad echo fe, expected a5 23
+ 72.614146 TX 30
+ 72.617729 RX cf
+ 72.718049 TX 5a 23
+ 72.726905 RX fe
+ 73.227772 ## command try 3 failed: bad echo fe, expected a5 23
+ 73.227804 TX 30
+ 73.232395 RX cf
+ 73.332852 ## reg 23 unsupported: bad echo fe, expected a5 23
+ 73.533199 TX 5a 24
+ 73.539182 RX fe
+ 74.039853 ## command try 1 failed: bad echo fe, expected a5 24
+ 74.039885 TX 30
+ 74.043818 RX cf
+ 74.144246 TX 5a 24
+ 74.152500 RX fe
+ 74.653179 ## command try 2 failed: bad echo fe, expected a5 24
+ 74.653213 TX 30
+ 74.658063 RX cf
+ 74.758508 TX 5a 24
+ 74.766626 RX fe
+ 75.267220 ## command try 3 failed: bad echo fe, expected a5 24
+ 75.267253 TX 30
+ 75.271538 RX cf
+ 75.371780 ## reg 24 unsupported: bad echo fe, expected a5 24
+ 75.572351 TX 5a 25
+ 75.578288 RX fe
+ 76.079148 ## command try 1 failed: bad echo fe, expected a5 25
+ 76.079180 TX 30
+ 76.082781 RX cf
+ 76.183229 TX 5a 25
+ 76.191708 RX fe
+ 76.692500 ## command try 2 failed: bad echo fe, expected a5 25
+ 76.692554 TX 30
+ 76.697372 RX cf
+ 76.797798 TX 5a 25
+ 76.806250 RX fe
+ 77.307111 ## command try 3 failed: bad echo fe, expected a5 25
+ 77.307145 TX 30
+ 77.310712 RX cf
+ 77.411154 ## reg 25 unsupported: bad echo fe, expected a5 25
+ 77.611455 TX 5a 26
+ 77.617180 RX fe
+ 78.117998 ## command try 1 failed: bad echo fe, expected a5 26
+ 78.118030 TX 30
+ 78.122085 RX cf
+ 78.222510 TX 5a 26
+ 78.230868 RX fe
+ 78.731533 ## command try 2 failed: bad echo fe, expected a5 26
+ 78.731566 TX 30
+ 78.736337 RX cf
+ 78.836777 TX 5a 26
+ 78.845252 RX fe
+ 79.345595 ## command try 3 failed: bad echo fe, expected a5 26
+ 79.345625 TX 30
+ 79.349800 RX cf
+ 79.450017 ## reg 26 unsupported: bad echo fe, expected a5 26
+ 79.650483 TX 5a 27
+ 79.656474 RX fe
+ 80.157344 ## command try 1 failed: bad echo fe, expected a5 27
+ 80.157390 TX 30
+ 80.162016 RX cf
+ 80.262459 TX 5a 27
+ 80.270623 RX fe
+ 80.771280 ## command try 2 failed: bad echo fe, expected a5 27
+ 80.771328 TX 30
+ 80.775162 RX cf
+ 80.875539 TX 5a 27
+ 80.884378 RX fe
+ 81.384987 ## command try 3 failed: bad echo fe, expected a5 27
+ 81.385025 TX 30
+ 81.388708 RX cf
+ 81.489145 ## reg 27 unsupported: bad echo fe, expected a5 27
+ 81.689504 TX 5a 28
+ 81.695574 RX fe
+ 82.196186 ## command try 1 failed: bad echo fe, expected a5 28
+ 82.196214 TX 30
+ 82.200943 RX cf
+ 82.301310 TX 5a 28
+ 82.310122 RX fe
+ 82.810446 ## command try 2 failed: bad echo fe, expected a5 28
+ 82.810522 TX 30
+ 82.814325 RX cf
+ 82.914585 TX 5a 28
+ 82.923352 RX fe
+ 83.423607 ## command try 3 failed: bad echo fe, expected a5 28
+ 83.423683 TX 30
+ 83.427772 RX cf
+ 83.528028 ## reg 28 unsupported: bad echo fe, expected a5 28
+ 83.728456 TX 5a 29
+ 83.734656 RX fe
+ 84.235241 ## command try 1 failed: bad echo fe, expected a5 29
+ 84.235284 TX 30
+ 84.240157 RX cf
+ 84.340535 TX 5a 29
+ 84.348949 RX fe
+ 84.849434 ## command try 2 failed: bad echo fe, expected a5 29
+ 84.849509 TX 30
+ 84.853386 RX cf
+ 84.953591 TX 5a 29
+ 84.962670 RX fe
+ 85.463468 ## command try 3 failed: bad echo fe, expected a5 29
+ 85.463499 TX 30
+ 85.466948 RX cf
+ 85.567167 ## reg 29 unsupported: bad echo fe, expected a5 29
+ 85.767474 TX 5a 2a
+ 85.773570 RX fe
+ 86.274207 ## command try 1 failed: bad echo fe, expected a5 2a
+ 86.274266 TX 30
+ 86.279086 RX cf
+ 86.379314 TX 5a 2a
+ 86.388045 RX fe
+ 86.888454 ## command try 2 failed: bad echo fe, expected a5 2a
+ 86.888501 TX 30
+ 86.892630 RX cf
+ 86.992864 TX 5a 2a
+ 87.001659 RX fe
+ 87.503070 ## command try 3 failed: bad echo fe, expected a5 2a
+ 87.503166 TX 30
+ 87.506159 RX cf
+ 87.606522 ## reg 2A unsupported: bad echo fe, expected a5 2a
+ 87.806850 TX 5a 2b
+ 87.813815 RX fe
+ 88.314506 ## command try 1 failed: bad echo fe, expected a5 2b
+ 88.314578 TX 30
+ 88.318292 RX cf
+ 88.418430 TX 5a 2b
+ 88.427510 RX fe
+ 88.928248 ## command try 2 failed: bad echo fe, expected a5 2b
+ 88.928280 TX 30
+ 88.931763 RX cf
+ 89.031912 TX 5a 2b
+ 89.040592 RX fe
+ 89.541238 ## command try 3 failed: bad echo fe, expected a5 2b
+ 89.541272 TX 30
+ 89.545187 RX cf
+ 89.645399 ## reg 2B unsupported: bad echo fe, expected a5 2b
+ 89.845583 TX 5a 2c
+ 89.853059 RX fe
+ 90.353420 ## command try 1 failed: bad echo fe, expected a5 2c
+ 90.353452 TX 30
+ 90.357586 RX cf
+ 90.457892 TX 5a 2c
+ 90.466593 RX fe
+ 90.967208 ## command try 2 failed: bad echo fe, expected a5 2c
+ 90.967242 TX 30
+ 90.971226 RX cf
+ 91.071434 TX 5a 2c
+ 91.079835 RX fe
+ 91.580494 ## command try 3 failed: bad echo fe, expected a5 2c
+ 91.580527 TX 30
+ 91.584580 RX cf
+ 91.685025 ## reg 2C unsupported: bad echo fe, expected a5 2c
+ 91.885418 TX 5a 2d
+ 91.892366 RX fe
+ 92.393227 ## command try 1 failed: bad echo fe, expected a5 2d
+ 92.393262 TX 30
+ 92.396714 RX cf
+ 92.497145 TX 5a 2d
+ 92.505607 RX fe
+ 93.006481 ## command try 2 failed: bad echo fe, expected a5 2d
+ 93.006515 TX 30
+ 93.010090 RX cf
+ 93.110528 TX 5a 2d
+ 93.119055 RX fe
+ 93.619666 ## command try 3 failed: bad echo fe, expected a5 2d
+ 93.619700 TX 30
+ 93.624472 RX cf
+ 93.724928 ## reg 2D unsupported: bad echo fe, expected a5 2d
+ 93.925254 TX 5a 2e
+ 93.931186 RX fe
+ 94.431397 ## command try 1 failed: bad echo fe, expected a5 2e
+ 94.431441 TX 30
+ 94.435548 RX cf
+ 94.535776 TX 5a 2e
+ 94.544522 RX fe
+ 95.045175 ## command try 2 failed: bad echo fe, expected a5 2e
+ 95.045208 TX 30
+ 95.049099 RX cf
+ 95.149484 TX 5a 2e
+ 95.158206 RX fe
+ 95.659048 ## command try 3 failed: bad echo fe, expected a5 2e
+ 95.659085 TX 30
+ 95.663662 RX cf
+ 95.764123 ## reg 2E unsupported: bad echo fe, expected a5 2e
+ 95.964510 TX 5a 2f
+ 95.970313 RX fe
+ 96.470590 ## command try 1 failed: bad echo fe, expected a5 2f
+ 96.470628 TX 30
+ 96.484834 RX cf
+ 96.585285 TX 5a 2f
+ 96.593626 RX fe
+ 97.094344 ## command try 2 failed: bad echo fe, expected a5 2f
+ 97.094389 TX 30
+ 97.099287 RX cf
+ 97.199726 TX 5a 2f
+ 97.208211 RX fe
+ 97.708884 ## command try 3 failed: bad echo fe, expected a5 2f
+ 97.708918 TX 30
+ 97.712797 RX cf
+ 97.813232 ## reg 2F unsupported: bad echo fe, expected a5 2f
+ 98.013598 TX 5a 30
+ 98.019384 RX fe
+ 98.520089 ## command try 1 failed: bad echo fe, expected a5 30
+ 98.520123 TX 30
+ 98.523929 RX cf
+ 98.624375 TX 5a 30
+ 98.632632 RX fe
+ 99.133276 ## command try 2 failed: bad echo fe, expected a5 30
+ 99.133310 TX 30
+ 99.138336 RX cf
+ 99.238810 TX 5a 30
+ 99.247262 RX fe
+ 99.747596 ## command try 3 failed: bad echo fe, expected a5 30
+ 99.747630 TX 30
+ 99.751648 RX cf
+ 99.852103 ## reg 30 unsupported: bad echo fe, expected a5 30
+100.052425 TX 5a 31
+100.058482 RX fe
+100.559098 ## command try 1 failed: bad echo fe, expected a5 31
+100.559132 TX 30
+100.562790 RX cf
+100.663165 TX 5a 31
+100.671771 RX fe
+101.172516 ## command try 2 failed: bad echo fe, expected a5 31
+101.172550 TX 30
+101.177536 RX cf
+101.277968 TX 5a 31
+101.286430 RX fe
+101.787272 ## command try 3 failed: bad echo fe, expected a5 31
+101.787311 TX 30
+101.800636 RX cf
+101.900900 ## reg 31 unsupported: bad echo fe, expected a5 31
+102.101438 TX 5a 32
+102.107648 RX fe
+102.608401 ## command try 1 failed: bad echo fe, expected a5 32
+102.608432 TX 30
+102.612313 RX cf
+102.712665 TX 5a 32
+102.720944 RX fe
+103.221731 ## command try 2 failed: bad echo fe, expected a5 32
+103.221765 TX 30
+103.226621 RX cf
+103.326864 TX 5a 32
+103.335660 RX fe
+103.836523 ## command try 3 failed: bad echo fe, expected a5 32
+103.836557 TX 30
+103.840173 RX cf
+103.940633 ## reg 32 unsupported: bad echo fe, expected a5 32
+104.141209 TX 5a 33
+104.146897 RX fe
+104.647526 ## command try 1 failed: bad echo fe, expected a5 33
+104.647560 TX 30
+104.651516 RX cf
+104.751935 TX 5a 33
+104.760268 RX fe
+105.261143 ## command try 2 failed: bad echo fe, expected a5 33
+105.261177 TX 30
+105.265658 RX cf
+105.365829 TX 5a 33
+105.374700 RX fe
+105.875397 ## command try 3 failed: bad echo fe, expected a5 33
+105.875429 TX 30
+105.879108 RX cf
+105.979406 ## reg 33 unsupported: bad echo fe, expected a5 33
+106.179874 TX 5a 34
+106.186060 RX fe
+106.686900 ## command try 1 failed: bad echo fe, expected a5 34
+106.686932 TX 30
+106.691619 RX cf
+106.792040 TX 5a 34
+106.799376 RX fe
+107.300833 ## command try 2 failed: bad echo fe, expected a5 34
+107.300868 TX 30
+107.304650 RX cf
+107.405120 TX 5a 34
+107.413641 RX fe
+107.914263 ## command try 3 failed: bad echo fe, expected a5 34
+107.914296 TX 30
+107.918415 RX cf
+108.018849 ## reg 34 unsupported: bad echo fe, expected a5 34
+108.219325 TX 5a 35
+108.225044 RX fe
+108.725459 ## command try 1 failed: bad echo fe, expected a5 35
+108.725492 TX 30
+108.730567 RX cf
+108.830995 TX 5a 35
+108.839504 RX fe
+109.340177 ## command try 2 failed: bad echo fe, expected a5 35
+109.340212 TX 30
+109.344098 RX cf
+109.444280 TX 5a 35
+109.452469 RX fe
+109.953214 ## command try 3 failed: bad echo fe, expected a5 35
+109.953246 TX 30
+109.957397 RX cf
+110.057598 ## reg 35 unsupported: bad echo fe, expected a5 35
+110.257926 TX 5a 36
+110.264009 RX fe
+110.764679 ## command try 1 failed: bad echo fe, expected a5 36
+110.764711 TX 30
+110.769523 RX cf
+110.869962 TX 5a 36
+110.878628 RX fe
+111.379195 ## command try 2 failed: bad echo fe, expected a5 36
+111.379240 TX 30
+111.382688 RX cf
+111.482943 TX 5a 36
+111.491643 RX fe
+111.992480 ## command try 3 failed: bad echo fe, expected a5 36
+111.992512 TX 30
+111.996604 RX cf
+112.097046 ## reg 36 unsupported: bad echo fe, expected a5 36
+112.297604 TX 5a 37
+112.304175 RX fe
+112.804575 ## command try 1 failed: bad echo fe, expected a5 37
+112.804609 TX 30
+112.808742 RX cf
+112.909186 TX 5a 37
+112.917679 RX fe
+113.418345 ## command try 2 failed: bad echo fe, expected a5 37
+113.418387 TX 30
+113.422218 RX cf
+113.522587 TX 5a 37
+113.531276 RX fe
+114.032118 ## command try 3 failed: bad echo fe, expected a5 37
+114.032151 TX 30
+114.035791 RX cf
+114.136217 ## reg 37 unsupported: bad echo fe, expected a5 37
+114.336556 TX 5a 38
+114.343410 RX fe
+114.844120 ## command try 1 failed: bad echo fe, expected a5 38
+114.844155 TX 30
+114.847800 RX cf
+114.948177 TX 5a 38
+114.956948 RX fe
+115.457565 ## command try 2 failed: bad echo fe, expected a5 38
+115.457599 TX 30
+115.461507 RX cf
+115.561942 TX 5a 38
+115.570419 RX fe
+116.071130 ## command try 3 failed: bad echo fe, expected a5 38
+116.071164 TX 30
+116.074704 RX cf
+116.174966 ## reg 38 unsupported: bad echo fe, expected a5 38
+116.375461 TX 5a 39
+116.381622 RX fe
+116.882239 ## command try 1 failed: bad echo fe, expected a5 39
+116.882273 TX 30
+116.887153 RX cf
+116.987606 TX 5a 39
+116.996086 RX fe
+117.496925 ## command try 2 failed: bad echo fe, expected a5 39
+117.496958 TX 30
+117.500659 RX cf
+117.605424 TX 5a 39
+117.609556 RX a5
+117.619522 RX fe
+117.619557 ## command try 3 failed: bad echo a5 fe, expected a5 39
+117.619565 TX 30
+117.629484 RX cf
+117.729950 ## reg 39 unsupported: bad echo a5 fe, expected a5 39
+117.930315 TX 5a 3a
+117.936269 RX fe
+118.437045 ## command try 1 failed: bad echo fe, expected a5 3a
+118.437078 TX 30
+118.440715 RX cf
+118.540944 TX 5a 3a
+118.549731 RX fe
+119.050377 ## command try 2 failed: bad echo fe, expected a5 3a
+119.050413 TX 30
+119.055366 RX cf
+119.155843 TX 5a 3a
+119.164248 RX fe
+119.665095 ## command try 3 failed: bad echo fe, expected a5 3a
+119.665131 TX 30
+119.668811 RX cf
+119.769251 ## reg 3A unsupported: bad echo fe, expected a5 3a
+119.969576 TX 5a 3b
+119.975407 RX fe
+120.476282 ## command try 1 failed: bad echo fe, expected a5 3b
+120.476318 TX 30
+120.479632 RX cf
+120.579989 TX 5a 3b
+120.588913 RX fe
+121.089752 ## command try 2 failed: bad echo fe, expected a5 3b
+121.089789 TX 30
+121.094077 RX cf
+121.194375 TX 5a 3b
+121.203414 RX fe
+121.704255 ## command try 3 failed: bad echo fe, expected a5 3b
+121.704291 TX 30
+121.707782 RX cf
+121.808240 ## reg 3B unsupported: bad echo fe, expected a5 3b
+122.008656 TX 5a 3c
+122.014527 RX fe
+122.515349 ## command try 1 failed: bad echo fe, expected a5 3c
+122.515429 TX 30
+122.519959 RX cf
+122.623625 TX 5a 3c
+122.628642 RX fe
+123.129493 ## command try 2 failed: bad echo fe, expected a5 3c
+123.129530 TX 30
+123.133428 RX cf
+123.233869 TX 5a 3c
+123.242323 RX fe
+123.743223 ## command try 3 failed: bad echo fe, expected a5 3c
+123.743255 TX 30
+123.746667 RX cf
+123.847044 ## reg 3C unsupported: bad echo fe, expected a5 3c
+124.047546 TX 5a 3d
+124.053626 RX fe
+124.554234 ## command try 1 failed: bad echo fe, expected a5 3d
+124.554271 TX 30
+124.558767 RX cf
+124.659096 TX 5a 3d
+124.667974 RX fe
+125.168835 ## command try 2 failed: bad echo fe, expected a5 3d
+125.168870 TX 30
+125.172530 RX cf
+125.272969 TX 5a 3d
+125.281512 RX fe
+125.782343 ## command try 3 failed: bad echo fe, expected a5 3d
+125.782388 TX 30
+125.785656 RX cf
+125.885929 ## reg 3D unsupported: bad echo fe, expected a5 3d
+126.086418 TX 5a 3e
+126.092746 RX fe
+126.593583 ## command try 1 failed: bad echo fe, expected a5 3e
+126.593619 TX 30
+126.598229 RX cf
+126.698672 TX 5a 3e
+126.707156 RX fe
+127.208011 ## command try 2 failed: bad echo fe, expected a5 3e
+127.208046 TX 30
+127.211626 RX cf
+127.312078 TX 5a 3e
+127.320653 RX fe
+127.821493 ## command try 3 failed: bad echo fe, expected a5 3e
+127.821533 TX 30
+127.835087 RX cf
+127.935546 ## reg 3E unsupported: bad echo fe, expected a5 3e
+128.135996 TX 5a 3f
+128.142014 RX fe
+128.642869 ## command try 1 failed: bad echo fe, expected a5 3f
+128.642902 TX 30
+128.647397 RX cf
+128.747843 TX 5a 3f
+128.756335 RX fe
+129.257212 ## command try 2 failed: bad echo fe, expected a5 3f
+129.257244 TX 30
+129.260897 RX cf
+129.361245 TX 5a 3f
+129.369879 RX fe
+129.870729 ## command try 3 failed: bad echo fe, expected a5 3f
+129.870763 TX 30
+129.874313 RX cf
+129.974778 ## reg 3F unsupported: bad echo fe, expected a5 3f
+130.175196 TX 5a 40
+130.181073 RX fe
+130.681690 ## command try 1 failed: bad echo fe, expected a5 40
+130.681721 TX 30
+130.686621 RX cf
+130.787070 TX 5a 40
+130.795576 RX fe
+131.296418 ## command try 2 failed: bad echo fe, expected a5 40
+131.296451 TX 30
+131.299959 RX cf
+131.400395 TX 5a 40
+131.408717 RX fe
+131.909443 ## command try 3 failed: bad echo fe, expected a5 40
+131.909476 TX 30
+131.913529 RX cf
+132.013986 ## reg 40 unsupported: bad echo fe, expected a5 40
+132.214390 TX 5a 41
+132.220395 RX fe
+132.720594 ## command try 1 failed: bad echo fe, expected a5 41
+132.720627 TX 30
+132.725836 RX cf
+132.826257 TX 5a 41
+132.834669 RX fe
+133.335340 ## command try 2 failed: bad echo fe, expected a5 41
+133.335384 TX 30
+133.339224 RX cf
+133.439665 TX 5a 41
+133.448209 RX fe
+133.948896 ## command try 3 failed: bad echo fe, expected a5 41
+133.948929 TX 30
+133.952766 RX cf
+134.053216 ## reg 41 unsupported: bad echo fe, expected a5 41
+134.253545 TX 5a 42
+134.259570 RX fe
+134.760409 ## command try 1 failed: bad echo fe, expected a5 42
+134.760444 TX 30
+134.764909 RX cf
+134.865348 TX 5a 42
+134.873842 RX fe
+135.374464 ## command try 2 failed: bad echo fe, expected a5 42
+135.374503 TX 30
+135.378270 RX cf
+135.478728 TX 5a 42
+135.487214 RX fe
+135.987982 ## command try 3 failed: bad echo fe, expected a5 42
+135.988014 TX 30
+135.992491 RX cf
+136.092851 ## reg 42 unsupported: bad echo fe, expected a5 42
+136.293304 TX 5a 43
+136.299510 RX fe
+136.799972 ## command try 1 failed: bad echo fe, expected a5 43
+136.800006 TX 30
+136.804026 RX cf
+136.904464 TX 5a 43
+136.912658 RX fe
+137.413381 ## command try 2 failed: bad echo fe, expected a5 43
+137.413416 TX 30
+137.417455 RX cf
+137.517901 TX 5a 43
+137.526372 RX fe
+138.027233 ## command try 3 failed: bad echo fe, expected a5 43
+138.027268 TX 30
+138.031702 RX cf
+138.132086 ## reg 43 unsupported: bad echo fe, expected a5 43
+138.332631 TX 5a 44
+138.338713 RX fe
+138.839550 ## command try 1 failed: bad echo fe, expected a5 44
+138.839585 TX 30
+138.843126 RX cf
+138.943577 TX 5a 44
+138.951987 RX fe
+139.452472 ## command try 2 failed: bad echo fe, expected a5 44
+139.452525 TX 30
+139.456115 RX cf
+139.556331 TX 5a 44
+139.565081 RX fe
+140.065815 ## command try 3 failed: bad echo fe, expected a5 44
+140.065847 TX 30
+140.070870 RX cf
+140.171321 ## reg 44 unsupported: bad echo fe, expected a5 44
+140.371560 TX 5a 45
+140.377692 RX fe
+140.878383 ## command try 1 failed: bad echo fe, expected a5 45
+140.878419 TX 30
+140.881995 RX cf
+140.982353 TX 5a 45
+140.990987 RX fe
+141.491628 ## command try 2 failed: bad echo fe, expected a5 45
+141.491671 TX 30
+141.496695 RX cf
+141.597110 TX 5a 45
+141.605532 RX fe
+142.106216 ## command try 3 failed: bad echo fe, expected a5 45
+142.106249 TX 30
+142.110165 RX cf
+142.210543 ## reg 45 unsupported: bad echo fe, expected a5 45
+142.410821 TX 5a 46
+142.416608 RX fe
+142.917380 ## command try 1 failed: bad echo fe, expected a5 46
+142.917412 TX 30
+142.921298 RX cf
+143.021761 TX 5a 46
+143.030219 RX fe
+143.531061 ## command try 2 failed: bad echo fe, expected a5 46
+143.531094 TX 30
+143.535735 RX cf
+143.636153 TX 5a 46
+143.644655 RX fe
+144.145348 ## command try 3 failed: bad echo fe, expected a5 46
+144.145389 TX 30
+144.149233 RX cf
+144.249659 ## reg 46 unsupported: bad echo fe, expected a5 46
+144.449997 TX 5a 47
+144.455554 RX fe
+144.956234 ## command try 1 failed: bad echo fe, expected a5 47
+144.956285 TX 30
+144.960298 RX cf
+145.060618 TX 5a 47
+145.069299 RX fe
+145.570140 ## command try 2 failed: bad echo fe, expected a5 47
+145.570174 TX 30
+145.574749 RX cf
+145.675203 TX 5a 47
+145.683803 RX fe
+146.184649 ## command try 3 failed: bad echo fe, expected a5 47
+146.184688 TX 30
+146.188237 RX cf
+146.292987 ## reg 47 unsupported: bad echo fe, expected a5 47
+146.493480 TX 5a 48
+146.504624 RX fe
+147.005385 ## command try 1 failed: bad echo fe, expected a5 48
+147.005417 TX 30
+147.010466 RX cf
+147.110602 TX 5a 48
+147.119027 RX fe
+147.619801 ## command try 2 failed: bad echo fe, expected a5 48
+147.619835 TX 30
+147.623624 RX cf
+147.723787 TX 5a 48
+147.732719 RX fe
+148.233342 ## command try 3 failed: bad echo fe, expected a5 48
+148.233383 TX 30
+148.237310 RX cf
+148.337781 ## reg 48 unsupported: bad echo fe, expected a5 48
+148.538269 TX 5a 49
+148.543974 RX fe
+149.044550 ## command try 1 failed: bad echo fe, expected a5 49
+149.044584 TX 30
+149.049521 RX cf
+149.149949 TX 5a 49
+149.158421 RX fe
+149.659005 ## command try 2 failed: bad echo fe, expected a5 49
+149.659047 TX 30
+149.662591 RX cf
+149.763039 TX 5a 49
+149.771765 RX fe
+150.272608 ## command try 3 failed: bad echo fe, expected a5 49
+150.272642 TX 30
+150.276153 RX cf
+150.376538 ## reg 49 unsupported: bad echo fe, expected a5 49
+150.577040 TX 5a 4a
+150.583175 RX fe
+151.084016 ## command try 1 failed: bad echo fe, expected a5 4a
+151.084049 TX 30
+151.088626 RX cf
+151.189067 TX 5a 4a
+151.197584 RX fe
+151.698368 ## command try 2 failed: bad echo fe, expected a5 4a
+151.698435 TX 30
+151.701646 RX cf
+151.801855 TX 5a 4a
+151.810969 RX fe
+152.311811 ## command try 3 failed: bad echo fe, expected a5 4a
+152.311847 TX 30
+152.316280 RX cf
+152.420172 ## reg 4A unsupported: bad echo fe, expected a5 4a
+152.620705 TX 5a 4b
+152.633018 RX fe
+153.133721 ## command try 1 failed: bad echo fe, expected a5 4b
+153.133755 TX 30
+153.137594 RX cf
+153.238040 TX 5a 4b
+153.246506 RX fe
+153.747254 ## command try 2 failed: bad echo fe, expected a5 4b
+153.747285 TX 30
+153.751009 RX cf
+153.851460 TX 5a 4b
+153.859660 RX fe
+154.360406 ## command try 3 failed: bad echo fe, expected a5 4b
+154.360440 TX 30
+154.364432 RX cf
+154.464620 ## reg 4B unsupported: bad echo fe, expected a5 4b
+154.664940 TX 5a 4c
+154.672232 RX fe
+155.172847 ## command try 1 failed: bad echo fe, expected a5 4c
+155.172881 TX 30
+155.176918 RX cf
+155.277341 TX 5a 4c
+155.285494 RX fe
+155.786278 ## command try 2 failed: bad echo fe, expected a5 4c
+155.786309 TX 30
+155.790418 RX cf
+155.890568 TX 5a 4c
+155.899241 RX fe
+156.400072 ## command try 3 failed: bad echo fe, expected a5 4c
+156.400107 TX 30
+156.404685 RX cf
+156.505129 ## reg 4C unsupported: bad echo fe, expected a5 4c
+156.705708 TX 5a 4d
+156.711533 RX fe
+157.212391 ## command try 1 failed: bad echo fe, expected a5 4d
+157.212425 TX 30
+157.216086 RX cf
+157.316463 TX 5a 4d
+157.324631 RX fe
+157.825370 ## command try 2 failed: bad echo fe, expected a5 4d
+157.825406 TX 30
+157.829488 RX cf
+157.929928 TX 5a 4d
+157.938303 RX fe
+158.439154 ## command try 3 failed: bad echo fe, expected a5 4d
+158.439188 TX 30
+158.443896 RX cf
+158.544355 ## reg 4D unsupported: bad echo fe, expected a5 4d
+158.744966 TX 5a 4e
+158.750509 RX fe
+159.250645 ## command try 1 failed: bad echo fe, expected a5 4e
+159.250688 TX 30
+159.255015 RX cf
+159.355458 TX 5a 4e
+159.364011 RX fe
+159.864853 ## command try 2 failed: bad echo fe, expected a5 4e
+159.864888 TX 30
+159.868473 RX cf
+159.968913 TX 5a 4e
+159.977367 RX fe
+160.478205 ## command try 3 failed: bad echo fe, expected a5 4e
+160.478238 TX 30
+160.482948 RX cf
+160.583418 ## reg 4E unsupported: bad echo fe, expected a5 4e
+160.783952 TX 5a 4f
+160.789535 RX fe
+161.290314 ## command try 1 failed: bad echo fe, expected a5 4f
+161.290346 TX 30
+161.293768 RX cf
+161.394233 TX 5a 4f
+161.402955 RX fe
+161.903624 ## command try 2 failed: bad echo fe, expected a5 4f
+161.903657 TX 30
+161.908278 RX cf
+162.008745 TX 5a 4f
+162.017343 RX fe
+162.518135 ## command try 3 failed: bad echo fe, expected a5 4f
+162.518174 TX 30
+162.521670 RX cf
+162.626085 ## reg 4F unsupported: bad echo fe, expected a5 4f
+162.826556 TX 5a 50
+162.838663 RX fe
+163.339451 ## command try 1 failed: bad echo fe, expected a5 50
+163.339483 TX 30
+163.342806 RX cf
+163.443147 TX 5a 50
+163.451718 RX fe
+163.952392 ## command try 2 failed: bad echo fe, expected a5 50
+163.952425 TX 30
+163.957482 RX cf
+164.057904 TX 5a 50
+164.066350 RX fe
+164.567012 ## command try 3 failed: bad echo fe, expected a5 50
+164.567047 TX 30
+164.570669 RX cf
+164.670872 ## reg 50 unsupported: bad echo fe, expected a5 50
+164.871455 TX 5a 51
+164.877629 RX fe
+165.378480 ## command try 1 failed: bad echo fe, expected a5 51
+165.378514 TX 30
+165.382340 RX cf
+165.482789 TX 5a 51
+165.490787 RX fe
+165.991556 ## command try 2 failed: bad echo fe, expected a5 51
+165.991588 TX 30
+165.996580 RX cf
+166.097005 TX 5a 51
+166.105587 RX fe
+166.606442 ## command try 3 failed: bad echo fe, expected a5 51
+166.606476 TX 30
+166.610054 RX cf
+166.710512 ## reg 51 unsupported: bad echo fe, expected a5 51
+166.911110 TX 5a 52
+166.916726 RX fe
+167.417586 ## command try 1 failed: bad echo fe, expected a5 52
+167.417618 TX 30
+167.422267 RX cf
+167.522722 TX 5a 52
+167.531106 RX fe
+168.031711 ## command try 2 failed: bad echo fe, expected a5 52
+168.031744 TX 30
+168.035736 RX cf
+168.136186 TX 5a 52
+168.144640 RX fe
+168.645307 ## command try 3 failed: bad echo fe, expected a5 52
+168.645340 TX 30
+168.649261 RX cf
+168.749699 ## reg 52 unsupported: bad echo fe, expected a5 52
+168.950247 TX 5a 53
+168.955838 RX fe
+169.456461 ## command try 1 failed: bad echo fe, expected a5 53
+169.456492 TX 30
+169.461105 RX cf
+169.561337 TX 5a 53
+169.570001 RX fe
+170.070590 ## command try 2 failed: bad echo fe, expected a5 53
+170.070622 TX 30
+170.074720 RX cf
+170.175098 TX 5a 53
+170.183840 RX fe
+170.684689 ## command try 3 failed: bad echo fe, expected a5 53
+170.684723 TX 30
+170.688311 RX cf
+170.788730 ## reg 53 unsupported: bad echo fe, expected a5 53
+170.989316 TX 5a 54
+170.996002 RX fe
+171.496438 ## command try 1 failed: bad echo fe, expected a5 54
+171.496472 TX 30
+171.500316 RX cf
+171.600789 TX 5a 54
+171.609334 RX fe
+172.110202 ## command try 2 failed: bad echo fe, expected a5 54
+172.110234 TX 30
+172.113640 RX cf
+172.214098 TX 5a 54
+172.222704 RX fe
+172.723548 ## command try 3 failed: bad echo fe, expected a5 54
+172.723585 TX 30
+172.727982 RX cf
+172.831899 ## reg 54 unsupported: bad echo fe, expected a5 54
+173.032450 TX 5a 55
+173.044898 RX fe
+173.545474 ## command try 1 failed: bad echo fe, expected a5 55
+173.545505 TX 30
+173.549576 RX cf
+173.649751 TX 5a 55
+173.658308 RX fe
+174.158987 ## command try 2 failed: bad echo fe, expected a5 55
+174.159018 TX 30
+174.162667 RX cf
+174.263104 TX 5a 55
+174.271885 RX fe
+174.772473 ## command try 3 failed: bad echo fe, expected a5 55
+174.772522 TX 30
+174.777298 RX cf
+174.877750 ## reg 55 unsupported: bad echo fe, expected a5 55
+175.078310 TX 5a 56
+175.084021 RX fe
+175.584870 ## command try 1 failed: bad echo fe, expected a5 56
+175.584903 TX 30
+175.588466 RX cf
+175.688913 TX 5a 56
+175.697394 RX fe
+176.198010 ## command try 2 failed: bad echo fe, expected a5 56
+176.198042 TX 30
+176.202059 RX cf
+176.302476 TX 5a 56
+176.310869 RX fe
+176.811718 ## command try 3 failed: bad echo fe, expected a5 56
+176.811750 TX 30
+176.816399 RX cf
+176.916850 ## reg 56 unsupported: bad echo fe, expected a5 56
+177.117179 TX 5a 57
+177.122825 RX fe
+177.623587 ## command try 1 failed: bad echo fe, expected a5 57
+177.623619 TX 30
+177.627684 RX cf
+177.728123 TX 5a 57
+177.736572 RX fe
+178.237353 ## command try 2 failed: bad echo fe, expected a5 57
+178.237398 TX 30
+178.241268 RX cf
+178.341686 TX 5a 57
+178.349896 RX fe
+178.850568 ## command try 3 failed: bad echo fe, expected a5 57
+178.850599 TX 30
+178.855675 RX cf
+178.956110 ## reg 57 unsupported: bad echo fe, expected a5 57
+179.156665 TX 5a 58
+179.162335 RX fe
+179.662955 ## command try 1 failed: bad echo fe, expected a5 58
+179.662991 TX 30
+179.666686 RX cf
+179.767056 TX 5a 58
+179.775776 RX fe
+180.276390 ## command try 2 failed: bad echo fe, expected a5 58
+180.276424 TX 30
+180.280499 RX cf
+180.384867 TX 5a 58
+180.389387 RX fe
+180.890249 ## command try 3 failed: bad echo fe, expected a5 58
+180.890281 TX 30
+180.894937 RX cf
+180.995400 ## reg 58 unsupported: bad echo fe, expected a5 58
+181.195935 TX 5a 59
+181.201553 RX fe
+181.702252 ## command try 1 failed: bad echo fe, expected a5 59
+181.702284 TX 30
+181.706108 RX cf
+181.806554 TX 5a 59
+181.814983 RX fe
+182.315611 ## command try 2 failed: bad echo fe, expected a5 59
+182.315645 TX 30
+182.319610 RX cf
+182.420025 TX 5a 59
+182.428392 RX fe
+182.929170 ## command try 3 failed: bad echo fe, expected a5 59
+182.929201 TX 30
+182.933658 RX cf
+183.033999 ## reg 59 unsupported: bad echo fe, expected a5 59
+183.234539 TX 5a 5a
+183.240709 RX fe
+183.741555 ## command try 1 failed: bad echo fe, expected a5 5a
+183.741588 TX 30
+183.745031 RX cf
+183.845485 TX 5a 5a
+183.854009 RX fe
+184.354882 ## command try 2 failed: bad echo fe, expected a5 5a
+184.354916 TX 30
+184.359541 RX cf
+184.459969 TX 5a 5a
+184.468477 RX fe
+184.969321 ## command try 3 failed: bad echo fe, expected a5 5a
+184.969355 TX 30
+184.972649 RX cf
+185.073011 ## reg 5A unsupported: bad echo fe, expected a5 5a
+185.273536 TX 5a 5b
+185.279584 RX fe
+185.780217 ## command try 1 failed: bad echo fe, expected a5 5b
+185.780254 TX 30
+185.784205 RX cf
+185.884662 TX 5a 5b
+185.893147 RX fe
+186.393774 ## command try 2 failed: bad echo fe, expected a5 5b
+186.393808 TX 30
+186.398707 RX cf
+186.499122 TX 5a 5b
+186.507503 RX fe
+187.008166 ## command try 3 failed: bad echo fe, expected a5 5b
+187.008200 TX 30
+187.012022 RX cf
+187.112470 ## reg 5B unsupported: bad echo fe, expected a5 5b
+187.312814 TX 5a 5c
+187.318651 RX fe
+187.819251 ## command try 1 failed: bad echo fe, expected a5 5c
+187.819282 TX 30
+187.824295 RX cf
+187.924614 TX 5a 5c
+187.933123 RX fe
+188.433944 ## command try 2 failed: bad echo fe, expected a5 5c
+188.433976 TX 30
+188.437601 RX cf
+188.538046 TX 5a 5c
+188.546672 RX fe
+189.047479 ## command try 3 failed: bad echo fe, expected a5 5c
+189.047514 TX 30
+189.051289 RX cf
+189.151722 ## reg 5C unsupported: bad echo fe, expected a5 5c
+189.352143 TX 5a 5d
+189.357749 RX fe
+189.858371 ## command try 1 failed: bad echo fe, expected a5 5d
+189.858406 TX 30
+189.863400 RX cf
+189.963575 TX 5a 5d
+189.972429 RX fe
+190.473291 ## command try 2 failed: bad echo fe, expected a5 5d
+190.473326 TX 30
+190.476733 RX cf
+190.576904 TX 5a 5d
+190.585633 RX fe
+191.086394 ## command try 3 failed: bad echo fe, expected a5 5d
+191.086440 TX 30
+191.090450 RX cf
+191.194771 ## reg 5D unsupported: bad echo fe, expected a5 5d
+191.395105 TX 5a 5e
+191.407127 RX fe
+191.907987 ## command try 1 failed: bad echo fe, expected a5 5e
+191.908025 TX 30
+191.912731 RX cf
+192.013165 TX 5a 5e
+192.021719 RX fe
+192.522563 ## command try 2 failed: bad echo fe, expected a5 5e
+192.522598 TX 30
+192.525955 RX cf
+192.626387 TX 5a 5e
+192.635028 RX fe
+193.135715 ## command try 3 failed: bad echo fe, expected a5 5e
+193.135748 TX 30
+193.139571 RX cf
+193.240023 ## reg 5E unsupported: bad echo fe, expected a5 5e
+193.440344 TX 5a 5f
+193.446354 RX fe
+193.947241 ## command try 1 failed: bad echo fe, expected a5 5f
+193.947276 TX 30
+193.951660 RX cf
+194.051927 TX 5a 5f
+194.060653 RX fe
+194.561229 ## command try 2 failed: bad echo fe, expected a5 5f
+194.561271 TX 30
+194.564927 RX cf
+194.665109 TX 5a 5f
+194.673908 RX fe
+195.174706 ## command try 3 failed: bad echo fe, expected a5 5f
+195.174749 TX 30
+195.178762 RX cf
+195.279203 ## reg 5F unsupported: bad echo fe, expected a5 5f
+195.479441 TX 5a 60
+195.485559 RX fe
+195.986412 ## command try 1 failed: bad echo fe, expected a5 60
+195.986449 TX 30
+195.990838 RX cf
+196.091272 TX 5a 60
+196.099523 RX fe
+196.600289 ## command try 2 failed: bad echo fe, expected a5 60
+196.600326 TX 30
+196.604387 RX cf
+196.704815 TX 5a 60
+196.713267 RX fe
+197.214109 ## command try 3 failed: bad echo fe, expected a5 60
+197.214142 TX 30
+197.217763 RX cf
+197.318225 ## reg 60 unsupported: bad echo fe, expected a5 60
+197.518799 TX 5a 61
+197.525424 RX fe
+198.026126 ## command try 1 failed: bad echo fe, expected a5 61
+198.026161 TX 30
+198.029748 RX cf
+198.129969 TX 5a 61
+198.138682 RX fe
+198.639409 ## command try 2 failed: bad echo fe, expected a5 61
+198.639446 TX 30
+198.643329 RX cf
+198.743827 TX 5a 61
+198.752244 RX fe
+199.252865 ## command try 3 failed: bad echo fe, expected a5 61
+199.252898 TX 30
+199.257881 RX cf
+199.358318 ## reg 61 unsupported: bad echo fe, expected a5 61
+199.558646 TX 5a 62
+199.564216 RX fe
+200.065037 ## command try 1 failed: bad echo fe, expected a5 62
+200.065069 TX 30
+200.069022 RX cf
+200.169473 TX 5a 62
+200.177737 RX fe
+200.678367 ## command try 2 failed: bad echo fe, expected a5 62
+200.678401 TX 30
+200.682474 RX cf
+200.782917 TX 5a 62
+200.791488 RX fe
+201.292338 ## command try 3 failed: bad echo fe, expected a5 62
+201.292383 TX 30
+201.296642 RX cf
+201.400664 ## reg 62 unsupported: bad echo fe, expected a5 62
+201.601201 TX 5a 63
+201.613372 RX fe
+202.114036 ## command try 1 failed: bad echo fe, expected a5 63
+202.114069 TX 30
+202.118082 RX cf
+202.218517 TX 5a 63
+202.226931 RX fe
+202.727636 ## command try 2 failed: bad echo fe, expected a5 63
+202.727668 TX 30
+202.732467 RX cf
+202.832899 TX 5a 63
+202.840395 RX fe
+203.341099 ## command try 3 failed: bad echo fe, expected a5 63
+203.341133 TX 30
+203.345708 RX cf
+203.446160 ## reg 63 unsupported: bad echo fe, expected a5 63
+203.646719 TX 5a 64
+203.652839 RX fe
+204.153683 ## command try 1 failed: bad echo fe, expected a5 64
+204.153715 TX 30
+204.157263 RX cf
+204.257702 TX 5a 64
+204.265957 RX fe
+204.766605 ## command try 2 failed: bad echo fe, expected a5 64
+204.766640 TX 30
+204.771627 RX cf
+204.872071 TX 5a 64
+204.880624 RX fe
+205.381475 ## command try 3 failed: bad echo fe, expected a5 64
+205.381507 TX 30
+205.385065 RX cf
+205.485526 ## reg 64 unsupported: bad echo fe, expected a5 64
+205.685857 TX 5a 65
+205.691894 RX fe
+206.192512 ## command try 1 failed: bad echo fe, expected a5 65
+206.192548 TX 30
+206.196491 RX cf
+206.296912 TX 5a 65
+206.305056 RX fe
+206.805838 ## command try 2 failed: bad echo fe, expected a5 65
+206.805872 TX 30
+206.810907 RX cf
+206.911346 TX 5a 65
+206.919661 RX fe
+207.420315 ## command try 3 failed: bad echo fe, expected a5 65
+207.420347 TX 30
+207.424354 RX cf
+207.524741 ## reg 65 unsupported: bad echo fe, expected a5 65
+207.725066 TX 5a 66
+207.730985 RX fe
+208.231598 ## command try 1 failed: bad echo fe, expected a5 66
+208.231629 TX 30
+208.235570 RX cf
+208.336015 TX 5a 66
+208.344479 RX fe
+208.845153 ## command try 2 failed: bad echo fe, expected a5 66
+208.845188 TX 30
+208.849973 RX cf
+208.950375 TX 5a 66
+208.958628 RX fe
+209.459424 ## command try 3 failed: bad echo fe, expected a5 66
+209.459455 TX 30
+209.463522 RX cf
+209.563719 ## reg 66 unsupported: bad echo fe, expected a5 66
+209.764167 TX 5a 67
+209.770393 RX fe
+210.271230 ## command try 1 failed: bad echo fe, expected a5 67
+210.271263 TX 30
+210.274679 RX cf
+210.375039 TX 5a 67
+210.383771 RX fe
+210.884449 ## command try 2 failed: bad echo fe, expected a5 67
+210.884482 TX 30
+210.889318 RX cf
+210.989764 TX 5a 67
+210.998049 RX fe
+211.498660 ## command try 3 failed: bad echo fe, expected a5 67
+211.498696 TX 30
+211.502692 RX cf
+211.603134 ## reg 67 unsupported: bad echo fe, expected a5 67
+211.803466 TX 5a 68
+211.809382 RX fe
+212.309993 ## command try 1 failed: bad echo fe, expected a5 68
+212.310026 TX 30
+212.314683 RX cf
+212.415131 TX 5a 68
+212.423681 RX fe
+212.924294 ## command try 2 failed: bad echo fe, expected a5 68
+212.924337 TX 30
+212.928328 RX cf
+213.028569 TX 5a 68
+213.037254 RX fe
+213.538099 ## command try 3 failed: bad echo fe, expected a5 68
+213.538133 TX 30
+213.541755 RX cf
+213.642199 ## reg 68 unsupported: bad echo fe, expected a5 68
+213.842769 TX 5a 69
+213.848430 RX fe
+214.349222 ## command try 1 failed: bad echo fe, expected a5 69
+214.349255 TX 30
+214.353735 RX cf
+214.454171 TX 5a 69
+214.462687 RX fe
+214.963341 ## command try 2 failed: bad echo fe, expected a5 69
+214.963383 TX 30
+214.967531 RX cf
+215.067981 TX 5a 69
+215.076310 RX fe
+215.577175 ## command try 3 failed: bad echo fe, expected a5 69
+215.577208 TX 30
+215.580683 RX cf
+215.681127 ## reg 69 unsupported: bad echo fe, expected a5 69
+215.881547 TX 5a 6a
+215.887660 RX fe
+216.388500 ## command try 1 failed: bad echo fe, expected a5 6a
+216.388536 TX 30
+216.392798 RX cf
+216.493027 TX 5a 6a
+216.501650 RX fe
+217.002382 ## command try 2 failed: bad echo fe, expected a5 6a
+217.002419 TX 30
+217.006433 RX cf
+217.106885 TX 5a 6a
+217.115474 RX fe
+217.616338 ## command try 3 failed: bad echo fe, expected a5 6a
+217.616382 TX 30
+217.619811 RX cf
+217.720042 ## reg 6A unsupported: bad echo fe, expected a5 6a
+217.920577 TX 5a 6b
+217.926618 RX fe
+218.427242 ## command try 1 failed: bad echo fe, expected a5 6b
+218.427276 TX 30
+218.432181 RX cf
+218.532620 TX 5a 6b
+218.541095 RX fe
+219.041806 ## command try 2 failed: bad echo fe, expected a5 6b
+219.041838 TX 30
+219.045656 RX cf
+219.146090 TX 5a 6b
+219.154685 RX fe
+219.655270 ## command try 3 failed: bad echo fe, expected a5 6b
+219.655311 TX 30
+219.659013 RX cf
+219.759314 ## reg 6B unsupported: bad echo fe, expected a5 6b
+219.959547 TX 5a 6c
+219.966161 RX fe
+220.466453 ## command try 1 failed: bad echo fe, expected a5 6c
+220.466531 TX 30
+220.471566 RX cf
+220.571940 TX 5a 6c
+220.580406 RX fe
+221.081108 ## command try 2 failed: bad echo fe, expected a5 6c
+221.081141 TX 30
+221.084840 RX cf
+221.185078 TX 5a 6c
+221.193683 RX fe
+221.694395 ## command try 3 failed: bad echo fe, expected a5 6c
+221.694428 TX 30
+221.698507 RX cf
+221.798947 ## reg 6C unsupported: bad echo fe, expected a5 6c
+221.999507 TX 5a 6d
+222.006274 RX fe
+222.507120 ## command try 1 failed: bad echo fe, expected a5 6d
+222.507156 TX 30
+222.510673 RX cf
+222.611106 TX 5a 6d
+222.619600 RX fe
+223.120217 ## command try 2 failed: bad echo fe, expected a5 6d
+223.120252 TX 30
+223.124269 RX cf
+223.224685 TX 5a 6d
+223.232823 RX fe
+223.733437 ## command try 3 failed: bad echo fe, expected a5 6d
+223.733471 TX 30
+223.738521 RX cf
+223.838965 ## reg 6D unsupported: bad echo fe, expected a5 6d
+224.039293 TX 5a 6e
+224.045256 RX fe
+224.545839 ## command try 1 failed: bad echo fe, expected a5 6e
+224.545880 TX 30
+224.549482 RX cf
+224.649674 TX 5a 6e
+224.658429 RX fe
+225.159089 ## command try 2 failed: bad echo fe, expected a5 6e
+225.159153 TX 30
+225.163231 RX cf
+225.267515 TX 5a 6e
+225.272239 RX fe
+225.773086 ## command try 3 failed: bad echo fe, expected a5 6e
+225.773121 TX 30
+225.777653 RX cf
+225.878094 ## reg 6E unsupported: bad echo fe, expected a5 6e
+226.078656 TX 5a 6f
+226.084048 RX fe
+226.584745 ## command try 1 failed: bad echo fe, expected a5 6f
+226.584781 TX 30
+226.588793 RX cf
+226.689235 TX 5a 6f
+226.697773 RX fe
+227.198479 ## command try 2 failed: bad echo fe, expected a5 6f
+227.198512 TX 30
+227.203334 RX cf
+227.303771 TX 5a 6f
+227.311124 RX fe
+227.811478 ## command try 3 failed: bad echo fe, expected a5 6f
+227.811525 TX 30
+227.816534 RX cf
+227.916712 ## reg 6F unsupported: bad echo fe, expected a5 6f
+228.117249 TX 5a 70
+228.123444 RX fe
+228.624024 ## command try 1 failed: bad echo fe, expected a5 70
+228.624058 TX 30
+228.628076 RX cf
+228.728464 TX 5a 70
+228.736852 RX fe
+229.237477 ## command try 2 failed: bad echo fe, expected a5 70
+229.237509 TX 30
+229.241373 RX cf
+229.341752 TX 5a 70
+229.350298 RX fe
+229.850876 ## command try 3 failed: bad echo fe, expected a5 70
+229.850911 TX 30
+229.855843 RX cf
+229.956293 ## reg 70 unsupported: bad echo fe, expected a5 70
+230.156665 TX 5a 71
+230.162635 RX fe
+230.663255 ## command try 1 failed: bad echo fe, expected a5 71
+230.663293 TX 30
+230.667197 RX cf
+230.767645 TX 5a 71
+230.776046 RX fe
+231.276508 ## command try 2 failed: bad echo fe, expected a5 71
+231.276542 TX 30
+231.281764 RX cf
+231.381961 TX 5a 71
+231.390540 RX fe
+231.891388 ## command try 3 failed: bad echo fe, expected a5 71
+231.891423 TX 30
+231.894978 RX cf
+231.995443 ## reg 71 unsupported: bad echo fe, expected a5 71
+232.195779 TX 5a 72
+232.201622 RX fe
+232.702249 ## command try 1 failed: bad echo fe, expected a5 72
+232.702283 TX 30
+232.706233 RX cf
+232.806686 TX 5a 72
+232.815349 RX fe
+233.316061 ## command try 2 failed: bad echo fe, expected a5 72
+233.316093 TX 30
+233.320898 RX cf
+233.421321 TX 5a 72
+233.429574 RX fe
+233.930257 ## command try 3 failed: bad echo fe, expected a5 72
+233.930291 TX 30
+233.934457 RX cf
+234.034888 ## reg 72 unsupported: bad echo fe, expected a5 72
+234.235446 TX 5a 73
+234.241057 RX fe
+234.741892 ## command try 1 failed: bad echo fe, expected a5 73
+234.741926 TX 30
+234.745726 RX cf
+234.846163 TX 5a 73
+234.854500 RX fe
+235.355182 ## command try 2 failed: bad echo fe, expected a5 73
+235.355215 TX 30
+235.360144 RX cf
+235.460563 TX 5a 73
+235.468931 RX fe
+235.969449 ## command try 3 failed: bad echo fe, expected a5 73
+235.969496 TX 30
+235.973530 RX cf
+236.077691 ## reg 73 unsupported: bad echo fe, expected a5 73
+236.278170 TX 5a 74
+236.290173 RX fe
+236.790788 ## command try 1 failed: bad echo fe, expected a5 74
+236.790823 TX 30
+236.794847 RX cf
+236.895283 TX 5a 74
+236.903794 RX fe
+237.404632 ## command try 2 failed: bad echo fe, expected a5 74
+237.404666 TX 30
+237.409352 RX cf
+237.509792 TX 5a 74
+237.517126 RX fe
+238.017432 ## command try 3 failed: bad echo fe, expected a5 74
+238.017479 TX 30
+238.022434 RX cf
+238.122720 ## reg 74 unsupported: bad echo fe, expected a5 74
+238.323221 TX 5a 75
+238.329601 RX fe
+238.830368 ## command try 1 failed: bad echo fe, expected a5 75
+238.830399 TX 30
+238.834138 RX cf
+238.934526 TX 5a 75
+238.942885 RX fe
+239.443394 ## command try 2 failed: bad echo fe, expected a5 75
+239.443428 TX 30
+239.448522 RX cf
+239.548734 TX 5a 75
+239.557009 RX fe
+240.057848 ## command try 3 failed: bad echo fe, expected a5 75
+240.057882 TX 30
+240.062058 RX cf
+240.162509 ## reg 75 unsupported: bad echo fe, expected a5 75
+240.362953 TX 5a 76
+240.368783 RX fe
+240.869626 ## command try 1 failed: bad echo fe, expected a5 76
+240.869660 TX 30
+240.873270 RX cf
+240.973717 TX 5a 76
+240.981779 RX fe
+241.482624 ## command try 2 failed: bad echo fe, expected a5 76
+241.482658 TX 30
+241.487615 RX cf
+241.587996 TX 5a 76
+241.596549 RX fe
+242.097127 ## command try 3 failed: bad echo fe, expected a5 76
+242.097161 TX 30
+242.101060 RX cf
+242.201453 ## reg 76 unsupported: bad echo fe, expected a5 76
+242.401870 TX 5a 77
+242.407514 RX fe
+242.908354 ## command try 1 failed: bad echo fe, expected a5 77
+242.908414 TX 30
+242.912307 RX cf
+243.012603 TX 5a 77
+243.021162 RX fe
+243.521784 ## command try 2 failed: bad echo fe, expected a5 77
+243.521818 TX 30
+243.526853 RX cf
+243.627235 TX 5a 77
+243.635668 RX fe
+244.136246 ## command try 3 failed: bad echo fe, expected a5 77
+244.136280 TX 30
+244.139943 RX cf
+244.240133 ## reg 77 unsupported: bad echo fe, expected a5 77
+244.440628 TX 5a 78
+244.446651 RX fe
+244.947375 ## command try 1 failed: bad echo fe, expected a5 78
+244.947408 TX 30
+244.951612 RX cf
+245.052060 TX 5a 78
+245.060430 RX fe
+245.561178 ## command try 2 failed: bad echo fe, expected a5 78
+245.561212 TX 30
+245.565995 RX cf
+245.666443 TX 5a 78
+245.675055 RX fe
+246.175698 ## command try 3 failed: bad echo fe, expected a5 78
+246.175733 TX 30
+246.179244 RX cf
+246.283984 ## reg 78 unsupported: bad echo fe, expected a5 78
+246.484333 TX 5a 79
+246.496339 RX fe
+246.997204 ## command try 1 failed: bad echo fe, expected a5 79
+246.997240 TX 30
+247.000757 RX cf
+247.101146 TX 5a 79
+247.109762 RX fe
+247.610587 ## command try 2 failed: bad echo fe, expected a5 79
+247.610621 TX 30
+247.615238 RX cf
+247.715673 TX 5a 79
+247.724205 RX fe
+248.225041 ## command try 3 failed: bad echo fe, expected a5 79
+248.225075 TX 30
+248.228634 RX cf
+248.329079 ## reg 79 unsupported: bad echo fe, expected a5 79
+248.529440 TX 5a 7a
+248.535512 RX fe
+249.036374 ## command try 1 failed: bad echo fe, expected a5 7a
+249.036407 TX 30
+249.039924 RX cf
+249.140382 TX 5a 7a
+249.148785 RX fe
+249.649374 ## command try 2 failed: bad echo fe, expected a5 7a
+249.649452 TX 30
+249.654030 RX cf
+249.754304 TX 5a 7a
+249.763371 RX fe
+250.264251 ## command try 3 failed: bad echo fe, expected a5 7a
+250.264286 TX 30
+250.267774 RX cf
+250.368209 ## reg 7A unsupported: bad echo fe, expected a5 7a
+250.568592 TX 5a 7b
+250.574480 RX fe
+251.075108 ## command try 1 failed: bad echo fe, expected a5 7b
+251.075140 TX 30
+251.080099 RX cf
+251.180539 TX 5a 7b
+251.188943 RX fe
+251.689786 ## command try 2 failed: bad echo fe, expected a5 7b
+251.689824 TX 30
+251.693425 RX cf
+251.793861 TX 5a 7b
+251.802213 RX fe
+252.302829 ## command try 3 failed: bad echo fe, expected a5 7b
+252.302864 TX 30
+252.306634 RX cf
+252.407102 ## reg 7B unsupported: bad echo fe, expected a5 7b
+252.607428 TX 5a 7c
+252.613403 RX fe
+253.114255 ## command try 1 failed: bad echo fe, expected a5 7c
+253.114288 TX 30
+253.118588 RX cf
+253.218756 TX 5a 7c
+253.227626 RX fe
+253.728234 ## command try 2 failed: bad echo fe, expected a5 7c
+253.728268 TX 30
+253.732349 RX cf
+253.832804 TX 5a 7c
+253.841283 RX fe
+254.341597 ## command try 3 failed: bad echo fe, expected a5 7c
+254.341632 TX 30
+254.345654 RX cf
+254.445932 ## reg 7C unsupported: bad echo fe, expected a5 7c
+254.646224 TX 5a 7d
+254.652286 RX fe
+255.153032 ## command try 1 failed: bad echo fe, expected a5 7d
+255.153066 TX 30
+255.158023 RX cf
+255.258469 TX 5a 7d
+255.266834 RX fe
+255.767506 ## command try 2 failed: bad echo fe, expected a5 7d
+255.767540 TX 30
+255.771692 RX cf
+255.872083 TX 5a 7d
+255.880532 RX fe
+256.381209 ## command try 3 failed: bad echo fe, expected a5 7d
+256.381243 TX 30
+256.385250 RX cf
+256.485630 ## reg 7D unsupported: bad echo fe, expected a5 7d
+256.686111 TX 5a 7e
+256.692004 RX fe
+257.192582 ## command try 1 failed: bad echo fe, expected a5 7e
+257.192616 TX 30
+257.197437 RX cf
+257.297817 TX 5a 7e
+257.306422 RX fe
+257.807199 ## command try 2 failed: bad echo fe, expected a5 7e
+257.807233 TX 30
+257.810686 RX cf
+257.915369 TX 5a 7e
+257.919850 RX fe
+258.420430 ## command try 3 failed: bad echo fe, expected a5 7e
+258.420465 TX 30
+258.424448 RX cf
+258.524836 ## reg 7E unsupported: bad echo fe, expected a5 7e
+258.725140 TX 5a 7f
+258.730823 RX fe
+259.231484 ## command try 1 failed: bad echo fe, expected a5 7f
+259.231516 TX 30
+259.236623 RX cf
+259.337011 TX 5a 7f
+259.345574 RX fe
+259.846332 ## command try 2 failed: bad echo fe, expected a5 7f
+259.846375 TX 30
+259.850108 RX cf
+259.950487 TX 5a 7f
+259.958830 RX fe
+260.459523 ## command try 3 failed: bad echo fe, expected a5 7f
+260.459559 TX 30
+260.463589 RX cf
+260.564040 ## reg 7F unsupported: bad echo fe, expected a5 7f
+260.764393 TX 5a 80
+260.770341 RX fe
+261.271147 ## command try 1 failed: bad echo fe, expected a5 80
+261.271181 TX 30
+261.276042 RX cf
+261.376491 TX 5a 80
+261.384897 RX fe
+261.885766 ## command try 2 failed: bad echo fe, expected a5 80
+261.885799 TX 30
+261.889340 RX cf
+261.989818 TX 5a 80
+261.998192 RX fe
+262.498870 ## command try 3 failed: bad echo fe, expected a5 80
+262.498908 TX 30
+262.502787 RX cf
+262.603241 ## reg 80 unsupported: bad echo fe, expected a5 80
+262.803473 TX 5a 81
+262.809528 RX fe
+263.310145 ## command try 1 failed: bad echo fe, expected a5 81
+263.310180 TX 30
+263.315057 RX cf
+263.418554 TX 5a 81
+263.424006 RX fe
+263.924854 ## command try 2 failed: bad echo fe, expected a5 81
+263.924889 TX 30
+263.928455 RX cf
+264.028896 TX 5a 81
+264.037408 RX fe
+264.537978 ## command try 3 failed: bad echo fe, expected a5 81
+264.538015 TX 30
+264.541534 RX cf
+264.641823 ## reg 81 unsupported: bad echo fe, expected a5 81
+264.842432 TX 5a 82
+264.849763 RX fe
+265.350601 ## command try 1 failed: bad echo fe, expected a5 82
+265.350634 TX 30
+265.354271 RX cf
+265.454590 TX 5a 82
+265.463053 RX fe
+265.963572 ## command try 2 failed: bad echo fe, expected a5 82
+265.963606 TX 30
+265.967667 RX cf
+266.068103 TX 5a 82
+266.076555 RX fe
+266.577223 ## command try 3 failed: bad echo fe, expected a5 82
+266.577257 TX 30
+266.582176 RX cf
+266.682532 ## reg 82 unsupported: bad echo fe, expected a5 82
+266.882865 TX 5a 83
+266.888871 RX fe
+267.389508 ## command try 1 failed: bad echo fe, expected a5 83
+267.389544 TX 30
+267.393328 RX cf
+267.493788 TX 5a 83
+267.502313 RX fe
+268.003172 ## command try 2 failed: bad echo fe, expected a5 83
+268.003204 TX 30
+268.006742 RX cf
+268.107188 TX 5a 83
+268.115392 RX fe
+268.616240 ## command try 3 failed: bad echo fe, expected a5 83
+268.616274 TX 30
+268.621336 RX cf
+268.721817 ## reg 83 unsupported: bad echo fe, expected a5 83
+268.922183 TX 5a 84
+268.928039 RX fe
+269.428858 ## command try 1 failed: bad echo fe, expected a5 84
+269.428890 TX 30
+269.432506 RX cf
+269.532719 TX 5a 84
+269.541139 RX fe
+270.041838 ## command try 2 failed: bad echo fe, expected a5 84
+270.041891 TX 30
+270.045789 RX cf
+270.146248 TX 5a 84
+270.154756 RX fe
+270.655441 ## command try 3 failed: bad echo fe, expected a5 84
+270.655473 TX 30
+270.660504 RX cf
+270.760942 ## reg 84 unsupported: bad echo fe, expected a5 84
+270.961293 TX 5a 85
+270.967201 RX fe
+271.469809 ## command try 1 failed: bad echo fe, expected a5 85
+271.469842 TX 30
+271.481900 RX cf
+271.582325 TX 5a 85
+271.590614 RX fe
+272.091295 ## command try 2 failed: bad echo fe, expected a5 85
+272.091329 TX 30
+272.095347 RX cf
+272.195812 TX 5a 85
+272.204200 RX fe
+272.704824 ## command try 3 failed: bad echo fe, expected a5 85
+272.704856 TX 30
+272.708791 RX cf
+272.809236 ## reg 85 unsupported: bad echo fe, expected a5 85
+273.009811 TX 5a 86
+273.016475 RX fe
+273.517314 ## command try 1 failed: bad echo fe, expected a5 86
+273.517347 TX 30
+273.520689 RX cf
+273.620892 TX 5a 86
+273.629863 RX fe
+274.130463 ## command try 2 failed: bad echo fe, expected a5 86
+274.130495 TX 30
+274.134532 RX cf
+274.234967 TX 5a 86
+274.243317 RX fe
+274.743992 ## command try 3 failed: bad echo fe, expected a5 86
+274.744046 TX 30
+274.747902 RX cf
+274.848348 ## reg 86 unsupported: bad echo fe, expected a5 86
+275.048578 TX 5a 87
+275.055757 RX fe
+275.556443 ## command try 1 failed: bad echo fe, expected a5 87
+275.556477 TX 30
+275.560303 RX cf
+275.660790 TX 5a 87
+275.669220 RX fe
+276.170063 ## command try 2 failed: bad echo fe, expected a5 87
+276.170095 TX 30
+276.173614 RX cf
+276.278330 TX 5a 87
+276.282485 RX fe
+276.783160 ## command try 3 failed: bad echo fe, expected a5 87
+276.783192 TX 30
+276.788018 RX cf
+276.888505 ## reg 87 unsupported: bad echo fe, expected a5 87
+277.088844 TX 5a 88
+277.094853 RX fe
+277.595387 ## command try 1 failed: bad echo fe, expected a5 88
+277.595420 TX 30
+277.599294 RX cf
+277.699757 TX 5a 88
+277.708352 RX fe
+278.209234 ## command try 2 failed: bad echo fe, expected a5 88
+278.209266 TX 30
+278.212655 RX cf
+278.313074 TX 5a 88
+278.321685 RX fe
+278.822389 ## command try 3 failed: bad echo fe, expected a5 88
+278.822421 TX 30
+278.827312 RX cf
+278.927759 ## reg 88 unsupported: bad echo fe, expected a5 88
+279.128195 TX 5a 89
+279.134060 RX fe
+279.634670 ## command try 1 failed: bad echo fe, expected a5 89
+279.634705 TX 30
+279.638292 RX cf
+279.738776 TX 5a 89
+279.747513 RX fe
+280.248172 ## command try 2 failed: bad echo fe, expected a5 89
+280.248205 TX 30
+280.251963 RX cf
+280.352412 TX 5a 89
+280.360928 RX fe
+280.861772 ## command try 3 failed: bad echo fe, expected a5 89
+280.861804 TX 30
+280.866421 RX cf
+280.966872 ## reg 89 unsupported: bad echo fe, expected a5 89
+281.167197 TX 5a 8a
+281.173210 RX fe
+281.673854 ## command try 1 failed: bad echo fe, expected a5 8a
+281.673888 TX 30
+281.677666 RX cf
+281.778055 TX 5a 8a
+281.786525 RX fe
+282.287377 ## command try 2 failed: bad echo fe, expected a5 8a
+282.287410 TX 30
+282.292050 RX cf
+282.392429 TX 5a 8a
+282.400639 RX fe
+282.901459 ## command try 3 failed: bad echo fe, expected a5 8a
+282.901495 TX 30
+282.905591 RX cf
+283.006010 ## reg 8A unsupported: bad echo fe, expected a5 8a
+283.206587 TX 5a 8b
+283.212083 RX fe
+283.712718 ## command try 1 failed: bad echo fe, expected a5 8b
+283.712751 TX 30
+283.716880 RX cf
+283.817300 TX 5a 8b
+283.825739 RX fe
+284.326586 ## command try 2 failed: bad echo fe, expected a5 8b
+284.326619 TX 30
+284.331196 RX cf
+284.431570 TX 5a 8b
+284.440055 RX fe
+284.940692 ## command try 3 failed: bad echo fe, expected a5 8b
+284.940726 TX 30
+284.944758 RX cf
+285.045190 ## reg 8B unsupported: bad echo fe, expected a5 8b
+285.245751 TX 5a 8c
+285.251398 RX fe
+285.752076 ## command try 1 failed: bad echo fe, expected a5 8c
+285.752110 TX 30
+285.755896 RX cf
+285.856268 TX 5a 8c
+285.864624 RX fe
+286.365236 ## command try 2 failed: bad echo fe, expected a5 8c
+286.365267 TX 30
+286.370317 RX cf
+286.470787 TX 5a 8c
+286.479328 RX fe
+286.980075 ## command try 3 failed: bad echo fe, expected a5 8c
+286.980106 TX 30
+286.983645 RX cf
+287.084015 ## reg 8C unsupported: bad echo fe, expected a5 8c
+287.284559 TX 5a 8d
+287.290744 RX fe
+287.791511 ## command try 1 failed: bad echo fe, expected a5 8d
+287.791545 TX 30
+287.795273 RX cf
+287.895710 TX 5a 8d
+287.904129 RX fe
+288.404511 ## command try 2 failed: bad echo fe, expected a5 8d
+288.404543 TX 30
+288.409594 RX cf
+288.510037 TX 5a 8d
+288.518523 RX fe
+289.019394 ## command try 3 failed: bad echo fe, expected a5 8d
+289.019427 TX 30
+289.022863 RX cf
+289.123061 ## reg 8D unsupported: bad echo fe, expected a5 8d
+289.323598 TX 5a 8e
+289.329674 RX fe
+289.830334 ## command try 1 failed: bad echo fe, expected a5 8e
+289.830377 TX 30
+289.834269 RX cf
+289.934707 TX 5a 8e
+289.943249 RX fe
+290.443588 ## command try 2 failed: bad echo fe, expected a5 8e
+290.443622 TX 30
+290.448650 RX cf
+290.549085 TX 5a 8e
+290.557663 RX fe
+291.058498 ## command try 3 failed: bad echo fe, expected a5 8e
+291.058535 TX 30
+291.062203 RX cf
+291.166644 ## reg 8E unsupported: bad echo fe, expected a5 8e
+291.367210 TX 5a 8f
+291.378873 RX fe
+291.879710 ## command try 1 failed: bad echo fe, expected a5 8f
+291.879745 TX 30
+291.883416 RX cf
+291.983592 TX 5a 8f
+291.992392 RX fe
+292.492670 ## command try 2 failed: bad echo fe, expected a5 8f
+292.492704 TX 30
+292.497799 RX cf
+292.598170 TX 5a 8f
+292.606733 RX fe
+293.107303 ## command try 3 failed: bad echo fe, expected a5 8f
+293.107340 TX 30
+293.111276 RX cf
+293.211601 ## reg 8F unsupported: bad echo fe, expected a5 8f
+293.411929 TX 5a 90
+293.417945 RX fe
+293.918558 ## command try 1 failed: bad echo fe, expected a5 90
+293.918592 TX 30
+293.923607 RX cf
+294.024046 TX 5a 90
+294.032568 RX fe
+294.533404 ## command try 2 failed: bad echo fe, expected a5 90
+294.533440 TX 30
+294.536624 RX cf
+294.636828 TX 5a 90
+294.645549 RX fe
+295.146372 ## command try 3 failed: bad echo fe, expected a5 90
+295.146405 TX 30
+295.150435 RX cf
+295.250632 ## reg 90 unsupported: bad echo fe, expected a5 90
+295.451072 TX 5a 91
+295.456856 RX fe
+295.957692 ## command try 1 failed: bad echo fe, expected a5 91
+295.957725 TX 30
+295.962755 RX cf
+296.063179 TX 5a 91
+296.071410 RX fe
+296.572032 ## command try 2 failed: bad echo fe, expected a5 91
+296.572064 TX 30
+296.576223 RX cf
+296.676586 TX 5a 91
+296.685013 RX fe
+297.185592 ## command try 3 failed: bad echo fe, expected a5 91
+297.185626 TX 30
+297.189610 RX cf
+297.290043 ## reg 91 unsupported: bad echo fe, expected a5 91
+297.490335 TX 5a 92
+297.496225 RX fe
+297.996806 ## command try 1 failed: bad echo fe, expected a5 92
+297.996839 TX 30
+298.001728 RX cf
+298.102096 TX 5a 92
+298.110709 RX fe
+298.611286 ## command try 2 failed: bad echo fe, expected a5 92
+298.611319 TX 30
+298.615272 RX cf
+298.715717 TX 5a 92
+298.724265 RX fe
+299.224662 ## command try 3 failed: bad echo fe, expected a5 92
+299.224697 TX 30
+299.228746 RX cf
+299.329180 ## reg 92 unsupported: bad echo fe, expected a5 92
+299.529738 TX 5a 93
+299.535560 RX fe
+300.036425 ## command try 1 failed: bad echo fe, expected a5 93
+300.036462 TX 30
+300.040730 RX cf
+300.141001 TX 5a 93
+300.149854 RX fe
+300.650547 ## command try 2 failed: bad echo fe, expected a5 93
+300.650580 TX 30
+300.654638 RX cf
+300.755058 TX 5a 93
+300.763490 RX fe
+301.264330 ## command try 3 failed: bad echo fe, expected a5 93
+301.264375 TX 30
+301.267596 RX cf
+301.367931 ## reg 93 unsupported: bad echo fe, expected a5 93
+301.568465 TX 5a 94
+301.575641 RX fe
+302.076483 ## command try 1 failed: bad echo fe, expected a5 94
+302.076520 TX 30
+302.080264 RX cf
+302.180591 TX 5a 94
+302.189035 RX fe
+302.689673 ## command try 2 failed: bad echo fe, expected a5 94
+302.689707 TX 30
+302.693623 RX cf
+302.794008 TX 5a 94
+302.802630 RX fe
+303.303209 ## command try 3 failed: bad echo fe, expected a5 94
+303.303243 TX 30
+303.307163 RX cf
+303.407616 ## reg 94 unsupported: bad echo fe, expected a5 94
+303.607919 TX 5a 95
+303.614804 RX fe
+304.115591 ## command try 1 failed: bad echo fe, expected a5 95
+304.115637 TX 30
+304.119344 RX cf
+304.219807 TX 5a 95
+304.228249 RX fe
+304.728840 ## command try 2 failed: bad echo fe, expected a5 95
+304.728881 TX 30
+304.732471 RX cf
+304.832661 TX 5a 95
+304.841653 RX fe
+305.342559 ## command try 3 failed: bad echo fe, expected a5 95
+305.342599 TX 30
+305.347106 RX cf
+305.447490 ## reg 95 unsupported: bad echo fe, expected a5 95
+305.647910 TX 5a 96
+305.653971 RX fe
+306.154405 ## command try 1 failed: bad echo fe, expected a5 96
+306.154438 TX 30
+306.158464 RX cf
+306.258832 TX 5a 96
+306.267456 RX fe
+306.768305 ## command try 2 failed: bad echo fe, expected a5 96
+306.768337 TX 30
+306.771651 RX cf
+306.871823 TX 5a 96
+306.880787 RX fe
+307.381386 ## command try 3 failed: bad echo fe, expected a5 96
+307.381456 TX 30
+307.386446 RX cf
+307.489811 ## reg 96 unsupported: bad echo fe, expected a5 96
+307.690119 TX 5a 97
+307.703096 RX fe
+308.203674 ## command try 1 failed: bad echo fe, expected a5 97
+308.203710 TX 30
+308.207668 RX cf
+308.308125 TX 5a 97
+308.316558 RX fe
+308.817135 ## command try 2 failed: bad echo fe, expected a5 97
+308.817170 TX 30
+308.821173 RX cf
+308.921631 TX 5a 97
+308.930051 RX fe
+309.430627 ## command try 3 failed: bad echo fe, expected a5 97
+309.430660 TX 30
+309.435714 RX cf
+309.536101 ## reg 97 unsupported: bad echo fe, expected a5 97
+309.736414 TX 5a 98
+309.741982 RX fe
+310.242819 ## command try 1 failed: bad echo fe, expected a5 98
+310.242853 TX 30
+310.246893 RX cf
+310.347323 TX 5a 98
+310.355656 RX fe
+310.856259 ## command try 2 failed: bad echo fe, expected a5 98
+310.856293 TX 30
+310.860344 RX cf
+310.960787 TX 5a 98
+310.969394 RX fe
+311.470237 ## command try 3 failed: bad echo fe, expected a5 98
+311.470271 TX 30
+311.474754 RX cf
+311.575135 ## reg 98 unsupported: bad echo fe, expected a5 98
+311.775461 TX 5a 99
+311.781602 RX fe
+312.282377 ## command try 1 failed: bad echo fe, expected a5 99
+312.282451 TX 30
+312.286137 RX cf
+312.386574 TX 5a 99
+312.394808 RX fe
+312.895502 ## command try 2 failed: bad echo fe, expected a5 99
+312.895537 TX 30
+312.899668 RX cf
+313.000089 TX 5a 99
+313.008589 RX fe
+313.509175 ## command try 3 failed: bad echo fe, expected a5 99
+313.509208 TX 30
+313.514135 RX cf
+313.614565 ## reg 99 unsupported: bad echo fe, expected a5 99
+313.814858 TX 5a 9a
+313.820779 RX fe
+314.321378 ## command try 1 failed: bad echo fe, expected a5 9a
+314.321413 TX 30
+314.325418 RX cf
+314.425853 TX 5a 9a
+314.434225 RX fe
+314.934842 ## command try 2 failed: bad echo fe, expected a5 9a
+314.934877 TX 30
+314.938751 RX cf
+315.039206 TX 5a 9a
+315.047625 RX fe
+315.548229 ## command try 3 failed: bad echo fe, expected a5 9a
+315.548266 TX 30
+315.553385 RX cf
+315.656592 ## reg 9A unsupported: bad echo fe, expected a5 9a
+315.856926 TX 5a 9b
+315.869656 RX fe
+316.370479 ## command try 1 failed: bad echo fe, expected a5 9b
+316.370532 TX 30
+316.374464 RX cf
+316.474917 TX 5a 9b
+316.483330 RX fe
+316.984049 ## command try 2 failed: bad echo fe, expected a5 9b
+316.984083 TX 30
+316.988130 RX cf
+317.088556 TX 5a 9b
+317.096746 RX fe
+317.597386 ## command try 3 failed: bad echo fe, expected a5 9b
+317.597429 TX 30
+317.602419 RX cf
+317.702872 ## reg 9B unsupported: bad echo fe, expected a5 9b
+317.903442 TX 5a 9c
+317.909067 RX fe
+318.409611 ## command try 1 failed: bad echo fe, expected a5 9c
+318.409649 TX 30
+318.413724 RX cf
+318.514102 TX 5a 9c
+318.522571 RX fe
+319.022669 ## command try 2 failed: bad echo fe, expected a5 9c
+319.022702 TX 30
+319.027134 RX cf
+319.127585 TX 5a 9c
+319.136173 RX fe
+319.636789 ## command try 3 failed: bad echo fe, expected a5 9c
+319.636826 TX 30
+319.641285 RX cf
+319.741445 ## reg 9C unsupported: bad echo fe, expected a5 9c
+319.941977 TX 5a 9d
+319.948261 RX fe
+320.448597 ## command try 1 failed: bad echo fe, expected a5 9d
+320.448642 TX 30
+320.453006 RX cf
+320.553422 TX 5a 9d
+320.561453 RX fe
+321.062294 ## command try 2 failed: bad echo fe, expected a5 9d
+321.062327 TX 30
+321.066251 RX cf
+321.166525 TX 5a 9d
+321.175192 RX fe
+321.675805 ## command try 3 failed: bad echo fe, expected a5 9d
+321.675840 TX 30
+321.680863 RX cf
+321.781304 ## reg 9D unsupported: bad echo fe, expected a5 9d
+321.981723 TX 5a 9e
+321.987529 RX fe
+322.488385 ## command try 1 failed: bad echo fe, expected a5 9e
+322.488422 TX 30
+322.491888 RX cf
+322.592064 TX 5a 9e
+322.600920 RX fe
+323.101560 ## command try 2 failed: bad echo fe, expected a5 9e
+323.101593 TX 30
+323.105499 RX cf
+323.205946 TX 5a 9e
+323.214428 RX fe
+323.715009 ## command try 3 failed: bad echo fe, expected a5 9e
+323.715042 TX 30
+323.719764 RX cf
+323.819958 ## reg 9E unsupported: bad echo fe, expected a5 9e
+324.020503 TX 5a 9f
+324.026739 RX fe
+324.527322 ## command try 1 failed: bad echo fe, expected a5 9f
+324.527368 TX 30
+324.531383 RX cf
+324.631571 TX 5a 9f
+324.639944 RX fe
+325.140777 ## command try 2 failed: bad echo fe, expected a5 9f
+325.140812 TX 30
+325.144903 RX cf
+325.245332 TX 5a 9f
+325.253737 RX fe
+325.754392 ## command try 3 failed: bad echo fe, expected a5 9f
+325.754430 TX 30
+325.759305 RX cf
+325.862808 ## reg 9F unsupported: bad echo fe, expected a5 9f
+326.063143 TX 5a a0
+326.075831 RX fe
+326.576566 ## command try 1 failed: bad echo fe, expected a5 a0
+326.576600 TX 30
+326.580754 RX cf
+326.681214 TX 5a a0
+326.689521 RX fe
+327.189596 ## command try 2 failed: bad echo fe, expected a5 a0
+327.189629 TX 30
+327.193963 RX cf
+327.294402 TX 5a a0
+327.303007 RX fe
+327.803852 ## command try 3 failed: bad echo fe, expected a5 a0
+327.803887 TX 30
+327.807657 RX cf
+327.908104 ## reg A0 unsupported: bad echo fe, expected a5 a0
+328.108491 TX 5a a1
+328.115432 RX fe
+328.615657 ## command try 1 failed: bad echo fe, expected a5 a1
+328.615694 TX 30
+328.619653 RX cf
+328.719973 TX 5a a1
+328.728706 RX fe
+329.229561 ## command try 2 failed: bad echo fe, expected a5 a1
+329.229595 TX 30
+329.233171 RX cf
+329.333624 TX 5a a1
+329.342264 RX fe
+329.843106 ## command try 3 failed: bad echo fe, expected a5 a1
+329.843141 TX 30
+329.847620 RX cf
+329.948085 ## reg A1 unsupported: bad echo fe, expected a5 a1
+330.148596 TX 5a a2
+330.154227 RX fe
+330.654839 ## command try 1 failed: bad echo fe, expected a5 a2
+330.654871 TX 30
+330.658913 RX cf
+330.759351 TX 5a a2
+330.767660 RX fe
+331.268244 ## command try 2 failed: bad echo fe, expected a5 a2
+331.268276 TX 30
+331.272323 RX cf
+331.372798 TX 5a a2
+331.380957 RX fe
+331.881754 ## command try 3 failed: bad echo fe, expected a5 a2
+331.881789 TX 30
+331.886972 RX cf
+331.987403 ## reg A2 unsupported: bad echo fe, expected a5 a2
+332.187956 TX 5a a3
+332.193526 RX fe
+332.694103 ## command try 1 failed: bad echo fe, expected a5 a3
+332.694137 TX 30
+332.698094 RX cf
+332.798535 TX 5a a3
+332.807086 RX fe
+333.307927 ## command try 2 failed: bad echo fe, expected a5 a3
+333.307962 TX 30
+333.311507 RX cf
+333.411958 TX 5a a3
+333.420583 RX fe
+333.921439 ## command try 3 failed: bad echo fe, expected a5 a3
+333.921471 TX 30
+333.925772 RX cf
+334.025953 ## reg A3 unsupported: bad echo fe, expected a5 a3
+334.226473 TX 5a a4
+334.232721 RX fe
+334.733311 ## command try 1 failed: bad echo fe, expected a5 a4
+334.733355 TX 30
+334.736979 RX cf
+334.837196 TX 5a a4
+334.846261 RX fe
+335.346461 ## command try 2 failed: bad echo fe, expected a5 a4
+335.346522 TX 30
+335.350696 RX cf
+335.451124 TX 5a a4
+335.459637 RX fe
+335.960346 ## command try 3 failed: bad echo fe, expected a5 a4
+335.960393 TX 30
+335.965307 RX cf
+336.065761 ## reg A4 unsupported: bad echo fe, expected a5 a4
+336.266095 TX 5a a5
+336.271834 RX fe
+336.772626 ## command try 1 failed: bad echo fe, expected a5 a5
+336.772662 TX 30
+336.776592 RX cf
+336.881053 TX 5a a5
+336.885565 RX fe
+337.386416 ## command try 2 failed: bad echo fe, expected a5 a5
+337.386450 TX 30
+337.390080 RX cf
+337.490512 TX 5a a5
+337.498906 RX fe
+337.999543 ## command try 3 failed: bad echo fe, expected a5 a5
+337.999576 TX 30
+338.004499 RX cf
+338.104954 ## reg A5 unsupported: bad echo fe, expected a5 a5
+338.305298 TX 5a a6
+338.311369 RX fe
+338.812209 ## command try 1 failed: bad echo fe, expected a5 a6
+338.812241 TX 30
+338.815626 RX cf
+338.915960 TX 5a a6
+338.924634 RX fe
+339.425386 ## command try 2 failed: bad echo fe, expected a5 a6
+339.425421 TX 30
+339.429314 RX cf
+339.529751 TX 5a a6
+339.538097 RX fe
+340.038744 ## command try 3 failed: bad echo fe, expected a5 a6
+340.038776 TX 30
+340.043734 RX cf
+340.144181 ## reg A6 unsupported: bad echo fe, expected a5 a6
+340.344512 TX 5a a7
+340.350575 RX fe
+340.851417 ## command try 1 failed: bad echo fe, expected a5 a7
+340.851449 TX 30
+340.855173 RX cf
+340.955594 TX 5a a7
+340.963994 RX fe
+341.464700 ## command try 2 failed: bad echo fe, expected a5 a7
+341.464734 TX 30
+341.468229 RX cf
+341.568421 TX 5a a7
+341.577074 RX fe
+342.077564 ## command try 3 failed: bad echo fe, expected a5 a7
+342.077628 TX 30
+342.082619 RX cf
+342.182838 ## reg A7 unsupported: bad echo fe, expected a5 a7
+342.383386 TX 5a a8
+342.389675 RX fe
+342.890446 ## command try 1 failed: bad echo fe, expected a5 a8
+342.890479 TX 30
+342.893990 RX cf
+342.994346 TX 5a a8
+343.002997 RX fe
+343.503579 ## command try 2 failed: bad echo fe, expected a5 a8
+343.503613 TX 30
+343.508532 RX cf
+343.608975 TX 5a a8
+343.617451 RX fe
+344.118071 ## command try 3 failed: bad echo fe, expected a5 a8
+344.118104 TX 30
+344.122055 RX cf
+344.222490 ## reg A8 unsupported: bad echo fe, expected a5 a8
+344.422796 TX 5a a9
+344.428568 RX fe
+344.929192 ## command try 1 failed: bad echo fe, expected a5 a9
+344.929230 TX 30
+344.933269 RX cf
+345.033700 TX 5a a9
+345.042274 RX fe
+345.542565 ## command try 2 failed: bad echo fe, expected a5 a9
+345.542599 TX 30
+345.547683 RX cf
+345.648116 TX 5a a9
+345.656600 RX fe
+346.157191 ## command try 3 failed: bad echo fe, expected a5 a9
+346.157225 TX 30
+346.161090 RX cf
+346.261476 ## reg A9 unsupported: bad echo fe, expected a5 a9
+346.461770 TX 5a aa
+346.467749 RX fe
+346.968329 ## command try 1 failed: bad echo fe, expected a5 aa
+346.968370 TX 30
+346.972325 RX cf
+347.072557 TX 5a aa
+347.081293 RX fe
+347.581873 ## command try 2 failed: bad echo fe, expected a5 aa
+347.581907 TX 30
+347.586658 RX cf
+347.686829 TX 5a aa
+347.695917 RX fe
+348.196499 ## command try 3 failed: bad echo fe, expected a5 aa
+348.196532 TX 30
+348.200458 RX cf
+348.300903 ## reg AA unsupported: bad echo fe, expected a5 aa
+348.501465 TX 5a ab
+348.506996 RX fe
+349.007578 ## command try 1 failed: bad echo fe, expected a5 ab
+349.007614 TX 30
+349.012651 RX cf
+349.113080 TX 5a ab
+349.121430 RX fe
+349.622012 ## command try 2 failed: bad echo fe, expected a5 ab
+349.622053 TX 30
+349.625692 RX cf
+349.725875 TX 5a ab
+349.734595 RX fe
+350.235388 ## command try 3 failed: bad echo fe, expected a5 ab
+350.235422 TX 30
+350.239636 RX cf
+350.340071 ## reg AB unsupported: bad echo fe, expected a5 ab
+350.540572 TX 5a ac
+350.546340 RX fe
+351.046933 ## command try 1 failed: bad echo fe, expected a5 ac
+351.046967 TX 30
+351.051656 RX cf
+351.152026 TX 5a ac
+351.160772 RX fe
+351.661351 ## command try 2 failed: bad echo fe, expected a5 ac
+351.661393 TX 30
+351.665340 RX cf
+351.765811 TX 5a ac
+351.774238 RX fe
+352.274586 ## command try 3 failed: bad echo fe, expected a5 ac
+352.274661 TX 30
+352.278829 RX cf
+352.379275 ## reg AC unsupported: bad echo fe, expected a5 ac
+352.579585 TX 5a ad
+352.585656 RX fe
+353.086502 ## command try 1 failed: bad echo fe, expected a5 ad
+353.086535 TX 30
+353.091086 RX cf
+353.191525 TX 5a ad
+353.200008 RX fe
+353.700849 ## command try 2 failed: bad echo fe, expected a5 ad
+353.700882 TX 30
+353.704413 RX cf
+353.804795 TX 5a ad
+353.813284 RX fe
+354.313595 ## command try 3 failed: bad echo fe, expected a5 ad
+354.313631 TX 30
+354.317787 RX cf
+354.421986 ## reg AD unsupported: bad echo fe, expected a5 ad
+354.622283 TX 5a ae
+354.634246 RX fe
+355.135029 ## command try 1 failed: bad echo fe, expected a5 ae
+355.135065 TX 30
+355.140161 RX cf
+355.240603 TX 5a ae
+355.248636 RX fe
+355.749509 ## command try 2 failed: bad echo fe, expected a5 ae
+355.749545 TX 30
+355.753471 RX cf
+355.853915 TX 5a ae
+355.862338 RX fe
+356.363254 ## command try 3 failed: bad echo fe, expected a5 ae
+356.363298 TX 30
+356.366690 RX cf
+356.467141 ## reg AE unsupported: bad echo fe, expected a5 ae
+356.667475 TX 5a af
+356.673634 RX fe
+357.174251 ## command try 1 failed: bad echo fe, expected a5 af
+357.174283 TX 30
+357.179279 RX cf
+357.279696 TX 5a af
+357.288011 RX fe
+357.788606 ## command try 2 failed: bad echo fe, expected a5 af
+357.788638 TX 30
+357.792624 RX cf
+357.893039 TX 5a af
+357.901539 RX fe
+358.402118 ## command try 3 failed: bad echo fe, expected a5 af
+358.402150 TX 30
+358.406056 RX cf
+358.506502 ## reg AF unsupported: bad echo fe, expected a5 af
+358.706693 TX 5a b0
+358.713737 RX fe
+359.214313 ## command try 1 failed: bad echo fe, expected a5 b0
+359.214346 TX 30
+359.218235 RX cf
+359.318596 TX 5a b0
+359.327250 RX fe
+359.828095 ## command try 2 failed: bad echo fe, expected a5 b0
+359.828128 TX 30
+359.831760 RX cf
+359.932213 TX 5a b0
+359.940799 RX fe
+360.441571 ## command try 3 failed: bad echo fe, expected a5 b0
+360.441609 TX 30
+360.446248 RX cf
+360.549898 ## reg B0 unsupported: bad echo fe, expected a5 b0
+360.750462 TX 5a b1
+360.762976 RX fe
+361.263819 ## command try 1 failed: bad echo fe, expected a5 b1
+361.263851 TX 30
+361.267473 RX cf
+361.367854 TX 5a b1
+361.376456 RX fe
+361.877033 ## command try 2 failed: bad echo fe, expected a5 b1
+361.877067 TX 30
+361.880671 RX cf
+361.980865 TX 5a b1
+361.989624 RX fe
+362.490240 ## command try 3 failed: bad echo fe, expected a5 b1
+362.490272 TX 30
+362.495497 RX cf
+362.595921 ## reg B1 unsupported: bad echo fe, expected a5 b1
+362.796215 TX 5a b2
+362.802184 RX fe
+363.303023 ## command try 1 failed: bad echo fe, expected a5 b2
+363.303055 TX 30
+363.306589 RX cf
+363.407029 TX 5a b2
+363.415630 RX fe
+363.916468 ## command try 2 failed: bad echo fe, expected a5 b2
+363.916502 TX 30
+363.919988 RX cf
+364.020158 TX 5a b2
+364.029175 RX fe
+364.529754 ## command try 3 failed: bad echo fe, expected a5 b2
+364.529787 TX 30
+364.534680 RX cf
+364.634881 ## reg B2 unsupported: bad echo fe, expected a5 b2
+364.835302 TX 5a b3
+364.841257 RX fe
+365.341838 ## command try 1 failed: bad echo fe, expected a5 b3
+365.341871 TX 30
+365.345663 RX cf
+365.445843 TX 5a b3
+365.454671 RX fe
+365.955256 ## command try 2 failed: bad echo fe, expected a5 b3
+365.955291 TX 30
+365.959421 RX cf
+366.059854 TX 5a b3
+366.068204 RX fe
+366.568786 ## command try 3 failed: bad echo fe, expected a5 b3
+366.568818 TX 30
+366.573705 RX cf
+366.674150 ## reg B3 unsupported: bad echo fe, expected a5 b3
+366.874451 TX 5a b4
+366.880550 RX fe
+367.381307 ## command try 1 failed: bad echo fe, expected a5 b4
+367.381338 TX 30
+367.385058 RX cf
+367.485494 TX 5a b4
+367.493733 RX fe
+367.994319 ## command try 2 failed: bad echo fe, expected a5 b4
+367.994352 TX 30
+367.998307 RX cf
+368.098739 TX 5a b4
+368.107349 RX fe
+368.607598 ## command try 3 failed: bad echo fe, expected a5 b4
+368.607630 TX 30
+368.612801 RX cf
+368.713253 ## reg B4 unsupported: bad echo fe, expected a5 b4
+368.913545 TX 5a b5
+368.919558 RX fe
+369.420136 ## command try 1 failed: bad echo fe, expected a5 b5
+369.420168 TX 30
+369.424162 RX cf
+369.524595 TX 5a b5
+369.532976 RX fe
+370.033576 ## command try 2 failed: bad echo fe, expected a5 b5
+370.033611 TX 30
+370.038521 RX cf
+370.138959 TX 5a b5
+370.147449 RX fe
+370.648295 ## command try 3 failed: bad echo fe, expected a5 b5
+370.648332 TX 30
+370.651875 RX cf
+370.756690 ## reg B5 unsupported: bad echo fe, expected a5 b5
+370.957166 TX 5a b6
+370.968631 RX fe
+371.469470 ## command try 1 failed: bad echo fe, expected a5 b6
+371.469504 TX 30
+371.472987 RX cf
+371.573339 TX 5a b6
+371.581748 RX fe
+372.082505 ## command try 2 failed: bad echo fe, expected a5 b6
+372.082539 TX 30
+372.087657 RX cf
+372.188069 TX 5a b6
+372.196446 RX fe
+372.697151 ## command try 3 failed: bad echo fe, expected a5 b6
+372.697185 TX 30
+372.701045 RX cf
+372.801494 ## reg B6 unsupported: bad echo fe, expected a5 b6
+373.001604 TX 5a b7
+373.007551 RX fe
+373.508185 ## command try 1 failed: bad echo fe, expected a5 b7
+373.508217 TX 30
+373.512213 RX cf
+373.612651 TX 5a b7
+373.621150 RX fe
+374.121549 ## command try 2 failed: bad echo fe, expected a5 b7
+374.121590 TX 30
+374.126645 RX cf
+374.227089 TX 5a b7
+374.235364 RX fe
+374.735666 ## command try 3 failed: bad echo fe, expected a5 b7
+374.735706 TX 30
+374.739865 RX cf
+374.840081 ## reg B7 unsupported: bad echo fe, expected a5 b7
+375.040396 TX 5a b8
+375.046953 RX fe
+375.547806 ## command try 1 failed: bad echo fe, expected a5 b8
+375.547839 TX 30
+375.551421 RX cf
+375.651868 TX 5a b8
+375.660325 RX fe
+376.160914 ## command try 2 failed: bad echo fe, expected a5 b8
+376.160951 TX 30
+376.165982 RX cf
+376.266402 TX 5a b8
+376.274654 RX fe
+376.775314 ## command try 3 failed: bad echo fe, expected a5 b8
+376.775348 TX 30
+376.779323 RX cf
+376.879796 ## reg B8 unsupported: bad echo fe, expected a5 b8
+377.080128 TX 5a b9
+377.086155 RX fe
+377.586769 ## command try 1 failed: bad echo fe, expected a5 b9
+377.586802 TX 30
+377.590679 RX cf
+377.691126 TX 5a b9
+377.699625 RX fe
+378.200233 ## command try 2 failed: bad echo fe, expected a5 b9
+378.200265 TX 30
+378.205267 RX cf
+378.305695 TX 5a b9
+378.314168 RX fe
+378.814756 ## command try 3 failed: bad echo fe, expected a5 b9
+378.814788 TX 30
+378.818729 RX cf
+378.919177 ## reg B9 unsupported: bad echo fe, expected a5 b9
+379.119479 TX 5a ba
+379.125632 RX fe
+379.626208 ## command try 1 failed: bad echo fe, expected a5 ba
+379.626249 TX 30
+379.629642 RX cf
+379.729834 TX 5a ba
+379.738561 RX fe
+380.239399 ## command try 2 failed: bad echo fe, expected a5 ba
+380.239440 TX 30
+380.254408 RX cf
+380.354756 TX 5a ba
+380.363405 RX fe
+380.863993 ## command try 3 failed: bad echo fe, expected a5 ba
+380.864027 TX 30
+380.867917 RX cf
+380.968378 ## reg BA unsupported: bad echo fe, expected a5 ba
+381.168688 TX 5a bb
+381.174739 RX fe
+381.675591 ## command try 1 failed: bad echo fe, expected a5 bb
+381.675625 TX 30
+381.679120 RX cf
+381.779459 TX 5a bb
+381.787990 RX fe
+382.288839 ## command try 2 failed: bad echo fe, expected a5 bb
+382.288871 TX 30
+382.293561 RX cf
+382.394005 TX 5a bb
+382.402372 RX fe
+382.902994 ## command try 3 failed: bad echo fe, expected a5 bb
+382.903029 TX 30
+382.906683 RX cf
+383.007059 ## reg BB unsupported: bad echo fe, expected a5 bb
+383.207607 TX 5a bc
+383.213695 RX fe
+383.714291 ## command try 1 failed: bad echo fe, expected a5 bc
+383.714325 TX 30
+383.719248 RX cf
+383.819698 TX 5a bc
+383.827161 RX fe
+384.327774 ## command try 2 failed: bad echo fe, expected a5 bc
+384.327807 TX 30
+384.332803 RX cf
+384.433177 TX 5a bc
+384.441545 RX fe
+384.942134 ## command try 3 failed: bad echo fe, expected a5 bc
+384.942171 TX 30
+384.946051 RX cf
+385.046247 ## reg BC unsupported: bad echo fe, expected a5 bc
+385.246775 TX 5a bd
+385.252657 RX fe
+385.752939 ## command try 1 failed: bad echo fe, expected a5 bd
+385.752974 TX 30
+385.758425 RX cf
+385.858890 TX 5a bd
+385.867352 RX fe
+386.368250 ## command try 2 failed: bad echo fe, expected a5 bd
+386.368285 TX 30
+386.371608 RX cf
+386.471774 TX 5a bd
+386.480644 RX fe
+386.981260 ## command try 3 failed: bad echo fe, expected a5 bd
+386.981294 TX 30
+386.985263 RX cf
+387.085488 ## reg BD unsupported: bad echo fe, expected a5 bd
+387.285815 TX 5a be
+387.291873 RX fe
+387.792399 ## command try 1 failed: bad echo fe, expected a5 be
+387.792435 TX 30
+387.797553 RX cf
+387.897998 TX 5a be
+387.906387 RX fe
+388.406970 ## command try 2 failed: bad echo fe, expected a5 be
+388.407007 TX 30
+388.410804 RX cf
+388.510994 TX 5a be
+388.519713 RX fe
+389.020421 ## command try 3 failed: bad echo fe, expected a5 be
+389.020458 TX 30
+389.024500 RX cf
+389.124954 ## reg BE unsupported: bad echo fe, expected a5 be
+389.325256 TX 5a bf
+389.331282 RX fe
+389.831885 ## command try 1 failed: bad echo fe, expected a5 bf
+389.831922 TX 30
+389.836658 RX cf
+389.937112 TX 5a bf
+389.945648 RX fe
+390.446291 ## command try 2 failed: bad echo fe, expected a5 bf
+390.446329 TX 30
+390.450385 RX cf
+390.550596 TX 5a bf
+390.559293 RX fe
+391.059578 ## command try 3 failed: bad echo fe, expected a5 bf
+391.059613 TX 30
+391.063745 RX cf
+391.163965 ## reg BF unsupported: bad echo fe, expected a5 bf
+391.364538 TX 5a c0
+391.370675 RX fe
+391.871396 ## command try 1 failed: bad echo fe, expected a5 c0
+391.871442 TX 30
+391.876199 RX cf
+391.976564 TX 5a c0
+391.984998 RX fe
+392.485845 ## command try 2 failed: bad echo fe, expected a5 c0
+392.485877 TX 30
+392.489140 RX cf
+392.589416 TX 5a c0
+392.598475 RX fe
+393.099306 ## command try 3 failed: bad echo fe, expected a5 c0
+393.099338 TX 30
+393.102667 RX cf
+393.202921 ## reg C0 unsupported: bad echo fe, expected a5 c0
+393.403440 TX 5a c1
+393.409592 RX fe
+393.910279 ## command try 1 failed: bad echo fe, expected a5 c1
+393.910311 TX 30
+393.915146 RX cf
+394.015592 TX 5a c1
+394.024084 RX fe
+394.524776 ## command try 2 failed: bad echo fe, expected a5 c1
+394.524807 TX 30
+394.528670 RX cf
+394.628848 TX 5a c1
+394.637186 RX fe
+395.137962 ## command try 3 failed: bad echo fe, expected a5 c1
+395.137993 TX 30
+395.141961 RX cf
+395.242423 ## reg C1 unsupported: bad echo fe, expected a5 c1
+395.442751 TX 5a c2
+395.449727 RX fe
+395.950329 ## command try 1 failed: bad echo fe, expected a5 c2
+395.950385 TX 30
+395.954067 RX cf
+396.054532 TX 5a c2
+396.062886 RX fe
+396.563570 ## command try 2 failed: bad echo fe, expected a5 c2
+396.563604 TX 30
+396.567856 RX cf
+396.668210 TX 5a c2
+396.676667 RX fe
+397.177232 ## command try 3 failed: bad echo fe, expected a5 c2
+397.177264 TX 30
+397.182292 RX cf
+397.282715 ## reg C2 unsupported: bad echo fe, expected a5 c2
+397.483195 TX 5a c3
+397.488908 RX fe
+397.989486 ## command try 1 failed: bad echo fe, expected a5 c3
+397.989519 TX 30
+397.993397 RX cf
+398.093578 TX 5a c3
+398.102179 RX fe
+398.602752 ## command try 2 failed: bad echo fe, expected a5 c3
+398.602787 TX 30
+398.606879 RX cf
+398.711146 TX 5a c3
+398.715991 RX fe
+399.216766 ## command try 3 failed: bad echo fe, expected a5 c3
+399.216797 TX 30
+399.221563 RX cf
+399.321978 ## reg C3 unsupported: bad echo fe, expected a5 c3
+399.522271 TX 5a c4
+399.528276 RX fe
+400.028859 ## command try 1 failed: bad echo fe, expected a5 c4
+400.028891 TX 30
+400.032697 RX cf
+400.133073 TX 5a c4
+400.141655 RX fe
+400.642242 ## command try 2 failed: bad echo fe, expected a5 c4
+400.642282 TX 30
+400.645866 RX cf
+400.746162 TX 5a c4
+400.755196 RX fe
+401.255774 ## command try 3 failed: bad echo fe, expected a5 c4
+401.255808 TX 30
+401.260675 RX cf
+401.361065 ## reg C4 unsupported: bad echo fe, expected a5 c4
+401.561366 TX 5a c5
+401.567411 RX fe
+402.068002 ## command try 1 failed: bad echo fe, expected a5 c5
+402.068034 TX 30
+402.071681 RX cf
+402.171866 TX 5a c5
+402.180768 RX fe
+402.681367 ## command try 2 failed: bad echo fe, expected a5 c5
+402.681401 TX 30
+402.685341 RX cf
+402.785536 TX 5a c5
+402.794322 RX fe
+403.294899 ## command try 3 failed: bad echo fe, expected a5 c5
+403.294932 TX 30
+403.299849 RX cf
+403.400240 ## reg C5 unsupported: bad echo fe, expected a5 c5
+403.600669 TX 5a c6
+403.606600 RX fe
+404.107178 ## command try 1 failed: bad echo fe, expected a5 c6
+404.107211 TX 30
+404.111280 RX cf
+404.211597 TX 5a c6
+404.220045 RX fe
+404.720432 ## command try 2 failed: bad echo fe, expected a5 c6
+404.720466 TX 30
+404.724411 RX cf
+404.824596 TX 5a c6
+404.833583 RX fe
+405.334432 ## command try 3 failed: bad echo fe, expected a5 c6
+405.334467 TX 30
+405.339088 RX cf
+405.439472 ## reg C6 unsupported: bad echo fe, expected a5 c6
+405.639944 TX 5a c7
+405.645643 RX fe
+406.146369 ## command try 1 failed: bad echo fe, expected a5 c7
+406.146431 TX 30
+406.150311 RX cf
+406.254751 TX 5a c7
+406.259158 RX fe
+406.759813 ## command try 2 failed: bad echo fe, expected a5 c7
+406.759845 TX 30
+406.763915 RX cf
+406.864354 TX 5a c7
+406.872727 RX fe
+407.373424 ## command try 3 failed: bad echo fe, expected a5 c7
+407.373460 TX 30
+407.378154 RX cf
+407.478600 ## reg C7 unsupported: bad echo fe, expected a5 c7
+407.679090 TX 5a c8
+407.685101 RX fe
+408.185449 ## command try 1 failed: bad echo fe, expected a5 c8
+408.185511 TX 30
+408.189304 RX cf
+408.289514 TX 5a c8
+408.298208 RX fe
+408.798590 ## command try 2 failed: bad echo fe, expected a5 c8
+408.798620 TX 30
+408.802769 RX cf
+408.903031 TX 5a c8
+408.911703 RX fe
+409.412326 ## command try 3 failed: bad echo fe, expected a5 c8
+409.412409 TX 30
+409.417232 RX cf
+409.517441 ## reg C8 unsupported: bad echo fe, expected a5 c8
+409.717798 TX 5a c9
+409.724061 RX fe
+410.224482 ## command try 1 failed: bad echo fe, expected a5 c9
+410.224520 TX 30
+410.228670 RX cf
+410.329144 TX 5a c9
+410.337667 RX fe
+410.838354 ## command try 2 failed: bad echo fe, expected a5 c9
+410.838398 TX 30
+410.842402 RX cf
+410.942569 TX 5a c9
+410.951478 RX fe
+411.452320 ## command try 3 failed: bad echo fe, expected a5 c9
+411.452352 TX 30
+411.456716 RX cf
+411.557096 ## reg C9 unsupported: bad echo fe, expected a5 c9
+411.757432 TX 5a ca
+411.763454 RX fe
+412.264154 ## command try 1 failed: bad echo fe, expected a5 ca
+412.264188 TX 30
+412.268162 RX cf
+412.368538 TX 5a ca
+412.376904 RX fe
+412.877612 ## command try 2 failed: bad echo fe, expected a5 ca
+412.877646 TX 30
+412.881781 RX cf
+412.982105 TX 5a ca
+412.990572 RX fe
+413.491263 ## command try 3 failed: bad echo fe, expected a5 ca
+413.491295 TX 30
+413.496020 RX cf
+413.596405 ## reg CA unsupported: bad echo fe, expected a5 ca
+413.796731 TX 5a cb
+413.802549 RX fe
+414.303133 ## command try 1 failed: bad echo fe, expected a5 cb
+414.303166 TX 30
+414.307145 RX cf
+414.407409 TX 5a cb
+414.416458 RX fe
+414.917302 ## command try 2 failed: bad echo fe, expected a5 cb
+414.917385 TX 30
+414.920615 RX cf
+415.025563 TX 5a cb
+415.029564 RX fe
+415.530408 ## command try 3 failed: bad echo fe, expected a5 cb
+415.530440 TX 30
+415.535108 RX cf
+415.635386 ## reg CB unsupported: bad echo fe, expected a5 cb
+415.835597 TX 5a cc
+415.842127 RX fe
+416.342560 ## command try 1 failed: bad echo fe, expected a5 cc
+416.342594 TX 30
+416.346745 RX cf
+416.446919 TX 5a cc
+416.455630 RX fe
+416.956278 ## command try 2 failed: bad echo fe, expected a5 cc
+416.956313 TX 30
+416.960154 RX cf
+417.060607 TX 5a cc
+417.069168 RX fe
+417.569848 ## command try 3 failed: bad echo fe, expected a5 cc
+417.569882 TX 30
+417.573756 RX cf
+417.674150 ## reg CC unsupported: bad echo fe, expected a5 cc
+417.874484 TX 5a cd
+417.881513 RX fe
+418.382283 ## command try 1 failed: bad echo fe, expected a5 cd
+418.382319 TX 30
+418.385708 RX cf
+418.485891 TX 5a cd
+418.494644 RX fe
+418.995249 ## command try 2 failed: bad echo fe, expected a5 cd
+418.995285 TX 30
+418.999209 RX cf
+419.099397 TX 5a cd
+419.108268 RX fe
+419.608599 ## command try 3 failed: bad echo fe, expected a5 cd
+419.608632 TX 30
+419.612882 RX cf
+419.713107 ## reg CD unsupported: bad echo fe, expected a5 cd
+419.913616 TX 5a ce
+419.920671 RX fe
+420.421526 ## command try 1 failed: bad echo fe, expected a5 ce
+420.421563 TX 30
+420.425063 RX cf
+420.525492 TX 5a ce
+420.533986 RX fe
+421.034605 ## command try 2 failed: bad echo fe, expected a5 ce
+421.034658 TX 30
+421.038391 RX cf
+421.138563 TX 5a ce
+421.147468 RX fe
+421.648247 ## command try 3 failed: bad echo fe, expected a5 ce
+421.648280 TX 30
+421.652714 RX cf
+421.752992 ## reg CE unsupported: bad echo fe, expected a5 ce
+421.953518 TX 5a cf
+421.959883 RX fe
+422.460576 ## command try 1 failed: bad echo fe, expected a5 cf
+422.460608 TX 30
+422.464439 RX cf
+422.564622 TX 5a cf
+422.573323 RX fe
+423.074088 ## command try 2 failed: bad echo fe, expected a5 cf
+423.074126 TX 30
+423.078556 RX cf
+423.179005 TX 5a cf
+423.186695 RX fe
+423.687540 ## command try 3 failed: bad echo fe, expected a5 cf
+423.687575 TX 30
+423.692039 RX cf
+423.792241 ## reg CF unsupported: bad echo fe, expected a5 cf
+423.992623 TX 5a d0
+423.998815 RX fe
+424.499453 ## command try 1 failed: bad echo fe, expected a5 d0
+424.499501 TX 30
+424.503395 RX cf
+424.603837 TX 5a d0
+424.612345 RX fe
+425.113152 ## command try 2 failed: bad echo fe, expected a5 d0
+425.113184 TX 30
+425.117654 RX cf
+425.218104 TX 5a d0
+425.226744 RX fe
+425.727594 ## command try 3 failed: bad echo fe, expected a5 d0
+425.727629 TX 30
+425.731273 RX cf
+425.835664 ## reg D0 unsupported: bad echo fe, expected a5 d0
+426.036025 TX 5a d1
+426.047753 RX fe
+426.548499 ## command try 1 failed: bad echo fe, expected a5 d1
+426.548548 TX 30
+426.552537 RX cf
+426.652972 TX 5a d1
+426.661193 RX fe
+427.161607 ## command try 2 failed: bad echo fe, expected a5 d1
+427.161641 TX 30
+427.166736 RX cf
+427.267122 TX 5a d1
+427.274637 RX fe
+427.775326 ## command try 3 failed: bad echo fe, expected a5 d1
+427.775389 TX 30
+427.780461 RX cf
+427.880648 ## reg D1 unsupported: bad echo fe, expected a5 d1
+428.081012 TX 5a d2
+428.087023 RX fe
+428.587796 ## command try 1 failed: bad echo fe, expected a5 d2
+428.587830 TX 30
+428.591857 RX cf
+428.692292 TX 5a d2
+428.700427 RX fe
+429.200663 ## command try 2 failed: bad echo fe, expected a5 d2
+429.200697 TX 30
+429.206238 RX cf
+429.306685 TX 5a d2
+429.314086 RX fe
+429.814455 ## command try 3 failed: bad echo fe, expected a5 d2
+429.814521 TX 30
+429.819505 RX cf
+429.919690 ## reg D2 unsupported: bad echo fe, expected a5 d2
+430.120175 TX 5a d3
+430.126559 RX fe
+430.627320 ## command try 1 failed: bad echo fe, expected a5 d3
+430.627351 TX 30
+430.630994 RX cf
+430.731435 TX 5a d3
+430.739872 RX fe
+431.240436 ## command try 2 failed: bad echo fe, expected a5 d3
+431.240483 TX 30
+431.244176 RX cf
+431.344353 TX 5a d3
+431.353465 RX fe
+431.853612 ## command try 3 failed: bad echo fe, expected a5 d3
+431.853641 TX 30
+431.858792 RX cf
+431.958989 ## reg D3 unsupported: bad echo fe, expected a5 d3
+432.159551 TX 5a d4
+432.165737 RX fe
+432.666304 ## command try 1 failed: bad echo fe, expected a5 d4
+432.666337 TX 30
+432.670274 RX cf
+432.770658 TX 5a d4
+432.779096 RX fe
+433.279567 ## command try 2 failed: bad echo fe, expected a5 d4
+433.279600 TX 30
+433.284608 RX cf
+433.385031 TX 5a d4
+433.393278 RX fe
+433.893634 ## command try 3 failed: bad echo fe, expected a5 d4
+433.893669 TX 30
+433.897689 RX cf
+433.997918 ## reg D4 unsupported: bad echo fe, expected a5 d4
+434.198238 TX 5a d5
+434.204757 RX fe
+434.705364 ## command try 1 failed: bad echo fe, expected a5 d5
+434.705430 TX 30
+434.709063 RX cf
+434.809270 TX 5a d5
+434.818021 RX fe
+435.318614 ## command try 2 failed: bad echo fe, expected a5 d5
+435.318648 TX 30
+435.323657 RX cf
+435.423828 TX 5a d5
+435.432410 RX fe
+435.932599 ## command try 3 failed: bad echo fe, expected a5 d5
+435.932633 TX 30
+435.937232 RX cf
+436.041034 ## reg D5 unsupported: bad echo fe, expected a5 d5
+436.241520 TX 5a d6
+436.253763 RX fe
+436.754571 ## command try 1 failed: bad echo fe, expected a5 d6
+436.754624 TX 30
+436.758401 RX cf
+436.858596 TX 5a d6
+436.867558 RX fe
+437.368341 ## command try 2 failed: bad echo fe, expected a5 d6
+437.368380 TX 30
+437.372693 RX cf
+437.472851 TX 5a d6
+437.481680 RX fe
+437.982271 ## command try 3 failed: bad echo fe, expected a5 d6
+437.982305 TX 30
+437.986468 RX cf
+438.086902 ## reg D6 unsupported: bad echo fe, expected a5 d6
+438.287410 TX 5a d7
+438.293079 RX fe
+438.793730 ## command try 1 failed: bad echo fe, expected a5 d7
+438.793764 TX 30
+438.797682 RX cf
+438.898125 TX 5a d7
+438.906743 RX fe
+439.407624 ## command try 2 failed: bad echo fe, expected a5 d7
+439.407663 TX 30
+439.412148 RX cf
+439.512546 TX 5a d7
+439.521082 RX fe
+440.021758 ## command try 3 failed: bad echo fe, expected a5 d7
+440.021791 TX 30
+440.025836 RX cf
+440.126210 ## reg D7 unsupported: bad echo fe, expected a5 d7
+440.326769 TX 5a d8
+440.332622 RX fe
+440.833392 ## command try 1 failed: bad echo fe, expected a5 d8
+440.833441 TX 30
+440.837063 RX cf
+440.937454 TX 5a d8
+440.946045 RX fe
+441.446533 ## command try 2 failed: bad echo fe, expected a5 d8
+441.446580 TX 30
+441.451525 RX cf
+441.552005 TX 5a d8
+441.559659 RX fe
+442.060442 ## command try 3 failed: bad echo fe, expected a5 d8
+442.060476 TX 30
+442.065131 RX cf
+442.165566 ## reg D8 unsupported: bad echo fe, expected a5 d8
+442.365895 TX 5a d9
+442.371638 RX fe
+442.872339 ## command try 1 failed: bad echo fe, expected a5 d9
+442.872378 TX 30
+442.876443 RX cf
+442.976892 TX 5a d9
+442.985101 RX fe
+443.485393 ## command try 2 failed: bad echo fe, expected a5 d9
+443.485427 TX 30
+443.489769 RX cf
+443.590141 TX 5a d9
+443.598674 RX fe
+444.099316 ## command try 3 failed: bad echo fe, expected a5 d9
+444.099351 TX 30
+444.104106 RX cf
+444.204520 ## reg D9 unsupported: bad echo fe, expected a5 d9
+444.404946 TX 5a da
+444.411110 RX fe
+444.911598 ## command try 1 failed: bad echo fe, expected a5 da
+444.911632 TX 30
+444.915661 RX cf
+445.016025 TX 5a da
+445.024494 RX fe
+445.524575 ## command try 2 failed: bad echo fe, expected a5 da
+445.524608 TX 30
+445.529030 RX cf
+445.629210 TX 5a da
+445.638074 RX fe
+446.138490 ## command try 3 failed: bad echo fe, expected a5 da
+446.138523 TX 30
+446.143310 RX cf
+446.243446 ## reg DA unsupported: bad echo fe, expected a5 da
+446.443933 TX 5a db
+446.450286 RX fe
+446.951148 ## command try 1 failed: bad echo fe, expected a5 db
+446.951183 TX 30
+446.954749 RX cf
+447.054958 TX 5a db
+447.063413 RX fe
+447.564101 ## command try 2 failed: bad echo fe, expected a5 db
+447.564137 TX 30
+447.568979 RX cf
+447.669431 TX 5a db
+447.677768 RX fe
+448.178530 ## command try 3 failed: bad echo fe, expected a5 db
+448.178564 TX 30
+448.182540 RX cf
+448.282987 ## reg DB unsupported: bad echo fe, expected a5 db
+448.483511 TX 5a dc
+448.489106 RX fe
+448.989739 ## command try 1 failed: bad echo fe, expected a5 dc
+448.989772 TX 30
+448.994908 RX cf
+449.095270 TX 5a dc
+449.103678 RX fe
+449.604442 ## command try 2 failed: bad echo fe, expected a5 dc
+449.604492 TX 30
+449.608117 RX cf
+449.708319 TX 5a dc
+449.716876 RX fe
+450.217609 ## command try 3 failed: bad echo fe, expected a5 dc
+450.217658 TX 30
+450.221666 RX cf
+450.322030 ## reg DC unsupported: bad echo fe, expected a5 dc
+450.522421 TX 5a dd
+450.528463 RX fe
+451.029071 ## command try 1 failed: bad echo fe, expected a5 dd
+451.029125 TX 30
+451.033757 RX cf
+451.137445 TX 5a dd
+451.143006 RX fe
+451.643647 ## command try 2 failed: bad echo fe, expected a5 dd
+451.643682 TX 30
+451.647556 RX cf
+451.747728 TX 5a dd
+451.756121 RX fe
+452.256746 ## command try 3 failed: bad echo fe, expected a5 dd
+452.256778 TX 30
+452.260774 RX cf
+452.361156 ## reg DD unsupported: bad echo fe, expected a5 dd
+452.561616 TX 5a de
+452.567845 RX fe
+453.068543 ## command try 1 failed: bad echo fe, expected a5 de
+453.068578 TX 30
+453.073294 RX cf
+453.173724 TX 5a de
+453.182209 RX fe
+453.682884 ## command try 2 failed: bad echo fe, expected a5 de
+453.682918 TX 30
+453.686788 RX cf
+453.787234 TX 5a de
+453.795725 RX fe
+454.296502 ## command try 3 failed: bad echo fe, expected a5 de
+454.296548 TX 30
+454.300140 RX cf
+454.400589 ## reg DE unsupported: bad echo fe, expected a5 de
+454.601063 TX 5a df
+454.606744 RX fe
+455.107560 ## command try 1 failed: bad echo fe, expected a5 df
+455.107595 TX 30
+455.112541 RX cf
+455.212965 TX 5a df
+455.221324 RX fe
+455.722005 ## command try 2 failed: bad echo fe, expected a5 df
+455.722038 TX 30
+455.725969 RX cf
+455.826340 TX 5a df
+455.834675 RX fe
+456.335293 ## command try 3 failed: bad echo fe, expected a5 df
+456.335324 TX 30
+456.339283 RX cf
+456.439415 ## reg DF unsupported: bad echo fe, expected a5 df
+456.639989 TX 5a e0
+456.646045 RX fe
+457.146881 ## command try 1 failed: bad echo fe, expected a5 e0
+457.146913 TX 30
+457.151683 RX cf
+457.252029 TX 5a e0
+457.260590 RX fe
+457.761445 ## command try 2 failed: bad echo fe, expected a5 e0
+457.761479 TX 30
+457.764846 RX cf
+457.865096 TX 5a e0
+457.874130 RX fe
+458.374788 ## command try 3 failed: bad echo fe, expected a5 e0
+458.374822 TX 30
+458.378681 RX cf
+458.478893 ## reg E0 unsupported: bad echo fe, expected a5 e0
+458.679242 TX 5a e1
+458.685272 RX fe
+459.185961 ## command try 1 failed: bad echo fe, expected a5 e1
+459.185995 TX 30
+459.190919 RX cf
+459.291348 TX 5a e1
+459.299482 RX fe
+459.800113 ## command try 2 failed: bad echo fe, expected a5 e1
+459.800147 TX 30
+459.804007 RX cf
+459.904172 TX 5a e1
+459.913294 RX fe
+460.414133 ## command try 3 failed: bad echo fe, expected a5 e1
+460.414165 TX 30
+460.417482 RX cf
+460.517928 ## reg E1 unsupported: bad echo fe, expected a5 e1
+460.718288 TX 5a e2
+460.725439 RX fe
+461.226295 ## command try 1 failed: bad echo fe, expected a5 e2
+461.226329 TX 30
+461.230042 RX cf
+461.330449 TX 5a e2
+461.338768 RX fe
+461.839427 ## command try 2 failed: bad echo fe, expected a5 e2
+461.839461 TX 30
+461.843598 RX cf
+461.944034 TX 5a e2
+461.952234 RX fe
+462.452424 ## command try 3 failed: bad echo fe, expected a5 e2
+462.452454 TX 30
+462.456574 RX cf
+462.556763 ## reg E2 unsupported: bad echo fe, expected a5 e2
+462.757288 TX 5a e3
+462.764585 RX fe
+463.265199 ## command try 1 failed: bad echo fe, expected a5 e3
+463.265230 TX 30
+463.269030 RX cf
+463.369494 TX 5a e3
+463.377848 RX fe
+463.878459 ## command try 2 failed: bad echo fe, expected a5 e3
+463.878493 TX 30
+463.882699 RX cf
+463.983121 TX 5a e3
+463.991505 RX fe
+464.492312 ## command try 3 failed: bad echo fe, expected a5 e3
+464.492388 TX 30
+464.496970 RX cf
+464.600703 ## reg E3 unsupported: bad echo fe, expected a5 e3
+464.801040 TX 5a e4
+464.813441 RX fe
+465.314282 ## command try 1 failed: bad echo fe, expected a5 e4
+465.314337 TX 30
+465.318443 RX cf
+465.418897 TX 5a e4
+465.427339 RX fe
+465.928198 ## command try 2 failed: bad echo fe, expected a5 e4
+465.928232 TX 30
+465.931661 RX cf
+466.032067 TX 5a e4
+466.040600 RX fe
+466.541213 ## command try 3 failed: bad echo fe, expected a5 e4
+466.541246 TX 30
+466.546194 RX cf
+466.646625 ## reg E4 unsupported: bad echo fe, expected a5 e4
+466.847177 TX 5a e5
+466.853029 RX fe
+467.353661 ## command try 1 failed: bad echo fe, expected a5 e5
+467.353693 TX 30
+467.357626 RX cf
+467.457985 TX 5a e5
+467.466183 RX fe
+467.966946 ## command try 2 failed: bad echo fe, expected a5 e5
+467.966979 TX 30
+467.970657 RX cf
+468.071126 TX 5a e5
+468.079783 RX fe
+468.580470 ## command try 3 failed: bad echo fe, expected a5 e5
+468.580503 TX 30
+468.585291 RX cf
+468.685747 ## reg E5 unsupported: bad echo fe, expected a5 e5
+468.886131 TX 5a e6
+468.892091 RX fe
+469.392673 ## command try 1 failed: bad echo fe, expected a5 e6
+469.392706 TX 30
+469.396597 RX cf
+469.496776 TX 5a e6
+469.505522 RX fe
+470.006178 ## command try 2 failed: bad echo fe, expected a5 e6
+470.006212 TX 30
+470.010234 RX cf
+470.110680 TX 5a e6
+470.119197 RX fe
+470.620040 ## command try 3 failed: bad echo fe, expected a5 e6
+470.620074 TX 30
+470.624730 RX cf
+470.725163 ## reg E6 unsupported: bad echo fe, expected a5 e6
+470.925535 TX 5a e7
+470.931153 RX fe
+471.431604 ## command try 1 failed: bad echo fe, expected a5 e7
+471.431636 TX 30
+471.435628 RX cf
+471.536060 TX 5a e7
+471.544745 RX fe
+472.045392 ## command try 2 failed: bad echo fe, expected a5 e7
+472.045439 TX 30
+472.049362 RX cf
+472.149604 TX 5a e7
+472.158198 RX fe
+472.658990 ## command try 3 failed: bad echo fe, expected a5 e7
+472.659023 TX 30
+472.663765 RX cf
+472.764213 ## reg E7 unsupported: bad echo fe, expected a5 e7
+472.964676 TX 5a e8
+472.970531 RX fe
+473.471168 ## command try 1 failed: bad echo fe, expected a5 e8
+473.471200 TX 30
+473.475009 RX cf
+473.575460 TX 5a e8
+473.583630 RX fe
+474.084405 ## command try 2 failed: bad echo fe, expected a5 e8
+474.084440 TX 30
+474.088407 RX cf
+474.188582 TX 5a e8
+474.197290 RX fe
+474.697428 ## command try 3 failed: bad echo fe, expected a5 e8
+474.697482 TX 30
+474.702641 RX cf
+474.802874 ## reg E8 unsupported: bad echo fe, expected a5 e8
+475.003443 TX 5a e9
+475.009706 RX fe
+475.510318 ## command try 1 failed: bad echo fe, expected a5 e9
+475.510352 TX 30
+475.514298 RX cf
+475.614725 TX 5a e9
+475.623067 RX fe
+476.123693 ## command try 2 failed: bad echo fe, expected a5 e9
+476.123726 TX 30
+476.128594 RX cf
+476.229032 TX 5a e9
+476.237510 RX fe
+476.738379 ## command try 3 failed: bad echo fe, expected a5 e9
+476.738412 TX 30
+476.741960 RX cf
+476.842307 ## reg E9 unsupported: bad echo fe, expected a5 e9
+477.042851 TX 5a ea
+477.048657 RX fe
+477.549442 ## command try 1 failed: bad echo fe, expected a5 ea
+477.549474 TX 30
+477.553420 RX cf
+477.653861 TX 5a ea
+477.662331 RX fe
+478.163065 ## command try 2 failed: bad echo fe, expected a5 ea
+478.163100 TX 30
+478.167975 RX cf
+478.268398 TX 5a ea
+478.276748 RX fe
+478.777612 ## command try 3 failed: bad echo fe, expected a5 ea
+478.777644 TX 30
+478.781385 RX cf
+478.881850 ## reg EA unsupported: bad echo fe, expected a5 ea
+479.082328 TX 5a eb
+479.087804 RX fe
+479.588586 ## command try 1 failed: bad echo fe, expected a5 eb
+479.588619 TX 30
+479.592765 RX cf
+479.692976 TX 5a eb
+479.701328 RX fe
+480.202193 ## command try 2 failed: bad echo fe, expected a5 eb
+480.202230 TX 30
+480.207281 RX cf
+480.307555 TX 5a eb
+480.314984 RX fe
+480.815686 ## command try 3 failed: bad echo fe, expected a5 eb
+480.815720 TX 30
+480.820669 RX cf
+480.921108 ## reg EB unsupported: bad echo fe, expected a5 eb
+481.121474 TX 5a ec
+481.127306 RX fe
+481.627959 ## command try 1 failed: bad echo fe, expected a5 ec
+481.627991 TX 30
+481.631675 RX cf
+481.731899 TX 5a ec
+481.740899 RX fe
+482.241509 ## command try 2 failed: bad echo fe, expected a5 ec
+482.241544 TX 30
+482.246482 RX cf
+482.346819 TX 5a ec
+482.354366 RX fe
+482.855245 ## command try 3 failed: bad echo fe, expected a5 ec
+482.855277 TX 30
+482.859654 RX cf
+482.959899 ## reg EC unsupported: bad echo fe, expected a5 ec
+483.160425 TX 5a ed
+483.166392 RX fe
+483.667030 ## command try 1 failed: bad echo fe, expected a5 ed
+483.667061 TX 30
+483.671076 RX cf
+483.771520 TX 5a ed
+483.780175 RX fe
+484.281022 ## command try 2 failed: bad echo fe, expected a5 ed
+484.281057 TX 30
+484.284767 RX cf
+484.385197 TX 5a ed
+484.393648 RX fe
+484.894335 ## command try 3 failed: bad echo fe, expected a5 ed
+484.894379 TX 30
+484.899120 RX cf
+484.999509 ## reg ED unsupported: bad echo fe, expected a5 ed
+485.199827 TX 5a ee
+485.205667 RX fe
+485.706468 ## command try 1 failed: bad echo fe, expected a5 ee
+485.706502 TX 30
+485.710607 RX cf
+485.810971 TX 5a ee
+485.819365 RX fe
+486.320139 ## command try 2 failed: bad echo fe, expected a5 ee
+486.320173 TX 30
+486.323899 RX cf
+486.424264 TX 5a ee
+486.432736 RX fe
+486.933348 ## command try 3 failed: bad echo fe, expected a5 ee
+486.933417 TX 30
+486.938369 RX cf
+487.038597 ## reg EE unsupported: bad echo fe, expected a5 ee
+487.239093 TX 5a ef
+487.245268 RX fe
+487.746121 ## command try 1 failed: bad echo fe, expected a5 ef
+487.746155 TX 30
+487.749571 RX cf
+487.849959 TX 5a ef
+487.858573 RX fe
+488.359305 ## command try 2 failed: bad echo fe, expected a5 ef
+488.359340 TX 30
+488.364140 RX cf
+488.464496 TX 5a ef
+488.472668 RX fe
+488.973514 ## command try 3 failed: bad echo fe, expected a5 ef
+488.973548 TX 30
+488.977424 RX cf
+489.077922 ## reg EF unsupported: bad echo fe, expected a5 ef
+489.278302 TX 5a f0
+489.284319 RX fe
+489.784957 ## command try 1 failed: bad echo fe, expected a5 f0
+489.784995 TX 30
+489.788519 RX cf
+489.888690 TX 5a f0
+489.897647 RX fe
+490.398219 ## command try 2 failed: bad echo fe, expected a5 f0
+490.398254 TX 30
+490.403287 RX cf
+490.503563 TX 5a f0
+490.512259 RX fe
+491.012581 ## command try 3 failed: bad echo fe, expected a5 f0
+491.012617 TX 30
+491.016682 RX cf
+491.120884 ## reg F0 unsupported: bad echo fe, expected a5 f0
+491.321258 TX 5a f1
+491.333299 RX fe
+491.833876 ## command try 1 failed: bad echo fe, expected a5 f1
+491.833908 TX 30
+491.837661 RX cf
+491.937836 TX 5a f1
+491.946872 RX fe
+492.447402 ## command try 2 failed: bad echo fe, expected a5 f1
+492.447437 TX 30
+492.452494 RX cf
+492.552924 TX 5a f1
+492.561216 RX fe
+493.061869 ## command try 3 failed: bad echo fe, expected a5 f1
+493.061902 TX 30
+493.065653 RX cf
+493.165835 ## reg F1 unsupported: bad echo fe, expected a5 f1
+493.366328 TX 5a f2
+493.372578 RX fe
+493.873430 ## command try 1 failed: bad echo fe, expected a5 f2
+493.873464 TX 30
+493.877095 RX cf
+493.977567 TX 5a f2
+493.985967 RX fe
+494.486439 ## command try 2 failed: bad echo fe, expected a5 f2
+494.486472 TX 30
+494.491508 RX cf
+494.591722 TX 5a f2
+494.600427 RX fe
+495.100592 ## command try 3 failed: bad echo fe, expected a5 f2
+495.100645 TX 30
+495.104961 RX cf
+495.205329 ## reg F2 unsupported: bad echo fe, expected a5 f2
+495.405678 TX 5a f3
+495.411877 RX fe
+495.912494 ## command try 1 failed: bad echo fe, expected a5 f3
+495.912528 TX 30
+495.916350 RX cf
+496.016591 TX 5a f3
+496.025292 RX fe
+496.526057 ## command try 2 failed: bad echo fe, expected a5 f3
+496.526100 TX 30
+496.530706 RX cf
+496.634417 TX 5a f3
+496.639861 RX fe
+497.140629 ## command try 3 failed: bad echo fe, expected a5 f3
+497.140662 TX 30
+497.144350 RX cf
+497.244827 ## reg F3 unsupported: bad echo fe, expected a5 f3
+497.445159 TX 5a f4
+497.451200 RX fe
+497.952057 ## command try 1 failed: bad echo fe, expected a5 f4
+497.952093 TX 30
+497.955738 RX cf
+498.056156 TX 5a f4
+498.064539 RX fe
+498.565399 ## command try 2 failed: bad echo fe, expected a5 f4
+498.565433 TX 30
+498.569764 RX cf
+498.670024 TX 5a f4
+498.678896 RX fe
+499.179441 ## command try 3 failed: bad echo fe, expected a5 f4
+499.179474 TX 30
+499.183451 RX cf
+499.283839 ## reg F4 unsupported: bad echo fe, expected a5 f4
+499.484195 TX 5a f5
+499.490148 RX fe
+499.990995 ## command try 1 failed: bad echo fe, expected a5 f5
+499.991033 TX 30
+499.995674 RX cf
+500.096093 TX 5a f5
+500.104601 RX fe
+500.605218 ## command try 2 failed: bad echo fe, expected a5 f5
+500.605255 TX 30
+500.609261 RX cf
+500.709690 TX 5a f5
+500.717766 RX fe
+501.218405 ## command try 3 failed: bad echo fe, expected a5 f5
+501.218438 TX 30
+501.222486 RX cf
+501.322720 ## reg F5 unsupported: bad echo fe, expected a5 f5
+501.523042 TX 5a f6
+501.530283 RX fe
+502.031126 ## command try 1 failed: bad echo fe, expected a5 f6
+502.031161 TX 30
+502.034625 RX cf
+502.139492 TX 5a f6
+502.143771 RX a5
+502.153763 RX fe
+502.153802 ## command try 2 failed: bad echo a5 fe, expected a5 f6
+502.153814 TX 30
+502.163609 RX cf
+502.264044 TX 5a f6
+502.272483 RX fe
+502.773101 ## command try 3 failed: bad echo fe, expected a5 f6
+502.773138 TX 30
+502.777125 RX cf
+502.877310 ## reg F6 unsupported: bad echo fe, expected a5 f6
+503.077731 TX 5a f7
+503.083881 RX fe
+503.584587 ## command try 1 failed: bad echo fe, expected a5 f7
+503.584621 TX 30
+503.588268 RX cf
+503.688607 TX 5a f7
+503.697222 RX fe
+504.197480 ## command try 2 failed: bad echo fe, expected a5 f7
+504.197513 TX 30
+504.202657 RX cf
+504.303014 TX 5a f7
+504.311711 RX fe
+504.812325 ## command try 3 failed: bad echo fe, expected a5 f7
+504.812373 TX 30
+504.815889 RX cf
+504.916143 ## reg F7 unsupported: bad echo fe, expected a5 f7
+505.116643 TX 5a f8
+505.123134 RX fe
+505.623487 ## command try 1 failed: bad echo fe, expected a5 f8
+505.623520 TX 30
+505.628515 RX cf
+505.728867 TX 5a f8
+505.737534 RX fe
+506.238114 ## command try 2 failed: bad echo fe, expected a5 f8
+506.238149 TX 30
+506.242159 RX cf
+506.342526 TX 5a f8
+506.350949 RX fe
+506.851542 ## command try 3 failed: bad echo fe, expected a5 f8
+506.851576 TX 30
+506.855543 RX cf
+506.955931 ## reg F8 unsupported: bad echo fe, expected a5 f8
+507.156235 TX 5a f9
+507.161869 RX fe
+507.664700 ## command try 1 failed: bad echo fe, expected a5 f9
+507.664751 TX 30
+507.676843 RX cf
+507.777207 TX 5a f9
+507.785656 RX fe
+508.286222 ## command try 2 failed: bad echo fe, expected a5 f9
+508.286255 TX 30
+508.291350 RX cf
+508.391588 TX 5a f9
+508.400246 RX fe
+508.901019 ## command try 3 failed: bad echo fe, expected a5 f9
+508.901054 TX 30
+508.904744 RX cf
+509.005138 ## reg F9 unsupported: bad echo fe, expected a5 f9
+509.205616 TX 5a fa
+509.211505 RX fe
+509.712110 ## command try 1 failed: bad echo fe, expected a5 fa
+509.712148 TX 30
+509.715791 RX cf
+509.816013 TX 5a fa
+509.824713 RX fe
+510.325460 ## command try 2 failed: bad echo fe, expected a5 fa
+510.325494 TX 30
+510.330477 RX cf
+510.430650 TX 5a fa
+510.439365 RX fe
+510.939603 ## command try 3 failed: bad echo fe, expected a5 fa
+510.939637 TX 30
+510.943910 RX cf
+511.044303 ## reg FA unsupported: bad echo fe, expected a5 fa
+511.244633 TX 5a fb
+511.250691 RX fe
+511.751271 ## command try 1 failed: bad echo fe, expected a5 fb
+511.751306 TX 30
+511.755328 RX cf
+511.855766 TX 5a fb
+511.864229 RX fe
+512.365074 ## command try 2 failed: bad echo fe, expected a5 fb
+512.365108 TX 30
+512.369704 RX cf
+512.473441 TX 5a fb
+512.478448 RX fe
+512.979033 ## command try 3 failed: bad echo fe, expected a5 fb
+512.979068 TX 30
+512.983102 RX cf
+513.083503 ## reg FB unsupported: bad echo fe, expected a5 fb
+513.283701 TX 5a fc
+513.289879 RX fe
+513.790456 ## command try 1 failed: bad echo fe, expected a5 fc
+513.790488 TX 30
+513.795463 RX cf
+513.895859 TX 5a fc
+513.904224 RX fe
+514.404602 ## command try 2 failed: bad echo fe, expected a5 fc
+514.404635 TX 30
+514.408781 RX cf
+514.509163 TX 5a fc
+514.517759 RX fe
+515.018340 ## command try 3 failed: bad echo fe, expected a5 fc
+515.018384 TX 30
+515.022092 RX cf
+515.122480 ## reg FC unsupported: bad echo fe, expected a5 fc
+515.322858 TX 5a fd
+515.328857 RX fe
+515.829434 ## command try 1 failed: bad echo fe, expected a5 fd
+515.829469 TX 30
+515.834328 RX cf
+515.934745 TX 5a fd
+515.943390 RX fe
+516.444158 ## command try 2 failed: bad echo fe, expected a5 fd
+516.444193 TX 30
+516.447932 RX cf
+516.548345 TX 5a fd
+516.556702 RX fe
+517.057505 ## command try 3 failed: bad echo fe, expected a5 fd
+517.057537 TX 30
+517.061104 RX cf
+517.161478 ## reg FD unsupported: bad echo fe, expected a5 fd
+517.361874 TX 5a fe
+517.369007 RX fe
+517.869586 ## command try 1 failed: bad echo fe, expected a5 fe
+517.869626 TX 30
+517.873645 RX cf
+517.977433 TX 5a fe
+517.982459 RX fe
+518.482613 ## command try 2 failed: bad echo fe, expected a5 fe
+518.482647 TX 30
+518.487040 RX cf
+518.587485 TX 5a fe
+518.595695 RX fe
+519.096415 ## command try 3 failed: bad echo fe, expected a5 fe
+519.096447 TX 30
+519.100469 RX cf
+519.200928 ## reg FE unsupported: bad echo fe, expected a5 fe
+519.401377 TX 5a ff
+519.407376 RX fe
+519.908229 ## command try 1 failed: bad echo fe, expected a5 ff
+519.908264 TX 30
+519.912946 RX cf
+520.013168 TX 5a ff
+520.021762 RX fe
+520.522618 ## command try 2 failed: bad echo fe, expected a5 ff
+520.522654 TX 30
+520.526242 RX cf
+520.626389 TX 5a ff
+520.635269 RX fe
+521.135986 ## command try 3 failed: bad echo fe, expected a5 ff
+521.136019 TX 30
+521.139809 RX cf
+521.240032 ## reg FF unsupported: bad echo fe, expected a5 ff
+521.440503 ## close

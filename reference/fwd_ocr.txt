@@ -1,0 +1,256 @@
+===== PDF page 1 =====
+QUICK REFERENCE INDEX
+GENERAL INFORMATION
+
+MAINTENANCE
+
+ENGINE MECHANICAL
+
+ENGINE LUBRICATION &
+COOLING SYSTEMS
+
+ENGINE CONTROL SYSTEM
+
+ACCELERATOR CONTROL, FUEL &
+EXHAUST SYSTEMS
+
+CLUTCH
+
+N ISSAN MANUAL TRANSAXLE
+MAXI] MA AUTOMATIC TRANSAXLE
+
+MODEL A332 SERIES FRONT AXLE & FRONT SUSPENSION
+
+il
+
+mm
+
+o|lm|m|—]|m
+— olo|=
+
+nL
+po
+
+(=v R Biwi Wp)
+
+REAR AXLE & REAR SUSPENSION
+BRAKE SYSTEM
+
+STEERING SYSTEM
+
+RESTRAINT SYSTEM
+
+BODY & TRIM
+
+HEATER & AIR CONDITIONER
+
+lil
+
+ELECTRICAL SYSTEM
+
+m
+-
+
+ALPHABETICAL INDEX
+
+© 1997 NISSAN MOTOR CO., LTD. Printed in Japan
+
+All rights reserved. No part of this Service Manual may be reproduced or stored in a retrieval system, or transmitted in any form, or by any means,
+electronic, mechanical, photocopying, recording or otherwise, without the prior written permission of Nissan Motor Company Ltd., Tokyo, Japan. 3
+===== PDF page 2 =====
+FOREWORD
+
+This manual contains maintenance and repair procedures for the
+1998 Nissan MAXIMA.
+
+In order to assure your safety and the efficient functioning of the
+vehicle, this manual should be read thoroughly. It is especially
+important that the PRECAUTIONS in the Gl section be completely
+understood before starting any repair task.
+
+All information in this manual is based on the latest product infor-
+mation at the time of publication. The right is reserved to make
+changes in specifications and methods at any time without notice.
+
+IMPORTANT SAFETY NOTICE
+
+The proper performance of service is essential for both the safety of
+the technician and the efficient functioning of the vehicle.
+
+The service methods in this Service Manual are described in such a
+manner that the service may be performed safely and accurately.
+Service varies with the procedures used, the skills of the technician
+and the tools and parts available. Accordingly, anyone using service
+procedures, tools or parts which are not specifically recommended
+by NISSAN must first be completely satisfied that neither personal
+safety nor the vehicle’s safety will be jeopardized by the service
+method selected.
+
+of NISSAN MOTOR CO., LTD.
+
+Overseas Service Department
+Tokyo, Japan
+===== PDF page 3 =====
+A
+DBT PLEASE HELP MAKE THIS SERVICE MANUAL BETTER!
+®
+Your comments are important to NISSAN and will help us to improve our Service Manuals.
+Use this form to report any issues or comments you may have regarding our Service Manuals.
+Please photocopy this form and type or print your comments below. Mail or fax to:
+Nissan North America, Inc.
+Technical Service Information
+39001 Sunrise Drive, P.O. Box 9200
+Farmington Hills, MI USA 48331
+FAX: (810) 488-3910
+
+SERVICE MANUAL: Model: Year:
+
+PUBLICATION NO. (Please photocopy back cover):
+
+VEHICLE INFORMATION VIN: Production Date:
+
+Please describe any issues or problems in detail:
+
+Page number(s) Note: Please include a copy of each page, marked with your comments.
+Are the trouble diagnosis procedures logical and easy to use? {circle your answer) YES NO
+If no, what page number(s)?______ Note: Please include a copy of each page, marked with your comments.
+
+Please describe the issue or problem in detail:
+
+(s the organization of the manual clear and easy to follow? (circle your answer) YES NO
+Please comment:
+
+What information should be included in NISSAN Service Manuals to better support you in servicing or
+repairing customer vehicles?
+
+DATE: YOUR NAME: POSITION:
+DEALER: DEALER NO.: ADDRESS:
+CITY: STATE/PROV./COUNTRY: ZIP/POSTAL CODE:
+
+1693
+
+===== PDF page 4 =====
+QUICK REFERENCE CHART: MAXIMA
+
+ENGINE TUNE-UP DATA
+
+1998
+
+REAR WHEEL ALIGNMENT (Unladen*) NII
+
+Engine model VQ30DE Camber Minimum ~1°45' (-1.75°)
+Firing order 1-2:3-4-5-6 Degree minute Nominal —1°00" (-1.00°)
+MIT 625+50 (Decimal degree) Maximum —0°15' {-0.25°)
+lle speed Pm ar Total toe-in Minimum -3 {-0.12)
+(in “N position) 00:50 - Lm
+MIT: Distance (A - B} Nominal 1 (0.04)
+Ignition timing (degree BTDC at idle speed) AT: 15°¢2° mm (in) Maximum 5 (0.20)
+CO% at idle idle mixture Screw is reset and Angle (Ieft plus right) Minimum -16" (-0.26°)
+' Nominal 5.5" (0,09)
+n " - Degree minute
+Drive belt deflection (Cold) mm (in) Used belt {Decimal degree) Maximum 26’ (0.437)
+Deflection | Detlection of - - -
+Alternator Limit or new belt Fuel, radiator coolant and engine oil full. . »
+adjustment Spare tire, jack, hand tools and mats In designated positions.
+With air conditioner compressor 7 {0.28} wiz. cy oy. : en
+Without air conditioner compressor 10 (0.39) odin : 3 0 iy - +
+Power steering oil pump 11 (0.43) 020 a5) pt BRA K E \
+Applied pressed force 98 (10, 22) Unit: mm (in)
+y
+N (kg, Ib) Front brake
+Radiator cap relief pressure KPa (kg/cm? psi) 78-98 (0.8 - 1.0, 11 - 14) Pad wear limit 2.0 (0.079)
+Cooling system leakage testing pressurg Rotor repair limit 20.0 (0.787)
+kPa (gem, psi) 157 (1.6, 23) Rear brake
+Compression pressure | Standard 1,275 (13.0, 185)/300 Pad wear limit 1.5 (0.059)
+kPa tkg/cm?, SVP ["winimum 981 {10.0, 142)i300 Rotor repair limit 8.0 {0.315)
+Type PER5G-11 M/T: 158 - 165 (6.22 « 6.50]
+Spark plu Pedal free height : 138 - 22 - 6.50)
+park plug Gap mm (in} 1.0 - 1.1 (0.039 - 0.043) g AIT: 167 - 174 {6.57 - 6.85)
+Pedal depressed height'1 MT. 70 ga
+Parking brake
+Number of notches*2 10-11
+CL u TC H PE D \ | “1 Under force of 490 N (50 kg, 110 Ib) with engine running
+*2 At pulling force: 196 N (20 kg, 44 Ib}
+Unit: mm {in}
+Pedal height 168 - 175 {6.61 - 6.89)
+Pedal free play 9-16 (0.35 - 0.63)
+Unit Liter US measure
+FRONT WHEEL ALIGNMENT (Unladen*) \\ REI CEE as x]
+} With oil filter 4.0 4-1/4 qt
+Engine - =
+Camber Minimum ~1°00" {-1.00% Without ofl filter 3.7 3-7/8 qt
+Nominal —0°15' (-0.25°) wT RSSF50V 43-45 9-1/8 - 9-1/2 pt
+Degree minute Maximum 0°30" {0.50°) Transaxle RS5F50A 45-48 9-1/2 - 10-1/8 pt
+(Decimal degree} [ Left and right ditference 45 (0.75%) or less AT RE4FO4AIV 9.4 10 qt
+Caster Minimum 2°00" (2.00°) Power steering System 1.1 1-1/8 qt
+Nominal 2°45 (2.75) Refrigerant 0.60 - 0.70 ky 132-154 1b
+- Air conditioning system
+Degree minute Maximum 3°30’ (3.50%) 9 Sy Compressor 02 6.81 02
+(Decimal degree) | Left and right difference 45' {0.75°) or less
+Total toe-in Minimum 1 (0.04)
+Distance {A - B) } Nominal 2 (0.08)
+mam (in) Maximum 310.12)
+Angle (left plus right) Minimum 5% 0.09)
+Degree minute Nominal 11° {0.18°)
+{Decimal degree) Maximum 16' (0.27)
+Wheel turning angle (Full tum) Minimum 36°00° (36.00%
+Inside . Nominal 39°30’ (39.50%)
+Degree minute
+(Decimal degree) Maximum 40°30’ (40.50%)
+Outside
+Degree minute Nominal 32°00" (32.00°)
+
+(Decimal degree)
+
+* Fuel, radiator coolant and engine oil full.
+Spare tire, jack, hand tools and mats in designated positions.
+
+1695
+
+===== PDF page 5 =====
+Attachment No. 4
+
+TEST VALUE AND TEST LIMIT (GST ONLY — NOT APPLICABLE TO CONSULT-II)
+The following is the information specified in Mode 6 of SAE J1979.
+The test value is a parameter used to determine whether a system/circuit diagnostic test is “OK” or “NG” while
+being monitored by the ECM during self-diagnosis. The test limit is a reference value which is specified as the
+maximum or minimum value and is compared with the test value being monitored.
+Items for which these data (test value and test limit) are displayed are the same as SRT code items.
+
+These data (test value and test limit) are specified by Test ID (TID) and Component ID (CID) and can be dis-
+played on the GST screen.
+
+: Applicable -: Not applicable
+Test value
+SRT item Self-diagnostic test item DTC (GST display) | Te s tlimit | Application Unit
+TID CID
+. P0420 01H 01H Max. X -
+CATALYST Three way catalyst function P0420 02H 8TH Min. x —
+P0440 05H 03H Max. X -
+EVAP SYSTEM EVAP control system (Small leak) P1440 05H 03H Max. x —
+EVAP control system purge flow monitoring P1447 06H 83H Min. X mV
+P0133 09H 04H Max. X ms
+P0131 OAH 84H Min. X mV
+Heated oxygen sensor 1 P0130 0BH 04H Max. X mV
+P0132 OCH 04H Max. X mV
+HO2S P0134 ODH 04H Max. X s
+P0139 19H 86H Min. X mV/500ms
+Heated oxygen sensor 2 P0137 1AH 86H Min. X mV
+P0140 1BH 06H Max. X mV
+P0138 1CH 06H Max. X mV
+Heated oxygen sensor 1 heater P0135 29H 08H Max. X ull
+HO2S HTR P0135 2AH 88H Min. X mV
+Heated oxygen sensor 2 heater PO141 2DH OAH Max. X ull
+P0141 2EH 8AH Min. X mV
+P0400 31H 8CH Min. X °C
+P0400 32H 8CH Min. X °C
+EGR function P0400 33H 8CH Min. X °C
+EGR SYSTEM*1 P0400 34H 8CH Min. X °C
+P1402 35H OCH Max. X K
+. P0402 36H OCH Max. X =
+EGRC-BPT valve function P0402 37H 8CH Min x —
+
+*1 : Except models
+
+V41 VG33E engine 2001MY and V41 VG33E engine 200
+

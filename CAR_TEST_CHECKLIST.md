@@ -1,339 +1,174 @@
-# On-Car Test Checklist
+# On-car test checklist
 
-This is everything to check once the scanner is connected to the 1998 Maxima. It
-gathers the open questions from `CONSULT_PROTOCOL.md` (§12) and `BODY_DIAG_PLAN.md`.
+Tests run on a 1998 Maxima (VQ30DE, 5-speed, ECU 23710-2L904).
 
-**Log every session raw**: every TX/RX byte, timestamped. Save the logs in `logs/`,
-named `YYYY-MM-DD_<test-id>.log`. A test is done when the result is written in its
-"Result" line **and** the log file is saved.
+- **Logs:** `logs/maxine-2026-11-14_<name>.log`; the Log column gives `<name>`.
+- **Conditions:** KOEO = key on, engine off. KOER = engine running, warm idle unless noted.
+- **Status:** ✅ done · ◐ partial · ☐ open · — not applicable
 
-Legend for conditions:
-- **KOEO**: key on, engine off
-- **KOER**: key on, engine running (warm idle unless noted)
-- **Charger**: battery charger connected (use it for long KOEO sessions)
+## 0. Setup
 
----
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 0.1 | Dongle on Linux | ✅ | FTDI FT232R `0403:6001`, `ftdi_sio`, `/dev/ttyUSB0`. EEPROM factory default (CBUS = LED/TXDEN/PWREN/SLEEP), so the cable makes its own clock | `1.1` |
+| 0.2 | Custom PID | ✅ | Not needed (stock PID) | |
+| 0.3 | Permissions | ✅ | udev rule: `MODE="0666"`, symlink `/dev/consult` | |
+| 0.4 | Latency timer | ✅ | Default 16 ms; the udev rule sets 1 ms | |
+| 0.5 | Locate connectors | ☐ | | |
+| 0.6 | Confirm the manual | ✅ | `fsm/` is the 1998 Maxima manual | |
+| 0.7 | ECU label | ✅ | 23710-2L904, matches `D0` | |
 
-## 0. Before connecting
+## 1. Link (engine, KOEO)
 
-- [ ] **0.1 Dongle on Linux.** Plug the dongle into the PC only (not the car yet). Run
-      `lsusb`, `dmesg | tail` and `ls /dev/ttyUSB*`.
-      Record: VID:PID, chip type, driver, device node.
-      Result: ____
-- [ ] **0.2 Custom PID?** If no `/dev/ttyUSB*` appears, bind it with
-      `echo 0403 <pid> > /sys/bus/usb-serial/drivers/ftdi_sio/new_id`.
-      Result: ____
-- [ ] **0.3 Permissions.** Your user can open the port without sudo (`uucp`/`dialout` group).
-      Result: ____
-- [ ] **0.4 Latency timer.** Read `/sys/bus/usb-serial/devices/ttyUSB0/latency_timer`
-      (the default is probably 16), then set it to 1.
-      Result: ____
-- [ ] **0.5 Locate connectors.** Find the 14-pin Consult connector (grey, near the fuse
-      block) and the 16-pin OBD-II connector. Take photos.
-      Result: ____
-- [ ] **0.6 Confirm the manual.** Check the `EL.pdf` cover: is it the 1998 Maxima?
-      Result: ____
-- [ ] **0.7 ECU label.** Read the part number on the ECU sticker (`23710-xxxxx`). It is
-      checked against the `D0` result in 2.1.
-      Result: ____
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 1.1 | Init | ✅ | **ID `ED`, not `EF`:** `FF`, 280 ms, `FF`, 70 ms, `ED` → `00 00 12`, first try, 3–30 ms. `FF FF EF` → `00 00`, then the ECU ignores everything (even `30`) until a correct init. Drop DTR/RTS after opening the port | `1.1-linux`, `1.1-win-ED`, `1.1-win-variants` |
+| 1.2 | Init twice in a row | ☐ | | |
+| 1.3 | Init without byte gaps | ☐ | | |
+| 1.4 | Init while streaming | ☐ | | |
+| 1.5 | Stop ack | ✅ | `CF` (~94 %) or `FE` (~6 %). Only whole frames arrive before the ack | `1.5-win-py`, `3.1-win-py` |
+| 1.6 | Invalid command byte | ✅ | `FE` | `3.1-win-py` |
+| 1.7 | Idle timeout | ☐ | | |
+| 1.8 | Key cycle | ☐ | | |
 
-## 1. Link basics (engine ECU, KOEO)
+## 2. ID and fault codes (engine)
 
-- [ ] **1.1 Init.** Send `FF FF EF`. Expect `10`. Record how many attempts it took and
-      how long the reply took.
-      Result: ____
-- [ ] **1.2 Init twice in a row.** What does the ECU send back to a second init while
-      it's already initialised?
-      Result: ____
-- [ ] **1.3 Init without the 2 s wait.** Does it work immediately?
-      Result: ____
-- [ ] **1.4 Init while streaming.** Start a stream, then send the init again. Does the
-      ECU recover, or does it need `30` first?
-      Result: ____
-- [ ] **1.5 Stop acknowledge.** Stream one register, send `30`, and log every byte
-      after it. **Is the ack `CF` or `FE`?** How many bytes of the current frame arrive
-      before the ack?
-      Result: ____
-- [ ] **1.6 Bad echo behaviour.** Send an invalid command byte (e.g. `5B`). What comes
-      back: nothing, a non-inverted echo, or garbage?
-      Result: ____
-- [ ] **1.7 Idle timeout.** Initialise, then wait 5, 15 and 30 minutes, then send a
-      command. Is a re-init needed?
-      Result: ____
-- [ ] **1.8 Key cycle.** Turn the key off, then back on. Is a re-init needed? (It
-      probably is.)
-      Result: ____
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 2.1 | `D0` | ✅ | Echo `2F`, **32 bytes**: `20 21 04 9D 00 00 00 3F C1 80 C3 00 10 7C 05 00 E5 07 00 01 00 00 00 00 00 FF FF 32 4C 39 30 34`; ends ASCII `2L904`. The openconsult decoding doesn't apply | `2.1-win-D0b` |
+| 2.2 | `D0` other bytes | ☐ | Not a register or test bitmap (ROM) | |
+| 2.3 | `D1` | ✅ | No faults = `55 00`. Code byte = slot index, decoded via ROM tables (`ROM_ANALYSIS.md` §3). Stored: `21` P1320, `34` P0325, `A8` P0443 | `2.3-win-py`, `dtc-after-clear` |
+| 2.4 | `D1` with a known fault | ☐ | | |
+| 2.5 | Starts counter | ☐ | | |
+| 2.6 | `C1` clear | ✅ | Echo `3E`; the frame shows the codes *before* the clear; `D1` after = `55 00`. `21` and `A8` returned as `xx F5` (`F5` = 1st-trip / pending, MIL off) | `gui`, `dtc-after-restart` |
+| 2.7 | Frame length vs code count | ◐ | 6 bytes for 3 codes | `2.3-win-py` |
+| 2.8 | P1320 monitor live | ◐ | Doesn't match the ROM reading: `$0C60` counts 0–9 continuously (21/s idle, 40–45/s driving); `$000A` bit 3 toggles ~8/s; no code set. Re-read `$E2F6` | `2.8-p1320-drive` |
 
-## 2. ECU ID and fault codes (engine)
+## 3. Live data (engine)
 
-- [ ] **2.1 `D0` part number.** Log all 22 raw bytes. Does the openconsult decoding
-      (`d[2] d[3] … d[19] d[20] d[21]`) match the sticker from 0.7?
-      Result: ____
-- [ ] **2.2 `D0` other bytes.** Do the 17 unexplained bytes look like ASCII,
-      calibration IDs, or something else?
-      Result: ____
-- [ ] **2.3 `D1` with no faults.** **Is the "no fault" code byte `0x55` or `0x37`?**
-      This settles the hex-vs-decimal question for codes.
-      Result: ____
-- [ ] **2.4 `D1` with a known fault.** KOEO: unplug the coolant temp sensor (or the
-      IAT sensor). Key off, key on. Read `D1`. Record the code byte.
-      Expected: a code for coolant (13 or 0x13?) or the 1996+ 4-digit equivalent.
-      Compare with a generic OBD-II scan of the same fault.
-      Result: ____
-- [ ] **2.5 Starts counter.** Keep the fault from 2.4 stored, fix the cause, and do a
-      few start cycles. Does the second byte count the starts?
-      Result: ____
-- [ ] **2.6 `C1` clear.** Clear the codes, re-read `D1` and confirm they're gone. Also
-      check with a generic OBD-II scanner.
-      Result: ____
-- [ ] **2.7 Number of DTC pairs.** With 2 or more faults stored, is the frame length
-      2 × the number of faults?
-      Result: ____
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 3.1 | Register scan | ✅ | 73 supported: `00–05 08–0D 10 11 13–16 18 1A–23 28–2A 30–35 37–3F 40–47 49 4A 4C 4E 4F 51 56–61`. `17` not supported. `04 08 37 46` stream only alongside other registers | `3.1-win-py`, `3.1-koer-rescan` |
+| 3.2 | Unsupported register | ✅ | Echo `A5 FE`. A valid one sometimes gets `FE FE` (retry fixes it) | `3.1-win-py` |
+| 3.3 | 20-register limit | ☐ | ROM allows 40 | |
+| 3.4 | Frame rate | ◐ | 19 regs ≈ 39 fps (latency 16); 21 regs ≈ 32.5 fps (latency 1) | `3.x-koer-idle`, `3.x-drive` |
+| 3.5 | RPM `00/01` | ✅ | × 12.5 matches the tach | `3.x-koer-throttle2` |
+| 3.6 | `02/03` | ✅ | 120° REF **period**: rpm = 2 500 000 / word (2.49 M at 1175 rpm, 2.50 M at 2500) | `3.x-koer-idle`, `3.x-drive` |
+| 3.7 | Coolant `08` / IAT `11` | ◐ | Coolant − 50 matches the gauge. IAT unchecked | |
+| 3.8 | Battery `0C` | ✅ | × 80 mV matches a meter | |
+| 3.9 | TPS `0D` | ◐ | × 20 mV. KOER: closed 480 mV, WOT 4180–4200 mV. KOEO unchecked | `3.x-drive` |
+| 3.10 | MAF `04/05` | ✅ | × 5 mV. Warm idle 1.09–1.34 V (spec 1.0–1.7), 2500 rpm 1.75 V, WOT 4.2 V | `3.x-koer-warm-idle`, `3.x-drive` |
+| 3.11 | O2 `09` / `0A` | ◐ | × 10 mV, both switch 0–950 mV. Which bank is which: open | `3.x-koer-throttle2` |
+| 3.12 | Speed `0B` | ✅ | **× 2** (not × 2.11): gear ratios give one rolling circumference, 1.985 m, in 3rd/4th/5th. Updates every 0.707 s | `3.x-drive` |
+| 3.13 | Injection `14/15`, `22/23` | ✅ | / 100 ms, LH and RH bank. Warm idle 2.6 ms, WOT ~16 ms, fuel cut 0.61 ms | `3.x-drive` |
+| 3.14 | Timing `16` | ◐ | 110 − v. Warm idle 5–15° (mostly 13°, moves against rpm). Part throttle 2000 rpm 39–41°. WOT 9–10° at 3750–4500 rpm, 15–16° above 5000, repeatable. Fuel cut reads 0. Timing light: open | `3.x-drive` |
+| 3.15 | AAC `17` | — | Not supported; IACV step is `18` | |
+| 3.16 | Alpha `1A–1D` | ◐ | `1A/1B` 102–107 % closed loop, 100 % open loop. `1C/1D` change with load cell (98–109 %). Fuel cut: ~1 s at 1.3 ms after lift-off, then 0.61 ms; fuel returns at 1460–1650 rpm | `3.x-drive` |
+| 3.17 | Bits `13` | ◐ | b4 A/C, b3 power steering, b2 neutral, b0 closed throttle, b5 rear-defrost load, b7 always 1. Start signal untested | `3.17-bits2`, `3.17-bits-slow` |
+| 3.18 | Bits `1E` | ◐ | b6 fuel pump relay *(inferred)*; b1 and b7 on with A/C (which is relay vs fan: open). No fan bit up to 92 °C | `3.17-bits2`, `3.x-drive` |
+| 3.19 | Bits `1F` | ◐ | b0 on ~0.2 s during a throttle blip | `3.17-bits2` |
+| 3.20 | Bits `21` | ✅ | b7 = `09` lean, b6 = `0A` lean (< ~450 mV). b0 latches on after warm-up. b5/b4 always 1 | `3.17-bits2`, `3.x-drive` |
+| 3.21 | Unscaled registers | ☐ | Candidates in `ROM_ANALYSIS.md` §2 | |
 
-## 3. Live data registers (engine)
+## 4. Engine active tests (KOER, parked, warm)
 
-- [ ] **3.1 Register support scan.** For each register `00..FF`: send `5A r F0`, record
-      the echo and the first value, then send `30`. Make a list of supported registers
-      for the VQ30DE.
-      Result: ____
-- [ ] **3.2 What an unsupported register does.** Record the exact reply: no echo, a
-      wrong echo, or a frame of `00`?
-      Result: ____
-- [ ] **3.3 20-register limit.** Request 20 registers, then 21. What happens at 21?
-      Result: ____
-- [ ] **3.4 Frame rate.** Measure frames per second for 1, 4, 10 and 20 registers, with
-      the latency timer at 16 and at 1.
-      Result: ____
-- [ ] **3.5 RPM.** Compare `00/01` × 12.5 with the tach at idle and at about 2500 rpm.
-      Result: ____
-- [ ] **3.6 CAS reference.** Is `02/03` × 8 also equal to RPM?
-      Result: ____
-- [ ] **3.7 Coolant / IAT.** Compare `08` and `11` (value − 50) with an IR thermometer
-      or the gauge, cold and warm.
-      Result: ____
-- [ ] **3.8 Battery voltage.** Compare `0C` × 80 mV with a multimeter on the battery,
-      KOEO and KOER.
-      Result: ____
-- [ ] **3.9 TPS.** `0D` × 20 mV at closed and at wide-open throttle (KOEO). Compare
-      with the FSM spec.
-      Result: ____
-- [ ] **3.10 MAF.** `04/05` × 5 mV at idle. Compare with the FSM spec (about 1.0–1.7 V
-      at idle, typically).
-      Result: ____
-- [ ] **3.11 O2 sensors.** `09` and `0A` should switch between 0 and about 900 mV at
-      2000 rpm. **Which register is bank 1 and which is bank 2 on the VQ?**
-      Result: ____
-- [ ] **3.12 Vehicle speed.** Drive with a passenger running the tool. Compare `0B` × 2
-      with GPS at 30 / 60 / 100 km/h. Is ×2 right, or is it closer to Nissboard's ×2.11?
-      Result: ____
-- [ ] **3.13 Injection time.** `14/15` / 100 ms at idle (expect about 2–3 ms). Is
-      `22/23` present on this engine?
-      Result: ____
-- [ ] **3.14 Ignition timing.** `16` → 110 − v. Compare with a timing light at idle
-      (the FSM base timing is about 15° BTDC, so verify).
-      Result: ____
-- [ ] **3.15 AAC.** `17` / 2 %. Watch it rise when the A/C or a heavy electrical load
-      is switched on.
-      Result: ____
-- [ ] **3.16 A/F alpha.** `1A`–`1D`: around 100 % at closed-loop idle? Do the
-      self-learn registers respond?
-      Result: ____
-- [ ] **3.17 Bit register `13`.** Toggle each of these and record the bit that changes:
-      A/C switch, power steering (turn the wheel at idle), P/N (shift), start signal
-      (crank), closed throttle.
-      Result: ____
-- [ ] **3.18 Bit register `1E`.** A/C relay, fuel pump relay (it primes at KOEO), VTC
-      solenoid (if fitted), coolant fan Lo/Hi.
-      Result: ____
-- [ ] **3.19 Bit register `1F`.** Pressure regulator valve, IACV-FICD, EGR.
-      Result: ____
-- [ ] **3.20 Register `21`.** Do the rich/lean bits follow the O2 sensors?
-      Result: ____
-- [ ] **3.21 Unscaled registers.** For each of `25`–`53` that is supported: log the raw
-      values alongside a reference (a multimeter on the sensor, etc.) and fit a scale.
-      Result: ____
+Echo `F5 t v`. While held, the ECU streams `FF 00`; `30` → `CF` ends the test.
 
-## 4. Active tests (engine). KOER, parked, warm, handbrake on
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 4.1 | `81` fuel trim | ☐ | ROM clamps to `4B–7D` (75–125 %) | |
+| 4.2 | `82` timing | ☐ | | |
+| 4.3 | `84` AAC | — | Not supported (no descriptor); IACV is `85` | |
+| 4.4 | `88` power balance | ◐ | `01` cuts cylinder 1 (RH injector time drops). Bitmask vs number: open | `4.4-cut-cyl1` |
+| 4.5 | `89` fuel pump | ☐ | | |
+| 4.6 | `80` coolant override | ☐ | | |
+| 4.7 | `93` / `94` fans | ✅ | Fan runs. Set as a pair (`ROM_ANALYSIS.md` §4) | `4.7-fan-low`, `4.7-fan-high` |
+| 4.8 | `8B` clear self-learn | ☐ | | |
 
-Do them one at a time. Restore the normal value and send `30` after each.
+## 5. Memory (`C9`, engine)
 
-- [ ] **4.1 `0A 81` fuel trim.** Send `64` (normal), then `6A` (+6 %), then `5E`
-      (−6 %). Do injection time and O2 readings shift the expected way?
-      Result: ____
-- [ ] **4.2 `0A 82` timing.** `00`, `02` (+2°), `FE` (−2°). Check with a timing light
-      and register `16`.
-      Result: ____
-- [ ] **4.3 `0A 84` AAC.** **Is the value signed ±0.5 % steps or absolute 0–`8C`?**
-      Start with `00` and watch register `17`, then try `02`.
-      Result: ____
-- [ ] **4.4 `0A 88` power balance.** **Is the value a bitmask (`01`, `02`, `04`…) or a
-      cylinder number (`01`–`06`)?** Watch the RPM drop. Record which cylinder number
-      matches which bit.
-      Result: ____
-- [ ] **4.5 `0A 89` fuel pump.** Do this KOEO only. **Does `00` mean ON or OFF?**
-      Listen for the pump.
-      Result: ____
-- [ ] **4.6 `0A 80` coolant override.** Set it to 100 °C (`96`). Does the cooling fan
-      turn on? Send `30` and confirm it returns to normal.
-      Result: ____
-- [ ] **4.7 `0A 93` / `0A 94` fan Lo/Hi.** Do the fans run?
-      Result: ____
-- [ ] **4.8 `0A 8B` clear self-learn.** Does register `1C` reset? (Do this last. It
-      resets the fuel trims, and the car re-learns them.)
-      Result: ____
-- [ ] **4.9 Active test echo format.** Is the echo `F5 t v`?
-      Result: ____
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 5.1 | Single byte | ✅ | `C9 80 00 F0` → `36 80 00`, `FF 01 xx`. 8 addresses per request work, ~55 ms each | `5.1-mem` |
+| 5.2 | 9 addresses | ☐ | ROM allows 20 | |
+| 5.3 | ROM dump `8000–FFFF` | ✅ | 238 s, sha256 `eb23a73a…615b` | `5.3-rom-dump` |
+| 5.4 | Repeat dump | ✅ | Byte-identical | `5.4-rom-dump2` |
+| 5.5 | Below `8000` | ✅ | `0080–0FFF` RAM, `1000–2FFF` tables, `3000–3BFF` zeros, `3C00–` code. `5D40–623F` is forwarded to the second CPU, so the dump has a hole there | `5.5-rom-dump-low`, `5.5-ram` |
+| 5.6 | Compare with ECUTalk | ☐ | | |
+| 5.7 | Second CPU memory | ☐ | `python -m consult sub-dump` | `5.7-sub` |
 
-## 5. ROM / RAM read (engine)
+## 6. Other units
 
-- [ ] **5.1 Single byte.** `C9 80 00 F0`. Expect the echo `36 80 00` and a frame
-      `FF 01 xx`.
-      Result: ____
-- [ ] **5.2 8-byte limit.** Read 8 addresses, then 9. What happens at 9?
-      Result: ____
-- [ ] **5.3 Full dump.** Read `0x8000–0xFFFF` and save it to `rom/<partnumber>.bin`.
-      Time how long it takes.
-      Result: ____
-- [ ] **5.4 Repeatability.** Dump it a second time. Is the result byte-identical?
-      Result: ____
-- [ ] **5.5 Below 0x8000.** Read a few addresses in `0x0000–0x7FFF` (RAM and I/O). Do
-      some values change between reads at idle? If so, those are live variables.
-      Result: ____
-- [ ] **5.6 Compare with ECUTalk.** If possible, dump with ECUTalk too and compare the
-      two files.
-      Result: ____
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 6.1 | A/T at `EA` | — | No reply (manual car) | `6.2-init-scan` |
+| 6.2 | Init scan | ✅ | `DA`→`25` BCM, `DC`→`23` airbag, `E7`→`18` ABS, `ED`→`12` engine. Every reply is `~ID` | `6.2-init-scan` |
+| 6.3 | Scan KOER / ASCD on | ☐ | ASCD unit not found yet | |
+| 6.4 | Identify units | ✅ | `DA` 28491-2L900 (BCM), `E7` 47850-0L701 (ABS), `DC` airbag (register `AC` = `6B`, the FSM discriminated no.) | `6.4-id-DA`, `6.4-id-E7`, `6.4-id-DC` |
+| 6.5 | A/T data | — | Manual car | |
 
-## 6. Other control units (KOEO, Charger)
+## 7. BCM inputs (`DA`)
 
-- [ ] **6.1 A/T unit.** Send `FF FF EA`. **Is the reply `15` (= ~EA)?** This tests the
-      complement hypothesis.
-      Result: ____
-- [ ] **6.2 Init scan.** Try `FF FF xx` for every `xx` from `00` to `FF`, sending `30`
-      and draining between tries. List every value that gets a reply.
-      Result: ____
-- [ ] **6.3 Repeat 6.2 KOER and with the ASCD main switch ON.** Do any new units appear?
-      Result: ____
-- [ ] **6.4 Identify each hit.** Run `D0` on each, and pull fuses one at a time to see
-      which unit drops out. Write down which init byte is the BCM, the ASCD and the
-      airbag unit.
-      Result: ____
-- [ ] **6.5 A/T data.** Run `9F` (stream all). Record the frame layout. Check gear,
-      selector position and fluid temperature against reality.
-      Result: ____
+Reference: [`BCM.md`](BCM.md).
 
-## 7. IVMS / BCM (see BODY_DIAG_PLAN.md)
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 7.0 | Find the BCM | ✅ | `DA`, answers with the ASCD switch off | `7.0-DA-main-off` |
+| 7.1 | `D0` / `D1` | ✅ | `D0` 20 bytes ending `2L900`; `D1` → `FE` | `6.4-id-DA`, `8.0-cmd-probe-DA` |
+| 7.2 | Create a known fault | ☐ | | |
+| 7.3 | `C1` erase | ☐ | | |
+| 7.4 | Stream all | ✅ | `9E` (echo `61`) = switch block; `9F` not supported | `8.0-cmd-probe-DA` |
+| 7.5 | Item scan | ✅ | Reads `02 12 15 19 1A 1B 22 25 2B 35 3B 52 62 72 82 92 B2 C2 E2 F2 FF`, 1–18 bytes each | `7.5-reg-scan-DA` |
+| 7.6 | Switch mapping | ◐ | Ignition, DR/AS doors, lock switch, lighting 1st, wiper INT, all window switches, window lock. Rear doors, key, hood, trunk, washer, remote: open | `7.6-watch-DA-FF`, `7.6-watch-DA-windows` |
+| 7.7 | Wiper knob | ◐ | Switch block byte 17, `01`–`E4`. kΩ fit: open | `7.6-watch-DA-FF` |
+| 7.8 | BCM vehicle speed | ☐ | | |
+| 7.9 | Mode II cross-check | ☐ | | |
+| 7.10 | Side effects while connected | ☐ | | |
+| 7.11 | Sleep | ☐ | | |
 
-- [ ] **7.1 BCM `D0` / `D1`.** Record the raw frames.
-      Result: ____
-- [ ] **7.2 Create a known fault.** Unplug one door's LCU for more than 1 minute, plug
-      it back in, and read `D1`. Record the code byte. Is it 24/25, 34/35, etc.? Compare
-      with the on-board Mode I blink code.
-      Result: ____
-- [ ] **7.3 Erase.** Does `C1` clear it?
-      Result: ____
-- [ ] **7.4 Stream all.** Does `9F` work on the BCM?
-      Result: ____
-- [ ] **7.5 Register scan.** Send `5A 00..FF` to the BCM and list the supported registers.
-      Result: ____
-- [ ] **7.6 Differential logging.** Change one input at a time and record which byte
-      and bit changes:
-  - [ ] Key in / out
-  - [ ] ACC
-  - [ ] ON
-  - [ ] Each door: DR, AS, RR, RL
-  - [ ] Hood
-  - [ ] Trunk
-  - [ ] Trunk key cylinder
-  - [ ] Seat belt
-  - [ ] Headlamp 1st position
-  - [ ] Wiper INT
-  - [ ] Washer
-  - [ ] Defogger switch
-  - [ ] Each power-window switch (up / down / auto)
-  - [ ] Window lock switch
-  - [ ] Door lock switch (lock / unlock)
-  - [ ] Key cylinder lock / unlock, DR and AS
-  - [ ] Each door's unlock sensor
-  - [ ] Remote fob: lock, unlock, panic, trunk
-      Result: ____
-- [ ] **7.7 Intermittent wiper knob.** Sweep the knob from end to end. Which register
-      changes smoothly? Record the raw values at each end so the kΩ scale (0 to about
-      1.0) can be fitted.
-      Result: ____
-- [ ] **7.8 BCM speed.** Drive and compare the BCM's `VHCL SPEED SE` with engine
-      register `0B`.
-      Result: ____
-- [ ] **7.9 Mode II cross-check.** Put the BCM into on-board Mode II (EL-178). Check
-      that every switch mapped in 7.6 also triggers a lamp blink and beep.
-      Result: ____
-- [ ] **7.10 Side effects.** While connected, does the intermittent wiper stop working
-      (as EL-101 says)? Note any other systems that stop.
-      Result: ____
-- [ ] **7.11 Sleep.** Key off, doors closed, wait for the BCM to go to sleep. Does it
-      answer init? Does Consult wake it up?
-      Result: ____
+## 8. BCM outputs (`DA`)
 
-## 8. BCM active tests (only after section 7; doors open, windows partly down)
+Full table: [`BCM.md`](BCM.md), Active tests.
 
-- [ ] **8.1 `C9` on the BCM.** Can the BCM's ROM be read? If yes, dump it first
-      (this is safer than guessing active-test codes).
-      Result: ____
-- [ ] **8.2 Lamps.** Illumination, room lamp, step lamp, security indicator.
-      Result: ____
-- [ ] **8.3 Buzzers.** Key warning, light warning, seat-belt warning.
-      Result: ____
-- [ ] **8.4 Hazard, rear defogger relay, wiper amp.** Wet the windshield before
-      running the wiper.
-      Result: ____
-- [ ] **8.5 Door lock motors.** One door at a time. Keep the key in your pocket, not
-      in the car, and keep a door open.
-      Result: ____
-- [ ] **8.6 Power windows.** Keep hands and objects clear.
-      Result: ____
-- [ ] **8.7 Alarm relay, starter interrupt relay.** Engine OFF.
-      Result: ____
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 8.0 | Command / item / value probe | ✅ | `x3` = active test; every value byte echoes | `8.0-cmd-probe-DA`, `8.0-argscan-DA`, `8.0-valscan-DA` |
+| 8.1 | `C9` | ✅ | RAM only: `FA00–FCFF`, `FF00–FF64`; 6 addresses per request. No ROM | `8.1-c9scan-DA`, `8.1-bcm-dump` |
+| 8.2 | Lamps | ◐ | Room lamp `93 01`, step lamp `E3 01/02`. Illumination, security indicator: open | `8.x-fire-DA` |
+| 8.3 | Chime | ◐ | `73/83/B3 01` each chime. Which warning is which: open | `8.x-fire-DA` |
+| 8.4 | Hazard, defogger, wipers | ✅ | Hazard `03 04` / `C3 04`, defogger `63 01`, wipers `53 01` | `8.x-fire-DA` |
+| 8.5 | Door locks | ✅ | `23 00` locks while held, unlocks on stop. No per-door value | `8.x-fire-DA`, `gui` |
+| 8.6 | Windows | ✅ | `13 01`–`08`: DR, AS, RR, RL × up/down | `8.x-fire-DA` |
+| 8.7 | Alarm / starter interrupt | ◐ | Alarm (horn + headlights) `C3 01`. Starter interrupt not found (not `F3 01`) | `8.x-fire-DA` |
 
-## 9. ASCD cruise control (ASCD main switch ON)
+## 9. ASCD (cruise)
 
-- [ ] **9.1 Find it.** Find the ASCD unit's init byte (see 6.3), then run `D0` and `D1`.
-      Result: ____
-- [ ] **9.2 Register scan.** Map the inputs: brake switch, stop lamp switch, SET,
-      RESUME/ACC, CANCEL.
-      Result: ____
-- [ ] **9.3 Road test with a passenger.** Map vehicle speed, set speed, vacuum pump
-      time, air valve time, cruise lamp, OD cancel and the fail-safe flags.
-      Result: ____
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 9.1 | Find it | ☐ | | |
+| 9.2 | Switch inputs | ☐ | | |
+| 9.3 | Road test | ☐ | | |
 
-## 10. Airbag / SRS (READ ONLY)
+## 10. Airbag (`DC`), read-only
 
-- [ ] **10.1 Find it.** Find its init byte (from 6.2), then run `D0` and `D1` only.
-      **No `0A`, no unknown commands, no unplugging SRS connectors.**
-      Result: ____
+| # | Test | | Result | Log |
+|---|---|---|---|---|
+| 10.1 | Identify | ✅ | `D0` = `12 A0`. Consult puts the unit in diagnosis mode: the AIR BAG lamp flashes until key off. Registers `8A 8B 9A AB` all `20`, `AC` = `6B`. **Send nothing else** | `6.4-id-DC`, `7.5-paced-DC` |
 
 ## 11. Hardware (key off, battery disconnected)
 
-- [ ] **11.1 Remove the ECU.** Photograph both sides of the circuit board.
-      Result: ____
-- [ ] **11.2 ROM type.** **Is there a socketed 28-pin EPROM, or a single big CPU with
-      the ROM inside it?** This decides which tuning route is possible.
-      Result: ____
-- [ ] **11.3 Chip markings.** Record the part numbers of the CPU, ROM, RAM, and
-      whatever chip handles the Consult interface.
-      Result: ____
-- [ ] **11.4 Consult pins.** Trace the TX, RX and CLK pins from the ECU connector into
-      the board.
-      Result: ____
+| # | Test | | Result |
+|---|---|---|---|
+| 11.1 | Photograph the ECU board | ☐ | |
+| 11.2 | ROM type (EPROM or internal) | ☐ | Needed to read `5D40–623F` |
+| 11.3 | Chip markings | ☐ | CPU variant unconfirmed |
+| 11.4 | Trace the Consult pins | ☐ | |
 
-## 12. ECUTalk capture (optional, high value)
+## 12. ECUTalk capture
 
-- [ ] **12.1 Body units?** Do ECUTalk's menus offer IVMS / BCM / ASCD / airbag?
-      Result: ____
-- [ ] **12.2 Capture.** Run ECUTalk in a Windows VM, capture with `usbmon` + Wireshark,
-      and go through every menu.
-      Result: ____
-- [ ] **12.3 Capture its ROM dump.** Record ECUTalk's ROM dump sequence. Is it the
-      same as `C9` in 8-byte chunks?
-      Result: ____
-- [ ] **12.4 Unknown bytes.** Note any command bytes ECUTalk sends that aren't in
-      `CONSULT_PROTOCOL.md` §5.
-      Result: ____
+| # | Test | | Result |
+|---|---|---|---|
+| 12.1 | Body units in ECUTalk? | ☐ | |
+| 12.2 | USB capture of every menu | ☐ | |
+| 12.3 | ROM dump sequence | ☐ | |
+| 12.4 | Undocumented command bytes | ☐ | |

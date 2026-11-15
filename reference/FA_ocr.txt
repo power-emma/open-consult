@@ -1,0 +1,1629 @@
+===== PDF page 1 =====
+FRONT AXLE &
+FRONT SUSPENSION
+
+SECTION
+
+ON-VEHICLE
+
+CONTENTS
+
+PRECAUTIONS AND PREPARATION..........cc...ccovrveeiae
+Precautions cece eee
+Special Service TOOIS evince cere enn
+Commercial Service TOOIS ....cuuuueeeerieei ieee
+
+NOISE, VIBRATION AND HARSHNESS (NVH)
+
+TROUBLESHOOTING .........couviiieeeeeeceeee eee cee
+NVH Troubleshooting Chart........ccccoooeeieeieccienn enn.
+
+FRONT SUSPENSION SYSTEM ........ocoovicnmrriniemrerneenens
+COMPONENTS... oor
+
+SERVICE...
+
+Front Axle and Front Suspension Parts ....c...ccecveeenn.
+Front Wheel Bearing.....cccoeveeccenesineenscceeeae seins
+Front Wheel Alignment ........cocoeeeveeeceeeeceeceee cree,
+
+Drive Shaft
+
+FRONT AXLE ....c.oocoiiec irene 9
+Wheel Hub and Knuckle... 9
+Drive Shaft .......ceeeeeiieeeeecee eee cece 13
+
+FRONT SUSPENSION .........cccooimnnmnimniiineenie 21
+COMPONENTS. .ceiieeeiieee terete teeter ees 21
+Coil Spring and Strut Assembly......cccccocvviviiiivininnn, 22
+Stabilizer Bar ........c.ccoovcvrvniiiinii ee 23
+Transverse Link and Lower Ball Joint....................... 24
+
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+General Specifications........ccceviiivenivinvnnensniens
+Inspection and Adjustment .........ccccoriiiiii iii
+
+MIA
+
+cr
+
+WIT
+
+AT
+
+S|
+
+RS
+
+BT
+
+DX
+
+991
+===== PDF page 2 =====
+992
+
+PRECAUTIONS AND PREPARATION
+
+Commercial service tool
+
+SBR686C]
+
+Precautions
+
+® When installing rubber parts, final tightening must be car-
+ried out under unladen condition* with tires on ground.
+*: Fuel, radiator coolant and engine oil full. Spare tire,
+
+jack, hand tools and mats in designated positions.
+
+eo After installing removed suspension parts, check wheel
+alignment and adjust if necessary.
+
+e¢ Use flare nut wrench when removing or installing brake
+tubes.
+
+eo Always torque brake lines when installing.
+
+Special Service Tools
+
+The actual shapes of Kent-Moore tools may differ from those of special service tools illustrated here.
+
+Tool number
+(Kent-Moore No.) Description
+Tool name
+HT72520000 a b Removing tie-rod outer end and lower ball joint
+(J25730-A)
+Ball joint remover
+
+a: 33 mm (1.30 in)
+
+b: 50 mm (1.97 in)
+
+NT546 r: R11.5 mm (0.453 in)
+
+Kv38106700 Installing drive shaft
+(J34296)
+Kv38106800
+(J34297)
+Differential side oil seal pro- LH: KV38106700
+tector NTT RH: KV38106800
+
+FA-2
+===== PDF page 3 =====
+PRECAUTIONS AND PREPARATION
+
+Commercial Service Tools
+
+Tool name Description
+Front wheel hub drift Removing wheel hub
+@l
+a: 42 mm (1.65 in) dia. MIA
+NT065 b: 33 mm (1.30 in) dia.
+Front wheel bearing outer Removing and installing wheel bearing outer EW
+race drift race }
+a: 76 mm (2.99 in) dia. LG
+NT115 b: 72 mm (2.83 in) dia.
+Grease seal drift Installing outer grease seal EG
+FE
+a: 81 mm (3.19 in} dia.
+NT115 b: 76 mm (2.99 in) dia. cl
+@® Flare nut crowfoot Removing and installing brake piping
+@ Torque wrench
+MIT
+/
+NT360 a: 10 mm (0.39 in) AT
+Spring compressor Removing and installing coil spring
+NT717
+BR
+ST
+RS
+I
+TIA
+EL
+IDX
+
+FA-3 993
+===== PDF page 4 =====
+uonoes 1S ul HAN
+
+ONIHIILS |X [x [x |x xXx x |X xX [xX
+uonIas ye ul HAN SIUVHE |X|} |x | x x |X X |X x [x pad
+LONOOS Yd ul HAN NOISNIdSNS HYIH GNV IXY HY | x ix {x |x x |x x |X x [>
+HBYOD SY) UI T33HM AQYO0d 0) Jsjey T3IHM AV0Y |X |X |x |x X[X| x {x|x x |x
+"HELD Siu) Ul S3HIL 0} 48jay SIHIL [x [x [x [x x |x
+‘UBUD SIL} UI NOISNIJSNS LNOHS ANY 3TXY LNOHAH 01 Jojey NOISNIdSNS INCH ANV 3IXY INOHS |X [x x |x xXx bel
+“HBYD SIU} Ul 1 4YHS JAIYA 01 19)eY L4VHS 3AIHA XXX
+
+9218S 8.1) 109.1100U}
+
+Aiuojun-uon
+
+abewep Jo uoiewioeqg
+
+NVH Troubleshooting Chart
+
+NOISE, VIBRATION AND HARSHNESS (NVH) TROUBLESHOOTING
+
+Use the chart below to help you find cause of the symptom. If necessary, repair or replace these parts.
+
+BS
+x x
+x [x Xx | x
+—_ Jeam an} usAsuN x [>= xix | x
+— ainssaid se 10984100u| x | x X|Ix| x
+2-v4 PuUNoI-jo-InQ xX [> XixX | xX
+2-v4 sbewep Buuesq |soym
+ve-vd anbie) req zIIgRIS x
+/-v4d uswubife [gaym 1004100] >
+22-v4 $$8UBS0D| UoIsuadsng x
+— anbiey Buuds ps > >
+— 9oUIBHIUI Sued Xx {xx pes
+22-v4 uonelolsiep Bununow Jo Bujysng XX xx x
+22-v4 uoIBYOP 20 bRWEP ‘uoyeLWIOEP JIGIOSTR %I0US x [xx |x x
+12 ‘G-Y $S8UBs00| ‘uoheyeisul sadosdu XX |x| x
+— SouBRq|
+81-v4 aouejsisas Buipis uo
+j— olbue uI0[ 8AISSB0XT | x
+da Ed —
+o [=] [=}
+c DO [«H} | ©
+2 ® : gi
+© 2 2 E18
+ES S| a © [e)] S| = ‘® [o] Zz ES] [=]
+dol. |elS{El5|3E o|2|Elg|5E o| E| TE
+Blxi2|=iBle|B|=8|2|2|C|E|B|=|8IL|EI=%
+s|2|e|818]2|8|85|8(8|5|2|2|85/8I8|E|85
+zin{z|a 51a |3|d E|z|a|5 63 2H |n|L 2
+2 )
+[72] z
+F< bk =
+> 4 w o WW
+© = < CoQ re) I
+S oO cI ETxado0 id Ie)
+4 an ow [RE STIR I) [= x=
+=% Sw
+bed C=
+oO oO E
+c = I [=
+2 2a 5
+& FE] £E
+QD [+] 5
+od a @ 0)
+
+X
+X
+X
+
+FA-4
+
+X: Applicable
+
+994
+===== PDF page 5 =====
+FRONT SUSPENSION SYSTEM
+
+Components
+SEC. 391-400-401
+
+When installing rubber parts, final tightening must be carried out under unladen condition* with tires on ground.
+* Fuel, radiator coolant and engine oil full. Spare tire, jack, hand tools and mats in designated positions. @l
+
+[MIA
+
+$240] 30 - 54 (40 - 55, 29 - 40)
+
+— os
+= (G=>%
+=) x ==
+a> 25 - 35 (2.6 - 3.6, 19 - 26) ST
+= = EC
+= = )
+2 ! S=—>2% =2
+— i]
+Ne
+
+IN De A
+
+| {© AT
+131 - 159
+
+ry i/
+2 (134 - 16.2, 4 BR
+97 - 117)
+
+( p ST
+[2 $24 [TC] 131 - 159 (13.4 - 16.2, 97 - 117)
+Front RS
+[OC] 39 - 49 (4.0 - 5.0, 29 - 36)
+Ef
+[): Nem (kg-m, ft-Ib) SFA703B
+
+8)
+@ Suspension member @ Rebound stopper @ Knuckle FIA
+
+(2 Stabilizer bar ® Coil spring @® Transverse link
+@ Drive shaft ® Strut assembly BL
+
+FA-5 995
+===== PDF page 6 =====
+996
+
+ON-VEHICLE SERVICE
+
+SMAS25A
+
+Ball joint
+SFA392B
+Spring height (Wheelarch height)
+Hf + + Hr
+SFA818AA
+
+S TEA ink LS
+
+Lower ball joint
+( SFAS04A
+
+Front Axle and Front Suspension Paris
+
+Check front axle and front suspension parts for looseness, cracks,
+wear or other damage.
+
+Shake each front wheel to check for excessive play.
+Make sure that cotter pins are inserted.
+Retighten all axle and suspension nuts and bolts to the speci-
+fied torque.
+Tightening torque:
+Refer to FRONT SUSPENSION (FA-21).
+
+Check strut (shock absorber) for oil leakage or other damage.
+Check suspension ball joint for grease leakage and ball joint
+dust cover for cracks or other damage.
+
+If ball joint dust cover is cracked or damaged, replace. trans-
+verse link.
+
+Check spring height from top of wheelarch to the ground.
+
+Vehicle must be unladen*, parked on a level surface, and tires
+
+checked for proper inflation and wear (tread wear indicator
+
+must not be showing).
+
+*: Fuel, radiator coolant and engine oil full. Spare tire, jack,
+hand tools and mats in designated positions.
+
+Bounce vehicle up and down several times before measuring.
+Standard height: Refer to SDS (FA-26).
+
+Spring height is not adjustable. If out of specification, check for
+
+WOrn Springs or suspension parts.
+
+Check suspension ball joint end play.
+Jack up front of vehicle and set the stands.
+Clamp dial indicator onto transverse link and place indicator tip
+on lower edge of brake caliper.
+Make sure front wheels are straight and brake pedal is
+depressed.
+Place a pry bar between transverse link and inner rim of road
+wheel.
+While raising and releasing pry bar, observe maximum dial
+indicator value.
+
+Vertical end play: 0 mm (0 in)
+if ball joint movement is beyond specifications, remove and
+replace it.
+
+FA-6
+===== PDF page 7 =====
+ON-VEHICLE SERVICE
+
+Front Wheel Bearing
+e (Check that wheel bearings operate smoothly.
+eo (Check axial end play.
+Axial end play: 0.05 mm (0.0020 in) or less
+e if out of specification or wheel bearing does not turn smoothly, @]
+replace wheel bearing assembly.
+Refer to FRONT AXLE — Wheel Hub and Knuckie (FA-9).
+MA
+SFAGAGA EM
+Fadil Front Wheel Alignment
+runout Before checking front wheel alignment, be sure to make a prelimi- LG
+nary inspection (Unladen®).
+Lateral *: Fuel, radiator coolant and engine oil full. Spare tire, jack, hand Ee
+runout tools and mats in designated positions.
+Inside FE
+7 cL
+SFA575B
+PRELIMINARY INSPECTION MT
+1. Check tires for wear and improper inflation. -
+2. Check wheel runout.
+Wheel runout: AT
+Refer to SDS (FA-27).
+3. Check front wheel bearings for looseness.
+4. Check front suspension for looseness.
+5. Check steering linkage for looseness.
+6. Check that front shock absorbers work properly.
+7. Check vehicle posture (Unladen).
+_— CAMBER, CASTER AND KINGPIN INCLINATION BR
+Attachment 7 Camber, caster and kingpin inclination are preset at factory
+and cannot be adjusted.
+1. Measure camber, caster and kingpin inclination of both right ST
+Alignment and left wheels with a suitable alignment gauge.
+gauge Camber, Caster and Kingpin inclination: aS
+Refer to SDS (FA-27). "
+2. If camber, caster or kingpin inclination is not within
+specification, inspect front suspension parts. Replace dam- BT
+aged or worn out parts.
+SFA948A
+TOE-IN FIA
+Measure toe-in using following procedure.
+WARNING: EL
+Hub center eo Perform following procedure always on a flat surface.
+height e Make sure that no person is in front of the vehicle before
+pushing it. IDX
+1. Move front of vehicle up and down to stabilize the posture.
+2. Push the vehicle straight ahead about 5 m (196.9 in).
+Base line 3. Put a mark on base line of the tread (rear side) at the same
+Measuring point height of hub center to be a measuring point.
+SFA614B
+FA-7 997
+===== PDF page 8 =====
+998
+
+ON-VEHICLE SERVICE
+
+Lines parallel to
+center line of body
+
+SFA486A
+
+NE
+EEE
+
+Angle B:
+
+| “ Qutside tire on turn
+SFA439BA
+
+Stopper Transverse
+bolt link stopper
+bracket
+
+Contact with
+stopper bolt
+
+AFAO0C3
+
+SFA488A
+
+Front Wheel Alignment (Cont'd)
+
+4. Measure distance “A” (rear side).
+
+5. Push the vehicle slowly ahead to turn the wheels around 180
+degrees.
+
+If the wheels have passed 180 degrees, try the above proce-
+
+dure again from the beginning. Never push vehicle backward.
+
+6. Measure distance “B” (front side).
+Total toe-in:
+Refer to SDS (FA-27).
+
+7. Adjust toe-in by varying the length of steering tie-rods.
+(1) Loosen lock nuts.
+(2) Adjust toe-in by screwing tie-rods in and out.
+Standard length “L’:
+Refer to ST section.
+(8) Tighten lock nuts to specified torque.
+Lock nut tightening torque:
+Refer to ST section.
+
+FRONT WHEEL TURNING ANGLE
+
+1. Set wheels in straight-ahead position. Then move vehicle for-
+ward until front wheels rest on turning radius gauge properly.
+2. Rotate steering wheel all the way right and left; measure turn-
+
+ing angle.
+Do not hold the steering wheel on full lock for more than 15
+
+seconds.
+Wheel turning angle (Full turn): Refer to SDS (FA-27).
+
+3. Check stopper bolt head to see whether it contacts stopper
+bracket at specified outside wheel angle. If not, adjust stopper
+bolt to contact stopper bracket at the correct angle.
+Adjust protrusion of stopper bolt before placing stopper bolt
+cap.
+
+Apply grease to face of stopper bracket that boit touches.
+
+Tighten stopper bolt lock nut.
+
+[C): 54 - 72 Nm (5.5 - 7.3 kg-m, 40 - 53 ft-Ib}
+
+Drive Shaft
+
+e® Check for grease leakage or other damage.
+
+FA-8
+===== PDF page 9 =====
+FRONT AXLE
+
+SEC. 400
+
+®
+
+@® [0] 98 - 118 (10 - 12, 72 - 87)
+
+{3 [OF 235 - 314 (24 - 32, 174 - 231)
+
+Front
+
+POEL E
+
+Drive shaft
+
+Inner grease seal
+Snap ring
+Knuckle
+
+Baffle plate
+
+ABS sensor
+
+SISCRCRS
+
+SFA7Q1
+
+[@ : Nm (kg-m, ft-lb)
+SFA799B
+Wheel bearing assembly (® Plain washer
+Snap ring 1 Wheel bearing lock nut
+Outer grease seal d» Cotter pin
+Hub bolt (» Disc rotor
+Wheel hub ® Wheel nut
+Wheel Hub and Knuckle
+REMOVAL
+
+CAUTION:
+
+Before removing the front axle assembly, disconnect the ABS
+wheel sensor from the assembly. Then move it away from the
+front axle assembly area. Failure to do so may result in dam-
+age to the sensor wires and the sensor becoming inoperative.
+eo Remove wheel bearing lock nut.
+
+e Remove brake caliper assembly and rotor.
+
+In this case, suspend caliper assembly with wire so as not to
+stretch brake hose.
+
+Be careful not to depress brake pedal, or piston will pop out.
+Make sure brake hose is not twisted.
+
+FA-9
+
+[FA
+
+[24
+
+999
+===== PDF page 10 =====
+1000
+
+FRONT AXLE
+
+HT72520000
+(J25730-A)
+
+SFA247B
+
+SFAB51A
+
+&
+
+2d |
+
+’ NS
+&)
+
+/ SFA803A
+
+BN
+
+HT72520000
+(J25730-A)
+
+SFA113A
+
+SFAG52A
+
+Wheel Hub and Knuckle (Cont'd)
+
+® Remove tie-rod ball joint.
+
+e Separate drive shaft from knuckle by lightly tapping it.
+Cover boots with shop towel so as not to damage them when
+removing drive shaft.
+
+e Remove strut lower mounting bolts.
+
+e Loosen lower ball joint tightening nut.
+e Separate knuckle from lower ball joint stud with Tool.
+e Remove knuckle from transverse link.
+
+INSTALLATION
+® Install knuckle with wheel hub.
+When installing knuckle to strut, be sure to hold bolts and
+tighten nuts.
+(3): 140 - 159 N-m
+(14.3 - 16.2 kg-m, 103 - 117 ft-lb)
+Before tightening, apply oil to threaded portion of drive shaft
+and both sides of plain washer.
+e Tighten wheel bearing lock nut.
+1235-314 N'm
+(24 - 32 kg-m, 174 - 231 ft-ib)
+
+FA-10
+===== PDF page 11 =====
+FRONT AXLE
+
+SFAB53A
+
+SFAT16A
+
+RRR:
+
+SFAG54A
+
+SFA950A
+
+SFAG85
+
+Wheel Hub and Knuckle (Cont'd)
+
+e Check wheel bearing axial end play.
+Axial end play:
+0.05 mm (0.0020 in) or less
+DISASSEMBLY
+CAUTION:
+
+When removing wheel hub or wheel bearing from knuckle,
+
+replace wheel bearing assembly (outer race, inner races and
+
+grease seals) with a new one.
+
+Wheel hub
+Drive out hub with inner race (outside) from knuckle with a suitable
+tool.
+
+Wheel bearing
+When replacing wheel bearing, replace wheel bearing assem-
+bly {inner races and outer race).
+
+e Remove bearing inner race (outside), then remove outer
+grease seal.
+
+® Remove inner grease seal from knuckle.
+
+® Remove snap ring.
+
+FA-11
+
+AT
+
+BT
+
+1001
+===== PDF page 12 =====
+1002
+
+FRONT AXLE
+
+Suitable tool
+
+= SFA496A
+
+Knuckie
+
+SFAB55A!
+
+Inner side
+
+SFA747
+
+P
+
+BS tool
+
+Lz,
+—— Outer grease
+
+i= 2h seal
+
+SFABS6AA
+
+Wheel Hub and Knuckle (Cont'd)
+
+e® Press out bearing outer race.
+
+INSPECTION
+
+Wheel hub and knuckle
+
+Check wheel hub and knuckle for cracks by using a magnetic
+exploration or dyeing test.
+
+Snap ring
+Check snap ring for wear or cracks. Replace if necessary.
+
+ASSEMBLY
+1. Install inner snap ring into groove of knuckle.
+2. Press new wheel bearing assembly into knuckle.
+
+Maximum load P:
+29 kN (3 ton, 3.3 US ton, 3.0 imp ton)
+
+CAUTION:
+
+oe Do not press inner race of wheel bearing assembly.
+
+e Do not apply oil or grease to mating surfaces of wheel
+bearing outer race and knuckle.
+
+3. Install outer snap ring into groove of knuckle.
+
+4. Pack grease seal lip with multi-purpose grease.
+
+5. Install outer grease seal.
+
+FA-12
+===== PDF page 13 =====
+FRONT AXLE
+
+- Suitable tool
+
+SFABS7AA
+
+} | z {
+7 i
+_
+
+dad
+
+Suitable 100l gragsan
+
+SFAG72A
+
+SFAB49A
+
+SFA153B|
+
+Wheel Hub and Knuckle (Cont'd)
+
+6. Install inner grease seal.
+
+7. Press wheel hub into knuckle.
+Maximum load P:
+49 kN (5 ton, 5.5 US ton, 4.9 Imp ton)
+Be careful not to damage grease seal.
+
+8. Check bearing operation.
+(1) Add load P with press.
+Load P:
+49 kN (5 ton, 5.5 US ton, 4.9 Imp ton)
+(2) Spin knuckle several turns in both directions.
+(3) Make sure that wheel bearings operate smoothly.
+
+Drive Shaft
+
+REMOVAL
+e Remove wheel bearing lock nut.
+
+Brake caliper need not be disconnected.
+Do not twist or stretch brake hose when moving components.
+
+e Remove strut lower mounting bolts.
+® Remove brake hose clip.
+
+FA-13
+
+El
+
+LC
+
+BR
+
+1003
+===== PDF page 14 =====
+1004
+
+FRONT AXLE
+
+A/T model
+Screwdriver
+isa. 5 mm
+. {0.20 In)
+= 3
+
+Pinion mate /
+shaft
+
+Drive shaft —
+
+3 ©
+Yd Side gear
+
+SFA730)
+
+Drive Shaft (Conta)
+
+e® Separate drive shaft from knuckle by slightly tapping it.
+When removing drive shaft, cover boots with shop towel to
+prevent damage to them.
+
+Refer to FRONT AXLE — Wheel Hub and Knuckle (FA-9).
+
+1. Remove right drive shaft from transaxle.
+
+2. Remove left drive shaft from transaxle.
+—For M/T modeis—
+
+e Pry off drive shaft from transaxle as shown at left.
+
+—For A/T models—
+e Remove ieft drive shaft with a suitable tool.
+Be careful not to damage pinion mate shaft and side gear.
+
+FA-14
+===== PDF page 15 =====
+FRONT AXLE
+
+(J34297) SFA394BA
+
+KV38106700
+
+tH it (J34296)
+
+SFA483-A
+
+Drive Shaft (Cont'd)
+INSTALLATION
+Transaxle side
+
+1.
+
+Drive a new oil seal to transaxle. Refer to MT or AT section.
+
+2. Set Tool along the inner circumference of oil seal.
+
+3. Insert drive shaft into transaxle. Be sure to properly align the
+serrations and then withdraw Tool.
+
+4, Push drive shaft, then press-fit circular clip on the drive shaft
+into circular clip groove of side gear.
+
+5. After its insertion, try to pull the flange out of the slide joint by
+hand. if it pulls out, the circular clip is not properly meshed with
+the side gear.
+
+Wheel side
+
+e Install drive shaft into knuckle.
+
+e Tighten wheel bearing lock nut.
+
+Refer to FRONT AXLE — Wheel Hub and Knuckle (FA-9).
+
+FA-15
+
+@l
+
+VA
+
+EM
+
+LC
+
+EC
+
+[Fl
+
+BR
+
+ST
+
+BT
+
+RA
+
+EL
+
+1005
+===== PDF page 16 =====
+1006
+
+FRONT AXLE
+
+Drive Shaft (Cont’d)
+
+COMPONENTS
+SEC. 391 Wheel side (ZF100) oN
+Circular clip: ® IX) 2 \
+4
+
+Circular clips should be properly meshed with differential
+
+side gear (transaxle side} and with joint assembly (wheel NW )
+side). Make sure they will not come out. } N
+2) ®
+
+Be carefu! not to damage boots. Use suitable protector
+
+or cloth during removal and installation. ®
+2
+® 0
+
+25-35
+(2.6 - 3.6,
+
+lJ
+Left drive shaft |
+
+Right drive shaft
+
+[3 : Nem (kg-m, ft-Ib) Transaxle side (DS90) SFAG028 |
+
+@® Joint assembly i» Snap ring i Snap ring
+@ Boot a Inner race @ Dust shield
+® Boot band #® Cage @ Support bearing
+@ Circular clip @ Ball @ Support bearing retainer
+® Drive shaft # Snap ring @ Bracket
+® Dynamic damper band @® Slide joint housing @ Snap ring
+@ Dynamic damper (#® Dust shield @ Dust shield
+Boot (1 Circular clip
+@® Boot band @ Slide joint housing with extension
+
+shaft
+
+DISASSEMBLY
+
+Transaxle side
+
+1. Remove boot bands.
+
+2. Put matchmarks on slide joint housing and inner race, before
+
+separating joint assembly.
+3. Pry off snap ring with a screwdriver, and pull out slide joint
+housing.
+SFA476
+FA-16
+===== PDF page 17 =====
+FRONT AXLE
+Drive Shaft (Cont'd)
+
+4. Put matchmarks on inner race and drive shatt.
+5. Pry off snap ring, then remove ball cage, inner race and balls
+as a unit.
+6. Draw out boot.
+Cover drive shaft serrations with tape so as not to damage the
+
+boot.
+MA
+SFA514A EM
+Wheel side
+The joint on the wheel side cannot be disassembled.
+e Before separating joint assembly, put matchmarks on drive EC
+shaft and joint assembly.
+e Separate joint assembly with a suitable tool. EE
+Wh Be careful not to damage threads on drive shaft. ne
+eel bearing
+lock nut ¢ Remove boot bands.
+GL
+SFAQ92A
+Support bearing MIT
+e Remove dust shield.
+AT
+
+SFA442B
+
+eo Pry off snap ring. ER
+
+Suitable tool
+
+Snap ring
+ST
+
+SFA692
+
+W e Press support bearing assembly out of drive shaft.
+—1
+
+) — SFAG93
+
+FA-17 1007
+===== PDF page 18 =====
+1008
+
+FRONT AXLE
+
+Suitable tool
+
+SFA617
+
+/)
+
+TN
+
+/
+
+SFA800
+
+Drive Shaft (Contd)
+
+® Press support bearing out of retainer.
+
+INSPECTION
+
+Thoroughly clean all parts in cleaning solvent, and dry with
+compressed air. Check parts for evidence of deformation or
+
+other damage.
+
+Drive shaft
+Replace drive shaft if it is twisted or cracked.
+
+Boot
+Check boot for fatigue, cracks, or wear. Replace boot with new boot
+bands.
+
+Joint assembly
+Replace joint assembly if it is deformed or damaged.
+
+Support bearing
+Make sure wheel bearing rolls freely and is free from noise, cracks,
+pitting or wear.
+
+Support bearing bracket
+Check support bearing bracket for cracks with a magnetic explora-
+tion or dyeing test.
+
+ASSEMBLY
+
+eo After drive shaft has been assembled, ensure that it
+moves smoothly over its entire range without binding.
+
+eo Use NISSAN GENUINE GREASE or equivalent after every
+
+overhaul.
+
+Wheel side
+
+1. Install boot and new small boot band on drive shatt.
+
+Cover drive shaft serration with tape so as not to damage boot
+during installation.
+
+FA-18
+===== PDF page 19 =====
+FRONT AXLE
+
+Wheel bearing
+lock nut
+
+SFA130A
+
+SFA456B
+
+Boot band
+
+SFA443B|
+
+SFA138B|
+
+Drive Shaft (Cont'd) |
+
+2. Set joint assembly onto drive shaft by lightly tapping it.
+Install joint assembly securely, ensuring marks which were
+made during disassembly are properly aligned.
+
+MA
+
+EM
+
+3. Pack drive shaft with specified amount of grease.
+Specified amount of grease: 1G
+135 - 145 g (4.76 - 5.11 02)
+4. Make sure that boot is properly installed on the drive shaft
+
+groove. E
+Set boot so that it does not swell and deform when its length
+is “Ly”.
+Length “L,”": FE
+96 - 98 mm (3.78 - 3.86 in)
+CL
+
+5. Lock new larger and smaller boot bands securely with a suit- -
+able tool. MY
+
+AT
+
+Dynamic damper BR
+1. Use new damper band when reinstalling.
+2. Install dynamic damper from stationary-joint side while holding
+it securely.
+Length (Left side only):
+“A’: 205 - 215 mm (8.07 - 8.46 in) R$
+“B”: 50 mm (1.97 in)
+RA
+
+Transaxle side
+
+1. Install boot and new small boot band on drive shat.
+
+Cover drive shaft serration with tape so as not to damage boot [5],
+during installation.
+
+IDX
+
+FA-19 1009
+===== PDF page 20 =====
+FRONT AXLE
+Drive Shaft (Cont'd)
+
+2. Install ball cage, inner race and balls as a unit, making sure the
+marks which were made during disassembly are properly
+’ aligned.
+4 3. Install new snap ring.
+
+Ei
+
+SFA514A
+
+4. Pack drive shaft with specified amount of grease.
+L Specified amount of grease:
+165 - 175 g (5.82 - 6.17 oz)
+
+5. Install slide joint housing, then install new snap ring.
+
+6. Make sure that boot is properly installed on the drive shaft
+groove.
+Set boot so that it does not swell and deform when its length
+is “Ly”.
+Length “L,”: 97 - 99 mm (3.82 - 3.90 in)
+7. Lock new larger and smaller boot bands securely with a suit-
+able tool.
+SFA149A
+Support bearing
+e Press bearing into retainer.
+Py
+Suitable tool
+SFAG18
+
+® Press drive shaft into bearing.
+Suitable tool
+
+| SFAG94
+
+e |[nstail snap ring.
+eo Install new dust shield.
+
+Transaxle side
+SFA444B
+
+1010 FA-20
+===== PDF page 21 =====
+FRONT SUSPENSION
+
+SEC. 391.400.401
+When Installing rubber parts, final tightening
+
+must be carried out under unladen condition*
+
+with tires on ground.
+
+* Fuel, radiator coolant and engine oil fuil.
+Spare tire, jack, hand tools and mats in
+designated positions.
+
+|
+A 131 - 159
+
+(13.4 - 16.2, 97 - 117)
+
+49 - 59
+
+(5.0 - 6.0, 36 - 43)
+8
+ld
+
+®
+
+@ a 2 gm.
+
+8
+[OC] 118 - 147 (12 - 15, 87 - 108) )
+=
+
+€3[C] 131 - 159
+
+Components
+
+NS
+24 [0] 59 - 78 (6.0 - 8.0, 43 -
+
+(13.4 - 16.2, 97 -
+
+(1.6 - 2.2, 12 -
+
+[O}s54 - 72 (5.5 - 7.3, 40 - 53)
+
+[Cls2 - 76 (6.3 - 7.8, 46 - 56)
+
+ow
+
+[O] 118 - 147 (12 - 15, 87 - 108) Front
+£3 [0 #1 - 47 (4.2 - 4.8, 30 - 35)
+
+J" 118 - 147 (12 - 15, 87 - 108)
+
+Spacer
+
+Strut mounting insulator
+
+Strut mounting insulator bracket
+Strut mounting bearing
+
+Upper spring seat
+
+Upper spring rubber seat
+Bound bumper
+
+Coil spring
+
+(Polyurethane tube)
+
+Strut assembly
+
+POPRPOROPE
+
+PORE
+
+Suspension member
+
+Rebound stopper
+
+Stabilizer clamp
+
+Stabilizer bar
+
+Link bushing pin
+
+Transverse link
+
+Connecting rod
+
+Compression rod bushing clamp
+Cotter pin
+
+FA-21
+
+DOOORERO®
+
+€3[C) 39 - 54
+
+[O18 - 24
+
+GD [OC] 235 - 314
+
+BE
+
+[A : Nem (kg-m, ft-lb)
+
+Drive shaft
+
+Cap
+
+Stopper bolt
+
+Cotter pin
+
+Knuckle
+
+ABS sensor
+
+Plain washer
+
+Wheel bearing lock nut
+Cotter pin
+
+(1.8 - 2.4, 13 - 1
+
+7)
+
+(4.0 - 5.5, 29 - 40)
+
+(24 - 32, 174 - 231)
+
+SFA8008B
+
+LG
+
+EC
+
+FE
+
+1011
+===== PDF page 22 =====
+1012
+
+FRONT SUSPENSION
+
+Strut upper portion
+
+@ SFA956A
+
+bar
+
+Suitable §
+
+Commercial service
+
+SSu002
+
+SSU003
+
+Coil Spring and Strut Assembly
+
+REMOVAL AND INSTALLATION
+® Remove strut assembly fixing bolts and nuts (to hood-ledge).
+Do not remove piston rod lock nut on vehicle.
+
+DISASSEMBLY
+
+1. Set strut assembly on vise, then loosen piston rod lock nut.
+
+Do not remove piston rod lock nut.
+
+2. Compress spring with tool so that the strut mounting insulator
+can be turned by hand.
+
+WARNING:
+
+Make sure that the pawls of the two spring compressors are
+firmly hooked on the spring. The spring compressors must be
+tightened alternately so as not to tilt the spring.
+
+3. Remove piston rod lock nut.
+
+INSPECTION
+
+Shock absorber assembly
+
+e® Check for smooth operation through a full stroke, both com-
+pression and extension.
+
+oe Check for oil leakage on welded or gland packing portion.
+
+e Check piston rod for cracks, deformation or other damage.
+Replace if necessary.
+
+Mounting insulator and rubber parts
+
+e Check cemented rubber-to-metal portion for separation or
+cracks. Check rubber parts for deterioration.
+Replace if necessary.
+
+Thrust bearing
+
+eo Check thrust bearing parts for abnormal noise or excessive
+rattle in axial direction.
+
+® Replace if necessary.
+
+Coil spring
+e Check for cracks, deformation or other damage. Replace if
+necessary.
+FA-22
+===== PDF page 23 =====
+FRONT SUSPENSION
+
+Upper
+spring
+seat | Upper end
+
+1] Lower end SFAS08A
+
+SFA3178|
+
+4 Stabilizer bar
+
+SFA318B|
+
+Slit Bushing
+
+¥ "
+
+Front =
+SFABD4B|
+
+Coil Spring and Strut Assembly (Cont’d)
+ASSEMBLY
+
+When installing coil spring on strut, it must be positioned as
+shown in the figure at left. :
+
+Install upper spring seat with its cutout facing the outer side of
+vehicle.
+
+Stabilizer Bar
+REMOVAL AND INSTALLATION
+
+Remove stabilizer bar.
+
+When installing stabilizer, make sure that paint mark and
+clamp face in their correct directions.
+
+Make sure that slit in bushing is in the position shown in the
+figure.
+
+FA-23
+
+LC
+
+EC
+
+FE
+
+GL
+
+MT
+
+AT
+
+BR
+
+Br
+
+HA
+
+EL
+
+BX
+
+1013
+===== PDF page 24 =====
+1014
+
+FRONT SUSPENSION
+
+NG
+
+SFA449BB,
+
+ARAD27
+
+SFAG51A
+
+HT72520000
+{J25730-A)
+
+SFA113A
+
+Stabilizer Bar (Cont'd)
+
+e When removing and installing stabilizer bar.
+
+e Install stabilizer bar with ball joint socket properly placed.
+
+INSPECTION
+
+e Check stabilizer for deformation or cracks. Replace if neces-
+sary.
+
+eo Check rubber bushings for deterioration or cracks. Replace if
+necessary.
+
+eo Check ball joint can rotate in all directions. If movement is not
+smooth and free, replace stabilizer bar connecting rod.
+
+Transverse Link and Lower Ball Joint
+
+REMOVAL AND INSTALLATION
+
+1. Remove wheel bearing lock nut.
+
+2. Remove tie-rod ball joint.
+
+3. Remove strut lower bracket fixing bolts and nuts.
+
+4. Separate drive shaft from knuckle by slightly tapping drive
+shaft end.
+
+Cover boots with shop towel so as not to damage them when
+
+removing drive shaft.
+
+5. Separate lower ball joint stud from knuckle with suitable tool.
+Refer to FRONT AXLE — Whee! Hub and Knuckle (FA-9).
+
+FA-24
+===== PDF page 25 =====
+FRONT SUSPENSION
+Transverse Link and Lower Ball Joint (Cont’d)
+
+6. Remove fixing bolts.
+7. Remove transverse link and lower ball joint.
+8. Install fixing bolts in order of number.
+Tightening torque:
+Refer to FRONT SUSPENSION (FA-21).
+9. During installation, final tightening must be carried out at curb Gl
+weight with tires on the ground.
+10. After installation, check wheel alignment. Refer to ON-VE- Mi
+HICLE SERVICE — Front Wheel Alignment (FA-7). MA
+
+SFAB06B
+
+INSPECTION
+eo Check transverse link for damage, cracks or deformation. 16
+
+Replace it if necessary.
+e Check rubber bushing for damage, cracks and deformation. =
+
+Replace transverse link if necessary.
+
+FE
+CL
+e Check ball joint for play. Repiace transverse link assembly if
+any of the following cases occur. Ball stud is worn, play in axial MT
+a direction is excessive or joint is hard to swing.
+Before checking, turn ball joint at least 10 revolutions so that
+ball joint is properly broken in. AT
+{ Cc Swinging force “A”:
+(measuring point: cotter pin hole of ball stud):
+7.8-549N (0.8 - 5.6 kg, 1.8 - 12.3 Ib)
+Turning torque “B’:
+0.49 - 3.43 N'm (5.0 - 35 kg-cm, 4.3 - 30.4 in-Ib) 2
+Vertical end play “C”:
+SFABSEA 0 mm (0 in)
+eo Check dust cover for damage. Replace it and cover clamp if BR
+necessary.
+ST
+RS
+BT
+FIA
+
+FA-25 1015
+===== PDF page 26 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+General Specifications
+
+COIL SPRING
+Applied model WT AT
+Wire diameter mm (in) 13.7 (0.539) 13.9 (0.547)
+Coil outer diameter mm (im 171.9 - 174.9 (6.77 - 6.89) 172.3 - 175.3 (6.78 - 6.90)
+Free length mm (in) 390 (15.35) 400 (15.75)
+es Yellow x 2, Yellow x 2,
+Identification color Yellow x 1 White x 1
+STRUT DRIVE SHAFT
+Applied model All Applied model All
+Piston rod diameter mm {in) 22 (0.87) Joint type
+Transaxle side DS90
+Wheel side ZF100
+FRONT STABILIZER BAR ,
+Boot length mm (in)
+Applied model All Transaxle side L, 97 - 99 (3.82 - 3.90)
+Stabilizer diameter mm (in) 21 (0.83) Wheel side L, 96 - 98 (3.78 - 3.86)
+Identification color White Nissan genuine grease
+Grease or equivalent
+Capacity g (02)
+WHEELARCH HEIGHT (Unladen*) Transaxle side 165 - 175 (5.82 - 6.17)
+Wheel side 135 - 145 (4.76 - 5.11)
+Boot length L
+Wheel side !
+Hf + Hr
+| Le
+! ' Transaxle side
+SFA818A
+Applied model “1 “2 I
+Front (Hf) mm (in) 713 (28.07) 713 (28.07)
+Rear (H) mm (in) 715 (28.15) 713 (28.07)
+
+*: Fuel, radiator coolant and engine oil full. Spare tire, jack, hand tools
+
+and mats in designated positions. SFA39EB
+*1: Models equipped with 205/65 R15 tires
+*2: Models equipped with 215/60 R15 tires
+
+1016 FA-26
+===== PDF page 27 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+Inspection and Adjustment
+
+WHEEL ALIGNMENT (Uniaden*1)
+
+Camber Minimum -1°00" (-1.00°) .
+Nominal _0°15" (-0.25%) @
+) Maximum 0°30’ (0.50°)
+Degree minute IN
+{Decimal degree) | Leit and right difference 45 (0.75%) or less MIA
+Caster Minimum 2°00’ (2.00%)
+Nominal 2°45" (2.75% [EM
+Maximum 3°30 (3.50%)
+Degree minute
+(Decimal degree) | Left and right difference 457 (0.75°) or less LC
+Kingpin inclination Minimum 13°30" (13.509) -
+. Nominal 14°15’ (14.25%)
+Degree minute EC
+(Decimal degree) | Maximum 15°00” {15.00°) =
+Total toe-in Minimum 1 (0.04)
+i 2 (0.08 FE
+Distance (A - B) Nominal (0.08) re
+mm (in) | Maximum 3 (0.12)
+Minimum 5.5" (0.097) CL
+Angle (left plus right) Nominal 117 (0.18%)
+Degree minute
+{Decimal degree) | Maximum 167 (0.27°) NT
+i i
+Wheel turning angle Minimum 36°00’ (36.00°)
+Inside Nominal 39°30" (39.507)
+Degree minute AT
+{Decimal degree) | Maximum 40°30’ (40.50)
+Full turn*2
+Outside
+Degree minute Nominal 32°00” (32.00°)
+
+(Decimal degree)
+
+*1: Fuel, radiator coolant and engine oil full. Spare tire, jack, hand tools and mats in designated positions.
+
+*2: On power steering models, wheel turning force {at circumference of steering wheel) of 98 to 147 N (10 to 15 kg, 22 to 33 Ib) with engine idle. RA
+WHEEL BEARING WHEEL RUNOUT Unit: mn Gn)
+hd eel bearing axial end play 0.05 (0.0020) Wheel type Aluminum wheei Steel wheel
+imit mm (in) Maxi dial
+aximum ra
+Wheel bearing lock nut tightening runout limit 0.3 (0.012) 0.5 (0.020) STI
+torque 235-314 (24-32, 174 - 231) Maxi atoral
+N-m (kg-m, ft-Ib) aximum ‘atera 0.3 (0.012) 0.8 (0.031)
+runout limit
+LOWER BALL JOINT BT
+Swinging force “A”
+(Measured at cotter pin hole) 0) A
+N (kg, Ib)} 7.8-54.9 (0.8-58,1.8-12.3) a
+Turning torque “B”
+Nem (kg-cm, in-b) 0.49 - 3.43 (5.0 - 35, 4.3 - 30.4) EL
+Vertical end play limit “C 0 (0)
+mm (in) v
+IDX
+FA-27 1017

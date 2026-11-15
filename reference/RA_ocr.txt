@@ -1,0 +1,774 @@
+===== PDF page 1 =====
+REAR AXLE &
+REAR SUSPENSION
+
+a
+SECTION RA hid
+
+|
+
+EM
+
+1G
+
+CONTENTS =
+
+=
+
+PRECAUTIONS AND PREPARATION..............ccoveennen. 2 Rear Wheel Alignment........cccooviiiiinininceennnennicnnn, 6 -
+
+Precautions ......c.cccooeeeeveveeiieeeeeeeeeeeece eee eae 2 REAR AXLE... oon eects a eann aa aa ees 7
+
+Special Service TOOIS .....oveciiiiions 2 Wheel HUD oer 7 CL
+Commercial Service TOOIS ......ccceemuueeeriveeeeienieeeeeiieeneens 2 REAR SUSPENSION. ......oo oot eeeeeeees 10
+NOISE, VIBRATION AND HARSHNESS (NVH) COMPONENES....veveveririerrinssseeeeeseseseseseseesessssssesesssanans 10
+
+TROUBLESHOOTING ete EEsEEsEEEs srs EssEEstaEEERs Err RRE ener nnnnnny 3 Removal and Installation ee 11 MIT
+NVH Troubleshooting Chart ee maierrEsEsetiaEsEsEet nanan nertaaianny 3 Coil Spring and Shock Absorber aaa. 11
+
+REAR SUSPENSION SYSTEM...........ooooroeeeeeeinsscen 4 Torsion Beam, Lateral Link and Control Rod............. 13 a7
+
+Components rN LEEErENeiesN Everson sas arta TI a errata era rer rhya 4 SERVICE DATA AND SPECIFICATIONS (SDS) i, 14 :
+ON-VEHICLE SERVICE ............ penne 5 General Specifications .......ovvecvveereiieee cece 14
+
+Rear Axle and Rear SUSPEnsion Pas ........w 3 Inspection and AdUSIMENt ..........cocoveveeeeeececreierer eens 14 [FA
+
+Rear Wheel Bearing .......ccccvevicerereeiirinecsmnessnecncnnns 5
+
+[A
+
+EL
+
+OX
+
+1019
+===== PDF page 2 =====
+PRECAUTIONS AND PREPARATION
+
+[ ]
+
+[
+
+[J
+
+Commercial service tool PY
+SBR686C
+
+Precautions
+
+When installing each rubber part, final tightening must be
+
+carried out under unladen condition* with tires on ground.
+
+*: Fuel, radiator coolant and engine oil full. Spare tire,
+jack, hand tools and mats in designated positions.
+
+Use flare nut wrench when removing or installing brake
+
+tubes.
+
+After installing removed suspension parts, check wheel
+
+alignment.
+
+Always torque brake lines when installing.
+
+Special Service Tools
+
+The actual shapes of Kent-Moore tools may differ from those of special service tools illustrated here.
+
+Tool number
+(Kent-Moore No.) Description
+Tool name
+
+ST35652000
+( —
+Strut attachment
+
+Fixing strut assembly
+
+NT145
+ST15310000
+( — )
+Drift 6 ot
+a: 84 mm (3.31 in) dia.
+— b: 96 mm (3.78 in) dia.
+bron c: 8 mm (0.31 in)
+NT607 d: 20 mm (0.79 in)
+Commercial Service Tools
+Tool name Description
+
+@ Flare nut crowfoot
+
+®@ Torque wrench ES
+“l=
+
+Removing and installing brake piping
+
+<1
+N—’
+
+NT360 a: 10 mm (0.39 in)
+
+Drift
+a: 75 mm (2.95 in) dia.
+
+NT371 b: 62 mm (2.44 in) dia.
+Spring compressor Removing and installing coil spring
+
+NT717
+
+1020
+
+RA-2
+===== PDF page 3 =====
+NOISE, VIBRATION AND HARSHNESS (NVH) TROUBLESHOOTING
+
+NVH Troubleshooting Chart
+
+Use the chart below to help you find the cause of the symptom. If necessary, repair or replace these parts.
+
+BR
+
+— <L = : =
+8 2 w= 8 BB WW 5 EE ZT =
+uoloss |g ul HAN ONIHITLS [x | x |x |x| x
+uonoss HY ul HAN S3MvHg | x | X xX |X
+uonodes v4 Ul HAN I33HM aQvOod | x | x xX |X] x
+uonaes v4 ul HAN SIHIL | XX |x| x|x]| x
+Uonoas v4 Ul HAN NOISN3dSNS INOHA aNV IXY INOYS [x | x [x |x |x| x
+uonoss v4 Ul HAN JAVHS AIHA |X | xX | x
+S-vH abewep Bunesq [oaym x
+9-v4 wiswubife [peym 100.100u) x x
+2l-vyd $sauasoo| uoisuadsng | x | x
+— onbne} Bundg | x > x
+— |SdudIeMBIUI Sled | XX | x | x | x x
+2l-vy uoljesouelsp Bununow 1o Buysng | = | x | x | x | x | x
+2l-vy uonos|jep 40 8BEWERP ‘UCHEWIOBP JBQIOSAR OOUS | x | x | > [x | x | x
+Ol ‘b-vy $$8USS00} ‘uoneleISUl Jadoidw) | x | x | x | x | x | x
+5
+QQ
+he]
+z
+c © =]
+ol| © 2 g D & £
+wo |X| TET]
+212181288 %
+Z w|>lnisS|ac
+5
+Ww
+x 2
+0 52
+< W
+o k= cw
+= ob
+> 0 O wz >
+g 2 Fa) Xx << Ww
+© Ww
+8 Q k=
+bad oO E
+© og ¥
+3 2 ® £
+= 1) £€
+2 Oo DD >
+[+71 1%)
+
+X: Applicable
+
+ST
+
+RS
+
+[DX
+
+1021
+
+RA-3
+===== PDF page 4 =====
+REAR SUSPENSION SYSTEM
+
+Components
+
+SEC. 431
+
+When installing each rubber part, final tightening
+
+must be carried out under unladen condition*
+
+with tires on ground.
+
+* Fuel, radiator coolant and engine oil full.
+Spare tire, jack, hand tools and mats in
+designated positions.
+
+-19
+6 - 1.9, 12 - 14)
+
+€3 [0] 98 - 118 (10 - 12, 72 - 87)
+
+[0] : Nem (kg-m, fi-Ib)
+SRABO7A
+
+@ Shock absorber mounting seal ®@ Shock absorber ® Lateral link
+®@ Coil spring @ Torsion beam Control rod
+
+1022 RA-4
+===== PDF page 5 =====
+ON-VEHICLE SERVICE
+
+Rear Axle and Rear Suspension Parts
+
+Check axle and suspension parts for looseness, wear or damage.
+e Shake each rear wheel to check for excessive play.
+
+@l
+MA
+SMAB25A EM
+ET e Retighten all nuts and bolts to the specified torque.
+| J ol Tightening torque: He
+\ | ) | j Refer to REAR SUSPENSION (RA-10).
+|
+
+\ 4 “wt Be
+SRABBIA Gl.
+eo Check shock absorber for oil leakage or other damage. or
+
+e Check wheelarch height. Refer to FA section. Ml
+
+AT
+
+SMA113
+Rear Wheel Bearing BR
+—! ® Check axial end play.
+Axial end play: ST
+
+0.05 mm (0.0020 in) or less
+Dial gauge | o Check that wheel hub bearings operate smoothly.
+e Check tightening torque of wheel bearing lock nut. RS
+[0]: 186 - 255 N'm i"
+{19 - 26 kg-m, 137 - 188 ft-lb)
+e¢ Replace wheel bearing assembly if there is axial end play or BI
+wheel bearing does not turn smoothly. Refer to REARAXLE — ©
+
+SRABI0A Wheel Hub (RA-7).
+
+HA
+
+EL
+
+DX
+
+RA-5 1023
+===== PDF page 6 =====
+1024
+
+ON-VEHICLE SERVICE
+
+Radial
+runout
+
+Lateral
+runout
+
+SFA5758
+
+_
+
+Attachment
+
+_—
+
+SFAQ948A
+
+Hub center
+height
+
+Base line
+
+Measuring point
+SFA614B
+
+Lines parallel to
+center line of body
+
+Total toe-in angle
+SFA234AB
+
+Rear Wheel Alignment
+
+PRELIMINARY INSPECTION
+
+Make following checks. Adjust, repair or replace if necessary.
+® Check tires for wear and for improper inflation.
+eo Check rear wheel bearings for looseness.
+e Check wheel runout.
+Wheel runout: Refer to SDS in FA section.
+e Check that rear shock absorber works properly.
+e Check rear axle and rear suspension parts for looseness.
+e Check vehicle posture (Unladen®).
+*: Fuel, radiator coolant and engine oil full. Spare tire, jack,
+hand tools and mats in designated positions.
+
+CAMBER
+
+Camber is preset at factory and cannot be adjusted.
+Camber:
+Refer to SDS (RA-14).
+e If the camber is not within specification, inspect and replace
+any damaged or worn rear suspension parts.
+
+TOE-IN
+Toe-in is preset at factory and cannot be adjusted.
+Measure toe-in using following procedure. If out of
+specification, inspect and replace any damaged or worn rear
+suspension parts.
+WARNING:
+e Perform following procedure always on a flat surface.
+eo Make sure that no person is in front of the vehicle before
+pushing it.
+Move rear of vehicle up and down to stabilize the posture.
+Push the vehicle straight ahead about 5 m (196.9 in).
+Put a mark on base line of the tread (rear side) at the same
+height of hub center to be a measuring point.
+Measure distance “A” (rear side).
+Push the vehicle slowly ahead to turn the wheels around 180
+degrees.
+If the wheels have passed 180 degrees, try the above proce-
+dure again from the beginning. Never push vehicle backward.
+6. Measure distance “B” (front side).
+
+Total toe-in (A - B):
+
+Total toe-in angle:
+
+Refer to SDS (RA-14).
+
+Ok Ob
+
+RA-6
+===== PDF page 7 =====
+REAR AXLE
+
+Wheel Hub
+
+SEC. 430
+
+IS) © Nem (kg-m, ft-lb)
+
+Front
+
+[C 22-29 22-30, 16 - 22)
+
+@® Spindle
+@ Baffle plate
+® ABS sensor rotor
+
+@e®
+
+SRA732A
+
+Wheel hub bearing @ Cotter pin
+
+Washer Hub cap
+
+Wheel bearing lock nut ©® ABS sensor
+
+REMOVAL
+
+CAUTION:
+
+e Before removing the rear wheel hub assembly, disconnect
+the ABS wheel sensor from the assembly. Then move it
+away from the hub assembly. Failure to do so may result
+in damage to the sensor wires and the sensor becoming
+inoperative.
+
+eo Wheel hub bearing usually does not require maintenance.
+If any of the following symptoms are noted, replace wheel
+hub bearing assembly.
+
+e Growling noise is emitted from wheel hub bearing during
+operation.
+
+e Wheel hub bearing drags or turns roughly. This occurs when
+
+turning hub by hand after bearing lock nut is tightened to speci-
+fied torque.
+
+RA-7
+
+1025
+===== PDF page 8 =====
+1026
+
+REAR AXLE
+
+SRAB92A
+
+SRA733AA
+
+13+£05 mm
+(0.51 + 0.020 in)
+
+ABS sensor rotor
+
+SRA734A
+
+SRA737A
+
+Wheel Hub (Cont'd)
+
+1) Remove brake caliper assembly.
+
+2) Remove wheel bearing lock nut.
+
+e Remove brake caliper assembly and rotor.
+
+Suspend caliper assembly with wire so as not to stretch brake
+
+hose.
+Be careful not to depress brake pedal, or piston will pop out.
+Make sure brake hose is not twisted.
+
+INSTALLATION
+e With vehicles equipped with ABS, press-fit ABS sensor rotor
+into wheel hub bearing using a drift.
+
+e Press-fit ABS sensor rotor as far as the location shown in fig-
+ure at left.
+
+e Install wheel hub bearing.
+e Tighten wheel bearing lock nut.
+Before tightening, apply oil to threaded portion of rear spindle
+and both sides of plain washer.
+[C}: 186 - 255 N'm
+(19 - 26 kg-m, 137 - 188 ft-lb)
+e Check that wheel bearings operate smoothly.
+
+eo Check wheel hub bearing axial end play.
+Axial end play:
+0.05 mm (0.0020 in) or less
+
+RA-8
+===== PDF page 9 =====
+REAR AXLE
+Wheel Hub {Cont’d)
+
+e Install hub cap using a suitable tool.
+Do not reuse hub cap. When installing, replace it with a new
+one.
+
+Suitable tool
+
+SRA738A
+
+e Apply anti-rust wax to the mating surfaces of hub and hub cap.
+
+Apply anti-rust wax LG
+to the mating surfaces
+of hub and hub cap.
+
+SRA73%A
+
+IDX
+
+RA-9 1027
+===== PDF page 10 =====
+1028
+
+REAR SUSPENSION
+
+CRORER TRS
+
+SEC. 431
+
+Components
+
+[A : Nem (kg-m, ft-to)
+
+Washer
+
+Bushing
+
+Shock absorber mounting seal
+Shock absorber mounting bracket
+Upper spring seat rubber
+
+SECYCRSRC)
+
+Bushing
+
+Bound bumper cover
+Bound bumper
+
+Coil spring
+
+Shock absorber
+
+RA-10
+
+Pees
+
+SRA791A
+
+Torsion beam
+Lateral link
+Control rod
+ABS sensor
+===== PDF page 11 =====
+REAR SUSPENSION
+
+Removal and Installation
+
+CAUTION:
+
+e Before removing the rear suspension assembly, discon-
+nect the ABS wheel sensor from the assembly. Failure to
+do so may result in damage to the sensor wires and the @]
+
+4 sensor becoming inoperative.
+e Remove suspension assembly.
+1. Remove brake caliper assembly and rotor. MA
+Suspend caliper assembly with wire so as not to stretch brake
+hose. EM
+
+SRA695A| Be careful not to depress brake pedal, or piston will pop out.
+
+Make sure brake hose is not twisted.
+
+2. Using a transmission jack, raise torsion beam a little, and LG
+remove suspension fixing nuts and bolts.
+
+3. Lower transmission jack, and remove suspension.
+4. Remove luggage compartment trim. Refer to BT section. EE
+5. Remove strut securing nuts (upper side). Then pull out strut
+assembly.
+SRAB0%A
+e Install suspension assembly. Wi
+
+—
+
+Temporarily attach torsion beam to vehicle.
+
+Temporary
+|e
+
+SRAB97A
+
+2. Place lateral link and control rod horizontally against torsion gg
+
+beam. Tighten up lateral link on vehicle.
+Control rod 3. Attach shock absorber to vehicle. Then tighten up the lower
+
+Lateral link side of shock absorber. ST
+RAS 4. Tighten torsion beam in full rebound condition at the place
+a a Horzonial indicated in step 1.
+i RS
+Torsion beam
+SRAB98A
+HA
+
+Coil Spring and Shock Absorber
+
+REMOVAL
+Remove shock absorber upper and lower fixing nuts. EL
+Do not remove piston rod lock nut on vehicle.
+
+RA-11 1029
+===== PDF page 12 =====
+1030
+
+REAR SUSPENSION
+
+Commercial service tool
+
+-
+
+Suitable
+bar
+
+SRABO6A
+
+Shock absorber
+lower bushing
+center
+
+—
+7a! 5)
+
+NZ
+aN
+
+Spring lower
+[ ena position
+
+Spring lower
+
+LH end position gy
+SRAB9%A
+Top Upper end
+Flat
+
+tail
+
+== LHe
+
+end
+
+SFA436B,
+
+Coil Spring and Shock Absorber (Cont’d)
+
+DISASSEMBLY
+
+1. Set shock absorber in vise with attachment, then loosen pis-
+ton rod lock nut.
+
+Do not remove piston rod lock nut.
+
+2. Compress spring with tool so that the strut upper spring seat
+can be turned by hand.
+
+WARNING:
+
+Make sure that the pawls of the two spring compressors are
+firmly hooked on the spring. The spring compressors must be
+tightened alternately so as not to tilt the spring.
+
+3. Remove piston rod lock nut.
+INSPECTION
+
+Shock absorber assembly
+
+e Check for smooth operation through a full stroke, both com-
+pression and extension.
+
+e Check for oil leakage on welded or gland packing portions.
+
+e Check piston rod for cracks, deformation or other damage.
+Replace if necessary.
+
+Upper rubber seat and bushing
+
+Check rubber parts for deterioration or cracks.
+
+Replace if necessary.
+
+Coil spring
+Check for cracks, deformation or other damage. Replace if neces-
+sary.
+
+ASSEMBLY
+e Locate upper spring seat as shown.
+
+e When installing coil spring, be careful not to reverse top and
+
+bottom direction. (Top end is flat.)
+eo When installing coil spring on strut, it must be positioned as
+
+shown in figure at left.
+
+RA-12
+===== PDF page 13 =====
+REAR SUSPENSION
+
+Torsion Beam, Lateral Link and Control Rod
+
+Ou | J DISASSEMBLY
+
+A B ® Remove torsion beam assembly. Refer to Removal and Instal-
+c lation in REAR SUSPENSION (RA-11). @l
+® Remove lateral link and control rod from torsion beam. ?
+
+INSPECTION MA
+e Check for cracks, distorsion or other damage. Replace if nec-
+essary.
+SRA794A Standard length: EM
+A 207 - 208 mm (8.15 - 8.19 in)
+B 394 - 395 mm (15.51 - 15.55 in) we
+Ll
+
+C 601-603 mm (23.66 - 23.74 in)
+D 106 - 108 mm (4.17 - 4.25 in)
+e Check all rubber parts for wear, cracks or deformation. ge
+
+Temporary
+
+tightening .
+Replace if necessary.
+ASSEMBLY EF
+1. Temporarily assemble lateral link and control rod.
+e When installing the control rod, connect the bush with the
+Control rod smaller inner diameter to the lateral link. cL,
+MT
+COO 0) AT
+Large inner Small inner
+diameter diameter
+Torsion beam side Lateral link side
+
+SRA793A
+
+9)
+
+2. Temporarily install lateral link and control rod on torsion beam. 33
+e When installing, place lateral link with the arrow topside.
+
+Lateral link
+A RS
+Temporary
+tightening BT
+Control rod SRA701A
+
+3. Place lateral link and control rod horizontally against torsion HA
+
+beam, and tighten to the specified torque.
+Secure tightening 4. Install torsion beam assembly. Refer to Removal and Installa- _.
+tion in REAR SUSPENSION (RA-11). Se
+
+Horizontal
+
+SRAT02A
+
+RA-13 1031
+===== PDF page 14 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+General Specifications
+
+COIL SPRING SHOCK ABSORBER OR STRUT
+Applied model Luxury Sporty Strut type Double-acting hydraulic
+Wire diameter om i) 11.9 (0.469) 12.1 (0.476) Piston rod
+Rod diameter mm (in) 12.5 (0.492)
+Coil outer diameter 102.8 - 112.4 103.2 - 112.8
+mm (in) (4.05 - 4.43) (4.06 - 4.44)
+Free length mm (in) 320 (12.60) 310 {12.20}
+Identification color
+RH Yellow x 1, Yellow x 1,
+Gray x 1 Gray x 1, Blue x 1
+LH Blue x 1, Gray x 1 Blue x 1, Gray x 1,
+
+Blue x 1
+
+Inspection and Adjustment
+
+WHEEL ALIGNMENT (Unladen*) WHEEL BEARING
+Camber Minimum —1°4% (-1.75% Wheel bearing axial end play 0.05 (0.0020)
+Nominal 1°00’ (-1.00°) mm (in) : :
+
+Degree minute
+
+Wheel bearing lock nut tightening
+
+{Decimal degree) | Maximum -0°15" (0.25%) torque 186 - 255
+, — 9 (19 - 26, 137 - 188)
+Total toe-in Minimum -3 {-0.12) Nm (kg-m, ft-Ib)
+Distance (A - B) Nominal 1 (0.04)
+mm (in) | Maximum 5 (0.20)
+Angle (left plus right) | Minimum -16' (-0.27°)
+Degree minute Nominal 5.5" {0.099
+{Decimal degree) | Maximum 26’ (0.43%)
+
+*: Fuel, radiator coolant and engine oil full. Spare tire, jack, hand tools
+and mats in designated positions.
+
+1032 RA-14

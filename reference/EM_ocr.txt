@@ -1,0 +1,5013 @@
+===== PDF page 1 =====
+ENGINE MECHANICAL
+|
+
+TTT
+PRECAUTIONS ......ooeieeeeeeeeeeee eee eeereven snes ennenn 2 CYLINDER HEAD. ...........ooveeeeeeireeeeeieeie secon snnee canna 36
+Parts Requiring Angular Tightening.........ccceccceeceee rnin 2 REMOVAL... iriver cece reverse esses essain arenas 37
+Liquid Gasket Application Procedure .........cccoeceencenne 2 Disassembly ...cciiiiiiiee cre 37
+PREPARATION ........oooveeei ieee eeeeeiee esses eee annnnnns 3 INSPECHON. ..cueeteueierereeeeeraesireecrseserneeaess eters serra 39
+Special Service TOS ........coviiienninrceennen 3 ASSEMDIY veers ene eee neers 44
+Commercial Service Tools ..........ovvmreeriiiniiiiiiies 5 INSLANALION ove. eres sss es eesenes essere sssensssns 44
+NOISE, VIBRATION AND HARSHNESS (NVH) VALVE CLEARANCE .....coovoevvoeeoooeeeeeesrereessnnsssnenns 49
+TROUBLESHOOTING... ...occccorrrsstrsrssssnsss sms 6 CRECKING ..vvrrvvvevrseneeerer snes sessses snes ssn 49
+NVH Troubleshooting Chart — Engine Noise............ / AGIUSEING verre eecnses esses sss 50
+OUTER COMPONENT PARTS .........ccoooooovviinnnnnniinnns 8 ENGINE REMOVAL ooo oes eeenne 53
+COMPRESSION PRESSURE. ......cuccoscrnmmmmssssmssrmessene 12 BEMOVAL eee ceceeiivririeiiscieeees sete sseseemee sae siisaniassanaas 54
+Measurement of Gampiession PIoSSUIummmmmnd 12 INSAIlATION.... ee ieeeeeeis cee creeereee eee ee eee eeessneen ree nrennnesanrens 55
+OIL PAN cco eee ete esas evans eeae 13 CYLINDER BLOCK ooo 56
+RemMOVal......ooo ieee 13 .
+[FS ¢= 1 F210] o TO 16 Disassembly rns 57
+TIMING CHAIN wooo 19 INSPECHON. citer eerste snes ene 57
+Removal 21 ASSEITIDIY cover eee irre ee seers 64
+INSPECHON «ceiver eee e seer ene ns 28 SERVICE DATA AND SPECIFICATIONS (SDS}........ 57
+INSEAllAtION ce... ive cece creer 28 General Specifications... 67
+OIL SEAL REPLACEMENT ..........ovvvecreoeresereesseesneee. 33 Inspection and Adjustment ...........coocurniniinnnns 67
+
+IDX
+
+73
+===== PDF page 2 =====
+74
+
+PRECAUTIONS
+
+@
+
+Groove
+
+Bolt hole
+
+S
+
+)
+
+[1] O
+(® Inner
+side
+
+EM184F
+
+inner side
+
+AEMO80
+
+Parts Requiring Angular Tightening
+
+®
+
+Use an angle wrench for the final tightening of the following
+engine parts:
+
+(1) Cylinder head bolts
+
+(2) Main bearing cap bolts
+
+(3) Connecting rod cap nuts
+
+(4) Crankshaft pulley boit
+
+Do not use a torque value for final tightening.
+
+The torque value for these parts are for a preliminary step.
+Ensure thread and seat surfaces are clean and coated with
+engine oll.
+
+Liquid Gasket Application Procedure
+
+®Q
+
+Use a scraper to remove all traces of old liquid gasket
+from mating surfaces and grooves. Also, completely clean
+any oil from these areas.
+
+Apply a continuous bead of liquid gasket to mating sur-
+faces. (Use Genuine RTV silicone sealant Part No. 999MP-
+A7007, Three Bond TB1207D or equivalent.)
+
+® Be sure liquid gasket diameter is as specified.
+
+Apply liquid gasket around the inner side of bolt holes
+(unless otherwise specified).
+
+Assembly should be done within 5 minutes after coating.
+Wait at least 30 minutes before refilling engine oil and
+engine coolant.
+
+EM-2
+===== PDF page 3 =====
+PREPARATION
+
+Special Service Tools
+
+The actual shapes of Kent-Moore tools may differ from those of special service tools illustrated here.
+
+Tool number
+{Kent-Mcore No.)
+Tool name
+
+Description
+
+STO05018000
+(=)
+Engine stand assembly
+@® ST05011000
+(=)
+Engine stand
+@ ST05012000
+( —)
+
+Base
+
+Disassembling and assembling
+
+NT042
+
+KV10106500
+(=)
+Engine stand shaft
+
+NT(028
+
+KV10117000
+(J41262)
+Engine sub-attachment
+
+KV10117000 has been replaced with
+KV10117001 (KV10117000 is no longer in
+production, but it is usable).
+
+NT373
+
+Kv10117001
+=)
+Engine sub-attachment
+
+Installing on the cylinder block
+
+NT372
+
+ST10120000
+(J24239-01)
+Cylinder head bolt wrench
+
+Loosening and tightening cylinder head bolt
+
+NTO19
+
+KV10116200
+
+(J26336-A)
+
+Valve spring compressor
+
+@ KV10115900
+(J26336-20)
+Attachment
+
+Disassembling valve mechanism
+
+NT022
+
+(J39386)
+Valve oil seal drift
+
+Installing valve oil seal
+
+NT024
+
+EM-3
+
+MA
+
+FA
+
+RA
+
+BR
+
+RS
+
+om
+
+©
+
+[FA
+
+EL,
+
+HDX
+
+75
+===== PDF page 4 =====
+76
+
+PREPARATION
+
+Special Service Tools (Cont'd)
+
+Tool number
+(Kent-Moore No.)
+Tool name
+
+Description
+
+KV101151S0
+
+(J38972)
+
+Lifter stopper set
+
+@ KV10115110
+(J38972-1)
+Camshaft pliers
+
+@ KV10115120
+(J38972-2)
+Lifter stopper
+
+Changing shims
+
+NTO41
+EMO03470000 Installing piston assembly into cylinder bore
+(J8037)
+Piston ring compressor
+NTO44
+ST16610001 Removing crankshaft pilot bushing
+(J23907)
+Pilot bushing puller
+NT045
+KV10111100 Removing steel oil pan and rear timing chain
+(J37228) case
+Seal cutter
+NT046
+WS39930000 Pressing the tube of liquid gasket
+( — 9
+Tube presser
+NT052
+KV10112100 Tightening bolts for bearing cap, cylinder
+(BT8653-A) head, etc.
+Angle wrench
+NTO14
+
+EM-4
+===== PDF page 5 =====
+PREPARATION
+
+Commercial Service Tools
+
+Tool name Description
+Spark plug wrench o Removing and installing spark plug
+0 : :
+16 mm MA
+{0.63 in)
+NT047
+Valve seat cutter set Finishing valve seat dimensions
+LC
+NT048
+Piston ring expander Removing and installing piston ring EC
+Fg
+NT030
+Valve guide drift Removing and installing valve guide CL
+ab
+Intake & Exhaust:
+a = 8.5 mm (0.374 in) dia. MT
+NTO15 b = 5.5 mm (0.217 in} dia.
+Valve guide reamer Reaming valve guide (3 or hole for oversize
+= valve guide @ Al
+dr
+de ¥ Intake & Exhaust: EA
+@ d, = 6.0 mm (0.236 in) dia.
+RA
+BR
+ST
+[FIA
+IDX
+
+EM-5 77
+===== PDF page 6 =====
+NOISE, VIBRATION AND HARSHNESS (NVH) TROUBLESHOOTING
+
+Camshaft bearing noise
+
+Timing chain and
+chain tensioner noise
+
+Exhaust valve Intake valve
+
+Piston pin noise
+
+Main bearing noise Drive belt noise (Stick/Slipping)
+
+SEM646F
+
+78 EM-6
+===== PDF page 7 =====
+NOISE, VIBRATION AND HARSHNESS (NVH) TROUBLESHOOTING
+
+NVH Troubleshooting Chart — Engine Noise
+
+Use the chart below to heip you find the cause of the problem.
+
+1. Locate the area where noise occurs.
+
+2. Confirm the type of noise.
+
+3. Specify the operating condition of engine. al
+4. Check specified noise source.
+
+If necessary, repair or replace these parts.
+
+MA
+Operating condition of engine
+Location of Type of Source of Ki Reference
+noise noise Before | After | When | When | When | While noise Check item page
+warm-up | warm-up | starting | idling racing | driving
+Top of icki
+P Ticking or c A — A B — [Tapes Valve clearance EM-52
+engine clicking noise n ©
+Rocker =
+cover Camshaft .
+. - Camshaft journal clearance g
+Cylinder Rattle Cc A - A B C bearing Camshaft runout EM-39, 40 i.
+head noise 0
+Piston and piston pin clear-
+Slap or Piston pin ance _
+knock A 8 8 noise Connecting rod bushing EM-57. 63 Sle
+clearance
+Crankshat Piston-to-bore clearance
+rankshaft i i i
+lle Piston slap Piston fing side clearance EM-58, 58, CL
+pulley Slap or rap A — re B B A noise Piston ring end gap 58 59
+Cylinder ! Connecting rod bend and ’
+block (Side torsion
+of engine) MT
+Qil pan Connecting ‘Connecting rod bushing
+Knock A B c B B B |rod bearing | Clearance (Small enc) EM-63, 62
+noise Connecting rod bearing A T
+clearance (Big end) 23
+Knock A B _ A B C Main bear- Main bearing oil clearance EM-61, 61
+ing noise Crankshaft runout EA
+Front of Timing Timing chain cracks and
+engine Tapping or _ chain and wear 28 1
+Timing ticking A A B 8 8 chain ten- Timing chain tensioner EM-28, 19 RA
+chain cover sioner noise { operation
+Other drive MA secti
+Squeaking belts {Stick- . ) section 0
+or fizzing A B — B — Cling or slip- | Prive belts deflection (“Checking BIR
+ping) Drive Belts”,
+“ENGINE
+Qther drive MAINTE- Sr
+Creaking A 8 A B A B belts (Slip- | Idler pulley bearing operation | NANCE")
+Front of ping}
+engine
+2 LC section ES
+(“Water re
+Pump
+I . .
+Saual A B — B A B aver PUTER | water pump operation Inspection”, _
+“ENGINE Bl
+: COOLING
+SYSTEM"}
+A: Closely related B: Related C: Sometimes related —: Not related HA
+EL
+IDX
+
+EM-7 79
+===== PDF page 8 =====
+OUTER COMPONENT PARTS
+
+SEC. 111+140¢148¢163164+2200223 [O) 21 - 26 (2.1 - 2.7, 15 - 20)
+
+& g 8.4 - 10.8 (0.86 - 1.1, 74.6 - 95.5)
+wp & 5.1 - 6.5 (0.52 - 0.66, 45.1 - 57.3)
+[@] 8.4 - 10.6 = 1 F
+
+(0.86 - 1.08, 74.6 - 93.7) — ~28 Ws oo 18-24 (1.8 - 24.13 -17)
+ob ny | |
+8.4 - 108 ==
+
+iy 5 8 J ’ Gasket £19
+(0.86 - 1.1, 4 7.8 - 10.0 a.
+] _ ! 2.0 - 2.4
+746 - 955) — i (0.8 - 1.0, L . 5 (0.20 - 0.24, 17.4 - 20.8)
+Ee = 69 - 87) : &
+[a0- 25 LL ¥ Te = A Gasket €3
+
+(2.0 - 2.5, uN (0)
+
+-——
+~~
+
+2.9 - 3.8 [3] Refer to “TIGHTENING PROCEDURES".
+
+(0.30 - 0.39, dD “TIGHTENING
+
+PROCEDURES”. 8.4 - 10.8
+
+(0.86 - 1.1, 74.6 - 95.5)
+
+Gasket X]
+
+10-12 (1.0 - 1.2, 87 - 109)
+
+[0] Refer to “TIGHTENING PROCEDURES”.
+21-38
+
+® 0)
+Gasket £29 : (0.21 - 0.39,
+rs 18.2 - 33.9)
+[os - 118 of
+
+(1.0 - 1.2,
+
+wy 2
+
+“TIGHTENING
+PROCEDURES”.
+
+©] 29-38
+
+{0.30 - 0.39
+26.0 - 33.9)
+
+[® : Nem (kg-m, in-lb)
+[CO] : Nem (kg-m, ft-Ib)
+
+SEMB48F
+
+@ Intake manifold collector support ® Fuel pressure regulator (G@ Throttle body
+
+@ Intake manifold collector @ Ignition coil with power transistor a |ACV-AAC valve
+
+@  Sub-fuel tube Ormament cover @@ EVAP canister purge control valve
+@ Injector ® Intake manifold @ EVAP canister purge volume con-
+® Fuel tube assembly : trol valve
+
+80 EM-8
+===== PDF page 9 =====
+OUTER COMPONENT PARTS
+
+SEC. 140°147+210°211+221
+3-43-04, 26-35 [0] 21 - 26 (2.1 - 2.7, 15 - 20)
+
+© 0s 2 ". 8-10 (0.8 - 1.0, 69 - 89)
+
+[CO] 21 - 26 (2.1 - 2.7, 15 - 20)
+[0] 22 - 27 (2.2 - 2.8, 16 - 20)
+
+[0] 20 - 29 MA
+
+| 7.2 - 9.6
+{0.73 - 0.98, LC
+63.4 - 85.1)
+
+Z | EC
+ran.
+© [O22 AR 8
+(2.2 - 2.8, < EE
+& 16 - 20)
+Gasket X) O-ring (X)
+5.1 - 6.5 [2 Ba CL
+(0.52 - 0.66, 45.1 - 57.3) ZX )
+L Q
+SS (1.80 - 2.41, MIT
+ls.q - 10.9 12:98 - 17.41)
+0.86 - 1.10, 74.6 - 95.5) o
+AT
+
+8.4 - 10.8 (0.86 - 1.10, 74.6 - 95.5)
+
+17 (1.3 - 1.7, 9 - 12) A
+/ FA
+
+~¢ {is -65
+(0.52 - 0.66,
+451-572) op
+
+J 7
+[OC] 30 - 32 3 BR
+(3.1 - 3.3, 22 - 24) 3
+[@) 8.4 - 108
+(0.86 - 1.10, Gasket €3 ST
+74.6 - 99.0)
+9] 8.4 - 11.2 (0.86 - 1.14, 74.6 - 99.0) EN 24 - 27 (2.4 - 2.8, 17 - 20)
+- 4.4 - 5.1, 32 - 37 =
+[3 : Nem (kg-m, ft-Ib) [0] 43 - 50 ( 5 ) as
+@ : Nem (kg-m, in-Ib) [O30 - 32
+(3.1 - 3.3, 22 - 24) SEMEADE
+BI
+@ EGRC-BPT valve @ Camshaft position sensor ® Exhaust manifold
+® EGR valve (PHASE) @ Water outlet HA
+@ EGR temperature sensor ® Thermostat with water inlet
+IDX
+
+EM-9 81
+===== PDF page 10 =====
+82
+
+OUTER COMPONENT PARTS
+
+SEM902EA
+
+(0.3 - 0.39 kg-m, 26.0 - 33.9 =
+
+29 - 3.8 N-m
+7 /
+
+SEM150FA
+
+7
+Right side cylinder head rear view
+SEMO04EA
+
+SEMO05EA
+
+TIGHTENING PROCEDURES
+
+Intake manifold
+e Tighten in numerical order shown in the figure.
+1. Tighten all bolts and nuts to 5 to 10 N-m (0.5 to 1.0 kg-m, 3.6
+
+to 7.2 ft-Ib).
+2. Tighten all bolts and nuts to 26 to 31 N-m (2.7 to 3.2 kg-m, 20
+
+to 23 ft-Ib).
+
+3. Repeat step 2 at least five times to have all bolts and nuts
+tightened at a torque of 26 to 31 N-m (2.7 to 3.2 kg-m, 20 to
+23 ft-lb).
+
+Fuel tube
+
+e Tighten in numerical order shown in the figure.
+
+1. Tighten all bolts to 9.3 to 10.8 N-m (0.95 to 1.1 kg-m, 6.9 to 8.0
+ft-lb).
+
+2. Tighten all bolts to 21 to 26 N-m (2.1 to 2.7 kg-m, 15 to 20 ft-
+Ib).
+
+¢ Do not disassemble fuel tube assembly.
+
+Fuel pressure regulator
+
+Tighten fuel pressure regulator to 2.9 to 3.8 N-m (0.3 to 0.39 kg-m,
+
+26.0 to 33.9 in-Ib).
+
+e Tighten screws evenly several times to have the fuel pres-
+sure regulator tightened at the specified torque.
+
+eo Always replace O-ring with new ones.
+
+e Lubricate O-ring with new engine oil.
+
+Sub-fuel tube
+
+1. Temporarily tighten bolt @ .
+
+2. Tighten bolt @ to 20.6 to 26.5 N'm (2.10 to 2.70 kg-m, 15.19
+to 19.55 ft-lb).
+
+3. Tighten bolt & to 8.5 to 10.8 N'm (0.87 to 1.10 kg-m, 75.5 to
+95.5 in-ib).
+
+Throttle body
+
+e Tighten in numerical order shown in the figure.
+
+1. Tighten all bolts to 8.8 to 10.8 N-m (0.9 to 1.1 kg-m, 6.5 to 8.0
+ft-1b).
+
+2. Tighten all bolts to 17.7 to 21.6 N'm (1.8 to 2.2 kg-m, 13 to 16
+ft-b).
+
+EM-10
+===== PDF page 11 =====
+OUTER COMPONENT PARTS
+
+eo Before installing EGR guide tube, tighten intake manifold
+collector and collector bracket.
+
+/ \/ EGR guide tube
+i L 9) Ong 1. Tighten all bolts to 9 to 10 N-m (0.9 to 1.0 kg-m, 6.5 to 8.0 ft-
+Din V Ib).
+ess De 2. Tighten all bolts to 21 to 26 N-m (2.1 to 2.7 kg-m, 15 to 20 ft-
+
+N 3
+A 7 MA
+5 1 OD) (4)"“EGR guide tube
+
+7
+a.
+
+Intake manifold collector
+Tighten bolts and nuts to 18 to 22 N-m (1.8 to 2.2 kg-m, 13 to 16 LGC
+
+Engine front
+_ft-Ib) in numerical order shown in the figure.
+
+EC
+
+FE
+
+CL
+
+SEM151F|
+
+EM-11 83
+===== PDF page 12 =====
+84
+
+COMPRESSION PRESSURE
+
+SEMBS0SE
+
+eo
+
+20 mm (0.79 in) dia,
+
+Use compressor tester whose end (rubber
+portion} is less than 20 mm (0.79 in) dia.
+Otherwise, it may be caught by cylinder
+head during removal.
+
+SEM387C
+
+Measurement of Compression Pressure
+
+1.
+2.
+3
+
+>
+
+®e ~0 oN
+
+Warm up engine.
+
+Turn ignition switch off.
+
+Release fuel pressure.
+
+Refer to “Releasing Fuel Pressure” in EC section.
+Disconnect ignition coil with power transistor harness
+connectors, then remove ignition coils.
+
+Remove ali spark plugs.
+
+Disconnect all injector harness connectors.
+
+Attach a compression tester to No. 1 cylinder.
+Depress accelerator pedal fully to keep throttle valve wide
+open.
+Crank engine and record highest gauge indication.
+Repeat the measurement on each cylinder as shown above.
+Always use a fully-charged battery to obtain specified
+engine speed.
+
+Unit: kPa {(kg/cm?, psi)/rpm
+
+Difference limit between
+
+Standard Minimum .
+cylinders
+
+1,275 981
+! 1.0, 14)/300
+(13.0, 185)/300 (10.0, 142)/300 95 (
+
+11.
+
+If compression in one or more cylinders is low:
+
+a. Pour a small amount of engine oil into cylinders through
+spark plug holes.
+
+b. Retest compression.
+
+If adding oil helps compression, piston rings may be worn
+
+or damaged. If so, replace piston rings after checking pis-
+
+ton.
+
+If pressure stays low, a valve may be sticking or seating
+
+improperly. Inspect and repair valve and valve seat. (Refer
+
+to SDS, EM-67 and EM-70.) If valve or valve seat is dam-
+
+aged excessively, replace them.
+
+If compression stays low in two cylinders that are next to
+
+each other:
+
+a. The cylinder head gasket may be leaking, or
+
+b. Both cylinders may have valve component damage.
+Inspect and repair as necessary.
+
+EM-12
+===== PDF page 13 =====
+OIL PAN
+
+SEC. 110+150+221+251
+] 25 - 3.1 (0.25 - 0.32, 21.7 - 27.8)
+
+Baffle plate
+
+Qil pressure switch (@) 2s - 39
+12 - 18 (3.0 - 4.0, 22 - 29) |
+
+(1.2 - 1.8, 9 - 13)
+Qil filter a
+[014.7 - 20.5 \
+1
+
+Crankshaft position sensor (POS)
+(1.5 - 2.1, 11 - 15) *
+Front heated oxygen sensor {left bank)
+— Eg clamp
+N
+
+Crankshaft pasition .
+sensor (REF) \L 8.4 - 10.8
+
+Rear cover plate (0.86 - 1.10, 74.6 - 95.5)
+[®] 8.4 - 108 6.4 - 7.5 (0: Nem (kgm, ftib)
+
+(0.65 - 0.76, 56.4 - 66.0) }
+i I: Nom (kg-m, in-lb)
+
+2: Apply liquid gasket
+
+(0.86 - 1.10, 2
+74.6 - 95.5)
+
+Drain plug 16 - 19 (1.6 - 1.9, 12 - 14) (Genuine RTV silicone
+[0] 29 - 39 Steel off pan sealant Part No.
+3-4, 22 - 999MP-A7007, Three Bond
+© TB1207D or equivalent).
+& NS 64-75 (085-075, 56.4 - 66.0) SEMESOF
+Removal
+CAUTION:
+
+When removing the aluminum oil pan from engine, first
+remove the crankshaft position sensors (POS and REF) from
+the assembly.
+
+Be careful not to damage sensor edges and signal plate teeth.
+1. Remove engine undercover.
+
+2. Drain engine oil.
+
+> 3. Remove steel oil pan bolts.
+4
+SONA
+|
+0
+- ol
+Engine
+front
+@® o |
+ighten in numerical
+order.
+Loosen in reverse ~,
+order. SEMBOSE
+
+UZ 7d | 4 Remove steel oil pan.
+> Sa (J37228) © /7N a Insert Tool between aluminum oi pan and steel oil pan.
+LI ¢ Be careful not to damage aluminum mating surface.
+CX [1 ~// e Do not insert screwdriver, or oil pan flange will be
+== deformed.
+
+SEMBO7E
+
+EM-13
+
+MA
+
+FE
+
+cL
+
+MT
+
+85
+===== PDF page 14 =====
+86
+
+OIL PAN
+
+SEMSI10E
+
+ASEH
+_ Crankshaft
+
+position
+
+is 7 ACT)
+Front engine mounting
+
+=e
+~~
+
+7
+TE Rear engine
+loe=) A 7 mounting
+hY = 7
+
+Transmission jack —
+= Vin <<} & \
+<
+Se==) WO ®
+
+SEM811E
+
+Removal (Cont'd)
+
+b. Slide Tool by tapping on the side of the Tool with a hammer.
+¢. Remove steel oil pan.
+
+5. Remove oil strainer.
+
+6. Remove front exhaust tube and its support.
+
+7. Set a suitable transmission jack under transaxle and hoist
+
+engine with engine slinger.
+
+8. Remove crankshaft position sensors (POS and REF) from oil
+
+pan.
+
+9. Remove front and rear engine mounting nuts and bolts.
+
+10. Remove center member.
+
+EM-14
+===== PDF page 15 =====
+OIL PAN
+Removal (Cont'd)
+
+11. Remove drive belts.
+12. Remove air compressor and bracket.
+@!
+(IA
+ZA 13. Remove rear cover plate.
+SAE \ LC
+Rear cover ates
+SEMB13E cL
+14. Remove aluminum oil pan bolts.
+P MIT
+AT
+FA
+15. Remove transaxle bolts. BR
+ST
+RS |
+Br
+mt CU if 16. Remove aluminum oil pan. ii
+NSA ye a. Insert an appropriate size tool into the notch of aluminum oil
+~ AL SN J pan as shown in the figure. a
+f J e Be careful not to damage aluminum mating surface.
+(i DL \ e Do not insert screwdriver, or oil pan flange will be
+Iz 4 $ deformed. BX
+1 Va Ngee toot |b. Pry off aluminum oil pan by moving the tool up and down.
+; ¢. Remove aluminum oil pan.
+SEM155F
+
+EM-15 87
+===== PDF page 16 =====
+88
+
+OIL PAN
+
+Oil
+
+pump
+
+JY SEM819E
+
+MEM108A|
+
+Unit: mm (in)
+
+Sealing point
+
+SEM964E
+
+L Groove
+
+Inner
+
+A side
+Z Bolt hole
+
+vy
+
+SEM15SF
+
+A
+J
+:
+
+Engine front
+
+*: For 4 places
+
+45 - 55
+
+Unit; mm (in)
+
+(0.177 - 0.217) SEM185FA
+
+Removal (Cont'd)
+17. Remove O-rings from cylinder block and oil pump body.
+
+Installation
+
+1.
+
+Install aluminum oil pan.
+
+Use a scraper to remove all traces of liquid gasket from mat-
+ing surfaces.
+
+Also remove traces of liquid gasket from mating surface of
+cylinder block, front cover and steel oil pan.
+
+Remove old liquid gasket from the bolt hole and thread.
+
+Apply sealant to front cover gasket and rear oil seal retainer
+gasket.
+
+Apply a continuous bead of liquid gasket to mating surface of
+aluminum oil pan.
+
+Use Genuine RTV silicone sealant Part No. 999MP-A7007,
+Three Bond TB1207D or equivalent.
+
+Apply liquid gasket to inner sealing surface as shown in figure.
+
+Be sure liquid gasket is 4.0 to 5.0 mm (0.157 to 0.197 in)
+or 4.5 to 5.5 mm (0.177 to 0.217 in) wide.
+Attaching should be done within 5 minutes after coating.
+
+EM-16
+===== PDF page 17 =====
+OIL PAN
+
+Installation (Cont’d)
+e. Install O-rings, cylinder block and oil pump body.
+
+f. Install aluminum oil pan.
+e Tighten bolts in numerical order. Le
+
+¢ Wait at least 30 minutes before refilling engine oil.
+
+EC
+FE |
+GL |
+2. Install the transaxle bolts.
+_/
+EEL CD] 2 3. Install rear cover plate. (Mv
+———
+R
+». AT
+/ FA
+|
+RA |
+4. Install air compressor and bracket. BR |
+5. Install drive belts.
+6. Install center member.
+7. Install front and rear engine mounting insulator nuts and bolts. §T
+RS
+Br |
+HA
+
+8. Install crankshaft position sensors (POS and REF) and front
+heated oxygen sensor (left bank) harness clamp.
+
+e& Make sure that crankshaft position sensor (POS) and front EL |
+heated oxygen sensor (left bank) harness clamp are
+installed correctly as shown in figure. |
+
+9. Install front exhaust tube and its support. IDX |
+
+10. Install oil strainer.
+
+Ss Crankshaft position =
+
+“sensor (POS)
+
+A \/M\ (1
+Te Front heated oxygen sensor _
+EARN ‘(left bank) harness clamp =~
+[8.4 - 10.8 Nem SY \! |
+
+\ "(0.86 - 1.10 kg-m, JV 7
+74.6 - 95.5 in-Ib) SEM222F
+
+EM-17 89 |
+===== PDF page 18 =====
+90
+
+OIL PAN
+
+Scraper
+
+SEM823E
+
+() Inner
+7 Val )
+-Groove
+
+Bolt hole
+
+Inner side
+~Groove SEM159F
+
+Cut here
+
+$
+
+Liquid gasket
+Tube presser
+
+(0.157 - 0.197 in)
+SEM9Y47EB
+
+Installation (Cont'd)
+
+11.
+a.
+
+C.
+[]
+
+Install steel oil pan.
+Use a scraper to remove all traces of liquid gasket from mat-
+
+ing surfaces.
+Also remove traces of liquid gasket from mating surface of
+
+aluminum oil pan.
+
+Apply a continuous bead of liquid gasket to mating surface of
+steel oil pan.
+
+Use Genuine RTV silicone sealant Part No. 999MP-A7007,
+Three Bond TB1207D or equivalent.
+
+Be sure liquid gasket is 4.0 to 5.0 mm (0.157 to 0.197 in)
+
+wide.
+Attaching should be done within 5 minutes after coating.
+
+Install steel oil pan.
+Tighten in numerical order shown in the figure.
+
+Wait at least 30 minutes before refilling engine oil.
+
+EM-18
+===== PDF page 19 =====
+TIMING CHAIN
+
+SEGRCEORER TRS
+
+SEC. 120130+135+1502210
+Refer to “Installation” in jsa - 10.8
+
+FI[P119 - 128" \ “CYLINDER HEAD". (0.86 - 1.1, 74.6 - 95.5)
+(12.1 - 13.1, [isa - 108
+88 - 95)
+
+(0.86 - 1.1,
+74.6 - 95.
+
+13 - 19
+(1.3-1.9,9 - 14)
+
+water drain plug [ld
+
+78-12
+
+(0.8 - 1.2, 69 - 104)
+
+py. 4 (12.1 - 13.1, \8 {1.00 - 1.50, 86.8 - 130.2)
+f % 88 - 95) ec oO
+; eo
+
+S O-ring |
+¢
+
+[OC Refer to “Water Pump”
+
+A
+Oi 13 - 19 in LC section.
+{1.3 - 1.9, 9-149)
+
+®
+8.4 - 10.8
+(0.86 - 1.10, 74.6 - 95.5)
+FIC 119 - 128
+(12.1 - 13.1, 88 - 95)
+
+[O)Reter to “installation” in —&
+“TIMING CHAIN".
+[@]10 - 13 (1.0 - 1.3, 87 - 113)
+
+EC) Refer to “Installation” in
+“TIMING CHAIN".
+: Apply liquid gasket
+(Genuine RTV silicone sealant
+Part No. 399MP-A7007, Three Bond
+TB1207D or equivalent).
+
+< = EReter to “Installation” in “OIL PAN".
+
+>
+[CI Refer to “Installation” in “TIMING CHAIN".
+
+a) : Lubricate with new engine oil.
+
+©! © Nem (kg-m, fi-lb) Gasket (X)
+
+©) © Nem (kg-m, in-Ib) Front oil seal %) SEM651F
+Rear timing chain case Timing chain @ Water pump cover
+Left camshaft chain tensioner @  Crankshait sprocket (i Chain tensioner cover
+Internal chain guide @® Lower chain guide @® Exhaust camshaft sprocket 2ND
+Camshait chain @ Upper chain guide {@ Intake camshaft sprocket 2ND
+Timing chain tensioner @ Crankshaft pulley @® Water pump
+Slack side chain guide
+
+EM-19
+
+IDX
+
+91
+===== PDF page 20 =====
+92
+
+TIMING CHAIN
+
+POSITION FOR APPLYING LIQUID GASKET
+
+Refer to “Installation” in “OIL PAN” for installing oil pan (EM-16).
+e Before installation, wipe off the protruding sealant.
+
+Front timing chain case
+
+OQ
+
+O Bolt hale Protrusian
+
+Sealant protrusion away from bolt hole
+
+Protrusion
+
+More than
+
+~3Protrude
+
+2.6 - 3.6 (0.102 - 0.142) Protrude
+Protrude
+Protrude Protrude E |
+
+[6 Camshait
+axis area
+
+Center line of rear timing
+
+: Run along bolt hole
+chain case sealant groove
+
+outer side.
+
+*1
+D| Cross both ends as shown
+and be sure to minimize § (0.20) yo F|
+the overlapped area. Vr Joint portion
+<7 .
+Center line of {7 of cylinder
+liquid gasket head and
+2 (0.08) camshaft . _—
+bracket Protrusions at beginning
+Protrusions at beginning racke
+
+and end of liquid gasket
+
+and end of liquid gasket
+
+*1 : Apply liquid gasket to the chamfered surface between
+camshaft bracket and cylinder head.
+
+Camshaft bracket Rocker cover
+
+RH rocker cover
+
+tf 8.5 (0.335)
+
+2 (0.08)
+
+SEPARATE 5 (0.20)
+
+SEPARATE § (0.20)
+seating diameter
+
+2.0 - 3.0 (0.08 - 0.12)
+
+*2 : Remove the protruding sealant
+from front face. "
+{Remove the hardened sealant
+
+Unit: mm {in} from surface only.)
+
+LH rocker cover
+
+SEM443FA
+
+EM-20
+
+===== PDF page 21 =====
+TIMING CHAIN
+
+CAUTION:
+
+oe After removing timing chain, do not turn crankshaft and
+camshaft separately, or valves will strike piston heads.
+
+e When installing camshafts, chain tensioners, oil seals, or
+other sliding parts, lubricate contacting surfaces with new a
+engine oil. :
+
+e Apply new engine oil to bolt threads and seat surfaces
+when installing cylinder head, camshaft sprockets, crank- MA
+shaft pulley, and camshaft brackets.
+
+eo Before disconnecting fuel hose, release fuel pressure.
+Refer to EC section (“Fuel Pressure Release”, “BASIC
+SERVICE PROCEDURE").
+
+® When removing the oil pans, oil pump assembly and tim-
+ing chain from engine, first remove the camshaft position LE
+sensor (PHASE) and the crankshaft position sensors
+(REF)/(POS) from the assembly.
+
+Be careful not to damage sensor edges. EG
+¢ Do not spill engine coolant on drive belts.
+
+Removal FE
+
+1. Drain engine oil.
+
+2. Release fuel pressure. cL
+Refer to “Fuel Pressure Release” in EC section.
+
+3. Drain coolant by removing cylinder block drain plugs (refer to
+
+“Water pump” in LC section) and radiator drain cock. MT
+
+4. Remove left side ornament cover.
+
+5. Remove air duct to intake manifold, collector, blow-by hose,
+vacuum hoses, fuel hoses, wires, harness, connectors and so Ayr
+on.
+
+FA
+IS 6. Remove the following. BR
+rae canister, e Vacuum hoses "
+J ) e Water hoses
+e EVAP canister purge hose Sr
+eo Blow-by hose
+RS
+7. Remove RH and LH ignition coils. .
+IR
+<=; IDX
+Engine 3
+front
+J” seMeost
+N
+
+EM-21 93
+===== PDF page 22 =====
+94
+
+TIMING CHAIN
+
+Nea ~g
+le
+\& 15%
+<
+. pe. $ SEM897E
+
+Intake pani esreiory. \ fy
+aN TRIAS
+
+Re front
+
+Z Coffector support
+
+Er ame front
+
+=H]
+
+|
+
+Intake EA)
+
+Removal (Cont'd)
+8. Remove EGR guide tube.
+
+9. Remove intake manifold collector supports and intake manifold
+collector (RH cylinder head only).
+
+10. Remove fuel tube assembly.
+® Do not disassemble fuel tube assembly.
+
+11. Remove intake manifold in reverse order of installation. Refer
+to “TIGHTENING PROCEDURES” in “OUTER COMPONENT
+PARTS” (EM-10).
+
+EM-22
+===== PDF page 23 =====
+TIMING CHAIN
+
+Removal (Cont'd)
+12. Remove RH and LH rocker covers from cylinder head.
+
+RH rocker cover
+
+(+)
+LH rocker cover SEM910E|
+
+13. Remove engine undercover.
+14. Remove front RH wheel and engine side cover.
+15. Remove drive belts and idler pulley bracket.
+
+16. Remove power steering oil pump belt and power steering oil M
+pump assembly. T
+
+17. Remove camshaft position sensor (PHASE) and crankshaft BR
+position sensors (REF)/(POS).
+
+Camshaft position sensor
+
+{ ybafe
+\
+
+(POS) SEM912E
+
+EM-23 95
+===== PDF page 24 =====
+96
+
+TIMING CHAIN
+
+A
+
+“= Signal plate
+TT
+
+Engine oil pan
+
+SEMO14E
+
+Crankshaft pulerd
+
+0 itable / or is
+
+i
+
+4 Q
+©
+EW
+3
+Front
+Air compressor bracket
+
+Cc
+// SEMB12E
+
+Removal (Cont’d)
+
+18. Set No. 1 piston at TDC on the compression stroke by rotat-
+ing crankshaft.
+
+19. Loosen crankshaft pulley bolt. (At this time remove oil pan rear
+cover plate and set a suitable tool to ring gear so that crank-
+shaft cannot rotate.)
+
+e Be careful not to damage the signal plate teeth.
+
+20. Remove crankshaft pulley with a suitable puller.
+
+21. Remove air compressor and bracket.
+
+22. Remove front exhaust tube and its support.
+
+23. Hang engine at right and left side engine slingers with a suit-
+able hoist.
+
+24. Remove right side engine mounting, mounting bracket and
+nuts.
+
+25. Remove center member assembly.
+
+26. Remove upper and lower oil pans.
+
+eo For procedures described in steps 21 through 26, refer to
+“Removal” in “OIL PAN” (EM-13).
+
+EM-24
+===== PDF page 25 =====
+TIMING CHAIN
+Removal (Cont'd)
+
+27. Remove water pump cover.
+
+MA
+
+SEM916E E32
+
+28. Remove front timing chain case bolts.
+e Loosen bolts in numerical order as shown in the figure. LC
+
+EG
+FE
+cL |
+MIT
+
+AT
+
+FA
+
+SEMO17EA
+
+23. Remove front timing chain case. 3R
+Buitasis tool e Do not scratch sealing surfaces.
+
+\ J= semiser
+
+EM-25 7
+===== PDF page 26 =====
+TIMING CHAIN
+
+Removal (Cont'd)
+
+30. Remove internal timing chain guide.
+31. Remove upper chain guide.
+Upper chain guide : 32. Remove timing chain tensioner and slack side chain guide.
+
+Internal chain guide
+
+Slack side chain guide
+
+Timing chain tensioner
+
+SEM919E
+
+33. Remove RH & LH camshaft sprocket 1ST bolts.
+
+34. Remove camshaft sprockets 1ST on both sides, crankshaft
+sprocket and timing chain.
+
+e Apply paint to timing chain and camshaft sprockets 1ST
+for alignment during installation.
+
+SU nw jroo
+
+35. Attach a suitable stopper pin to RH and LH camshaft chain
+tensioners.
+
+EM-26
+===== PDF page 27 =====
+TIMING CHAIN
+
+RH exhaust camshaft
+sprocket 2ND NE
+
+A) LH exhaust camshaft
+Je sprocket 2ND
+SEM922E
+
+Camshaft chain
+
+D ©
+
+Exh t
+xhaus camshaft sprocket 2ND SEM160F
+
+SEM924E
+
+Front timing
+chain case
+
+SEMO925E|
+
+Removal (Cont'd)
+
+36. Remove exhaust camshaft sprocket 2ND bolts on both sides.
+e Apply paint to timing chain and camshaft sprockets 2ND
+
+for alignment during installation.
+
+37. Remove exhaust camshaft sprockets 2ND, intake camshaft
+sprockets 2ND and camshaft chains on both sides.
+
+38. Remove lower chain guide.
+
+39. Use a scraper to remove all traces of liquid gasket from front
+
+timing chain case.
+
+EM-27
+
+LG
+
+EC
+
+99
+===== PDF page 28 =====
+100
+
+TIMING CHAIN
+
+Remove
+sticking
+
+NN
+pal old sealant.
+og hole
+
+SEM161F
+
+SEM9Y26E
+
+SEMO28E
+
+Crank shaft side
+
+A
+
+eg BV~
+Engine front Mating mark (Front side)
+
+Crankshaft sprocket
+SEM929E
+
+Dowel pin Dowel pin
+
+Pmt a SS
+76
+
+{55
+Ca
+
+Crankshaft key
+
+@
+O
+
+PI
+
+No. 1 piston at TDC SEMS30E
+
+Removal (Cont'd)
+e Remove old liquid gasket from the bolt hole and thread.
+
+40. Use a scraper to remove all traces of liquid gasket from water
+pump cover.
+
+Inspection
+
+Check for cracks and excessive wear at roller links. Replace
+chain if necessary.
+
+Installation
+
+1. Install crankshaft sprocket on crankshaft.
+e Make sure that mating marks on crankshaft sprocket face
+front of engine.
+
+2. Position crankshaft so that No. 1 piston is set at TDC on com-
+pression stroke.
+
+EM-28
+===== PDF page 29 =====
+TIMING CHAIN
+Installation (Cont'd)
+
+3. Install lower chain guide on dowel pin, with front mark on the
+
+Lower chain guide guide facing upside.
+
+Front mark
+
+@ )
+fs,
+UB
+A
+SEM931E]
+Mating mark 4. Align the marks on RH and LH intake camshaft sprockets 2ND,
+
+exhaust camshaft sprockets 2ND and camshaft chain, as [§
+
+shown.
+
+5. Put LH camshaft dowel pin into camshaft sprocket dowel
+groove and install these on camshaft. Tighten LH exhaust [EG
+camshaft sprocket 2ND bolt.
+
+6. Put RH camshaft dowel pin in camshaft sprocket dowel groove
+
+'% and install sprocket on camshaft. FE
+4 : Mating mark 7. Tighten RH exhaust camshaft sprocket 2ND bolt.
+(different color} e Make sure that the timing marks on RH and LH intake
+® : Camshaft sprocket camshaft sprockets 2ND are aligned with the camshaft GL
+mating mark chain mark.
+— e Lubricate threads and seat surfaces of camshaft sprocket
+= bolts with new engine oil. MIT
+AT
+FA
+t RH exhaust camshaft sprocket \
+LH exhaust camshaft sprocket 2A
+SEM162F
+
+e Be careful not to confuse intake and exhaust camshaft Bg
+
+Intake camshaft  - Exhaust camshaft sprockets 2ND (their thicknesses are different).
+
+sprocket sprocket
+
+= = RS
+
+Engine Engine
+front front BT
+SEMY32E
+8. Remove RH and LH camshaft chain tensioner stopper pins. HA
+BL
+[DX
+
+EM-29 101
+===== PDF page 30 =====
+102
+
+TIMING CHAIN
+
+Mating mark (different color)
+Mating mark
+
+L Timing chain mating mark
+(different color)
+
+£ Crankshaft sprocket
+mating mark
+
+SEM163F|
+
+Upper chain guide
+
+Internal chain guide
+
+Slack side chain guide
+
+Timing chain tensioner
+
+SEM919E
+
+Installation (Cont'd)
+
+9.
+
+10.
+11.
+
+12.
+°
+
+13.
+
+Align mating mark on crankshaft sprocket with matchmark on
+chain as shown.
+
+Attach lower timing chain on the water pump sprocket.
+
+Install RH and LH camshaft sprockets 1ST onto camshafts by
+matching sprocket dowel grooves with camshaft.
+
+Tighten RH and LH camshaft sprocket 1ST bolts.
+
+Lubricate threads and seat surfaces of the bolts with new
+engine oil.
+
+Install timing chain. Make sure that mating marks on crank-
+shaft sprocket and RH and LH camshaft sprockets are aligned
+with matchmarks on timing chain.
+
+Install internal chain guide.
+Install upper chain guide.
+install timing chain tensioner and slack side chain guide.
+
+. Apply liquid gasket to front timing chain case.
+
+Refer to “POSITION FOR APPLYING LIQUID GASKET” (EM-
+20).
+Before installation, wipe off the protruding sealant.
+
+EM-30
+===== PDF page 31 =====
+TIMING CHAIN
+Installation (Cont'd)
+
+18. Install rear case pin into dowel pin hole on front timing chain
+case.
+19. Tighten bolts to the specified torque in order shown in the fig-
+ure.
+e Leave the bolts unattended for 30 minutes or more after Gl
+tightening.
+[LA
+LC
+(&)] D - @ 8 mm dia. bolts EC
+25.5 - 31.4 Nem
+(2.6 - 3.2 kg-m, 18.8 - 23.1 ft-lb) :
+@ - @ 6 mm dia. bolts
+11.8 - 13.7 Nom FE
+{1.2 - 1.4 kg-m, 8.7 - 10.1 fi-Ib)
+cL |
+SEMG38E;
+20. Apply liquid gasket to water pump cover. WIT
+
+e Apply a continuous bead of liquid gasket to mating surface of
+water pump cover. Refer to LC section (“Water Pump
+Installation”). AT |
+21. Install water pump cover. |
+22. Apply liquid gasket to RH and LH rocker covers.
+
+eo Use genuine liquid gasket or equivalent. BA
+eo Refer to “POSITION FOR APPLYING LIQUID GASKET” (EM- ° |
+20). .
+RA
+23. Install RH and LH rocker covers. BR
+RH rocker cover Rocker cover tightening procedure: |
+e Tighten in numerical order as shown in the figure. ST
+
+a. Tighten bolts @ to G3 in that order to 1 to 3 N-m (0.1 to 0.3 |
+kg-m, 9 to 26 in-Ib). |
+
+b. Tighten bolts @ to G3 as indicated in figure to 5.4 to 7.4 N'-m RS
+(0.55 to 0.75 kg-m, 47.7 to 65.1 in-Ib).
+
+SEMB41EA
+
+LH rocker cover
+
+SEMS42EB
+
+EM-31 103
+===== PDF page 32 =====
+104
+
+TIMING CHAIN
+
+OCI
+
+0 8 0 0 oC Jo
+® © @
+
+Engine
+front RH
+
+Tighten in numerical order. SEMS44E
+
+Intake manifold collector gasket
+
+Front mark
+
+SEMO43E
+
+Crankshaft puiley bolt
+Angle mark SEMS63E
+
+[Soh - 10.8 Nem <2
+
+AT ! \
+S— Crankshaft positions="
+
+“sensor (POS) 5
+
+oxygen Sensor
+‘left bank) harness clamp ="
+
+pt |
+~(0.86 - 1.10 kg-m, WWE
+
+74.6 - 95.5 in-lb) SEM222F
+
+Installation (Cont’d)
+
+24.
+Refer to “TIGHTENING PROCEDURES” in “OUTER COMPO-
+
+Install intake manifold. Tighten intake manifold nuts and bolts.
+
+NENT PARTS” (EM-10).
+
+25.
+
+26.
+
+27.
+28.
+
+Install fuel tube assembly.
+
+Install intake manifold collector gasket, with its front mark fac-
+ing forwards.
+
+Install intake manifold collector, supports and intake manifold
+collector bolt.
+
+Install EGR guide tube.
+
+Refer to “TIGHTENING PROCEDURES” in “OUTER COMPO-
+NENT PARTS” (EM-10).
+
+29.
+30.
+
+31.
+°
+
+a.
+b.
+c.
+
+32.
+
+Install RH and LH ignition coils.
+Install rocker cover ornament on left side.
+
+Install crankshaft pulley to crankshatt.
+
+Lubricate thread and seat surface of the bolt with new
+engine oil.
+
+Tighten to 39 to 49 N-m (4.0 to 5.0 kg-m, 29 to 36 {t-Ib).
+
+Put a paint mark on the crankshaft pulley.
+
+Again tighten by turning 60° to 66°, about the angle from one
+hexagon bolt head corner to another.
+
+Install camshaft position sensor (PHASE), crankshaft position
+sensors (REF)/(POS) and front heated oxygen sensor (left
+bank) harness clamp.
+
+Make sure that crankshaft position sensor (POS) and front
+heated oxygen sensor (left bank) harness clamp are
+installed correctly as shown in figure.
+
+. Reinstall removed parts in reverse order of removal.
+
+When installing fuel tube assembly, refer to “Injector Removal
+and Installation” in EC section.
+
+After installing the tensioner, race the engine at about 3,000
+rpm under no load to purge air from the high-pressure cham-
+ber. The engine may produce a rattling noise. This indicates
+that air still remains in the chamber and is not a matter of con-
+cern.
+
+EM-32
+===== PDF page 33 =====
+OIL SEAL REPLACEMENT
+
+Kv10116200
+(J26336-A)  __.
+
+ZA (26336-20)
+4 Attachment
+
+KV10115900
+
+SEMS48E
+
+Suitable washer)
+SEMI83D|
+
+CAUTION:
+
+When removing the oil pans, oil pump assembly and timing
+chain from engine, first remove the camshaft position sensor
+(PHASE) and the crankshaft position sensors (REF)/(POS)
+frem the assembly.
+
+Be careful not to damage sensor edges.
+
+VALVE OIL SEAL
+
+oS ho
+
+od
+
+9.
+
+10.
+11.
+12.
+
+Remove LH ornament cover.
+
+Remove RH and LH ignition coils.
+
+Remove EGR guide tube.
+
+Remove intake manifold collector supports and intake manifold
+collector (RH cylinder head only).
+
+Remove RH and LH rocker covers from cylinder head.
+Remove camshaft position sensor (PHASE) and crankshaft
+position sensors (REF)/{POS).
+
+Remove oil pan. (Refer to “Removal” in “OIL PAN”, EM-13.)
+Remove timing chain. (Refer to “Removal” in “TIMING
+CHAIN”, EM-21.)
+
+Remove camshaft brackets and camshaft. (Refer to
+“Disassembly” in “CYLINDER HEAD”, EM-37.)
+
+Remove valve lifters and shims.
+
+Remove valve spring with Tool.
+
+Reinstall any parts removed in reverse order of removal.
+
+Before removing valve spring, fix valve as follows.
+
+Method A:
+Piston concerned should be set at TDC to prevent
+
+valve from falling.
+
+Method B:
+Remove spark plug, then install air hose adapter
+into spark plug hole and apply air pressure to hold
+valves in place. Apply a pressure of 490 kPa (5
+kg/cm?, 71 psi).
+
+Method C:
+Install spark plug with suitable washer into spark
+plug hole from combustion chamber side.
+
+EM-33
+
+@l
+MA
+LC
+
+=
+
+CL
+
+BR
+SU
+RS
+
+BT
+
+105
+===== PDF page 34 =====
+OIL SEAL REPLACEMENT
+
+13. Remove valve oil seal.
+
+A ~7
+BC
+Y N SEM827E
+
+14. Apply engine oil to new valve oil seal and install it with Tool.
+
+2
+&
+
+14.3 - 14.9 mm
+(0.563 - 0.587 in)
+jo
+S\
+
+\&)
+
+SEM828E
+
+OIL SEAL INSTALLATION DIRECTION
+e Install new oil seal in the direction shown in the figure.
+
+Engine & Engine
+inside outside
+
+Oil seal lip— -Dust seal lip
+
+SEM715A
+
+FRONT OIL SEAL
+
+Remove the following parts:
+
+Engine undercover
+
+Front RH wheel and engine side cover
+Drive belts
+
+Crankshaft position sensor (REF)
+Crankshaft pulley
+
+Be careful not to damage sensor edge.
+
+eco oe —
+
+2. Remove front oil seal using a suitable tool.
+
+Be careful not to scratch front cover.
+
+3. Apply engine oil to new oil seal and install it using a suitable
+tool.
+
+106 | EM-34
+===== PDF page 35 =====
+OIL SEAL REPLACEMENT
+
+REAR OIL SEAL
+
+Remove transaxle. (Refer to MT or AT section.)
+
+Remove flywheel or drive plate.
+
+Remove oil pan. (Refer to OIL PAN.)
+
+Remove rear oil seal retainer. @l
+
+hon =
+
+x
+
+- KV10111100
+(J37228)
+a
+
+5. Remove traces of liquid gasket using scraper.
+e Remove old liquid gasket from the bolt hole and thread. (LC
+
+SEMBI1E
+
+6. Apply liquid gasket to rear oil seal retainer. MIT
+
+Rear oil seal retainer
+SEMB32EA
+
+EM-35 107
+===== PDF page 36 =====
+CYLINDER HEAD
+
+SEC. 111+118¢130°140.220 [CO] Refer to
+
+“Installation” in
+
+“TIMING CHAIN".
+
+@
+5
+Washer (X) bo! Fe Casket I%
+
+ys
+Zi) ren
+
+0 3
+J eS
+
+5s ®@
+
+is o
+Valve oil seal
+
+No
+
+o
+
+® [0] 20 - 29
+
+(2.0 - 3.0, 14 - 22)
+
+®
+
+Refer to “instaliation” In
+“CYLINDER HEAD".
+
+: Apply liquid gasket
+{Genuine RTV silicone sealant
+Part No. 999MP-A7007, Three Bond
+TB1207D or equivalent).
+
+KF : Lubricate with new engine oil.
+
+[C3] : Nem (kg-m, ft-Ib)
+
+SEM187FB
+@ Qi filler cap ® Cylinder head a) Valve spring
+@ Rocker cover @ Blow-by hose @ Valve spring retainer
+®@ Camshaft bracket Spark plug @ Valve collet
+@® Camshaft @ Valve @ Valve lifter
+® PCV valve @® Valve spring seat @ Shim
+
+108 EM-36
+===== PDF page 37 =====
+CYLINDER HEAD
+
+Loosen in
+numerical
+order.
+
+SEM167F
+
+SC Op
+
+KV10111100
+
+(J37228)
+
+2
+
+SEM168FA
+
+front
+
+Engine
+
+ee
+
+RH exhaust camshaft
+
+° 14 Pe] ho
+
+f ~~
+
+OD Oy =)
+
+RH intake camshaft
+
+Loosen in numerical order. SEMSS6E
+
+a 2g
+
+—
+
+Camshaft bracket
+
+CAUTION:
+
+e When installing camshafts, chain tensioners, oil seals, or
+other sliding parts, lubricate contacting surfaces with new
+engine oil.
+
+e Apply new engine oil to threads and seat surfaces when
+installing cylinder head, camshaft sprocket, crankshaft
+pulley, and camshaft bracket.
+
+e Attach tags to valve lifters so as not to mix them up.
+
+Removal
+
+e This removal is the same procedure as that for timing
+chain. Refer to “Removal” in “TIMING CHAIN" (EM-21).
+
+e Apply paint to camshaft sprockets for alignment during
+installation.
+
+Disassembly
+1. Remove rear timing chain case bolts.
+
+2. Remove rear timing chain case.
+
+3. Remove intake and exhaust camshafts and camshaft brackets.
+
+e Equally loosen camshait bracket bolts in several steps in the
+numerical order shown in the figure.
+
+For reinstallation, be sure to put marks on camshaft bracket
+
+before removal.
+
+4. Remove valve component parts.
+Refer to “VALVE OIL SEAL” in “OIL SEAL REPLACEMENT”
+
+(EM-33).
+
+EM-37
+
+@l
+MAA
+LG
+
+EG
+
+CL
+MIT
+AY
+FA
+
+ST
+BT
+[IA
+
+EL
+
+DX
+
+109
+===== PDF page 38 =====
+CYLINDER HEAD
+Disassembly (Cont'd)
+
+Camshaft bracket
+LH intake camshaft
+
+€)
+Ewan] ay]
+LH exhaust camshaft
+
+Loosen in numerical order. SEMS857E
+
+5. Remove RH and LH camshaft chain tensioners from cylinder
+head.
+
+~~ © S—LH camshaft
+JES tensioner
+AN 0
+SESE)
+Stopper pin
+\
+Engine:
+front XJ SEMJ89F
+
+RH cylinder head
+
+6. Remove cylinder head bolts.
+
+eo Cylinder head bolts should be loosened in two or three
+steps.
+
+e A warped or cracked cylinder head could result from
+removing in incorrect order.
+
+Loosen in numerical order.
+SEMB8S5SE
+
+Loosen in numerical order.
+SEMB860E
+
+110 EM-38
+===== PDF page 39 =====
+CYLINDER HEAD
+
+SEMS61E
+
+SEM191F
+
+SEMB549A
+
+Disassembly (Cont’d)
+
+7.
+
+Remove cylinder head.
+
+Inspection
+
+CYLINDER HEAD DISTORTION
+Clean surface of cylinder head.
+
+Use a reliable straightedge and feeler gauge to check the flatness
+
+of cylinder head surface.
+Check along six positions shown in the figure.
+
+Head surface flatness: Limit 0.1 mm (0.004 in)
+
+If beyond the specified limit, resurface or replace it.
+
+The limit for cylinder head resurfacing is determined by the
+
+cylinder block resurfacing.
+
+Resurfacing limit:
+Amount of cylinder head resurfacing is “A”.
+Amount of cylinder block resurfacing is “B”.
+
+After resurfacing cylinder head, check that camshaft rotates freely
+
+The maximum limit : A + B = 0.2 mm (0.008 in)
+
+by hand. If resistance is felt, cylinder head must be replaced.
+
+Nominal cylinder head height:
+126.3 - 126.5 mm (4.972 - 4.980 in)
+
+CAMSHAFT VISUAL CHECK
+Check camshaft for scratches, seizure and wear.
+
+CAMSHAFT RUNOUT
+
+1,
+
+2.
+
+Measure camshaft runout at A and B as shown in the figure.
+Runout (Total indicator reading):
+Limit 0.05 mm (0.0020 in)
+If it exceeds the limit, replace camshatft.
+
+CAMSHAFT CAM HEIGHT
+
+1.
+
+2.
+
+Measure camshaft cam height.
+Standard cam height:
+43.940 - 44.130 mm (1.7299 - 1.7374 in)
+Cam wear limit:
+0.2 mm (0.008 in)
+If wear is beyond the limit, replace camshaft.
+
+EM-39
+
+@l
+
+MA
+
+LG
+
+EC
+
+11
+===== PDF page 40 =====
+112
+
+CYLINDER HEAD
+
+SEMB64E
+
+SEMB865E
+
+—~
+90° Measuring
+\, direction
+ad
+TS
+AN
+
+Inspection (Cont'd)
+CAMSHAFT JOURNAL CLEARANCE
+
+1. Install camshaft bracket and tighten bolts to the specified
+torque.
+2. Measure inner diameter “A” of camshaft bearing.
+Standard inner diameter:
+No. 1: 26.000 - 26.021 mm (1.0236 - 1.0244 in)
+No. 2, 3, 4: 23.500 - 23.521 mm (0.9252 - 0.9260 in)
+
+3. Measure outer diameter of camshaft journal.
+Standard outer diameter:
+No. 1: 25.935 - 25.955 mm (1.0211 - 1.0218 in)
+No. 2, 3, 4: 23.435 - 23.455 mm (0.9226 - 0.9234 in)
+4. If clearance exceeds the limit, replace camshaft and/or cylin-
+der head.
+Camshaft journal clearance:
+Standard
+0.045 - 0.086 mm (0.0018 - 0.0034 in)
+Limit
+0.15 mm (0.0058 in)
+
+CAMSHAFT END PLAY
+
+1. Install camshaft in cylinder head.
+2. Measure camshaft end play.
+Camshaft end play:
+Standard
+0.115 - 0.188 mm (0.0045 - 0.0074 in)
+Limit
+0.24 mm (0.0094 in)
+
+CAMSHAFT SPROCKET RUNOUT
+
+1. Install sprocket on camshaft.
+2. Measure camshaft sprocket runout.
+Runout (Total indicator reading):
+. Less than 0.15 mm (0.0059 in)
+3. If it exceeds the limit, replace camshaft sprocket.
+
+VALVE GUIDE CLEARANCE
+
+1. Measure valve deflection as shown in the figure. (Valve and
+valve guide mostly wear in this direction.)
+Valve deflection limit (Dial gauge reading):
+Intake 0.24 mm (0.0094 in)
+Exhaust 0.28 mm (0.0110 in)
+
+EM-40
+===== PDF page 41 =====
+CYLINDER HEAD
+Inspection (Cont'd)
+
+2. If it exceeds the limit, check valve to valve guide clearance.
+a. Measure valve stem diameter and valve guide inner diameter.
+b. Check that clearance is within specification.
+Valve to valve guide clearance limit:
+intake 0.08 mm (0.0031 in) Gl
+Exhaust 0.1 mm (0.004 in)
+c. If it exceeds the limit, replace valve or valve guide.
+
+Micrometer
+
+MA
+
+SEME38C EB
+
+VALVE GUIDE REPLACEMENT
+
+1. To remove valve guide, heat cylinder head to 110 to 130°C LGC
+(230 to 266°F) by soaking in heated oil.
+
+EC
+
+RE!
+
+CL
+
+SEMO08A
+
+2. Drive out valve guide with a press [under a 20 kN (2 ton, 2.2 MIT
+US ton, 2.0 Imp ton) pressure] or hammer and suitable tool.
+
+AT
+FA
+
+RA
+
+3. Ream cylinder head valve guide hole. BR
+Valve guide hole diameter
+(for service parts):
+10.185 - 10.196 mm (0.4010 - 0.4014 in) ST
+
+4. Heat cylinder head to 110 to 130°C (230 to 266°F) and press
+service valve guide onto cylinder head.
+Projection “L”: EL
+12.6 - 12.8 mm (0.496 - 0.504 in)
+5. Ream valve guide.
+Finished size: IDX
+6.000 - 6.018 mm (0.2362 - 0.2369 in)
+
+SEM950E]
+
+EM-41 113
+===== PDF page 42 =====
+CYLINDER HEAD
+Inspection (Cont’d)
+
+/ VALVE SEATS
+X - Check valve seats for any evidence of pitting at valve contact
+7d surface, and reseat or replace if it has warn out excessively.
+
+e Before repairing valve seats, check valve and valve guide
+for wear. If they have worn, replace them. Then correct
+
+> p valve seat.
+oF e Use both hands to cut uniformly.
+
+|
+Recess "diameter
+
+REPLACING VALVE SEAT FOR SERVICE PARTS
+
+1. Bore out old seat until it collapses. Boring should not continue
+beyond the bottom face of the seat recess in cylinder head. Set
+the machine depth stop to ensure this.
+
+2. Ream cylinder head recess for service valve seat.
+
+Oversize [0.5 mm (0.020 in)]:
+
+- Intake 37.500 - 37.516 mm (1.4764 - 1.4770 in)
+
+J | | Exhaust 32.700 - 32.716 mm (1.2874 - 1.2880 in)
+Be sure to ream in circles concentric to the valve guide cen-
+ter.
+
+This will enable valve seat to fit correctly.
+
+SEM795A
+
+3. Heat cylinder head to 110 to 130°C (230 to 266°F) by soaking
+in heated oil.
+Press fit valve seat until it seats on the bottom.
+Cut or grind valve seat using suitable tool to the specified
+dimensions as shown in SDS (EM-70).
+After cutting, lap valve seat with abrasive compound.
+Check valve seating condition.
+Seat face angle “a”: 44°53’ - 45°07’ deg.
+Contacting width “WW”:
+Intake 1.09 - 1.31 mm (0.0429 - 0.0516 in)
+Exhaust 1.29 - 1.51 mm (0.0508 - 0.0594 in)
+
+No oa
+
+8. Use a depth gauge to measure the distance between the
+mounting surface of the cylinder head spring seat and the
+valve stem end. If the distance is shorter than specified, repeat
+step 5 above to adjust it. If it is longer, replace the valve seat
+with a new one.
+
+Valve seat resurface limit “L":
+Intake 41.07 - 41.67 mm (1.6169 - 1.6405 in)
+Exhaust 40.06 - 41.60 mm (1.5772 - 1.6378 in)
+
+SEM621F|
+
+T (Margin thickness} VALVE DIMENSIONS
+= Ig Check dimensions of each valve, For dimensions, refer to SDS
+(EM-67).
+« When valve head has been worn down to 0.5 mm (0.020 in) in
+a margin thickness, replace valve.
+¥ Grinding allowance for valve stem tip is 0.2 mm (0.008 in) or
+! less.
+'
+
+SEM188A
+
+114 EM-42
+
+===== PDF page 43 =====
+CYLINDER HEAD
+
+> S (Out-of-square)
+
+SEM288A
+
+EM113
+
+SEMOG0E
+
+Inspection (Cont'd)
+VALVE SPRING
+
+Squareness
+1. Measure dimension “S”.
+Out-of-square “S’:
+Less than 2.0 mm (0.079 in)
+2. If it exceeds the limit, replace spring.
+
+Pressure
+Check valve spring pressure at specified spring height.
+Pressure:
+Standard
+454 N (46.3 kg, 102.1 Ib)
+at height 27.55 mm (1.0846 in)
+Limit
+More than 427 N (43.6 kg, 96.0 Ib)
+at height 27.55 mm (1.0846 in)
+If it exceeds the limit, replace spring.
+
+VALVE LIFTER
+
+1. Check contact and sliding surfaces for wear or scratches.
+
+2. Check diameter of valve lifter and valve lifter guide bore.
+Valve lifter outer diameter:
+34.960 - 34.975 mm (1.3764 - 1.3770 in)
+
+Lifter guide bore diameter:
+35.000 - 35.021 mm (1.3780 - 1.3788 in)
+
+EM-43
+
+@l
+
+EG
+
+FE
+
+CL
+
+MT
+
+BR
+
+ST
+
+RS
+
+115
+
+===== PDF page 44 =====
+116
+
+CYLINDER HEAD
+
+Cylinder head side
+
+Wide pitch
+
+Narrow pitch
+
+SEMO085D
+
+TN
+
+Pai chain case
+
+SEMBSI1E|
+
+ILI
+
+Remove
+sticking
+
+pal ofd sealant.
+oy hole
+
+SEM161F
+
+Sealing
+
+Sealing
+SEMB92E
+
+Assembly
+
+1.
+
+Install valve component parts.
+
+eo Always use new valve oil seal. Refer to OIL SEAL
+REPLACEMENT (EM-33).
+
+e Before installing valve oil seal, install valve spring seat.
+
+e Install valve spring (uneven pitch type) with its narrow
+pitch side toward cylinder head side (paint mark).
+
+e After installing valve component parts, tap valve stem tip with
+plastic hammer to assure a proper fit.
+
+Installation
+
+1. Before installing rear timing chain case, remove all traces of
+liquid gasket from mating surface using a scraper.
+
+e Also remove traces of liquid gasket from mating surface of
+cylinder block.
+
+e Remove old liquid gasket from the bolt hole and thread.
+
+2. Before installing cam bracket, remove all traces of liquid gas-
+ket from mating surface using a scraper.
+
+3. Remove O-rings from cylinder block.
+
+4. Turn crankshaft until No. 1 piston is set at approximately 240°
+
+before TDC on compression stroke to prevent interference of
+valves and pistons.
+
+EM-44
+===== PDF page 45 =====
+CYLINDER HEAD
+Installation (Cont'd)
+
+5. Install cylinder heads with new gaskets.
+e Do not rotate crankshaft and camshaft separately, or
+Cylinder head surface valves will strike piston heads.
+
+MA
+
+LG
+
+EC
+
+Cylinder block surface
+
+GL
+
+SEMB876E
+
+Cylinder head bolt CAUTION: . MT
+Cylinder head bolts are tightened by plastic zone tightening
+
+(Measuring point) method. Whenever the size difference between d1 and d2
+exceeds the limit, replace them with new ones. AT
+Limit (d1 - d2):
+0.11 mm (0.0043 in)
+e Lubricate threads and seat surfaces of the bolts with new EA
+
+(Measuring point)
+
+engine oil.
+11 mm (0.43 in)
+48 mm (1.89 in)
+SEMSO57E
+e Tightening procedure: BR
+RH cylinder head a. Tighten all bolts to 98.1 N-m (10 kg-m, 72 ft-lb).
+b. Completely loosen all bolts. ST
+c. Tighten all bolts to 34 to 44 N-m (3.5 to 4.5 kg-m, 25 to 33 |
+ft-1b).
+d. Turn all bolts 90 to 95 degrees clockwise. RS
+e. Turn ali bolts 90 to 95 degrees clockwise.
+e Tighten in numerical order shown in the figure. BT
+
+SEMB77EA
+
+[FA
+
+EL
+
+SEM878EA
+
+EM-45 117
+===== PDF page 46 =====
+118
+
+CYLINDER HEAD
+
+N= ©
+Nas®
+
+Tightening torque: Nem (kg-m, ft-lb)
+o
+
+SEMS79EA
+
+TR
+
+))
+
+Stopper pin
+7
+
+AL 5
+
+RH camshaft
+chain tensioner
+Pasi
+
+LH camshaft
+chain tensioner
+Wie
+
+xX
+
+gy
+Sf RD
+
+“
+8)
+per pin A)
+ZN
+
+~
+
+SEM430F
+
+Exhaust
+
+Engine front
+
+Drill mark
+
+SEME52F
+
+Identification
+mark
+
+Identification
+
+Sp
+
+k
+SEM653F
+
+SEMBSBBEA
+
+Installation (Cont'd)
+
+6. Install cylinder head outside bolts.
+7. Install camshaft chain tensioners on both sides of cylinder
+head.
+8. Install exhaust and intake camshafts and camshaft brackets.
+e Intake camshaft has a drill mark on camshaft sprocket
+mounting flange. Install it on the intake side.
+¢ Identification marks are present on camshafts.
+Paint mark
+Bank INT/EXH ID mark Drill mark
+M1 M2
+INT R3 Yes Yes No
+RH
+EXH R3 No No Yes
+LH INT L3 Yes Yes No
+EXH L3 No No Yes
+eo Position camshaft
+
+RH exhaust camshaft dowel pin at about 10 o'clock
+LH exhaust camshaft dowel pin at about 2 o’clock
+
+EM-46
+===== PDF page 47 =====
+CYLINDER HEAD
+
+Installation (Cont'd)
+9. Before installing camshatt brackets, apply sealant to mating
+surface of No. 1 journal head.
+
+Exhaust side No. 4
+No. 3 Ry Ne. { ® Use Genuine RTV silicone sealant Part No. 999MP-A7007,
+
+Type A RH camshaft brackets
+
+Three Bond TB1207D or equivalent.
+
+No. 2 NS
+D
+No. 1 Ry e Refer to “POSITION FOR APPLYING LIQUID GASKET”
+J
+
+(EM-20).
+No. 3 e Install camshaft brackets in their original positions.
+e Tighten camshaft bracket bolts gradually in two or three [A
+No. 2 stages.
+Intake side oe If any part of valve assembly or camshaft is replaced,
+
+check valve clearance according to reference data.
+After completing assembly check valve clearance. Refer
+
+Engine front
+
+LH camshaft brackets \, 4 222 to “Checking” and “Adjusting” in “VALVE CLEARANCE”
+intake side No. 3 ‘NI No. 4 (EM-49 and 50). LC
+NY Reference data valve clearance (Cold):
+Na Intake
+aN 0.26 - 0.34 mm (0.010 - 0.013 in) i
+5S No. 3 Exhaust
+0.29 - 0.37 mm (0.011 - 0.015 in}
+No. 2 e Lubricate threads and seat surfaces of camshaft bracket [FE
+o 1 bolts with new engine oil before installing them.
+Exhaust side GL
+SEMB8B4EB
+Type B RH side e Align stamp mark as shown in the figure. NIT
+Enai
+front AT
+FA
+LH side SEM188F
+Tightening procedure BR
+RH exhaust camshaft Tighten the camshaft brackets in the following steps.
+Step Tightening torque Tightening order 8ST
+i . Tighten in the order of @ to @,
+1 1.96 N'm (0.2 kg-m, 17 in-lb) then tighten @ to ® . -
+2 6 N-m {0.6 kg-m, 52 in-Ib) Tighten in the numerical order.
+9.02 - 11.8 N-m (0.92 - 1.20 kg-m, . i
+3 : —
+RH intake camshaft Camshaft bracket 79.9 - 104.2 in-lb) Tighten in the numerical order BY
+semsssea]  ® Tighten in numerical order shown in the figure.
+HA
+Camshaft bracket
+LH intake camshaft
+[ER
+IBX
+
+LH exhaust camshaft
+
+SEMBBEEA
+
+EM-47 119
+===== PDF page 48 =====
+120
+
+CYLINDER HEAD
+
+SEMBSTE
+
+[C3 11.8 - 13.7 N-m
+(1.2 - 1.4 kg-m, 8.7 - 10.1 fi-Ib)
+
+Dowel pin aligning position
+
+SEMB890EA
+
+Installation (Cont'd)
+10. Install O-rings to cylinder block.
+
+11.
+
+12.
+13.
+
+Apply sealant to the hatched portion of rear timing chain case.
+Apply continuous bead of liquid gasket to mating surface of
+
+rear timing chain case.
+Refer to “POSITION FOR APPLYING LIQUID GASKET” (EM-
+
+20).
+Before installation, wipe off the protruding sealant.
+
+Align rear timing chain case with dowel pins, then install on
+cylinder head and block.
+
+Tighten rear chain case bolts.
+
+(1) Tighten bolts in numerical order shown in the figure.
+
+(2) Repeat above step (1).
+
+This installation is the same procedure as that for timing chain.
+Refer to “Installation” in “TIMING CHAIN” (EM-28).
+
+EM-48
+===== PDF page 49 =====
+VALVE CLEARANCE
+
+< Checking
+Check valve clearance while engine is cold and not running.
+
+Remove intake manifold collector.
+Remove rocker ornament covers.
+ie Remove RH and LH rocker covers. @l
+Timing mark Remove all spark plugs.
+C7 Set No. 1 cylinder at TDC on its compression stroke.
+
+pi Align pointer with TDC mark on crankshaft pulley. MA
+
+3)
+
+® oun LN
+
+Check that valve lifters on No. 1 cylinder are loose and valve
+
+lifters on No. 4 are tight.
+
+Ns
+
+!
+Crankshaft Pulley 3 J SEMBGSE
+If not, turn crankshatt one revolution (360°) and align as above.
+
+LGC
+
+EC
+
+GIL.
+
+RH cylinder head 6. Check only those valves shown in the figure. NIT
+Valve| No. 1 No. 2 No. 3 No. 4 No. 5 No. 6 |
+Crank :
+position INT [EXH | INT [EXH | INT |EXH | INT |EXH| INT [EXH| INT [EXH AT |
+
+No.1 TDC | O O O O
+
+FA
+
+4/8
+2 J
+BR |
+i
+
+ST
+RS
+Br
+
+LH cylinder head
+SEMB93E . |
+
+® Using a feeler gauge, measure clearance between valve lifter HA
+and camshaft.
+® Record any valve clearance measurements which are out of
+specification. They will be used later to determine the required EL
+replacement adjusting shim.
+Valve clearance for checking (Cold): IDX
+Intake
+0.26 - 0.34 mm (0.010 - 0.013 in) |
+Exhaust
+0.29 - 0.37 mm (0.011 - 0.015 in) |
+
+SEM139D
+
+EM-49 121
+===== PDF page 50 =====
+122
+
+VALVE CLEARANCE
+
+RH cylinder head
+
+Engine front _. _
+@ @
+
+LH cylinder head
+
+SEM894E
+
+RH cylinder head
+
+LH cylinder head
+
+SEM958E
+
+Tool (A} KV10115110
+(J38972-1) _ N
+
+SEM557EB
+
+Checking (Cont'd)
+
+7. Turn crankshaft 240° and align as above.
+
+8. Set No. 3 cylinder at TDC on its compression stroke.
+9. Check only those valves shown in the figure.
+
+Valve| No. 1 No. 2 No. 3 No. 4 No. 5 No. 6
+Crank
+position INT ([EXH | INT [EXH | INT |EXH | INT [EXH | INT [EXH | INT [EXH
+No. 3 TDC ®) O O O
+10. Turn crankshaft 240° and align as above.
+11. Set No. 5 cylinder at TDC on its compression stroke.
+12. Check only those valves shown in the figure.
+
+Valve | No. 1 No. 2 No. 3 No. 4 No. 5 No. 6
+Crank
+position INT [EXH | INT [EXH | INT |EXH | INT [EXH| INT ([EXH | INT |EXH
+No. 5 TDC O ® ®) O
+
+13. If all valve clearances are within specification, install the fol-
+lowing parts.
+
+eo Intake manifold collector
+e RH and LH rocker covers
+e All spark plugs
+
+e Rocker cover ornament
+Adjusting
+
+Adjust valve clearance while engine is cold.
+
+1. Turn crankshaft, to position cam lobe on camshaft of valve that
+must be adjusted upward.
+
+2. Place Tool (A) around camshaft as shown in figure.
+
+Before placing Tool (A), rotate notch toward center of cylinder
+
+head (See figure.), to simplify shim removal later.
+
+CAUTION:
+Be careful not to damage cam surface with Tool (A).
+
+EM-50
+===== PDF page 51 =====
+VALVE CLEARANCE
+Adjusting (Cont’d)
+3. Rotate Tool (A) (See figure.) so that valve lifter is pushed down.
+
+MA
+
+4. Place Tool (B) between camshaft and the edge of the valve
+
+liter to retain valve lifter. LC
+CAUTION:
+8 e Tool (B) must be placed as close to camshaft bracket as
+Avion, |, Bossible Ee
+Tool (A) \A—tsserae, o) | © Be careful not to damage cam surface with Tool (B).
+Ng 5. Remove Tool (A).
+BE
+CL
+
+6. Blow air into the hole to separate adjusting shim from valve
+lifter. MIT
+
+FA
+RA
+7. Remove adjusting shim using a small screwdriver and a mag- _
+netic finger. BR
+8. Determine replacement adjusting shim size following formula.
+e Using a micrometer determine thickness of removed shim.
+e (Calculate thickness of new adjusting shim so valve clearance ST
+
+comes within specified values.
+
+R = Thickness of removed shim
+
+N = Thickness of new shim RS
+M = Measured valve clearance
+
+Intake: -
+N=R + [M - 0.30 mm (0.0118 in)] Efl
+Exhaust:
+N =R + [M = 0.33 mm (0.0130 in)] ”
+
+Shims are available in 64 sizes from 2.32 mm (0.0913 in) to 2.95
+
+mm (0.1161 in), in steps of 0.01 mm (0.0004 in).
+
+eo Select new shim with thickness as close as possible to calcu- BL
+lated value.
+
+SEM1450
+
+EM-51 123
+===== PDF page 52 =====
+124
+
+VALVE CLEARANCE
+
+[en]
+aD = 2.46 mm
+ary, (0.0969 in)
+Thickness is stamped.
+
+SEMB873E
+
+@® uitable too
+
+> i
+
+N SEM146D|
+
+)
+
+Adjusting (Cont'd)
+
+9. Install new shim using a suitable tool.
+e Install with the surface on which the thickness is stamped
+
+facing down.
+
+10. Place Tool (A) as mentioned in steps 2 and 3.
+
+11. Remove Too! (B).
+12. Remove Tool (A).
+13. Recheck valve clearance.
+
+Valve clearance:
+
+Unit: mm (in}
+
+Hot* (reference data)
+
+0.304 - 0.416 (0.012 - 0.016)
+
+Cold
+Intake 0.26 - 0.34 (0.010 - 0.013)
+Exhaust C.29 - 0.37 (0.011 - 0.015)
+
+0.308 - 0.432 (0.012 - 0.017)
+
+“: Approximately 80°C (176°F)
+
+EM-52
+===== PDF page 53 =====
+ENGINE REMOVAL
+
+Pee
+
+SEC. 112
+@®
+0
+[0 21 - 26 (2.1 - 2.7, 15 - 20)
+[O] 43 - 55 (4.4 - 5.6, 32 - 41) \ -
+
+[OC] 43 - 55 (4.4 - 5.6, 32 - 41) h
+
+[O) 78 - 90 {8.0 - 9.2, 58 - 67)
+
+\ J -
+(O] 78 - 90 (8.0 - 9.2, 58 - "
+A
+
+[0] 43 - 55 (4.4 - 5.6, 32 - 41)
+
+[CO] 77 - 98 (7.9 - 10.0, 57 - 72)
+
+NY
+
+[CO] 77 - 98 (7.9 - 10.0, 57 - 72) 8 3
+
+@
+
+AU
+
+= 10 - 16 (1.0 - 1.6, 87 - 139)
+
+[O) 64 - 74 (6.5 - 7.5, 47 - 54)
+
+[od [0] 21 - 26 (2.1 - 2.7, 15 - 20)
+
+[0] 77 - 98 (7.9 - 10.0, 57 - 72)
+
+[O] 43 - 55 (4.4 - 5.6, 32 - 41)
+
+Vehicle front
+
+A/T modal
+Actuator for
+electrically
+controlled
+
+engine mounting
+| on Actuator
+
+[0] 77 - 98 (7.9 - 10.0, 57 - 72)
+
+[0 : Nem (kg-m, ft-1b)
+
+: Nem (kg-m, in-Ib)
+
+= Front mark
+
+| Engine front
+
+/
+Front mark
+
+Front upper engine slinger ® Center member
+RH engine mounting
+Mounting bracket
+
+Rear engine mounting (Fluid type)
+
+type)
+
+® Front engine mounting (Fluid
+
+SEM657F
+@ LH engine mounting
+Rear engine slinger
+® Insulator
+
+EM-53
+
+Gl
+
+MA
+
+MT
+
+AT
+
+FA
+
+RA
+
+HA
+
+EL
+
+125
+===== PDF page 54 =====
+ENGINE REMOVAL
+
+WARNING:
+
+e Situate vehicle on a flat and solid surface.
+
+® Place chocks at front and back of rear wheels.
+
+e Do not remove engine until exhaust system has com-
+pletely cooled off.
+Otherwise, you may burn yourself and/or fire may break
+out in fuel line.
+
+e For safety during subsequent steps, the tension of wires
+should be slackened against the engine.
+
+e® Before disconnecting fuel hose, release fuel pressure
+from fuel line.
+Refer to “Fuel Pressure Release”, “BASIC SERVICE
+
+PROCEDURE” in EC section.
+
+e Before removing front axle from transaxle, place safety
+stands under designated front supporting points. Refer to
+Gl section for lifting points and towing.
+
+e¢ Be sure to hoist engine and transaxle in a safe manner.
+
+e For engines not equipped with engine slingers, attach
+proper slingers and bolts described in PARTS CATALOG.
+
+CAUTION:
+
+eo When lifting engine, be careful not to strike adjacent parts,
+especially the following: Accelerator wire casing, brake
+lines, and brake master cylinder.
+
+¢ In hoisting the engine, always use engine slingers in a
+safe manner.
+
+¢ In removing drive shaft, be careful not to damage grease
+seal of transaxle.
+
+N\\ Removal
+ONC ane . Remove engine undercover and hood.
+— ve — . Drain coolant from both cylinder block and radiator.
+
+Remove vacuum hoses, fuel hoses, wires, harnesses, connec-
+
+1
+2
+3
+tors and so on.
+
+4. Remove front exhaust tubes, ball joints and drive shafts.
+5
+
+6
+
+Remove radiator and fans.
+
+Remove drive belts.
+
+Remove alternator, compressor and power steering oil pump
+
+from engine.
+
+Set a suitable transmission jack under transaxle. Hoist engine
+
+with engine slinger.
+
+. Remove rear engine mounting.
+
+10. Disconnect control rod and support rod from transaxle (M/T
+model).
+
+11. Disconnect control cable from transaxle (A/T model).
+
+7
+8.
+9
+
+Shift control rod
+en
+
+Shift support
+
+ame
+
+126 EM-54
+
+===== PDF page 55 =====
+ENGINE REMOVAL
+Removal (Cont'd)
+
+-
+
+o 12. Remove front engine mounting.
+
+~~
+
+Mounting bracket
+
+ke
+
+By
+(1
+
+; A
+Front engine ( EB
+
+a mounting
+EN | © SEMS36E
+
+\ 13. Remove center member and then slowly lower transmission
+
+7s N
+rl
+
+jack. LG
+
+2 Front EB
+/
+“1 ol
+SEMB837E
+
+14. Remove engine with transaxle as shown.
+J MT
+
+Transmission jack SEMS38E
+
+Installation
+1. Installation is in the reverse order of removal.
+
+EM-55 127
+===== PDF page 56 =====
+128
+
+CYLINDER BLOCK
+
+CES RONGROR DR OR
+
+SEC. 110-120-226
+
+8.4 - 10.8 (0.86 - 1.1, 74.6 - 95.5)
+[3 21-26 (2.1 - 2.7, 15 - 20)
+
+@QHEM] 176 - 21.6
+
+(1.80 - 2.20,
+12.98 - 15.93)
+
+5-12
+(0.8 - 1.2,
+69 - 104)
+
+oF
+
+~~
+
+: Apply liquid gasket
+(Genuine RTV silicone
+
+[v|
+
+sealant Part No, 999MP-A7007,
+
+Three Bond TB1207D or equivalent).
+
+: Nem (kg-m, ft-lb)
+: N=m (kg-m, in-Ib)
+
+(IPG Jn’
+
+Rear oil seal retainer
+Cylinder block
+
+Knock sensor
+
+Upper main bearing
+
+Lower main bearing
+
+Water drain plug (LH side}
+Water drain plug (RH side)
+
+Water drain plug (Water pump
+side)
+
+: Lubricate with new engine oil.
+
+®@ ® @00@e©
+
+Gasket (XC
+
+I) [CO] Refer to “Assembly”.
+
+Gasket XX
+
+Main bearing cap
+
+Main bearing beam
+Crankshaft
+
+Pilot bushing or pilot converter
+
+Flywheel with signal plate
+{M/T models)
+
+Drive plate with signal plate (A/T
+model)
+Flywheel reinforcement
+
+EM-56
+
+ORL Oe
+
+FIC 83-93
+
+o {8.5 - 9.5,
+
+61 - 69)
+
+a FF [OC] Refer to “Assembly”.
+
+SEMEB54F
+
+Drive plate reinforcement
+Qil ring
+
+Piston pin
+
+Connecting rod bearing
+Connecting rod
+
+Piston
+
+Top ring
+
+2nd ring
+===== PDF page 57 =====
+CYLINDER BLOCK
+
+0] as - 55 CAUTION:
+
+4 44 56,32. an) e When installing bearings, pistons, or other sliding parts,
+
+KV10117001 = lubricate contacting surfaces with new engine oil.
+
+«C= a. e Place removed parts such as bearings and bearing caps
+
+KV10106500 Spacer in their proper order and direction. al
+
+( of Washer eo When installing connecting rod nuts, and main bearing
+
+) $1 a cap bolts, apply new engine oil to threads and seating
+©0143 “55 surfaces.
+> ral e Do not allow any magnetic materials to contact the signal
+[Q) 2s - 35 Nem (gem, fib) plate teeth of flywheel or drive plate. EB
+(25-35, 18 - 25) SEM180FA
+— Engine front Le
+dks] <= PISTON AND CRANKSHAFT
+° 1. Remove engine. Refer to “ENGINE REMOVAL” (EM-53).
+2. Place engine on a work stand. EC
+3. Drain coolant and oil.
+4. Remove oil pan. Refer to “Removal” in “OIL PAN” (EM-13).
+5. Remove timing chain. Refer to “Removal” in “TIMING CHAIN" [Ig
+(EM-21).
+6. Remove cylinder head. Refer to “Removal” in “TIMING
+KV10117000 pS
+7. Remove pistons with connecting rods.
+e When disassembling piston and connecting rod, remove snap MT
+ring first, then heat piston to 60 to 70°C (140 to 158°F).
+8. Remove rear oil seal retainer. AT
+CAUTION:
+e When piston rings are not replaced, make sure that piston
+rings are mounted in their original positions. BA
+e When replacing piston rings, if there is no punchmark,
+install with either side up.
+RA
+SEMI65A
+9. Remove main bearing beam, cap and crankshaft. BR
+Engine e Before removing bearing beam and bearing cap, measure
+front Pa crankshaft end play. Refer to EM-64.
+
+& ok 3 e Bolts should be loosened in two or three steps. Sr
+a RS
+®
+
+BT
+SEMB42E
+Inspection FA
+PISTON AND PISTON PIN CLEARANCE a
+1. Measure inner diameter of piston pin hole “dp”.
+Standard diameter “dp”:
+21.993 - 22.005 mm (0.8659 - 0.8663 in} IDX
+
+AEMO023
+
+EM-57 129
+===== PDF page 58 =====
+130
+
+CYLINDER BLOCK
+
+AEMO024
+
+Feeler
+gauge
+
+OK
+
+Piston
+Press-fit
+
+SEM599A
+
+Bend
+Feeler gauge
+
+SEMO38F
+
+Inspection (Cont'd)
+2. Measure outer diameter of piston pin “Dp”.
+Standard diameter “Dp”:
+21.989 - 22.001 mm (0.8657 - 0.8662 in)
+3. Calculate piston pin clearance.
+Dp - dp = 0.002 - 0.006 mm (0.0001 - 0.0002 in)
+If it exceeds the above value, replace piston assembly with pin.
+
+PISTON RING SIDE CLEARANCE
+Side clearance:
+Top ring
+0.040 - 0.080 mm (0.0016 - 0.0031 in)
+2nd ring
+0.030 - 0.070 mm (0.0012 - 0.0028 in)
+Max. limit of side clearance:
+Top ring 0.11 mm (0.0043 in)
+2nd ring 0.1 mm (0.004 in)
+If out of specification, replace piston and/or piston ring assembly.
+
+PISTON RING END GAP
+End gap:
+Top ring 0.22 - 0.32 mm (0.0087 - 0.0126 in)
+2nd ring 0.32 - 0.47 mm (0.0126 - 0.0185 in}
+Oil ring 0.20 - 0.60 mm (0.0079 - 0.0236 in)
+Max. limit of ring gap:
+Top ring 0.55 mm (0.0217 in)
+2nd ring 0.85 mm (0.0335 in)
+Oil ring 0.95 mm (0.0374 in)
+If out of specification, replace piston ring. If gap still exceeds the
+limit even with a new ring, do the following. Rebore cylinder and
+use oversized piston and piston rings.
+Refer to SDS (EM-72).
+When replacing the piston, check the cylinder block surface for
+scratches or seizure. If scratches or seizure is found, hone or
+replace the cylinder block.
+
+CONNECTING ROD BEND AND TORSION
+Bend:
+Limit 0.15 mm (0.0059 in)
+per 100 mm (3.94 in) length
+Torsion:
+Limit 0.30 mm (0.0118 in)
+per 100 mm (3.94 in) length
+If it exceeds the limit, replace connecting rod assembly.
+
+EM-58
+===== PDF page 59 =====
+CYLINDER BLOCK
+Inspection (Cont'd)
+
+MA
+
+SEMO03F
+
+CYLINDER BLOCK DISTORTION AND WEAR
+
+Straightedge
+\ o Clean upper surface of cylinder block. LC
+pn ul Use a reliable straightedge and feeler gauge to check the flat-
+Tee ness of cylinder block surface.
+Ea Check along six positions shown in the figure. EC
+ey Distortion limit: 0.10 mm (0.0039 in)
+— 9 > e |f out of specification, resurface it. The limit for cylinder block
+(A JEN xe ® @ gq resurfacing is determined by cylinder head resurfacing in FE
+Feeler gauge | Eo j engine.
+Resurfacing limit: CL
+sem12sc| Amount of cylinder head resurfacing is “A”.
+Amount of cylinder block resurfacing is “B”.
+The maximum limit is as follows: Vii
+A +B = 0.2 mm (0.008 in)
+Nominal cylinder block height from crankshaft center:
+214.95 - 215.05 mm (8.4626 - 8.4665 in) AT
+Refer to SDS (EM-71).
+e If necessary, replace cylinder block.
+FA
+RA
+PISTON-TO-BORE CLEARANCE BR
+1. Using a bore gauge, measure cylinder bore for wear, out-of-
+round and taper.
+Cylinder bore inner diameter ST
+Grade No. Standard inner diameter Wear limit
+No. 1 93.000 - 93.010 mm (3.6614 - 3.6618 in) RS
+No. 2 93.011 - 93.020 mm (3.6618 - 3.6622 in) | 0.20 mm (0.0079 in)
+No. 3 93.021 - 93.030 mm (3.6622 - 3.6626 in) Br
+SEMB43E .
+If it exceeds the limit, rebore all cylinders. Replace cylinder block MA
+X if necessary. n
+Out-of-round (X - Y):
+Y Limit 0.015 mm (0.0006 in) BL
+& Taper (A-B ~ C):
+& Limit 0.015 mm (0.0006 in)
+2. Check for scratches and seizure. If seizure is found, hone it. IDX
+2
+Unit: mm (in)
+SEM321AA
+EM-59 131
+===== PDF page 60 =====
+132
+
+CYLINDER BLOCK
+
+No. 6 cylinder bore grade number
+
+No. 1 cylinder bore grade number SEM174F
+
+SEM258C
+
+le >
+let— 0
+
+Gl
+
+Taper: A-8
+Qut-of-round: X ~Y
+SEM316A
+
+Inspection (Cont’d)
+
+e If both cylinder block and piston are replaced with new
+ones, select piston of the same grade number punched on
+cylinder block rear position. These numbers are punched
+in either Arabic or Roman numerals.
+
+3. Measure piston skirt diameter.
+Piston diameter “A”: Refer to SDS (EM-72).
+Measuring point “a” (Distance from the top):
+45.4 mm (1.787 in)
+4. Check that piston-to-bore clearance is within specification.
+Piston-to-bore clearance “B’":
+0.010 - 0.030 mm (0.0004 - 0.0012 in)
+5. Determine piston oversize according to amount of cylinder
+wear.
+Oversize pistons are available for service.
+Refer to SDS (EM-72).
+6. Cylinder bore size is determined by adding piston-to-bore
+clearance to piston diameter “A”.
+Rebored size calculation: D=A +B -C
+
+where,
+
+D: Bored diameter
+
+A: Piston diameter as measured
+B: Piston-to-bore clearance
+
+C: Honing allowance 0.02 mm (0.0008 in)
+
+7. Install main bearing caps, and tighten to the specified torque.
+Otherwise, cylinder bores may be distorted in final assembly.
+
+8. Cut cylinder bores.
+
+e When any cylinder needs boring, all other cylinders must
+also be bored.
+
+e Do not cut too much out of cylinder bore at a time. Cut
+only 0.05 mm (0.0020 in) or so in diameter at a time.
+
+9. Hone cylinders to obtain specified piston-to-bore clearance.
+
+10. Measure finished cylinder bore for out-of-round and taper.
+
+eo Measurement should be done after cylinder bore cools
+
+down.
+CRANKSHAFT
+1. Check crankshaft main and pin journais for score, wear or
+cracks.
+2. With a micrometer, measure journals for taper and out-of-
+round.
+Out-of-round (X - Y):
+Standard
+0.002 mm (0.0001 in}
+Taper (A - B):
+Standard
+0.002 mm (0.0001 in)
+EM-60
+===== PDF page 61 =====
+CYLINDER BLOCK
+
+Inspection (Cont'd)
+3. Measure crankshaft runout.
+Runout (Total indicator reading):
+Limit: 0.10 mm (0.0039 in)
+
+MA
+
+Upper main bearing No. 4° ++ With oil BEARING CLEARANCE
+With oil grooved Ne. 8: ag: groove ® Use either of the following two methods, however, method “A” LGC
+
+No. 2° Ag gives more reliabie results and is preferable.
+No. 1* a) !
+
+\ Method A (Using bore gauge & micrometer) =
+\ i No-4| Main bearing
+\ No. 3 1. Set main bearings in their proper positions on cylinder block FE
+a Lower main bearing and main bearing cap.
+\¥ No. 2 (without oil groove} CL
+
+No. 1 SEM175F
+
+2. Install main bearing cap and bearing beam to cylinder block.
+
+Ti : MT
+ighten all bolts in correct order.
+
+3. Measure inner diameters “A” of each main bearing.
+
+4. Measure outer diameters “Dm” of each crankshaft main jour- BR
+
+nal.
+5. Caiculate main bearing clearance.
+Main bearing clearance = A — Dm ST
+
+Standard: 0.012 - 0.030 mm (0.0005 - 0.0012 in)
+Limit: 0.065 mm (0.0026 in)
+e If it exceeds the limit, replace bearing. BS
+e If clearance cannot be adjusted using any standard bearing
+grade, grind crankshaft journal and use undersized bearing.
+
+BY
+a. When grinding crankshaft journal, confirm that “L” dimension [FIA
+in fillet rolf is more than the specified limit.
+“L”: 0.1 mm (0.004 in) BL
+b. Refer to SDS for grinding crankshaft and available service
+parts.
+IDX
+
+EM-61 © 133
+===== PDF page 62 =====
+134
+
+CYLINDER BLOCK
+
+} Main journal grade
+
+, 2 numbers = 75
+
+N {{{{ No. 4 main journal grade number
+No. 1 main journai grade Ed]
+
+i, iB
+Engine [pA= l= J =_T-+
+—
+
+front
+
+No. 1 crankshaft
+main journal No. 4 crankshaft main journal
+grade number grade number
+
+J Crankshaft main journal grade
+number
+
+Engine front side
+
+SEMB47E
+
+Inspection (Cont’d)
+
+6.
+
+If crankshaft is reused, measure main bearing clearances and
+select thickness of main bearings.
+
+If crankshaft is replaced with a new one, select thickness of
+main bearings as follows:
+
+Grade number of each cylinder block main journal is punched
+on the respective cylinder block. These numbers are punched
+in either Arabic or Roman numerals.
+
+Grade number of each crankshaft main journal is punched on
+the respective crankshaft. These numbers are punched in
+either Arabic or Roman numerals.
+Select main bearing with suitable thickness according to the
+following calculation or table.
+Example of calculation:
+Cylinder block main journal grade number: 1
+Crankshaft main journal grade number: 2
+Main bearing grade number = 1 + 2 = 3 (Yellow)
+
+Inside micrometer
+
+AEMO027
+
+AEMO034
+
+Main bearing grade number (Identification color):
+These numbers are punched in either Arabic or Roman numerals.
+
+Cylinder block main journal grade number
+
+“0” “1 “2” “3”
+Crankshaft “0” 0 (Black) 1 (Brown) [2 (Green) |3 (Yellow)
+main jour- “1” 1 (Brown) [2 (Green) [3 (Yellow) |4 (Blue)
+nal grade “2” 2 (Green) |3 (Yellow) |4 (Blue) 5 (Pink)
+number “3" 3 (Yellow) |4 (Blue) 5 (Pink) 6 (Purple)
+
+Connecting rod bearing (Big end)
+1. Install connecting rod bearing to connecting rod and cap.
+2. Install connecting rod cap to connecting rod.
+Tighten boits to the specified torque.
+3. Measure inner diameter “C” of connecting rod.
+
+4. Measure outer diameter “Dp” of each crankshaft pin journal.
+5. Calculate connecting rod bearing clearance.
+Connecting rod bearing clearance = C - Dp
+
+Standard: 0.020 - 0.045 mm (0.0008 - 0.0018 in)
+
+Limit: 0.070 mm (0.0028 in)
+If it exceeds the limit, replace bearing.
+If clearance cannot be adjusted within the standard of any
+bearing, grind crankshaft journal and use undersized bearing.
+Refer to “BEARING CLEARANCE — Main bearing” (EM-61).
+
+EM-62
+===== PDF page 63 =====
+CYLINDER BLOCK
+
+No. 6 cylinder crankshaft pin journal
+grade number
+
+IRS
+TD CSS ar pin journal
+
+FREE
+/50 grade number
+No. 1 cylinder crankshaft pin journal
+
+grade number
+
+Engine front side
+
+SEMB48E
+
+SEM673E
+
+SEMO62A
+
+A/T model
+a TE ee
+
+———— Dial gauges,
+
+Inspection (Cont'd)
+
+8. If crankshaft is replaced with a new one, select connecting rod
+
+bearing according to the following table.
+
+Connecting rod bearing grade number (Identification color):
+These numbers are punched in either Arabic or Roman numerais.
+
+Crankshatt pin journal grade Connecting rod bearing grade number
+number
+0 0 (Black)
+1 1 (Brown)
+2 2 (Green)
+
+Method B (Using plastigage)
+CAUTION:
+J
+
+Do not turn crankshaft or connecting rod while plastigage
+
+is being inserted.
+
+e When bearing clearance exceeds the specified limit,
+ensure that the proper bearing has been installed. if incor-
+rect bearing clearance exists, use a thicker or undersized
+main bearing to ensure specified clearance.
+
+CONNECTING ROD BUSHING CLEARANCE (Small end)
+
+1. Measure inner diameter “C” of bushing.
+
+2. Measure outer diameter “Dp” of piston pin.
+
+3. Calculate connecting rod bushing clearance.
+Connecting rod bushing clearance = C - Dp
+
+Standard: 0.005 - 0.017 mm (0.0002 - 0.0007 in)
+
+Limit: 0.030 mm (0.0012 in)
+
+If it exceeds the limit, replace connecting rod assembly or
+connecting rod bushing and/or piston set with pin.
+
+REPLACEMENT OF CONNECTING ROD BUSHING
+
+(Small end)
+
+1. Drive in small end bushing until it is flush with end surface of
+
+rod.
+Be sure to align the oil holes.
+
+2. After driving in small end bushing, ream the bushing. This is
+to ensure the clearance between connecting rod bushing and
+
+piston pin is the specified value.
+
+Clearance between connecting rod bushing and pis-
+ton pin: 0.005 - 0.017 mm (0.0002 - 0.0007 in)
+
+FLYWHEEL/DRIVE PLATE RUNOUT
+Runout (Total indicator reading):
+
+Flywheel (M/T model)x
+
+Less than 0.15 mm (0.0059 in)
+
+Drive plate (A/T model)
+
+Less than 0.15 mm (0.0059 in)
+
+* Measurement position:
+
+Approximately 145 mm (5.71 in) from the crankshaft center
+
+CAUTION:
+
+e The signal plate is built into the flywheel assembly. Be
+
+EM-63
+
+@I
+
+MA
+
+ST
+RS
+[HA
+EL
+
+DX
+
+135
+===== PDF page 64 =====
+136
+
+CYLINDER BLOCK
+
+eT
+Front mark {
+
+)
+
+Engine front Ph
+AS
+Front mark
+
+Piston grade number
+
+ylinder number
+
+SEMB50E
+
+Punchmark side up
+(if mark is present.)
+
+— a=
+
+7
+
+~
+—
+SEM965E|
+Oil ring .
+® Top ring
+expander dag = ’ oil ring
+> upper rail
+
+(With oil groove) No. 3*
+
+No. 2* SVB
+No. 1* WV
+a
+
+El
+
+Engine
+front
+a Gil ring
+2nd ing = = » lower rail
+SEM160B
+Upper main bearing G&G) 4° +. With oil
+
+groove
+
+No. 3
+
+2 Lower main bearing
+Ne 2 (Without oil groove)
+
+SEM175F
+
+Inspection (Cont'd)
+careful not to damage the signal plate, especially the
+teeth.
+
+e Check the drive plate for deformation or cracks.
+
+e Never place the flywheel assembly with the signal plate
+facing down.
+
+e Keep any magnetized objects away from the signal plate.
+
+e Do not allow any magnetic materials to contact the signal
+
+plate teeth.
+eo Do not surface flywheel. Replace as necessary.
+
+Assembly
+
+PISTON
+
+1. Install new snap ring on one side of piston pin hole.
+
+2. Heat piston to 60 to 70°C (140 to 158°F) and assemble piston,
+piston pin, connecting rod and new snap ring.
+
+e Align the direction of piston and connecting rod.
+
+e¢ Numbers stamped on connecting rod and cap correspond
+to each cylinder.
+
+eo After assembly, make sure connecting rod swings
+
+smoothly.
+
+3. Set piston rings as shown.
+
+CAUTION:
+
+e When piston rings are not replaced, make sure that piston
+rings are mounted in their original positions.
+
+e When replacing piston rings, these without punchmarks,
+present, piston rings can be mounted with either side up.
+
+e Align piston rings so that end gaps are positioned as
+shown in the figure.
+
+CRANKSHAFT
+
+1. Set main bearings in their proper positions on cylinder block
+and main bearing beam.
+
+e Confirm that correct main bearings are used. Refer to
+“Inspection” of this section.
+
+EM-64
+===== PDF page 65 =====
+CYLINDER BLOCK
+
+de ds
+
+il
+
+20
+(0.79)
+
+0 Wana
+
+I
+dx
+Measuring
+area
+
+Unit: mm (in)
+
+(1.18) B
+
+d
+Measuring
+point
+
+SEM177F
+
+SEMBS1E
+
+SEMB852E
+
+EMO03470000 --
+(JB037) 7
+or suitable tool
+
+SEM620
+
+SEMO56E]
+
+Assembly (Cont'd)
+
+2.
+®
+
+eno
+
+Instructions for re-use of main bearing cap bolts.
+A plastic zone tightening method is used for tightening
+main bearing cap bolts. Measure d1 and d2 as shown in
+the figure.
+d2: Select minimum diameter in the measuring area.
+If the difference between d1 and d2 exceeds the limit,
+replace the bolts with new ones.
+
+Limit {d1 - d2): 0.11 mm (0.0043 in)
+
+After installing crankshaft, main bearing cap, main bearing
+beam and bearing cap bolts, tighten bearing cap boits in
+numerical order.
+
+Tightening procedure
+
+Tighten all bolts to 32 to 38 N-m (3.3 to 3.9 kg-m, 24 to 28
+ft-lb).
+
+Turn all bolts 90 to 95 degrees clockwise with angle
+wrench.
+
+Prior to tightening bearing cap bolts, place bearing beam
+in its proper position by shifting crankshaft in the axial
+direction.
+
+After securing bearing cap bolts, make sure crankshaft
+
+turns smoothly by hand.
+Lubricate threads and seat surfaces of the bolts with new
+
+engine oil.
+Measure crankshaft end play.
+Crankshaft end play:
+
+Standard 0.10 - 0.25 mm (0.0039 - 0.0098 in)
+Limit 0.30 mm (0.0118 in)
+
+If beyond the limit, replace bearing with a new one.
+
+Install connecting rod bearings in connecting rods and con-
+
+necting rod caps.
+
+Confirm that correct bearings are used.
+
+Install pistons with connecting rods.
+Install them into corresponding cylinders with Tool.
+Be careful not to scratch cylinder wall with the connecting
+
+rod.
+Arrange so that front mark on piston head faces toward
+
+engine front.
+
+A plastic zone tightening method is used for tightening con-
+
+necting rod bolts and nuts. Check the old bolts for deformation
+before re-using them.
+Ensure that the connecting rod nut can be screwed
+smoothly as far as the bolt thread end.
+If this is not possible, use slide calipers to measure the
+outside diameter of the narrowest thread part of the bolt
+at 16 mm (0.63 in) from the thread end. Replace the con-
+necting rod bolt and nut, if under the limit.
+
+Standard: 7.90 - 8.00 mm (0.3110 - 0.3150 in)
+
+Limit: 7.75 mm (0.3051 in)
+
+EM-65
+
+Gl
+
+MIA
+
+LG
+
+EC
+
+137 |
+===== PDF page 66 =====
+138
+
+CYLINDER BLOCK
+
+SEMOS3E
+
+Assembly (Cont'd)
+
+C.
+
+Install connecting rod caps.
+Lubricate threads and seat surfaces with new engine oil.
+Tighten connecting rod bearing cap nuts to the specified
+torque.
+Connecting rod bearing nut:
+(1) Tighten nuts to 19 to 21 N-m
+(1.9 to 2.1 kg-m, 14 to 15 fi-lb).
+(2) Turn nuts 90 to 95 degrees clockwise with
+angle wrench.
+
+Measure connecting rod side clearance.
+Connecting rod side clearance:
+Standard
+0.20 - 0.35 mm (0.0079 - 0.0138 in)
+Limit
+0.40 mm (0.0157 in)
+If beyond the limit, replace connecting rod and/or crankshaft.
+Install rear oil seal retainer.
+
+EM-66
+===== PDF page 67 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+General Specifications
+
+Cylinder arrangement
+
+V-6
+
+COMPRESSION PRESSURE
+
+Unit: kPa (kg/cm? psi)/300 rpm
+
+Displacement cm? (cu in) 2,988 (182.33)
+B J sirok . 93 x 73.3 (3.66 x 2.886 Compression pressure
+ore and stroke mm (in) x 73.3 (3.66 x 2.886) Standard 1,275 (13.0, 185)
+Valve arrangement DOHC Minimum 981 (10.0, 142)
+Firing order 1-2-3-4-5-6 Differential limit between 98 (1.0, 14)
+Number of piston ri cylinders _
+iston rings
+P 9 Cylinder number
+Compression 2
+oil 1 AC) WP
+Number of main bearings 4 A 9 <P
+Compression ratio 10.0 PD
+FRONT SEM713A
+Inspection and Adjustment
+CYLINDER HEAD VALVE
+Unit: mm (in) Unit: mm (in)
+Standard Limit T (Margin thickness)
+CL Less than -T
+Head surface distortion 0.03 (0.0012) 0.1 (0.004) i
+|
+D
+H
+L
+SEM188
+Nominal cylinder head height: Valve head diameter “D”
+H = 1263 - 128.5 mm {@A.572 - 4.960 in} Intake 36.0 - 36.3 (1.417 - 1.429)
+) Exhaust 31.2 - 31.5 (1.228 - 1.240)
+SEM949E
+Valve length “L"
+Intake §7.32 - 97.82 (3.8315 - 3.8612)
+Exhaust 94.85 - 95.35 (3.7342 - 3.7539)
+Valve stem diameter “d”
+Intake 5.965 - 5.980 (0.2348 - 0.2354)
+Exhaust 5.945 - 5.960 (0.2341 - 0.2346)
+
+Valve seat angle “a”
+Intake
+Exhaust
+
+45°15’ - 45°45
+
+Vaive margin “T"
+Intake
+Exhaust
+
+0.95 - 1.25 (0.0374 - 0.0482)
+1.15 - 1.45 (0.0453 - 0.0571)
+
+Valve margin “T” limit
+
+More than 0.5 (0.020)
+
+Valve stem end surface grinding
+limit
+
+Less than 0.2 (0.008)
+
+Valve clearance (Cold)
+intake
+Exhaust
+
+0.26 - 0.34 (0.010 - 0.013)
+0.29 - 0.37 (0.071 - 0.015)
+
+EM-67
+
+MA
+
+MT
+
+AT
+
+BT
+
+HA
+
+EL
+
+139
+===== PDF page 68 =====
+140
+
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+Valve clearance
+
+Inspection and Adjustment (Cont'd)
+
+Thickness mm (in)
+
+Identification mark
+
+orem 2.65 (0.1043) 265
+Cold Hot" (reference data} 2.66 (0.1047) 66
+intake 0010-0013 0.012 - 0016) 2467 {0.1051} 267
+Exhaust 0.29 - 0.37 0.308 - 0.432 2.68 (0.1055) 268
+{0.011 - 0.015) {0.012 - 0.017) 2.69 (0.1059) 269
+*: Approximately 80°C (176°F) 2.70 (0.1063) 270
+2.71 (0.1067) 271
+Available shims 2.72 0.1070 ore
+2.73 (0.1075) 273
+Thickness mm (in) Identification mark 2.74 (0.1079) 274
+2.32 (0.0913) 232 2.75 (0.1083) 275
+2.33 (0.0917) 233 2.76 (0.1087) 276
+2.34 (0.0921) 234 2.77 (0.1091) 277
+2.35 (0.0925) 235 2.78 (0.1094) 278
+2.36 (0.0929) 236 2.79 (0.1098) 279
+2.37 (0.0933) 237 2.80 (0.1102) 280
+2.38 (0.0937) 238 2.81 (0.1106) 281
+2.39 (0.0941) 239 2.82 (0.1110) 282
+2.40 (0.0945) 240 2.83 (0.1114) 283
+2.41 (0.0949) 241 2.84 (0.1118) 284
+2.42 (0.0953) 242 2.85 (0.1122) 285
+2.43 (0.0957) 243 2.86 (0.1126) 286
+2.44 (0.0961) 244 2.87 (0.1130) 287
+2.45 (0.0965) 245 2.88 (0.1134) 288
+2.46 (0.0969) 246 2.89 (0.1138) 289
+2.47 (0.0972) 247 2.90 (0.1142) 290
+2.48 (0.0976) 248 2.91 (0.1146) 291
+2.49 (0.0980) 249 2.92 (0.1150) 292
+2.50 (0.0984) 250 2.93 (0.1154) 293
+2.51 (0.0988) 251 2.94 (0.1157) 294
+2.52 (0.0992) 252 2.95 (0.1161) 295
+2.53 (0.0996) 253
+2.54 (0.1000) 254
+2.55 (0.1004) 255
+2.56 (0.1008) 256
+2.57 (0.1012) 257
+2.58 (0.1016) 258
+2.59 (0.1020) 259
+2.60 (0.1024) 260 / Indicate
+2.61 (0.1028) 261 Shim ©o0es my
+2.62 (0.1031) 262
+2.63 (0.1035) 263 SEMI66E
+2.64 (0.1039) 264
+
+EM-68
+===== PDF page 69 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+Valve spring
+
+Inspection and Adjustment (Cont'd)
+
+Free height mm (in)
+
+46.93 (1.8476)
+
+Valve guide
+
+Unit: mm (in)
+
+Pressure
+N (kg, Ib) at height mm (in)
+
+Standard
+
+454 (46.3, 102.1)
+at 27.55 (1.0846)
+
+Limit
+
+427 (43.6, 96.0) at
+27.55 (1.0846)
+
+QOut-of-square mm (in)
+
+Less than 2.0 (0.079)
+
+Valve lifter
+
+Unit: mm (in)
+
+Valve lifter outer diameter
+
+34.960 - 34.975
+(1.3764 - 1.3770)
+
+Lifter guide inner diameter
+
+35.000 - 35.021
+(1.3780 - 1.3788)
+
+Clearance between lifter and lifter guide
+
+0.025 - 0.061
+{0.0010 - 0.0024)
+
+@l
+IVEY
+LG
+SEM950E
+Standard Service =
+EC
+
+Valve guide
+
+Outer diameter
+
+10.023 - 10.034
+(0.3946 - 0.3950)
+
+10.223 - 10.234
+(04025-04029) [r=
+
+Valve guide
+
+Inner diameter
+{Finished size)
+
+6.000 - 6.018
+(0.2362 - 0.2369) CL
+
+Cylinder head valve guide
+hole diameter
+
+9.975 - 9.996
+{0.3927 - 0.3935)
+
+10.175 - 10.196
+(0.4006 - 0.4014)
+
+=
+=]
+
+Interference fit of valve
+guide
+
+0.027 - 0.059
+(0.0011 - 0.0023)
+
+Standard Max. tolerance AT
+0.020 - 0.053
+Intake 0.08 (0.0031
+Stem to guide (0.008 - 0.0021) ( ) ”
+clearance oy
+0.040 - 0.073
+Exhaust (0.0016 - 0.0029) 0.1 {0.004)
+Valve deflection Intake — 0.24 (0.0094) RA
+limit Exhaust — 0.28 (0.0110)
+Projection length “L” 12.6 - 12.8 (0.496 - 0.504)
+BR
+3S
+BI
+HA
+BX |
+|
+141
+
+EM-69
+===== PDF page 70 =====
+142
+
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+VALVE SEAT
+
+Inspection and Adjustment (Cont'd)
+
+Unit: mm (in)
+
+Cylinder head
+
+30°
+
+Contacting width (W); 1.09 - 1.31 (0.0429 - 0.0516)
+
+* : Machining data
+
+-———— *34 (1.34)
+
+h
+7
+<L
+60° tee. df
+
+r¢——————— “35.6 - 35.8
+(1.402 - 1.409)
+
+7 oo
+
+d
+
+fe———— "28.7 (1,130)
+
+“306 - 30.8
+(1.205 - 1.213)
+
+Contacting width (W); 1.29 - 1.51 (0.0508 - 0.0594)
+
+SEMO21EA
+SEM621F
+Standard Service
+] In, 37.000 - 37.0186 (1.4567 - 1.4573) 37.500 - 37.516 (1.4764 - 1.4770}
+Cylinder head seat recess diameter (D)
+Ex. 32.200 - 32.216 (1.2677 - 1.2683) 32.700 - 32.716 (1.2874 - 1.2880)
+} i In. 0.081 - 0.113 {0.0032 - 0.0044)
+Valve seat interference fit
+Ex. 0.064 - 0.096 (0.0025 - 0.0038)
+) In. 37.097 - 37.113 (1.4605 - 1.4611) 37.597 - 37.613 (1.4802 - 1.4808)
+Valve seat outer diameter (d)
+Ex. 32.280 - 32.296 (1.27090 - 1.2715) 32.780 - 32.796 (1.2905 - 1.2812)
+. In. 5.9 - 6.0 (0.232 - 0.236) 5.05 - 5.15 (0.1988 - 0.2028)
+Height (h)
+Ex. 5.9 -6.0 {0.232 - 0.236) 4.95 - 5,05 (0.1949 - 0.1988)
+Depth (H} 5.9-6.1 (0.232 - 0.240)
+In. 41.07 - 41.67 (1.6169 - 1.6405)
+Depth (L)
+Ex. 40.06 - 41.60 (1.5772 - 1.6378)
+
+EM-70
+===== PDF page 71 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+Inspection and Adjustment (Cont'd)
+CAMSHAFT AND CAMSHAFT BEARING CYLINDER BLOCK
+
+Unit: mm (in) Unit: mm (in)
+Standard Limit +
+Camshaft journal to 0.045 - 0.086
+bearing clearance (0.0018 - 0.0034) 0.15 (0.0059) Gi
+No. 1
+26.000 - 26.021
+Inner diameter of cam- (1.0236 - 1.0244) MA
+shaft bearing No. 2, 3, 4 -
+23.500 - 23.521
+{0.9252 - 0.9260}
+No. 1
+25.935 - 25.955
+Outer diameter of cam- (1.0211 - 1.0218) _ SEMO22EA LC
+shaft journal No.2, 3, 4 :
+23.435 - 23.455 Surface flatness
+(0.9226 - 0.9234) Standard Less than 0.03 (0.0012) =
+Camshaft runout [TIR’] Less than 0.05 (0.0020) Limit 0.10 (0.0039) h
+0.02 (0.0008) 05 @. 00
+Camshaft sprocket Less than _ Cylinder bare EE
+runout [TIR™] 0.15 (0.0059) Inner diameter -
+Camshaft end play ( ais 0.0070) 0.24 (0.0094) Standard
+i . Grade No. 1 93.000 - 93.010 (3.6614 - 3.6618) CL
+Grade No. 2 93.011 - 93.020 (3.6618 - 3.6622)
+; Grade No. 3 93.021 - 93.030 (3.6622 - 3.6626) MT
+Wear limit 0.20 (0.0079)
+"A" Out-of-round (X - Y) Less than 0.015 (0.0006) AT
+” © Taper (A - B - C) Less than 0.015 (0.0006)
+1
+Main journal inner diam-
+eter FA
+EMG71
+Grade No. 0 63.993 - 63.999 {2.5194 - 2.5196)
+Cam height “A”
+Grade No. 1 64.000 - 64.005 (2.5197 - 2.5199) BA
+Intake & Exhaust 43.940 - 44.130 (1.7299 - 1.7374)
+Grade No. 2 64.006 - 64.011 (2.5199 - 2.5201)
+Wear limit of cam height 0.2 (0.008)
+——n - Grade No. 3 64.012 - 64.017 (2.5202 - 2.5203)
+“Total indicator reading BR
+Difference in inner
+diameter between cylin-
+ders ST
+Valve timing Standard Less than 0.03 (0.0012)
+<
+Q
+Oo
+£8 RS
+£
+oO
+S BT
+IN
+OQ
+& a ©
+~~
+Q Sod [IA
+_ EM120
+Unit: degree
+a b [> d e f IDX
+232 232 3 49 3 49
+EM-71 143
+===== PDF page 72 =====
+144
+
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+PISTON, PISTON
+
+Inspection and Adjustment (Cont'd)
+
+RING AND PISTON PIN
+
+Piston ring
+
+- . Unit: mm (in
+Available piston it: mm (in)
+Unit: mm (in) Standard Limit
+_ Side clearance
+L —]
+— T 0.040 - 0.080
+. .004
+= — Top (0.0016 - 0.0031) 0.17 (0.0043)
+=< — Ss 0.030 - 0.070
+i 2nd (0.0012 - 0.0028) 0.110.004)
+End gap
+Lo 0.22 -0.32
+- A > Top (©.0087 - 0.0126) | 058 ©0217
+0.32 - 0.47
+© 2nd (0.0126 - 0.0185) 0.85 (0.0335)
+a 0.20 - 0.60
+SEM882E Qil (rail ring) (0.0079 - 0.0235) 0.95 (0.0374)
+Piston skirt diameter “A”
+Standard
+Grade No. 1 92.979 - 92.988 (3.6606 - 3.6609) Piston pin
+Grade No. 2 92.988 - 93.000 (3.6609 - 3.6614) Unit: mm (in)
+Grade No. 3 93.000 - 93.009 (3.6614 - 3.6618) Piston pin outer diameter 21.989 - 22.001 (0.8657 - 0.8662)
+
+0.20 (0.0079)
+oversize (Service)
+
+93.180 - 93.210 (3.6685 - 3.6697)
+
+Interference fit of piston pin
+
+to piston
+
+0.002 - 0.006 {0.0001 - 0.0002)
+
+“a” dimension
+
+45.4 (1.787)
+
+Piston pin to connecting rod
+
+Piston pin hole diameter
+
+21.993 - 22.005 (0.8659 - 0.8663)
+
+bushing clearance
+
+0.005 - 0.017 (0.0002 - 0.0007)
+
+Piston clearance to cylinder
+block
+
+0.010 - 0.030 (0.0004 - 0.0012)
+
+“Values measured at ambient temperature of 20°C (68°F)
+
+CONNECTING ROD
+
+Unit: mm (in)
+
+Center distance
+
+147.60 - 147.70 (5.8110 - 5.8149)
+
+Bend [per 100 (3.94)]
+
+Limit
+
+0.15 (0.0059)
+
+Torsion [per 100 (3.94})]
+
+Limit
+
+0.30 (0.0118)
+
+Connecting rod small end
+inner diameter
+
+23.980 - 24.000 (0.9441 - 0.9449)
+
+Piston pin bushing inner
+diameter”
+
+22.000 - 22.012 (0.8661 - 0.8666)
+
+Connecting rod big end inner
+
+diameter
+
+48.000 - 48.013 (1.8898 - 1.8903)
+
+Side clearance
+Standard
+
+0.20 - 0.35 (0.0079 - 0.0138)
+
+Limit
+
+0.40 (0.0157)
+
+*After installing in connecting rod
+
+EM-72
+===== PDF page 73 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+CRANKSHAFT
+
+Inspection and Adjustment (Cont'd)
+AVAILABLE MAIN BEARING
+
+Unit: mm (in)
+
+Main journal dia. “Dm”
+Grade No. 0
+Grade No. 1
+Grade No. 2
+Grade No. 3
+
+59.969 - 58.975 (2.3610 - 2.3612)
+59.963 - 59.969 (2.3607 - 2.3610)
+59.957 - 59.963 (2.3605 - 2.3607)
+59.951 - 53.957 (2.3603 - 2.3605)
+
+Pin journal dia. “Dp”
+Grade No. 0
+Grade No. 1
+Grade No. 2
+
+44.968 - 44.974 (1.7704 - 1.7706}
+44.962 - 44.968 (1.7702 - 1.7704)
+44.956 - 44.962 (1.7699 - 1.7702)
+
+Upper main bearing
+(With oil groove) No. Q
+
+Gy) 4 *: With oil
+
+groove
+
+Lower main bearing
+
+Center distance “r”
+
+36.61 - 36.69 (1.4413 - 1.4445}
+
+Qut-of-round (X = Y)
+
+Standard Less than 0.002 (0.0001)
+Taper (A - B}
+
+Standard Less than 0.002 (0.0001)
+Runout [TIR]
+
+Limit Less than 0.10 (0.0039)
+
+Free end play
+Standard
+
+Limit
+
+0.10 - 0.25 (0.0039 - 0.0098)
+0.30 (0.0118)
+
+I,
+
+Out-of-round (X) -
+Taper ® —-
+
+Dp
+
+SEM645
+
+EM715
+
+No. 2 (without oil groove}
+SEM175F
+No. 1
+Grade Thickness “T” Width “W" Identification
+number mm (in) mm {in} color
+2.000 - 2.003
+Black
+0 1 (0.0787 - 0.0789)
+2.003 - 2.006
+Brown
+1 | (0.0789 - 0.0790) :
+) 2.006 - 2.009 Green
+{0.0790 - 0.0791)
+2.009 - 2.012 19.9 - 20.1
+Yell
+3 (0.0791 - 0.0782) | (0.783 - 0.791) sllow
+. 2.012 - 2.015 Bie
+(0.0792 - 0.0793)
+2.015 - 2.018
+Pink
+5 | (0.0793 - 0.0794)
+2.018 - 2.021
+Purpl
+6 (0.0794 - 0.0796) urple
+Undersize
+Unit: mm (in}
+. Main journal
+Thickness diameter “Dm”
+i t bearin
+0.25 2.132 - 2.140 Grind 0 I a
+0.0098) (0.0839 - 0.0843) | Cearance is ine sp
+(©. ’ ! fied value.
+
+EM-73
+
+6]
+
+MA
+
+LG
+
+EC
+
+CL
+
+MT
+
+AT
+
+FA
+
+BR
+
+ST
+
+145
+===== PDF page 74 =====
+146
+
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+Inspection and Adjustment (Cont'd)
+MISCELLANEOUS COMPONENTS
+
+AVAILABLE CONNECTING ROD BEARING
+Connecting rod bearing
+
+Unit: mm (in)
+
+Flywheel runout [TIR]*
+Drive plate runout [TIR]"
+
+Less than 0.15 (0.0059)
+Less than 0.15 (0.0059)
+
+“Total indicator reading
+
+Bearing clearance
+
+Unit: mm (in)
+
+Grade Thickness “T” Identification
+number mm (in) color (mark)
+1.500 - 1.503
+0 {0.0591 - 0.0592) Black
+1 1.503 - 1.506 rou
+(0.0592 - 0.0593) w
+1.506 - 1.509
+2 (0.0593 - 0.0594) Green
+Undersize
+Unit: mm (in)
+
+Main bearing clearance
+Standard
+
+Limit
+
+0.012 - 0.030 (0.0005 - 0.0012)
+0.065 (0.0026)
+
+Thickness
+
+Crank pin journal
+diameter “Dp”
+
+0.25 (0.0098)
+
+1.626 - 1.634
+{0.0640 - 0.0643)
+
+Grind so that bearing
+clearance is the
+specified value.
+
+EM-74
+
+Connecting rod bearing
+clearance
+
+Standard
+
+Limit
+
+0.020 - 0.045 (0.0008 - 0.0018)
+0.070 (0.0028)
+

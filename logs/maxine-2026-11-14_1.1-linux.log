@@ -1,0 +1,12 @@
+  0.000113 ## open /dev/ttyUSB0 at 2026-11-14T12:54:43
+  0.000184 ## cmd: --dev /dev/ttyUSB0 --test-id 1.1-linux init
+  0.000225 TX 30
+  0.003730 RX cf
+  0.204241 TX ff
+  0.484663 TX ff
+  0.555082 TX ed
+  0.555430 RX 00
+  0.555481 RX 00
+  0.557900 RX 12
+  0.557965 ## init ok id=ED attempt=1 secs=0.003
+  0.557975 ## close

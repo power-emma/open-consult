@@ -1,0 +1,1643 @@
+===== PDF page 1 =====
+STEERING SYSTEM
+
+@l
+SECTION HA
+|
+EM
+LC
+CONTENTS .
+PRECAUTIONS AND PREPARATION................ccccu...c. 2 STEERING WHEEL AND STEERING COLUMN..........10 FE
+Supplemental Restraint System (SRS) “AIR Removal and Installation ...........ccccociiicciiinnnenneens 10
+BAG... vaes sree Disassembly and Assembly...........ccceeeeerrieeeenirerianes 12 GL
+Precautions for Steering System... 2 INSPECHON. .....cvoceoeereeeereceienasrsssessessrssnnsessnnsssssssssenssnns 13
+Special Service TOOIS coerce rreeens POWER STEERING GEAR AND LINKAGE ................14
+Commercial Service TOOIS .....u.cuiiisicsiciseinincias Removal and INStaNAtIoN ........eeeeeeveeeereeceerierrenenn. 14 MT
+NOISE, VIBRATION AND HARSHNESS (NVH) COMPONENES.....occeireeieerar irre sreare sree 16
+TROUBLESHOOTING... Disassembly........cocivieiniiviiinnmnnrinnee ee 17 AT
+NVH Troubleshooting Chart..............cooiiemmreriisiiiineen INSPECHION. ....eeoeeeeeeceeeeeeeeeear es tenssanse sess sseassnseeanen 18
+ON-VEHICLE SERVICE ..............ccooerreeeveeee vee ASSEIMDIY «.oeeeevvvoeoooeeeeeserseeeemssssssseesssssseseesnnessseeeerene 18
+Checking Steering Wheel Play... srssssssncenn AGIUSETIEN cere eeeereeneeeeeesseeeseessessessesesessseeeeen 23 [FA
+Checking Neutral Position on Steefing Wheel........ POWER STEERING OIL PUMP..........ocrsosooerereesssere 24
+Front Wheel TUMing ANGIE. ..c...ccssvrsivvsssvcesscs see Pre-disassembly Inspection.......cccoeerivenrinrnriiimrinncnnns 24
+Checking Gear Housing Movement ............ccceeveueennne Disassembly 25
+Checking and Adjusting Drive Belts .............c.occveeeeuee. Crm m—
+CHECKING FILA LEVE] .ovrreeeeerresssseeees sess seeseess meee IRSDEEHON. coocssrvssssssmssssessssssssosstrerrss stresses oe
+Checking FILA LEAKAGE .....eveerrvereseseceoeeessre reese esesennens ASSEMDIY cocoa r mre
+Bleeding Hydraulic System........cccevereemneniienienceneeens SERVICE DATA AND SPECIFICATIONS (SDS)
+Checking Steering Wheel Turning Force .................... General SpecificationsS........cvcceeeeeeeieeeceenrcennineasineans
+Inspection and Adjustment ............cccoriiniiiinninncnn,
+
+Checking Hydraulic System
+
+FHA
+
+EL
+
+DX
+
+1099
+===== PDF page 2 =====
+1100
+
+PRECAUTIONS AND PREPARATION
+
+Supplemental Restraint System (SRS) “AIR
+BAG”
+
+The Supplemental Restraint System “AIR BAG” used along with a seat belt, helps to reduce the risk or severity
+of injury to the driver and front passenger in a frontal collision. The Supplemental Restraint System consists
+of air bag modules (located in the center of the steering wheel and on the instrument pane! on the passen-
+ger side), a diagnosis sensor unit, warning lamp, wiring harness and spiral cable. If the vehicle is equipped
+with side air bag as the Supplemental Restraint System, the supplemental side air bag used along with the
+seat belt helps to reduce the risk or severity of injury to the driver and front passenger in a side collision. The
+supplemental side air bag consists of air bag modules (located in the outer side of front seats), satellite sensor,
+diagnosis sensor unit {which is one of components of supplemental air bags for a frontal collision), wiring
+harness, warning lamp (which is one of components of supplemental air bags for a frontal collision). Informa-
+tion necessary to service the system safely is included in the RS section in this Service Manual.
+
+WARNING:
+
+e To avoid rendering the SRS inoperative, which could increase the risk of personal injury or death
+in the event of a collision which would result in air bag inflation, all maintenance must be performed
+by an authorized NISSAN dealer.
+
+¢ Improper maintenance, including incorrect removal and installation of the SRS, can lead to per-
+sonal injury caused by unintentional activation of the system.
+
+e Do not use electrical test equipment on any circuit related to the SRS unless instructed to in this
+Service Manual. SRS wiring harnesses can be identified with with yellow harness protector or yel-
+
+low insulation tape before the harness connectors.
+
+Precautions for Steering System
+
+e Before disassembly, thoroughly clean the outside of the unit.
+e Disassembly should be done in a clean work area. it is important to prevent the internal parts from
+
+becoming contaminated by dirt or other foreign matter.
+e Place disassembled parts in order, on a parts rack, for easier and proper assembly.
+e Use nylon cloths or paper towels to clean the parts; common shop rags can leave lint that might
+
+interfere with their operation.
+eo Before inspection or reassembly, carefully clean all parts with a general purpose, non-flammable
+
+solvent.
+e Before assembly, apply a coat of recommended ATF* to hydraulic parts. Vaseline may be applied
+
+to O-rings and seals. Do not use any grease.
+® Replace all gaskets, seals and O-rings. Avoid damaging O-rings, seals and gaskets during instal-
+
+lation. Perform functional tests whenever designated.
+*: Automatic transmission fluid
+
+ST-2
+===== PDF page 3 =====
+PRECAUTIONS AND PREPARATION
+
+Special Service Tools
+
+The actual shapes of Kent-Moore tools may differ from those of special service tools illustrated here.
+
+Tool number
+(Kent-Moore No.)
+Tool name
+
+Description
+
+Kv48103400
+(See J26364)
+Torque adapter
+
+Measuring pinion rotating torque
+
+NT236
+
+EM
+
+KV48102500
+(J33814)
+Pressure gauge adapter
+
+PFa/g” 59 © @ Measuring oil pressure
+OW
+
+sn D
+PF3/8" M16 x 1.5 pitch
+
+NT542 M16 x 1.5 pitch
+ST27180001 M10 x 1.25 pitch Removing and installing steering wheel
+(J25726-A)
+Steering wheel puller zal
+29 mm 3 M8 x 1.25 pitch
+NT544 (1.14 in)
+
+HT72520000
+(J25730-A)
+Ball joint remover
+
+Removing ball joint
+
+a: 33 mm (1.30 in)
+b: 50 mm (1.97 in)
+r: R11.5 mm (0.453 in)
+
+LG
+
+EC
+
+FE
+
+CL
+
+Mv
+
+AT
+
+[FA
+
+[RUA
+
+BT
+
+NT546
+ST27091000 To oil pump To control valve Measuring oil pressure
+(26357 and J26357-10) outlet PF3/8" B
+Pressure gauge (female) PF3/8"
+(male)
+NT547 Shut-off valve
+Kv48104400 Reforming teflon ring
+« — WN
+Rack seal ring reformer
+a: 50 mm (1.97 in) dia.
+b: 36 mm (1.42 in) dia.
+NT550 Fine eating ¢: 100 mm {3.94 in)
+S§T3127S000 Measuring turning torque
+(See J25765-A)
+@ GG91030000
+(J25765-A) 1/4" Torque wrench
+Torque wrench @Q— with range of
+@ HT62940000 = VASE 59 Nem
+( — Oger to iz 20 karem
+Socket adapter © 26 in-ib)
+@ HT62900000
+( — )
+Socket adapter
+NT541
+
+HA
+
+EL
+
+ST-3
+
+1101
+===== PDF page 4 =====
+1102
+
+PRECAUTIONS AND PREPARATION
+
+Commercial Service Tools
+
+Tool name Description
+Rear oil seal drift > Installing rear oil seal
+a
+NTO063 a: 28 mm (1.10 in) dia.
+Pinion oil seal drift > Installing pinion oil seal
+a
+NTO63 a: 35 mm (1.38 in) dia.
+Oil pump attachment R21 (0.83) Welding Disassembling and assembling oil pump
+11 (0.43) dia. 12 (0.47)
+30 (1.57)
+42 (1.65)
+12 (0.47)
+95 (3.74 90 (3.54)
+his oan 15 (0.59)
+NT179 : Unit: mm (in)
+
+ST-4
+===== PDF page 5 =====
+NOISE, VIBRATION AND HARSHNESS (NVH) TROUBLESHOOTING
+
+NVH Troubleshooting Chart
+
+Use the chart below to help you find the cause of the symptom. If necessary, repair or replace these parts.
+
+I
+
+g =0 = %
+uoloss HY Ut HAN SIUVHE | xX | X x |x
+UORO8S v4 ul HAN T1d3HM VOY | XX | X xX |X
+UOROSS YH Ul HAN STHIL | Xx {x [x]|Xx
+
+uoives vy ‘v4 ul HAN NOISNIdSNS ANY IXY [x | x | x | x [x
+uoRdes v4 ul HAN 14VYHS 3AIHA | X { x | x
+gl ‘vl-1S $88U8S00] abeyu)| Bulesig x | ><
+0l-LS Uwnjod Buies)s Jo $s8uas00; 40 UoKE|EISUI Jedoidu| PY
+21-18 abewep 10 uonew.oep uwnjos Bulesig =
+9-18 uoneJouRep Jagqns Bununop x |x |x|x
+2l-18 18/8] X20] 11} JO $SOUIS00| JO UONE|RISUl Jodoidw| x |x |x
+— 129ym Bunseys Jadoidu) x |x | x
+"uonass YIN 03 Joey $89USS00| JJjag aAuq | x
+8-1S 8210} Buipl|s Roe; seab buses | x
+0-18 Aeid jesym Buuesig | x
+2-18 ebesea) pin) Jesh Bueslg | x
+81-LS Aerd pus jutof ieq possi] | x
+81-18 anbuoy Buneios Juiof [req pos-ery | x
+81-18 8210) Buibuims juiof |1eq pos-ai) | x
+1-18 weisAs alnelpAy ul iy | x
+1S [oA9] PINH | x
+| =
+oS g i}
+3|%|S|E|=
+olc (S828
+ZinI>n|S
+©]
+2 =
+ER &
+© GS < ul
+o
+2 2a 6
+Py gu
+Q ° 5 E
+5 sa 8
+$ 20 E
+E £3 3
+
+BR
+
+X: Applicable
+
+fi
+
+RS
+FA
+EL
+
+IDX
+
+i=
+
+1103
+
+ST-5
+===== PDF page 6 =====
+1104
+
+ON-VEHICLE SERVICE
+
+S8T473C|
+
+S8T474C)
+
+SMA127
+
+SST475C
+
+Checking Steering Wheel Play
+e With wheels in a straight-ahead position, check steering wheel
+play.
+Steering wheel play:
+35 mm (1.38 in) or less
+e if it is not within specification, check the following for loose or
+worn components.
+Steering gear assembly
+Steering column
+Front suspension and axle
+
+Checking Neutral Position on Steering Wheel
+
+Pre-checking
+e Make sure that wheel alignment is correct.
+Wheel alignment:
+Refer to SDS in FA section.
+e Verify that the steering gear is centered before removing the
+steering wheel.
+
+Checking
+
+1. Check that the steering wheel is in the neutral position when
+driving straight ahead.
+
+2. [Ifitis not in the neutral position, remove the steering wheel and
+reinstall it correctly.
+
+3. If the neutral position is between two teeth, loosen tie-rod lock
+nuts. Turn the tie-rods by the same amount in opposite direc-
+tions on both left and right sides.
+
+Front Wheel Turning Angle
+
+1. Rotate steering wheel all the way right and left; measure turn-
+ing angle.
+Turning angle of full turns:
+Refer to SDS in FA section.
+2. If it is not within specification, check rack stroke.
+Rack stroke “S’":
+Refer to SDS (ST-27).
+
+Checking Gear Housing Movement
+
+1. Check the movement of steering gear housing during station-
+ary steering on a dry paved surface.
+e Apply a force of 49 N (5 kg, 11 Ib) to steering wheel to check
+the gear housing movement.
+Turn off ignition key while checking.
+Movement of gear housing:
++2 mm (+0.08 in) or less
+2. If movement exceeds the limit, replace mount insulator after
+confirming proper installation of gear housing clamps.
+
+ST-6
+===== PDF page 7 =====
+ON-VEHICLE SERVICE
+
+HOT:
+50 - 80°C
+{122 - 176°F)
+
+SST476C
+
+S8T477C
+
+Checking and Adjusting Drive Belts
+Refer to “Checking Drive Belts” for “ENGINE MAINTENANCE” in
+MA section.
+
+Checking Fluid Level
+
+Check fluid level.
+
+Use the correct range of the tank depending on the fluid tempera-
+ture. Use the “HOT” range at 50 to 80°C (122 to 176°F), or the
+“COLD” range at 0 to 30°C (32 to 86°F).
+
+CAUTION:
+
+eo Do not overfill.
+eo Recommended fluid is Automatic Transmission Fluid type
+
+DEXRON™III or equivalent.
+
+Checking Fluid Leakage
+
+Check the lines for improper attachment and for leaks, cracks,
+
+damage, loose connections, chafing and deterioration.
+
+1. Run engine between idle speed and 1,000 rpm.
+
+Make sure temperature of fluid in oil tank rises to 60 to 80°C
+
+(140 to 176°F).
+
+2. Turn steering wheel right-to-left several times.
+
+3. Hold steering wheel at each “lock” position for five seconds
+and carefully check for fluid leakage.
+
+CAUTION:
+
+Do not hold the steering wheel in a locked position for more
+
+than 15 seconds.
+
+4. If fluid leakage at connectors is noticed, loosen flare nut and
+then retighten.
+
+Do not overtighten connector as this can damage O-ring,
+
+washer and connector.
+5. Check rack boots for accumulation of power steering fluid.
+
+Bleeding Hydraulic System
+
+1. Raise front end of vehicle until wheels are clear of the ground.
+2. Add fluid into oil tank to specified level. Then quickly turn steer-
+ing wheel fully to right and left and lightly touch steering stop-
+pers.
+Repeat steering wheel operation until fluid level no longer
+decreases.
+3. Start engine.
+Repeat step 2 above.
+
+ST-7
+
+Gl
+MA
+EM
+LGC
+EC
+FE
+CL,
+MT
+AT
+FA
+RA
+BR
+RS
+BT
+HA
+EL
+
+IDX
+
+1105
+===== PDF page 8 =====
+1106
+
+ON-VEHICLE SERVICE
+
+After turning
+
+360°
+
+S8T478C,
+
+SST090B|
+
+Bleeding Hydraulic System (Cont'd)
+
+e Incomplete air bleeding will cause the following to occur. When
+this happens, bleed air again.
+
+a. Air bubbles in reservoir tank
+
+b. Clicking noise in oil pump
+
+¢c. Excessive buzzing in oil pump
+
+Fluid noise may occur in the valve or oil pump. This is common
+
+when the vehicle is stationary or while turning steering wheel
+
+slowly. This does not affect performance or durability of the system.
+
+Checking Steering Wheel Turning Force
+
+1. Park vehicle on a level, dry surface and set parking brake.
+
+2. Start engine.
+
+3. Bring power steering fluid up to adequate operating tempera-
+ture. [Make sure temperature of fluid is approximately 60 to
+80°C (140 to 176°F).]
+
+Tires need to be inflated to normal pressure.
+
+4. Check steering wheel turning force when steering wheel has
+been turned 360° from the neutral position.
+
+Steering wheel turning force:
+39 N (4 kg, 9 Ib) or less
+
+5. If steering wheel turning force is out of specification, check
+rack sliding force.
+
+a. Disconnect steering column lower joint and knuckle arms from
+the gear.
+
+b. Start and run engine at idle to make sure steering fluid has
+reached normal operating temperature.
+
+c. Pull tie-rod slowly to move it from neutral position to £11.5 mm
+(20.453 in) at speed of 3.5 mm (0.138 in)/s. Check that rack
+sliding force is within specification.
+
+Rack sliding force:
+186 - 284 N (19 - 29 kg, 42 - 64 Ib)
+
+d. Check sliding force outside above range.
+
+Rack sliding force:
+Not more than 294 N (30 kg, 66 Ib)
+
+6. If rack sliding force is not within specification, overhaul steer-
+ing gear assembly.
+
+ST-8
+===== PDF page 9 =====
+ON-VEHICLE SERVICE
+
+$T27091000 and KV48102500 (J26357. J26357-10 Checking Hydraulic System
+1 and J33914)
+? Before starting, check belt tension, driving pulley and tire pressure.
+High- 1. Set Tool. Open shut-off valve. Then bleed air. Refer to “Bleed-
+
+pressure ing Hydraulic System”, ST-7.
+2. Run engine at idle speed or 1,000 rpm. @l
+
+Make sure fluid temperature in reservoir tank rises to 60 to
+80°C (140 to 176°F).
+WARNING:
+
+Warm up engine with shut-off valve fully opened. If engine is
+started with shut-off valve closed, fluid pressure in the power gj
+
+Low-pressure
+wm) : Direction of oil flow hose S5T834-C
+
+steering pump increases to maximum. This will raise fluid tem-
+
+perature abnormally.
+
+3. Check pressure with steering wheel fully turned to left and right [LG
+positions with engine idling at 1,000 rpm.
+
+CAUTION:
+
+Do not hold the steering wheel in a locked position for more EC
+
+than 15 seconds.
+
+Power steering pump maximum operating pressure: EE
+8,140 - 8,728 kPa (83 - 89 kg/cm? 1,180 - 1,266
+psi)
+e [If pressure reaches maximum operating pressure, system is cL
+OK.
+
+e |f pressure increases above maximum operating pressure,
+check power steering pump flow control valve. Refer to ST-24. MT
+
+4. If power steering pressure is below the maximum operating
+pressure, slowly close shut-off valve and check pressure
+again. AT
+
+CAUTION: :
+
+Do not close shut-off valve for more than 15 seconds.
+
+e [f pressure increases to maximum operating pressure, gear is
+damaged. Refer to “Removal and Installation”, ST-14.
+
+e If pressure remains below maximum operating pressure, pump
+is damaged. Refer to “Disassembly”, ST-25. RA
+
+5. After checking hydraulic system, remove Tool and add fluid as
+necessary. Then completely bleed air out of system. Refer to BR
+
+ST-7.
+
+RS
+
+FA
+
+FA
+
+EL
+
+ST-9 1107
+===== PDF page 10 =====
+STEERING WHEEL AND STEERING COLUMN
+
+Removal and Installation
+
+SEC. 484.488
+
+$9015.25
+
+(1.5 - 2.5,
+
+11 - 18)
+[333.39
+(34 - 4.0, 25 - 29)
+
+@
+24.29
+C2, 30,17 - 2.8, 4-5(04-05 35-43 [0 : Nem (kg-m, tb)
+: Nem (kg-m, in-b) gsT479CA
+@ Air bag module ®@ Column cover ® Steering column assembly
+@ Steering wheel @ Spiral cable ® Lower joint
+CAUTION:
+
+e¢ The rotation of the spiral cable (SRS “Air bag” component
+part) is limited. If the steering gear must be removed, set
+the front wheels in the straight-ahead direction. Do not
+rotate the steering column while the steering gear is
+removed.
+
+® Remove the steering wheel before removing the steering
+lower joint to avoid damaging the SRS spiral cable.
+
+STEERING WHEEL
+
+e Remove air bag module and spiral cable.
+Refer to “Removal — Air Bag Module and Spiral Cable”,
+“SUPPLEMENTAL RESTRAINT SYSTEM” in RS section.
+
+Special boit >]
+
+SBF812E
+
+1108 ST-10
+===== PDF page 11 =====
+STEERING WHEEL AND STEERING COLUMN
+
+Removal and Installation (Cont'd)
+
+e Align spiral cable correctly when installing steering wheel.
+
+a. Set the front wheels in the straight-ahead position.
+
+b. Make sure that the spiral cable is in the neutral position.
+The neutral position is detected by turning left 2.5 revolutions
+from the right end position. Align the two marks ( X ). al
+
+CAUTION:
+
+The spiral cable may snap due to steering operation if the MA
+cable is installed in an improper position.
+
+Also, with the steering linkage disconnected, the cable may
+snap by turning the steering wheel beyond the limited number EM
+of turns. (The spiral cable can be turned up to 2.5 turns from
+
+the neutral position to both the right and left.)
+
+Alignment mark cL
+MRS074A
+
+e Remove steering wheel with Tool. NIT
+
+AT
+
+FA
+
+SS8T480C
+
+STEERING COLUMN BR
+e Remove key interlock cable (A/T models).
+
+RS
+BT
+SST329C
+Gatos portion o When installing steering column, fingertighten all lower bracket HA
+utodt po and clamp retaining bolts; then tighten them securely. Do not
+g apply undue stress to steering column.
+| e When attaching coupling joint, be sure tightening bolt faces EL
+‘ cutout portion.
+2 4 IDX
+
+©X
+
+Lower joint
+SST800A
+
+ST-11 1109
+===== PDF page 12 =====
+1110
+
+STEERING WHEEL AND STEERING COLUMN
+
+Slit
+
+Projection
+NEL
+
+SST491C
+
+Removal and Installation (Cont'd)
+
+e Align slit of lower joint with projection on dust cover. Insert joint
+until surface A contacts surface B.
+
+CAUTION:
+
+After installation, turn steering wheel to make sure it moves
+smoothly. Ensure the number of turns are the same from the
+straight forward position to left and right locks. Be sure that
+the steering wheel is in a neutral position when driving
+
+straight ahead.
+
+Disassembly and Assembly
+
+SEC. 484+488
+
+SST698C
+(® Combination switch @ O-ring @ Steering column lower cover
+@ Snap ring ® Jacket tube assembly Column shaft assembly
+® Washer ® Spring
+
+Upper shaft
+
+SST670B
+
+e When disassembling and assembling, unlock steering lock
+with key.
+
+e Remove combination switch.
+
+eo Fnsure that rounded surface of snap ring faces toward bear-
+
+ing when snap ring is installed.
+e Install snap ring on upper shaft with a suitable tool.
+
+ST-12
+===== PDF page 13 =====
+STEERING WHEEL AND STEERING COLUMN
+
+Self-shear type screw
+
+SST741A
+
+Self-shear screw
+
+SS8T742A
+
+Unit: mm {in}
+
+15 (0.59)
+MN
+
+15 {0.59)
+
+SS8T7582B
+
+iSE=ii:
+- =, 9
+Center of joint
+
+SST334C
+
+Disassembly and Assembly (Cont'd)
+
+e Steering lock
+a. Break self-shear type screws with a drill or other appropriate
+
+tool.
+@l
+MA
+EV
+b. Install new self-shear type screws and then cut off self-shear
+type screw heads. LG
+ES
+FE
+GL
+Tilt mechanism 7
+e After installing steering column, check tilt mechanism opera-
+tion.
+AT
+FA
+Inspection BR
+
+ing column as follows and replace damaged parts.
+
+a. Check column bearings for damage or unevenness. Lubricate
+with recommended multi-purpose grease or replace steering
+column as an assembly, if necessary.
+
+b. Check jacket tube for deformation or breakage. Replace if
+necessary.
+
+e When the vehicle comes into a light collision, check length “L".
+
+Column length “L”:
+525.9 - 528.1 mm (20.70 - 20.79 in)
+
+If out of the specifications, replace steering column as an assem- HA
+
+bly.
+
+eo When steering wheel does not turn smoothly, check the steer-
+
+RS
+
+EL
+
+DX
+
+ST-13
+
+1111
+===== PDF page 14 =====
+1112
+
+POWER STEERING GEAR AND LINKAGE
+
+Removal and Installation
+
+SEC. 492
+
+(7.4 - 9.9, 54 - 72)
+® : Nem (kg-m, ft-lb)
+: Nem (kg-m, in-Ib)
+
+24 - 29
+(Jz -3.0,17 - 20
+
+@ Lower joint
+®@ Hole cover
+@ Insulator bracket
+
+SST482CD
+@ Rear cover cap @ Gear housing mounting bracket
+® Gear and linkage assembly @® Cotter pin
+® Rack mounting insulator
+
+HT72520000 CAUTION:
+
+(J25730-A) e¢ The rotation of the spiral cable (SRS “Air bag” component
+part) is limited. If the steering gear must be removed, set
+the front wheels in the straight-ahead direction. Do not
+rotate the steering column while the steering gear is
+removed.
+
+® Remove the steering wheel before removing the steering
+lower joint to avoid damaging the SRS spiral cable.
+
+eo Detach tie-rod outer sockets from knuckle arms with Tool.
+
+e When disconnecting steering shaft lower joint, follow the pro-
+
+SFA455BB cedure shown below.
+
+1) Remove carbon canister, engine mounting center member and
+front suspension stabilizer bar. Refer to FA section.
+
+2) Remove nuts for fitting the hole cover.
+
+3) Disconnect the lower joint while shifting the hole cover.
+
+ST-14
+===== PDF page 15 =====
+POWER STEERING GEAR AND LINKAGE
+Removal and Installation (Cont'd)
+
+e Install pipe connector.
+¢ Observe specified tightening torque when tightening high-
+pressure and low-pressure pipe connectors. Excessive tight-
+ening will damage threads of connector or O-ring.
+Connector tightening torque:
+dD Low-pressure side Gl
+27 - 39 N'm (2.8 - 4.0 kg-m, 20 - 29 ft-lb)
+@ High-pressure side
+15 - 25 N'm (1.5 - 2.5 kg-m, 11 - 18 ft-Ib) MA
+e The O-ring in low-pressure pipe connector is larger than that
+in high-pressure connector. Take care to install the proper
+SST1368 O-ring. EM
+e Initially, tighten nut on tie-rod outer socket and knuckle arm to
+29 to 39 N'm (3 to 4 kg-m, 22 to 29 ft-lb). Then tighten further |G
+to align nut groove with first pin hole so that cotter pin can be
+
+[a
+
+installed.
+CAUTION: EC
+Tightening torque must not exceed 49 N-m (5 kg-m, 36 ft-lb).
+FE
+GL
+
+arm SST824A
+
+e Before removing lower joint from gear, set gear in neutral ___
+(wheels in straight-ahead position). After removing lower joint, M1
+put matching mark on pinion shaft and pinion housing to record
+neutral position. o
+
+eo To install, set left and right dust boots to equal deflection. AT
+Attach lower joint by aligning matching marks of pinion shaft
+
+and pinion housing. =a
+RA
+e Tighten gear housing mounting bracket bolts in the order BR
+shown.
+RS
+040.60,0.0.0.6
+Ne ~
+T 5
+hasan Secure tightening Br
+SST1378B|
+FA
+EL
+IDX
+
+ST-15 1113
+===== PDF page 16 =====
+POWER STEERING GEAR AND LINKAGE
+
+Components
+
+SEC. 492
+
+pa
+
+®0 39 - 59]
+(4.0 - 6.0, 29 - 43) 5 Pr] BE
+
+[@ 20-26 |_—
+
+(2.0 - 2.7, 14 - 20)
+
+Of aX)
+| @ QD @EI |
+@ [0] 59 - 74 o Zan @ )
+(6.0 - 7.5, 43 - 54)
+
+£ or he 58 - 72)
+o 80
+@I[O) 78 - 98
+
+NY (8.0 - 10.0, 58 - 72)
+®@
+
+: Nem (kg-m, ft-ib)
+
+834
+
+: Lubrication points
+{With automatic
+transmission fluid
+type DEXRON™|||
+or equivalent)
+
+Do not disassemble.
+
+[0 29-39
+(3.0 - 4.0, 22 - 29)
+
+SST483CC
+® Rear cover cap @ Spring disc @ Rack oil seal
+@ Rear housing assembly a Washer @ End cover assembly
+® Pinion seal ring ®@ Spring seat @ Boot clamp
+@ Pinion assembly @ Retainer @ Dust boot
+® O-ring @® Gear housing @ Boot band
+® Shim @® Center bushing @ Lock plate
+@ Pinion oil seal @ Rack oil seal @ Tie-rod inner socket
+Lock nut @® Rack assembly @ Tie-rod outer socket
+®@ Adjusting screw @ Rack seal ring @ Cotter pin
+@® Spring @ O-ring @ Gear housing tube
+
+1114
+
+ST-16
+===== PDF page 17 =====
+POWER STEERING GEAR AND LINKAGE
+
+Kv48103400
+(See J26364)
+
+ST3127S000
+(See J25765-A)
+
+SS8T484C
+
+|
+
+Rack seal
+
+ring
+
+S8T052C]
+
+-»
+
+Extension bar
+
+Rack oil seal
+Center bushing
+
+-
+
+===
+
+29 mm socket
+
+SST472A
+
+Disassembly
+1. Prior to disassembling, measure pinion rotating torque. Record
+the pinion rotating torque as a reference.
+eo Before measuring, disconnect gear housing tube and
+drain fluid. @l
+e Use soft jaws when holding steering gear housing. Handle
+gear housing carefully, as it is made of aluminum. Do not
+grip cylinder in a vise. MA
+2. Remove pinion gear.
+Be careful not to damage pinion gear when removing pinion EM
+seal ring.
+
+3. Remove tie-rod outer sockets and boots.
+4. Loosen tie-rod inner socket by prying up staked portion, and [| ¢
+remove socket.
+5. Remove retainer.
+6. Remove pinion assembly. EC
+7. Use a 2 to 2.5 mm (0.079 to 0.098 in) diameter drill to com-
+pletely remove staked portion of gear housing end.
+FE
+GL
+8. Remove end cover assembly with a suitable tool. NIT
+
+9. Draw out rack assembly.
+10. Remove rack seal ring.
+e Using a heat gun, heat rack seal to approximately 40°C AT
+
+(104°F).
+® Remove rack seal ring.
+Be careful not to damage rack. BA
+
+11. Remove center bushing and rack oil seal using tape wrapped gg
+socket and extension bar.
+
+Do not scratch inner surfaces of pinion housing. El
+ST
+
+RS
+
+BY
+
+A
+
+EL
+
+ST-17 1115
+===== PDF page 18 =====
+1116
+
+POWER STEERING GEAR AND LINKAGE
+
+=) Outer -
+
+Cc A ball joint
+
+= A
+RS ®
+Inner
+ball joint
+Measuring point 3 C
+
+S§5T468C
+
+Rack seal ring
+
+S8T083B
+
+KV48104400
+t -
+
+Position and
+secure seal.
+
+Rack seal ring
+
+SST885B,
+
+Inspection
+
+Thoroughly clean all parts in cleaning solvent or automatic trans-
+mission fluid type DEXRON™III or equivalent. Blow dry with com-
+pressed air, if available.
+
+BOOT
+
+e¢ Check condition of boot. If cracked excessively, replace it.
+
+e Check boots for accumulation of power steering fluid.
+
+RACK
+
+Thoroughly examine rack gear. If damaged, cracked or worn,
+replace it.
+
+PINION ASSEMBLY
+® Thoroughly examine pinion gear. If pinion gear is damaged,
+
+cracked or worn, replace it.
+e® Check that all bearings roll freely. Ensure that balls, rollers and
+
+races are not cracked, pitted or worn,
+
+GEAR HOUSING CYLINDER
+
+Check gear housing cylinder bore for scratches or other damage.
+Replace if necessary.
+
+TIE-ROD OUTER AND INNER SOCKETS
+e Check ball joints for swinging force.
+Tie-rod outer and inner ball joints swinging force “A”:
+Refer to SDS (ST-27).
+e Check ball joint for rotating torque.
+Tie-rod outer ball joint rotating torque “B’":
+Refer to SDS (ST-27).
+e Check ball joints for axial end play.
+Tie-rod outer and inner ball joints axial end play “C”:
+Refer to SDS (ST-27).
+e Check condition of dust cover. If cracked excessively, replace
+outer tie-rod.
+
+Assembly
+
+1. Using a heat gun, heat new teflon rack seal ring to approxi-
+mately 40°C (104°F). Then place it onto rack.
+
+2. Using Tool, compress rack seal ring securely on rack.
+Always insert Tool from the rack gear side.
+
+ST-18
+===== PDF page 19 =====
+POWER STEERING GEAR AND LINKAGE
+Assembly (Cont'd)
+
+3. Insert new rack oil seal.
+® Place plastic film into rack oil seal to prevent damage by
+
+rack teeth.
+eo Do not forget to remove plastic film after rack oil seal is
+J— positioned properly. al
+a. 7 e Make sure lips of rack oil seal face each other.
+on $2 MA
+Rack oil seal
+SST201A EM
+4. Install center bushing and rack oil seal with rack assembly.
+LG
+EC
+FE
+CL
+
+SST830A
+
+5. Insent rack oil seal and end cover assembly to rack. Then
+tighten end cover assembly. MT
+
+Rack oil seal
+
+End cover assembly A
+A
+
+SST3218
+
+6. Fasten end cover assembly to gear housing by staking. BR
+
+2-3 mm
+(0.08 - 0.12 in)
+
+>)
+
+> RS
+
+End cover
+BT
+
+Gear assembly
+
+housing
+SST073B
+
+7. Set rack gear in neutral position.
+Rack stroke “S’:
+Refer to SDS (ST-27). a
+
+SSTO86BA
+
+ST-19 117
+===== PDF page 20 =====
+POWER STEERING GEAR AND LINKAGE
+Assembly (Cont'd)
+
+8. Coat seal lip of new pinion oil seal with multi-purpose grease.
+Install it into pinion housing of gear with a suitable tool.
+
+Make sure lip of oil seal faces up when installed.
+
+Suitable tool
+
+Oil seal
+
+SST381A
+
+9. Install pinion bearing adjusting shim(s).
+
+eo Whenever pinion assembly, gear housing and rear housing are
+disassembled, replace shim(s) with new ones. Always use the
+same number of shim(s) when replacing.
+
+SS8T074B
+
+10. Install new pinion seal ring (made of Teflon) on pinion gear
+assembly.
+
+e Using a heat gun, heat pinion seal ring to approximately 40°C
+(104°F) before installing it onto pinion gear assembly.
+
+e Make sure pinion seal ring is properly settled in valve groove.
+
+SST0858
+
+Gear housin 11. Apply a coat of multi-purpose grease to needle bearing roller
+9 and oil seal lip.
+
+SSTO75B,
+
+12. Install pinion assembly to rear housing.
+Be careful not to damage pinion oil seal.
+
+SST552]
+
+1118 ST-20
+
+===== PDF page 21 =====
+POWER STEERING GEAR AND LINKAGE
+Assembly (Cont'd)
+
+13. Apply a coat of multi-purpose grease to new rear oil seal lip
+
+Rear oil seal
+before installing rear housing.
+Rear housing
+@l
+Gear housing
+MA
+SST133C, EM
+14. Ensure that the rack is centered. Install rear cover cap so that
+Center of rack protrusion of rear housing cover is positioned as shown in fig- 1G
+ure.
+Be careful not to damage worm ring and oil seal. ”
+FE
+Protrusion
+58T485C GL.
+: 15. Install diaphragm spring into gear housing.
+r Painted whit —
+nC "Me |e Always install retainer, spring washer and diaphragm spring in MT
+that order.
+Washer eo Make sure convex end (painted white) of diaphragm spring AT
+= faces outward when installing.
+Retainer — (7 16. Install retainer spring and adjusting screw temporarily.
+FA
+SST0878B .
+17. Install new iock plate. BR
+e Attach lock plate @ to side rod inner socket @ .
+e Apply locking sealant to inner socket threads @ .
+Screw inner socket into rack @ and tighten to specified torque.
+e¢ Clinch two places of lock plate at rack’s groove.
+-® CAUTION:
+To prevent scratching the boot, remove burrs from lock plate. RS
+Clinch.
+[ST
+S8T135C
+18. Tighten outer socket lock nut. HA
+Tie-rod length “L”:
+Refer to SDS (ST-27). BL
+; L IDX
+SST093B|
+
+ST-21 1119
+===== PDF page 22 =====
+1120
+
+POWER STEERING GEAR AND LINKAGE
+
+SSTO86BA
+
+SST967A
+
+98 N (10 kg, 22 Ib) 98 N (10 kg,
+
+|
+
+Right turn
+
+22 Ib)
+
+SST440A
+
+position
+
+Allowable
+
+SST486C
+
+SST126B
+
+Assembly (Cont'd)
+19. Measure rack stroke.
+
+Rack stroke “S’":
+Refer to SDS (ST-27).
+
+20. Before installing boot, coat the contact surfaces between boot
+and tie-rod with grease.
+
+21. Install boot clamps.
+
+e To install, wrap boot clamp around boot groove twice. To
+tighten clamp, place a screwdriver through both rings. Twist
+rings 4 to 4-1/2 turns while pulling with a force of approx. 98 N
+(10 kg, 22 Ib).
+
+e Twist boot clamp in the direction shown in figure at left.
+
+e Locate twisted end of boot clamp in the range shown. (This will
+prevent interference with other parts.)
+
+e After twisting boot clamp, bend twisted and diagonally so it
+does not contact boot.
+
+ST-22
+===== PDF page 23 =====
+POWER STEERING GEAR AND LINKAGE
+
+Lock nut Adjustment
+Apply sealant. , . R
+Nr Adjust pinion rotating torque as follows:
+
+1. Set rack to the neutral position without fluid in the gear.
+2. Coat the adjusting screw with locking sealant and screw it in.
+3. Lightly tighten lock nut. ll
+4. Tighten adjusting screw to a torque of 4.9 to 5.9 N-m (50 to 60
+kg-cm, 43 to 52 in-ib).
+5. Loosen adjusting screw, then retighten it to 0.2 N'-m (2 kg-cm, [MA
+1.7 in-Ib).
+Adjusting screw ) SST719C EM
+6. Move rack over its entire stroke several times.
+K¥48102400 731273000 7. Measure pinion rotating torque within the range of 180° from |G
+
+See J26364 See J25765-A n
+(See Y Nam | ) neutral position.
+
+Stop the gear at the point of maximum torque.
+
+8. Loosen adjusting screw, then retighten it to 4.9 N-m (50 kg-cm, EG
+43 in-Ib).
+
+9. Loosen adjusting screw by 40° to 60°.
+
+cL
+
+SS8T484C
+
+10. Prevent adjusting screw from turning, and tighten lock nut to
+specified torque. MT
+
+AT
+FA
+11. Check rack sliding force on vehicle as follows: BR
+a. Install steering gear onto vehicle, but do not connect tie-rod to
+knuckle arm.
+b. Connect all piping and fill with steering fluid.
+c. Start engine and bleed air completely.
+d. Disconnect steering column lower joint from the gear.
+e. Keep engine at idle and make sure steering fluid has reached [RS
+
+normal operating temperature.
+
+Pull tie-rod slowly to move it from neutral position to +11.5 mm
+
+(0.453 in) at speed of 3.5 mm (0.138 in)/s. Check that rack BT
+
+sliding force is within specification.
+
+SST0908 Rack sliding force: 186 - 284 N (19 - 29 kg, 42 - 64 Ib)
+
+g. Check sliding force outside above range. RIA
+
+Rack sliding force: Not more than 294 N (30 kg, 66 Ib)
+
+eo If rack sliding force is not within specification, readjust by
+repeating adjustment procedure from the beginning. =
+
+e If rack sliding force is still out of specification after
+readjustment, gear assembly needs to be replaced.
+
+Fel
+
+ST-23 1121
+===== PDF page 24 =====
+1122
+
+POWER STEERING OIL PUMP
+
+SEC. 490
+36 - 50
+(2 (3.7 - 5.1, 27 - 37)
+
+@ [OO 16-21
+
+J (1.6 - 2.1,
+
+49 - &9
+(5.0 - 7.0, 36 - 51) [C] 54 - 68
+
+@[C 69-78 @
+(7.0 - 8.0, 51 - s) Ay
+Do not disassemble. 4
+14 - 18
+(1.4 - 1.8, 10 - Wg
+
+© © Nem (kg-m, ft-Ib) N
+: Lubrication paints Fe NM 3) | a A
+
+(With automatic
+
+27 - 35
+transmission fluid &® ©
+type DEXRON™II| eo
+
+(2.8 - 3.6, 20 - 26)
+
+or equivalent) 51-4232-43 23-31) SST532CC
+@ Pulley @ Vane @ Copper washer
+® Snap ring @ Rotor @ Joint
+® Drive shaft assembly @ Pin @ Connector
+@ Oil seal @@ Camring @ Copper washer
+® Bracket @® Gasket @ Hose
+® Front housing (® Rear housing @ Eye bolt
+@ Spring @ O-ring @ Adjusting bracket
+O-ring (Inner) @ Suction pipe @ Adjusting bolt
+O-ring (Outer) (@® Spring @ Lock bolt
+@ Front side plate @ Control valve
+
+Pre-disassembly Inspection
+
+Disassemble the power steering oil pump only if the following items
+are found.
+
+oe Qil leak from any point shown in the figure
+
+e Deformed or damaged pulley
+
+e Poor performance
+
+SST984A
+
+ST-24
+
+===== PDF page 25 =====
+POWER STEERING OIL PUMP
+
+Disassembly
+
+CAUTION:
+e Parts which can be disassembled are strictly limited.
+Never disassemble parts other than those specified.
+
+eo Disassemble in as clean a place as possible. @!
+e Clean your hands before disassembly.
+e Do not use rags; use nylon cloths or paper towels.
+e Follow the procedures and cautions in the Service [iA
+Manual.
+eo When disassembling and reassembling, do not let foreign
+matter enter or contact the parts. EV
+¢ Remove snap ring, then draw drive shaft out.
+Be careful not to drop drive shaft. LG
+Extension bar EG
+Drive shaft EE
+CL
+
+SST010B
+eo Remove oil seal.
+Be careful not to damage front housing. Iv
+AT
+[FA
+RA
+SST034A
+e Remove connector. BR
+
+Be careful not to drop flow control valve.
+
+RS
+Flow control valve SSTO36A
+Inspection HA
+Inspect each component part for wear, deformation, scratches and
+cracks. If damage is found, repiace the part. EL
+IDX
+
+ST-25 1123
+===== PDF page 26 =====
+1124
+
+POWER STEERING OIL PUMP
+
+SSTO38A
+
+Rear housing side Front housing side
+
+SST289A
+
+Flat portion
+
+Round portion
+
+SST843A
+
+1 Front housing side
+
+J Rear housing side
+
+S8T472C
+
+Assembly
+
+Assemble oil pump, noting the following instructions.
+
+Make sure O-rings and oil seal are properly installed.
+
+Always install new O-rings and oil seal.
+
+Be careful of oil seal direction.
+
+Cam ring, rotor and vanes must be replaced as a set if neces-
+sary.
+
+Coat each part with ATF when assembling.
+
+Pay attention to the direction of rotor.
+
+When assembling vanes to rotor, rounded surfaces of vanes
+must face cam ring side.
+
+Insert pin @ into pin groove (ID of front housing and rotor.
+Then install cam ring @ as shown at left.
+
+ST-26
+===== PDF page 27 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+General Specifications
+
+Applied model All
+Steering model Power steering
+Steering gear type PR26AC Gl
+Steering overall gear ratio 16.7
+Turns of steering wheel
+{Lock to lock) 285 MA
+Steering column type Collapsible, tilt
+EM
+Inspection and Adjustment LG
+GENERAL STEERING GEAR AND LINKAGE
+Steering wheel axial play 0 (0) Steering gear type PR26AC
+mm (in) Tie-rod outer ball joint “A”
+Steering wheel play mm (in) 35 (1.38) or less Co 6.59 - 63.7 ES
+Swinging force (0.672 - 6.497
+Movement of gear housing _ in 12 (£0.08) or less at cotter pin hole N (kg, Ib} 1.481 - 14.320)
+Rotating torque “B” 03-29 CL
+N-m (kg-cm, in-Ib} (3-30,26-26.0)
+Axial end play “C” mm (in) 0.5 (0.020) or less
+STEERING COLUMN : — MT
+Tie-rod inner ball joint “A”
+. 6.4-50.0
+Applied model Al Swinging force" N (kg, Ib) (0.65 - 5.10,
+Steering column 525.9 - 528.1 1.44 - 11.24) AT
+length “L mm {in) (20.70 - 20.79) Axial end play “C” mm (in) 0 (0)
+Tie-rod standard length “L” mm (in) 202.7 (7.98) EA
+L *: Measuring point [¢: 172 mm (6.77 in)}
+|
+e *
+BR
+Center of joint SST334C 5
+SST488C
+Rack stroke “S” mm (in) | 70.5 (2.776) BS]
+BT
+} iY ET HA
+SA }
+S S
+— ~ El.
+SSTO86BA
+IDX
+ST-27 1125
+===== PDF page 28 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+Inspection and Adjustment (Cont'd)
+POWER STEERING
+
+Rack sliding force N (kg, Ib)
+Under normal operating
+oil pressure at rack speed of 3.5
+mm {0.138 in)/s
+
+Range within 11.5 mm
+
+186 - 284
++0.453 in) from the neutral
+tion ) (19 - 29, 42 - 64)
+
+E t ab Not more than
+xcept above range 294 (30, 66)
+
+Retainer adjustment
+Adjusting screw
+
+Initial tightening torque ] ]
+Nm (kg-cm, in-lpy | 4-2 = 5:9 (50 - 60, 43 - 52)
+
+Retightening torque 02 @, 1.7)
+after loosening am
+
+Tightening torque after
+
+gear has settled 4.9 (50. 43)
+
+Returning angle degree 40° - 60°
+
+Steering wheel turning force
+(Measured at ong full turn from the 30 (4, 9) or less
+neutral position)
+
+N (kg, ib)
+Fluid capacity (Approximate) _
+? (US a, Imp a) 1.1 (1-1/8, 1)
+Oil pump maximum pressure 8,140 - 8,728
+
+kPa (kg/cm?, psi) (83 - 89, 1,180 - 1,266)
+
+1126 ST-28

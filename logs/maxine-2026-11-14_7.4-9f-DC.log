@@ -1,0 +1,17 @@
+  0.000082 ## open /dev/ttyUSB0 at 2026-11-14T14:39:19
+  0.000114 ## cmd: --test-id 7.4-9f-DC --ecu DC raw-cmd 9F F0
+  0.000132 TX 30
+  0.002932 RX cf
+  0.203386 TX ff
+  0.483858 TX ff
+  0.554373 TX dc
+  0.554723 RX 00
+  0.554773 RX 00
+  0.563429 RX 23
+  0.563492 ## init ok id=DC attempt=1 secs=0.009
+  0.563506 TX 9f f0
+  1.063905 RX fe
+  2.064921 ## raw-cmd tx=9f f0 rx=fe
+  2.064955 TX 30
+  2.067942 RX cf
+  2.067971 ## close

@@ -1,0 +1,5082 @@
+===== PDF page 1 =====
+BRAKE SYSTEM
+
+1034
+
+soon BR
+
+CONTENTS
+
+PRECAUTIONS AND PREPARATION.............ccceceeeinnne 2
+Supplemental Restraint System (SRS) “AIR
+BAG eee eee eee taetaereeans 2
+Precautions for Brake System.........cocoeeevievevceirennenenne 2
+Commercial Service Tools ......ccccvvveeieiiierieeieee ees 2
+NOISE, VIBRATION AND HARSHNESS (NVH)
+TROUBLESHOOTING ..........oooiei erence cence 3
+NVH Troubleshooting Chart..........cceeeeevvvveeeeecierrrennnees 3
+CHECK AND ADJUSTMENT .......ccocciirirereecee cee 4
+Checking Brake Fluid Level.......ccccoeiiiiveiiiieericcineennns 4
+Checking Brake Line ..c....ccoceiiiiienneiicre cece 4
+Changing Brake Fluid.......ccouveeieeeeiriencciireriienes inne 4
+Bleeding Brake System ....cceeiiiccecciieeeeecceeeieeeeen, 4
+BRAKE HYDRAULIC LINE/CONTROL VALVE.............. 5
+Brake Hydraulic Lin€ .......ccceeeeicieeeecceee cece, 5
+Dual Proportioning Valve ........ccceceevvvrirnnneeeieeeceeeeennes 6
+BRAKE PEDAL AND BRACKET...........cccecoeeeieeeennee 7
+Removal and Installation ..............oeeecieiiicecceenneee. 7
+INSPECHION. ..c.oiiiiiii ice eeereeeeee en raee ees 7
+AdjUSTMENT eerie 7
+MASTER CYLINDER..........cccocoririeicireneriivene ctr ernree anes 8
+Removal... ceric reese eres 8
+Disassembly......cc.crcveeiriiieeir cece 8
+[1087 oT<T ox to] o FOR 9
+ASSEMBLY iirc 9
+INSLAAtION «coerce reer 9
+BRAKE BOOSTER/VACUUM HOSE.............ccccvverennne 10
+Brake BOOSter....cc..ovviiieiciniere reine 10
+Vacuum HOSE «oer 11
+FRONT DISC BRAKE ..............oeeevieeeeeireceer cca, 12
+Pad Replacement ........cccceeiiiieeeeervcvee cece 12
+COMPONENT ceieeeiieeieeeieeee econ seers ste ranean sanes 13
+REMOVAL... rrr creer 13
+DisasSembBIy.......ccoiviiicr ee 13
+Inspection — Caliper ....cccovvreeeciiininieeree een 14
+Inspection — ROOr....cocieiiicreicie rere eeaenis 14
+FART 1 0] oO 15
+INStallation .....eece eee 15
+Brake Burnishing Procedure............cccovevnnvnicrnnenne. 15
+
+REAR DISC BRAKE............ooiiieiiriieeeeeeeeree ieee 16
+Pad Replacement ..........ccoeeeeiiieenniircccccincn nein 16
+COMPONENT coir e eer cesarean sane 17
+REMOVAL...uriiiiiee cetera eee 18
+DiISASSEMDBIY...eccuiiiireeerieiee ieee reece 18
+Inspection — Caliper ....ceeeevieeece irre 19
+Inspection — Rotor... 20
+ASSEMDIY weiner eee 20
+INStAllAtON ceiver eee 21
+
+PARKING BRAKE CONTROL .........ccccceiiicriirieee 22
+Removal and Installation ........ccoeccevee ieee eens 22
+Fg] oT =T ox 1 o FPS 23
+AIUSITMENT cceeri cc ereee 23
+
+ANTI-LOCK BRAKE SYSTEM........ccoeviiieenreiceeen 24
+PUIPOSE cece meee eer ee sree en esse nee enna 24
+OPEIALON cece eerie cre 24
+ABS Hydraulic Circuit .c.vvveuvveie irene eee 24
+System Components ......ccocceeerieeieriencreeeniecnn 25
+System Description... 25
+Removal and Installation ...........cceeeenieeieniiiieicines 27
+
+TROUBLE DIAGNOSES ............cccciiiieeciecinriican 29
+How to Perform Trouble Diagnoses for Quick
+and Accurate Repair......cccviivinverrrevinisnncinn ene, 29
+Preliminary Check.......cccoovviriiiiiniinicniien eee 30
+Component Parts and Harness Connector
+LOCALION ceive iirerirr erie e eer eens acess ern ese emmane 31
+Circuit Diagram for Quick Pinpoint Check.........c..o.... 32
+Wiring Diagram — ABS —.....cooiiii eee, 33
+Self-diagnosis ...cocoeeeeeeeiieeir ieee eee 36
+CONSULT «cece eevee eens 39
+CONSULT Inspection Procedure.........oeeiveevieverivvennnn. 40
+Ground Circuit Check ....uvvurecvveeieeiieeereeeeeeeeracecenn 45
+
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC
+
+ITEMS... eects 46
+Diagnostic Procedure 1 (ABS actuator solenoid
+VAIVE) ceriiri cirri cesar eset aera rne een ennn een 46
+Diagnostic Procedure 2 (Wheel sensor or rotor) ...... 48
+Diagnostic Procedure 3 (Motor relay or motor)......... 50
+Diagnostic Procedure 4 (Solenoid valve relay)......... 53
+===== PDF page 2 =====
+CONTENTS (conta)
+
+Diagnostic Procedure 5 (Low voltage) .........ccccueen..... 55
+Diagnostic Procedure 6 (Control unit) ....................... 56
+TROUBLE DIAGNOSES FOR SYMPTOMS ................. 57
+
+Diagnostic Procedure 7 (Pedal vibration and
+
+(01 I UP 57
+Diagnostic Procedure 8 (Long stopping distance) ....58
+Diagnostic Procedure 9 (Unexpected pedal
+
+BCHONY «eee eee etree errs eases rrr 58
+Diagnostic Procedure 10 {ABS does not work.) ....... 59
+
+Diagnostic Procedure 11 (ABS works frequently.) ....59
+Diagnostic Procedure 12 (Warning lamp does
+
+not work before engine stars.)........ccoeeveiriiniiinnnn 60
+Diagnostic Procedure 13 (Warning lamp stays on
+COMINUOUSIY.) eerie 61
+SERVICE DATA AND SPECIFICATIONS (SDS) .......... 64
+General Specifications. ........cc.oveeeiviniccmnenesccrennis 64
+Inspection and Adjustment ......ccoeiiiiiiien ie 64
+
+When you read wiring diagrams:
+
+ELECTRICAL INCIDENT”.
+
+e Read Gl section, “HOW TO READ WIRING DIAGRAMS".
+
+® See EL section, “POWER SUPPLY ROUTING” for power distribution circuit.
+
+When you perform trouble diagnoses, read Gl section, “HOW TO FOLLOW FLOW CHART
+IN TROUBLE DIAGNOSES” and “HOW TO PERFORM EFFICIENT DIAGNOSIS FOR AN
+
+MA
+
+LG
+
+ST
+
+1035
+===== PDF page 3 =====
+1036
+
+PRECAUTIONS AND PREPARATION
+
+Supplemental Restraint System (SRS) “AIR
+BAG”
+
+The Supplemental Restraint System “AiR BAG” used along with a seat belt, helps to reduce the risk or severity
+of injury to the driver and front passenger in a frontal collision. The Supplemental Restraint System consists
+of air bag modules (located in the center of the steering wheel and on the instrument panel on the passen-
+ger side), a diagnosis sensor unit, warning lamp, wiring harness and spiral cable.
+
+If the vehicle is equipped with side air bag as the Supplemental Restraint System, the supplemental side air
+
+bag used along with the seat belt helps to reduce the risk or severity of injury to the driver and front passen-
+
+ger in a side collision. The supplemental side air bag consists of air bag modules (located in the outer side
+of front seats), satellite sensor, diagnosis sensor unit (which is one of components of supplemental air bags
+for a frontal collision), wiring harness, warning lamp (which is one of components of supplemental air bags for
+
+a frontal collision). Information necessary to service the system safely is included in the RS section of this
+
+Service Manual.
+
+WARNING:
+
+e To avoid rendering the SRS inoperative, which could increase the risk of personal injury or death
+in the event of a collision which would result in air bag inflation, all maintenance must be performed
+by an authorized NISSAN dealer.
+
+¢ Improper maintenance, including incorrect removal and installation of the SRS, can lead to per-
+sonal injury caused by unintentional activation of the system.
+
+eo Do not use electrical test equipment on any circuit related to the SRS unless instructed to in this
+Service Manual. SRS wiring harnesses can be identified with yellow harness protector or yellow
+insulation tape before the harness connectors.
+
+Precautions for Brake System
+
+eo Recommended fluid is brake fluid “DOT 3”.
+
+Never reuse drained brake fluid.
+
+Be careful not to splash brake fluid on painted areas.
+
+To clean or wash all parts of master cylinder, disc brake
+
+caliper and wheel cylinder, use clean brake fluid.
+
+e Never use mineral oils such as gasoline or kerosene. They
+will ruin rubber parts of the hydraulic system.
+
+e Use flare nut wrench when removing and installing brake
+
+Commercial service tool
+
+tube.
+SBRE8SC| e Always torque brake lines when installing.
+WARNING:
+
+eo Clean brake pads and shoes with a waste cloth, then wipe
+with a dust collector.
+
+Commercial Service Tools
+
+Tool name Description
+
+@ Flare nut crowfoot Removing and installing each brake piping
+
+@ Torque wrench
+
+NT360 a: 10 mm (0.39 in)
+
+Brake fluid pressure gauge Measuring brake fluid pressure
+
+NT151
+
+BR-2
+===== PDF page 4 =====
+NOISE, VIBRATION AND HARSHNESS (NVH) TROUBLESHOOTING
+
+NVH Troubleshooting Chart
+
+Use the chart below to help you find the cause of the symptom. If necessary, repair or replace these parts.
+
+MT
+
+— =
+3 = B 9 8 wm T
+uonoes |g ul MAN ONIHIALS | X |X | X
+UOHI8S Yd ut HAN TITHM QY0Y | x | x | x
+Uondss y4 ui HAN S3HIL |X |x |x
+uonoes vy ‘v4 ut HAN NOISN3dSNS ANY IXY | x | x | x
+uoRo8s 4 ul HAN 1dVHS 3AIFQ | x | X
+02 ‘1-49 UONELIBA SSBUMOIU) J0JOY x
+— ISN. 10j0Y =
+— uonodseysp Jojoy x
+— UOIBLLIOIBP 10j0Y >
+02 ‘vi-48 NOUN 1010Y >
+—_ obewep Jojoy >
+— souelequ J0joY >| x
+LL 'el-dg pabewep swiyg | x
+91 ‘Z2L-Hg EBM UBASUN - sped | x
+91 ‘Zl-ug pefiewep - sped | x
+o
+i=)
+©
+p=}
+2
+=
+2|6|6
+4 w
+gg X
+> 2x ©
+a Iw
+© OQ
+2 o 9 §
+5 oi 2
+5 3 2 g
+oc ao 5)
+
+X: Applicable
+
+AT
+
+FA
+
+BT
+
+FA
+
+EL
+
+IDX
+
+1037
+
+BR-3
+===== PDF page 5 =====
+1038
+
+CHECK AND ADJUSTMENT
+
+(I Max. line
+=
+ox] 1 line
+MIN
+SBR451D
+
+SBR389C
+
+SBR419C
+
+SBR995
+
+SBR419C
+
+Checking Brake Fluid Level
+
+e Check fluid level in reservoir tank. It should be between Max
+and Min lines on reservoir tank.
+
+e If fluid level is extremely low, check brake system for leaks.
+
+eo Release parking brake lever and see if brake warning lamp
+goes off. If not, check brake system for leaks.
+
+Checking Brake Line
+
+CAUTION:
+
+If leakage occurs around joints, retighten or, if necessary,
+
+replace damaged parts.
+
+1. Check brake lines (tubes and hoses) for cracks, deterioration
+or other damage. Replace any damaged parts.
+
+2. Check for oil leakage by fully depressing brake pedal while
+engine is running.
+
+Changing Brake Fluid
+
+CAUTION:
+
+¢ Refill with new brake fluid “DOT 3’.
+
+eo Always keep fluid level higher than minimum line on res-
+ervoir tank.
+
+eo Never reuse drained brake fluid.
+
+eo Be careful not to splash brake fluid on painted areas; it
+
+may cause paint damage. if brake fluid is splashed on
+
+painted areas, wash it away with water immediately.
+
+Clean inside of reservoir tank, and refill with new brake fluid.
+
+Connect a vinyl tube to each air bleeder valve.
+
+Drain brake fluid from each air bleeder valve by depressing
+
+brake pedal.
+
+Refill until brake fluid comes out of each air bleeder valve.
+
+Use same procedure as in bleeding hydraulic system to refill
+
+brake fluid. Refer to “Bleeding Brake System” (BR-4).
+
+>on
+
+Bleeding Brake System
+
+CAUTION:
+
+oe Carefully monitor brake fluid level at master cylinder dur-
+ing bleeding operation.
+
+e Fill reservoir with new brake fluid “DOT 3”. Make sure it
+is full at all times while bleeding air out of system.
+
+oe Place a container under master cylinder to avoid spillage
+of brake fluid.
+
+e For models with ABS, turn ignition switch OFF and dis-
+connect ABS actuator connectors or battery ground cable.
+
+eo Bleed air in the following order.
+Right rear brake — Left front brake — Left rear brake — Right
+
+front brake
+
+Connect a transparent vinyl tube to air bleeder valve.
+
+Fully depress brake pedal several times.
+
+With brake pedal depressed, open air bleeder valve to release
+air.
+
+Close air bleeder valve.
+
+Release brake pedal slowly.
+
+Repeat steps 2. through 5. until clear brake fluid comes out of
+air bieeder valve.
+
+OE Wi
+
+BR-4
+===== PDF page 6 =====
+BRAKE HYDRAULIC LINE/CONTROL VALVE
+
+Brake Hydraulic Line
+
+Gl
+Front disc brake Rear disc brake
+MA
+= |
+SI
+Actuator ©) EM
+O : Flare nut 15 - 18 (1.5 - 1.8, 11 - 13}
+m : Connecting bolt
+Dual proportioning valve : 17 - 20 (1.7 - 2.0, 12 - 14) LC
+Master cylinder [2 : Nem (kg-m, ft-Ib)
+tr —= Primary line
+: mea Secondary line EG
+FE
+MBR151A @
+REMOVAL ur
+CAUTION: ’
+
+eo Be careful not to splash brake fluid on painted areas; it
+may cause paint damage. If brake fluid is splashed on pT
+painted areas, wash it away with water immediately.
+
+e All hoses must be free from excessive bending, twisting
+and pulling. FA
+
+1. Connect vinyl tube to air bleeder valve.
+2. Drain brake fluid from each air bleeder valve by depressing _
+brake pedal. RA
+SBR992| 3, Remove flare nut connecting brake tube and hose, then with-
+draw lock spring.
+4. Cover openings to prevent entrance of dirt whenever discon-
+necting brake line.
+INSPECTION ST
+Check brake lines (tubes and hoses) for cracks, deterioration or
+other damage. Replace any damaged parts. RS
+BY
+INSTALLATION A
+CAUTION:
+eo Refill with new brake fluid “DOT 3”. El
+oe Never reuse drained brake fluid.
+1. Tighten all flare nuts and connecting bolts.
+Specification: IDX
+
+Flare nut
+
+15-18 N-m (1.5 - 1.8 kg-m, 11 - 13 ft-lb)
+Connecting bolt
+Commercial service tool 17 - 20 N'm (1.7 - 2.0 kg-m, 12 - 14 ft-lb)
+
+SBR686C
+
+BR-5 1039
+===== PDF page 7 =====
+BRAKE HYDRAULIC LINE/CONTROL VALVE
+
+I= Brake fluid pressure
+
+SBR822BA
+
+Brake fluid pressure gauge
+
+SBR823BA
+
+1040
+
+Brake Hydraulic Line (Cont'd)
+2. Refill until new brake fluid comes out of each air bleeder valve.
+3. Bleed air. Refer to “Bleeding Brake System” (BR-4).
+
+Dual Proportioning Valve
+
+INSPECTION
+
+CAUTION:
+
+e¢ Carefully monitor brake fluid level at master cylinder.
+
+eo Use new brake fluid “DOT 3”.
+
+e Be careful not to splash brake fluid on painted areas; it
+may cause paint damage. If brake fluid is splashed on
+paint areas, wash it away with water immediately.
+
+1. Connect Tool to air bleeders of front and rear brakes on either
+LH and RH side.
+
+2. Bleed air from the Tool.
+
+3. Check fluid pressure by depressing brake pedal.
+
+Unit; kPa (kg/cm?, psi)
+
+Applied pressure (Front brake) 5,394 (55, 782)
+2,452 - 2,844
+Output pressure (Rear brake) (25 - 29, 356 - 412)
+
+4. Bleed air after disconnecting the Tool. Refer to “Bleeding
+Brake System” (BR-4).
+
+BR-6
+===== PDF page 8 =====
+BRAKE PEDAL AND BRACKET
+
+Removal and Installation
+
+SEC. 465470
+
+ASCD cancel switch
+[0] 12-15 (1.2- 15,9 - 11)
+
+Stop lamp switch
+[O] 12-15 (1.2- 1.5, 9-11)
+
+Clevis pin ~g
+
+[O) 13-16 (1.3 - 1.6, 9 - 12)
+
+[CO] : Nem (kg-m, ft-Ib) [O] 13-16 (1.3 - 1.6, 9 - 12)
+
+SBR109E
+
+Lock nut Inspection
+
+[316 - 22 (1.6 - 2.2, 12 - 16) Check brake pedal for following items.
+e Brake pedal bend
+e Clevis pin deformation
+
+So e Crack of any welded portion
+- Adjustment
+
+Check brake pedal free height from dash reinforcement panel.
+
+Stop lamp Adjust if ry.
+C® switch and just if necessary
+ASCD switch H: Free height
+[0] 12-15 Refer to SDS (BR-64).
+(12 - 15, D: Depressed height
+9-11) Refer to SDS (BR-64).
+
+Under force of 490 N (50 kg, 110 Ib)
+with engine running
+
+Fl
+ol Floor C,, C,: Clearance between pedal stopper and
+
+Dash carpet threaded end of stop lamp switch and ASCD
+insulator switch
+
+Dash
+pash panel SATII TAL ALLL ANS naulator 0.3 - 1.0 mm (0.012 - 0.039 in)
+Dash A: Pedal free play
+1-3 mm (0.04 - 0.12 in)
+
+reinforcement
+panal
+
+[0] : Nem (kg-m, ft-lb)
+SBR712D
+
+1. Loosen lock nut and adjust pedal free height by turning brake
+booster input rod. Then tighten lock nut.
+
+— Stays inside
+2. Check pedal free play.
+- Make sure that stop lamps go off when pedal is released.
+
+~~ 3. Check brake pedal’s depressed height while engine is running.
+If lower than specification, check brake system for leaks, accu-
+mulation of air or any damage to components (master cylinder,
+wheel cylinder, etc.); then make necessary repairs.
+
+Clevis
+
+Input 7
+
+Lock nut
+SBR824B
+
+MA
+EM
+LG
+EC
+
+FE
+
+MT
+AT
+
+FA
+
+ST
+
+RS
+
+BT
+
+RA
+
+EL
+
+IDX
+
+BR-7 1041
+===== PDF page 9 =====
+1042
+
+MASTER CYLINDER
+
+SEC. 460
+
+(1 Reservoir cap
+
+@ Oil filter
+
+(® Reservoir tank
+
+@ Seal
+
+® Cylinder body
+
+® O-ring
+
+@ Piston stopper
+Secondary piston assembly
+(@ Primary piston assembly
+49 Stopper cap
+
+DD 25 - 29 (0.25 - 0.3, 21.7 - 26.0)
+
+~~ -15(12-15,9-11)
+
+EF) : Brake fluid
+[@ : Nem (kg-m, ft-lb)
+
+: N-m (kg-m, in-Ib}
+
+MBR153AB
+
+Removal
+
+CAUTION:
+
+Be careful not to splash brake fluid on painted areas; it may
+
+cause paint damage. If brake fluid is splashed on painted
+
+areas, wash it away with water immediately.
+
+1. Connect a vinyl tube to air bleeder valve.
+
+2. Drain brake fluid from each air bleeder valve, depressing brake
+pedal to empty fluid from master cylinder.
+
+3. Remove brake pipe flare nuts.
+
+4. Remove master cylinder mounting nuts.
+
+Disassembly
+1. Bend claws of stopper cap outward.
+
+SBR938A
+
+BR-8
+===== PDF page 10 =====
+MASTER CYLINDER
+Disassembly (Cont’d)
+
+aN 2. Remove valve stopper while piston is pushed into cylinder.
+
+’ 3. Remove piston assemblies.
+If it is difficult to remove secondary piston assembly, gradu-
+ally apply compressed air through fluid outlet.
+
+4. Draw out reservoir tank. al
+
+Inspection
+Check for the following items.
+Replace any part if damaged.
+
+MA
+
+SBRsic Master cylinder: EM
+® Pin holes or scratches on inner wall.
+Piston:
+Secondary piston e Deformation of or scratches on piston cups. LG
+— E®
+Assembly
+Primary piston 1. Insert secondary piston assembly. Then insert primary piston
+assembly. EE
+
+e¢ Pay attention to alignment of secondary piston slit with
+valve stopper mounting hole of cylinder body.
+
+CL
+SBR354C
+
+2. Install stopper cap. NIT
+Before installing stopper cap, ensure that claws are bent
+inward.
+3. Push reservoir tank seals into cylinder body. AT
+4. Push reservoir tank into cylinder body.
+
+FA
+
+SBRI940A
+
+5. Install valve stopper while piston is pushed into cylinder. EX
+
+Installation ST
+CAUTION:
+eo Refill with new brake fluid “DOT 3”. BS
+
+eo Never reuse drained brake fluid.
+1. Place master cylinder onto brake booster and secure mount-
+ing nuts lightly. BT
+
+2. Torque mounting nuts.
+$BR2228 0): 12-15 N'm (1.2 - 1.5 kg-m, 9 - 11 ft-lb)
+
+3. Fill up reservoir tank with new brake fluid. HA
+
+4. Plug all ports on master cylinder with fingers to prevent air
+suction while releasing brake pedal.
+
+5. Have driver depress brake pedal slowly several times until no [EL
+air comes out of master cylinder.
+
+6. Fit brake lines to master cylinder.
+
+7. Tighten flare nuts. OX
+
+16-18 Nm (1.5 - 1.8 kg-m, 11 - 13 ft-lb)
+8. Bleed air from brake system. Refer to “Bleeding Brake
+
+System” (BR-4).
+
+SBR704C
+
+BR-9 1043
+===== PDF page 11 =====
+1044
+
+BRAKE BOOSTER/VACUUM HOSE
+
+SBRO0ZA
+
+Second
+
+7
+
+oA
+
+SBR365AA
+
+SEC. 470
+
+J Snap pin ~
+NN .
+
+=]
+
+(1.2 - 159-11)
+
+~ Gasket
+
+“Gs.
+
+(1.3 - 1.5,
+
+Clevis pin 2-12)
+
+a booster
+
+© Nem (kg-m, ft-ID)
+SBR232CB
+
+Output rod length
+
+~ SBR281A
+
+Brake Booster
+ON-VEHICLE SERVICE
+
+Operating check
+
+e Stop engine and depress brake pedal several times. Check
+that pedal stroke does not change.
+
+e Depress brake pedal, then start engine. If pedal goes down
+slightly, operation is normal.
+
+Airtight check
+
+e Start engine, and stop it after one or two minutes. Depress
+brake pedal several times slowly. The pedal should go further
+down the first time, and then it should gradually rise thereaf-
+
+ter.
+
+e Depress brake pedal while engine is running, and stop engine
+with pedal depressed. The pedal stroke should not change
+after holding pedal down for 30 seconds.
+
+REMOVAL
+
+CAUTION:
+
+e Be careful not to splash brake fluid on painted areas; it
+may cause paint damage. If brake fluid is splashed on
+painted areas, wash it away with water immediately.
+
+eo Be careful not to deform or bend brake pipes, during
+removal of booster.
+
+INSPECTION
+
+Output rod length check
+1. Apply vacuum of -66.7 kPa (-500 mmHg, -19.69 inHg) to
+brake booster with a handy vacuum pump.
+2. Check output rod length.
+Specified length:
+
+10.275 - 10.525 mm (0.4045 - 0.4144 in)
+
+INSTALLATION
+
+CAUTION:
+
+e Be careful not to deform or bend brake pipes, during
+installation of booster.
+
+Replace clevis pin if damaged.
+
+Refill with new brake fluid “DOT 3”.
+
+Never reuse drained brake fluid.
+Take care not to damage brake booster mounting bolt
+
+thread when installing. Due to the acute angle of
+installation, the threads can be damaged with the dash
+
+panel.
+
+BR-10
+===== PDF page 12 =====
+BRAKE BOOSTER/VACUUM HOSE
+
+Approx. 125 mm (4.92 in)
+
+Clevis
+~ SBR1168
+
+More than 24 mm
+(0.94 In)
+
+Connect hose until it contacts
+
+protrusion on vacuum tube.
+SBR225B
+
+IRE
+
+Intake manifold Brake booster
+side side
+
+SBR498A
+
+SBRY43A
+
+Brake Booster (Cont'd)
+
+1. Before fitting booster, temporarily adjust clevis to dimension
+
+shown.
+
+Fit booster, then secure mounting nuts (brake pedal bracket to
+
+master cylinder) lightly.
+
+2
+3. Connect brake pedal and booster input rod with clevis pin.
+4
+
+Secure mounting nuts.
+
+Specification: 13 - 16 N-m (1.3 - 1.6 kg-m, 9 - 12 ft-ib)
+Install master cylinder. Refer to “Installation” in “MASTER MA
+
+on
+
+CYLINDER” (BR-9).
+
+6. Bleed air. Refer to “Bleeding Brake System” (BR-4).
+
+Vacuum Hose
+
+~ REMOVAL AND INSTALLATION
+
+CAUTION:
+
+EM
+
+LC
+
+When installing vacuum hoses, pay attention to the following EGC
+
+points.
+
+e Do not apply any oil or lubricants to vacuum hose and
+
+check valve,
+
+¢ [nsert vacuum tube into vacuum hose as shown.
+
+eo Install check valve, paying attention to its direction.
+
+INSPECTION
+Hoses and connectors
+
+Check vacuum lines, connections and check valve for airtightness,
+improper attachment chafing and deterioration.
+
+Check valve
+
+Check vacuum with a vacuum pump.
+
+GL
+iT
+AT
+FA
+if
+ST
+RS
+BT
+
+RA
+
+Connect to booster
+side
+
+Vacuum should exist.
+
+EL
+
+Connect to engine
+side
+
+Vacuum should not exist.
+
+BR-11
+
+1045
+===== PDF page 13 =====
+1046
+
+FRONT DISC BRAKE
+
+SBRY76B
+
+SBRY32C
+
+Pad Replacement
+
+WARNING:
+Clean brake pads with a vacuum dust collector to minimize the
+hazard of airborne particles or other materials.
+
+CAUTION:
+
+When cylinder body is open, do not depress brake pedal
+because piston will pop out.
+
+Be careful not to damage piston boot or get oil on rotor.
+Always replace shims when replacing pads.
+
+If shims are rusted or show peeling of the rubber coat,
+replace them with new shims.
+
+It is not necessary to remove connecting bolt except for
+disassembly or replacement of caliper assembly. In this
+case, suspend cylinder body with wire so as not to stretch
+brake hose.
+
+Remove master cylinder reservoir cap.
+Remove pin bolt.
+Open cylinder body upward. Then remove pad with retainers,
+inner and outer shims.
+Standard pad thickness:
+11 mm (0.43 in)
+Pad wear limit:
+2.0 mm (0.079 in)
+
+Carefully monitor brake fluid level because brake fluid will
+return to reservoir when pushing back piston.
+
+BR-12
+===== PDF page 14 =====
+FRONT DISC BRAKE
+
+Component
+SEC. 440
+CL25VB Ble pa The 16 - 23) to sliding portion
+
+[0] 72 - 97 (7.3 - 9.9, 53 - 72) @l
+
+? MA
+
+EM
+
+ae 17-20
+
+{1.7 - 2.0, 12 - 14)
+
+LG
+
+ve EO etons buns omns pos | EC
+BTS . Rubber grease
+: Brake fluid FE
+ol or 0.9, 61 - 78) XX] @ : Nem (kg-m, ft-Ib)
+: Nem (kg-m, in-ib) ssrroen| CL
+
+@ Main pin Pad retainer (#® Bleed valve
+(® Pin boot ® Outer pad @® Cylinder body MT
+@ Torque member fixing bolt @ Outer shim (#® Piston seal
+@ Torque member @ Connecting bolt @ Piston o
+® Shim cover 7) Copper washer @® Piston boot A li
+® Inner shim @ Main pin bolt @®@ Pad return spring
+@ Inner pad :
+FA
+Removal
+WARNING: RA
+Clean brake pads with a vacuum dust collector to minimize the
+hazard of airborne particles or other materials.
+Remove torque member fixing bolts and connecting bolt.
+it is not necessary to remove connecting bolt except for dis-
+assembly or replacement of caliper assembly. In this case,
+suspend caliper assembly with wire so as not to stretch brake
+hose.
+RS
+BT
+SBR973B
+Disassembly Lo
+WARNING:
+Do not place your fingers in front of piston. EL
+CAUTION:
+Do not scratch or score cylinder wall. IDX
+1. Push out piston with piston boot with compressed air.
+2. Remove piston seal with a suitable tool.
+SBR772
+
+BR-13 1047
+===== PDF page 15 =====
+1048
+
+FRONT DISC BRAKE
+
+SBR219C
+
+Inspection — Caliper
+
+CYLINDER BODY
+
+e® Check inside surface of cylinder for score, rust, wear, damage
+or presence of foreign materials. If any of the above conditions
+are observed, replace cylinder body.
+
+e® Minor damage from rust or foreign materials may be eliminated
+by polishing surface with a fine emery paper. Replace cylinder
+body if necessary.
+
+CAUTION:
+Use brake fluid to clean. Never use mineral oil.
+
+PISTON
+
+CAUTION:
+
+Piston sliding surface is plated. Do not polish with emery
+paper even if rust or foreign materials are stuck to sliding
+surface.
+
+Check piston for score, rust, wear, damage or presence of foreign
+materials. Replace if any of the above conditions are observed.
+
+SLIDE PIN, PIN BOLT AND PIN BOOT
+
+Check for wear, cracks or other damage. Replace if any of the
+above conditions are observed.
+
+Inspection — Rotor
+
+RUBBING SURFACE
+Check rotor for roughness, cracks or chips.
+
+RUNOUT
+1. Secure rotor to wheel hub with at least two nuts (M12 x 1.25).
+2. Check runout using a dial indicator.
+Make sure that wheel bearing axial end play is within the
+specifications before measuring. Refer to “Front Wheel
+Bearing” in FA section.
+Maximum runout:
+0.08 mm (0.0031 in)
+3. If the runout is out of specification, find minimum runout posi-
+tion as follows:
+a. Remove nuts and rotor from wheel hub.
+b. Shift the rotor one hole and secure rotor to wheel hub with
+nuts.
+¢. Measure runout.
+d. Repeat steps a. to ¢. so that minimum runout position can
+be found.
+4. If the runout is still out of specification, turn rotor with on-car
+brake lathe (“MAD, DL-8700”, “AMMCQO 700 and 705” or
+
+equivalent).
+
+BR-14
+===== PDF page 16 =====
+FRONT DISC BRAKE
+
+Inspection — Rotor (Cont'd)
+THICKNESS
+Thickness variation (At least 8 positions):
+Maximum 0.01 mm (0.0004 in)
+If thickness variation exceeds the specification, turn rotor with on-
+car brake lathe.
+Rotor repair limit:
+20.0 mm (0.787 in)
+
+Boot
+
+Piston seal
+
+Piston
+
+Cylinder body
+SBR574
+
+Assembly
+
+1. Insert piston seal into groove on cylinder body.
+
+2. With piston boot fitted to piston, insert piston boot into groove
+on cylinder body and install piston.
+
+3. Properly secure piston boot.
+
+Installation
+
+CAUTION:
+
+e Refill with new brake fluid “DOT 3".
+
+® Never reuse drained brake fluid.
+
+1. Install brake hose to caliper securely.
+
+2. Install all parts and secure ali bolts.
+
+3. Bleed air. Refer to “Bleeding Brake System” (BR-4).
+
+SBRY80B
+
+Brake Burnishing Procedure
+
+When experiencing soft brake pedal feel at very low mileage, or
+
+after replacing the rotor, burnish the brake pad contact surfaces
+
+according to the following procedures.
+
+CAUTION:
+
+Only perform this procedure under safe road and traffic con-
+
+ditions. Use extreme caution.
+
+1. Drive the vehicle on a straight smooth road at 50 km/h (31
+MPH).
+
+2. Use medium brake pedal/foot effort to bring the vehicle to a
+complete stop from 50 km/h (31 MPH). Adjust brake pedal/foot
+pressure such that vehicle stopping time equals 3 fo 5 sec-
+
+onds.
+
+3. To cool the brake system, drive the vehicle at 50 km/h (31
+MPH} for 1 minute without stopping.
+
+4. Repeat steps 1 to 3 10 times or more to complete the burnish-
+ing procedure.
+
+BR-15
+
+MA
+
+EM
+
+LC
+
+EC
+
+GL
+
+MIT
+
+AY
+
+FA
+
+RS
+
+BT
+
+HA
+
+1049
+===== PDF page 17 =====
+1050
+
+REAR DISC BRAKE
+
+SBR641
+
+Commercial
+service tool
+
+SBR868C
+
+Pad Replacement
+
+WARNING:
+Clean brake pads with a vacuum dust collector to minimize the
+
+‘hazard of airborne particles or other materials.
+CAUTION:
+
+wn =
+
+oa
+
+6.
+
+When cylinder body is open, do not depress brake pedal
+because piston will pop out.
+
+Be careful not to damage piston boot or get oil on rotor.
+Always replace shims in replacing pads.
+
+If shims are rusted or show peeling of rubber coat, replace
+them with new shims.
+
+It is not necessary to remove connecting bolt except for
+disassembly or replacement of caliper assembly. In this
+case, suspend cylinder body with wire so as not to stretch
+brake hose.
+Remove master cylinder reservoir cap.
+Remove brake cable mounting bolt and lock spring.
+Release parking brake control lever, then disconnect cable
+from the caliper.
+Remove upper pin bolt.
+Open cylinder body downward. Then remove pad retainers,
+and inner and outer shims.
+Standard pad thickness:
+10 mm (0.39 in)
+Pad wear limit:
+1.5 mm (0.059 in)
+
+When installing new pads, push piston into cylinder body by
+gently turning piston clockwise, as shown.
+
+Carefully monitor brake fluid level because brake fluid will
+return to reservoir when pushing back piston.
+
+BR-16
+===== PDF page 18 =====
+REAR DISC BRAKE
+
+Component
+
+SEC. 441
+
+@®[@] 7-9 (0.7 - 0.9, 61 - 78)
+[0] 22 - 31 (2.2 - 3.2, 16 - 23)
+
+OI
+
+{ 2p
+
+.
+S
+
+®] 17-20
+
+(1.7 - 2.0,
+12 - 14)
+
+[0] 25 - 29 (2.5 - 3.0, 18 - 22)
+
+®
+
+-—-@ : PBC (Poly Butyl Cuprysil)
+s grease or silicone-based
+© grease point
+
+®: Rubber grease point
+®: Brake fluid point
+
+: Nem (kg-m, in-1b)
+
+[0] : Nem (kg-m, ft-lb)
+
+GD ER @ to sliding portion
+
+@{C) as - 52 (3.9 - 5.3, 28 - 38)
+(0). i=.) ® to pad contact area
+
+SBR708D
+
+MA
+
+EM
+
+LC
+
+EC
+
+CL
+
+MT
+
+AT
+
+SEASIOISECR ORS ORT EER Oe)
+
+Nut
+
+Washer
+
+Return spring
+Parking brake lever
+Gam boot
+
+Cam
+
+Brake hose
+Connecting bolt
+Copper washer
+Bleed screw
+
+Pin boit
+
+Cable mounting bracket
+Cylinder
+
+Strut
+
+SESE IESE OR SE SESE SE SEROE ED)
+
+O-ring
+
+Push rod
+Key plate
+Ring C
+
+Seat
+
+Spring
+Spring cover
+Ring B
+Piston seal
+Ring A
+Spacer
+Wave washer
+Spacer
+
+Ball bearing
+
+BR-17
+
+Adjusting nut
+Cup
+
+Piston
+
+Dust seal
+
+Inner shim
+Inner pad
+
+Outer pad
+Outer shim
+
+Pin
+
+Pin boot
+
+Pad retainer
+Torque member
+Torque member fixing bolt
+
+DPR OO
+
+[FA
+
+1051
+===== PDF page 19 =====
+1052
+
+REAR DISC BRAKE
+
+SBR939C
+
+Commercial
+service tool
+
+SBR646
+
+Tr SBR889,
+
+SBR088B
+
+Removal
+
+WARNING:
+
+Clean brake pads with a vacuum dust collector to minimize the
+hazard of airborne particles or other materials.
+
+1. Remove brake cable mounting bolt and lock spring.
+2. Release parking brake control lever, then disconnect cable
+
+from the caliper.
+3. Remove torque member fixing bolts and connecting bolt.
+
+It is not necessary to remove connecting bolt except for dis-
+assembly or replacement of caliper assembly. In this case,
+suspend caliper assembly with wire so as not to stretch brake
+
+hose.
+
+Disassembly
+
+1. Remove piston by turning it counterclockwise with suitable
+commercial service tool or long nose pliers.
+
+2. Pry off ring A from piston with suitable pliers and remove
+adjusting nut.
+
+3. Disassemble cylinder body.
+
+a. Pry off ring B with suitable pliers, then remove spring cover,
+spring and seat.
+
+b. Pry off ring C, then remove key plate, push rod and rod.
+
+BR-18
+===== PDF page 20 =====
+REAR DISC BRAKE
+
+— SBR656
+
+SBR877
+
+Disassembly (Cont'd)
+c. Remove piston seal.
+Be careful not to damage cylinder body.
+
+4. Remove return spring, nut and lever.
+
+Inspection — Caliper
+
+CAUTION:
+
+Use brake fluid to clean cylinder. Never use mineral oil.
+CYLINDER BODY
+
+e Check inside surface of cylinder for score, rust, wear, damage
+or presence of foreign materials. If any of the above conditions
+are observed, replace cylinder body.
+
+e Minor damage from rust or foreign materials may be eliminated
+by polishing surface with a fine emery paper.
+
+Replace cylinder body if necessary.
+
+TORQUE MEMBER
+Check for wear, cracks or other damage. Replace if necessary.
+
+PISTON
+
+CAUTION:
+Piston sliding surface is plated. Do not polish with emery
+paper even if rust or foreign matter is stuck to sliding surface.
+
+Check piston for score, rust, wear, damage or presence of foreign
+
+materials.
+Replace if any of the above conditions are observed.
+
+PIN AND PIN BOOT
+
+Check for wear, cracks or other damage.
+Replace if any of the above conditions are observed.
+
+BR-19
+
+MA
+EM
+LC
+EC
+FE
+GL
+MT
+AT
+[FA
+=
+
+ST
+
+1053
+===== PDF page 21 =====
+1054
+
+REAR DISC BRAKE
+
+SBR219C
+
+ne
+
+Adjusting nut
+
+SBR892
+
+SBR893
+
+Ring C
+
+Key plate E59
+
+Push rod
+
+Rod —
+
+SBR878
+
+Inspection — Rotor
+
+RUBBING SURFACE
+Check rotor for roughness, cracks or chips.
+RUNOUT
+1. Secure rotor to wheel hub with two nuts (M12 x 1.25).
+2. Check runout using a dial indicator.
+Make sure that axial end play is within the specifications
+before measuring. Refer to “Rear Wheel Bearing” in RA sec-
+tion.
+3. Change relative positions of rotor and wheel hub so that runout
+iS minimized.
+Maximum runout:
+0.15 mm (0.0059 in)
+
+THICKNESS
+Rotor repair limit:
+
+Standard thickness
+9 mm (0.35 in)
+
+Minimum thickness
+8 mm (0.31 in)
+
+Thickness variation (At least 8 portions)
+Maximum 0.02 mm (0.0008 in)
+
+Assembly
+
+1. Install cup in the specified direction.
+
+2. Fit push rod into square hole in key plate. Also match convex
+portion of key plate with concave portion of cylinder.
+
+3. Install ring C with a suitable tool.
+
+BR-20
+===== PDF page 22 =====
+REAR DISC BRAKE
+
+Ring BES
+Spring cover oT
+
+=,
+sorna{Z]
+=
+
+Seat—=)
+
+Commercial
+service toot
+
+Ring B —&3
+Spring cover 90
+
+=
+Spring
+=
+
+Seat
+
+SBR879
+
+Ring A —&O
+Spacer —37
+
+Wave washer —&
+Spacer —I5%3
+
+Bali bearing —&
+
+Adjuster £
+
+Cup —&
+
+-)
+
+Piston Ww
+
+SBR877
+
+Assembly (Cont'd)
+
+4, Install seat, spring, spring cover and ring B with suitable press
+
+and drift.
+
+5. Install cup, adjuster, bearing, spacers, washers and ring A with
+
+a suitable tool.
+
+6. Fit lever and tighten nut.
+7. Fit return spring in the order shown.
+
+Installation
+
+CAUTION:
+
+e Refill with new brake fluid “DOT 3”.
+
+¢ Never reuse drained brake fluid.
+
+1. Install brake hose to caliper securely.
+
+2. Install all parts and secure all bolts.
+
+3. Bleed air. Refer to “Bleeding Brake System” (BR-4).
+
+BR-21
+
+LC
+
+Ee
+
+FE
+
+CL
+
+nr
+
+AT
+
+FA
+
+1055
+===== PDF page 23 =====
+PARKING BRAKE CONTROL
+
+1056
+
+SEC. 443
+
+Rear cable assembly
+
+3.2 - 4.3 (0.33 - 0.44, 28.6 - 38.2)
+
+8 - 11 {0.8 - 1.1, 69 - 96)
+[O]16 - 20 (1.6 - 2.0, 12 - 14)
+Control lever
+
+Front cable
+
+53)
+TT =]
+
+Rear cable assembly
+
+32-43
+
+(0.33 - 0.44, 28.6 -
+
+4
+
+xX
+
+3.2 - 4.3 (0.33 - 0.44, 28.6 - 38.2)
+[@]3.2 - 4.3 (0.33 - 0.44, 2856 - 38.2)
+
+[®]3.2 - 4.3 (0.33 - 0.44, 28:6 - 38.2)
+
+: Nem (kg-m, in-lb)
+
+®) : Nem (kg-m, ft-Ib)
+MBR152A
+
+Warning switch
+connector
+
+SBR444B|
+
+Removal and Installation
+
+1. To remove parking brake cabie, first remove center console.
+2. Disconnect warning switch connector.
+3. Remove bolts, slacken off and remove adjusting nut.
+
+4. Remove parking brake cable lock plate.
+
+BR-22
+
+===== PDF page 24 =====
+PARKING BRAKE CONTROL
+
+Parking brake lever
+
+Stopper bolt
+
+SBR264B
+
+SBR943C
+
+Inspection
+
+1. Check control lever for wear or other damage. Replace if nec-
+essary.
+
+2. Check wires for discontinuity or deterioration. Replace if nec-
+essary.
+
+3. Check warning lamp and switch. Replace if necessary.
+
+4. Check parts at each connecting portion and, if found deformed
+or damaged, replace.
+
+Adjustment
+
+Pay attention to the following points after adjustment.
+
+a. There is no drag when control lever is being released.
+
+b. Parking brake lever returns to stopper bolt when control lever
+for rear disc brake models is released.
+
+1. Loosen parking brake cable.
+
+2. Depress brake pedal fully more than 5 times.
+
+3. Operate control lever 10 times or more with a full stroke (213
+mm).
+
+4. Adjust control lever by turning adjusting nut.
+
+5. Pull control lever with specified amount of force. Check iever
+stroke and ensure smooth operation.
+
+Number of notches: 10 - 11 [196 N (20 kg, 44 Ib)]
+6. Bend warning lamp switchplate. Warning lamp should come on
+
+when lever is pulled “A” notches. It should go off when the
+
+lever is fully released.
+Number of “A” notches: 1
+
+@
+
+ERM
+
+LC
+
+EC
+
+[FE
+
+cL
+
+BR-23 1057
+===== PDF page 25 =====
+ANTI-LOCK BRAKE SYSTEM
+
+Purpose
+
+The ABS consists of electronic and hydraulic components. It allows for control of braking force so that lock-
+ing of the wheels can be avoided.
+
+The ABS:
+
+1) Ensures proper tracking performance through steering wheel operation.
+
+2) Enables obstacles to be avoided through steering wheel operation.
+
+3) Ensures vehicle stability by preventing flat spins.
+
+Operation
+
+® When the vehicle speed is less than 10 km/h (6 MPH) this system does not work.
+
+eo The Anti-Lock Brake System (ABS) has self-test capabilities. The system turns on the ABS warning lamp
+for 1 second after turning the ignition switch ON. The system performs another test the first time the vehicle
+reaches 6 km/h (4 MPH). A mechanical noise may be heard as the ABS performs a self-test. This is a
+normal part of the self-test feature. If a malfunction is found during this check, the ABS warning lamp will
+
+come on.
+e During ABS operation, a mechanical noise may be heard. This is a normal condition.
+
+ABS Hydraulic Circuit
+
+el
+Rear
+Rear LH Front RH wheel Front LH wheel RH wheel
+wheel
+SBR984D
+
+@ Inlet solenoid valve @ Pump @ Outlet valve
+@ Outlet sotenoid valve ® Motor ® Bypass check valve
+@ Reservoir Inlet valve ©@ Damper
+
+1058 BR-24
+===== PDF page 26 =====
+ANTI-LOCK BRAKE SYSTEM
+
+System Components
+
+Dual proportioning vaive
+
+Actuator
+
+Front wheel sensors
+Front left wheel sensor connector
+Front right wheel sensor connector
+
+Rear wheel sensors
+Rear left wheel sensor connector
+
+Rear right wheel sensor connector
+Control unit
+
+Warning lamp
+
+SBRI19CB
+Control unit System Description
+Magnet "Sars
+Bensof | Low carban stee! SENSOR
+Magnetic flux J Coil The sensor unit consists of a gear-shaped sensor rotor and a sen-
+Sensor rotor sor element. The element contains a bar magnet around which a
+
+RAC coil is wound. The sensor is installed on the back side of the brake
+7" Moving Time of one tooth rotor. Sine-wave current is generated by the sensor as the wheel
+rotates. The frequency and voltage increase(s) as the rotating
+vi LN speed increases.
+
+: I ive force
+V: Induced electromot SBR1248
+
+CONTROL UNIT
+
+The control unit computes the wheel rotating speed by the signal
+current sent from the sensor. Then it supplies a DC current to the
+actuator solenoid valve. It also controls ON-OFF operation of the
+valve relay and motor relay. If any electrical malfunction should be
+detected in the system, the warning lamp is turned on. In this
+condition, the ABS will be deactivated, and the vehicle's brake
+system reverts to normal operation.
+
+SBR920C
+
+SBR922C
+
+LG
+EC
+FE
+CL
+MT
+AT
+FA
+RA
+
+ST
+
+HA
+
+EL
+
+BR-25 1059
+===== PDF page 27 =====
+ANTI-LOCK BRAKE SYSTEM
+
+System Description (Cont'd)
+
+SBR786D
+
+ABS actuator operation
+
+ACTUATOR
+The actuator contains:
+
+An electric motor and pump
+
+Two relays
+
+Eight solenoid valves, each inlet and outlet for
+
+— LH front
+— RH front
+— LH rear
+— RH rear
+
+These components control the hydraulic circuit. The ABS control
+unit directs the actuator to increase, hold or decrease hydraulic
+pressure to all or individual wheels.
+
+Qutlet solenoid
+
+Inlet solenoid
+valve vaive
+. Master cylinder brake fluid pressure is directly trans-
+Normal brake rat
+Speration OFF (Open) OFF (Closed) mitted to caliper via the inlet solenoid valve.
+Pressure hold ON (Closed) OFF (Closed) Hydraulic circuit is shut off to hold the caliper brake
+fluid pressure.
+Pressure Caliper brake fluid is sent to reservoir via the outlet
+ABS operation decrease ON (Closed) ON (Open) solenoid valve. Then it is pushed up to the master
+cylinder by pump.
+Pr M i i ist itt
+essure OFF (Open) OFF (Closed) aster cylinder brake fluid pressure is transmitted to
+increase caliper.
+
+1060
+
+BR-26
+===== PDF page 28 =====
+ANTI-LOCK BRAKE SYSTEM
+
+Removal and Installation
+
+CAUTION:
+
+Be careful not to damage sensor edge and sensor rotor teeth.
+When removing the front or rear wheel hub assembly, first
+remove the ABS wheel sensor from the assembly. Failure to
+do so may result in damage to the sensor wires making the
+
+sensor inoperative.
+
+WHEEL SENSORS MA
+
+SEC. 476
+
+Front wheel sensor
+
+(1.8 - 24 kg-m, 13 - 17 ft-lb)
+
+EM
+
+Rear wheel sensor
+
+LG
+
+EC
+
+(2.5 - 3.4 kg-m, 18 - 25 ft-lb)
+
+|
+
+SBR921C
+
+Front sensor rotor
+
+Drive shaft
+
+Rear sensor rotor
+
+SBR873CA
+
+SENSOR ROTOR
+
+Removal
+
+1. Remove the drive shaft and rear wheel hub. Refer to “Drive §
+Shaft” in FA section and “Wheel Hub” in RA section.
+
+2. Remove the sensor rotor using suitable puller, drift and bear-
+ing replacer.
+
+RS
+
+BT
+
+RA
+
+EL
+
+BR-27 1061
+===== PDF page 29 =====
+1062
+
+ANTI-LOCK BRAKE SYSTEM
+
+Front sensor rotor
+
+Wooden block
+
+SBR985C
+
+Press
+
+Rear sensor rotor
+
+Suitable drift
+
+SBR986C
+
+/ 43-59 N-m
+(0.44 - 0.6 kg-m,
+y T In-Ib)
+
+a
+
+- 1.5 kg-m, 8 - 11 ft-lb)
+
+SBR787D
+
+Removal and Installation (Cont'd)
+Installation
+
+Install the sensor rotor. For front sensor rotor, use hammer and
+wooden block. For rear sensor rotor, use suitable drift and press.
+® Always replace sensor rotor with new one.
+
+e Pay attention to the dimension of rear sensor rotor as show in
+figure.
+h: 12.5 - 13.5 mm (0.492 - 0.531 in)
+
+CONTROL UNIT
+Location: Driver side dash side lower.
+
+e Make sure that the sensor shield ground cable is secured
+with lower mounting bolt.
+
+ACTUATOR
+
+Removal
+
+1. Disconnect battery cable.
+
+2. Drain brake fluid. Refer to “Changing Brake Fluid” (BR-4).
+
+3. Remove air cleaner and duct.
+
+4. Apply different colored paint to each pipe connector and actua-
+tor to prevent incorrect connection.
+
+5. Disconnect harness connectors, brake pipes and remove fix-
+ing nuts and actuator ground cable.
+
+Installation
+
+CAUTION:
+e After installation, refill brake fluid. Then bleed air. Refer to
+“Bleeding Brake System” (BR-4).
+
+Temporarily install actuator on the bracket.
+Tighten actuator ground cable.
+
+Connect brake pipes temporarily.
+
+Tighten fixing nuts.
+
+Tighten brake pipes.
+
+Connect harness connectors and battery cable.
+Install air cleaner and duct.
+
+NOON
+
+BR-28
+===== PDF page 30 =====
+TROUBLE DIAGNOSES
+
+SEF234G
+
+How to Perform Trouble Diagnoses for Quick
+and Accurate Repair
+
+INTRODUCTION
+
+The ABS system has an electronic control unit to control major
+functions. The control unit accepts input signals from sensors and
+instantly drives actuator. It is essential that both kinds of signals are
+proper and stable. it is also important to check for conventional
+problems: such as air leaks in the booster or lines, lack of brake
+fluid, or other problems with the brake system.
+
+It is much more difficult to diagnose a problem that occurs intermit-
+tently rather than continuously. Most intermittent problems are
+caused by poor electric connections or faulty wiring. In this case,
+careful checking of suspicious circuits may help prevent the
+replacement of good parts.
+
+A visual check only may not find the cause of the problems, so a
+road test should be performed.
+
+Before undertaking actual checks, take just a few minutes to talk
+with a customer who approaches with a ABS complaint. The cus-
+tomer is a very good source of information on such problems;
+especially intermittent ones. Through the talks with the customer,
+find out what symptoms are present and under what conditions
+they occur.
+
+Start your diagnosis by looking for “conventional” problems first.
+This is one of the best ways to troubleshoot brake problems on an
+ABS controlled vehicle. Also check related Service Bulletins for
+information.
+
+BR-29
+
+@l
+
+MA
+
+EM
+
+LGC
+
+EC
+
+FE
+
+GL
+
+MT
+
+AT
+
+FA
+
+1063
+===== PDF page 31 =====
+1064
+
+TROUBLE DIAGNOSES
+
+OK
+
+Max
+Min. line
+
+SBR451D
+
+SBR389C
+
+Preliminary Check
+
+Check brake fluid level in reservoir tank.
+
+Low fluid level! may indicate brake pad
+wear or leakage from brake line.
+
+B] il
+Check brake line for leakage. NG | Repair.
+OK
+i
+Check brake booster for operation and air NG Replace.
+tightness. Refer to BR-10. v
+OK
+4
+Check brake pads and rotor. Refer to NG | Replace.
+BR-12, 14, 16, 20. =
+OK
+v
+Check brake fluid level in reservoir tank. NG | Fill up brake fluid.
+OK
+0 y
+Check warning lamp activation. NG Check fuse, warning lamp
+
+When ignition switch is turned on, warning
+lamp turns on.
+
+"| bulb and warning lamp cir-
+
+cuit.
+
+OK
+
+y
+
+Check warning lamp for deactivation.
+When ignition switch is turned on, warning
+lamp turns on, then deactivates after 1
+second.
+
+NG
+
+OK
+
+A 4
+
+Drive vehicle at 30 km/h (20 MPH) for at
+least one minute.
+
+4
+
+Go to Self-diagnosis (BR-
+36, 40).
+
+Ensure warning lamp remains off while
+driving.
+
+NG
+
+| Go to Self-diagnosis (BR-
+| 36, 40).
+
+OK
+
+y
+
+END
+
+BR-30
+
+===== PDF page 32 =====
+TROUBLE DIAGNOSES
+
+Component Parts and Harness Connector
+Location
+
+Dual proportioning “1
+
+B Motor relay and actuator relay
+
+[®] Front wheel sensors
+
+3 Front left wheel sensor connector pd
+Front right wheel
+sensor connector
+
+[El Rear wheel sensors
+IE] Rear left wheel sensor connector oF
+IB Rear right wheel sensor connector PL
+
+Control unit
+CL
+
+Al
+a =
+
+= Zh <8 N Ne
+0 & ve
+
+« i 2
+—V ABS actuator ground \ OO
+D}
+
+Located inside the driver's —_ MT
+lower dash side =.
+
+LEAT ons shield RA
+4 (GID
+
+or
+wheel sensor Bi
+H| a Rear tire HA
+Rear left wheel sensor
+EH
+MDX
+
+sBR78sDA 1065
+
+BR-31
+===== PDF page 33 =====
+TROUBLE DIAGNOSES
+
+int Check
+
+inpo
+
+t Diagram for Quick Pi
+
+ircui
+
+Cc
+
+J01vNLov
+TOYINOD
+S8vy
+
+1NO—yy
+
+uu
+NI=3y
+
+— nt
+1N0—
+
+ries
+
+NI=4
+| cum 1
+
+1N0-¥J
+Pn
+
+NI—-d4
+
+nS VV V
+
+1no-14
+——aut
+
+NI-="14
+
+—
+
+——
+
+dJOL0n
+
+H3LIN =
+NOILYNISNOD
+anv AVI3Y
+ONINIYM (B) ava] 1 soy J
+
+say QION310S 0 sav [9
+STL
+WNIT
+
+38d 33nd 318ISN4
+
+14YLS JO NO
+HJLIMS NOILINDI
+
+PE
+
+ITA
+
+£S
+
+9¢
+
+?S
+
+£€
+
+LE
+
+ot
+61
+
+1INN
+TONINOD
+S8v
+
+[33
+62
+8c
+
+91
+
+9%
+1:1
+
+ZL
+£1
+
+8c
+tl
+
+148
+Gt
+
+8
+
+'
+i
+
+[4
+
+3
+
+|
+
+1INSNOD 304
+YOLJ3INNCD
+ANI Viva
+
+L
+
+fl
+
+a” ee
+Ee. ~ T33HM INOYI
+
+SE —— i ~ 33MM INOHS
+
+AY3l1va
+
+dwg doys 0]
+
+ll
+
+H1 HOSN3S
+TIZHM Ov 3
+
+HY 4OSN3S
+T33HM ¥v3Y
+
+H1 30SN3S
+
+HY YOSN3S
+
+snd
+
+1¥¥1S 40 NO
+HOLIMS NOLLINDI
+
+MBR234A
+
+BR-32
+
+1066
+===== PDF page 34 =====
+TROUBLE DIAGNOSES
+
+Wiring Diagram — ABS —
+
+IGNITION SWITCH ] - -
+ON or START BATTERY BR-ABS-01
+FUSE
+' f BLOCK Gl
+{J/8B) Refer to EL-POWER.
+S 10A § 10A S 10A 15A
+17 15 13 0 :
+i } = } 5 : E106 MA
+LK} |Las]y NEM] ZK]] i
+RY GY G RY EM
+[G7] comanarion i @mRGE To EL-STOP/L
+{UARNING Lamp) | FELEASED. sToP LC
+M82) ,
+0 @e2 DEPRESSED | Siren
+LR M19 E@
+2
+UR A/G (M3) EE
+75]! :
+I]
+¥ bs
+i GCL
+J - UREA Next page
+I wT
+GY UR RIG MT
+Il [zo]! [Leal
+UZ SICA BLS | ABS AT
+CONTROL
+ONIT
+TXD DIAG L GND2 GND1 GND Bh,
+[Lael] EE] [28] EE ‘
+P/B
+
+cond
+4
+
+RY BR/Y P/B B B
+[71] [2] 4
+! 2 DATA LINK RS
+CONNECTOR
+FOR CONSULT = =
+M13 M73 7
+[=)
+|=)
+Refer to last page (Foldout page).
+1[2]3]4]5[6 — aD
+0 @®
+go to[1i[12[13[14
+av : HA
+fmm mmm mmm mmm mmm mmm , £108
+|
+| s[al/aN3]2 31]30]28]28]/22\27]26]25
+NIREENEEBE ve 40]39]38]37]]36]35 ie 420 | EL
+be ee em J
+Lil2]3[4]s]ell7Islo]wli1fi2f13f1a]is]eli7]i8]1el2cf21} 22 | 23 | 24 [25 [26 | 27 | 28 | oR)
+129] 30 | 31] 32] 33] 34 [|35]36far]aa]3e]ao41]a243]44]45|46]47[48]] 49 [ 50 | 51] 52 | 53] 54] 55 |
+[sel57]s8]59160l61[62]63]64 65 [686768 63170171 [72|73| 74} 75 [76 77] 78 [78] 80] 8 1]82] 83] B
+
+MBR286A
+
+BR-33 1067
+===== PDF page 35 =====
+TROUBLE DIAGNOSES
+Wiring Diagram — ABS — (Cont'd)
+
+BATTERY BR-ABS-02
+
+Refer to EL-POWER.
+
+BR
+
+LJ
+®
+30A 30A
+] [ol
+Y
+|
+
+v/B y
+EEE] ABS
+8 0 a MOTOR
+RELAY
+Bl
+
+{
+
+pope (E12)
+
+: —-—
+pace <n pi Tae m—
+
+[1
+L
+[21]
+< . . J §
+CONTROL
+MOTOR FL FL FR FR RL RAL RR RR_ [ACTUATOR
+IN ouT {SIN OUT (SIN OUT (SIN ED WED)
+
+0
+-
+I -
+ll
+-
+Eo
+~~
+Ee
+~~
+LZ rem
+-—
+
+Y/ G/R LG/ L GY/R GY BR/W BR LG/R PU/W PU
+21 [FEA Ge] [51 [Ea (El [eel JEL 5 Tel Gall
+UR MR VR UM FL FL FR FR \&
+iN ouT IN ouT m oo fi our CONTROL
+UNIT
+
+- a =
+\eleh7iy/ “Gy Ww 5s WW SB
+
+[2a 30 [3132] 33] 34 [3s] 36]37] 3a ofc] ]e2]a3]ae]e5 a6 4748] 49 [50] 51 [52 [53 [54 [ 55] aol)
+
+[sl57]s8]59]60]61]62]63]s4]65]66 I67]68]69l70]71]72]73]74]75]78]7 7] 78] 70] Bo] 1 [e283] B
+
+i§ L1T2]3T4a]s5]6[7]8lsw]11]t2fiali4]1s]1e]i7]rsfis]eof21]f 22 [23 124 [25 [26 | 27 | 28 |
+
+MBR287A
+
+1068 BR-34
+===== PDF page 36 =====
+TROUBLE DIAGNOSES
+Wiring Diagram — ABS — (Cont'd)
+
+BR-ABS-03
+CONTROL
+FLSS FR S8 RAR SS RL 8S pl @l
+FL. SS GND GND FR SS RR SS GND GND RL SS
+
+ff
+LB
+B
+{
+=
+
+=
+
+FE
+
+INT TTT TTT
+J
+
+1 {1
+f [I
+| [I
+\ / [I]
+“mmma---@
+
+INT TTT
+
+[]
+
+t [I
+
+| |
+
+! 1
+
+i [I
+o---0 |
+®
+NTT
+
+i
+
+t |
+
+| 1
+
+| 1 |
+
+y I y
+es |
+®
+Ay a
+
+ee —
+
+| [J
+
+{ P|
+
+| [|
+
+vf vd
+o---0 |
+Le
+[ig Ti
+
+R G B Ww 1 PU LG BR v
+1
+cn I JSR i: TRS c:1/ 8 ED. 55}. - {108 - - - {08} --
+WHEEL B WwW PU LG BR Y
+HIS EI <u BE «cE Te cL
+NN ek i aia I AN pindelah MN
+| i | | i I
+N I NE NE MT
+I a SI XJ «I "Te
+B w PU _— LG | BR Y | AT
+M71
+2 EE FEE EN |
+
+REAR REAR
+
+WHEEL WHEEL B
+
+SENSOR SENSOR Bn
+
+RH LH —
+
+103 RS
+Refer to last page {Foldout page).
+
+nN
+w
+-_
+ar
+[=2
+~
+
+Ad DN
+we 89 [1o[11]12[13[14] 15] 76 git
+RA
+
+=
+
+[1 T2T3[4]s5]s ll71eLo holuliehsllishisl shell] 22 [23] 24 [25] 26 [27] 28] en) [EL
+[2930 [31 J 32] 33] 32 [[35]36]a7]38]a0]eofat Jac]assa]as]asarfas]] 40 [ 50] 57 [ 52 [ 53 [ 54] 55 |
+
+Is6]57]58]59]60]61162]63]64]65166]67]68169] 70171 72173] 74 75 76 77 [78] 79] 80] 81]82]83] B
+
+MBR288A
+
+BR-35 1069
+===== PDF page 37 =====
+1070
+
+TROUBLE DIAGNOSES
+
+=
+4
+\- Data link connector
+
+(Ground terminal for CONSULT
+4 with a suitable harness.) SBRY26CE
+
+Self-diagnosis
+
+FUNCTION
+
+¢ When a problem occurs in the ABS, the warning lamp on the
+instrument panel comes on. To actuate the self-diagnostic
+resuits mode, ground the self-diagnostic (check) terminal
+located on “Data link connector for CONSULT". The location
+of the malfunction is indicated by the warning lamp flashing.
+
+SELF-DIAGNOSIS PROCEDURE
+
+Drive vehicle over 30 km/h (20 MPH) for
+at least one minute.
+
+v
+
+Turn ignition switch “OFF”.
+
+v
+
+Ground terminal “4” of “Data link con-
+nector for CONSULT” with a suitable har-
+
+©
+
+40
+
+20
+
+CABS — BRAKE |
+
+ness.
+
+Turn ignition switch “ON” while ground-
+ing terminal “4".
+Do not depress brake pedal.
+
+E v
+
+After 3.0 seconds, the warning lamp
+starts flashing to indicate the malfunction
+code No. (See NOTE.)
+
+v
+
+SBR920C
+
+oO]
+
+fn
+ocoocaollao
+a eo
+
+Verify the location of the malfunction with
+the malfunction code chart (BR-38). Then
+make the necessary repairs following the
+diagnostic procedures.
+
+'
+
+After the malfunctions are repaired, erase
+the malfunction codes stored in the con-
+trol unit. Refer to “HOW TO ERASE
+SELF-DIAGNOSTIC RESULTS” (BR-37).
+
+\
+al Data link connector
+for CONSULT
+{Disconnect the harness.) SBR927CB
+
+v
+
+Rerun the self-diagnostic results mode to
+verify that the malfunction codes have
+been erased.
+
+: NOTE: The indicati t
+: : : The indication i
+Disconnect the check terminal from the after five lon wermina es
+ground. The self-diagnostic results mode However, when the ignition
+is now complete. switch is turned from
+v “OFF” to “ON”, the indica-
+tion starts flashing again.
+®
+BR-36
+===== PDF page 38 =====
+TROUBLE DIAGNOSES
+
+Self-diagnosis (Cont'd)
+®
+
+!
+
+Check warning lamp for deactivation after
+driving vehicle over 30 km/h (20 MPH)
+for at least one minute.
+
+y
+
+After making certain that warning lamp
+does not come on, test the ABS in a safe
+area to verify that it functions properly.
+
+HOW TO READ SELF-DIAGNOSTIC RESULTS (Malfunction codes)
+e Determine the code No. by counting the number of times the warning lamp flashes on and off.
+
+e When several malfunctions occur at one time, up to three code numbers can be stored; the latest mal-
+
+function will be indicated first.
+
+e The indication begins with the start code 12. After that a maximum of three code numbers appear in the
+order of the latest one first. The indication then returns to the start code 12 to repeat (the indication will
+
+stay on for five minutes at the most).
+
+The malfunction code chart is given on the next page.
+
+Example: Code No. 32 REAR SENSOR SHORT-CIRCUIT
+
+!
+OFF
+|
+i
+
+[ereck terminal)! H
+Open ="
+
+(disconnect) H
+
+Ground 3 — !
+
+i hy . a.
+
+een sl More than 1 sec. lu
+
+V 12.5 sec. i
+Malfunction code
+memory erased.
+
+ABR256
+
+Start code: 12 CODE No. 32
+Tens digits Units digits Tens digits Units digits
+ON
+Warning | | |
+lamp OFF
+OS RS Up in
+3.0 06 0.9 03103 3.3 06 06 06 06 0.6 09 03 loa
+ON 0.3 0.3 Unit: Second
+IGN
+OFF SBR457D
+or co HOW TO ERASE SELF-DIAGNOSTIC RESULTS
+" (Malfunction codes)
+
+a. Under the self-diagnostic results mode, the malfunction
+memory erase mode starts when the check terminal is discon-
+
+nected from the ground.
+
+b. The seli-diagnostic results (malfunction codes) can be erased
+
+by grounding the check terminal more than three times in suc-
+
+cession within 12.5 seconds after the erase mode starts. (Each
+grounding must be longer than one second.)
+The ABS warning lamp stays on while the self-diagnosis is in
+the erase mode, and goes out after the erase operation has
+
+been completed.
+
+¢. The seli-diagnosis is also completed at the same time. (Refer
+
+to BR-36.)
+
+After the erase operation is completed, it is necessary to rerun
+
+the self-diagnostic mode to verify that malfunction codes no
+longer appear. Only the start code (12) should be indicated
+
+when erase operation is completed and system is functioning
+
+normally.
+
+BR-37
+
+Tl
+=
+
+=
+
+[BX
+
+1071
+===== PDF page 39 =====
+TROUBLE DIAGNOSES
+
+Self-diagnosis (Cont’d)
+
+MALFUNCTION CODE/SYMPTOM CHART
+
+Code No. (No. of LED flashes)
+
+Malfunctioning part
+
+Diagnostic procedure
+
+12 Self-diagnosis could not detect any malfunctions.
+45 Actuator front left outlet solenoid valve 1
+46 Actuator front left inlet solenoid valve 1
+41 Actuator front right outlet solenoid valve 1
+42 Actuator front right inlet solenoid valve 1
+51 Actuator rear right outiet solenoid valve 1
+52 Actuator rear right inlet solenoid valve 1
+55 Actuator rear left inlet solenoid valve 1
+56 Actuator rear left inlet solenoid valve 1
+25 Front left sensor (open-circuit) 2
+26 Front left sensor (short-circuit) 2
+21 Front right sensor (open-circuit) 2
+22 Front right sensor (short-circuit) 2
+35 Rear left sensor (open-circuit) 2
+36 Rear left sensor (short-circuit) 2
+31 Rear right sensor (open-circuit) 2
+32 Rear right sensor (short-circuit) 2
+18 Sensor rotor 2
+61 Actuator motor or motor relay 3
+63 Solenoid valve relay 4
+57 Power supply (Low voltage) 5
+71 Control unit 6
+Control unit power supply circuit
+Warning lamp stays on continu- Warning lamp bulb cirout
+ously. Control unit or control unit connector 13
+Solenoid valve relay stuck
+Power supply for solenoid valve relay coil
+iil stays on, during self- Control unit _
+Warning lamp does not work before | Fuse, warning lamp bulb or warning lamp circuit 19
+engine starts. Control unit
+Pedal vibration and noise — 7
+Long stopping distance —_ 8
+Unexpected pedal action —
+— 10
+
+ABS does not work.
+
+ABS warks frequently.
+
+1
+
+BR-38
+===== PDF page 40 =====
+TROUBLE DIAGNOSES
+
+CONSULT APPLICATION TO ABS
+
+CONSULT
+
+SELF-DIAGNOSTIC
+
+ITEM RESULTS DATA MONITOR ACTIVE TEST al
+
+Front right wheel sensor X X —
+
+Front left wheel sensor X X — MA
+
+Rear right wheel sensor X X —
+
+Rear left wheel sensor X X -—
+
+ABS sensor X — —_ eh
+
+Stop lamp switch — X —_
+
+Front right inlet solenoid valve X X X LC
+
+Front right outlet solenoid valve X X X
+
+Front left inlet solenoid valve X X X EC
+
+Front left outlet solenoid valve X X X
+
+Rear right inlet solenoid valve X X X FE
+
+Rear (eft inlet solenoid valve X X X
+
+Rear right outlet solenoid valve X X X @
+
+Rear left outlet solenoid valve X X X
+
+Actuator solenoid valve relay X X — MT
+
+Actuator motor relay
+
+(ABS MOTOR is shown on the Data Monitor X X X
+
+screen.) AT
+
+ABS warning lamp — —-
+
+Battery voltage X X — EA
+
+Control unit X — —
+
+X: Applicable RA
+
+—: Not applicable
+
+ECU part number mode El
+
+Ignore the ECU part number displayed in the ECU PART NUMBER MODE. Refer to parts catalog to order
+
+the ECU.
+ST
+RS
+BT
+FA
+EL
+IDX
+
+BR-39 1073
+===== PDF page 41 =====
+1074
+
+TROUBLE DIAGNOSES
+
+/
+~7
+
+CONSULT Inspection Procedure
+
+SELF-DIAGNOSIS PROCEDURE
+
+1) Turn ignition switch OFF.
+2) Connect CONSULT to Data Link Con-
+nector for CONSULT.
+
+1) Start engine.
+2) Drive vehicle over 30 km/h (20 MPH)
+for at least one minute.
+
+A
+
+[EB] 1) stop vehicle with engine running
+
+No
+
+h 4
+
+and touch “START” on CONSULT
+screen.
+2) Touch “ABS”.
+D| 3) Touch “SELF-DIAG
+RESULTS”.
+¢ The screen shows maximum three
+malfunctions.
+® Does the screen show the detected
+malfunction?
+
+Yes
+
+y
+
+MALFUNCTION REPAIR
+
+Make the necessary repairs following the
+
+WARNING LAMP
+INSPECTION
+
+Check warning lamp and
+the circuit and repair if
+necessary.
+
+A
+
+diagnostic procedures.
+
+use fox! = Data link
+connector
+for CONSULT
+SBF326H
+B
+NISSAN
+CONSULT
+START
+[SUB MODE _]
+SEF392
+[lh setect system []
+| ENGINE |
+LAT |
+L__ AIRBAG |
+LABS |
+| |
+|
+SBR385C|
+[| seLEcT DIAG MODE [|
+
+[ SELF-DIAG RESULTS
+
+| DATA MONITOR
+
+| ACTIVE TEST
+
+After repairing the malfunctions, start
+engine. Then erase the self-diagnostic
+
+No
+
+results stored in the control unit by touch-
+ing “ERASE”.
+Are the self-diagnostic results erased?
+
+| ECU PART NUMBER
+
+L
+
+|
+|
+J
+J
+|
+|
+
+Yes
+
+A 4
+
+Check warning lamp for deactivation after
+
+Yes
+
+driving vehicle over 30 km/h (20 MPH) for
+at least one minute.
+
+BR-40
+
+A 4
+
+Go to B] above.
+
+SST4128 Does the warning lamp activate?
+E
+= BM SELF-DIAG RESULTS BI [] MN
+FAILURE DETECTED TIME End
+FR RH SENSOR 0
+[OPEN)
+Note: “SELF-DIAG RESULTS” screen shows the detected malfunction and
+the times of ignition switch ON and OFF after it occurred.
+| ERASE || PRINT |
+SBR950C
+
+===== PDF page 42 =====
+TROUBLE DIAGNOSES
+
+CONSULT Inspection Procedure (Cont'd)
+
+SELF-DIAGNOSTIC RESULTS MODE
+
+Diagnostic item Diagnostic item is detected when ... re ndurs
+
+FR RH SENSOR e Circuit for front right wheel sensor is open. 2
+
+[OPEN]*1 (An abnormally high input voltage is entered.) @ll
+FR LH SENSOR e Circuit for front left wheel sensor is open. 2
+
+[OPEN]*1 (An abnormally high input voltage is entered.)
+
+RR RH SENSOR ® Circuit for rear right sensor is open. 2 MA
+[OPEN]*1 (An abnormally high input voltage is entered.)
+
+RR LH SENSOR e Circuit for rear left sensor is open. >
+
+[OPEN]*1 (An abnormally high input voltage is entered.) EM
+FR RH SENSOR & Circuit for front right wheel sensor is shorted. 2
+
+[SHORT]*1 {An abnormally low input voltage is entered.)
+
+FR LH SENSOR © Circuit for front left wheel sensor is shorted. 2 LC
+[SHORT]"1 {An abnormally low input voltage is entered.)
+
+RR RH SENSOR e Circuit for rear right sensor is shorted. 2
+
+[SHORT]*1 (An abnormally low input voltage is entered.)
+
+RR LH SENSOR e Circuit for rear left sensor is shorted. 2 EC
+[SHORT (An abnormally low input voltage is entered.)
+
+ABS SENSOR ¢ Teeth damage on sensor rotor or improper installation of wheel sensor. 2
+[ABNORMAL SIGNAL] (Abnormal wheel sensor signal is entered.) FE
+FR RH IN ABS SOL e Circuit for front right inlet solenoid valve is open. 1
+
+[OPEN] {An abnormally low output voltage is entered.)
+
+FR LH IN ABS SOL e Circuit for front left inlet solenoid valve is open. ; GCL
+[OPEN] {An abnormally low output voltage is entered.)
+
+RR RH IN ABS SOL ® Circuit for rear right inlet solenoid valve is open. 1
+
+[OPEN] {An abnormally low output voltage is entered.) MT
+RR LH IN ABS SOL ® Circuit for rear left inlet solenoid valve is open. 1
+
+[OPEN] (An abnormally low output voltage is entered.)
+
+FR RH IN ABS SOL e Circuit for front right inlet solenoid valve is shorted. 1 AT
+[SHORT] (An abnormally high output voltage is entered.)
+
+FR LH IN ABS SOL o Circuit for front left inlet solenoid valve is shorted. 1
+
+[SHORT] (An abnormally high output voltage is entered.) EA
+RR RH IN ABS SOL ® Circuit for rear right inlet solenoid valve is shorted. 1
+
+[SHORT] (An abnormally high output voltage is entered.)
+
+RR LH IN ABS SOL e Circuit for rear left inlet solenoid valve is shorted. 1
+[SHORT] (An abnormally high output voltage is entered.)
+
+FR RH OUT ABS SOL ¢ Circuit for front right outlet solenoid valve is open. 1
+
+[OPEN] {An abnormally low output voltage is entered.)
+
+FR LH OUT ABS SOL e Circuit for front left outlet solenoid valve is open. 1
+
+[OPEN] (An abnormally low output voltage is entered.)
+
+RR RH OUT ABS SOL e Circuit for rear right outlet solenoid valve is open. 1 ST
+[OPEN] (An abnormally low output voltage is entered.)
+
+RR LH OUT ABS SOL ® Circuit for rear left outlet solenoid valve is open. 1
+
+[OPEN] (An abnormally low output voltage is entered.)
+
+FR RH OUT ABS SOL e Circuit for front right outlet solenoid valve is shorted. 1 RS
+[SHORT] (An abnormally high output voltage is entered.)
+
+FR LH QUT ABS SOL e Circuit for front left outlet solenoid valve is shorted. 1
+
+[SHORT] (An abnormally high output voltage is entered.) BT
+RR RH OUT ABS SOL ® Circuit for rear right outlet solenoid valve is shorted. 1
+
+[SHORT] (An abnormally high output voltage is entered.)
+
+RR LH OUT ABS SOL ® Circuit for rear left outlet solenoid valve is shorted. 1 FIA
+[SHORT] (An abnormally high output voltage is entered.)
+
+ABS ACTUATOR RELAY ® Actuator solenoid valve relay is ON, even control unit sends off signal. a
+[ABNORMAL] e Actuator solenoid valve relay is OFF, even control unit sends on signal. EL
+ABS MOTOR e Circuit for actuator motor is open or shorted. 3
+[ABNORMAL] ® Actuator motor relay is stuck.
+
+BATTERY VOLT ® Power source voltage supplied to ABS control unit is abnormally low. 5 IDX
+[VB-LOW]
+
+CONTROL UNIT ® Function of calculation in ABS control unit has failed. 6
+*1: Be sure to confirm the ABS warning lamp illuminates when the ignition switch is turned ON after repairing the shorted sensor
+
+circuit, but the lamp goes out when driving the vehicle over 30 km/h (20 MPH) for one minute in accordance with SELF-DIAGNO-
+SIS PROCEDURE.
+BR-41 1075
+===== PDF page 43 =====
+1076
+
+TROUBLE DIAGNOSES
+
+CONSULT Inspection Procedure (Cont'd)
+
+[>]
+
+DATA MONITOR PROCEDURE
+
+NISSAN
+1) Turn ignition switch OFF.
+
+CONSULT 2) Connect CONSULT to Data link connector for CONSULT.
+
+3) Turn ignition switch ON.
+
+y
+
+START
+
+1) Touch “START” on CONSULT screen.
+
+BE 2) Touch “ABS”.
+[SUB MODE |] 3) Touch “DATA MONITOR”.
+
+SEF392|
+y
+Ee Lh seect system []] [8] 1) Touch “SETTING” on “SELECT MONITOR ITEM" screen.
+| ENGINE | 2) Touch “LONG TIME” on “SET RECORDING COND” screen.
+[8 3) Touch “START” on “SELECT MONITOR ITEM”.
+LAT |
+{AIRBAG |
+| ABS |
+SBR385C
+[Ih sELecT Diag MODE [|
+| _SELF-DIAG RESULTS |
+| DATA MONITOR
+| ACTIVE TEST 1]
+| ECU PART NUMBER ]
+L ]
+L ]
+SS5T412B
+[| seLecT MONITOR ITEM |
+[SELECTION FROM MENU |
+|
+L |
+L |
+Lsetrne] START |
+SBRY36C]
+
+[m ser RECORDING COND
+
+MANU TRIG
+
+LONG TIME
+
+AUTO TRIG
+HI SPEED
+
+Ii
+
+SBRO37C|
+
+BR-42
+===== PDF page 44 =====
+TROUBLE DIAGNOSES
+CONSULT inspection Procedure (Cont'd)
+ACTIVE TEST PROCEDURE
+
+NISSAN ¢ When conducting Active test, vehicle must be stationary.
+® When ABS warning lamp stays on, never conduct Active test.
+CONSULT
+1) Turn ignition switch OFF. @l
+ly 2) Connect CONSULT to Data link connector for CONSULT.
+3) Turn ignition switch ON.
+START y Tums MA
+y
+SUB MODE 1) Touch “START” on CONSULT screen. EM
+SERS B 2) Touch “ABS".
+3) Touch “ACTIVE TEST".
+[B | Im SELECT SYSTEM [1] Le
+| ENGINE | - 4
+A T | [® 1) Select active test item by touching screen.
+2) Touch “START”. 1 EG
+| AIRBAG |
+[ABS | ; EE
+| Carry out the active test by touching screen key.
+| GL
+SBR385C
+[lh seLecT DIAG MODE [1] rr
+[ SELF-DIAG RESULTS |
+| DATA MONITOR | AT
+| ACTIVE TEST ]
+ECU PART NUMBER | FA
+|
+
+SST412B
+
+D [lB seiect testmem [| on |
+
+S—
+
+{ FA RH SOLENOID ]
+FR LH SOLENOID ] ST
+RR AH SOLENOID 1
+[ RR LH SOLENOID ] RS
+| ABS MoTOR 1]
+[ | BT
+SBRI76C
+Lr
+= IA
+BH FR RH SOL TEST HN
+| seLect moniTor eM BL
+
+|
+[ sELECTION FROM MENU
+
+IDX
+
+_
+
+| |
+
+[ START
+
+Bl
+
+SBR934C
+
+BR-43 1077
+===== PDF page 45 =====
+1078
+
+TROUBLE DIAGNOSES
+
+DATA MONITOR MODE
+
+CONSULT Inspection Procedure (Cont'd)
+
+RR RH SENSOR
+RR LH SENSOR
+
+MONITOR ITEM CONDITION SPECIFICATION
+FR RH SENSOR
+FR LH SENSOR Drive vehicle. Displays computed vehicle speed from wheel sensor signal.
+
+{Each wheel is rotating.)
+
+Almost the same speed as speedometer.
+
+STOP LAMP SW
+
+Turn ignition switch ON and
+depress brake pedal.
+
+Depress the pedal: ON
+Release the pedal: OFF
+
+FR RH IN SOL
+FR RH OUT SOL
+FR LH IN SOL
+FR LH QUT SOL
+RR RH IN SOL
+RR RH OUT SOL
+RR LH IN SOL
+RR LH OUT SOL
+
+Ignition switch is turned ON or
+engine is running.
+
+Operating conditions for each solenoid valve are indicated.
+ABS is not operating: OFF
+
+ACTUATOR RLY
+
+MOTOR RELAY
+
+WARNING LAMP
+
+BATTERY VOLT
+
+ignition switch is turned ON or
+engine is running.
+
+Displays ON/OFF condition of ABS actuator relay.
+When turning ignition switch ON, ABS actuator relay is oper-
+ated.
+
+ABS is not operating: OFF
+ABS is operating: ON
+
+Warning lamp is turned on: ON
+Warning lamp is turned off: OFF
+
+Power supply voltage for control unit
+
+ACTIVE TEST MODE
+
+ABS MOTOR
+
+TEST ITEM | CONDITION JUDGEMENT
+Brake fluid pressure control operation
+FR RH SOLENOID IN SOL OUT SOL
+FR LH SOLENOID
+RR RH SOLENOID UP (Increase): OFF OFF
+RR LH SOLENOID Ignition switch is turned ON. KEEP (Hold): ON OFF
+DOWN (Decrease): ON ON
+
+ABS actuator motor
+ON: Motor runs
+OFF: Motor stops
+
+Note: Active test will automatically stop ten second
+
+shows ON.)
+
+s after the test starts. (TEST IS STOPPED monitor
+
+BR-44
+===== PDF page 46 =====
+TROUBLE DIAGNOSES
+
+ABS actuator Ground Circuit Check
+ACTUATOR MOTOR GROUND
+e Check resistance between actuator motor ground terminal and
+body ground. al
+[2] Resistance: 0Q
+] MA
+SBR792D EM
+CONTROL UNIT GROUND
+ng ami e Check resistance between the terminals and ground. LG
+AE
+Resistance: 0Q
+[{ cnmir connector EG
+28 * 29 « 39
+SBR14D CL
+ABS SOLENOID VALVE RELAY GROUND MIT
+Solenoid valve eo Check resistance between solenoid valve relay terminal @
+§RY relay ED and ground.
+BISCONNECT H AT
+Cai] Resistance: 0Q
+5 |] EA
+l
+SBR764DC
+
+RS
+
+BY
+
+HA
+
+EL
+
+[DX
+
+BR-45 1079
+===== PDF page 47 =====
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+
+©) )
+[13
+Fusible link
+
+ABS solenoid
+valve relay (E79)
+
+Fuse ABS warning lamp
+
+| ABS actuator
+connectors
+
+(body side}
+*—
+
+Diagnostic Procedure 1 (ABS actuator solenoid
+
+valve)
+
+Malfunction code No. 41, 45, 51, 55, 42, 46, 52, 56
+
+KA
+7
+
+3517] 1
+\gfei7ig/
+ED
+
+Bi
+
+~)
+3
+
+8
+
+1. Disconnect connectors from control
+unit, ABS actuator and ABS solenoid
+valve relay. Check terminals for dam-
+age or loose connections. Then recon-
+nect connectors.
+
+2. Carry out self-diagnosis again.
+
+Does warning lamp activate again?
+
+No | )nspection end
+
+>
+
+y
+
+Yes
+
+ABS ACTUATOR SOLENOID VALVE
+CHECK
+
+OK
+—»-® (Go to next page.)
+
+26 54
+
+2 37 33 5
+ABS control
+
+25 53 34 6 30
+unit
+
+1. Disconnect connectors from control unit
+and ABS actuator.
+
+2. Check resistance between control unit
+connector terminals and ABS actuator
+2-pin connector (ABS actuator
+
+SBR103EA side) terminals.
+A DISCONNECT Control ABS Resis-
+0 0 DISCONNECT Code No. unit actuator tance
+IS, GD | A 4 ® ®
+UNITCONNECTOR actuator 4.4 -6.0Q
+cr ABS a x 4 0
+so. 25 28 2-pin connector 55 ® ®
+33.34.53. 64 {ABS actuator ha 5 5) )
+aD E65
+2 46 ® ® 8.5-9.5Q
+52 ® ®
+56 6 ®
+NG
+SBR766DB B] y
+
+8]
+
+ABS actuator
+
+8-pin connector
+{ABS actuator side)
+
+EEN (
+4 7[16[15/
+
+1030547
+14215+16+17
+—_—
+
+[Q]
+
+ABS actuator
+2-pin connector
+
+ABS actuator side)
+
+a @
+
+SBR767DB
+
+1080
+
+1. Disconnect ABS actuator 8-pin connec-
+tor.
+
+2. Check resistance between ABS actua-
+tor 8-pin connector (ABS actuator
+side) terminals and ABS actuator 2-pin
+connector (ABS actuator side) ter-
+minals.
+
+OK Check the following.
+
+Resis-
+
+ABS actuator
+tance
+
+Code No.
+
+41
+
+45 4.4 -6.0Q
+
+51
+
+55
+
+eee
+
+42
+
+46 8.5 - 9.50
+
+52
+
+eee @ de®
+
+fre) f=)
+
+56
+
+® Harness connectors
+ED,
+
+® Harness for open or
+short between actuator
+connector and control
+unit
+
+® Harness for open or
+short between actuator
+8-pin connector and
+actuator 2-pin connector
+
+If NG, repair harness or
+
+connectors.
+
+«+
+2
+In
+
+BR-46
+===== PDF page 48 =====
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+Diagnostic Procedure 1 (ABS actuator solenoid
+
+valve) (Cont'd)
+
+}
+
+Check resistance between solenoid valve OK | Check the following.
+terminals @,®,® ,®,®, ®, ®, @. "| e® Harness connectors @l
+Resis ’
+ABS actuator tance ® Harness for open or MA
+@ ® short between actuator
+ouT ®, ® ©
+solenoid ® ®. 0 38 i connector and control
+vaive @ @ y unit EM
+®.® ® Harness for open or
+Solenoid Ne @ = 12.9 - short between actuator
+valve @, @ 15.50 8-pin connector and
+out — v2
+® @ actuator 2-pin connector LC
+IN 0) 9.9,@ If NG, repair harness or
+solenoid ® ®, @ 17.0-
+. 19.0Q connectors. .
+valve ® @ EG
+NG
+r FE
+Replace ABS actuator.
+Gl.
+®
+DISCONNECT Ny DISCONNECT Ll)
+(L}
+Solenoid valve ABS actuator AT
+| "
+© NED oy dey 1. Remove solenoid valve relay. NG Check the following.
+3 2. Check continuity between ABS actuator "1 e Harness connectors
+1] an) 2-pin connector (body side) termi- ; FA
+nal GB and solenoid valve relay terminal ® Harness for open or
+L/B
+[Q] @. .| short between actuator
+Continuity should exist. connector and solenoid RA
+SBR768DB valve relay terminal
+OK }
+(relay box side)
+If NG, repair harness or
+connectors.
+r ST
+Go to Diagnostic Procedure 4, BR-53.
+RS
+[HA
+EL
+IDX
+
+BR-47 1081
+===== PDF page 49 =====
+1082
+
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+
+Front
+RH
+
+Front
+
+LH
+
+Rear
+LH
+
+Rear wheel sensor
+BH connectors
+(sensor side}
+
+Diagnostic Procedure 2 (Wheel sensor or rotor)
+Malfunction code No. 21, 22, 25, 26, 31, 32, 35, 36 or 18
+
+Rear LH
+
+9 10 15 14 13
+
+ABS control unit
+
+12 11 38
+
+Rear RH GI)
+am
+
+1. Disconnect connectors from control unit
+and wheel sensor of malfunction code
+No. Check terminals for damage or
+loose connections. Then reconnect con-
+nectors.
+
+2. Carry out self-diagnosis again.
+
+No | inspection end
+
+»
+
+Note
+
+OK
+
+y
+
+Repair harness and connectors between
+control unit connector and wheel sensor
+connector.
+
+BR-48
+
+SBR769D Does warning lamp activate again?
+Yes
+hos) DISCONNECT A
+TS. A 4
+WHEEL SENSOR ELECTRICAL CHECK | OK
+[{_ crunir connector b (See next page.)
+Jeo 11-12 1510-38-13 1. Disconnect control unit connector.
+2. Check resistance between control unit
+connector terminals.
+Code No. 21 or 22 (Front RH wheel)
+[Q] Terminals (9 and 9
+Code No. 25 or 26 (Front LH wheel)
+SBR247DB Terminals @® and @
+Code No. 31 or 32 (Rear RH wheel)
+DISCONNECT
+E EE Terminals @ and G3
+TS. Code No. 35 or 36 (Rear LH wheel)
+Front I G1) Rear sensor Terminals @ and @
+Resistance: 0.8 - 1.2 kQ
+r—CE NG
+B| Note y Note
+[Q] [Q] CHECK WHEEL SENSOR. NG | Replace wheel sensor.
+SBR61D Check resistance of each sensor.
+Resistance: 0.8 - 1.2 kQ
+
+Note: Wheel position should
+be distinguished by
+code No. except code
+No. 18 {sensor rotor).
+===== PDF page 50 =====
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+Diagnostic Procedure 2 (Wheel sensor or rotor)
+
+(Cont’d)
+®
+Note Note Gl
+WHEEL SENSOR MECHANICAL CHECK NG Adjust tire pressure or
+"1 replace tires).
+Check for inflation pressure, wear and MA
+size of each tire.
+OK EM
+Front sensor ~~ <// Note 4
+= Check wheel bearing axial end play. LG
+OK
+Note , Note EG
+Check clearance between sensor and NG Clean sensor fixing portion,
+rotor. "| or replace sensor. EE
+Clearance:
+Front
+0.18 - 0.87 mm GL
+(0.0071 - 0.0343 in)
+Rear
+0.23 - 0.72 mm
+(0.0091 - 0.0283 in) WT
+OK
+AT
+Note y Note
+Check sensor rotor for teeth damage. NG Replace sensor rotor. EA
+OK
+y Feeler gauge A In
+7 J Check control unit pin terminals for dam- Note: Wheel position should
+sBRosoc| | age or the connection of control unit har- be distinguished by
+ness connector. code No. except code
+Reconnect control unit harness connector. No. 18 {sensor rotor).
+Then retest.
+
+EL
+
+BX
+
+BR-49 1083
+===== PDF page 51 =====
+1084
+
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+
+Fusible fink
+
+Diagnostic Procedure 3 (Motor relay or motor)
+
+Malfunction code No. 61
+
+BR-50
+
+ABS motor
+NG
+elay@&_ |_|... MOTOR POWER SUPPLY CIRCUIT (Skip page.)
+1 1
+! = To , Check 30A [1 | fusible link (ABS MTR) for
+t 15 11 solenoid! ABS motor relay. For fusible link layout,
+t £ valve | refer to POWER SUPPLY ROUTING in EL
+' rela i section.
+32 y
+EE RE EE i OK
+; No )
+1. Disconnect connectors from control unit »! Inspection end
+ABS actuator and ABS actuator. Check terminals for
+connector damage or loose connection. Then
+(body side) | reconnect connectors.
+— 2. Carry out self-diagnosis again.
+ef | Does warning lamp activate again?
+Yes
+y NG
+3. Remove motor relay. »| Check the following.
+2. Check voltage between motor relay ter- ® Harness connector
+Cr 5 minal ® and ground. i ® Harness for open or
+} Battery voltage should exist. short between motor
+ABS control unit relay terminal (relay box
+OK side) and fusible link
+SBR104EA If NG, repair harness or
+connectors.
+—
+B] A 4
+en DISCONNECT NG
+CIRCUIT CHECK » Check the following.
+TS. e Harness connectors
+Motor relay 1. Disconnect control unit connector. ,
+= ® 2. Check continuity between control unit . om. open or
+connector terminals and motor relay short between motor
+] terminals. relay terminal (relay box
+Li—e—— © side} and control unit
+Control unit Motor relay If NG, repair harness or
+@ @ connectors.
+= ® @
+@ @
+SBR771DC
+Continuity should exist.
+[8
+DISCONNECT ®
+ks A & (Go to next page.}
+1.8.
+[cum CONNECTOR |]
+Motor relay (E78)
+- L 19 2 7
+3
+[2p] Ll Pvslar
+LJ
+G/R lve
+—-
+\
+SBR772DC
+
+===== PDF page 52 =====
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+
+Diagnostic Procedure 3 (Motor relay or motor)
+
+MOTOR CHECK
+
+Y
+
+(Cont’d)
+®
+I
+[motor RELAY CHECK NG Replace motor relay.
+Relay type ABS motor relay
+Continuity exist-
+i ence betwee
+SBR776D Condition terminals ®
+and ®
+[D] Battery voltage
+DISCONNECT AB t not applie:
+0 \ © iN uator between each |» and @ No
+1S. & terminal
+ABS actuator _2-pin Battery voltage © and @ vi
+connector applie e ween an: es
+(ABS actuator side) each terminal
+a) While applying battery voltage to relay
+A terminals, insert fuse into the circuit.
+[0] = oK
+== sBR79308| | ACTUATOR MOTOR GROUND CHECK | NG | Check the following.
+® Harness connector
+5 DISCONNECT Refer to ACTUATOR MOTOR GROUND e Harness for open or
+Ts in Ground Circuit Check, BR-45. short between solenoid
+Motor relay E78) OK valve relay terminal
+Hi (relay box side) and
+Lo ] ground
+5; ” If NG, repair harness or
+connectors.
+D] y
+(FUSE L Check continuity between ABS actuator NG | Check the following.
+— SBR773DC| | 2-pin connector (ABS actuator side) "| ® Harness connector
+terminal @) and actuator motor positive e Harness for open or
+terminal. short between actuator
+Continuity should exist. connector and motor ter-
+minal
+OK If NG, repair harness or
+connectors.
+y
+NG
+
+Replace ABS actuator.
+
+1. Remove motor relay.
+
+2. Connect actuator connectors.
+
+3. Connect suitable wire between motor
+relay connector terminals @ and 3.
+Motor should operate.
+
+Do not connect wire for more than 5
+seconds.
+
+OK
+Ad
+
+Go to Diagnostic Procedure 5, BR-55.
+
+BR-51
+
+MIA
+
+EM
+
+LG
+
+EC
+
+RS
+
+BT
+
+FA
+
+EL
+
+1085
+===== PDF page 53 =====
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+
+DISCONNECT
+
+|=
+
+T.S.
+Motor relay
+
+[
+
+Diagnostic Procedure 3 (Motor relay or motor)
+
+Ro DISCONNECT
+TS.
+Motor relay (E78)
+i
+[ L
+|
+
+ABS actuator
+2-pin connector
+(ABS actuator side)
+
+MH @
+
+[Q]
+
+(Cont'd)
+. I No :
+Replace fusible link. | Inspection end
+Does the fusible link blow out when
+ignition switch is turned “ON”?
+Yes
+| :
+= MOTOR POWER SUPPLY CIRCUIT NG Check the following.
+SBR774DC "| ® Harness connector
+1. Remove motor relay. ® Harness for open or
+2. Check continuity between motor relay short between motor
+terminal ® and ground. relay terminal (relay box
+Continuity should not exist. side) and fusible link
+If NG, repair harness or
+OK connectors.
+[Ql] :
+1. Disconnect control unit connector. NG Check the following.
+2. Check continuity between motor relay ® Harness connector
+terminal @ and ground. e Harness for open or
+= Continuity should not exist. short between motor
+SBR775DD relay terminal (relay box
+OK side) and fusible link
+Sd Can If NG, repair harness or
+Remove motor
+ground. 4 NG
+1. Remove motor ground. .| Replace ABS actuator.
+2. Check continuity between ABS actuator
+2-pin connector (ABS actuator
+side) terminal @ and ground.
+Continuity should not exist.
+= OK
+
+y
+
+SBR483DC
+
+1086
+
+MOTOR CHECK
+
+Go to in Diagnostic Procedure 3 (pre-
+ceding page).
+
+OK
+h 4
+
+Check control unit pin terminals for dam-
+age or the connection of control unit har-
+ness connector.
+
+Reconnect control unit harness connector.
+Then retest.
+
+BR-52
+
+===== PDF page 54 =====
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+
+Fuse ABS warning lamp
+
+Diagnostic Procedure 4 (Solenoid valve relay)
+
+BR-53
+
+(&N-{10A] D,
+{7} ABS actuator =
+connectors Malfunction code No. 63
+Fusible link (body side) NG
+1; + a SOLENOID VALVE POWER SUPPLY ® (See next page.) al
+ABS solenoid Le
+solenol
+valve relay (ED) Check 30A[3] fusible link (ABS ACTR) for
+FEE IP PA GTY ABS solenoid valve relay. For fusible link MIA
+3 | layout, refer to POWER SUPPLY ROUT- Li
+"To motor [1 a 4 ING in EL section.
+1 | \
+ire ay :) /, i OK EM
+J
+omoo-- a 1. Disconnect connectors from control unit No »| Inspection end
+oe __ TI ABS actuator_ and ABS actuator. Check terminals for
+! , damage or loose connection. Then LC
+Ce - — = ' reconnect connectors.
+"13 lz alz 13 1z 13 jz 2. Carry out self-diagnosis again.
+BRET BE ke BLE EBr Ba Does warning lamp activate again? EC
+rq SE Ju Su Sa Ox Sr Sr,
+Yay (1) 45 (3% G6 (5)-(4D)-(7)-' | Yes
+GROUND CIRCUIT CHECK NG Repair harness and con- EE
+ABS control unit Refer to CONTROL UNIT GROUND and
+ACTUATOR MOTOR GROUND in Ground EL
+SBR103EA Circuit Check, BR-45.
+OK
+Nas) DISCONNECT v MT
+S > id val SOLENOID VALVE POWER SUPPLY NG Check the following.
+oT valve CHECK "| ® Hamess connector
+relay (E79) ® Harness for open or short | AT
+1. Remove solenoid valve relay. between solenoid valve
+7] 2. Check voltage between solenoid valve terminal (relay box side)
+15; relay terminal @ and ground. and fusible link
+~ BR \ ; FA
+lo of Battery voltage should exist. If NG, repair harness or
+i] 5K connectors.
+1 B v
+SBR777DC| | CIRCUIT CHECK NG Check the following.
+"| ® Harness connector. (Eifd)
+B 1. Disconnect control unit connector. e Harness for open or short
+SY Faas 2. Check continuity between control unit between solenoid vaive
+yay cannector terminals and solenoid valve relay terminal (relay box
+1S. E> TS. relay terminals. side) and contro! unit ST
+i If NG, repair harness or
+ays [con CONNECTOR Control unit Solenoid valve relay connector
+UB 3 2 37 @ @
+3 @ @ RS
+& i LR YB JLG/R @ SD
+LG/R Y/B Continuity should exist.
+J OK BT
+[Q]
+Le {Go to next page.) HA
+[a] .
+IDX
+SBR778DC
+1087
+===== PDF page 55 =====
+1088
+
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+
+Solenoid valve relay
+— E79
+
+(5
+orf
+
+[Q]
+
+l
+
+= SBR779DC
+
+=
+
+DISCONNECT
+
+Lss
+TS.
+
+ABS actuator
+2-pin connector
+
+(body side)
+
+ar)
+
+L/B
+
+|
+
+SBR493DC
+
+AE
+
+ABS actuator
+2-pin connector
+
+(ABS actuator side)
+Gm)
+
+[Q]
+
+SBR494DC
+
+Diagnostic Procedure 4 (Solenoid valve relay)
+
+(Cont'd)
+®
+
+}
+
+Replace fusible fink. No | inspection end
+Does the fusible link blow out when
+ignition switch is turned “ON”?
+Yes
+y
+RELAY UNIT POWER SUPPLY CIRCUIT NG Check the following.
+® Harness connector
+1. Remove solenoid valve relay. e Harness for open or
+2. Check continuity between solenoid short between solenoid
+valve relay terminal @ and ground. valve terminal (relay box
+Continuity should not exist. side) and fusible link
+If NG, repair harness or
+OK connectors.
+ol
+
+1. Disconnect ABS actuator 2-pin connec-
+tors and control unit connector.
+
+2. Check continuity between ABS actuator
+2-pin connector (body side) termi-
+nal 3 and ground.
+
+Continuity should not exist.
+
+NG
+
+Replace ABS relay box.
+
+OK
+
+Check continuity between ABS actuator
+2-pin connector {ABS actuator side)
+terminal @® and ground.
+
+Continuity should not exist.
+
+NG
+
+Replace ABS actuator.
+
+OK
+
+h 4
+
+Go to Diagnostic Procedure 1, BR-46.
+
+A 4
+
+SOLENOID VALVE RELAY CHECK
+
+NG
+
+| Replace solenoid valve
+
+SBR776D
+
+Relay type Solenoid valve relay
+Continuity existence
+Condition between terminals
+@ and @ and
+@ ®
+Battery
+voltage
+not
+applied | @ and @ Yes No
+between
+each ter-
+minal
+Battery
+voltage
+applied
+between @ and @ No Yes
+each ter-
+minal
+
+While applying battery voltage to relay
+terminals, insert fuse into the circuit.
+
++ OK
+
+Go to Diagnostic Procedure 1, BR-46.
+
+BR-54
+
+| relay.
+
+===== PDF page 56 =====
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+
+Diagnostic Procedure 5 (Low voltage)
+
+Malfunction code No. 57
+
+1. Disconnect control unit connectors.
+Check terminals for damage or loose
+connections. Then reconnect connec-
+tors.
+
+2. Carry out self-diagnosis again.
+
+Does warning lamp activate again?
+
+No
+
+Inspection end
+
+:
+
+Yes
+
+[{ ciuniTconnecToR
+
+1
+
+GY VJ
+PD
+
+SBR726D
+
+CONTROL UNIT POWER SUPPLY
+CHECK
+
+1. Disconnect control unit connector.
+
+2. Check voltage between control unit
+connector terminal @ and ground.
+Battery voltage should exist when
+ignition switch is turned ON.
+
+OK
+
+Y
+
+NG
+—»® (See below.)
+
+CONTROL UNIT GROUND CHECK
+
+NG
+
+\ 4
+
+Refer to CONTROL UNIT GROUND in
+Ground Circuit Check, BR-45.
+
+OK
+
+y
+
+Check the following.
+
+® Harness connector
+
+e Harness for open or
+short between contro!
+unit and ground
+
+If NG, repair harness or
+
+connectors.
+
+Check control unit pin terminals for dam-
+age or the connection of control unit har-
+ness connector.
+
+Reconnect control unit harness connector.
+
+Then retest.
+
+®
+
+|
+
+Check 10A fuse (Engine control) for
+control unit. Refer to POWER SUPPLY
+ROUTING in EL section.
+
+NG
+
+Replace fuse.
+
+OK
+4
+
+Check continuity between battery and
+control unit connector terminal @ .
+
+NG
+
+Y
+
+OK
+
+A 4
+
+Check the following.
+
+® Harness connector
+
+e Harness for open or
+short between control
+unit and fuse
+
+If NG, repair harness or
+
+connectors.
+
+Check battery. Refer to BATTERY in EL
+section.
+
+BR-55
+
+EM
+
+LG
+
+EC
+
+FE
+
+CL
+
+MIT
+
+R
+
+BT
+
+S
+
+HA
+
+EL
+
+1089
+===== PDF page 57 =====
+TROUBLE DIAGNOSES FOR SELF-DIAGNOSTIC ITEMS
+
+Diagnostic Procedure 6 (Control unit)
+Malfunction code No. 71
+
+Carry out self-diagnosis after erasing seif-
+diagnostic results, BR-36, BR-40.
+
+;
+
+Yes
+
+Does warning lamp indicate code No. 71 Replace conirol unit.
+
+Y
+
+again?
+’ No
+
+Inspect the system according to the code
+No.
+
+1090 BR-56
+===== PDF page 58 =====
+TROUBLE DIAGNOSES FOR SYMPTOMS
+
+Brake pedal
+
+4
+
+Diagnostic Procedure 7 (Pedal vibration and
+noise)
+
+Yes
+
+1. Apply brake. Carry out self-diagnosis.
+
+2. Start engine. Refer to BR-36, BR-40.
+
+3. Does the symptom appear only when
+engine is started?
+
+h 4
+
+No
+
+y
+
+SAT797A
+
+Does the symptom appear when electrical No Go to IB] in Diagnostic
+equipment switches (such as headlamp) Procedure 9, BR-58.
+are operated?
+
+Y
+
+Yes
+
+Ad
+
+Check wheel sensor shield ground
+secured with control unit mounting bolt.
+
+NG OK
+
+y
+
+Repair.
+
+y
+
+Check control unit pin terminals for dam-
+age or the connection of contro! unit har-
+
+ness connector.
+Reconnect control unit harness connector.
+
+Then retest. :
+
+Note: ABS may operate and cause vibration under any of the
+following conditions.
+
+eo Applying brake gradually when shifting or operating
+
+clutch.
+
+Low friction (slippery) road.
+
+High speed cornering.
+
+Driving over bumps and pot holes.
+
+Engine speed is over 5,000 rpm with vehicle stopped.
+
+BR-57
+
+@l
+MA
+
+EM
+
+EC
+FE
+
+CL
+
+AT
+
+FA
+
+ST
+RS
+
+1091
+===== PDF page 59 =====
+TROUBLE DIAGNOSES FOR SYMPTOMS
+
+SBR540A
+
+SBR920C|
+
+1092
+
+Diagnostic Procedure 8 (Long stopping
+
+distance)
+
+Disconnect ABS solenoid valve relay and
+check whether stopping distance is still
+long.
+
+No
+
+Yes
+
+Perform Preliminary Check and air bleed-
+ing.
+
+Note: Stopping distance may be larger than vehicles without
+
+| Goto B in Diagnostic
+
+Procedure 9, BR-58.
+
+ABS when road condition is slippery.
+
+Diagnostic Procedure 9 (Unexpected pedal
+
+action)
+Yes so
+Check brake pedal stroke. Is stroke »| Perform Preliminary
+excessively large? Check, refer to BR-30.
+No
+- N
+Disconnect ABS solenoid valve relay and ° »| Perform Preliminary
+check whether brake is effective. Check, refer to BR-30.
+Yes
+Bj y NG
+Ensure warning lamp remains off while »| Carry out self-diagnosis.
+driving. Refer to BR-36, BR-40.
+J OK
+NG .
+CHECK WHEEL SENSOR. » Repair.
+
+1. Check wheel sensor connector for ter-
+minal damage or loose connection.
+
+2, Perform wheel sensor mechanical
+check.
+Refer to “WHEEL SENSOR MECHANI-
+CAL CHECK”, BR-49.
+
++ OK
+
+Check control unit pin terminals for dam-
+age or the connection of control unit har-
+ness connector.
+
+Reconnect control unit harness connector.
+Then retest.
+
+BR-58
+
+===== PDF page 60 =====
+TROUBLE DIAGNOSES FOR SYMPTOMS
+
+Diagnostic Procedure 10 (ABS does not work.)
+
+Does the ABS warning lamp activate? ves Carry out self-diagnosis.
+Refer to BR-36, BR-40.
+No
+—— Gl
+
+Go to iB] in Diagnostic Procedure 9,
+
+BR-58.
+MA
+
+Note: ABS does not work when vehicle speed is under 10 km/h
+
+(6 MPH). _
+
+aM
+LC
+EC
+
+Diagnostic Procedure 11 (ABS works
+
+frequently.) FE
+
+CHECK BRAKE FLUID PRESSURE. NG Perform Preliminary
+
+"| Check, refer to BR-30. cL
+
+Check brake fluid pressure distribution.
+
+Refer to dual proportioning valve inspec-
+
+tion in “CONTROL VALVE” (BR-6). MT
+
+OK
+A 4
+
+CHECK WHEEL SENSOR. NG | Repair. AT
+
+1. Check wheel sensor connector for ter-
+FA
+
+minal damage or loose connections.
+2. Perform wheel sensor mechanical
+
+check. n
+Refer to “WHEEL SENSOR MECHANI- [RA
+
+CAL CHECK”, BR-49.
+OK
+
+A 4
+Check front and rear axles for excessive NG Repair. |
+looseness. Refer to FA section (“Front ST
+Wheel Bearing”, “ON-VEHICLE
+
+SERVICE”) and RA section (“Rear Wheel
+Bearing”, “ON-VEHICLE SERVICE"). BS
+
+OK
+
+\ 4
+Check control unit pin terminals for dam-
+age or the connection of control unit har-
+ness connector.
+
+Reconnect control unit harness connector. IFA
+Then retest.
+
+EL
+
+[BX
+
+BR-59 1093
+===== PDF page 61 =====
+1094
+
+TROUBLE DIAGNOSES FOR SYMPTOMS
+
+Diagnostic Procedure 12 (Warning lamp does
+not work before engine starts.)
+
+BR-60
+
+N
+WARNING LIGHT CIRCUIT CHECK G, Replace fuse.
+Check 10A fuse (meter) for warning
+lamp. For fuse layout, refer to POWER
+SUPPLY ROUTING in EL section.
+J OK
+NG
+Check warning lamp bulb. »| Replace bulb.
+OK
+- NG
+Yad ‘ams 7A ) 1. Install 10A fuse and bulb. »| Check the following.
+AN EE 3) 2. Remove solenoid valve relay. ® Harness connector
+;. / 3. Disconnect connectors from control ® Harness for open or
+unit. short between control
+[{ cruniTconnecTor 1 4. Check voltage between control unit unit and fuse
+connector terminal @ and ground after If NG, repair harness or
+30 GI) turning ignition switch “ON”. connectors.
+Battery voltage should exist after
+UR turning ignition switch “ON”,
+[V] 5K
+KD 1B) 5
+= . NG .
+SBR7150 [1 Remove solenoid valve relay. » Check the following.
+2. Check continuity between control unit ® Harness connectors
+[El terminals and solenoid valve relay ter- ,
+minals. e Harness for open or
+To Cae short between solenoid
+} valve relay terminal
+Tg od Eo ABS control unit Solenoid valve relay (relay box side) and con-
+Cd & @ © @ © trol unit
+Hh [{ crumir CONNECTOR [] Ground @ i NG, repair hainess or
+Solenoid valve connectors.
+relay (E79) 30
+y vB Continuity should exist.
+3 Note: Pay attention to tester polarity*.
+[141] t/R
+i v OK
+° [Q] he i
+SOLENOID VALVE RELAY CHECK »{ Replace solenoid valve
+relay.
+© Refer to in Diagnostic Procedure 4,
+BR-54.
++ OK
+Go to Diagnostic Procedure 5, BR-55.
+[Q] *: Specifications may vary depending on the type of tester.
+Before performing this inspection, refer to the instruction manual of the
+| tester.
+SBR10SEA
+
+===== PDF page 62 =====
+TROUBLE DIAGNOSES FOR SYMPTOMS
+
+vy OK
+
+®
+{Go to next page.)
+
+BR-61
+
+— Diagnostic Procedure 13 (Warning lamp stays
+[ cronir connector [| [Ee on continuously.)
+1 DISCONNECT NG
+CONTROL UNIT POWER SUPPLY BR-
+ay CIRCUIT ——p(Go to ® on 63.)
+VE Check 10A fuse [15] (engine control) for
+PD © control unit.
+For fuse-layout, refer to POWER SUPPLY
+ROUTING in EL section.
+i
+© SBR240DB . OK
+B] 1. Disconnect connector from control unit. NG Check the following.
+2. Check voltage between control unit ® Harness connector
+connector terminal (D and ground after ® Harness for open or
+TM aa ny Buy turning ignition switch “ON”. short between control
+TS. TS. Battery voltage should exist. unit and fuse
+Solenoid valve If NG, repair harness or
+relay (E79) C/UNIT CONNECTOR OK connectors.
+— 2 37
+L| Y/B LG/A SOLENOID VALVE RELAY COIL NG »| Check the following.
+LG/R POWER SUPPLY CIRCUIT ® Harness connectors
+[(Q] 1. Turn ignition switch “OFF”. ® Harness for open or
+TE 2. Remove solenoid valve relay. short between solenoid
+3. Check continuity between control unit valve relay terminal
+connector terminals and solenoid valve {relay box side) and con-
+relay terminals. trol unit
+If NG, repair harness or
+Control unit Solenoid valve relay connectors.
+@ 0)
+@] ® ®
+Continuity should exist.
+OK
+— NG
+SOLENOID VALVE RELAY CHECK J! Replace solenoid valve
+SBR781DC v relay.
+Refer to in Diagnostic Procedure 4,
+BR-54.
+
+MA
+
+EM
+
+LC
+
+EC
+
+GL
+
+VIF)
+
+AT
+
+[PA
+
+RS
+
+BY
+
+HA
+
+1095
+===== PDF page 63 =====
+1096
+
+TROUBLE DIAGNOSES FOR SYMPTOMS
+
+"EAE EE) 5 @) A
+
+Diagnostic Procedure 13 (Warning lamp stays
+
+on continuously.) (Cont'd)
+
+SOLENOID VALVE CIRCUIT
+
+A 4
+
+®
+[ C/UNIT CONNECTOR
+30 E114
+UR GROUND-SHORT CHECK FOR WARN- NG Check the following.
+[Q] ING LAMP CIRCUIT. "| ® Harness connector
+® Harness for open or
+= 1. Turn ignition switch “OFF”. short between control
+SBR106E| | 2. Remove solenoid valve relay. unit and fuse
+Disconnect connectors from control If NG, repair harness or
+® SY BS unit. connectors.
+Fuse block V. E> 3. Check continuity between control unit
+( 1 ABS actuator connector terminal @ and body ground.
+0 2-pin connector Continuity should not exist.
+(body side) (E85)
+y OK
+I Cop
+i D]
+[a] | i q
+in 1. Remove 10A fuse [13] (meter) for warn- [NG | Check the following.
+TG] iS ing lamp. For fuse layout, refer to "| ® Harness connector
+— SBR1GTEA POWER SUPPLY ROUTING in EL sec- ® Harness for open or
+tion. short between actuator
+ABS act 2. Disconnect ABS actuator 2-pin connec- connector and fuse
+Spin sommestor pay tor (E65) - If NG, repair hamess or
+(ABS actuator side} T.S. & 3. Check continuity between ABS actuator connectors.
+\ a 2-pin connector (body side) terminal (@
+>)
+(L715]3) © and 10A fuse [13] (fuse box side) ter-
+Ndi efs/ minal @
+1e3e547 .
+Hae 1oet6r 17 Continuity should not exist.
+— Note: Pay attention to tester polarity*.
+[Q] OK
+E © v
+SBR783DB NG
+
+Replace ABS actuator.
+
+1. Disconnect ABS actuator 8-pin connec-
+tor .
+
+2. Check continuity between each ABS
+actuator 8-pin connector (ABS actuator
+side) terminals and body ground.
+Continuity should not exist.
+
+OK
+
+y
+
+Check control unit pin terminals for dam-
+age or the connection of control unit har-
+ness connector.
+
+Reconnect control unit harness connector.
+Then retest.
+
+*: Specifications may vary depending on the type of tester.
+Before performing this inspection, refer to the instruction manual of the
+
+tester.
+
+BR-62
+
+===== PDF page 64 =====
+TROUBLE DIAGNOSES FOR SYMPTOMS
+
+Diagnostic Procedure 13 (Warning lamp stays
+
+on continuously.) (Cont’d)
+
+Check continuity between control unit con-
+
+h 4
+
+nector terminal @ and body ground.
+Continuity should not exist.
+
+OK
+
+y
+
+Check control unit pin terminals for dam-
+age or the connection of control unit har-
+ness connector.
+
+Reconnect control unit harness connector.
+
+Then retest.
+
+BR-63
+
+5 DISCONNECT
+TS.
+[{ crunirconnecTor |
+! Replace 10A fuse [15]. No | Inspection end
+Does the fuse blow out when ignition
+GY [Q] switch is turned “ON?
+J | Yes
+SBR720D)
+y
+CONTROL UNIT POWER SUPPLY NG Check the following.
+nd ‘ams CIRCUIT "| & Harness connector
+1.8. EE ® Harness for open or
+1. Disconnect control unit connector. short between control
+[{_ciunT connector 2. Check continuity between control unit unit and fuse
+2 connector terminal @ and body If NG, repair harness or
+ground. connectors.
+YiB 9] Continuity should not exist.
+OK
+$BR721D .
+NG
+
+Check the following.
+
+® Harness connectors
+GNGDY
+
+¢ Harness for open or
+short between actuator
+connector and solenoid
+valve relay terminal
+(relay box side}
+
+If NG, repair harness or
+
+connectors.
+
+MA
+
+EM
+
+LC
+
+EC
+
+FE
+
+CL
+
+MT
+
+AY
+
+FA
+
+RS
+
+BT
+
+RIA
+
+EL
+
+[DX
+
+1097
+===== PDF page 65 =====
+SERVICE DATA AND SPECIFICATIONS (SDS)
+
+General Specifications
+
+Front brake Master cylinder
+Brake model CL25VB disc brake Cylinder bore diameter in 23.81 (15/16)
+Cylinder bare diameter 57.2 (2.252)
+mm (in) a Control valve
+Pad mm (in) |. 125.6 x 453 x 11 Valve model Dual proportioning valve
+Length x width x thickness (4.94 x 1.783 x 0.43)
+Split point
+Rotor outer diameter x thick- kPa (kg/cm?, psi} 1,961 (20, 284) x 0.2
+ness mm (in) 280 x 22 (11.02 x 0.87) x reducing ratio
+Rear brake Brake booster
+Brake model CLSHB disc brake Booster model M215T
+Cylinder bore diameter Diaphragm diameter Primary: 230 (9.06)
+—p 33.96 (1.3370) mm (in) Secondary: 205 (8.07)
+Pad mm (in) 89.1 x 39.5 x 10 Recommended brake fluid DOT 3
+Length x width x thickness {3.508 x 1.555 x 0.39)
+Rotor outer diameter
+x thickness mm (in) 278 x 9 (10.94 x 0.35)
+Inspection and Adjustment
+DISC BRAKE PARKING BRAKE
+Brake model CL25vB CL9HB Type Center lever
+Pad wear limit mm (in) Number of notches
+Minimum thickness 2.0 (0.079) 1.5 (0.059) [under force of 196 N
+(20 kg, 44 Ib)] 10-1
+Rotor repair limit mm (in) 9
+h.
+Maximum runout 0.08 (0.0031) | 0.15 (0.0059) Number of notches
+o . when warning lamp switch
+Minimum thickness 20.0 (0.787) 8 (0.31) comes on 1
+
+BRAKE PEDAL
+
+Free height “H™* mm {in)
+MT 158 - 165 (6.22 - 6.50)
+AIT 167 - 174 (6.57 - 6.85)
+Depressed height “D” mm {in)
+[under force of 480 N {50 kg, M/T: 70 (2.76)
+110 ib) with engine running] A/T: 75 (2.95)
+Pedal tree play “A” mm (in) 1-3(0.04-0.12)
+
+Clearance “C” between pedal stop-
+
+per and threaded end cf stop lamp i;
+
+switch or ASCD switch 0.3-1.0(0.012- 0.039)
+mm (in)
+
+*: Measured from surface of dash reinforcement panel to surface of
+pedal pad
+
+1098 BR-64
