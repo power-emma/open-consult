@@ -173,10 +173,11 @@ The program ROM can't be read over Consult.
 | Task | Command |
 |---|---|
 | Identify | `python -m consult --ecu DA id` |
-| Watch switches | `python -m consult --ecu DA watch-raw FF` |
+| Watch switches | `python -m consult bcm-watch` |
 | Watch RAM | `python -m consult --ecu DA watch-mem FA00 -n 96` |
-| Run a test | `python3 tools/bcm/fire.py <value> <seconds> <item…>` |
-| GUI | `consult-gui`, Body (BCM) tab |
+| Run a test | `python -m consult bcm-test <name> [--hold s]` |
+| Scans | `tools/bcm/argscan.py`, `valscan.py`, `c9scan.py`, `fire2.py` |
+| GUI | `consult-gui`, BCM tests tab |
 
 ## Open
 

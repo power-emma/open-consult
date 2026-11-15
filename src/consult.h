@@ -59,6 +59,9 @@ int consult_part_number(consult_t *c, char *out, size_t outlen);
 /* D1: returns the number of codes stored in out, or -1. */
 int consult_dtcs(consult_t *c, consult_dtc_t *out, int max);
 
+/* C9: one byte from each of n (1..8) addresses into out. Returns 1 on success. */
+int consult_read_memory(consult_t *c, const uint16_t *addrs, int n, uint8_t *out);
+
 /* C1: clear stored codes, then re-read D1 into out. *cleared says whether the ECU
  * accepted C1. Returns the number of codes still stored, or -1. Issue 7 of the spec
  * says C1 may clear only one of three DTC sets, hence the re-read. */

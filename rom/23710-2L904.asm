@@ -21,6 +21,7 @@
 ;   $00F0 sio_txctl  Consult TX enable/IRQ (low 3 bits)
 ;   $00F1 sio_rxctl  Consult RX enable (low 3 bits)
 ;   $0202 mb_out  To second CPU: live data block, every second byte ($0202-$025E)
+;   $0213 sub_status  From 2nd CPU; b3 = knock system OK
 ;   $024C mb_c9_addr  To second CPU: forwarded C9 address (lo/hi at $024C/$024E)
 ;   $029C mb_status  Shared RAM status byte
 ;   $029E mb_handshake  Handshake / message type (A5 = ready; low 3 bits = message type)
@@ -33,6 +34,7 @@
 ;   $05E2 ffrm_pcode  Freeze-frame DTC, BCD (Consult 3B/3C)
 ;   $0685 dtc_snapshot  Conditions at last detection: coolant, rpm, load, speed, trims, switches ($0685-$069C)
 ;   $0687 dtc_snap_pcode  P-code of last detection
+;   $070D knock_fs  b7 = knock fail-safe latched (fixed retard $2895)
 ;   $071B cs_state  Consult state: 01 saw FF, 02 saw FF FF, 04 ready for command, 08 expecting argument, 10 command parsed (await F0 or another), 20 streaming, 80 first FF seen
 ;   $071C cs_flags  01 re-init, 02 stop request, 08 5A list, 10 TX busy, 20 TX ready, 40 C9 list, 80 0A waiting for value
 ;   $071D cs_flags2  01 C9 high byte received, 04 C1 clear pending, 08 0A direct mode, 10 word mode, 20 direct value >= 80
@@ -95,6 +97,9 @@
 ;   $0B36 o2_0A  Consult 0A: front O2, other bank
 ;   $0B45 learn_a  Consult 1C: self-learn alpha %
 ;   $0B5B learn_b  Consult 1D
+;   $0BA6 tim_base  Base timing term; only set at reset in bank 0, so written by bank-1 code (map lookup?)
+;   $0BA8 tim_target  Timing target, clamped 30-75 ($47F3)
+;   $0BA9 tim_out  Timing after rate limit; register 16 = tim_out - cyl trim + 80
 ;   $0BD9 iacv_step  Consult 18: IACV-AAC position (steps); written by idle control, forced by test 85
 ;   $0C4C reg32_flag  Consult 32: 00/FF flag from MAF vs $22FB at $DD8A (not CAL/LD)
 ;   $0C60 p1320_misses  P1320 miss count (10 -> fault)
@@ -103,6 +108,11 @@
 ;   $0DAA inj_a_hi  Consult 14: injection pulse /100 ms
 ;   $0DAB inj_b_lo  Consult 23
 ;   $0DAC inj_b_hi  Consult 22: injection pulse other bank
+;   $0DB0 cyl_trim  Per-cylinder timing trim, 6 bytes ($0DB0-$0DB5)
+;   $0DB7 knock_ret  Knock retard, 16-bit (written $A1FC; high byte $0DB8 used at $47A8)
+;   $0DC1 knock_work  Knock retard working value (16-bit)
+;   $0DD0 kchip_state  Knock chip: b0 OK (self-test CC00), b6 just reset, b4 watchdog
+;   $0DDD kchip_rx  Word read back from the knock chip (CC00 / AA55 self-test)
 ;   $0E51 sub_dtc_flags  Detection flags received from the second CPU ($0E51-$0E58)
 ;   $0F69 backup_flags  Backup-RAM status flags
 ;   $0F70 ffrm_1st  1st-trip freeze frame in backup RAM ($0F70-$0F79, Consult 56-5F)
@@ -1772,7 +1782,7 @@ L_3E18:
     3E57  64 D8 24                LDM $D8,#$24
     3E5A  9C 11 02 00             LDM $0211,#$00
     3E5E  9C 21 02 00             LDM $0221,#$00
-    3E62  9C 13 02 00             LDM $0213,#$00
+    3E62  9C 13 02 00             LDM $0213,#$00    ; sub_status
     3E66  9C 23 02 00             LDM $0223,#$00
     3E6A  A9 40                   LDA #$40
     3E6C  8D 15 02                STA $0215
@@ -1860,10 +1870,10 @@ L_3EB0:
     3F4A  64 96 05                LDM $96,#$05
     3F4D  64 90 00                LDM $90,#$00
     3F50  A9 10                   LDA #$10
-    3F52  8D A6 0B                STA $0BA6
+    3F52  8D A6 0B                STA $0BA6         ; tim_base
     3F55  AD D4 20                LDA $20D4
-    3F58  8D A8 0B                STA $0BA8
-    3F5B  8D A9 0B                STA $0BA9
+    3F58  8D A8 0B                STA $0BA8         ; tim_target
+    3F5B  8D A9 0B                STA $0BA9         ; tim_out
     3F5E  1A                      DEA
     3F5F  8D 32 07                STA $0732         ; ign_timing
     3F62  D8                      CLM
@@ -1879,7 +1889,7 @@ L_3EB0:
     3F75  29 FF 00                AND #$00FF
     3F78  85 84                   STA $84
     3F7A  A2 80 80                LDX #$8080
-    3F7D  8E B0 0D                STX $0DB0
+    3F7D  8E B0 0D                STX $0DB0         ; cyl_trim
     3F80  8E B2 0D                STX $0DB2
     3F83  8E B4 0D                STX $0DB4
     3F86  F8                      SEM
@@ -2120,7 +2130,7 @@ L_44AE:
     44B3  FB 0F                   PUL #$0F
     44B5  40                      RTI
 
-; ===== Timer B2 interrupt (purpose not verified)
+; ===== Timer B2 interrupt: knock chip per-cylinder value + watchdog ($021F.3 from 2nd CPU)
 isr_tb2:
     44B6  C2 38                   CLP #$38
     44B8  EB 0F                   PSH #$0F
@@ -2129,7 +2139,7 @@ isr_tb2:
     44C0  0C 44 09 04             SEB $0944,#$04
 
 L_44C4:
-    44C4  3C D0 0D 01 14          BBC $0DD0,#$01,L_44DD
+    44C4  3C D0 0D 01 14          BBC $0DD0,#$01,L_44DD  ; kchip_state
     44C9  A9 00                   LDA #$00
     44CB  2C 0D 0A 05 04          BBS $0A0D,#$05,L_44D4
     44D0  AD 0D 0A                LDA $0A0D
@@ -2142,10 +2152,10 @@ L_44D4:
 
 L_44DD:
     44DD  F8                      SEM
-    44DE  3C D0 0D 01 51          BBC $0DD0,#$01,L_4534
-    44E3  2C D0 0D 40 32          BBS $0DD0,#$40,L_451A
+    44DE  3C D0 0D 01 51          BBC $0DD0,#$01,L_4534  ; kchip_state
+    44E3  2C D0 0D 40 32          BBS $0DD0,#$40,L_451A  ; kchip_state
     44E8  3C 1F 02 08 38          BBC $021F,#$08,L_4525
-    44ED  3C D0 0D 10 3E          BBC $0DD0,#$10,L_4530
+    44ED  3C D0 0D 10 3E          BBC $0DD0,#$10,L_4530  ; kchip_state
 
 L_44F2:
     44F2  EE DF 0D                INC $0DDF
@@ -2155,7 +2165,7 @@ L_44F2:
     44FD  1C 10 07 01             CLB $0710,#$01
     4501  AD 10 07                LDA $0710
     4504  8D 35 02                STA $0235
-    4507  1C D0 0D 01             CLB $0DD0,#$01
+    4507  1C D0 0D 01             CLB $0DD0,#$01    ; kchip_state
     450B  0C 10 07 01             SEB $0710,#$01
     450F  EE E0 0D                INC $0DE0
     4512  AD 10 07                LDA $0710
@@ -2163,19 +2173,19 @@ L_44F2:
     4518  80 1A                   BRA L_4534
 
 L_451A:
-    451A  1C D0 0D 40             CLB $0DD0,#$40
+    451A  1C D0 0D 40             CLB $0DD0,#$40    ; kchip_state
     451E  3C 1F 02 08 07          BBC $021F,#$08,L_452A
     4523  80 0B                   BRA L_4530
 
 L_4525:
-    4525  3C D0 0D 10 C8          BBC $0DD0,#$10,L_44F2
+    4525  3C D0 0D 10 C8          BBC $0DD0,#$10,L_44F2  ; kchip_state
 
 L_452A:
-    452A  1C D0 0D 10             CLB $0DD0,#$10
+    452A  1C D0 0D 10             CLB $0DD0,#$10    ; kchip_state
     452E  80 04                   BRA L_4534
 
 L_4530:
-    4530  0C D0 0D 10             SEB $0DD0,#$10
+    4530  0C D0 0D 10             SEB $0DD0,#$10    ; kchip_state
 
 L_4534:
     4534  9C DF 0D 00             LDM $0DDF,#$00
@@ -2191,7 +2201,7 @@ isr_ta4:
     4540  C2 38                   CLP #$38
     4542  EB 0F                   PSH #$0F
     4544  F8                      SEM
-    4545  3C D0 0D 01 28          BBC $0DD0,#$01,L_4572
+    4545  3C D0 0D 01 28          BBC $0DD0,#$01,L_4572  ; kchip_state
     454A  D8                      CLM
     454B  22 76 45 00             JSL L_4576
     454F  18                      CLC
@@ -2341,18 +2351,18 @@ isr_nmi:
     4744  D8                      CLM
     4745  AF 66 02 03             LDA $030266
     4749  F8                      SEM
-    474A  2C D0 0D 01 08          BBS $0DD0,#$01,L_4757
-    474F  AC DD 0D                LDY $0DDD
+    474A  2C D0 0D 01 08          BBS $0DD0,#$01,L_4757  ; kchip_state
+    474F  AC DD 0D                LDY $0DDD         ; kchip_rx
     4752  C0 00 CC                CPY #$CC00
     4755  F0 05                   BEQ L_475C
 
 L_4757:
     4757  D8                      CLM
-    4758  8D DD 0D                STA $0DDD
+    4758  8D DD 0D                STA $0DDD         ; kchip_rx
     475B  F8                      SEM
 
 L_475C:
-    475C  3C D0 0D 01 11          BBC $0DD0,#$01,L_4772
+    475C  3C D0 0D 01 11          BBC $0DD0,#$01,L_4772  ; kchip_state
     4761  AD C9 0D                LDA $0DC9
     4764  CD C8 0D                CMP $0DC8
     4767  D0 09                   BNE L_4772
@@ -2391,7 +2401,7 @@ isr_int2_ref:
     4799  EB 0F                   PSH #$0F
     479B  F8                      SEM
     479C  3C CF 0D 02 07          BBC $0DCF,#$02,L_47A8
-    47A1  AD A9 0B                LDA $0BA9
+    47A1  AD A9 0B                LDA $0BA9         ; tim_out
     47A4  5C 2A 48 00             JMP L_482A
 
 L_47A8:
@@ -2401,7 +2411,7 @@ L_47A8:
 
 L_47B2:
     47B2  18                      CLC
-    47B3  6D A6 0B                ADC $0BA6
+    47B3  6D A6 0B                ADC $0BA6         ; tim_base
     47B6  38                      SEC
     47B7  ED 01 0E                SBC $0E01
     47BA  38                      SEC
@@ -2447,14 +2457,14 @@ L_47F9:
     47FD  A9 30                   LDA #$30
 
 L_47FF:
-    47FF  8D A8 0B                STA $0BA8
+    47FF  8D A8 0B                STA $0BA8         ; tim_target
     4802  38                      SEC
-    4803  ED A9 0B                SBC $0BA9
+    4803  ED A9 0B                SBC $0BA9         ; tim_out
     4806  90 0E                   BCC L_4816
     4808  CD AA 0B                CMP $0BAA
     480B  90 1A                   BCC L_4827
     480D  18                      CLC
-    480E  AD A9 0B                LDA $0BA9
+    480E  AD A9 0B                LDA $0BA9         ; tim_out
     4811  6D AA 0B                ADC $0BAA
     4814  80 14                   BRA L_482A
 
@@ -2463,16 +2473,16 @@ L_4816:
     4818  3A                      INA
     4819  CD D5 20                CMP $20D5
     481C  90 09                   BCC L_4827
-    481E  AD A9 0B                LDA $0BA9
+    481E  AD A9 0B                LDA $0BA9         ; tim_out
     4821  38                      SEC
     4822  ED D5 20                SBC $20D5
     4825  80 03                   BRA L_482A
 
 L_4827:
-    4827  AD A8 0B                LDA $0BA8
+    4827  AD A8 0B                LDA $0BA8         ; tim_target
 
 L_482A:
-    482A  8D A9 0B                STA $0BA9
+    482A  8D A9 0B                STA $0BA9         ; tim_out
     482D  3C 0B 12 80 68          BBC $120B,#$80,L_489A
     4832  AD B1 09                LDA $09B1
     4835  CD E6 22                CMP $22E6
@@ -2568,7 +2578,7 @@ L_48DB:
     48DE  D8                      CLM
     48DF  29 0F 00                AND #$000F
     48E2  18                      CLC
-    48E3  69 B0 0D                ADC #$0DB0
+    48E3  69 B0 0D                ADC #$0DB0        ; &cyl_trim
     48E6  AA                      TAX
     48E7  F8                      SEM
     48E8  B5 00                   LDA $00,X
@@ -2576,7 +2586,7 @@ L_48DB:
     48ED  E8                      INX
     48EE  E0 B6 0D                CPX #$0DB6
     48F1  90 03                   BCC L_48F6
-    48F3  A2 B0 0D                LDX #$0DB0
+    48F3  A2 B0 0D                LDX #$0DB0        ; &cyl_trim
 
 L_48F6:
     48F6  B5 00                   LDA $00,X
@@ -2606,7 +2616,7 @@ L_4917:
 L_4922:
     4922  8D 03 09                STA $0903
     4925  04 0A 04                SEB $0A,#$04      ; port4
-    4928  AD A9 0B                LDA $0BA9
+    4928  AD A9 0B                LDA $0BA9         ; tim_out
     492B  38                      SEC
     492C  ED 02 09                SBC $0902
     492F  18                      CLC
@@ -2869,7 +2879,7 @@ L_4AF6:
     4B02  AA                      TAX
     4B03  A9 00 00                LDA #$0000
     4B06  3C CD 0D 30 00 07       BBC $0DCD,#$0030,L_4B13
-    4B0C  AD DD 0D                LDA $0DDD
+    4B0C  AD DD 0D                LDA $0DDD         ; kchip_rx
     4B0F  D5 00                   CMP $00,X
     4B11  90 02                   BCC L_4B15
 
@@ -2884,7 +2894,7 @@ L_4B15:
     4B1F  D8                      CLM
     4B20  29 FF 00                AND #$00FF
     4B23  F0 0D                   BEQ L_4B32
-    4B25  AC DD 0D                LDY $0DDD
+    4B25  AC DD 0D                LDY $0DDD         ; kchip_rx
     4B28  AD 02 09                LDA $0902
     4B2B  18                      CLC
     4B2C  69 E1 0D                ADC #$0DE1
@@ -3915,7 +3925,7 @@ L_5401:
     5401  42 C9 30                CMPB #$30
     5404  D0 A3                   BNE cs_reply_fe
     5406  3C BC 07 04 04          BBC $07BC,#$04,L_540F  ; test AA active at stop -> backup flag
-    540B  0C 69 0F 10             SEB $0F69,#$10    ; backup_flags
+    540B  0C 69 0F 10             SEB $0F69,#$10    ; backup_flags; test AA at stop: keep $0F69 bits 7-6 across the session reset
 
 L_540F:
     540F  5C F3 4F 00             JMP cs_cmd_stop
@@ -7284,7 +7294,7 @@ L_7415:
     7421  B5 1D                   LDA $1D,X
     7423  CD 70 2B                CMP $2B70
     7426  90 09                   BCC L_7431
-    7428  0C 0D 07 40             SEB $070D,#$40
+    7428  0C 0D 07 40             SEB $070D,#$40    ; knock_fs
     742C  80 03                   BRA L_7431
 
 L_742E:
@@ -9353,7 +9363,7 @@ calc_switches:
     8443  49 1C                   EOR #$1C
     8445  8D 06 09                STA $0906         ; sum_lo
     8448  29 7E                   AND #$7E
-    844A  2C 13 02 20 02          BBS $0213,#$20,L_8451
+    844A  2C 13 02 20 02          BBS $0213,#$20,L_8451  ; sub_status
     844F  09 80                   ORA #$80
 
 L_8451:
@@ -9626,7 +9636,7 @@ L_867E:
     8683  0C 0C 09 80             SEB $090C,#$80
 
 L_8687:
-    8687  2C 13 02 02 04          BBS $0213,#$02,L_8690
+    8687  2C 13 02 02 04          BBS $0213,#$02,L_8690  ; sub_status
     868C  0C 0C 09 02             SEB $090C,#$02
 
 L_8690:
@@ -12936,17 +12946,17 @@ L_9ED8:
 
 L_9EDA:
 ; called from 4DF6
-    9EDA  AE DD 0D                LDX $0DDD
+    9EDA  AE DD 0D                LDX $0DDD         ; kchip_rx
     9EDD  3C 01 09 01 04          BBC $0901,#$01,L_9EE6
     9EE2  5C 47 A4 00             JMP L_A447
 
 L_9EE6:
-    9EE6  2C D0 0D 01 3C          BBS $0DD0,#$01,L_9F27
-    9EEB  2C 0D 07 80 37          BBS $070D,#$80,L_9F27
+    9EE6  2C D0 0D 01 3C          BBS $0DD0,#$01,L_9F27  ; kchip_state
+    9EEB  2C 0D 07 80 37          BBS $070D,#$80,L_9F27  ; knock_fs
     9EF0  E0 00 CC                CPX #$CC00
     9EF3  D0 0A                   BNE L_9EFF
-    9EF5  0C D0 0D 01             SEB $0DD0,#$01
-    9EF9  0C D0 0D 40             SEB $0DD0,#$40
+    9EF5  0C D0 0D 01             SEB $0DD0,#$01    ; kchip_state
+    9EF9  0C D0 0D 40             SEB $0DD0,#$40    ; kchip_state
     9EFD  80 23                   BRA L_9F22
 
 L_9EFF:
@@ -12972,7 +12982,7 @@ L_9F22:
     9F25  80 3D                   BRA L_9F64
 
 L_9F27:
-    9F27  3C 00 12 10 F6          BBC $1200,#$10,L_9F22
+    9F27  3C 00 12 10 F6          BBC $1200,#$10,L_9F22  ; knock control active zone: coolant, REF, rpm index, CAL/LD (with hysteresis)
     9F2C  AD 80 09                LDA $0980         ; coolant
     9F2F  3C CD 0D 01 03          BBC $0DCD,#$01,L_9F37
     9F34  18                      CLC
@@ -13003,7 +13013,7 @@ L_9F64:
     9F6D  8E BF 0D                STX $0DBF
 
 L_9F70:
-    9F70  8E C1 0D                STX $0DC1
+    9F70  8E C1 0D                STX $0DC1         ; knock_work
     9F73  9C C7 0D 00             LDM $0DC7,#$00
     9F77  5C DE A1 00             JMP L_A1DE
 
@@ -13038,18 +13048,18 @@ L_9FAA:
     9FB8  9C D2 0D 80             LDM $0DD2,#$80
 
 L_9FBC:
-    9FBC  2C 0D 07 80 0E          BBS $070D,#$80,L_9FCF
-    9FC1  2C D0 0D 80 05          BBS $0DD0,#$80,L_9FCB
-    9FC6  2C 13 02 08 1B          BBS $0213,#$08,L_9FE6
+    9FBC  2C 0D 07 80 0E          BBS $070D,#$80,L_9FCF  ; knock_fs; knock fail-safe: $0213.3 clear or $0DD0.7 -> latch $070D.7, fixed retard
+    9FC1  2C D0 0D 80 05          BBS $0DD0,#$80,L_9FCB  ; kchip_state
+    9FC6  2C 13 02 08 1B          BBS $0213,#$08,L_9FE6  ; sub_status
 
 L_9FCB:
-    9FCB  0C 0D 07 80             SEB $070D,#$80
+    9FCB  0C 0D 07 80             SEB $070D,#$80    ; knock_fs
 
 L_9FCF:
     9FCF  D8                      CLM
     9FD0  AD 94 28                LDA $2894
     9FD3  29 00 FF                AND #$FF00
-    9FD6  8D C1 0D                STA $0DC1
+    9FD6  8D C1 0D                STA $0DC1         ; knock_work
     9FD9  F8                      SEM
     9FDA  1C CD 0D 20             CLB $0DCD,#$20
     9FDE  0C CF 0D 08             SEB $0DCF,#$08
@@ -13069,7 +13079,7 @@ L_9FEF:
     A003  AE BB 0D                LDX $0DBB
 
 L_A006:
-    A006  8E C1 0D                STX $0DC1
+    A006  8E C1 0D                STX $0DC1         ; knock_work
     A009  0C CD 0D 10             SEB $0DCD,#$10
     A00D  9C CB 0D 00             LDM $0DCB,#$00
 
@@ -13081,8 +13091,8 @@ L_A011:
     A019  AD 86 28                LDA $2886
     A01C  89 49 08 00             RLA #$0008
     A020  18                      CLC
-    A021  6D C1 0D                ADC $0DC1
-    A024  8D C1 0D                STA $0DC1
+    A021  6D C1 0D                ADC $0DC1         ; knock_work
+    A024  8D C1 0D                STA $0DC1         ; knock_work
     A027  F8                      SEM
 
 L_A028:
@@ -13098,9 +13108,9 @@ L_A028:
     A03C  89 0D 06 09             MPY $0906         ; sum_lo
     A040  8D 0A 09                STA $090A
     A043  38                      SEC
-    A044  AD C1 0D                LDA $0DC1
+    A044  AD C1 0D                LDA $0DC1         ; knock_work
     A047  ED 0A 09                SBC $090A
-    A04A  8D C1 0D                STA $0DC1
+    A04A  8D C1 0D                STA $0DC1         ; knock_work
     A04D  F8                      SEM
     A04E  9C C7 0D 00             LDM $0DC7,#$00
     A052  58                      CLI
@@ -13129,7 +13139,7 @@ L_A077:
     A078  B5 00                   LDA $00,X
     A07A  49 00 80                EOR #$8000
     A07D  18                      CLC
-    A07E  6D C1 0D                ADC $0DC1
+    A07E  6D C1 0D                ADC $0DC1         ; knock_work
     A081  18                      CLC
     A082  69 00 80                ADC #$8000
     A085  6A                      ROR A
@@ -13210,7 +13220,7 @@ L_A12E:
     A133  AE BD 0D                LDX $0DBD
 
 L_A136:
-    A136  8E C1 0D                STX $0DC1
+    A136  8E C1 0D                STX $0DC1         ; knock_work
 
 L_A139:
     A139  9C C7 0D 00             LDM $0DC7,#$00
@@ -13239,8 +13249,8 @@ L_A168:
     A16E  AD C4 0D                LDA $0DC4
     A171  29 00 FF                AND #$FF00
     A174  18                      CLC
-    A175  6D B7 0D                ADC $0DB7
-    A178  8D C1 0D                STA $0DC1
+    A175  6D B7 0D                ADC $0DB7         ; knock_ret
+    A178  8D C1 0D                STA $0DC1         ; knock_work
     A17B  1C CF 0D 01 00          CLB $0DCF,#$0001
     A180  9C C5 0D 00 00          LDM $0DC5,#$0000
 
@@ -13249,9 +13259,9 @@ L_A185:
     A186  AD 8E 28                LDA $288E
     A189  29 00 FF                AND #$FF00
     A18C  8D 06 09                STA $0906         ; sum_lo
-    A18F  AD C1 0D                LDA $0DC1
+    A18F  AD C1 0D                LDA $0DC1         ; knock_work
     A192  38                      SEC
-    A193  ED B7 0D                SBC $0DB7
+    A193  ED B7 0D                SBC $0DB7         ; knock_ret
     A196  F0 27                   BEQ L_A1BF
     A198  10 16                   BPL L_A1B0
     A19A  49 FF FF                EOR #$FFFF
@@ -13262,7 +13272,7 @@ L_A185:
     A1A6  49 FF FF                EOR #$FFFF
     A1A9  3A                      INA
     A1AA  18                      CLC
-    A1AB  6D B7 0D                ADC $0DB7
+    A1AB  6D B7 0D                ADC $0DB7         ; knock_ret
     A1AE  80 0C                   BRA L_A1BC
 
 L_A1B0:
@@ -13270,13 +13280,13 @@ L_A1B0:
     A1B3  90 0A                   BCC L_A1BF
     A1B5  AD 06 09                LDA $0906         ; sum_lo
     A1B8  18                      CLC
-    A1B9  6D B7 0D                ADC $0DB7
+    A1B9  6D B7 0D                ADC $0DB7         ; knock_ret
 
 L_A1BC:
-    A1BC  8D C1 0D                STA $0DC1
+    A1BC  8D C1 0D                STA $0DC1         ; knock_work
 
 L_A1BF:
-    A1BF  AD C1 0D                LDA $0DC1
+    A1BF  AD C1 0D                LDA $0DC1         ; knock_work
     A1C2  49 00 80                EOR #$8000
     A1C5  CD D3 0D                CMP $0DD3
     A1C8  B0 05                   BCS L_A1CF
@@ -13290,7 +13300,7 @@ L_A1CF:
 
 L_A1D7:
     A1D7  49 00 80                EOR #$8000
-    A1DA  8D C1 0D                STA $0DC1
+    A1DA  8D C1 0D                STA $0DC1         ; knock_work
     A1DD  F8                      SEM
 
 L_A1DE:
@@ -13307,14 +13317,14 @@ L_A1F4:
 
 L_A1F8:
     A1F8  78                      SEI
-    A1F9  AE C1 0D                LDX $0DC1
-    A1FC  8E B7 0D                STX $0DB7
+    A1F9  AE C1 0D                LDX $0DC1         ; knock_work
+    A1FC  8E B7 0D                STX $0DB7         ; knock_ret
     A1FF  2C CF 0D 01 04          BBS $0DCF,#$01,L_A208
     A204  1C CF 0D 02             CLB $0DCF,#$02
 
 L_A208:
     A208  AE 06 09                LDX $0906         ; sum_lo
-    A20B  8E B0 0D                STX $0DB0
+    A20B  8E B0 0D                STX $0DB0         ; cyl_trim
     A20E  AE 08 09                LDX $0908
     A211  8E B2 0D                STX $0DB2
     A214  AE 0A 09                LDX $090A
@@ -13479,7 +13489,7 @@ L_A328:
     A32C  99 00 00                STA $0000,Y
     A32F  E8                      INX
     A330  E8                      INX
-    A331  E0 C1 0D                CPX #$0DC1
+    A331  E0 C1 0D                CPX #$0DC1        ; &knock_work
     A334  B0 04                   BCS L_A33A
     A336  C8                      INY
     A337  C8                      INY
@@ -16593,7 +16603,7 @@ L_BB50:
 
 L_BB55:
     BB55  1C 50 09 08             CLB $0950,#$08
-    BB59  2C 0D 07 20 F2          BBS $070D,#$20,L_BB50
+    BB59  2C 0D 07 20 F2          BBS $070D,#$20,L_BB50  ; knock_fs
     BB5E  48                      PHA
     BB5F  42 AD 52 22             LDB $2252
     BB63  D8                      CLM
@@ -16615,7 +16625,7 @@ L_BB6F:
     BB7B  42 AD 12 0C             LDB $0C12
     BB7F  42 CD 5B 22             CMPB $225B
     BB83  90 CB                   BCC L_BB50
-    BB85  0C 0D 07 20             SEB $070D,#$20
+    BB85  0C 0D 07 20             SEB $070D,#$20    ; knock_fs
     BB89  48                      PHA
     BB8A  42 AD 57 22             LDB $2257
     BB8E  D8                      CLM
@@ -16997,7 +17007,7 @@ L_BE59:
 L_BE5C:
     BE5C  8D 06 09                STA $0906         ; sum_lo
     BE5F  2C 08 08 08 0A          BBS $0808,#$08,L_BE6E
-    BE64  2C 0D 07 10 05          BBS $070D,#$10,L_BE6E
+    BE64  2C 0D 07 10 05          BBS $070D,#$10,L_BE6E  ; knock_fs
     BE69  3C 08 08 02 05          BBC $0808,#$02,L_BE73
 
 L_BE6E:
@@ -21283,7 +21293,8 @@ DTC_COUNTER_PTRS:  ; $E1C6, 304 bytes
 
 ; ===== P1320 ignition signal monitor (slot 8). Engine running, past start, load index >= 4:
 ; every 2nd call sample port P4 bit 3; each high sample = one miss (accumulates while the
-; conditions hold); 10 misses -> dtc_detect(8). Enabled by CONFIG $120C.7.
+; conditions hold); 10 misses -> dtc_detect(8), then the count restarts at 0. Enabled by
+; CONFIG $120C.7. Fixed-rate slow task (sched slots 3/8), not synced to ignition.
 p1320_monitor:
 ; called from 4E26
     E2F6  3C 0C 12 80 54          BBC $120C,#$80,L_E34F
@@ -21320,7 +21331,7 @@ L_E323:
     E34B  22 86 DE 00             JSL dtc_detect
 
 L_E34F:
-    E34F  A9 00                   LDA #$00
+    E34F  A9 00                   LDA #$00          ; count restarts at 0 (after a detection, or when a precondition fails)
 
 L_E351:
     E351  8D 60 0C                STA $0C60         ; p1320_misses

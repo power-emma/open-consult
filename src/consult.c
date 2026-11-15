@@ -235,6 +235,30 @@ int consult_dtcs(consult_t *c, consult_dtc_t *out, int max)
     return k;
 }
 
+int consult_read_memory(consult_t *c, const uint16_t *addrs, int n, uint8_t *out)
+{
+    uint8_t payload[3 * 8], d[CONSULT_MAX_FRAME];
+    int len;
+
+    if (n < 1 || n > 8) {
+        snprintf(c->err, sizeof c->err, "C9 takes 1..8 addresses");
+        return 0;
+    }
+    for (int i = 0; i < n; i++) {
+        payload[3 * i] = 0xC9;
+        payload[3 * i + 1] = addrs[i] >> 8;
+        payload[3 * i + 2] = addrs[i] & 0xFF;
+    }
+    len = consult_one_shot(c, payload, 3 * (size_t)n, d);
+    if (len != n) {
+        if (len >= 0)
+            snprintf(c->err, sizeof c->err, "C9 frame of %d bytes, expected %d", len, n);
+        return 0;
+    }
+    memcpy(out, d, (size_t)n);
+    return 1;
+}
+
 int consult_clear_dtcs(consult_t *c, consult_dtc_t *out, int max, int *cleared)
 {
     const uint8_t cmd = 0xC1;

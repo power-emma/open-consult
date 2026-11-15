@@ -6,7 +6,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#define N_SENSORS 14
+#define N_SENSORS 22
 
 typedef struct {
     const char *name;
@@ -15,6 +15,7 @@ typedef struct {
     double scale, offset;   /* value = raw * scale + offset */
     int decimals;
     const char *unit;
+    int extra;              /* left out of the core list (see sensor_payload) */
 } sensor_t;
 
 extern const sensor_t SENSORS[N_SENSORS];
@@ -23,14 +24,17 @@ extern const sensor_t SENSORS[N_SENSORS];
 enum { SENSOR_RPM = 0, SENSOR_COOLANT = 1, SENSOR_INJ_LH = 9, SENSOR_INJ_RH = 10,
        SENSOR_TIMING = 11 };
 
-/* 5A <reg> for every sensor register, in table order. Returns the length. */
-size_t sensor_payload(uint8_t *out);
+/* 5A <reg> for every sensor register in table order (full = 1), or only the core
+ * sensors (full = 0: 18 registers, the size proven on the car; the full list is 27,
+ * inside the ROM's limit of 40 but untested). Returns the payload length. */
+size_t sensor_payload(uint8_t *out, int full);
 
 /* Data bytes in one frame of that stream. */
-int sensor_frame_len(void);
+int sensor_frame_len(int full);
 
-/* Frame (in request order) to scaled values, one per sensor. */
-void sensor_decode(const uint8_t *frame, double *values);
+/* Frame (in request order) to scaled values, one per sensor. Sensors left out of a
+ * core stream are set to NAN. */
+void sensor_decode(const uint8_t *frame, int full, double *values);
 
 /* Name of a D1 code byte read as hex digits, or NULL if it's not in the list. */
 const char *dtc_name(uint8_t code);

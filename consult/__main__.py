@@ -9,6 +9,10 @@
     python -m consult active fan-low        # 4.x (changes engine behaviour)
     python -m consult mem 8000 -n 16        # 5.1 / 5.5
     python -m consult rom-dump              # 5.3 / 5.4, to rom/<part number>.bin
+    python -m consult p1320                 # P1320 monitor, once a second (2.8)
+    python -m consult knock                 # knock fail-safe state (3.22)
+    python -m consult bcm-watch             # BCM switches by name (7.6)
+    python -m consult bcm-test window-dr-down   # BCM output (8.x)
 
 Every run appends a raw TX/RX log to logs/YYYY-MM-DD_<test-id>.log.
 """
@@ -26,7 +30,8 @@ from .transport import DEFAULT_DEV, Transport
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG_DIR = os.path.join(ROOT, "logs")
-AIRBAG = 0xDC   # 1998 Maxima: init + C9 to DC blinked the AIR BAG lamp (2026-11-14)
+AIRBAG = 0xDC   # 1998 Maxima: Consult puts the airbag unit in diagnosis mode (lamp flashes)
+BCM = 0xDA
 ROM_DIR = os.path.join(ROOT, "rom")
 
 
@@ -216,15 +221,136 @@ def cmd_watch_mem(c, args):
         print(f"{sweeps} sweeps in {secs:.0f} s ({secs / max(sweeps, 1):.2f} s each)")
 
 
+def cmd_p1320(c, args):
+    """P1320 monitor (ROM_ANALYSIS.md §7): once a second, how often P4 bit 3 ($000A) read
+    high and how many misses the ECU counted ($0C60 counts mod 10)."""
+    connect(c)
+    hi = n = misses = 0
+    last_count, t_last, t0 = None, time.monotonic(), time.monotonic()
+    print("   time  P4.3 high  misses/s")
+    try:
+        while True:
+            port, count = c.read_memory([0x000A, 0x0C60])
+            hi += port >> 3 & 1
+            n += 1
+            if last_count is not None:
+                misses += (count - last_count) % 10
+            last_count = count
+            now = time.monotonic()
+            if now - t_last >= 1.0:
+                line = f"{now - t0:7.1f}s  {100 * hi / n:7.0f} %  {misses / (now - t_last):8.1f}"
+                print(line, flush=True)
+                c.t.note("p1320 " + line.strip())
+                hi = n = misses = 0
+                t_last = now
+    except KeyboardInterrupt:
+        pass
+    finally:
+        c.stop()
+
+
+def cmd_knock(c, args):
+    """Knock fail-safe state (ROM_ANALYSIS.md §8b), read a few times."""
+    connect(c)
+    for _ in range(args.count):
+        fs, sub, ret_hi = c.read_memory([0x070D, 0x0213, 0x0DB8])
+        ret = ret_hi - 256 if ret_hi > 127 else ret_hi
+        line = (f"fail-safe latched: {'YES' if fs & 0x80 else 'no'}  "
+                f"knock system OK (2nd CPU): {'yes' if sub & 0x08 else 'NO'}  "
+                f"knock value $0DB8: {ret:+d}  (raw 070D={fs:02X} 0213={sub:02X})")
+        print(line, flush=True)
+        c.t.note("knock " + line)
+        time.sleep(1.0)
+
+
+# BCM switch block (5A FF), BCM.md: (byte, bit) -> input name.
+BCM_SWITCHES = {
+    (0, 0): "door open / room-lamp timer", (1, 1): "ignition ON", (1, 3): "ACC",
+    (2, 6): "lock switch LOCK", (2, 7): "lock switch UNLOCK",
+    (4, 0): "lighting 1st", (4, 4): "wiper INT", (4, 7): "driver door",
+    (12, 0): "AS window UP (master)", (12, 1): "AS window DOWN (master)",
+    (12, 2): "RL window UP (master)", (12, 3): "RL window DOWN (master)",
+    (12, 4): "RR window UP (master)", (12, 5): "RR window DOWN (master)",
+    (12, 6): "window lock", (12, 7): "AS window UP (AS switch)",
+    (13, 0): "AS window DOWN (AS switch)", (13, 5): "DR window UP",
+    (13, 6): "DR window DOWN", (13, 7): "DR window AUTO",
+    (16, 5): "passenger door", (16, 6): "seat belt?",
+}
+BCM_ANALOG = {14: "lock state", 17: "wiper knob"}
+
+
+def cmd_bcm_watch(c, args):
+    """Stream the BCM switch block and print each change by name (BCM.md)."""
+    connect(c)
+    c.command(bytes([0x5A, 0xFF]))
+    last, t0 = None, time.monotonic()
+    try:
+        while True:
+            f = c.read_frame(18)
+            if last is None:
+                print(f"{time.monotonic() - t0:7.2f}s  baseline {f.hex(' ')}", flush=True)
+            elif f != last:
+                out = []
+                for i, (a, b) in enumerate(zip(last, f)):
+                    if a == b:
+                        continue
+                    if i in BCM_ANALOG:
+                        out.append(f"{BCM_ANALOG[i]} {a:02X}->{b:02X}")
+                        continue
+                    for bit in range(8):
+                        if (a ^ b) >> bit & 1:
+                            name = BCM_SWITCHES.get((i, bit), f"byte {i} bit {bit}")
+                            out.append(f"{name} {'on' if b >> bit & 1 else 'off'}")
+                print(f"{time.monotonic() - t0:7.2f}s  " + ", ".join(out), flush=True)
+                c.t.note(f"frame {f.hex(' ')}")
+            last = f
+    except KeyboardInterrupt:
+        pass
+    finally:
+        c.stop()
+
+
+# BCM active tests found on the car (BCM.md): name -> (item, value).
+BCM_TESTS = {
+    "trunk": (0x03, 0x03), "hazard": (0x03, 0x04), "panic": (0x03, 0x06),
+    "locks": (0x23, 0x00), "wipers": (0x53, 0x01), "defogger": (0x63, 0x01),
+    "chime-73": (0x73, 0x01), "chime-83": (0x83, 0x01), "chime-b3": (0xB3, 0x01),
+    "room-lamp": (0x93, 0x01), "horn-lights": (0xC3, 0x01),
+    "step-lh": (0xE3, 0x01), "step-rh": (0xE3, 0x02),
+    **{f"window-{w}-{d}": (0x13, 1 + 2 * i + (d == "down"))
+       for i, w in enumerate(("dr", "as", "rr", "rl")) for d in ("up", "down")},
+}
+
+
+def cmd_bcm_test(c, args):
+    """Run one BCM active test: 0A <item> <value> F0, hold, 30."""
+    item, value = BCM_TESTS[args.test]
+    hold = min(args.hold, 10.0)
+    if not args.yes:
+        ok = input("Hands clear of windows, a door open, key out of the lock? [y/N] ")
+        if ok.strip().lower() != "y":
+            sys.exit("not sent")
+    connect(c)
+    print(f"sending 0A {item:02X} {value:02X}, holding {hold:.1f} s (Ctrl-C stops it early)")
+    try:
+        rx, ack = c.active_test(item, value, hold)
+    except KeyboardInterrupt:
+        rx, ack = b"", None
+    print(f"during the test the BCM sent {len(rx)} byte(s)" + (f": {rx[:24].hex(' ')}" if rx else ""))
+    print(f"stopped (ack {ack:02X})" if ack in STOP_ACKS
+          else "WARNING: no stop ack. Turn the key off to be sure the test has ended.")
+
+
 def cmd_reg_scan(c, args):
     connect(c)
     supported = []
     for r in range(args.first, args.last + 1):
         try:
-            v = c.one_shot(bytes([0x5A, r]), expected_len=1)
+            # BCM items each have their own frame length (BCM.md), so accept any.
+            v = c.one_shot(bytes([0x5A, r]), expected_len=None if c.paced else 1)
             supported.append(r)
-            print(f"  {r:02X}: supported, value {v[0]:02X}")
-            c.t.note(f"reg {r:02X} supported value={v[0]:02X}")
+            print(f"  {r:02X}: supported, {len(v)} byte(s): {v.hex(' ')}")
+            c.t.note(f"reg {r:02X} supported value={v.hex(' ')}")
         except (ConsultError, TimeoutError) as e:
             c.t.note(f"reg {r:02X} unsupported: {e}")
             if args.verbose:
@@ -455,6 +581,14 @@ def main():
     s.add_argument("--first", type=lambda x: int(x, 16), default=0x00)
     s.add_argument("--last", type=lambda x: int(x, 16), default=0xFF)
     s.add_argument("-v", "--verbose", action="store_true")
+    sub.add_parser("p1320", help="P1320 monitor: P4.3 high %% and misses/s, once a second")
+    k = sub.add_parser("knock", help="knock fail-safe state ($070D, $0213, $0DB8)")
+    k.add_argument("-n", "--count", type=int, default=5)
+    sub.add_parser("bcm-watch", help="BCM switch block, changes printed by name")
+    bt = sub.add_parser("bcm-test", help="BCM active test (windows, locks, lamps…)")
+    bt.add_argument("test", choices=BCM_TESTS)
+    bt.add_argument("--hold", type=float, default=1.0, help="seconds, max 10 (default 1)")
+    bt.add_argument("-y", "--yes", action="store_true", help="skip the safety prompt")
     rc = sub.add_parser("raw-cmd", help="send raw hex bytes after init and log the reply")
     rc.add_argument("hex", help="hex bytes to send, e.g. '5B' or '5A 0C'")
     a = sub.add_parser("active", help="active test: CHANGES ENGINE BEHAVIOUR")
@@ -481,6 +615,10 @@ def main():
     args = ap.parse_args()
     if args.ecu and AIRBAG in args.ecu:
         sys.exit(f"{AIRBAG:02X} is the airbag (SRS) unit: addressing it blinks the AIR BAG lamp. Not sent.")
+    if args.cmd.startswith("bcm-"):
+        args.ecu = [BCM]
+    elif args.cmd in ("p1320", "knock") and args.ecu and set(args.ecu) - set(ENGINE_IDS):
+        sys.exit(f"{args.cmd} reads engine ECU memory; leave out --ecu")
     if args.cmd == "active" and args.ecu and set(args.ecu) - set(ENGINE_IDS):
         sys.exit("active tests are engine-only (on E7, the ABS, 0A drives the brake valves and pump)")
 
