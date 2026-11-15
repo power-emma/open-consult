@@ -265,7 +265,7 @@ def cmd_knock(c, args):
 
 # BCM switch block (5A FF), BCM.md: (byte, bit) -> input name.
 BCM_SWITCHES = {
-    (0, 0): "door open / room-lamp timer", (1, 1): "ignition ON", (1, 3): "ACC",
+    (0, 0): "door open / room-lamp timer", (1, 1): "ignition ON", (1, 3): "key in", (0, 7): "ACC", (4, 5): "washer", (5, 4): "trunk open",
     (2, 6): "lock switch LOCK", (2, 7): "lock switch UNLOCK",
     (4, 0): "lighting 1st", (4, 4): "wiper INT", (4, 7): "driver door",
     (12, 0): "AS window UP (master)", (12, 1): "AS window DOWN (master)",

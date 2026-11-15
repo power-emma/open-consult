@@ -81,15 +81,17 @@ Byte 0 = first data byte. Bit 7 = MSB.
 
 | Byte | Bit | Input |
 |---|---|---|
-| 0 | 7 | Always 1 |
-| 0 | 0 | Any door open / room-lamp timer *(inferred)* |
+| 0 | 7 | ACC (key at ACC or ON) |
+| 0 | 0 | Any door open (the only bit for the rear doors) |
 | 1 | 1 | Ignition ON |
-| 1 | 3 | ACC *(inferred)* |
+| 1 | 3 | Key in ignition |
 | 2 | 6 | Driver lock switch: LOCK |
 | 2 | 7 | Driver lock switch: UNLOCK |
 | 4 | 0 | Lighting switch 1st position |
 | 4 | 4 | Wiper INT switch |
+| 4 | 5 | Washer switch |
 | 4 | 7 | Driver door |
+| 5 | 4 | Trunk open |
 | 12 | 0 | Passenger window UP (master) |
 | 12 | 1 | Passenger window DOWN (master) |
 | 12 | 2 | Rear LH window UP (master) |
@@ -102,13 +104,21 @@ Byte 0 = first data byte. Bit 7 = MSB.
 | 13 | 5 | Driver window UP |
 | 13 | 6 | Driver window DOWN |
 | 13 | 7 | Driver window AUTO (set together with bit 6) |
-| 14 | — | Lock state: `01` unlocked, `1F` locked |
+| 14 | — | Door lock state, bit set = locked: bit 0 always 1, bit 1 driver, bit 2 passenger, bit 3 rear RH, bit 4 rear LH (`01` all unlocked, `1F` all locked). Doors report a few tens of ms apart as the actuators move |
 | 16 | 5 | Passenger door |
 | 16 | 6 | Seat belt *(inferred)* |
 | 17 | — | Intermittent wiper knob, analog `01`–`E4` |
 
-Not located yet: rear doors, key in/out, hood, trunk, washer, defogger switch, key
-cylinder, unlock sensors, keyless remote.
+The rear doors only set byte 0 bit 0. Headlights 2nd position (only the 1st-position bit
+sets), high beam, flash-to-pass and the hazard switch show up nowhere in the block
+(`7.6-switches-2`, 2026-11-15). Byte 17 jitters ±1 count at rest.
+
+The keyless remote shows only as a byte 14 change (no button bit): LOCK → `1F`, first UNLOCK → `1D` (driver only).
+Byte 14 bits from the inside knobs (`7.6-doorknobs`): each rear knob moves only its own bit
+(`09` RH, `11` LH). The passenger knob locks all four doors but unlocks only its own (`1F → 1B`).
+The driver bit is the one left (and the remote's first unlock clears it).
+
+Not located yet: hood, defogger switch, key cylinder, unlock sensors.
 
 ## Active tests (`0A <item> <value> F0`)
 
@@ -186,4 +196,6 @@ The program ROM can't be read over Consult.
 - Meaning of the `x2` items and items `15 19 1A 1B 25 2B 35 3B`.
 - Remaining switch-block inputs (see above).
 - IVMS COMM / WAKE-UP diagnosis commands.
-- Behaviour with the key off (sleep, wake-up over Consult).
+- Behaviour with the key off. Seen 2026-11-15: an open stream keeps running with the key
+  out and ignores `30` until the key is back ON; a new init with the key out gets no
+  reply. **End sessions with the key ON.** Does the stream ever stop by itself?

@@ -97,6 +97,15 @@ class Consult:
                 b = self.t.read(1, timeout=0.2)
                 if not b:
                     continue
+                if b[0] == 0xFF:
+                    # A frame from a unit still streaming (the BCM keeps streaming
+                    # after key-off, 2026-11-15): skip it by length, or its bytes
+                    # can pass for the reply (FF 12 looked like an ED init).
+                    n = self.t.read(1, timeout=0.2)
+                    junk += b + n
+                    if n:
+                        junk += self.t.read(n[0], timeout=0.2)
+                    continue
                 if b[0] == ~ecu & 0xFF:
                     self.ecu = ecu
                     return attempt, time.monotonic() - sent, bytes(junk), ecu

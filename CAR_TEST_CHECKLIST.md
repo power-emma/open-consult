@@ -69,7 +69,7 @@ Tests run on a 1998 Maxima (VQ30DE, 5-speed, ECU 23710-2L904).
 | 3.19 | Bits `1F` | ◐ | b0 on ~0.2 s during a throttle blip | `3.17-bits2` |
 | 3.20 | Bits `21` | ✅ | b7 = `09` lean, b6 = `0A` lean (< ~450 mV). b0 latches on after warm-up. b5/b4 always 1 | `3.17-bits2`, `3.x-drive` |
 | 3.21 | Unscaled registers | ☐ | Candidates in `ROM_ANALYSIS.md` §2 | |
-| 3.22 | Knock fail-safe state | ☐ | KOER warm: `knock` (or GUI → Other). Fail-safe = `070D` b7 set (`ROM_ANALYSIS.md` §8b) | |
+| 3.22 | Knock fail-safe state | ✅ | KOER warm idle (2026-11-15): **not latched**, 2nd CPU knock OK, `$0DB8` +0 (`070D=00 0213=88`). P0325 still stored (starts 1), so intermittent or old | `3.22-knock`, `3.22-dtc` |
 
 ## 4. Engine active tests (KOER, parked, warm)
 
@@ -120,12 +120,12 @@ Reference: [`BCM.md`](BCM.md).
 | 7.3 | `C1` erase | ☐ | | |
 | 7.4 | Stream all | ✅ | `9E` (echo `61`) = switch block; `9F` not supported | `8.0-cmd-probe-DA` |
 | 7.5 | Item scan | ✅ | Reads `02 12 15 19 1A 1B 22 25 2B 35 3B 52 62 72 82 92 B2 C2 E2 F2 FF`, 1–18 bytes each | `7.5-reg-scan-DA` |
-| 7.6 | Switch mapping | ◐ | Ignition, DR/AS doors, lock switch, lighting 1st, wiper INT, all window switches, window lock. Rear doors, key, hood, trunk, washer, remote: open | `7.6-watch-DA-FF`, `7.6-watch-DA-windows` |
+| 7.6 | Switch mapping | ◐ | Ignition, ACC (0.7), key in (1.3; slow LOCK→ACC→ON→out run), DR/AS doors, rear doors (only the shared 0.0), trunk (5.4), lock switch, lighting 1st, wiper INT, washer (4.5), all window switches, window lock. High beam, passing, hazard: not in the block. Remote: byte 14 only (LOCK → `1F`, first UNLOCK → `1D`). Byte 14 lock bits: 1 driver, 2 passenger, 3 RR, 4 RL. Hood: open | `7.6-watch-DA-FF`, `7.6-watch-DA-windows`, `7.6-switches-2`, `7.6-lockstate`, `7.6-doorknobs` |
 | 7.7 | Wiper knob | ◐ | Switch block byte 17, `01`–`E4`. kΩ fit: open | `7.6-watch-DA-FF` |
 | 7.8 | BCM vehicle speed | ☐ | | |
 | 7.9 | Mode II cross-check | ☐ | | |
 | 7.10 | Side effects while connected | ☐ | | |
-| 7.11 | Sleep | ☐ | | |
+| 7.11 | Sleep | ◐ | 2026-11-15: a `5A FF` stream **kept running with the key out** (~4 min) and the BCM ignored `30` (4 tries, no ack); key ON → `30` → `CF` at once. A new init with the key out gets no reply (3 tries). Whether the stream ends by itself, and battery drain: open | `7.6-switches-2`, `7.11-keyoff`, `7.11-stop-keyon`, `7.11-keyout-wake` |
 
 ## 8. BCM outputs (`DA`)
 

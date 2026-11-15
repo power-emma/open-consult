@@ -1,0 +1,237 @@
+  0.000123 ## open /dev/ttyUSB0 at 2026-11-15T11:45:15
+  0.000169 ## cmd: --test-id 3.22-knock knock -n 15
+  0.000208 TX 30
+  0.003812 RX cf
+  0.204089 TX ff
+  0.484629 TX ff
+  0.555003 TX ed
+  0.555258 RX 00
+  0.555290 RX 00
+  0.557920 RX 12
+  0.557994 ## init ok id=ED attempt=1 secs=0.003
+  0.558045 TX c9 07 0d c9 02 13 c9 0d b8
+  0.565166 RX 36 07 0d 36 02
+  0.566842 RX 13
+  0.568162 RX 36
+  0.569051 RX 0d
+  0.570133 RX b8
+  0.570208 TX f0
+  0.576085 RX ff
+  0.577045 RX 03
+  0.578161 RX 00
+  0.580304 RX 88
+  0.580845 RX 00
+  0.580883 TX 30
+  0.583824 RX cf
+  0.583923 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+  1.584205 TX c9 07 0d c9 02 13 c9 0d b8
+  1.592233 RX 36 07 0d 36 02
+  1.592850 RX 13
+  1.594017 RX 36
+  1.594884 RX 0d
+  1.595959 RX b8
+  1.596024 TX f0
+  1.599897 RX ff
+  1.601040 RX 03
+  1.602912 RX 00
+  1.603937 RX 88
+  1.604879 RX 00
+  1.604908 TX 30
+  1.607961 RX cf
+  1.608090 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+  2.608435 TX c9 07 0d c9 02 13 c9 0d b8
+  2.616367 RX 36 07 0d 36 02
+  2.617246 RX 13
+  2.618229 RX 36
+  2.619239 RX 0d
+  2.620289 RX b8
+  2.620317 TX f0
+  2.624230 RX ff
+  2.625250 RX 03
+  2.626233 RX 00
+  2.627261 RX 88
+  2.628276 RX 00
+  2.628338 TX 30
+  2.631284 RX cf
+  2.631324 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+  3.631726 TX c9 07 0d c9 02 13 c9 0d b8
+  3.640238 RX 36 07 0d 36 02 13
+  3.641135 RX 36
+  3.642145 RX 0d
+  3.643083 RX b8
+  3.643101 TX f0
+  3.647901 RX ff
+  3.649089 RX 03
+  3.650065 RX 00
+  3.651081 RX 88
+  3.652143 RX 00
+  3.652161 TX 30
+  3.655061 RX cf
+  3.655095 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+  4.655232 TX c9 07 0d c9 02 13 c9 0d b8
+  4.662391 RX 36 07 0d 36
+  4.662686 RX 02
+  4.663931 RX 13
+  4.665047 RX 36
+  4.665924 RX 0d
+  4.667057 RX b8
+  4.667123 TX f0
+  4.671688 RX ff
+  4.672664 RX 03
+  4.673978 RX 00
+  4.674892 RX 88
+  4.675927 RX 00
+  4.675979 TX 30
+  4.678826 RX cf
+  4.678877 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+  5.679202 TX c9 07 0d c9 02 13 c9 0d b8
+  5.686308 RX 36 07 0d 36
+  5.687087 RX 02
+  5.687615 RX 13
+  5.688663 RX 36
+  5.689660 RX 0d
+  5.690596 RX b8
+  5.690622 TX f0
+  5.695630 RX ff
+  5.696636 RX 03
+  5.697558 RX 00
+  5.698572 RX 88
+  5.699567 RX 00
+  5.699592 TX 30
+  5.702579 RX cf
+  5.702640 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+  6.702957 TX c9 07 0d c9 02 13 c9 0d b8
+  6.711419 RX 36 07 0d 36 02 13
+  6.712279 RX 36
+  6.713537 RX 0d
+  6.714347 RX b8
+  6.714377 TX f0
+  6.719397 RX ff
+  6.720285 RX 03
+  6.721280 RX 00
+  6.722268 RX 88
+  6.723290 RX 00
+  6.723312 TX 30
+  6.726319 RX cf
+  6.726379 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+  7.726745 TX c9 07 0d c9 02 13 c9 0d b8
+  7.734260 RX 36 07 0d 36 02
+  7.735093 RX 13
+  7.736168 RX 36
+  7.736888 RX 0d
+  7.738204 RX b8
+  7.738243 TX f0
+  7.743193 RX ff
+  7.744129 RX 03
+  7.745042 RX 00
+  7.746050 RX 88
+  7.747049 RX 00
+  7.747109 TX 30
+  7.750182 RX cf
+  7.750243 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+  8.750366 TX c9 07 0d c9 02 13 c9 0d b8
+  8.758364 RX 36 07 0d 36 02
+  8.758547 RX 13
+  8.759932 RX 36
+  8.760783 RX 0d
+  8.761646 RX b8
+  8.761676 TX f0
+  8.766808 RX ff
+  8.767755 RX 03
+  8.768778 RX 00
+  8.769681 RX 88
+  8.770467 RX 00
+  8.770498 TX 30
+  8.773547 RX cf
+  8.773609 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+  9.773766 TX c9 07 0d c9 02 13 c9 0d b8
+  9.782204 RX 36 07 0d 36 02 13
+  9.783245 RX 36
+  9.784229 RX 0d
+  9.785224 RX b8
+  9.785246 TX f0
+  9.790257 RX ff
+  9.791239 RX 03
+  9.792239 RX 00
+  9.793241 RX 88
+  9.794238 RX 00
+  9.794260 TX 30
+  9.797253 RX cf
+  9.797337 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+ 10.797548 TX c9 07 0d c9 02 13 c9 0d b8
+ 10.804365 RX 36 07 0d 36
+ 10.805166 RX 02
+ 10.806160 RX 13
+ 10.807237 RX 36
+ 10.808267 RX 0d
+ 10.809164 RX b8
+ 10.809185 TX f0
+ 10.814168 RX ff
+ 10.814958 RX 03
+ 10.816269 RX 00
+ 10.817262 RX 88
+ 10.818298 RX 00
+ 10.818337 TX 30
+ 10.821409 RX cf
+ 10.821532 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+ 11.821710 TX c9 07 0d c9 02 13 c9 0d b8
+ 11.829189 RX 36 07 0d 36 02
+ 11.829794 RX 13
+ 11.830803 RX 36
+ 11.831800 RX 0d
+ 11.832843 RX b8
+ 11.832885 TX f0
+ 11.837804 RX ff
+ 11.838714 RX 03
+ 11.839719 RX 00
+ 11.840788 RX 88
+ 11.841790 RX 00
+ 11.841827 TX 30
+ 11.844807 RX cf
+ 11.844870 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+ 12.845254 TX c9 07 0d c9 02 13 c9 0d b8
+ 12.853303 RX 36 07 0d 36 02
+ 12.853437 RX 13
+ 12.854699 RX 36
+ 12.855624 RX 0d
+ 12.856752 RX b8
+ 12.856788 TX f0
+ 12.861869 RX ff
+ 12.862848 RX 03
+ 12.863836 RX 00
+ 12.864736 RX 88
+ 12.865782 RX 00
+ 12.865822 TX 30
+ 12.868688 RX cf
+ 12.868750 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+ 13.869082 TX c9 07 0d c9 02 13 c9 0d b8
+ 13.877351 RX 36 07 0d 36 02 13
+ 13.878216 RX 36
+ 13.879199 RX 0d
+ 13.880222 RX b8
+ 13.880251 TX f0
+ 13.885277 RX ff
+ 13.886190 RX 03
+ 13.887194 RX 00
+ 13.887954 RX 88
+ 13.889305 RX 00
+ 13.889346 TX 30
+ 13.891949 RX cf
+ 13.892046 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+ 14.892161 TX c9 07 0d c9 02 13 c9 0d b8
+ 14.899161 RX 36 07 0d 36
+ 14.899775 RX 02
+ 14.900776 RX 13
+ 14.901790 RX 36
+ 14.902737 RX 0d
+ 14.903737 RX b8
+ 14.903759 TX f0
+ 14.908772 RX ff
+ 14.909754 RX 03
+ 14.910754 RX 00
+ 14.911756 RX 88
+ 14.912761 RX 00
+ 14.912784 TX 30
+ 14.915770 RX cf
+ 14.915856 ## knock fail-safe latched: no  knock system OK (2nd CPU): yes  knock value $0DB8: +0  (raw 070D=00 0213=88)
+ 15.916076 ## close
