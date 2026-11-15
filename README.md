@@ -9,17 +9,14 @@ engine ROM, and **talks to the body control module**.
 
 As far as I can find, **nobody outside Nissan's own CONSULT hand-held has ever
 published how to talk to the A32's IVMS body control module.** Every open-source
-Consult project in the past and every protocol document stops at the engine ECU,
-the A/T unit, HICAS and A/C. The service manual gives the item names but not one byte. 
+Consult project in the past and every protocol document stops at the engine ECU. The service manual gives the item names but bytes. 
 (Search done 2026-11-15; if you know of earlier work, please tell me and i will credit it.)
 
 Starting from nothing but the service manual and a USB cable, this project:
 
 - **found every Consult unit on the car** by init scan (`ED` engine, `DA` BCM, `DC`
   airbag, `E7` ABS) and identified each one from its part number;
-- worked out that the BCM wants commands paced one byte per echo, one read item
-  per request, with its own item numbering (`x2` = read, `x3` = active test) and its own
-  stream-all command (`9E`);
+- **worked out BCM command structure**
 - **mapped the BCM's 18-byte switch block**: ignition, doors, lock switch, lighting,
   wiper switch and knob, and every power-window switch;
 - **drove the body outputs from a laptop**: all four windows, door locks, trunk
@@ -33,10 +30,10 @@ doesn't have to start from zero.
 ## Also in here
 
 - **Engine ECU, fully probed:** all 73 supported registers with scalings checked on the
-  car and on the road (speed confirmed from gear ratios, the CAS register decoded as a
-  crank period), stored codes decoded to OBD-II P-codes, active tests, and a full `C9`
+  car speed confirmed from gear ratios, the CAS register decoded as a
+  crank period, stored codes decoded to OBD-II P-codes, active tests, and a full `C9`
   ROM dump.
-- **ROM disassembly** of 23710-2L904 (Mitsubishi 7700): the Consult handler, register
+- **ROM disassembly** of Mitsubishi 7700: the Consult handler, register
   and active-test tables, fault-code storage, the second CPU, and where the fuel, timing and
   knock maps live. See [`ROM_ANALYSIS.md`](ROM_ANALYSIS.md).
 - **Raw logs of every session** in `logs/`, timestamped byte by byte, so every claim in
@@ -57,7 +54,7 @@ python -m consult --ecu DA watch-raw FF    # BCM switch block
 make && ./consult-gui
 ```
 
-The cable shows up as an ordinary 9600 8N1 serial port (`/dev/ttyUSB0`). Set the FTDI
+The cable shows up as a 9600 8N1 serial port (`/dev/ttyUSB0`). Set the FTDI
 latency timer to 1 ms for smooth data (`CONSULT_PROTOCOL.md` §2).
 
 ## Docs
@@ -75,9 +72,7 @@ latency timer to 1 ms for smooth data (`CONSULT_PROTOCOL.md` §2).
 ## Safety
 
 - **Airbag unit (`DC`): read-only.** Consult switches it into diagnosis mode (the lamp
-  flashes). Send nothing beyond `D0`/`D1`.
+  flashes). Send nothing beyond `D0`/`D1`. Im not trying to get my airbag to explode my laptop into my face.
 - **ABS (`E7`): never send `0A`.** Its active tests drive the brake solenoids and pump.
-- **Engine active tests change fuel, timing and pumps.** Use them parked, engine warm.
-  Don't fire unknown test IDs: on a sister ECU one of them re-registered the immobiliser
-  keys.
+- **Engine active tests change fuel, timing and pumps.** You're going to be turning off cylinders and the like just be smart
 - **BCM tests move windows and locks.** Keep hands clear
