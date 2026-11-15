@@ -1,3 +1,44 @@
+# Next session (written 2026-11-14, 17:45)
+
+## What we learned on 2026-11-14 (afternoon)
+
+- **`DA` is the BCM (IVMS), not the ASCD.** It answers with the ASCD MAIN switch OFF, right after
+  key-on. `D0` suffix `2L900` = 28491-2L900 "Controller Assy-LAN". The ASCD unit is still unfound.
+  Unit map: `ED` engine, `DA` BCM, `E7` ABS (never `0A`), `DC` **airbag: never send anything**.
+- **BCM protocol:** one byte at a time, each after its echo (automatic for non-engine IDs).
+  Commands: `5A` read item, `9E` stream all, `C9`, `D0`, `0A` active test. Items: `x2` = read,
+  `x3` = active, `x` in `0 1 2 5 6 7 8 9 B C E F`. Each read item has its own frame length.
+- **BCM switch map:** `watch-raw FF` (18 bytes): doors, ignition, lock switches, lighting, wiper
+  INT and knob, seat belt, and every power-window switch. Full table: checklist 7.6.
+- **BCM active tests:** `0A <item> <value> F0`, then `30`. With value `01`: `53` wipers,
+  `63` rear defogger, `C3` horn + headlights, `13` driver-door motor noise (probably the window
+  going up while already closed), `03` unlocked once. Details: checklist §8.
+- **Engine:** `D1` = `21`, `A8` (P1320, P0443), now with starts byte `00` (after the `F5` seen at
+  set). Port `$000A` = `E3` KOEO. Second CPU `5D40..` = `06 00 00 55 AA 00…`, stable.
+- Passenger door once locked and then unlocked the car by itself (byte 14 `01→05→1F→03→01`);
+  three retests didn't repeat it. See whether it happens with the scanner unplugged.
+
+## Do next (KOEO, driver window clear, hands clear)
+
+1. ~~Windows~~ **done 21:15: `0A 13 vv`, 01/02 DR up/down, 03/04 AS, 05/06 RR, 07/08 RL.** E3 (value 02) = a right passenger-side light. Still silent: `23 73 83 93 B3 F3` (tried 01 and 02). If nothing,
+   try values `00`, `80`, `FF`, `10`, `20`, one at a time.
+   Then **up** with `01`, keeping hands away (pinch risk).
+2. **Locks are still open.** `03` = lock-related effects (`03` trunk, `04` lock-confirm lamp flash with no lock, `06` panic). `03 01` didn't unlock at 21:23 with the doors locked. The round-1 unlock (17:37) came while the frames read `80`, not `00`. Next: stream `5A FF` between fires to see what `80` means, and try `03`'s values with a door open, the key out (KOEO through ACC?) and the doors locked. The lock motors may be in a silent test with other values (`03`–`08`).
+   **Better route:** dump the BCM ROM with `C9` (paced, low-byte scan first, see 8.1) and read the active-test table instead of guessing.
+2b. Name the silent tests `23 73 83 93 B3 E3 F3` and confirm `03`: lock the doors, then
+   `python3 tools/bcm/fire.py 01 1.5 03`. For the rest, try values `02`/`80`, one at a time.
+   Use `tools/bcm/fire2.py <value> <hold> <unix start> <gap> <items…>` for a timetable run.
+3. Read the `x2` items while a test runs. They may carry each test's state or options.
+4. **Code 21 (P1320) test (checklist 2.8)**, engine warm:
+   `python -m consult --test-id 2.8-p1320 watch-mem 0C5F -n 17`, then idle, 2000 rpm, A/C,
+   wiggle each coil harness, tap the condenser, wiggle the ECM connector. Watch `$0C60` climb.
+5. Fold `tools/bcm/*.py` into `python -m consult` subcommands. Teach `reg-scan` variable
+   frame lengths, so BCM items aren't reported as "no frame".
+
+**Process note:** run one tool on the port at a time. Two background runs overlapped today.
+
+---
+
 # Handoff: 2026-11-14 bring-up, Windows → Linux
 
 **Goal:** run `consult` on Linux against the 1998 Maxima (manual gearbox, VQ30DE,

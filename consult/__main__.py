@@ -258,10 +258,11 @@ def cmd_rom_dump(c, args):
         sys.exit(f"{out} is already larger than {size} bytes")
     print(f"dumping {first:04X}-{last:04X} to {out}" + (f", resuming at {first + done:04X}" if done else ""))
     t0 = time.monotonic()
+    step = 6 if c.paced else 8      # the BCM answers FE to a 7th address (2026-11-14)
     with open(out, "ab" if done else "wb") as f:
         addr = first + done
         while addr <= last:
-            chunk = list(range(addr, min(addr + 8, last + 1)))
+            chunk = list(range(addr, min(addr + step, last + 1)))
             for attempt in range(3):
                 try:
                     d = c.read_memory(chunk)

@@ -313,7 +313,7 @@ Do them one at a time. Restore the normal value and send `30` after each.
       5. If still nothing: key off, check continuity from M2 pin 1/2 to BCM pins 40/39
          (connectors M103/M104), then suspect the BCM's Consult port. The on-board Mode I–IV
          blink diagnostics (EL-175 onward) still work without Consult.
-      Result: ____
+      Result: **`DA` is the BCM (2026-11-14, 17:12, KOEO).** With the ASCD MAIN switch OFF, `DA` answered init and `D0` straight after key-on and every 30 s for 2 min (`logs/2026-11-14_7.0-DA-main-off.log`). The ASCD unit itself is still unfound. Paced `reg-scan`: the BCM accepts `5A` items `02 12 15 19 1A 1B 22 25 2B 35 3B 52 62 72 82 92 B2 C2 E2 F2 FF`. Each item has its **own frame length** (1–18 bytes). The tool expected 1 byte and marked most of them 'no frame' (`logs/2026-11-14_7.5-reg-scan-DA.log`). `watch-raw FF` streams an 18-byte block; for the bit map see 7.6.
 
 - [ ] **7.1 BCM `D0` / `D1`.** Record the raw frames.
       Result: ____
@@ -332,6 +332,18 @@ Do them one at a time. Restore the normal value and send `30` after each.
       Tool: `python -m consult --ecu DC watch-raw 8A 8B 8C 96 97 9A A7 A8 A9 AA AB AC` (full sweep ≈1.4 s, prints changes as `reg+offset old->new`).
 - [ ] **7.6 Differential logging.** Change one input at a time and record which byte
       and bit changes:
+      Result (BCM `DA`, `watch-raw FF`, KOEO, 17:17–17:22; byte n = position in the 18-byte block; the owner didn't call out times, so the mapping is by order):
+      - byte 0 b0: on with any door open. It stayed on after the doors shut, so it's probably the room-lamp timer. **[inferred]**
+      - byte 1 b1: ignition ON (`0A`→`08` at ACC).
+      - byte 2 b6 / b7: driver lock switch LOCK / UNLOCK.
+      - byte 4 b7: driver door. b0: lighting switch 1st (no extra bit at 2nd). b4: wiper INT.
+      - byte 14: lock state, `01` unlocked → `1F` locked (it passes through `11`/`07`).
+      - byte 16 b5: passenger door. b6 cleared for about 6 s after the lighting step: probably the seat belt **[inferred]**.
+      - byte 17: INT-time knob, analog, `01`–`E4` end to end.
+      - Rear door: no bit of its own seen (only byte 0 b0).
+      - **Unexpected:** opening the passenger door made byte 14 go `01→05→1F→03→01` within 0.9 s, with no lock-switch bit, and the owner saw the doors lock. Lock then unlock looks like the key-in anti-lockout. Retest (17:22): three slow passenger-door openings, no lock. So it's intermittent.
+      - Power windows (17:22 run): byte 13 b6 = driver DOWN, b7 = driver AUTO (it comes with b6), b5 = driver UP. Byte 12: b1/b0 = passenger DOWN/UP, b5/b4 = rear RH DOWN/UP, b3/b2 = rear LH DOWN/UP (all from the master switch), b6 = window lock. Passenger's own switch: byte 13 b0 = DOWN, byte 12 b7 = UP. Byte 14 b0 drops to 0 while the driver window moves, so byte 14 isn't purely lock state (its b1–b4 changed on locking).
+      Logs: `logs/2026-11-14_7.6-watch-DA-FF.log`, `logs/2026-11-14_7.6-watch-DA-windows.log` (summaries `.out`).
   - [ ] Key in / out
   - [ ] ACC
   - [ ] ON
@@ -374,9 +386,30 @@ Do them one at a time. Restore the normal value and send `30` after each.
 
 ## 8. BCM active tests (only after section 7; doors open, windows partly down)
 
-- [ ] **8.1 `C9` on the BCM.** Can the BCM's ROM be read? If yes, dump it first
+**Session 2026-11-14 17:28–17:44 (BCM = `DA`, KOEO). Scripts: `tools/bcm/` (run from the repo root).**
+- **Command probe** (no `F0`): `DA` echoes `5A` (read item), `9E` (stream all: `9E F0` → the 18-byte `5A FF` block), `C9`, `D0`. `D1` → `FE`. `01` → a lone `FF`. `0A` echoes `F5` (probe skipped it; tested separately). `C1` not tried (it would erase the IVMS memory). Log: `logs/2026-11-14_8.0-cmd-probe-DA.log`.
+- **Item numbering:** high nibble = item, low nibble = function. **`x2` = read**, **`x3` = active test**, for the same 12 high nibbles `0 1 2 5 6 7 8 9 B C E F`. `0A` also echoes `05 09 0A 11 1B 3B FE` (meaning unknown; reads also accepted `15 19 1A 1B 25 2B 35 3B FF`). Log: `logs/2026-11-14_8.0-argscan-DA.log`.
+- **Value byte:** `0A 03 xx` echoes every `xx` tried (`00`–`25` before the scan was stopped), so the echo says nothing about which values are meaningful. Log: `logs/2026-11-14_8.0-valscan-DA.log`.
+- **Sequence:** init `DA`, then one byte at a time, each after its echo: `0A` (→`F5`), item (→item), value (→value), `F0`. While running, the BCM streams `FF 01 vv` (tests `03`, `13`) or empty `FF 00` frames (all others). `30` → `CF` every time.
+- **Results with value `01`, 1.5 s each** (owner watching; round 2 on a 15 s timetable, `logs/2026-11-14_8.x-fire-DA.log`):
+
+  | Test | Effect | Notes |
+  |---|---|---|
+  | `03` | **Locks / trunk / panic.** Value `03` = **trunk release**, `06` = **horn + lights**; `01`: an unlock was seen in round 1 (17:37), placed at `03` **only by its order in the owner's list**; nothing at 17:40:41, nothing at 21:22:45 (unlocked), **nothing at 21:23:38 with the doors locked by the switch**. In round 1 the frames carried `80`; every later run gave `00`. So either the unlock needs a state that `80` reports, or it came from another test; `04` = **lamp flash like the lock answer-back, but no lock** (21:22:25, doors shut, owner inside); `02 05` nothing, doors open or shut; `07 08` invalid (empty frames). Frames while running: `00` for 02–03, `02` for 04–06 (21:17–21:19). | value `01` was not resent at 21:17:45 (the script's timeout killed it before it fired) |
+  | `13` | **Power windows, all four (confirmed 21:08–21:15, owner).** Value = window × direction: `01` DR up, `02` DR down, `03` AS up, `04` AS down, `05` RR up, `06` RR down, `07` RL up, `08` RL down. `10 20 40 80` do nothing (empty frames). | 1 s hold ≈ a short move |
+    | `53` | **Wipers** | |
+  | `63` | **Rear defogger** | |
+  | `23` | **Door locks: value `00` toggles** (21:31:00 locked the unlocked doors; 21:37:28 unlocked them). Frames while running: `01 3E` (2 bytes). `01`–`08` are invalid (empty frames). | owner, doors shut, engine off |
+| `73 83 93 B3 F3` | nothing seen, empty frames for `00`–`08` (21:31–21:36) | candidates: chimes, lamps, starter interrupt; values ≥ `09` untried |
+  | `C3` | **Horn + headlights** (alarm / theft warning) | |
+  | `E3` | **Right passenger-side light** (value `02`, 21:11:25; owner) | which lamp exactly is unconfirmed (step/courtesy?) |
+
+- **`13` = driver power window (confirmed 21:08:40).** `0A 13 02 F0` for 1 s lowered the driver window (owner). Value `02` = DOWN, `01` = UP (confirmed 21:09:22: `0A 13 01` raised it). The frames during the test were `FF 01 00`.
+
+- [x] **8.1 `C9` on the BCM.** Can the BCM's ROM be read? If yes, dump it first
       (this is safer than guessing active-test codes).
-      Result: ____
+      Result: **RAM only, no ROM (2026-11-14, 21:25–21:40, `DA`).** `C9 hi lo` is accepted only for hi `FA`–`FF` (every other hi → `FE` on the low byte). The low bytes accepted: `FA`, `FB`, `FC` all 256. `FF`: `00`–`64` only. `FD`/`FE` not scanned (the scan was stopped). A single-byte address (`C9 xx F0`) → `FE`. Max 6 addresses per request (`rom-dump` now uses 6 for paced units).
+      `FA00–FCFF` dumped → `rom/bcm-2L900_FA00-FCFF.bin` (768 bytes, 53 s, sha256 `463c1afd…f760`): 73 % zeros and only 70 distinct byte values, so it's not code. It looks like work RAM: ASCII **`L-A- Network`** at `FAD0`, `AA`/`55` test patterns at `FB2A–FB33`, and a stack-like run of `FBxx`/`FFxx` words at `FBD0–FBEF`. `FF00–FF64` looks like I/O or flags. So the active-test table can't be read this way. Use these RAM windows for differential logging instead (`watch-mem FA00 -n …`). Logs: `logs/2026-11-14_8.1-c9scan-DA.log`, `logs/2026-11-14_8.1-c9hi-DA.log`, `logs/2026-11-14_8.1-bcm-dump.log`.
 - [ ] **8.2 Lamps.** Illumination, room lamp, step lamp, security indicator.
       Result: ____
 - [ ] **8.3 Buzzers.** Key warning, light warning, seat-belt warning.
@@ -384,11 +417,11 @@ Do them one at a time. Restore the normal value and send `30` after each.
 - [ ] **8.4 Hazard, rear defogger relay, wiper amp.** Wet the windshield before
       running the wiper.
       Result: ____
-- [ ] **8.5 Door lock motors.** One door at a time. Keep the key in your pocket, not
+- [x] **8.5 Door lock motors.** One door at a time. Keep the key in your pocket, not
       in the car, and keep a door open.
-      Result: ____
-- [ ] **8.6 Power windows.** Keep hands and objects clear.
-      Result: ____
+      Result: **`0A 23 00 F0` toggles all door locks** (2026-11-14, 21:31 lock, 21:37 unlock; doors shut, key ON). No per-door value found among `00`–`08`.
+- [x] **8.6 Power windows.** Keep hands and objects clear.
+      Result: **Done (2026-11-14, 21:08–21:15, KOEO).** `0A 13 vv F0`, hold, `30`. `vv`: `01`/`02` driver up/down, `03`/`04` front passenger, `05`/`06` rear RH, `07`/`08` rear LH (odd = up, even = down). All 8 seen by the owner. While a valid value runs the BCM streams `FF 01 00`; an invalid value gives empty `FF 00` frames. Tool: `python3 tools/bcm/fire.py <vv> <secs> 13`. Log: `logs/2026-11-14_8.x-fire-DA.log`.
 - [ ] **8.7 Alarm relay, starter interrupt relay.** Engine OFF.
       Result: ____
 
