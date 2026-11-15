@@ -43,6 +43,26 @@ static size_t expected_echo(const uint8_t *p, size_t n, uint8_t *out)
     return o;
 }
 
+/* Send a payload and read its echo (want, wn bytes) into got. The BCM answers FE to a
+ * command list sent in one burst, so a paced unit gets one byte at a time, each after
+ * its echo, stopping at the first wrong one. Returns the number of echo bytes read. */
+static size_t xfer(consult_t *c, const uint8_t *payload, size_t n, const uint8_t *want,
+                   size_t wn, uint8_t *got)
+{
+    size_t gn = 0;
+
+    if (!c->paced) {
+        serial_write(c->s, payload, n);
+        return serial_read(c->s, got, wn, 0.5);
+    }
+    for (size_t i = 0; i < n && gn < wn; i++) {
+        serial_write(c->s, &payload[i], 1);
+        if (serial_read(c->s, &got[gn], 1, 0.3) != 1 || got[gn++] != want[i])
+            break;
+    }
+    return gn;
+}
+
 int consult_stop(consult_t *c, double timeout, uint8_t *ack)
 {
     uint8_t b = CONSULT_STOP;
@@ -116,9 +136,7 @@ int consult_command(consult_t *c, const uint8_t *payload, size_t n, int retries)
     }
     wn = expected_echo(payload, n, want);
     for (int t = 0; t <= retries && !c->s->error; t++) {
-        size_t gn;
-        serial_write(c->s, payload, n);
-        gn = serial_read(c->s, got, wn, 0.5);
+        size_t gn = xfer(c, payload, n, want, wn, got);
         if (gn == wn && memcmp(got, want, wn) == 0) {
             uint8_t go = CONSULT_GO, first;
             size_t fn;
@@ -248,8 +266,7 @@ int consult_active_test(consult_t *c, uint8_t test, uint8_t value, double hold,
     if (held)
         *held = 0;
     expected_echo(payload, sizeof payload, want);
-    serial_write(c->s, payload, sizeof payload);
-    gn = serial_read(c->s, got, sizeof got, 0.5);
+    gn = xfer(c, payload, sizeof payload, want, sizeof want, got);
     if (gn == sizeof got && memcmp(got, want, sizeof want) == 0) {
         uint8_t go = CONSULT_GO;
         double start;

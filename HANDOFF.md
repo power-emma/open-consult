@@ -32,7 +32,7 @@
 4. **Code 21 (P1320) test (checklist 2.8)**, engine warm:
    `python -m consult --test-id 2.8-p1320 watch-mem 0C5F -n 17`, then idle, 2000 rpm, A/C,
    wiggle each coil harness, tap the condenser, wiggle the ECM connector. Watch `$0C60` climb.
-5. Fold `tools/bcm/*.py` into `python -m consult` subcommands. Teach `reg-scan` variable
+5. **`consult-gui` now has a "Body (BCM)" tab** (2026-11-14, 21:45): hold-to-run window buttons, plus one button per known output. It hasn't been tried on the car yet. Fold `tools/bcm/*.py` into `python -m consult` subcommands too. Teach `reg-scan` variable
    frame lengths, so BCM items aren't reported as "no frame".
 
 **Process note:** run one tool on the port at a time. Two background runs overlapped today.

@@ -209,3 +209,24 @@ uint8_t active_encode(const active_test_t *t, int arg)
     default:   return 0x01;                     /* on */
     }
 }
+
+const bcm_test_t BCM_TESTS[N_BCM_TESTS] = {
+    {"Lock / unlock (toggles)",       0x23, 0x00},
+    {"Trunk release",                 0x03, 0x03},
+    {"Wipers",                        0x53, 0x01},
+    {"Rear defogger",                 0x63, 0x01},
+    {"Step lamp RH",                  0xE3, 0x02},
+    {"Step lamp LH",                  0xE3, 0x01},   /* not seen: that bulb is out */
+    {"Lock-confirm flash",            0x03, 0x04},
+    {"Horn + headlights",             0xC3, 0x01},
+    {"Panic (horn + lights)",         0x03, 0x06},
+};
+
+const char *const BCM_WINDOW_NAMES[N_BCM_WINDOWS] = {
+    "Driver", "Front passenger", "Rear right", "Rear left",
+};
+
+uint8_t bcm_window_value(int window, int down)
+{
+    return (uint8_t)(1 + 2 * window + (down ? 1 : 0));    /* odd = up, even = down */
+}

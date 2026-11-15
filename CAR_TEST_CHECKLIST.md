@@ -402,7 +402,7 @@ Do them one at a time. Restore the normal value and send `30` after each.
   | `23` | **Door locks: value `00` toggles** (21:31:00 locked the unlocked doors; 21:37:28 unlocked them). Frames while running: `01 3E` (2 bytes). `01`–`08` are invalid (empty frames). | owner, doors shut, engine off |
 | `73 83 93 B3 F3` | nothing seen, empty frames for `00`–`08` (21:31–21:36) | candidates: chimes, lamps, starter interrupt; values ≥ `09` untried |
   | `C3` | **Horn + headlights** (alarm / theft warning) | |
-  | `E3` | **Right passenger-side light** (value `02`, 21:11:25; owner) | which lamp exactly is unconfirmed (step/courtesy?) |
+  | `E3` | **Front step lamps** (FSM EL-170 test item STEP LAMP; EL step lamp LH/RH in the front doors): `02` = **RH** (seen 21:11:25), `01` = **LH** by elimination: the driver-side bulb is out (owner, 21:5x), so it can't be seen yet | replace the LH bulb, then confirm `01` |
 
 - **`13` = driver power window (confirmed 21:08:40).** `0A 13 02 F0` for 1 s lowered the driver window (owner). Value `02` = DOWN, `01` = UP (confirmed 21:09:22: `0A 13 01` raised it). The frames during the test were `FF 01 00`.
 

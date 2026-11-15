@@ -1,9 +1,10 @@
-/* consult-gui: read engine sensors, read and clear fault codes, and run active tests.
+/* consult-gui: read engine sensors, read and clear fault codes, run engine active
+ * tests, and drive the body control module's outputs (windows, locks, wipers…).
  *
- * The serial link runs on a worker thread that opens the port, inits the ECU and
- * then streams live data, reads or clears codes, or runs an active test as asked. It
- * closes the port when there's nothing left to do. Every session appends a raw TX/RX
- * log to logs/YYYY-MM-DD_gui.log. */
+ * The serial link runs on a worker thread that opens the port, inits the unit it needs
+ * (the engine ECU or the BCM, switching between them as asked) and then streams live
+ * data, reads or clears codes, or runs an active test. It closes the port when there's
+ * nothing left to do. Every session appends a raw TX/RX log to logs/YYYY-MM-DD_gui.log. */
 #include <errno.h>
 #include <gtk/gtk.h>
 #include <stdatomic.h>
@@ -16,7 +17,9 @@
 #define LOG_DIR "logs"
 #endif
 
-enum { MSG_STATUS, MSG_VALUES, MSG_DTCS, MSG_ACTIVE, MSG_DONE };
+enum { MSG_STATUS, MSG_VALUES, MSG_DTCS, MSG_ACTIVE, MSG_BCM, MSG_DONE };
+
+#define WINDOW_MAX_HOLD 10.0    /* s; a window moves only while its button is held */
 
 typedef struct {
     int kind;
@@ -28,17 +31,23 @@ typedef struct {
 } msg_t;
 
 static struct {
-    GtkWidget *win, *dev, *live_btn, *dtc_btn, *clear_btn, *status, *fps, *dtc_grid, *dtc_note;
+    GtkWidget *win, *dev, *live_btn, *dtc_btn, *clear_btn, *status, *fps, *dtc_grid;
     GtkWidget *value[N_SENSORS];
     GtkWidget *test, *test_value, *test_unit, *test_hold, *test_btn, *test_result;
+    GtkWidget *bcm_btn[N_BCM_TESTS], *bcm_hold, *bcm_result, *bcm_latch;
     GThread *thread;
     char devpath[256];
-    GMutex lock;            /* guards the want_* flags and the active_* parameters */
-    int want_live, want_dtc, want_clear, want_active;
+    GMutex lock;            /* guards the want_* flags and the active_* and bcm_* parameters */
+    int want_live, want_dtc, want_clear, want_active, want_bcm;
+    int want_latch;         /* stay connected to the BCM while idle */
     int active_idx, active_arg;
     double active_hold;
+    char bcm_name[64];
+    uint8_t bcm_item, bcm_value;
+    double bcm_hold_s;
     atomic_int cancel;      /* set on quit */
     atomic_int abort_test;  /* "Stop test" pressed */
+    atomic_int abort_bcm;   /* window button released */
 } app;
 
 /* ---- worker thread ---- */
@@ -74,6 +83,18 @@ static void post_active(const char *fmt, ...)
     post(m);
 }
 
+static void post_bcm(const char *fmt, ...) G_GNUC_PRINTF(1, 2);
+static void post_bcm(const char *fmt, ...)
+{
+    msg_t *m = g_new0(msg_t, 1);
+    va_list ap;
+    m->kind = MSG_BCM;
+    va_start(ap, fmt);
+    g_vsnprintf(m->text, sizeof m->text, fmt, ap);
+    va_end(ap);
+    post(m);
+}
+
 static void post_kind(int kind)
 {
     msg_t *m = g_new0(msg_t, 1);
@@ -84,7 +105,8 @@ static void post_kind(int kind)
 static void give_up(void)
 {
     g_mutex_lock(&app.lock);
-    app.want_live = app.want_dtc = app.want_clear = app.want_active = 0;
+    app.want_live = app.want_dtc = app.want_clear = app.want_active = app.want_bcm = 0;
+    app.want_latch = 0;
     g_mutex_unlock(&app.lock);
 }
 
@@ -169,15 +191,107 @@ static void run_active(consult_t *c, const uint8_t *payload, size_t plen, int fl
                 before[SENSOR_INJ_RH], after[SENSOR_INJ_RH]);
 }
 
+/* Init the engine ECU unless it's the unit already selected (*cur, 0 = none). */
+static int use_engine(consult_t *c, uint8_t *cur)
+{
+    uint8_t id;
+    char pn[32];
+
+    if (*cur && *cur != CONSULT_BCM)
+        return 1;
+    c->paced = 0;
+    *cur = 0;
+    post_status("Connecting to the ECU…");
+    if (!consult_init(c, CONSULT_ENGINE_IDS, 2, 3, &id)) {
+        if (!atomic_load(&app.cancel))
+            post_status(c->s->error ? "Connection failed: %s"
+                                    : "No reply from the ECU (%s). Is the key at ON and the "
+                                      "dongle plugged into the car?", link_error(c));
+        return 0;
+    }
+    *cur = id;
+    if (consult_part_number(c, pn, sizeof pn))
+        post_status("Connected: ECU %02X, %s", id, pn);
+    else
+        post_status("Connected: ECU %02X", id);
+    return 1;
+}
+
+/* Same for the BCM, which takes one byte at a time. */
+static int use_bcm(consult_t *c, uint8_t *cur)
+{
+    static const uint8_t ids[1] = {CONSULT_BCM};
+    uint8_t id;
+
+    if (*cur == CONSULT_BCM)
+        return 1;
+    c->paced = 1;
+    *cur = 0;
+    post_status("Connecting to the BCM…");
+    if (!consult_init(c, ids, 1, 3, &id)) {
+        if (!atomic_load(&app.cancel))
+            post_status("No reply from the BCM (%s). Is the key at ON?", link_error(c));
+        return 0;
+    }
+    *cur = id;
+    post_status("Connected: BCM %02X", id);
+    return 1;
+}
+
+/* Latched and idle: keep the BCM session open. Every 5 s a one-shot 5A FF read keeps
+ * it awake and shows whether the link is still up (it isn't after a key-off). Returns
+ * 0 when that read fails, so the caller reconnects. */
+static int bcm_keepalive(consult_t *c, double *last)
+{
+    static const uint8_t poll[2] = {0x5A, 0xFF};
+    uint8_t frame[CONSULT_MAX_FRAME];
+
+    sleep_s(0.05);
+    if (mono() - *last < 5.0)
+        return 1;
+    *last = mono();
+    if (consult_one_shot(c, poll, sizeof poll, frame) >= 0)
+        return 1;
+    serial_note(c->s, "BCM keep-alive failed: %s", c->err);
+    return 0;
+}
+
+static void run_bcm(consult_t *c, const char *name, uint8_t item, uint8_t value, double hold)
+{
+    uint8_t ack = 0;
+    double held;
+    int rc;
+
+    if (atomic_load(&app.abort_bcm)) {
+        post_bcm("%s: button released before the BCM was ready. Hold it down.", name);
+        return;
+    }
+    post_status("BCM test running: %s (0A %02X %02X)", name, item, value);
+    rc = consult_active_test(c, item, value, hold, &app.abort_bcm, &ack, &held);
+    if (rc < 0) {
+        post_bcm("WARNING: the BCM didn't acknowledge the stop. Turn the key off to be sure "
+                 "%s has ended.", name);
+        post_status("BCM test: no stop ack");
+        return;
+    }
+    if (rc == 0) {
+        post_bcm("The BCM rejected %s (%s). Nothing was changed.", name, c->err);
+        post_status("BCM test rejected");
+        return;
+    }
+    post_bcm("%s: ran for %.1f s and was stopped.", name, held);
+    post_status("BCM test finished and stopped (ack %02X)", ack);
+}
+
 static gpointer worker(gpointer unused)
 {
     serial_t s;
     consult_t c = {.s = &s, .cancel = &app.cancel};
-    uint8_t payload[64], frame[CONSULT_MAX_FRAME], id;
+    uint8_t payload[64], frame[CONSULT_MAX_FRAME], cur = 0;
     size_t plen = sensor_payload(payload);
-    int flen = sensor_frame_len(), streaming = 0, frames = 0, timeouts = 0;
-    double t0 = 0, last_post = 0;
-    char log[512], date[16], pn[32];
+    int flen = sensor_frame_len(), streaming = 0, frames = 0, timeouts = 0, latched = 0;
+    double t0 = 0, last_post = 0, last_poll = 0;
+    char log[512], date[16];
     GDateTime *now = g_date_time_new_now_local();
     int rc;
 
@@ -202,31 +316,45 @@ static gpointer worker(gpointer unused)
         return NULL;
     }
 
-    post_status("Connecting to the ECU…");
-    if (!consult_init(&c, CONSULT_ENGINE_IDS, 2, 3, &id)) {
-        if (!atomic_load(&app.cancel))
-            post_status(s.error ? "Connection failed: %s"
-                                : "No reply from the ECU (%s). Is the key at ON and the "
-                                  "dongle plugged into the car?", link_error(&c));
-        goto fail;
-    }
-    if (consult_part_number(&c, pn, sizeof pn))
-        post_status("Connected: ECU %02X, %s", id, pn);
-    else
-        post_status("Connected: ECU %02X", id);
-
     while (!atomic_load(&app.cancel)) {
-        int live, dtc, clear, active, idx, arg;
-        double hold;
+        int live, dtc, clear, active, bcm, latch, idx, arg;
+        double hold, bcm_hold;
+        char bcm_name[sizeof app.bcm_name];
+        uint8_t bcm_item, bcm_value;
         g_mutex_lock(&app.lock);
         live = app.want_live;
         dtc = app.want_dtc;
         clear = app.want_clear;
         active = app.want_active;
+        bcm = app.want_bcm;
+        latch = app.want_latch;
         idx = app.active_idx;
         arg = app.active_arg;
         hold = app.active_hold;
+        g_strlcpy(bcm_name, app.bcm_name, sizeof bcm_name);
+        bcm_item = app.bcm_item;
+        bcm_value = app.bcm_value;
+        bcm_hold = app.bcm_hold_s;
         g_mutex_unlock(&app.lock);
+
+        if (bcm) {
+            if (streaming)
+                consult_stop(&c, 2.0, NULL);
+            streaming = 0;
+            if (use_bcm(&c, &cur))
+                run_bcm(&c, bcm_name, bcm_item, bcm_value, bcm_hold);
+            g_mutex_lock(&app.lock);
+            app.want_bcm = 0;
+            g_mutex_unlock(&app.lock);
+            if (s.error)
+                goto fail;
+            continue;
+        }
+
+        if (clear || active || dtc || live)
+            latched = 0;
+        if ((clear || active || dtc || live) && !streaming && !use_engine(&c, &cur))
+            goto fail;
 
         if (clear) {
             msg_t *m = g_new0(msg_t, 1);
@@ -291,8 +419,37 @@ static gpointer worker(gpointer unused)
             post(m);
             continue;
         }
-        if (!live)
-            break;
+        if (!live) {
+            if (!latch)
+                break;
+            if (streaming) {
+                consult_stop(&c, 2.0, NULL);
+                streaming = 0;
+                post_status("Live data stopped");
+            }
+            if (!use_bcm(&c, &cur)) {
+                g_mutex_lock(&app.lock);
+                app.want_latch = 0;
+                g_mutex_unlock(&app.lock);
+                post_bcm("Couldn't stay connected to the BCM, so the latch is off.");
+                if (s.error)
+                    goto fail;
+                continue;
+            }
+            if (!latched) {
+                latched = 1;
+                last_poll = mono();
+                post_status("Connected to the BCM and staying connected");
+            }
+            if (!bcm_keepalive(&c, &last_poll)) {
+                if (s.error)
+                    goto fail;
+                cur = 0;        /* reconnect on the next pass */
+                latched = 0;
+                post_status("Lost the BCM, reconnecting…");
+            }
+            continue;
+        }
 
         if (!streaming) {
             if (!consult_command(&c, payload, plen, 2)) {
@@ -302,7 +459,7 @@ static gpointer worker(gpointer unused)
             streaming = 1;
             frames = 0;
             t0 = last_post = mono();
-            post_status("Streaming live data from ECU %02X", id);
+            post_status("Streaming live data from ECU %02X", cur);
         }
 
         if (consult_read_frame(&c, flen, 1.0, frame) < 0) {
@@ -356,14 +513,23 @@ static void start_worker(void)
 
 static void update_buttons(void)
 {
-    int live, dtc, clear, active;
+    int live, dtc, clear, active, bcm, latch;
     const active_test_t *t = &ACTIVE_TESTS[gtk_drop_down_get_selected(GTK_DROP_DOWN(app.test))];
     g_mutex_lock(&app.lock);
     live = app.want_live;
     dtc = app.want_dtc;
     clear = app.want_clear;
     active = app.want_active;
+    bcm = app.want_bcm;
+    latch = app.want_latch;
     g_mutex_unlock(&app.lock);
+    /* No-op (and no "toggled" signal) unless the worker dropped the latch. */
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(app.bcm_latch), latch);
+    /* The window buttons stay sensitive: making a held button insensitive would cancel
+     * the press, and the release is what stops the window. */
+    for (int i = 0; i < N_BCM_TESTS; i++)
+        gtk_widget_set_sensitive(app.bcm_btn[i], !bcm && !active);
+    gtk_widget_set_sensitive(app.test_btn, active || !bcm);
     gtk_button_set_label(GTK_BUTTON(app.live_btn), live ? "Stop live data" : "Start live data");
     gtk_widget_set_sensitive(app.dtc_btn, !dtc && !clear && !active);
     gtk_widget_set_sensitive(app.clear_btn, !dtc && !clear && !active);
@@ -384,8 +550,6 @@ static GtkWidget *label(const char *text, float xalign)
 static void show_dtcs(const msg_t *m)
 {
     GtkWidget *child;
-    GDateTime *now = g_date_time_new_now_local();
-    char *when = g_date_time_format(now, "%H:%M:%S");
     int row = 0;
 
     while ((child = gtk_widget_get_first_child(app.dtc_grid)))
@@ -418,15 +582,6 @@ static void show_dtcs(const msg_t *m)
     }
     if (row == 0)
         gtk_grid_attach(GTK_GRID(app.dtc_grid), label("No fault codes stored.", 0), 0, 0, 3, 1);
-
-    {
-        char *note = g_strdup_printf("Read at %s. Names are from Nissan's 2-digit code list.",
-                                     when);
-        gtk_label_set_text(GTK_LABEL(app.dtc_note), note);
-        g_free(note);
-    }
-    g_free(when);
-    g_date_time_unref(now);
 }
 
 static gboolean on_msg(gpointer p)
@@ -456,6 +611,9 @@ static gboolean on_msg(gpointer p)
     case MSG_ACTIVE:
         gtk_label_set_text(GTK_LABEL(app.test_result), m->text);
         break;
+    case MSG_BCM:
+        gtk_label_set_text(GTK_LABEL(app.bcm_result), m->text);
+        break;
     case MSG_DONE:
         if (app.thread)
             g_thread_join(app.thread);
@@ -463,7 +621,8 @@ static gboolean on_msg(gpointer p)
         gtk_label_set_text(GTK_LABEL(app.fps), "");
         /* A button may have been pressed while the worker was finishing. */
         g_mutex_lock(&app.lock);
-        int again = app.want_live || app.want_dtc || app.want_clear || app.want_active;
+        int again = app.want_live || app.want_dtc || app.want_clear || app.want_active ||
+                    app.want_bcm || app.want_latch;
         g_mutex_unlock(&app.lock);
         if (again && !atomic_load(&app.cancel))
             start_worker();
@@ -578,6 +737,148 @@ static void on_test_selected(GObject *o, GParamSpec *ps, gpointer u)
     update_buttons();
 }
 
+static GtkWidget *framed(const char *title, GtkWidget *child);
+
+/* Queue one BCM test, unless one is already queued or running. */
+static void request_bcm(const char *name, uint8_t item, uint8_t value, double hold)
+{
+    int busy;
+    atomic_store(&app.abort_bcm, 0);
+    g_mutex_lock(&app.lock);
+    busy = app.want_bcm || app.want_active;
+    if (!busy) {
+        app.want_bcm = 1;
+        g_strlcpy(app.bcm_name, name, sizeof app.bcm_name);
+        app.bcm_item = item;
+        app.bcm_value = value;
+        app.bcm_hold_s = hold;
+    }
+    g_mutex_unlock(&app.lock);
+    if (busy)
+        return;
+    gtk_label_set_text(GTK_LABEL(app.bcm_result), "Connecting to the BCM…");
+    start_worker();
+    update_buttons();
+}
+
+static void on_latch(GtkToggleButton *b, gpointer u)
+{
+    int on = gtk_toggle_button_get_active(b), changed;
+    (void)u;
+    g_mutex_lock(&app.lock);
+    changed = app.want_latch != on;
+    app.want_latch = on;
+    g_mutex_unlock(&app.lock);
+    if (!changed)
+        return;
+    if (on) {
+        gtk_label_set_text(GTK_LABEL(app.bcm_result), "Connecting to the BCM…");
+        start_worker();
+    } else {
+        gtk_label_set_text(GTK_LABEL(app.bcm_result), "Disconnected from the BCM.");
+    }
+    update_buttons();
+}
+
+static void on_bcm(GtkButton *b, gpointer u)
+{
+    const bcm_test_t *t = &BCM_TESTS[GPOINTER_TO_INT(u)];
+    (void)b;
+    request_bcm(t->name, t->item, t->value,
+                gtk_spin_button_get_value(GTK_SPIN_BUTTON(app.bcm_hold)));
+}
+
+/* u = window * 2 + down */
+static void on_window_pressed(GtkGestureDrag *g, double x, double y, gpointer u)
+{
+    int w = GPOINTER_TO_INT(u) / 2, down = GPOINTER_TO_INT(u) % 2;
+    char name[64];
+    (void)g, (void)x, (void)y;
+    g_snprintf(name, sizeof name, "%s window %s", BCM_WINDOW_NAMES[w], down ? "down" : "up");
+    request_bcm(name, BCM_WINDOWS, bcm_window_value(w, down), WINDOW_MAX_HOLD);
+}
+
+static void on_window_released(GtkGestureDrag *g, double x, double y, gpointer u)
+{
+    (void)g, (void)x, (void)y, (void)u;
+    atomic_store(&app.abort_bcm, 1);
+}
+
+static void on_window_cancel(GtkGesture *g, GdkEventSequence *seq, gpointer u)
+{
+    (void)g, (void)seq, (void)u;
+    atomic_store(&app.abort_bcm, 1);
+}
+
+static GtkWidget *window_button(const char *text, int w, int down)
+{
+    GtkWidget *b = gtk_button_new_with_label(text);
+    /* A drag gesture runs from press to release with no time limit (a click gesture
+     * can give up on a long press and never report the release). */
+    GtkGesture *g = gtk_gesture_drag_new();
+    gpointer u = GINT_TO_POINTER(w * 2 + down);
+
+    /* Capture phase: the button's own click gesture would otherwise take the press. */
+    gtk_event_controller_set_propagation_phase(GTK_EVENT_CONTROLLER(g), GTK_PHASE_CAPTURE);
+    g_signal_connect(g, "drag-begin", G_CALLBACK(on_window_pressed), u);
+    g_signal_connect(g, "drag-end", G_CALLBACK(on_window_released), u);
+    g_signal_connect(g, "cancel", G_CALLBACK(on_window_cancel), u);
+    gtk_widget_add_controller(b, GTK_EVENT_CONTROLLER(g));
+    return b;
+}
+
+static GtkWidget *bcm_page(void)
+{
+    GtkWidget *page = gtk_box_new(GTK_ORIENTATION_VERTICAL, 12);
+    GtkWidget *wins = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
+    GtkWidget *wgrid = gtk_grid_new(), *outs = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
+    GtkWidget *ogrid = gtk_grid_new(), *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+    GtkWidget *cols = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 12);
+
+    app.bcm_latch = gtk_toggle_button_new_with_label("Stay connected to the BCM");
+    gtk_widget_set_halign(app.bcm_latch, GTK_ALIGN_START);
+    g_signal_connect(app.bcm_latch, "toggled", G_CALLBACK(on_latch), NULL);
+    gtk_box_append(GTK_BOX(page), app.bcm_latch);
+
+    gtk_grid_set_column_spacing(GTK_GRID(wgrid), 8);
+    gtk_grid_set_row_spacing(GTK_GRID(wgrid), 6);
+    for (int w = 0; w < N_BCM_WINDOWS; w++) {
+        GtkWidget *l = label(BCM_WINDOW_NAMES[w], 0);
+        gtk_widget_set_hexpand(l, TRUE);
+        gtk_grid_attach(GTK_GRID(wgrid), l, 0, w, 1, 1);
+        gtk_grid_attach(GTK_GRID(wgrid), window_button("Up", w, 0), 1, w, 1, 1);
+        gtk_grid_attach(GTK_GRID(wgrid), window_button("Down", w, 1), 2, w, 1, 1);
+    }
+    gtk_box_append(GTK_BOX(wins), wgrid);
+    gtk_widget_set_hexpand(wins, TRUE);
+    gtk_box_append(GTK_BOX(cols), framed("Power windows", wins));
+
+    gtk_grid_set_column_spacing(GTK_GRID(ogrid), 8);
+    gtk_grid_set_row_spacing(GTK_GRID(ogrid), 6);
+    gtk_grid_set_column_homogeneous(GTK_GRID(ogrid), TRUE);
+    for (int i = 0; i < N_BCM_TESTS; i++) {
+        app.bcm_btn[i] = gtk_button_new_with_label(BCM_TESTS[i].name);
+        g_signal_connect(app.bcm_btn[i], "clicked", G_CALLBACK(on_bcm), GINT_TO_POINTER(i));
+        gtk_grid_attach(GTK_GRID(ogrid), app.bcm_btn[i], i % 2, i / 2, 1, 1);
+    }
+    app.bcm_hold = gtk_spin_button_new_with_range(1, 10, 1);
+    gtk_spin_button_set_value(GTK_SPIN_BUTTON(app.bcm_hold), 1);
+    gtk_box_append(GTK_BOX(row), label("Run for", 0));
+    gtk_box_append(GTK_BOX(row), app.bcm_hold);
+    gtk_box_append(GTK_BOX(row), label("s", 0));
+    gtk_box_append(GTK_BOX(outs), ogrid);
+    gtk_box_append(GTK_BOX(outs), row);
+    gtk_widget_set_hexpand(outs, TRUE);
+    gtk_box_append(GTK_BOX(cols), framed("Other outputs", outs));
+    gtk_box_append(GTK_BOX(page), cols);
+
+    app.bcm_result = label("", 0);
+    gtk_label_set_wrap(GTK_LABEL(app.bcm_result), TRUE);
+    gtk_label_set_selectable(GTK_LABEL(app.bcm_result), TRUE);
+    gtk_box_append(GTK_BOX(page), app.bcm_result);
+    return page;
+}
+
 static GtkWidget *framed(const char *title, GtkWidget *child)
 {
     GtkWidget *f = gtk_frame_new(title);
@@ -620,7 +921,7 @@ static void activate(GtkApplication *ga, gpointer u)
     gtk_box_append(GTK_BOX(bar), app.dtc_btn);
     gtk_box_append(GTK_BOX(root), bar);
 
-    app.status = label("Key at ON (or engine running), then pick an action.", 0);
+    app.status = label("", 0);
     gtk_label_set_wrap(GTK_LABEL(app.status), TRUE);
     gtk_box_append(GTK_BOX(root), app.status);
 
@@ -650,14 +951,10 @@ static void activate(GtkApplication *ga, gpointer u)
     gtk_grid_set_column_spacing(GTK_GRID(app.dtc_grid), 16);
     gtk_grid_set_row_spacing(GTK_GRID(app.dtc_grid), 4);
     gtk_grid_attach(GTK_GRID(app.dtc_grid), label("Not read yet.", 0), 0, 0, 3, 1);
-    app.dtc_note = label("", 0);
-    gtk_label_set_wrap(GTK_LABEL(app.dtc_note), TRUE);
-    gtk_widget_add_css_class(app.dtc_note, "dim-label");
     app.clear_btn = gtk_button_new_with_label("Clear codes…");
     gtk_widget_set_halign(app.clear_btn, GTK_ALIGN_END);
     g_signal_connect(app.clear_btn, "clicked", G_CALLBACK(on_clear), NULL);
     gtk_box_append(GTK_BOX(codes), app.dtc_grid);
-    gtk_box_append(GTK_BOX(codes), app.dtc_note);
     gtk_box_append(GTK_BOX(codes), app.clear_btn);
     right = gtk_box_new(GTK_ORIENTATION_VERTICAL, 12);
     gtk_widget_set_hexpand(right, TRUE);
@@ -668,7 +965,6 @@ static void activate(GtkApplication *ga, gpointer u)
         GtkWidget *tests = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
         GtkWidget *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
         GtkWidget *row2 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
-        GtkWidget *warn;
 
         for (int i = 0; i < N_ACTIVE_TESTS; i++)
             names[i] = ACTIVE_TESTS[i].name;
@@ -691,10 +987,6 @@ static void activate(GtkApplication *ga, gpointer u)
         gtk_box_append(GTK_BOX(row2), label("s", 0));
         gtk_box_append(GTK_BOX(row2), app.test_btn);
 
-        warn = label("Changes how the engine runs. Parked, handbrake on, neutral. "
-                     "Turning the key off always ends a test.", 0);
-        gtk_label_set_wrap(GTK_LABEL(warn), TRUE);
-        gtk_widget_add_css_class(warn, "dim-label");
         app.test_result = label("", 0);
         gtk_label_set_wrap(GTK_LABEL(app.test_result), TRUE);
         gtk_label_set_selectable(GTK_LABEL(app.test_result), TRUE);
@@ -702,7 +994,6 @@ static void activate(GtkApplication *ga, gpointer u)
 
         gtk_box_append(GTK_BOX(tests), row);
         gtk_box_append(GTK_BOX(tests), row2);
-        gtk_box_append(GTK_BOX(tests), warn);
         gtk_box_append(GTK_BOX(tests), app.test_result);
         gtk_box_append(GTK_BOX(right), framed("Active tests", tests));
 
@@ -711,7 +1002,21 @@ static void activate(GtkApplication *ga, gpointer u)
     }
     gtk_box_append(GTK_BOX(cols), right);
 
-    gtk_box_append(GTK_BOX(root), cols);
+    {
+        GtkWidget *tabs = gtk_notebook_new(), *body = bcm_page();
+        gtk_widget_set_vexpand(tabs, TRUE);
+        gtk_widget_set_margin_start(cols, 8);
+        gtk_widget_set_margin_end(cols, 8);
+        gtk_widget_set_margin_top(cols, 8);
+        gtk_widget_set_margin_bottom(cols, 8);
+        gtk_widget_set_margin_start(body, 8);
+        gtk_widget_set_margin_end(body, 8);
+        gtk_widget_set_margin_top(body, 8);
+        gtk_widget_set_margin_bottom(body, 8);
+        gtk_notebook_append_page(GTK_NOTEBOOK(tabs), cols, gtk_label_new("Engine"));
+        gtk_notebook_append_page(GTK_NOTEBOOK(tabs), body, gtk_label_new("Body (BCM)"));
+        gtk_box_append(GTK_BOX(root), tabs);
+    }
     gtk_window_set_child(GTK_WINDOW(win), root);
     on_test_selected(NULL, NULL, NULL);
     gtk_window_present(GTK_WINDOW(win));

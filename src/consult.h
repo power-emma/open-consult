@@ -10,6 +10,7 @@
 
 #define CONSULT_ENGINE      0xEF
 #define CONSULT_ENGINE_ALT  0xED    /* the 1998 Maxima's engine ECU answers ED (reply 12), not EF */
+#define CONSULT_BCM         0xDA    /* body control module (IVMS); needs c->paced */
 #define CONSULT_STOP        0x30
 #define CONSULT_GO          0xF0
 #define CONSULT_ACTIVE      0x0A
@@ -29,6 +30,7 @@ typedef struct {
     serial_t *s;
     atomic_int *cancel;     /* optional: init and frame reads give up once it's set */
     int frame_started;      /* command() already consumed the first frame's FF */
+    int paced;              /* send one byte at a time, each after its echo (the BCM) */
     char err[256];          /* why the last call failed */
 } consult_t;
 
@@ -64,7 +66,8 @@ int consult_clear_dtcs(consult_t *c, consult_dtc_t *out, int max, int *cleared);
 
 /* 0A <test> <value> F0, hold for `hold` seconds (or until *abort or c->cancel is
  * set), then 30. No retries: a bad echo stops at once. The stop is resent up to 3
- * times. While a test is held this ECU sends only FF 00 (empty frames).
+ * times. While a test is held the engine ECU sends only FF 00 (empty frames); the BCM
+ * sends FF 01 xx (or FF 02 xx xx) for a valid value and FF 00 for one it ignores.
  * Returns 1 when the test ran and was stopped, 0 when the ECU rejected it, and -1
  * when no stop ack came back (turn the key off to be sure it has ended). */
 int consult_active_test(consult_t *c, uint8_t test, uint8_t value, double hold,

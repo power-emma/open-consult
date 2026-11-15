@@ -55,4 +55,21 @@ extern const active_test_t ACTIVE_TESTS[N_ACTIVE_TESTS];
 /* The value byte for a test argument (already within min..max). */
 uint8_t active_encode(const active_test_t *t, int arg);
 
+/* BCM (IVMS, unit DA) active tests: 0A <item> <value> F0, found on the car on
+ * 2026-11-14 (CAR_TEST_CHECKLIST.md §8). An output runs only while the test is held. */
+#define N_BCM_TESTS 9
+#define BCM_WINDOWS 0x13    /* value 1 + 2 * window + down, see bcm_window_value() */
+
+typedef struct {
+    const char *name;
+    uint8_t item, value;
+} bcm_test_t;
+
+extern const bcm_test_t BCM_TESTS[N_BCM_TESTS];
+
+/* Window 0..3 = driver, front passenger, rear right, rear left. */
+#define N_BCM_WINDOWS 4
+extern const char *const BCM_WINDOW_NAMES[N_BCM_WINDOWS];
+uint8_t bcm_window_value(int window, int down);
+
 #endif
