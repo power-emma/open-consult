@@ -57,7 +57,7 @@ uint8_t active_encode(const active_test_t *t, int arg);
 
 /* BCM (IVMS, unit DA) active tests: 0A <item> <value> F0, found on the car on
  * 2026-11-14 (CAR_TEST_CHECKLIST.md §8). An output runs only while the test is held. */
-#define N_BCM_TESTS 9
+#define N_BCM_TESTS 13
 #define BCM_WINDOWS 0x13    /* value 1 + 2 * window + down, see bcm_window_value() */
 
 typedef struct {

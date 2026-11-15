@@ -211,13 +211,17 @@ uint8_t active_encode(const active_test_t *t, int arg)
 }
 
 const bcm_test_t BCM_TESTS[N_BCM_TESTS] = {
-    {"Lock / unlock (toggles)",       0x23, 0x00},
+    {"Door locks (lock while held)",  0x23, 0x00},   /* unlocks again when it stops */
     {"Trunk release",                 0x03, 0x03},
     {"Wipers",                        0x53, 0x01},
     {"Rear defogger",                 0x63, 0x01},
     {"Step lamp RH",                  0xE3, 0x02},
     {"Step lamp LH",                  0xE3, 0x01},   /* not seen: that bulb is out */
-    {"Lock-confirm flash",            0x03, 0x04},
+    {"Interior lamp",                 0x93, 0x01},   /* rear dome lamp seen */
+    {"Chime 73",                      0x73, 0x01},   /* 73/83/B3 all give 2 beeps: */
+    {"Chime 83",                      0x83, 0x01},   /* key, light and seat-belt */
+    {"Chime B3",                      0xB3, 0x01},   /* warning, not yet told apart */
+    {"Hazard lamps",                  0x03, 0x04},   /* held solid, not flashing */
     {"Horn + headlights",             0xC3, 0x01},
     {"Panic (horn + lights)",         0x03, 0x06},
 };

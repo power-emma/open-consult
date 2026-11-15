@@ -102,7 +102,7 @@ Legend for conditions:
       wiggle the ECM connector. **Which action makes `$0C60` climb?** That points at the
       faulty part. Reading the input port itself (`$000A`, bit 3) would be more direct,
       but `$0000–$007F` is CPU I/O and hasn't been read yet, so try one read KOEO first.
-      Result: ____
+      Result: **Doesn't behave as §7 predicts (2026-11-14, 23:3x drive home, 655 s, ~33 sweeps/s).** `watch-mem 0C60 0C6F 09AE 000A` (watch-mem now takes an address list). `$000A` reads fine (KOEO `63`, bit 3 = 0). Driving: **`$0C60` cycles `0`→`9`→`0` continuously** (all ten values equally often, never `0A`), ~21 counts/s at idle and 40–45/s on the road: a mod-10 event/scheduler counter, not a miss count that stops at 10. **`$000A` bit 3 rose ~8×/s all drive** (5315 edges); the whole port changes constantly (bit 7 toggles every ~30 ms even KOEO). `$0C6F` wanders 0–5. `$09AE` follows load (`34`–`E4`; `40` at idle, so the ≥ 4 precondition always holds). **Next: re-read the `$E2F6` routine** (addresses or roles misread) before another drive. Log: `logs/2026-11-14_2.8-p1320-drive.log`.
 
 ## 3. Live data registers (engine)
 
@@ -121,7 +121,8 @@ Legend for conditions:
 - [x] **3.5 RPM.** Compare `00/01` × 12.5 with the tach at idle and at about 2500 rpm.
       Result: **× 12.5 confirmed.** At a tach "2000 held steady", the ECU read 1980–2004 (band mean 1966). At a tach wavering 2300–2700, the ECU read 2250–2750 (mean 2473). Other readings: 1350 rpm right after start, 1175 at a cold fast idle, ~660 warm idle. Log: `logs/2026-11-14_3.x-koer-throttle2.log`.
 - [ ] **3.6 CAS reference.** Is `02/03` × 8 also equal to RPM?
-      Result: **It's a period, not RPM (ROM, desk 2026-11-14):** `02/03` is the 120° REF period copied from a timer capture. rpm ≈ 2 500 000 / word fits the log (2.49 M at 1175 rpm). Confirm at a second RPM: at 2500 rpm expect word ≈ 1000.
+      Result: **Confirmed: it's the 120° REF period** (2026-11-14 drive): at 2400–2600 rpm the word averaged **1005** (816 frames), rpm × word = **2.50 M**, as predicted. Log: `logs/2026-11-14_3.x-drive.log`.
+      Desk: **It's a period, not RPM (ROM, desk 2026-11-14):** `02/03` is the 120° REF period copied from a timer capture. rpm ≈ 2 500 000 / word fits the log (2.49 M at 1175 rpm). Confirm at a second RPM: at 2500 rpm expect word ≈ 1000.
       Earlier: **No.** At 1175 rpm (`00/01`), `02/03` × 8 alternates between ~16 750 and ~17 250 (raw ~2100), about 14.4× RPM. It may be a period or a different unit. Log: `logs/2026-11-14_3.x-koer-idle.log`.
 - [x] **3.7 Coolant / IAT.** Compare `08` and `11` (value − 50) with an IR thermometer
       or the gauge, cold and warm.
@@ -142,7 +143,7 @@ Legend for conditions:
       Result: Partial: **both switch** (× 10 mV looks right). Warm idle: `09` 70–900 mV, `0A` 30–950 mV. 2000 rpm: 110–880 / 60–860. 2500 rpm: 130–930 / 80–930. Throttle lift-off goes lean (down to 20–70 mV), then rich (750–950) on return to idle. ECUTalk labels them "O2 Sensor" and "O2 Sensor RH". Still to do: map the banks (unplug one sensor, or check EL.pdf). Log: `logs/2026-11-14_3.x-koer-throttle2.log`.
 - [ ] **3.12 Vehicle speed.** Drive with a passenger running the tool. Compare `0B` × 2
       with GPS at 30 / 60 / 100 km/h. Is ×2 right, or is it closer to Nissboard's ×2.11?
-      Result: ____
+      Result: **×2 likely** (2026-11-14 drive, owner alone): cruise control set as close to 120 km/h on the speedo as possible (23:14–23:17) read a steady **118 km/h (raw `59`) at 2495 rpm**. ×2.11 would give 124.5, above the speedo, and speedos read high. Speedo only, so still confirm with GPS. Log: `logs/2026-11-14_3.x-drive.log`.
 - [ ] **3.13 Injection time.** `14/15` / 100 ms at idle (expect about 2–3 ms). Is
       `22/23` present on this engine?
       Result: LH 3.02–3.03 ms and RH 2.94–2.99 ms at a cold fast idle. Warm: 2.67/2.57 ms at idle, 2.45/2.39 ms at 2000 rpm, 2.35/2.29 ms at 2500 rpm, and 1.9 ms on throttle lift-off. **`22/23` is present** (RH bank). ECUTalk also uses 14/15 (LH) and 22/23 (RH) at × 0.01 ms.
@@ -154,7 +155,7 @@ Legend for conditions:
       Result: ____
 - [ ] **3.16 A/F alpha.** `1A`–`1D`: around 100 % at closed-loop idle? Do the
       self-learn registers respond?
-      Result: Partial: `1A`/`1B` = 104 % steady at a cold idle, so probably still open loop. KOEO, `1A`–`1D` all read 100 % (`64`). **Warm, closed loop:** `1A`/`1B` 102–107 % at idle, ~105 % at 2000 rpm, ~103 % at 2500 rpm. `1C`/`1D` (self-learn) read `6D`/`68` = 109/104 % KOER. Still to do: check whether the self-learn values change over a drive.
+      Result: Partial: `1A`/`1B` = 104 % steady at a cold idle, so probably still open loop. KOEO, `1A`–`1D` all read 100 % (`64`). **Warm, closed loop:** `1A`/`1B` 102–107 % at idle, ~105 % at 2000 rpm, ~103 % at 2500 rpm. `1C`/`1D` (self-learn) read `6D`/`68` = 109/104 % KOER. **Drive (2026-11-14, 17.5 min, coolant 54→92 °C):** `1C`/`1D` jump between 98 and 109 % within seconds as load/rpm change, so they look like the learned value of the current load/rpm cell, not one slow trim; warm idle `105`/`101`. **Fuel cut seen** on engine braking (23:20:48 etc.): injector time drops to a floor of **0.62 ms** with TPS closed and both O2 at 0 mV. Log: `logs/2026-11-14_3.x-drive.log`.
 - [ ] **3.17 Bit register `13`.** Toggle each of these and record the bit that changes:
       A/C switch, power steering (turn the wheel at idle), P/N (shift), start signal
       (crank), closed throttle.
@@ -171,7 +172,7 @@ Legend for conditions:
       Result: Partial: idle `01000000`; it was `00` KOEO before start.
       - **bit 6 = probably the fuel pump relay** (on whenever the engine runs).
       - **A/C on sets bit 1** (20.4 s), **then bit 7** (20.7 s); both clear at A/C off (27.6 s and 28.1 s). One is probably the A/C relay and the other a fan stage, but it's not clear which is which.
-      Still to do: tell bit 1 from bit 7 (listen for the compressor clutch vs the fan), and check the fan at hot idle. Log: `logs/2026-11-14_3.17-bits2.log`.
+      Still to do: tell bit 1 from bit 7 (listen for the compressor clutch vs the fan), and check the fan at hot idle. **Drive (2026-11-14):** `1E` stayed `01000000` for 17.5 min up to 92 °C; no fan bit seen. Log: `logs/2026-11-14_3.17-bits2.log`.
 - [ ] **3.19 Bit register `1F`.** Pressure regulator valve, IACV-FICD, EGR.
       Result: Partial: `00` at idle. **bit 0 was set for ~0.2 s during the throttle blip** (55.3–55.5 s, TPS 880 mV, rpm rising), so it's probably an acceleration-related output. `20` stayed `00` throughout. Log: `logs/2026-11-14_3.17-bits2.log`.
 - [x] **3.20 Register `21`.** Do the rich/lean bits follow the O2 sensors?
@@ -395,13 +396,15 @@ Do them one at a time. Restore the normal value and send `30` after each.
 
   | Test | Effect | Notes |
   |---|---|---|
-  | `03` | **Locks / trunk / panic.** Value `03` = **trunk release**, `06` = **horn + lights**; `01`: an unlock was seen in round 1 (17:37), placed at `03` **only by its order in the owner's list**; nothing at 17:40:41, nothing at 21:22:45 (unlocked), **nothing at 21:23:38 with the doors locked by the switch**. In round 1 the frames carried `80`; every later run gave `00`. So either the unlock needs a state that `80` reports, or it came from another test; `04` = **lamp flash like the lock answer-back, but no lock** (21:22:25, doors shut, owner inside); `02 05` nothing, doors open or shut; `07 08` invalid (empty frames). Frames while running: `00` for 02–03, `02` for 04–06 (21:17–21:19). | value `01` was not resent at 21:17:45 (the script's timeout killed it before it fired) |
+  | `03` | **Locks / trunk / panic.** Value `03` = **trunk release**, `06` = **horn + lights**; `01`: an unlock was seen in round 1 (17:37), placed at `03` **only by its order in the owner's list**; nothing at 17:40:41, nothing at 21:22:45 (unlocked), **nothing at 21:23:38 with the doors locked by the switch**. **Nothing either at 22:44:34, 22:45:28, 22:46:01, 22:49:27 (2–4 s holds, frames `FF 01 80`)**, so `80` isn't the missing condition; the round-1 unlock was most likely the end of a `23` test, which unlocks the doors when it stops. In round 1 the frames carried `80`; every later run gave `00`. So either the unlock needs a state that `80` reports, or it came from another test; `04` = **hazard lamps** (21:22:25 seen as a flash with no lock; 22:43:12 both dash arrows and all 4 corners held solid, frames `FF 01 80`, see 8.4); `02 05` nothing, doors open or shut; `07 08` invalid (empty frames). Frames while running: `00` for 02–03, `02` for 04–06 (21:17–21:19). | value `01` was not resent at 21:17:45 (the script's timeout killed it before it fired) |
   | `13` | **Power windows, all four (confirmed 21:08–21:15, owner).** Value = window × direction: `01` DR up, `02` DR down, `03` AS up, `04` AS down, `05` RR up, `06` RR down, `07` RL up, `08` RL down. `10 20 40 80` do nothing (empty frames). | 1 s hold ≈ a short move |
     | `53` | **Wipers** | |
   | `63` | **Rear defogger** | |
-  | `23` | **Door locks: value `00` toggles** (21:31:00 locked the unlocked doors; 21:37:28 unlocked them). Frames while running: `01 3E` (2 bytes). `01`–`08` are invalid (empty frames). | owner, doors shut, engine off |
-| `73 83 93 B3 F3` | nothing seen, empty frames for `00`–`08` (21:31–21:36) | candidates: chimes, lamps, starter interrupt; values ≥ `09` untried |
-  | `C3` | **Horn + headlights** (alarm / theft warning) | |
+  | `23` | **Door locks: value `00` locks while held, and they unlock again when the test stops** (owner, GUI, 22:46:39 and 22:46:42, 1 s holds; corrects the earlier "toggles" reading of 21:31:00 / 21:37:28). Not yet tried starting from locked. Frames while running: `01 3E` (2 bytes). `01`–`08` are invalid (empty frames). | owner, doors shut, engine off |
+| `93` | **Interior (room) lamp**: value `01` lit the rear dome lamp (21:58:53; interior lamp switch at DOOR, owner) | frames empty even so. FSM item ROOM LAMP TIMER |
+| `73 83 B3` | **Chime: 2 beeps each** (value `01`, 2 s; 22:36:58–22:38:16, owner, after fixing the chime). All three sound the same, so which is key / light / seat-belt warning is still open | earlier "nothing" (21:31–22:05) was the broken chime. Frames empty (`FF 00`) |
+| `F3` | **no visible or audible effect, and not the starter interrupt** (engine cranked and started while held, 22:52:46): no beep (22:37:20, 22:38:35); with the lighting switch ON, values `01`–`08` (22:39:48–22:41:11, 3–4 s each) changed nothing the owner could see. All stop-acked, frames empty | by elimination illumination (EL-170), unconfirmed. Untried: door open / key out, watching the key-cylinder ring and security indicator; values ≥ `09` |
+  | `C3` | **Horn + headlights** (alarm / theft warning) with `01`. **`04` = hazard lamps** (corner lamps on, 22:59:07, owner; same value as `03 04`). `02 03 05 06 07 08`: nothing seen (22:57 and 22:58:43–22:59:55, 1–2 s each). Frames empty (`FF 00`) for all | starter interrupt still not found |
   | `E3` | **Front step lamps** (FSM EL-170 test item STEP LAMP; EL step lamp LH/RH in the front doors): `02` = **RH** (seen 21:11:25), `01` = **LH** by elimination: the driver-side bulb is out (owner, 21:5x), so it can't be seen yet | replace the LH bulb, then confirm `01` |
 
 - **`13` = driver power window (confirmed 21:08:40).** `0A 13 02 F0` for 1 s lowered the driver window (owner). Value `02` = DOWN, `01` = UP (confirmed 21:09:22: `0A 13 01` raised it). The frames during the test were `FF 01 00`.
@@ -413,17 +416,17 @@ Do them one at a time. Restore the normal value and send `30` after each.
 - [ ] **8.2 Lamps.** Illumination, room lamp, step lamp, security indicator.
       Result: ____
 - [ ] **8.3 Buzzers.** Key warning, light warning, seat-belt warning.
-      Result: ____
-- [ ] **8.4 Hazard, rear defogger relay, wiper amp.** Wet the windshield before
+      Result: **`0A 73/83/B3 01 F0` each sound the chime (2 beeps)** (2026-11-14, 22:36–22:38, KOEO, owner). The three sound alike, so the item-to-buzzer mapping is still open; try other values, or compare with the real warnings (key in + door open, lights on + door open, belt off at key ON). `F3` gave no beep. Log: `logs/2026-11-14_8.x-fire-DA.log`.
+- [x] **8.4 Hazard, rear defogger relay, wiper amp.** Wet the windshield before
       running the wiper.
-      Result: ____
+      Result: **Hazard = `0A 03 04 F0`** (2026-11-14, 22:43:12, 3 s hold, KOEO, lights on): both dash arrows and all 4 corner lamps came on **solid, not flashing** (owner saw them at 22:43:18, about 3 s after the stop ack; clock offset or a delayed output, still open), and went off by themselves. Frames `FF 01 80` (earlier runs of `03 04` gave `02`; `80` was also seen in the round-1 unlock, so byte 3 is probably car state). `03` values `09`–`10` are invalid (empty frames, 22:42). Rear defogger = `63 01`, wipers = `53 01` (§8 table).
 - [x] **8.5 Door lock motors.** One door at a time. Keep the key in your pocket, not
       in the car, and keep a door open.
-      Result: **`0A 23 00 F0` toggles all door locks** (2026-11-14, 21:31 lock, 21:37 unlock; doors shut, key ON). No per-door value found among `00`–`08`.
+      Result: **`0A 23 00 F0` locks all doors while held; they unlock when the test stops** (2026-11-14, 22:46, owner via the GUI, doors shut, key ON; the 21:31 / 21:37 runs were first read as a toggle). No per-door value found among `00`–`08`. Open: what it does when the doors start locked.
 - [x] **8.6 Power windows.** Keep hands and objects clear.
       Result: **Done (2026-11-14, 21:08–21:15, KOEO).** `0A 13 vv F0`, hold, `30`. `vv`: `01`/`02` driver up/down, `03`/`04` front passenger, `05`/`06` rear RH, `07`/`08` rear LH (odd = up, even = down). All 8 seen by the owner. While a valid value runs the BCM streams `FF 01 00`; an invalid value gives empty `FF 00` frames. Tool: `python3 tools/bcm/fire.py <vv> <secs> 13`. Log: `logs/2026-11-14_8.x-fire-DA.log`.
 - [ ] **8.7 Alarm relay, starter interrupt relay.** Engine OFF.
-      Result: ____
+      Result: Alarm relay is probably `C3 01` (horn + headlights). **`F3 01` is not the starter interrupt** (2026-11-14): held from 22:52:40, the owner cranked at about 22:52:46 and the **engine started**. The BCM frames stopped at the moment of cranking and the stop got no ack, so the crank dip resets the BCM / K-line (same thing will hit any test held through START). `C3` values `02`–`08` tried (22:57–23:00): only `04` did anything (hazard lamps), so the starter interrupt is still unfound. Log: `logs/2026-11-14_8.x-fire-DA.log`.
 
 ## 9. ASCD cruise control (ASCD main switch ON)
 

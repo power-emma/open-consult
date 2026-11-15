@@ -189,7 +189,8 @@ def cmd_watch_raw(c, args):
 
 def cmd_watch_mem(c, args):
     """Poll a C9 address range and print a line whenever a byte changes."""
-    addrs = list(range(args.addr, args.addr + args.count))
+    # One address = a block of --count bytes; several = just those addresses.
+    addrs = args.addr if len(args.addr) > 1 else list(range(args.addr[0], args.addr[0] + args.count))
     connect(c)
     step = 6 if c.paced else 8      # the BCM answers FE to a 7th address (2026-11-14)
     last, t0, sweeps = None, time.monotonic(), 0
@@ -198,7 +199,8 @@ def cmd_watch_mem(c, args):
             cur = b"".join(c.read_memory(addrs[i:i + step]) for i in range(0, len(addrs), step))
             sweeps += 1
             if last is None:
-                print(f"{time.monotonic() - t0:7.2f}s  baseline {addrs[0]:04X}: {cur.hex(' ')}", flush=True)
+                print(f"{time.monotonic() - t0:7.2f}s  baseline " + " ".join(
+                    f"{a:04X}={b:02X}" for a, b in zip(addrs, cur)), flush=True)
             elif cur != last:
                 print(f"{time.monotonic() - t0:7.2f}s  " + " ".join(
                     f"{addrs[i]:04X} {a:02X}->{b:02X}" for i, (a, b) in enumerate(zip(last, cur))
@@ -447,7 +449,7 @@ def main():
     wr = sub.add_parser("watch-raw", help="stream raw registers, print changes (e.g. --ecu DC)")
     wr.add_argument("regs", nargs="+", help="register numbers in hex, e.g. 8A AB")
     wm = sub.add_parser("watch-mem", help="poll C9 addresses, print changes (BCM: FF00 -n 96)")
-    wm.add_argument("addr", type=lambda x: int(x, 16))
+    wm.add_argument("addr", type=lambda x: int(x, 16), nargs="+")
     wm.add_argument("-n", "--count", type=int, default=96)
     s = sub.add_parser("reg-scan")
     s.add_argument("--first", type=lambda x: int(x, 16), default=0x00)

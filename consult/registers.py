@@ -33,6 +33,8 @@ ENGINE = {
     "aac":      ((0x17,), lambda v: v / 2, "%"),          # not on the 1998 Maxima
     "alpha_lh": ((0x1A,), lambda v: v, "%"),
     "alpha_rh": ((0x1B,), lambda v: v, "%"),
+    "learn_lh": ((0x1C,), lambda v: v, "%"),          # self-learn (3.16)
+    "learn_rh": ((0x1D,), lambda v: v, "%"),
     "bits1e":   ((0x1E,), lambda v: f"{v:08b}", ""),
     "bits1f":   ((0x1F,), lambda v: f"{v:08b}", ""),
     "bits20":   ((0x20,), lambda v: f"{v:08b}", ""),
