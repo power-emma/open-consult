@@ -237,9 +237,11 @@ const bcm_test_t BCM_TESTS[N_BCM_TESTS] = {
     {"Step lamp RH",                  0xE3, 0x02},
     {"Step lamp LH",                  0xE3, 0x01},   /* not seen: that bulb is out */
     {"Interior lamp",                 0x93, 0x01},   /* rear dome lamp seen */
-    {"Chime 73",                      0x73, 0x01},   /* 73/83/B3 all give 2 beeps: */
-    {"Chime 83",                      0x83, 0x01},   /* key, light and seat-belt */
-    {"Chime B3",                      0xB3, 0x01},   /* warning, not yet told apart */
+    /* 73/83/B3 all give the same 2 beeps. Which warning is which is inferred from the
+     * read items 72/82/B2 (checklist 8.3). */
+    {"Chime: key warning",            0x73, 0x01},
+    {"Chime: light warning",          0x83, 0x01},
+    {"Chime: seat-belt warning",      0xB3, 0x01},
     {"Hazard lamps",                  0x03, 0x04},   /* held solid, not flashing */
     {"Horn + headlights",             0xC3, 0x01},
     {"Panic (horn + lights)",         0x03, 0x06},
@@ -253,3 +255,39 @@ uint8_t bcm_window_value(int window, int down)
 {
     return (uint8_t)(1 + 2 * window + (down ? 1 : 0));    /* odd = up, even = down */
 }
+
+const char *const BCM_GROUPS[N_BCM_GROUPS] = {
+    "Key", "Doors", "Door locks", "Switches", "Window switches",
+};
+
+const bcm_input_t BCM_INPUTS[N_BCM_INPUTS] = {
+    {"Key",             "Key in ignition",       1,  0x08, "in",       "out"},
+    {"Key",             "ACC (ACC or ON)",       0,  0x80, "on",       "off"},
+    {"Key",             "Ignition ON",           1,  0x02, "on",       "off"},
+    {"Doors",           "Any door",              0,  0x01, "OPEN",     "closed"},  /* only bit for the rear doors */
+    {"Doors",           "Driver door",           4,  0x80, "OPEN",     "closed"},
+    {"Doors",           "Passenger door",        16, 0x20, "OPEN",     "closed"},
+    {"Doors",           "Trunk",                 5,  0x10, "OPEN",     "closed"},
+    {"Doors",           "Seat belt bit",         16, 0x40, "set",      "clear"},   /* polarity open */
+    {"Door locks",      "Driver",                14, 0x02, "locked",   "unlocked"},
+    {"Door locks",      "Front passenger",       14, 0x04, "locked",   "unlocked"},
+    {"Door locks",      "Rear right",            14, 0x08, "locked",   "unlocked"},
+    {"Door locks",      "Rear left",             14, 0x10, "locked",   "unlocked"},
+    {"Switches",        "Driver lock sw. LOCK",  2,  0x40, "PRESSED",  "–"},
+    {"Switches",        "Driver lock sw. UNLOCK",2,  0x80, "PRESSED",  "–"},
+    {"Switches",        "Lighting switch",       4,  0x01, "ON",       "off"},     /* 1st position */
+    {"Switches",        "Wiper INT",             4,  0x10, "ON",       "off"},
+    {"Switches",        "Washer",                4,  0x20, "ON",       "off"},
+    {"Switches",        "Window lock",           12, 0x40, "ON",       "off"},
+    {"Window switches", "Driver UP",             13, 0x20, "PRESSED",  "–"},
+    {"Window switches", "Driver DOWN",           13, 0x40, "PRESSED",  "–"},
+    {"Window switches", "Driver AUTO",           13, 0x80, "PRESSED",  "–"},
+    {"Window switches", "Passenger UP (master)", 12, 0x01, "PRESSED",  "–"},
+    {"Window switches", "Passenger DOWN (master)", 12, 0x02, "PRESSED", "–"},
+    {"Window switches", "Passenger UP (own)",    12, 0x80, "PRESSED",  "–"},
+    {"Window switches", "Passenger DOWN (own)",  13, 0x01, "PRESSED",  "–"},
+    {"Window switches", "Rear RH UP (master)",   12, 0x10, "PRESSED",  "–"},
+    {"Window switches", "Rear RH DOWN (master)", 12, 0x20, "PRESSED",  "–"},
+    {"Window switches", "Rear LH UP (master)",   12, 0x04, "PRESSED",  "–"},
+    {"Window switches", "Rear LH DOWN (master)", 12, 0x08, "PRESSED",  "–"},
+};

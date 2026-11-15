@@ -417,42 +417,69 @@ def cmd_rom_dump(c, args):
     c.t.note(f"rom-dump {out} {len(data)} bytes sha256={hashlib.sha256(data).hexdigest()}")
 
 
+def _sub_block(c, addrs, budget):
+    """Stream one block of forwarded C9 addresses and return a value per address.
+
+    The ECU queues every C9 address in $5D40-$623F (c9_find_hidden, $543F) and then
+    fills one payload slot per reply frame from the second CPU's answer, cycling
+    through the queue (consult_reply_c9 tail, $9B3F). So a block of B addresses needs
+    ~B+1 frames before every slot holds a real byte; we read more and take, per slot,
+    the majority of the last frames, flagging a slot that never settles.
+
+    Returns (values, ok_flags, frames) where frames is the raw list of B-byte frames.
+    """
+    n = len(addrs)
+    payload = b"".join(bytes([0xC9, a >> 8, a & 0xFF]) for a in addrs)
+    frames = []
+    try:
+        c.command(payload)
+        for _ in range(budget):
+            frames.append(list(c.read_frame(expected_len=n)))
+    except (ConsultError, TimeoutError) as e:
+        c.t.note(f"sub block {addrs[0]:04X}+{n} failed after {len(frames)} frames: {e}")
+    finally:
+        c.stop(timeout=0.5)
+        c.t.drain(quiet=0.05)
+    # Per slot, use the second half of the frames (pipeline has filled by then) and
+    # keep the value only if those frames agree.
+    late = frames[len(frames) // 2:] if frames else []
+    values, ok = bytearray(n), [False] * n
+    for i in range(n):
+        col = [f[i] for f in late if i < len(f)]
+        values[i] = col[-1] if col else 0
+        ok[i] = len(col) >= 2 and len(set(col)) == 1
+    return values, ok, frames
+
+
 def cmd_sub_dump(c, args):
     """C9 on the range the ECU forwards to its second processor (ROM_ANALYSIS.md §6).
 
     For C9 addresses $5D40-$623F the ECU doesn't read its own memory: it passes
     (address - $5000) to the other CPU and fills the byte from that CPU's reply, one
-    per frame, starting with the second frame. So each address is streamed for
-    `--frames` frames and the value is kept only when the later frames agree.
-    Read-only. Output: rom/sub_<first-5000>-<last-5000>.bin and a .txt of each
-    address's frames, so unstable bytes can be checked.
+    per reply frame. Rather than one command per byte, we queue a block of up to
+    `--block` addresses (cs_argbuf holds 20 C9 addresses) in a single C9 request and
+    read the second CPU's bytes as a stream, which is far fewer handshakes and gives a
+    coherent block per request. Read-only. Output: rom/sub_<first-5000>-<last-5000>.bin
+    and a .txt of each address (ok/??) so unstable bytes can be checked.
     """
     connect(c)
-    first, last = args.first, args.last
+    first, last, block = args.first, args.last, max(1, min(args.block, 20))
     os.makedirs(ROM_DIR, exist_ok=True)
     base = os.path.join(ROM_DIR, f"sub_{first - 0x5000:04X}-{last - 0x5000:04X}")
     data, unstable, t0 = bytearray(), 0, time.monotonic()
     with open(base + ".txt", "w") as txt:
-        for addr in range(first, last + 1):
-            frames = []
-            try:
-                c.command(bytes([0xC9, addr >> 8, addr & 0xFF]))
-                for _ in range(args.frames):
-                    frames.append(c.read_frame(expected_len=1)[0])
-            except (ConsultError, TimeoutError) as e:
-                c.t.note(f"sub {addr:04X} failed: {e}")
-            finally:
-                c.stop(timeout=0.5)
-                c.t.drain(quiet=0.05)
-            late = frames[len(frames) // 2:]
-            ok = len(late) >= 2 and len(set(late)) == 1
-            unstable += not ok
-            data.append(late[-1] if late else 0)
-            txt.write(f"{addr - 0x5000:04X} {'ok ' if ok else '?? '}{' '.join(f'{v:02X}' for v in frames)}\n")
-            c.t.note(f"sub {addr - 0x5000:04X} frames {' '.join(f'{v:02X}' for v in frames)}")
-            if (addr - first) % 64 == 63:
-                print(f"\r  {addr - first + 1}/{last - first + 1}, {unstable} unstable, "
-                      f"{time.monotonic() - t0:.0f} s", end="", flush=True)
+        for start in range(first, last + 1, block):
+            addrs = list(range(start, min(start + block, last + 1)))
+            budget = args.frames if args.frames else 2 * len(addrs) + 6
+            values, ok, frames = _sub_block(c, addrs, budget)
+            for i, addr in enumerate(addrs):
+                unstable += not ok[i]
+                data.append(values[i])
+                txt.write(f"{addr - 0x5000:04X} {'ok ' if ok[i] else '?? '}{values[i]:02X}\n")
+            c.t.note(f"sub block {start - 0x5000:04X}+{len(addrs)}: "
+                     f"{' '.join(f'{v:02X}' for v in values)} ({len(frames)} frames)")
+            print(f"\r  {min(start + block, last + 1) - first}/{last - first + 1}, "
+                  f"{unstable} unstable, {time.monotonic() - t0:.0f} s", end="", flush=True)
     print()
     with open(base + ".bin", "wb") as f:
         f.write(data)
@@ -606,7 +633,10 @@ def main():
     sd = sub.add_parser("sub-dump", help="C9 $5D40-$623F: read the second CPU's memory")
     sd.add_argument("--first", type=lambda x: int(x, 16), default=0x5D40)
     sd.add_argument("--last", type=lambda x: int(x, 16), default=0x623F)
-    sd.add_argument("--frames", type=int, default=6, help="frames to read per address")
+    sd.add_argument("--block", type=int, default=16,
+                    help="C9 addresses to queue per request (max 20)")
+    sd.add_argument("--frames", type=int, default=0,
+                    help="frames to read per block (0 = 2*block+6)")
     r = sub.add_parser("rom-dump", help="C9: dump ROM to a file")
     r.add_argument("--first", type=hexint, default=0x8000)
     r.add_argument("--last", type=hexint, default=0xFFFF)

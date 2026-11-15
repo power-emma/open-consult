@@ -46,8 +46,17 @@ annotation file `rom/23710-2L904.ann`. Edit the `.ann`, then regenerate:
   repeats the last good block, except for one varying byte per block, probably the
   other CPU's data. This CPU's own code there (the scheduler calls `$5F1B`) can only be
   read off the chip (checklist 11.2). The listing marks the range as a hole. `python -m
-  consult sub-dump` streams each address to read the **other CPU's** `$0D40–$123F`
-  (untested).
+  consult sub-dump` reads the **other CPU's** `$0D40–$123F` through this forward: it
+  queues a block of up to 20 C9 addresses per request (the `cs_argbuf` limit) and the
+  streaming loop at `$9B3F` fills one payload slot per frame, cycling the queue, so a
+  block of B needs ~B+1 frames before every slot is a real byte (`--block`, default 16;
+  far fewer handshakes than one command per byte). Decode is per-slot majority of the
+  later frames, and a slot that never settles is flagged `??` rather than trusted — the
+  decoder was checked against a model of `$9B3F` and never reports a wrong byte as
+  stable, but **the forward itself is still untested on the car**. The only block read so
+  far (`rom/sub_0D40-0D4F`) is `06 00 00 55 AA 00 …`; the `55 AA` echoes the knock
+  interface chip's `AA55`/`55AA` self-test handshake (§8b), a hint that this window is the
+  second CPU's knock / monitor RAM, not its program.
 - **`D0`** returns the 32 bytes at ROM `$11C0` verbatim (they match the car byte for
   byte). The last 5 are ASCII `2L904`. The middle bytes are **not** a bitmap of
   supported registers or tests (checked). ASCII `J8ZM06` at `$FFCA` looks like the
@@ -308,13 +317,148 @@ Timing path in bank 0 (INT2, `$47A8`):
 **This car (P0325 stored):** probably in fail-safe, ~4° fixed retard [inferred]. Check:
 `python -m consult knock`.
 
+## 8c. Where bank 1 lives (board photos) [inferred]
+
+Photos of an opened A32 VQ30DE ECU (`fsm/Maxima_ECU_1_*.jpg`, `_2_*.jpg`; Photobucket
+forum images). **This is a 1999 ECU, not our '98 23710-2L904** — a different calibration
+(the [PLMS] '99 is 23710-4L618), so same board family but not the same part. The board is
+silkscreened `A19-00…`.
+
+| Part | Package | Role [inferred] |
+|---|---|---|
+| Main CPU | large QFP top-left, by a crystal | the 7700 we dumped over `C9` |
+| `A19-257 059` | centre QFP | custom gate array: bank 3 I/O (`$0302xx`) + shared RAM `$0200` |
+| `…2S1AFM1…` | large QFP top-right, own crystal | unknown; possibly the second CPU (§6) |
+| `KNKT43J` (paper sticker) | PLCC-84 | Hitachi H8 ZTAT (OTP). The second / knock processor; sticker = per-cal OTP ID |
+| 2× `M5955?FP` | SOP, Mitsubishi | output drivers, not memory |
+| unpopulated 2-row header, top edge | — | factory test / ROM-emulator header; traces run to the main CPU and `A19` |
+
+**There is no external ROM or flash on the board** — no DIP EPROM, no flash, no ROM
+daughterboard. So **bank 1 (`$01xxxx`: the 2D-map lookups, the bank-1 active-test
+handlers) is almost certainly mask ROM inside the main CPU.** A programmer can't read it
+and a bus capture won't show it, because internal fetches never leave the chip. This is
+the hard case.
+
+Routes that are open, best first:
+
+1. **Find an existing full image.** Mask-ROM Nissans of this era are reflashed by plugging
+   a board into the top header and switching the CPU to run from external ROM — which
+   needs a complete image, bank 1 included. If any aftermarket tuning board supports this
+   family, a full dump already exists. Search for that before extracting anything; it is
+   also the route to real per-cell map tuning (`$1700`/`$1D00` are just data in it).
+2. **Read the H8 (`KNKT43J`).** ZTAT parts have a PROM read mode via a PLCC-84 adapter
+   (unpowered clip or desolder). Doesn't get bank 1, but it holds the §6 monitor code
+   (P0443, misfire, …) we have no visibility into. May be read-protected; unknown.
+3. **Map the header pinout.** ECU unpowered, continuity-beep each header pin to the main
+   CPU's bus / RESET / CNVss / BYTE pins to learn which processor modes the board supports
+   and whether the external-ROM route is wired.
+
+Consult itself cannot reach bank 1: `C9` reads 16-bit addresses in the data bank, which
+bank-0 code only ever sets to `00` (`$3D80`, `$4486`), and there is no Consult write
+command to plant a pointer (§1).
+
 ## 9. Open questions
 
 1. P1320 (§7): `python -m consult p1320` while unplugging one coil at a time. Test the
    condenser by capacitance.
 2. Knock fail-safe state (§8b): `python -m consult knock`.
-3. Chip read: bank 1 (maps, test handlers) and `$5D40–$623F`.
-4. Dump the second CPU with `sub-dump`.
+3. Chip read: bank 1 (maps, test handlers) and `$5D40–$623F`. See §8c: bank 1 looks like
+   internal mask ROM, so find an existing full image or read the `KNKT43J` H8 first.
+4. Dump the second CPU's `$0D40–$123F` with `sub-dump` (now block-streamed; §6). Expect
+   its monitor / knock RAM, not its code. Watch the fault-detection flags `$0E51–$0E58`
+   (§6) change here as DTCs set; correlate with register `21`/`31` bits.
 5. Confirm the [PLMS] scalings on a drive; name `28 2A 3A 60`.
 6. Unknown active tests `95 99 A6 AC AD` (bank 1). Don't fire them.
 7. Decode `D0` bytes 0–26.
+
+## 10. Consult attack surface (audited, no escalation found)
+
+Walked every Consult command path looking for a memory-safety or logic bug that would
+widen read access past what `C9` already gives. **None found that helps.** Recorded so
+nobody re-walks it.
+
+- **`C9` already reads the whole readable space.** Config here is `$1206 = 00`, `$1207 =
+  52`. `$1207.5` clear ⇒ `consult_reply_c9` (`$9AF1`) does **not** hide `$FE00–$FFCF`, so
+  `C9` returns all of `$1000–$FFFF` **except `$5D40–$623F`** (the second-CPU forward, §6).
+  The 61 KB dump already spans `$FExx`; nothing readable is being left behind.
+- **Bank 1 is unreachable by construction, not by a defeatable check.** `C9` reads with
+  `LDA $00,X` — a 16-bit address in the data-bank register, which bank-0 code sets to `00`
+  only (`$3D80`, `$4486`) and never changes. The address can't be formed; there is no gate
+  to bypass. Same for the `$5D40–$623F` skip — a pure address-range compare, no
+  wire-controlled input.
+- **The one config-gated backdoor can't be reached.** `$1206.0` routes the Consult ISR
+  into bank 1 (`$4EFA` → `$017B08`), but it is a ROM/calibration byte (read-only at run
+  time) and clear here. And there is **no write primitive**: `5A` stores a register index
+  validated `< $62` and resolved through the fixed ROM table at `$1000` (`$9BB0`); `0A`
+  stores the test value at `$076F + at_slot` with `at_slot` from the ROM descriptor; `C9`
+  stores only addresses into `cs_argbuf`. None take a caller-chosen destination.
+- **One real bug, no payoff.** The arg-count limit (`CMP #$28; BCS` at `$53BF`) is checked
+  only when a new `5A`/`C9` command byte arrives, not between the two bytes of a `C9`
+  address. Send 39× `5A` (argc→39), then one `C9`: it is accepted, then collects 2 bytes
+  unchecked, pushing `cs_argc` to 41 and writing one byte past the 40-byte `cs_argbuf`
+  (`$08D2`). The reply loop then reads ~2 bytes beyond the buffer as an extra address —
+  but still a bank-0 address read with data bank 0, i.e. memory `C9` already reaches. A
+  latent off-by-one, not an access-widener. Chased to the end: the overflow byte lands at
+  `$08FA`, which reset's RAM clear leaves untouched (`LDX #$08F9` down, `$3DAD`) and which
+  **no code anywhere reads** — dead padding, so it corrupts no pointer. And bank 1 can't
+  be formed by any indirection regardless: the data-bank register is set by `LDT #$00`
+  only (`$3D80`, `$4486`) and never changed, and the ROM contains **no long-indirect
+  (`[dp]`) read** — so every Consult-reachable read executes in data bank 0.
+
+- **No arbitrary write via active tests.** `0A` writes the caller's value byte to
+  `$076F + at_slot`, `at_slot = (ctl & $7F) >> 1` from the descriptor at `$1160`. Scanned
+  all 28 descriptors: slots run 0–45, so every write lands in `$076F–$079C`, inside
+  `at_values` (below `cs_streamlist` at `$07A0`). Destination is descriptor-fixed, the
+  values are consumed as data by test handlers, and none overflows the region.
+- **No code-execution primitive.** The entire image has exactly one indirect transfer,
+  `JMP ($CBAB,X)` at `$CAF1` — a dispatch through a fixed 9-entry ROM table, `X` bounded
+  0–8 by the search loop, all targets in ROM. There is **no** jump or call through a RAM
+  pointer anywhere, so there is no function pointer to corrupt even if a write reached one.
+
+**Conclusion:** the handler is tight. The only under-used *intended* capability is
+`sub-dump` (the `$5D40–$623F` forward → the second CPU's `$0D40–$123F`), a different chip,
+not bank 1. Bank 1 still needs silicon (§8c): a community full image for the 4L6xx family,
+or a read of the `KNKT43J` H8.
+
+## 11. `0A` direct mode: a real bug and a more-permissive read path
+
+`0A` with a first byte `< $08` enters "direct mode" (the OBD Mode 6 / data-stream path,
+§1), which loads `cs_streamlist` (`$07A0`) and then streams it back via
+`consult_reply_direct` (`$9CDD`). Two findings here; neither escalates, but the second is
+the most promising lever found so far if a new primitive ever turns up.
+
+- **Bug: integer underflow / missing lower bound on the value byte** (`$5239`–`$531F`).
+  For the "high" sub-paths (value `≥ $80`) the table offset is `(value − $80 − 1) × 4`.
+  The per-branch check only bounds the top (e.g. `CMP #$84` at `L_5298`), so **`value =
+  $80` is accepted and underflows**: `0 − 1 = $FF`, `× 4 = $3FC`, low byte `$FC`. The
+  handler then reads two stream descriptors from `table_base + $FC`, far past the 16-byte
+  table. Triggers: `0A <fb> 80` for `fb ∈ {0,2,5,6,7}`. `fb=0` self-rejects (the OOB
+  words at `$EA6B` are `0000`); `fb=2/5/6/7` stream two bytes from fixed unintended ROM
+  addresses (`$90F9`,`$A902` / `$5809`,`$2889` / `$42F8`,`$FF29` / `$0926`,`$8958`). The
+  intended minimum was `value = $81` (offset 0). **No new access** — those are bank-0 ROM
+  bytes `C9` already returns — but it is a genuine input-validation defect. Read-only and
+  safe to poke on the car (direct mode writes no outputs); good for confirming the
+  analysis.
+- **`consult_reply_direct` has no hole check and no forward.** It does `LDA $07A0,X; TAX;
+  LDA $00,X` (`$9CF1`): it dereferences each `cs_streamlist` entry as a 16-bit address and
+  reads it **locally in data bank 0, with none of the `$5D40–$623F` forward / range logic
+  that `consult_reply_c9` applies** (§1). So this engine is strictly more permissive than
+  `C9`: an entry pointing into `$5D40–$623F` would read *this* CPU's hidden code there
+  directly. It is **not exploitable today** — every reachable `cs_streamlist` value comes
+  from fixed ROM (the descriptor tables `$E95F–$EA80`, or the fixed OOB bytes above), and
+  scanning all of those tables found **no** entry in `$5D40–$623F`; `cs_streamlist` is
+  never attacker-controlled. But it reframes the target: the prize is no longer "defeat
+  the `C9` range check" (there is none to defeat here) but "**find any way to write a
+  chosen 16-bit value into `$07A0`**". None found — the active-test value write stops at
+  `$079C`, the `cs_argbuf` overflow reaches only `$08FA` — so this stays a dead end, but
+  it is the sharpest remaining direction.
+- **Swept — that write does not exist.** Checked every store in the ROM that targets
+  `$07A0–$07A3`: there are exactly three (`$5224`, `$5327`, `$5331`), and all write
+  fixed data — a descriptor-table pointer, or two 16-bit words read from ROM at
+  `table_base + offset` (even the underflow source `table_base + $FC` is ROM, never the
+  `$08xx` argument buffer). The only indexed write that could be *redirected* onto `$07A0`
+  is the at_values store (`$519D`, dest `$076F + at_slot`); `at_slot` would have to reach
+  `$31` (49) and it is written only at `$515F`, from the descriptor, maxing at 45 — and
+  nowhere else in the image, so it can't be left stale high either. **Conclusion:
+  `cs_streamlist` is unconditionally fixed-content; `consult_reply_direct`'s missing hole
+  check cannot be aimed from the Consult interface.** Lead closed.

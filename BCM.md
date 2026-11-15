@@ -73,7 +73,13 @@ Values at rest, key ON, doors shut.
 | `1B` `2B` | 16 | all `00` | yes |
 | `19` `1A` `3B` | 2 | all `00` | yes |
 
-What the `x2` items and the other reads hold is *open*.
+Partly decoded (`8.3-chime-reads`, `8.3-chime-reads-2`):
+
+- `B2` bit 2 follows the seat belt (same moment as switch block byte 16 bit 6).
+- `82` bit 1 and `F2` bit 1 follow the lighting switch (byte 4 bit 0).
+- `72` and `82` bit 3 follow the driver door.
+
+The rest of the `x2` items and the other reads are *open*.
 
 ## Switch block (`5A FF` / `9E`)
 
@@ -106,7 +112,7 @@ Byte 0 = first data byte. Bit 7 = MSB.
 | 13 | 7 | Driver window AUTO (set together with bit 6) |
 | 14 | — | Door lock state, bit set = locked: bit 0 always 1, bit 1 driver, bit 2 passenger, bit 3 rear RH, bit 4 rear LH (`01` all unlocked, `1F` all locked). Doors report a few tens of ms apart as the actuators move |
 | 16 | 5 | Passenger door |
-| 16 | 6 | Seat belt *(inferred)* |
+| 16 | 6 | Seat belt (which state sets the bit: *open*) |
 | 17 | — | Intermittent wiper knob, analog `01`–`E4` |
 
 The rear doors only set byte 0 bit 0. Headlights 2nd position (only the 1st-position bit
@@ -142,7 +148,9 @@ Sequence (paced): `0A` → `F5`, item → item, value → value, `F0`. The outpu
 | `23` | `00` | All doors lock while held, unlock on stop |
 | `53` | `01` | Wipers |
 | `63` | `01` | Rear defogger |
-| `73` `83` `B3` | `01` | Chime (key / light / seat-belt warning, order *open*) |
+| `73` | `01` | Chime: key warning *(inferred)* |
+| `83` | `01` | Chime: light warning *(inferred)* |
+| `B3` | `01` | Chime: seat-belt warning *(inferred)* |
 | `93` | `01` | Room lamp |
 | `C3` | `01` | Horn + headlights |
 | `C3` | `04` | Hazard lamps |
@@ -192,7 +200,9 @@ The program ROM can't be read over Consult.
 ## Open
 
 - Starter interrupt, security indicator, illumination: item and value.
-- Chime item → warning mapping.
+- Chime item → warning mapping: inferred only, from the read items (`72`/`82`/`B2`
+  follow the key/light/seat-belt warning inputs). All three chimes sound the same, and
+  turning the key off drops the link, so it can't be confirmed by ear or by watching.
 - Meaning of the `x2` items and items `15 19 1A 1B 25 2B 35 3B`.
 - Remaining switch-block inputs (see above).
 - IVMS COMM / WAKE-UP diagnosis commands.

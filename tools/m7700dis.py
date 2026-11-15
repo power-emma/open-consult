@@ -6,13 +6,23 @@
 
 Instruction lengths on the 7700 depend on the m (data width) and x (index width) flags,
 so a linear sweep goes wrong. This follows code from the interrupt vectors, tracking
-SEP/CLP/SEM/CLM and PHP/PLP along each path, and follows JMP/JSR (abs,X) jump tables.
-Bytes that no path reaches are listed as data.
+SEP/CLP/SEM/CLM along each path, and follows JMP/JSR (abs,X) jump tables. Bytes that no
+path reaches are listed as data.
 
 Assumptions (all reported in the listing header):
   - Direct page register DPR = 0, data bank DT = 0, program bank 0.
   - m = x = 0 (16-bit) at every vector, the 7700 reset state.
   - A subroutine returns with the flags it was called with.
+  - The first path to reach an address decides its m/x; later paths are not re-checked.
+  - PHP/PLP do NOT restore m/x here (they are not modelled); they are only used in this
+    ROM to save/restore the condition flags, never to wrap a width change, so this holds.
+
+KNOWN MIS-DECODES (the "subroutine returns with caller's flags" assumption is false for a
+few routines, e.g. $5531 returns m=1). Where it breaks, a wrong operand width mis-sizes an
+instruction and the rest of the block can be dropped into the data bucket. Detector: every
+branch/jump/call target must land on an instruction start; run that check after a rebuild.
+Current offenders (real code mis-marked as data, or mis-decoded): $40C9-$412x and
+$8AD0-$8AEA. Fix would need an .ann directive to seed a walk with forced m/x.
 """
 import argparse
 import collections
@@ -262,7 +272,7 @@ def decode(rom, pc, m, x):
 # Recursive-descent walker
 # ---------------------------------------------------------------------------
 
-def walk(rom):
+def walk(rom, seeds=()):
     insns = {}
     labels = {}
     queue = collections.deque()
@@ -273,6 +283,11 @@ def walk(rom):
         if label:
             labels[addr] = label
         queue.append((addr, m, x))
+
+    # Forced-flag seeds first, so they claim their addresses before a mis-tracked
+    # fall-through can decode them at the wrong width (see the module docstring).
+    for addr, (m, x) in sorted(seeds.items() if isinstance(seeds, dict) else seeds):
+        enqueue(addr, m, x)
 
     # Seed from interrupt vectors
     for vec_addr in sorted(VECTOR_NAMES):
@@ -422,6 +437,10 @@ class Ann:
         note  ADDR text                  comment at the end of the line at ADDR
         table ADDR SIZE name  description   data block printed as a named table
         hole  ADDR SIZE text             bytes in the image that aren't real ROM: never decoded
+        code  ADDR [M X]                  start a walk at ADDR with forced m/x (default 0 0),
+                                          processed before the vectors so it wins where a
+                                          mis-tracked fall-through would decode at the wrong
+                                          width (see KNOWN MIS-DECODES in the module docstring)
 
     ADDR and SIZE are hex. Blank lines and lines starting with # are ignored.
     """
@@ -430,6 +449,7 @@ class Ann:
         self.ram, self.ram_desc, self.labels, self.notes, self.tables = {}, {}, {}, {}, {}
         self.heads = collections.defaultdict(list)
         self.holes = []
+        self.seeds = {}         # addr -> (m, x): extra walk starts with forced flags
 
     @classmethod
     def load(cls, path):
@@ -456,6 +476,11 @@ class Ann:
                 elif kind == "hole":
                     size_s, _, why = rest.partition(" ")
                     a.holes.append((addr, addr + int(size_s, 16), why.strip()))
+                elif kind == "code":
+                    parts = rest.split()
+                    m = int(parts[0]) if len(parts) > 0 else 0
+                    x = int(parts[1]) if len(parts) > 1 else 0
+                    a.seeds[addr] = (m, x)
                 elif kind == "table":
                     size_s, name, desc = (rest.split(None, 2) + [""])[:3]
                     a.tables[addr] = (name, desc, int(size_s, 16))
@@ -671,7 +696,7 @@ def main():
     rom.holes = ann.holes
     title = args.title or os.path.splitext(os.path.basename(args.rom))[0]
 
-    insns, labels = walk(rom)
+    insns, labels = walk(rom, ann.seeds)
     print(f"Decoded {len(insns)} instructions, {len(labels)} labels", file=sys.stderr)
 
     annotations = find_tables(rom, insns)

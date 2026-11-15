@@ -76,4 +76,20 @@ extern const bcm_test_t BCM_TESTS[N_BCM_TESTS];
 extern const char *const BCM_WINDOW_NAMES[N_BCM_WINDOWS];
 uint8_t bcm_window_value(int window, int down);
 
+/* BCM switch block (5A FF, 18 data bytes; BCM.md "Switch block"). Each input is one
+ * bit; `on` is shown when the bit is set, `off` when it's clear. */
+#define BCM_SWITCH_LEN  18
+#define BCM_WIPER_KNOB  17      /* byte 17: intermittent wiper knob, analog 01..E4 */
+
+typedef struct {
+    const char *group, *name;
+    uint8_t byte, mask;
+    const char *on, *off;
+} bcm_input_t;
+
+#define N_BCM_GROUPS 5
+extern const char *const BCM_GROUPS[N_BCM_GROUPS];
+#define N_BCM_INPUTS 29
+extern const bcm_input_t BCM_INPUTS[N_BCM_INPUTS];
+
 #endif

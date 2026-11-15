@@ -167,11 +167,22 @@ label 447C isr_unused
 note  447C unused vectors land here
 label 4476 isr_zero_div
 label 4495 isr_ta3_coils
-head  4495 ===== Timer A3: fires the coils queued in coil_fire_mask (ignition) ?
+head  4495 ===== Timer A3: fire the queued coils. If enabled ($0944.0) and coil_fire_mask $0A0C
+head  4495 is non-zero, OR it into the coil output image $0A98 and drive the outputs via $C502.
+head  4495 The mask is built one cylinder ahead by build_coil_mask ($4A3A); timing is set in the
+head  4495 INT2 REF handler. Per-cylinder advance trims apply there, not here.
 label 44B6 isr_tb2
 head  44B6 ===== Timer B2 interrupt: knock chip per-cylinder value + watchdog ($021F.3 from 2nd CPU)
 label 4540 isr_ta4
-head  4540 ===== Timer A4 interrupt (purpose not verified)
+head  4540 ===== Timer A4: program the knock interface chip for one cylinder. If the chip is
+head  4540 OK (kchip_state $0DD0.0), fetch the per-cylinder detection-window value ($4576/$4579,
+head  4540 table $0DE1) + offset $0DD5 (clamp $FFFF) and write control/data to $030262/$030266
+head  4540 (bank-3 I/O). See ROM_ANALYSIS.md §8b. Timer B2 ($44B6) does the same + the watchdog.
+note  4579 Index = ($0A0D [+1 in isr_tb2]) & $0F into the knock-window table $0DE1. NOT the
+note  4579 cylinder number: $0A0D is a 0/1 toggle (maintained only at $48B1: INC, then clear the
+note  4579 low 7 bits whenever bit 1 or 2 is set, so the low nibble is always 0 or 1). So the
+note  4579 index is 0..2 ($0DE1/$0DE3/$0DE5) -- in bounds, no OOB. The 0-5 cylinder counter is
+note  4579 $0A07 (explicit wrap at 6, $4A41). Checked 2026-11-15: an earlier OOB worry, ruled out.
 label 46C0 isr_ta2
 head  46C0 ===== Timer A2 interrupt: dispatches on ta2_flags (crank POS / timing events ?)
 label 473F isr_nmi
@@ -384,3 +395,110 @@ hole 5D40 500 Consult C9 forwards these addresses to the second CPU, so the dump
 note  9FBC knock fail-safe: $0213.3 clear or $0DD0.7 -> latch $070D.7, fixed retard
 note  9F27 knock control active zone: coolant, REF, rpm index, CAL/LD (with hysteresis)
 note  540B test AA at stop: keep $0F69 bits 7-6 across the session reset
+
+# ---------------------------------------------------------------- flag-forced walk seeds
+# The m/x tracker's "a subroutine returns with the caller's flags" and "first path wins"
+# assumptions break at a few spots, mis-sizing a width-dependent operand and dropping the
+# rest of the block into data. These seed a walk at the right width (see m7700dis.py docstring).
+code 40C0 1 0   # JSL $5531 returns m=1; without this the BBS here decodes 16-bit and the
+                # code tail $40C9-$412x is lost as data
+code 8AD8 0 0   # reached first at m=1 by another path; the CLM at $8AD3 makes it m=0
+
+# ---------------------------------------------------------------- init: self-test + ADC task
+# $3F39.. sets reset defaults (timing $0BA6/$0BA8/$0BA9, cylinder trims $0DB0-$0DB5, idle
+# vars) then, if the second CPU is up ($0211.6), verifies the battery-backed RAM that holds
+# the DTC arrays ($0580-$05ED) before falling into the first ADC acquisition (adc_task).
+ram 0300 bram_cksum   Battery-backed RAM checksum: 8-bit byte-sum of $0301-$06B2 (loop $3FA8)
+ram 0303 bram_valid   Battery-backed RAM valid marker; must read $AA55 ($3F8F) ?
+label 3F9B bram_verify
+label 4002 adc_task
+head 3F87 Verify battery-backed RAM only if the second CPU is up ($0211.6); else jump
+head 3F87 straight to adc_task. $0303 must be $AA55 or the RAM is treated as invalid ($3FFD).
+head 3F9B If already set up ($0301=$6997): re-sum bytes $0301-$06B2 and compare to the stored
+head 3F9B checksum $0300; mismatch -> fail ($3FFD). Otherwise ($3FB8) range-check the calibration
+head 3F9B shadow at $0390-$048F against the $1CA7..$1CA6 limits, any word out of range -> fail.
+head 3FFD RAM failed its check: reinitialise through bank-1 $015803 before adc_task. ?
+head 4002 adc_task: sample MAF (ADC ch 0 -> maf_lo), ch $0C -> $09FC, ch $0B -> $0D79/$0D75,
+head 4002 TPS (read_tps), ch $0A -> $0871/$0873, battery (read_battery), then the body
+head 4002 switches (calc_switches), MAF scaling ($5531), and commit the DTC arrays (tail $40C8).
+note 3F95 $0303 = $AA55: battery-backed RAM is valid
+note 3FB4 running sum != stored checksum $0300 -> RAM corrupt -> fail
+
+# ---------------------------------------------------------------- calc_switches
+head 8440 Build the engine-condition / switch bitfield $092B (Consult reg 31 reads $092B.6)
+head 8440 and the $0941/$094B/$094F state bits from second-CPU inputs ($0211), engine load
+head 8440 ($09AE, $0ABE CAL/LD) and rpm, against calibration thresholds ($228A/$228B, $15FE/
+head 8440 $15FF). Hysteresis throughout, e.g. $094B.2 is set at load>=$50 and cleared at <$10.
+head 8440 Called each adc_task cycle ($4054) and from $4D81.
+note 84DE load >= $50: enter (set $094B.2)
+note 84E7 load < $10: exit (clear $094B.2); the gap $10-$50 holds the last state (hysteresis)
+
+# ---------------------------------------------------------------- idle_control (IACV-AAC)
+head AC54 IACV-AAC idle-air control (Consult reg 18 = $0BC5/applied at $B054). Normal path:
+head AC54 interp16 of table $2160 by $0981 for the base step, A/C step-up ($2209 -> $0BDF) and
+head AC54 a decay. Active-test overrides: test 8C ($07B8.10) forces the air path via $BC22/
+head AC54 $22AF ($ACA5); test 85 ($07B7.20) forces the step from its value $0774, clamped $81.
+note AC9A BEQ to the next instruction: redundant branch, no effect (compiler artifact)
+note ACBF test 85: clamp the forced IACV-AAC step to $81 (129), matching the active-test limit
+
+# ---------------------------------------------------------------- sched_tick internals
+head 4BE3 Vehicle speed: every $0159 (345) ticks, take the VSS pulse-count delta
+head 4BE3 ($0991 now - $098B prev) into $098A and shift the history $0988/$0989, then reset.
+label 4C73 task_dispatch
+head 4C43 10-slot round-robin task scheduler. Counter $096A cycles 0-9; each slot arms a
+head 4C43 task group via $092E: .04 = adc_read_maf (odd slots), .10 = main engine group
+head 4C43 (slots 1 & 6: $5600, calc_rpm, read_tps, ..., calc_injection, ...), .20 = slots 3 & 8,
+head 4C43 .40 = fuel-adaptation group ($6C0F.., fuel_feedback). task_dispatch runs the armed
+head 4C43 group (one JSL list per bit), re-checking $092E until none are left, then RTIs.
+note 4CB2 $5F1B is inside the $5D40-$623F hole (second-CPU forward); readable only off-chip (§1)
+note 4C47 task slot counter $096A wraps 9 -> 0
+
+# ---------------------------------------------------------------- calc_injection
+head 6A20 Final injector pulse width per bank -> inj_a/inj_b (Consult 14/15, 22/23). Loops the
+head 6A20 two banks (base $0A8C/$0A8E, alternated by the low bit of the counter), and for each
+head 6A20 applies the per-cylinder trim words at $0A24+ with SATURATING math: a negative trim
+head 6A20 subtracts and clamps to 0, a positive trim adds and clamps to $FFFF. The $0A97 mask
+head 6A20 skips cylinders not due. Base pulse comes from the upstream fuel calc (map x alpha).
+note 6A53 saturating subtract: borrow -> clamp to 0
+note 6A64 saturating add: carry -> clamp to $FFFF
+
+# ---------------------------------------------------------------- fuel quantity scale (66BA)
+head 66BA Fuel-quantity scaling step (fuel task, slot 1/6). Computes $0A74 x cal $1AAB x CAL/LD
+head 66BA ($0ABD) as a 32-bit product, clamps to $FFFF if the top 5 bits would overflow the <<5
+head 66BA fixed-point scale, -> $0A6E. The 2D fuel-map lookup itself is in bank 1 (§8); this is
+head 66BA the bank-0 load/airflow scaling around it. Final alpha (test 81 $0730/$0731) and
+head 66BA per-cylinder trims are applied later in calc_injection ($6A20).
+note 66D3 overflow guard: any of the top 5 bits set -> clamp to $FFFF before the <<5 scale
+
+# ---------------------------------------------------------------- calc_rpm
+head 5624 Derive rpm from the captured REF period. First shift the rpm history ring $0994-$09A6
+head 5624 up by 2 (even-aligned, exits at $0992), then rpm = reciprocal-multiply of the period
+head 5624 ($A0 << 1) by $A6AB, result >>2 -> rpm_lo $0994 (Consult 01); $09AE/$09AC are the
+head 5624 derived load / rpm index used across the fuel, timing and knock tasks.
+note 47A8 ignition-timing target build (per REF edge); full term list in ROM_ANALYSIS.md §8
+
+# ---------------------------------------------------------------- cylinder counters
+ram 0A07 cyl_count    Firing cylinder 0-5 (INC, wrap at 6 at $4A41); indexes the coil table $4BB6
+ram 0A0D knock_buf    Knock-window double-buffer select 0/1 (maintained at $48B1); NOT a cyl index
+label 4A3A build_coil_mask
+head 4A3A Build the 8-bit coil-fire mask $0A0C for the next cylinder: advance cyl_count $0A07
+head 4A3A (0-5, wraps at 6), look up its coil bit in table $4BB6, OR into $0A0C. Fed to the
+head 4A3A Timer-A3 coil-fire interrupt. $0A0C stays 8-bit, so it never disturbs knock_buf $0A0D.
+
+# ---------------------------------------------------------------- fuel_feedback (O2 closed loop)
+head 6D65 A/F closed-loop (O2) feedback, one bank per call. Start an O2-sensor ADC read ($20/$22),
+head 6D65 choose closed vs open loop from the rpm index ($09B1 vs $1BAD) and speed ($098B vs
+head 6D65 $1BD1) each with +2 hysteresis, then step the alpha trim (alpha_a/alpha_b $0730/$0731 =
+head 6D65 Consult 1A/1B) on each O2 rich<->lean crossing. Test 81 ($07B7.2) overrides alpha with
+head 6D65 its value $0770 clamped to 4B-7D ($6E15). Above the rpm/speed limits it runs open-loop.
+note 6D72 +2 hysteresis: harder to re-enter closed loop once open (and symmetrically for speed)
+
+# ---------------------------------------------------------------- EVAP purge (P0443 circuit)
+head BD00 EVAP canister purge volume control valve rate calc (this car's stored P0443 circuit).
+head BD00 Gated by enable flags ($0968, idle/load $092A/$0931); computes a purge rate from
+head BD00 calibration $2B46/$2B48 scaled by the purge map ($0E0E x $0E10), accumulated with
+head BD00 saturation into $0563/$0565. Rate is 0 when disabled or below the $2B4A load threshold
+head BD00 (FSM: 0 step when stopped). The step-count code at $C038 (interp32 of table $29A0 by
+head BD00 $0E0D) writes purge_step $0806 (Consult reg 29); $9488 drives the 4-phase VCV outputs
+head BD00 on ECM pins 26/27/110/118. Test 98 ($07BA.0) overrides the step ($BFB3).
+note C068 purge_step $0806 (Consult reg 29) written here from the $29A0 duty table

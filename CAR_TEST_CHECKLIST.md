@@ -136,7 +136,7 @@ Full table: [`BCM.md`](BCM.md), Active tests.
 | 8.0 | Command / item / value probe | ✅ | `x3` = active test; every value byte echoes | `8.0-cmd-probe-DA`, `8.0-argscan-DA`, `8.0-valscan-DA` |
 | 8.1 | `C9` | ✅ | RAM only: `FA00–FCFF`, `FF00–FF64`; 6 addresses per request. No ROM | `8.1-c9scan-DA`, `8.1-bcm-dump` |
 | 8.2 | Lamps | ◐ | Room lamp `93 01`, step lamp `E3 01/02`. Illumination, security indicator: open | `8.x-fire-DA` |
-| 8.3 | Chime | ◐ | `73/83/B3 01` each chime. Which warning is which: open | `8.x-fire-DA` |
+| 8.3 | Chime | ◐ | `73/83/B3 01` each chime; all three sound the same. Inferred from the read items: `73` key, `83` light, `B3` seat belt (`B2` bit 2 = belt, `82` bit 1 = lighting switch, `72`/`82` bit 3 = driver door). Key off drops the link, so not confirmed | `8.x-fire-DA`, `8.3-chime-reads`, `8.3-chime-reads-2` |
 | 8.4 | Hazard, defogger, wipers | ✅ | Hazard `03 04` / `C3 04`, defogger `63 01`, wipers `53 01` | `8.x-fire-DA` |
 | 8.5 | Door locks | ✅ | `23 00` locks while held, unlocks on stop. No per-door value | `8.x-fire-DA`, `gui` |
 | 8.6 | Windows | ✅ | `13 01`–`08`: DR, AS, RR, RL × up/down | `8.x-fire-DA` |

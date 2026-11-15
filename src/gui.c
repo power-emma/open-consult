@@ -1,6 +1,6 @@
 /* consult-gui: read engine sensors, read and clear fault codes, run engine active
- * tests, drive the body control module's outputs (windows, locks, wipers…) and read
- * the knock fail-safe state.
+ * tests, drive the body control module's outputs (windows, locks, wipers…), show its
+ * switch inputs (doors, key, locks…) and read the knock fail-safe state.
  *
  * The serial link runs on a worker thread that opens the port, inits the unit it needs
  * (the engine ECU or the BCM, switching between them as asked) and then streams live
@@ -46,7 +46,7 @@ static char *log_dir(void)
 #endif
 }
 
-enum { MSG_STATUS, MSG_VALUES, MSG_DTCS, MSG_ACTIVE, MSG_BCM, MSG_KNOCK, MSG_DONE };
+enum { MSG_STATUS, MSG_VALUES, MSG_DTCS, MSG_ACTIVE, MSG_BCM, MSG_BODY, MSG_KNOCK, MSG_DONE };
 
 #define WINDOW_MAX_HOLD 10.0    /* s; a window moves only while its button is held */
 
@@ -58,6 +58,8 @@ typedef struct {
     consult_dtc_t dtcs[CONSULT_MAX_DTCS];
     int ndtcs;
     uint8_t knock[3];       /* $070D, $0213, $0DB8 */
+    uint8_t body[BCM_SWITCH_LEN];
+    int body_ok;            /* 0: no switch block (lost or disconnected), show dashes */
 } msg_t;
 
 static struct {
@@ -65,6 +67,7 @@ static struct {
     GtkWidget *value[N_SENSORS];
     GtkWidget *test, *test_value, *test_unit, *test_hold, *test_btn, *test_result;
     GtkWidget *bcm_btn[N_BCM_TESTS], *bcm_hold, *bcm_result, *bcm_latch;
+    GtkWidget *body_val[N_BCM_INPUTS], *body_knob, *body_raw;
     GtkWidget *knock_btn, *knock_fs, *knock_ok, *knock_val, *knock_raw;
     GThread *thread;
     GPtrArray *dev_paths;   /* path per dev_list entry; the last entry is "Custom…" */
@@ -272,21 +275,36 @@ static int use_bcm(consult_t *c, uint8_t *cur)
     return 1;
 }
 
-/* Latched and idle: keep the BCM session open. Every 5 s a one-shot 5A FF read keeps
- * it awake and shows whether the link is still up (it isn't after a key-off). Returns
- * 0 when that read fails, so the caller reconnects. */
+static void post_body(const uint8_t *frame)
+{
+    msg_t *m = g_new0(msg_t, 1);
+    m->kind = MSG_BODY;
+    if (frame) {
+        memcpy(m->body, frame, sizeof m->body);
+        m->body_ok = 1;
+    }
+    post(m);
+}
+
+/* Latched and idle: keep the BCM session open. A one-shot 5A FF read every 0.25 s
+ * keeps it awake, feeds the body status panel and shows whether the link is still up
+ * (it isn't after a key-off). Returns 0 when that read fails, so the caller
+ * reconnects. */
 static int bcm_keepalive(consult_t *c, double *last)
 {
     static const uint8_t poll[2] = {0x5A, 0xFF};
     uint8_t frame[CONSULT_MAX_FRAME];
 
-    sleep_s(0.05);
-    if (mono() - *last < 5.0)
+    sleep_s(0.02);
+    if (mono() - *last < 0.25)
         return 1;
     *last = mono();
-    if (consult_one_shot(c, poll, sizeof poll, frame) >= 0)
+    if (consult_one_shot(c, poll, sizeof poll, frame) == BCM_SWITCH_LEN) {
+        post_body(frame);
         return 1;
+    }
     serial_note(c->s, "BCM keep-alive failed: %s", c->err);
+    post_body(NULL);
     return 0;
 }
 
@@ -682,6 +700,36 @@ static void show_dtcs(const msg_t *m)
         gtk_grid_attach(GTK_GRID(app.dtc_grid), label("No fault codes stored.", 0), 0, 0, 3, 1);
 }
 
+/* Switch block to the body status panel; NULL blanks it. A set bit is shown in bold
+ * (door open, switch pressed…) so changes stand out. */
+static void show_body(const uint8_t *b)
+{
+    char buf[3 * BCM_SWITCH_LEN + 1];
+
+    for (int i = 0; i < N_BCM_INPUTS; i++) {
+        const bcm_input_t *in = &BCM_INPUTS[i];
+        if (!b) {
+            gtk_label_set_text(GTK_LABEL(app.body_val[i]), "–");
+        } else if (b[in->byte] & in->mask) {
+            char *markup = g_markup_printf_escaped("<b>%s</b>", in->on);
+            gtk_label_set_markup(GTK_LABEL(app.body_val[i]), markup);
+            g_free(markup);
+        } else {
+            gtk_label_set_text(GTK_LABEL(app.body_val[i]), in->off);
+        }
+    }
+    if (!b) {
+        gtk_label_set_text(GTK_LABEL(app.body_knob), "–");
+        gtk_label_set_text(GTK_LABEL(app.body_raw), "–");
+        return;
+    }
+    g_snprintf(buf, sizeof buf, "%02X", b[BCM_WIPER_KNOB]);
+    gtk_label_set_text(GTK_LABEL(app.body_knob), buf);
+    for (int i = 0; i < BCM_SWITCH_LEN; i++)
+        g_snprintf(buf + 3 * i, sizeof buf - 3 * i, i ? " %02X" : "%02X", b[i]);
+    gtk_label_set_text(GTK_LABEL(app.body_raw), buf);
+}
+
 static gboolean on_msg(gpointer p)
 {
     msg_t *m = p;
@@ -714,6 +762,9 @@ static gboolean on_msg(gpointer p)
         break;
     case MSG_BCM:
         gtk_label_set_text(GTK_LABEL(app.bcm_result), m->text);
+        break;
+    case MSG_BODY:
+        show_body(m->body_ok ? m->body : NULL);
         break;
     case MSG_KNOCK: {
         int ret = m->knock[2] > 127 ? m->knock[2] - 256 : m->knock[2];
@@ -898,6 +949,7 @@ static void on_latch(GtkToggleButton *b, gpointer u)
         start_worker();
     } else {
         gtk_label_set_text(GTK_LABEL(app.bcm_result), "Disconnected from the BCM.");
+        show_body(NULL);
     }
     update_buttons();
 }
@@ -949,6 +1001,51 @@ static GtkWidget *window_button(const char *text, int w, int down)
     return b;
 }
 
+/* Body status: one small frame per BCM_GROUPS entry, wrapping to the window width,
+ * then the wiper knob and the raw switch block. Filled by show_body(). */
+static GtkWidget *body_status(void)
+{
+    GtkWidget *box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8), *flow = gtk_flow_box_new();
+    GtkWidget *grid = gtk_grid_new();
+
+    gtk_flow_box_set_selection_mode(GTK_FLOW_BOX(flow), GTK_SELECTION_NONE);
+    gtk_flow_box_set_homogeneous(GTK_FLOW_BOX(flow), FALSE);
+    gtk_flow_box_set_max_children_per_line(GTK_FLOW_BOX(flow), N_BCM_GROUPS);
+    gtk_flow_box_set_column_spacing(GTK_FLOW_BOX(flow), 8);
+    gtk_flow_box_set_row_spacing(GTK_FLOW_BOX(flow), 8);
+    for (int g = 0; g < N_BCM_GROUPS; g++) {
+        GtkWidget *ggrid = gtk_grid_new();
+        int row = 0;
+        gtk_grid_set_column_spacing(GTK_GRID(ggrid), 16);
+        gtk_grid_set_row_spacing(GTK_GRID(ggrid), 2);
+        for (int i = 0; i < N_BCM_INPUTS; i++) {
+            if (strcmp(BCM_INPUTS[i].group, BCM_GROUPS[g]))
+                continue;
+            app.body_val[i] = label("–", 0);
+            gtk_widget_set_size_request(app.body_val[i], 70, -1);
+            gtk_grid_attach(GTK_GRID(ggrid), label(BCM_INPUTS[i].name, 0), 0, row, 1, 1);
+            gtk_grid_attach(GTK_GRID(ggrid), app.body_val[i], 1, row++, 1, 1);
+        }
+        gtk_widget_set_valign(ggrid, GTK_ALIGN_START);
+        gtk_flow_box_append(GTK_FLOW_BOX(flow), framed(BCM_GROUPS[g], ggrid));
+    }
+    gtk_box_append(GTK_BOX(box), flow);
+
+    app.body_knob = label("–", 0);
+    app.body_raw = label("–", 0);
+    gtk_widget_add_css_class(app.body_knob, "numeric");
+    gtk_widget_add_css_class(app.body_raw, "numeric");
+    gtk_label_set_selectable(GTK_LABEL(app.body_raw), TRUE);
+    gtk_grid_set_column_spacing(GTK_GRID(grid), 16);
+    gtk_grid_set_row_spacing(GTK_GRID(grid), 2);
+    gtk_grid_attach(GTK_GRID(grid), label("Wiper INT knob (01–E4)", 0), 0, 0, 1, 1);
+    gtk_grid_attach(GTK_GRID(grid), app.body_knob, 1, 0, 1, 1);
+    gtk_grid_attach(GTK_GRID(grid), label("Switch block (5A FF)", 0), 0, 1, 1, 1);
+    gtk_grid_attach(GTK_GRID(grid), app.body_raw, 1, 1, 1, 1);
+    gtk_box_append(GTK_BOX(box), grid);
+    return framed("Body status (while connected)", box);
+}
+
 static GtkWidget *bcm_page(void)
 {
     GtkWidget *page = gtk_box_new(GTK_ORIENTATION_VERTICAL, 12);
@@ -957,7 +1054,8 @@ static GtkWidget *bcm_page(void)
     GtkWidget *ogrid = gtk_grid_new(), *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
     GtkWidget *cols = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 12);
 
-    app.bcm_latch = gtk_toggle_button_new_with_label("Stay connected to the BCM");
+    app.bcm_latch = gtk_toggle_button_new_with_label("Stay connected to the BCM "
+                                                    "(shows body status)");
     gtk_widget_set_halign(app.bcm_latch, GTK_ALIGN_START);
     g_signal_connect(app.bcm_latch, "toggled", G_CALLBACK(on_latch), NULL);
     gtk_box_append(GTK_BOX(page), app.bcm_latch);
@@ -993,6 +1091,7 @@ static GtkWidget *bcm_page(void)
     gtk_widget_set_hexpand(outs, TRUE);
     gtk_box_append(GTK_BOX(cols), framed("Other outputs", outs));
     gtk_box_append(GTK_BOX(page), cols);
+    gtk_box_append(GTK_BOX(page), body_status());
 
     app.bcm_result = label("", 0);
     gtk_label_set_wrap(GTK_LABEL(app.bcm_result), TRUE);
@@ -1344,7 +1443,7 @@ static void activate(GtkApplication *ga, gpointer u)
     pages[0].id = "engine"; pages[0].name = "Engine readouts"; pages[0].page = engine_page();
     pages[1].id = "codes";  pages[1].name = "Fault codes";     pages[1].page = codes_page();
     pages[2].id = "tests";  pages[2].name = "Engine tests";    pages[2].page = tests_page();
-    pages[3].id = "bcm";    pages[3].name = "BCM tests";       pages[3].page = body;
+    pages[3].id = "bcm";    pages[3].name = "Body (BCM)";      pages[3].page = body;
     pages[4].id = "other";  pages[4].name = "Other";           pages[4].page = other_page();
 
     /* Left: the page list. Right: the selected page, one at a time, scrolling when it
