@@ -1,29 +1,18 @@
 # Engine ECU ROM analysis: 23710-2L904 (1998 Maxima VQ30DE, M/T)
 
-Desk work on the ROM image read over Consult (`rom/23710-2L904_1000-FFFF.bin`, dumped
-2026-11-14), cross-checked against the FSM (`fsm/EC.pdf`) and the car logs. CPU is
-Mitsubishi M37702 (7700 family). Addresses are bank 0.
+ROM read over Consult (`rom/23710-2L904_1000-FFFF.bin`), cross-checked against the FSM
+and the car. CPU: Mitsubishi 7700 family (M37702-like). Addresses are bank 0.
 
-Confidence tags: **[ROM]** read directly from code or tables. **[ROM+car]** also matches
-what the car did. **[inferred]** a reasoned guess, still to check on the car.
+| Tag | Meaning |
+|---|---|
+| [ROM] | Read from code or tables |
+| [ROM+car] | Also matches the car |
+| [inferred] | Reasoned guess, unchecked |
+| [PLMS] | From PLMS's 1999 A32 notes (ECU 23710-4L618, [PDF](https://www.plmsdevelopments.com/files/1999_a32_maxima_obd2_registers.pdf)); unchecked on this ECU |
 
-## 0. Tooling notes (read first)
-
-- `tools/m7700dis.py` printed `SEB`, `CLB` and `LDM` operands in the wrong order:
-  `1C 1C 07 20` showed as `CLB $2007,#$1C` but means "clear mask `$20` at `$071C`".
-  The encoding is address first, immediate last. Fixed. Bit masks in `BBS`/`BBC` now
-  print in hex too.
-- Its built-in RAM labels were wrong (e.g. `$0994` was "battery_v", but it is the RPM
-  LSB), and it named `$1300`/`$1400` "FUEL_MAP"/"TIMING_MAP" without evidence. Both
-  removed.
-- **`rom/23710-2L904.asm` is now generated** from the fixed tool plus the annotation file
-  **`rom/23710-2L904.ann`** (labels, comments, RAM names, named tables). Edit the `.ann`
-  and regenerate; don't hand-edit the listing:
-  `python3 tools/m7700dis.py rom/23710-2L904_1000-FFFF.bin --ann rom/23710-2L904.ann -o rom/23710-2L904.asm`.
-  Every called routine gets a "called from" line. The tool warns about annotations
-  that don't land on an instruction or data start.
-- The earlier hand-annotated listing (commit e2d9e28) had the operand bug, wrong RAM
-  labels and several wrong roles (`D1` as "DTC clear", INT2 as "knock"). It is replaced.
+**Listing:** `rom/23710-2L904.asm` is generated from `tools/m7700dis.py` and the
+annotation file `rom/23710-2L904.ann`. Edit the `.ann`, then regenerate:
+`python3 tools/m7700dis.py rom/23710-2L904_1000-FFFF.bin --ann rom/23710-2L904.ann -o rom/23710-2L904.asm`.
 
 ## 1. Consult handler (serial ISR `consult_isr`, `$4EF5`; reply builder `consult_task`, `$996A`) [ROM]
 
@@ -72,7 +61,7 @@ the car (checklist §3).
 | Reg | RAM | Meaning |
 |---|---|---|
 | `00`/`01` | `$0995`/`$0994` | RPM, word × 12.5 [ROM+car] |
-| `02`/`03` | `$097A`/`$0979` | **Period of the 120° REF signal**, not RPM. Copied from captured timer value `$A8`. At 1175–1188 rpm, word × rpm = 2.49 M. A 120° signal with an 8 µs timer tick predicts exactly 2.5 M. So **rpm ≈ 2 500 000 / word**. [ROM+car, one RPM point only] |
+| `02`/`03` | `$097A`/`$0979` | **Period of the 120° REF signal**, not RPM. Copied from captured timer value `$A8`. At 1175–1188 rpm, word × rpm = 2.49 M; at 2400–2600 rpm, 2.50 M (word ≈ 1005). A 120° signal with an 8 µs timer tick predicts exactly 2.5 M. So **rpm ≈ 2 500 000 / word**. [ROM+car] |
 | `04`/`05` | `$09D6`/`$09D5` | MAF, × 5 mV |
 | `08` | `$0980` | Coolant, − 50 °C |
 | `09` / `0A` | `$0B18` / `$0B36` | Front O2 sensors, × 10 mV. FSM: on the A32, **B1 = right bank, B2 = left bank** |
@@ -88,11 +77,17 @@ the car (checklist §3).
 | `1A`/`1B` | `$0730`/`$0731` | A/F alpha %. Active test `81` writes `$0730` |
 | `1C`/`1D` | `$0B45`/`$0B5B` | Self-learn alpha % |
 | `1E`/`1F`/`20` | `$0721–$0723` | Output bits |
-| `21` | `$072B` | O2 rich/lean monitor bits |
+| `21` | `$072B` | O2 monitor bits: b7 = `09` lean, b6 = `0A` lean (< ~450 mV); b0 latches on after warm-up (meaning open) [car] |
 | `22`/`23` | `$0DAC`/`$0DAB` | Injection pulse, other bank |
 | `29` | `$0806` | **EVAP purge volume control valve step** [inferred, strong]: written by `$BD00`, overridden by test `98`, and `$9488` drives output ports from it. FSM spec: 0 step with the vehicle stopped |
-| `28 2A 30 31 33–35 37–3A` | various | ? Candidates from the FSM data-monitor list: B/FUEL SCHDL, PURG VOL C/V, ENGINE MOUNT, CAL/LD, ABSOL TH-P/S, MASS AIRFLOW, EVAP SYS PRES, ABSOL PRES/SE, EGR TEMP, TANK F/TMP, RR O2 |
-| `32` | `$0C4C` | Same RAM the freeze frame copies its load value from, so probably CAL/LD [inferred] |
+| `33`/`34` | `$0ABE`/`$0ABD` | **CAL/LD**: `33` whole %, `34` fraction / 256 [PLMS]. Here the two registers are the two halves of one RAM word, and the fuel code multiplies by `$0ABD` (`MPY` at `$66CC`), which fits a load value |
+| `35` | `$0B8A` | Rear O2, × 10 mV [PLMS] |
+| `37` | `$09B4` | Absolute throttle position, % = v / 2.55 [PLMS]. Written at `$5849` after a filter |
+| `38` | `$0A17` | MAF as **% of the VQ table** (× 272 g/s / 100 for g/s) [PLMS] |
+| `39` | `$0A16` | EVAP system pressure per the generic table; PLMS unsure [PLMS] |
+| `4A` | `$0D7A` | Absolute pressure sensor, × 20 mV [PLMS] |
+| `28 2A 30 31 3A` | various | ? Candidates from the FSM list: PURG VOL C/V, ENGINE MOUNT, O2 heaters, EGR TEMP, TANK F/TMP. PLMS: `30` = front O2 heater; `3A` unknown |
+| `32` | `$0C4C` | **A 00/FF flag, not CAL/LD**: `$DD8A` writes `FF` or `00` from a comparison of the MAF word with calibration value `$22FB`. (The freeze frame does copy it.) Meaning open [ROM] |
 | `3B–47`, `51` | `$05E0–$05ED` | **Freeze frame** (§3.2) |
 | `56–5F` | `$0F70–$0F79` | **1st-trip freeze frame**, in backup RAM |
 | `49 4A 4C 4E 4F 60 61` | various | ? |
@@ -132,18 +127,17 @@ the car (checklist §3).
 
 | `D1` byte | P-code | FSM name | ECM Mode II code | Notes |
 |---|---|---|---|---|
-| `21` | **P1320** | IGN SIGNAL-PRIMARY | 0201 | Known for ~1 year; came back 3 s after a clear. FSM causes: harness/connectors, the power transistor in each coil, **the condenser**, CKP (REF) sensor and circuit. Coils and plugs are already new. FSM condenser check: > 1 MΩ between its terminals at 25 °C (P1320 component inspection). |
+| `21` | **P1320** | IGN SIGNAL-PRIMARY | 0201 | Returns within seconds of a clear. FSM causes: harness/connectors, coil power transistors, **condenser** (> 1 MΩ across its terminals at 25 °C), CKP (REF) sensor and circuit |
 | `34` | **P0325** | KNOCK SEN/CIRCUIT | 0304 | One-trip logic, no MIL, no freeze frame (FSM). Signal is ECM terminal 64, 2.0–3.0 V at idle. |
 | `A8` | **P0443** | PURG VOLUME CONT/V | 1008 | EVAP canister purge volume control valve circuit. A 4-phase stepper on ECM terminals 26, 27, 110, 118 (EC-282). |
 
-After the clear, `21` and `A8` came back as `F5`: 1st-trip (pending) codes, which is
-why the MIL stayed off [ROM+car]. They become confirmed (MIL on) if detected again on
-a later trip.
+After a clear, `21` and `A8` return with starts byte `F5`: 1st-trip (pending), MIL off
+[ROM+car]. A detection on a later trip confirms them.
 
 ### 3.3 Freeze frame (`$DC62`)
 
 When a fault confirms, the ECU writes the P-code to `$05E2` (registers `3B/3C`), then
-copies load (`$0C4C`), `$0985`, `$0869/$086A`, fuel-trim values (`$0B5A`, `$0B44`,
+copies `$0C4C` (first read as load; it is a 00/FF flag, §2), `$0985`, `$0869/$086A`, fuel-trim values (`$0B5A`, `$0B44`,
 `$0B2E` / 200) and a speed value into `$05E4–$05ED`. The FSM's freeze-frame item list
 (fuel system status ×2, CAL/LD, coolant, short/long fuel trim ×2, RPM, speed) fits.
 The exact order is still to confirm by reading `3B–47` on the car.
@@ -168,6 +162,16 @@ value byte.
 | `98` | `$07BA.01` | `$0787` | **PURG VOL CONT** [inferred, strong]: forces register `29`, clamped by a calibration limit (`$26BC`) |
 | `95 99 9A 9C A2 A6 A7 AA AB AC AD` | | | Unknown (`A2` is on/off: zero vs non-zero). FSM tests left to place: EGRC SOLENOID, ENGINE MOUNTING, PURG VOL CONT, VENT CONTROL/V, VC BYPASS/V, PURG CONT S/V, MAP/BARO SW/V. Some IDs are probably A/T-only (shared firmware) |
 
+- **Range check [ROM]:** `CMPB #$2E` at `$511D` rejects any test outside `80`–`AD` with
+  `FE`. **⚠ PLMS reports that a test above `9F` ("believed to be `B0`") on the 1999 ECU
+  re-registered the NATS keys and locked out every other key.** `B0` is rejected here,
+  but the unknown IDs that *are* accepted (`95 99 9A 9C A2 A6 A7 AA AB AC AD`) could do
+  something similar. **Don't fire them blind.** `AA` already has a known side effect (a
+  backup-RAM flag at stop, below).
+- **PLMS names for some of those IDs** (1999 ECU) [PLMS]: `9A` and `AB` = EVAP canister
+  vent control valve, `9C` and `A7` = vacuum cut bypass valve. `95 97 98 99 9D 9E A2 A9
+  AA AC` valid but unknown. Fans: **`93` and `94` act as a pair**: low = `93 01` +
+  `94 00`, high = `93 00` + `94 01`; both `01` energises both windings (avoid).
 - Test `83` has code (`$B39A`, clamped ≤ `90`), but no descriptor, so the ECU rejects it.
 - Most test values are read by indexed code that the disassembler doesn't reach
   (≈ 14 % of `$3C00–$FFFF` is still undecoded), so the unknown IDs need more tracing.
@@ -212,27 +216,45 @@ code reads it constantly.
 
 ## 7. How this car's codes are detected
 
-- **P1320 (`21`, slot 8)** at `$E2F6`, run by the scheduler, with the monitor enabled
-  by config bit `$120C.7`. It runs only with the engine running, the REF signal valid,
-  past cranking or a timer, and load index `$09AE` ≥ 4. Every second call it samples
-  **CPU input port P4 bit 3** (`$0A.3`). Each high reading counts a miss (and sets
-  "seen this cycle"), and the count accumulates for as long as the preconditions hold.
-  **10 misses → `dtc_detect(8)`** (1st trip; a second trip confirms). So an
-  intermittent fault adds up across a drive. P4.3 is presumably the ignition-primary
-  check line. Which ECM pin it is needs the board (the FSM lists no separate pin), and
-  the FSM's causes (condenser, coil power transistors, harness) are what would drive it.
+- **P1320 (`21`, slot 8)** at `$E2F6`, enabled by config bit `$120C.7`. Preconditions:
+  engine running, REF valid, past cranking, load index `$09AE` ≥ 4. Every second call it
+  samples port P4 bit 3 (`$0A.3`); a high sample counts a miss; 10 misses →
+  `dtc_detect(8)`. **This reading doesn't fit the car:** while driving, `$0C60` (taken as
+  the miss count) cycles 0–9 at 21–45 counts/s and `$000A` bit 3 toggles ~8/s with no
+  code set. The counter, the port bit or the routine's role is misread [open].
 - **P0443 (`A8`, slot 79)** comes from the other CPU (§6) as `$0E55` bit 0. The logic
   isn't in this ROM.
 - **P0325 (`34`, slot 19)**: the setter isn't found yet. It isn't a direct
   `dtc_detect` call, so it's probably also from the other CPU or in undecoded code.
 
-## 8. Open questions
+## 8. Calibration maps [ROM + PLMS]
 
-0. Read this CPU's own `$5D40–$623F` off the chip (Consult forwards that range, §1),
-   and try `sub-dump` for the other CPU's memory.
-1. Confirm `02/03` = REF period at a second RPM (e.g. 2500: expect word ≈ 1000).
-2. Map registers `10 18 28–3A 49–4F 60 61` against the FSM data-monitor list (log them
-   with the A/C, fan, purge and engine-mount states changing).
-3. Name the 12 unknown active-test IDs (trace the indexed readers of `$076F+slot`).
-4. Decode `D0` bytes 0–26.
-5. What the `C9` remap of `$5D40–$623F` is for.
+Same layout as PLMS's 1999 ECU: every address holds the table PLMS names. The code
+that reads them isn't traced (no direct operands or pointers found).
+
+| Address | Size | Table | What our ROM shows there |
+|---|---|---|---|
+| `$1220` | 128 | VQ (MAF voltage → flow) | Rising 16-bit words `0003 000E 0021 003D …` |
+| `$1400` | 16×16 | Volumetric efficiency | First row `7A`–`7D` |
+| `$1500` / `$1510` | 16 | VE load / rpm scale | `08 10 … 80` / `10 20 … FF` |
+| `$1700` | 16×16 | Fuel map | `80` (= 100 %?) rising to `AE` |
+| `$1800` | 16×16 | **Knock** fuel map | Same shape, lower at high load (row 15: `A5` vs `AE`) |
+| `$1900` / `$1910` | 16 | Fuel load / rpm scale | `08 10 … 80` |
+| `$19A0` | 16 | After-start enrichment vs temperature | `6F 6F 55 42 32 … 0B`, falls with temperature |
+| `$19C0` | 16 | Cold-start enrichment vs temperature | `58 … 48` |
+| `$1D00` | 16×16 | **Ignition timing** | Rows 9–15: plain degrees, 48° falling to 13° across the row. Rows 1–8, columns 7–15: bit 7 set, low 7 bits plausible degrees (`9E` → 30°); the flag's meaning is open |
+| `$1E00` | 16×16 | **Knock** timing map | Same, but up to ~9° lower in most high-load cells (161 of 256 cells lower) |
+| `$1F00` / `$1F10` | 16 | Timing rpm / load scale | `08 10 … 40 44 48 …` / `08 10 … 80` |
+
+Row/column axes need the lookup code. Measured WOT timing to compare against: 9–10°
+at 3750–4500 rpm, 15–16° above 5000 (checklist 3.14).
+
+## 9. Open questions
+
+1. Re-read the P1320 routine at `$E2F6` (§7).
+2. Find the map lookup code; fix the axes and the timing-map bit 7 flag (§8).
+3. Read `$5D40–$623F` off the chip (Consult forwards it, §1); dump the other CPU with
+   `sub-dump`.
+4. Map registers `10 28–2A 30 31 3A 49 4C 4E 4F 60 61`; confirm the [PLMS] scalings.
+5. Name the unknown active tests (trace the readers of `$076F + slot`). Don't fire them.
+6. Decode `D0` bytes 0–26.

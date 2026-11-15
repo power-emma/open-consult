@@ -1,4 +1,4 @@
-"""Engine ECU live-data registers with known scaling (CONSULT_PROTOCOL.md §6).
+"""Engine ECU live-data registers with known scaling (CONSULT_PROTOCOL.md §5).
 
 Each entry: name -> (register bytes, formula on the raw value, unit).
 Multi-byte values list MSB first.
@@ -12,7 +12,8 @@ Bit maps seen on that car (bit 7 = MSB; see CAR_TEST_CHECKLIST.md 3.17–3.20):
       b0 closed throttle
   1E: b6 fuel pump relay (probably), b1 + b7 on with A/C (relay and fan, order unknown)
   1F: b0 briefly on a throttle blip
-  21: b7 / b6 O2 rich/lean per bank
+  21: b7 / b6 = 1 when O2 LH (09) / RH (0A) reads lean (< ~450 mV); b0 latches on
+      after warm-up (meaning open)
 """
 
 ENGINE = {

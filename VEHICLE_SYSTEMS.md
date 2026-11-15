@@ -1,75 +1,80 @@
 # 1998 Maxima (A32): systems reference from the service manual
 
-Digest of `fsm/*.pdf`, the **1998 Nissan Maxima** service manual (© 1997, confirmed by
-`fsm/fwd.pdf` and GI; checklist 0.6). Page refs are the manual's printed numbers.
-Full OCR text is in `reference/<SECTION>_ocr.txt`. The OCR is good for prose but
-scrambles tables. For tables, render the page instead:
-`pdftoppm -r 110 -gray -f N -l N -png fsm/EC.pdf out` (N = PDF page; the OCR files
-mark them as `===== PDF page N =====`).
+Digest of the 1998 Nissan Maxima service manual (`fsm/*.pdf`). Page refs are the
+manual's printed numbers. OCR text: `reference/<SECTION>_ocr.txt` (fine for prose,
+scrambles tables). For tables, render the page:
+`pdftoppm -r 110 -gray -f N -l N -png fsm/EC.pdf out`.
 
 ## 1. The car
 
-- VQ30DE, firing order 1-2-3-4-5-6. Manual transaxle **RS5F50A** (RS5F50V with viscous
-  LSD). (GI, quick reference chart)
-- **Bank naming:** on the A32, **B1 = right bank, B2 = left bank** (EC-3, EC-67).
-- Tune-up: idle **625 ± 50 rpm** (M/T, in N); ignition timing **15 ± 2° BTDC** at
-  idle; plugs PFR5G-11, gap 1.0–1.1 mm; compression 1275 kPa (13.0 kg/cm²) standard,
-  981 minimum, at 300 rpm.
-
-## 2. Consult units on this car
-
-| Init ID | Unit | Evidence |
+| Item | Value | Source |
 |---|---|---|
-| `ED` | Engine ECM 23710-2L904 | ROM hard-codes `ED`; `D0` matches label |
-| `DA` | **BCM (IVMS) probably** | `D0` ends `2L900` = Nissan 28491-2L900 "Controller Assy-LAN" (97–99 Maxima). Was labelled ASCD from one silent attempt just after a key cycle; checklist 7.0 re-tests that |
-| `DC` | **Airbag diagnosis sensor unit** | **Confirmed:** RS-25 says the A32 unit's "ECU DISCRIMINATED NO." is **6B**; `DC` register `AC` reads `6B` |
-| `E7` | **ABS, confirmed** | `D0` ends `0L701` = Nissan 47850-0L701, the 95–99 Maxima VQ30DE anti-skid module |
-| ? | ASCD (cruise) | Not found yet; scan with the ASCD MAIN switch on (checklist 7.0b) |
+| Engine | VQ30DE, firing order 1-2-3-4-5-6 | GI |
+| Banks | **B1 = right, B2 = left** | EC-3, EC-67 |
+| Transaxle | RS5F50A, or **RS5F50V with viscous LSD** (this car) | MT-41 |
+| Gears | 3.285 / 1.850 / 1.272 / 0.954 / 0.795, R 3.428 | MT-41 |
+| Final drive | 3.823 (65/17), both transaxles | MT-41 |
+| Tyres | P205/65R15 or P215/55R16 | GI |
+| rpm per km/h | 5th 25.5, 4th 30.6, 3rd 40.85 (measured) | checklist 3.12 |
+| Idle | 625 ± 50 rpm (M/T, neutral) | GI, EC |
+| Ignition timing | 15 ± 2° BTDC at idle | GI, EC |
+| Plugs | PFR5G-11, gap 1.0–1.1 mm | GI |
+| Compression | 1275 kPa standard, 981 minimum, at 300 rpm | GI |
 
-### Airbag (RS-25 … RS-39): what the blinking lamp meant
+## 2. Consult units
 
-- Selecting AIR BAG on Consult **switches the unit from User mode to Diagnosis mode**.
-  The AIR BAG lamp shows Diagnosis mode by flashing. BACK, or ignition OFF, returns it
-  to User mode. So the 15:13 / 15:15 "incident" was most likely the normal mode switch,
-  not damage. A key cycle restoring normal behaviour fits.
-- Diagnosis-mode flash pattern 1 (a repeating uniform blink after 7 s) means **"a
-  problem detected in the past is still stored (SELF-DIAG [PAST])"**. Patterns 2/3 show
-  a part code. If the blink seen was pattern 1, the unit has a stored past record. User
-  mode with the lamp on for ~7 s then off means no current fault.
-- Consult modes: SELF-DIAG [CURRENT], SELF-DIAG [PAST] (erasable), TROUBLE DIAG RECORD
-  (not erasable), ECU DISCRIMINATED NO.
-- `DC` registers seen: `8A`(10), `8B`(5), `9A`(5), `AB`(25) were all `20`, which fits
-  empty CURRENT/PAST/RECORD lists [inferred]. `AC` = `6B` is the discriminated number.
-- No-tool entry: ignition ON, then press the driver's door switch 5 times within 7 s
-  (only enters if a fault is present).
-- **Keep it read-only.**
+| Init | Unit | Part / evidence |
+|---|---|---|
+| `ED` | Engine ECM | 23710-2L904 |
+| `DA` | BCM (IVMS) | 28491-2L900 "Controller Assy-LAN". See [`BCM.md`](BCM.md) |
+| `DC` | Airbag diagnosis sensor unit | Register `AC` = `6B`, the RS-25 "ECU DISCRIMINATED NO." |
+| `E7` | ABS | 47850-0L701 |
+| ? | ASCD (cruise) | Not found |
+
+### Airbag (RS-25 … RS-39), read-only
+
+| Item | Detail |
+|---|---|
+| Consult effect | Switches the unit from User mode to **Diagnosis mode**; the AIR BAG lamp flashes. BACK or ignition OFF returns to User mode |
+| Flash pattern 1 | Uniform blink after 7 s = a past fault is stored (SELF-DIAG [PAST]) |
+| Flash patterns 2/3 | Part code |
+| Consult modes | SELF-DIAG [CURRENT], SELF-DIAG [PAST] (erasable), TROUBLE DIAG RECORD (not erasable), ECU DISCRIMINATED NO. |
+| Registers | `8A` (10 B), `8B` (5), `9A` (5), `AB` (25): all `20` (empty lists, *inferred*). `AC` = `6B` |
+| No-tool entry | Ignition ON, press the driver door switch 5 times within 7 s (only with a fault stored) |
 
 ### ABS (BR-37 … BR-42)
 
-- Consult: self-diag, data monitor (4 wheel sensors, stop lamp switch, 8 solenoids,
-  valve relay, motor relay, battery) and **active tests that drive the solenoids and
-  pump motor. Never send `0A` to `E7`.**
-- Blink codes (ground the check terminal on the Consult connector): 12 = no fault, then
-  the 3 latest codes:
-  21/22 FR sensor open/short · 25/26 FL · 31/32 RR · 35/36 RL · 18 sensor rotor ·
-  41/42 FR out/in solenoid · 45/46 FL · 51/52 RR · 55/56 RL · 61 motor or motor relay ·
-  63 solenoid valve relay · 57 low supply voltage · 71 control unit.
+Consult offers self-diag, data monitor (4 wheel sensors, stop lamp switch, 8 solenoids,
+valve relay, motor relay, battery) and **active tests that drive the solenoids and pump
+motor: never send `0A` to `E7`.** Over this link only `D0` answers.
+
+Blink codes (ground the check terminal): 12 = no fault, then the 3 latest codes.
+
+| Code | Fault | Code | Fault |
+|---|---|---|---|
+| 21 / 22 | FR sensor open / short | 41 / 42 | FR solenoid out / in |
+| 25 / 26 | FL sensor | 45 / 46 | FL solenoid |
+| 31 / 32 | RR sensor | 51 / 52 | RR solenoid |
+| 35 / 36 | RL sensor | 55 / 56 | RL solenoid |
+| 18 | Sensor rotor | 61 | Motor or motor relay |
+| 57 | Low supply voltage | 63 | Solenoid valve relay |
+| 71 | Control unit | | |
 
 ## 3. Engine ECM
 
 ### 3.1 Consult reference values (EC-90 … EC-92)
 
-| Item | Condition | Spec | Car (2026-11-14) |
+| Item | Condition | Spec | Measured |
 |---|---|---|---|
 | POS COUNT | running | 179–181 | — |
 | MAF | warm idle / 2500 rpm | 1.0–1.7 V / 1.5–2.1 V | 1.09–1.13 / 1.75 ✓ |
 | Coolant | warm | > 70 °C | 94 °C ✓ |
 | Front O2 | 2000 rpm | 0–0.3 ↔ 0.6–1.0 V, > 5 switches per 10 s | switching ✓ |
 | Battery | KOEO | 11–14 V | ✓ |
-| TPS | closed / WOT (KOEO) | 0.35–0.65 V / ≈ 4.0 V | — |
+| TPS | closed / WOT (KOEO) | 0.35–0.65 V / ≈ 4.0 V | KOER: 0.48 / 4.18–4.20 V |
 | Injection pulse | idle / 2000 rpm | 2.4–3.2 / 1.9–2.8 ms | 2.57–2.67 / 2.39–2.45 ✓ |
 | B/FUEL SCHDL | idle / 2000 | 1.0–1.6 / 0.7–1.3 ms | — |
-| IGN TIMING | idle / 2000 | **15° BTDC** / > 25° | **7–13°** / 35° (check with a timing light) |
+| IGN TIMING | idle / 2000 | **15° BTDC** / > 25° | 5–15°, mostly 13° / 35–41° |
 | IACV-AAC/V | idle | 2–10 **steps** | — |
 | A/F alpha | 2000 rpm | 54–155 % | 102–107 % ✓ |
 | CAL/LD | idle / 2500 | 14–33 % / 12–25 % | — |

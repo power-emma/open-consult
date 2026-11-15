@@ -333,7 +333,7 @@ def cmd_sub_dump(c, args):
     print(f"wrote {base}.bin ({len(data)} bytes, {unstable} unstable; see {base}.txt)")
 
 
-# Active tests (CONSULT_PROTOCOL.md §8), with limits kept inside the normal ranges.
+# Active tests (CONSULT_PROTOCOL.md §7), with limits kept inside the normal ranges.
 # name -> (test register, argument help, argument -> value byte, needs the engine running)
 ACTIVE_TESTS = {
     "fan-low":      (0x93, None, lambda a: 0x01, False),

@@ -36,7 +36,7 @@ class Transport:
         self.note(f"open {dev} at {datetime.datetime.now().isoformat(timespec='seconds')}")
 
     def _configure(self):
-        # Raw mode, 9600 8N1, no flow control (CONSULT_PROTOCOL.md §3, step 4).
+        # Raw mode, 9600 8N1, no flow control (CONSULT_PROTOCOL.md §2).
         attrs = termios.tcgetattr(self.fd)
         iflag, oflag, cflag, lflag, ispeed, ospeed, cc = attrs
         iflag = 0

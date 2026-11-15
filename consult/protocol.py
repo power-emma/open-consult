@@ -1,6 +1,6 @@
-"""Consult-I protocol layer (CONSULT_PROTOCOL.md §4–5).
+"""Consult-I protocol layer (CONSULT_PROTOCOL.md §3–4).
 
-Read-side commands plus active tests (0A, CONSULT_PROTOCOL.md §8). DTC clear (C1) is
+Read-side commands plus active tests (0A, CONSULT_PROTOCOL.md §7). DTC clear (C1) is
 still left out on purpose.
 """
 import time
@@ -10,7 +10,7 @@ ENGINE_ALT = 0xED               # the 1998 Maxima's engine ECU answers ED (reply
 ENGINE_IDS = (ENGINE_ALT, ENGINE)
 STOP = 0x30
 GO = 0xF0
-STOP_ACKS = (0xCF, 0xFE)        # spec says CF, Nissboard saw FE (§12 #1)
+STOP_ACKS = (0xCF, 0xFE)        # both seen on the A32 (CONSULT_PROTOCOL.md §3, rule 7)
 ACTIVE = 0x0A
 
 # Number of argument bytes that follow each command byte (echoed verbatim).
@@ -130,7 +130,7 @@ class Consult:
 
     @property
     def paced(self):
-        # The BCM (DC) answers FE to a command list sent in one burst, but accepts the
+        # The BCM (DA) answers FE to a command list sent in one burst, but accepts the
         # same bytes sent one at a time, each after its echo (2026-11-14).
         return getattr(self, "ecu", ENGINE) not in ENGINE_IDS
 
@@ -195,7 +195,7 @@ class Consult:
         return d, pn
 
     def read_memory(self, addrs):
-        """C9: one byte from each address (1..8 per request, CONSULT_PROTOCOL.md §5.5)."""
+        """C9: one byte from each address (1..8 per request, CONSULT_PROTOCOL.md §4)."""
         if not 1 <= len(addrs) <= 8:
             raise ValueError("C9 takes 1..8 addresses per request")
         payload = b"".join(bytes([0xC9, a >> 8, a & 0xFF]) for a in addrs)

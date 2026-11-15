@@ -65,7 +65,7 @@ int serial_open(serial_t *s, const char *dev, const char *log_path)
     if (s->fd < 0)
         return -errno;
 
-    /* Raw mode, 9600 8N1, no flow control (CONSULT_PROTOCOL.md §3, step 4).
+    /* Raw mode, 9600 8N1, no flow control (CONSULT_PROTOCOL.md §2).
      * No HUPCL, so closing the port doesn't toggle DTR either. */
     if (tcgetattr(s->fd, &t) < 0)
         goto fail;

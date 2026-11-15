@@ -112,8 +112,8 @@ ram 072B mon21        Consult 21: O2 rich/lean monitor bits
 ram 0DAC inj_b_hi     Consult 22: injection pulse other bank
 ram 0DAB inj_b_lo     Consult 23
 ram 0806 purge_step   Consult 29: EVAP purge volume control valve step ? (forced by test 98, drives the stepper)
-ram 0C4C cal_ld       Consult 32: load value (freeze frame CAL/LD source) ?
-ram 09B4 reg37        Consult 37: ?
+ram 0C4C reg32_flag   Consult 32: 00/FF flag from MAF vs $22FB at $DD8A (not CAL/LD)
+ram 09B4 reg37        Consult 37: absolute throttle position, v/2.55 % (PLMS)
 
 # ---------------------------------------------------------------- misc
 ram 0906 sum_lo       Scratch / running sum
@@ -129,6 +129,20 @@ head  1160 Known: 80 coolant, 81 fuel injection (75-125%), 82 ign timing, 85 IAC
 head  1160 89 fuel pump relay, 8B self-learn clear, 93/94 fan low/high, 98 purge volume control ?. Others unknown.
 table 11C0 20 D0_REPLY  Sent verbatim as the D0 reply; ends in ASCII "2L904" (part number 23710-2L904)
 table 1200 20 CONFIG  Configuration bytes; bits tested by code ($1206.0 debug hook, $1207.5 C9 hides FE00-FFCF, ...)
+table 1220 80 VQ_MAP  MAF voltage -> flow, 64 rising words (layout from PLMS 1999 A32 notes; ROM_ANALYSIS 7b)
+table 1400 100 VE_MAP  Volumetric efficiency 16x16 (PLMS layout)
+table 1500 10 VE_LOAD_SCALE
+table 1510 10 VE_RPM_SCALE
+table 1700 100 FUEL_MAP  Fuel map 16x16 (PLMS layout)
+table 1800 100 FUEL_MAP_KNOCK  Knock fuel map 16x16 (PLMS layout)
+table 1900 10 FUEL_LOAD_SCALE
+table 1910 10 FUEL_RPM_SCALE
+table 19A0 10 AFTER_START_ENRICH  vs temperature (PLMS layout)
+table 19C0 10 COLD_START_ENRICH  vs temperature (PLMS layout)
+table 1D00 100 TIMING_MAP  Ignition timing 16x16, degrees; bit 7 set in some low-row cells (meaning open)
+table 1E00 100 TIMING_MAP_KNOCK  Knock timing 16x16, mostly lower than TIMING_MAP
+table 1F00 10 TIMING_RPM_SCALE
+table 1F10 10 TIMING_LOAD_SCALE
 table 9E0E 98 DTC_CODE_BYTES  Fault slot i -> Consult D1 code byte (11..18, 21..28, ... E8, 19..1F, 10, ...)
 table E086 130 DTC_PCODES  Fault slot i -> OBD-II P-code, 2 bytes BCD big-endian (00 00 = slot unused)
 head  E086 This car's codes: slot 8 = 21 = P1320, slot 19 = 34 = P0325, slot 79 = A8 = P0443.
