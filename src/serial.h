@@ -1,6 +1,6 @@
 /* Serial transport for the Consult dongle: raw 9600 8N1, read timeouts, and a
- * timestamped log of every TX/RX byte. Linux only (termios). C port of
- * consult/transport.py; the log format is the same. */
+ * timestamped log of every TX/RX byte. termios on Linux, the Win32 comm API on
+ * Windows. C port of consult/transport.py; the log format is the same. */
 #ifndef SERIAL_H
 #define SERIAL_H
 
@@ -8,8 +8,19 @@
 #include <stdint.h>
 #include <stdio.h>
 
+#ifdef _WIN32
+#define SERIAL_DEFAULT_DEV "COM4"
+#else
+#define SERIAL_DEFAULT_DEV "/dev/ttyUSB0"
+#endif
+
 typedef struct {
+#ifdef _WIN32
+    void *h;            /* HANDLE; NULL when closed */
+    unsigned rto_ms;    /* read timeout currently set on the port */
+#else
     int fd;
+#endif
     int error;          /* errno of a failed read/write, e.g. EIO when the dongle drops off USB */
     FILE *log;
     double t0;
@@ -18,7 +29,8 @@ typedef struct {
 double mono(void);
 void sleep_s(double secs);
 
-/* Returns 0, or -errno if the port can't be opened or configured. */
+/* Returns 0, or -errno if the port can't be opened or configured. On Windows a port
+ * that's in use (or access denied) gives -EACCES, and a missing one -ENOENT. */
 int serial_open(serial_t *s, const char *dev, const char *log_path);
 void serial_close(serial_t *s);
 

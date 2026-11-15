@@ -60,6 +60,27 @@ make && ./consult-gui
 The cable shows up as a 9600 8N1 serial port (`/dev/ttyUSB0`). Set the FTDI
 latency timer to 1 ms for smooth data (`CONSULT_PROTOCOL.md` §2).
 
+### Windows
+
+Install [MSYS2](https://www.msys2.org), then in the **UCRT64** shell:
+
+```sh
+pacman -S --needed make mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-pkgconf mingw-w64-ucrt-x86_64-gtk4
+make            # consult-gui.exe (runs from the MSYS2 shell)
+make dist       # dist/consult-gui-windows/: the .exe plus the GTK DLLs, runs from Explorer
+make onefile    # dist/consult-gui.exe: all of it in one file (~27 MB)
+```
+
+GTK only comes as DLLs on Windows, so the single-file `.exe` is a small launcher with
+the `dist` folder packed inside. Its first run unpacks it to
+`%LOCALAPPDATA%\open-consult` (a few seconds); later runs start straight from there, and
+a new build replaces the old copy.
+
+The cable is a COM port (`COM4` here); the port list shows each one's Device Manager
+name. Logs go to `logs/` next to the `.exe`. Close ECUTalk first: Windows lets only one
+program hold the port. For smooth data, set the FTDI latency timer to 1 ms in Device
+Manager → the port → Port Settings → Advanced.
+
 ## Docs
 
 | File | What's in it |

@@ -13,12 +13,38 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef _WIN32
+#define NOMINMAX
+#include <windows.h>
+#include <initguid.h>
+#include <devguid.h>
+#include <setupapi.h>
+#endif
+
 #include "consult.h"
 #include "registers.h"
 
-#ifndef LOG_DIR
+/* $CONSULT_LOG_DIR if set. Otherwise Linux: the Makefile sets LOG_DIR to the checkout's
+ * logs/. Windows: logs/ next to consult-gui.exe (the checkout when built there, or the
+ * unpacked dist folder). */
+#if !defined(LOG_DIR) && !defined(_WIN32)
 #define LOG_DIR "logs"
 #endif
+
+static char *log_dir(void)
+{
+    const char *env = g_getenv("CONSULT_LOG_DIR");     /* set by the single-file launcher */
+    if (env && *env)
+        return g_strdup(env);
+#if defined(_WIN32) && !defined(LOG_DIR)
+    char *base = g_win32_get_package_installation_directory_of_module(NULL);
+    char *dir = g_build_filename(base ? base : ".", "logs", NULL);
+    g_free(base);
+    return dir;
+#else
+    return g_strdup(LOG_DIR);
+#endif
+}
 
 enum { MSG_STATUS, MSG_VALUES, MSG_DTCS, MSG_ACTIVE, MSG_BCM, MSG_KNOCK, MSG_DONE };
 
@@ -326,14 +352,23 @@ static gpointer worker(gpointer unused)
     g_snprintf(date, sizeof date, "%04d-%02d-%02d", g_date_time_get_year(now),
                g_date_time_get_month(now), g_date_time_get_day_of_month(now));
     g_date_time_unref(now);
-    g_mkdir_with_parents(LOG_DIR, 0755);
-    g_snprintf(log, sizeof log, "%s/%s_gui.log", LOG_DIR, date);
+    {
+        char *dir = log_dir();
+        g_mkdir_with_parents(dir, 0755);
+        g_snprintf(log, sizeof log, "%s/%s_gui.log", dir, date);
+        g_free(dir);
+    }
 
     rc = serial_open(&s, app.devpath, log);
     if (rc < 0) {
         if (rc == -EACCES)
+#ifdef _WIN32
+            post_status("%s is busy or access is denied. Close ECUTalk or anything "
+                        "else using it.", app.devpath);
+#else
             post_status("No permission for %s. Run `sudo usermod -aG uucp $USER`, "
                         "then log out and back in.", app.devpath);
+#endif
         else if (rc == -ENOENT)
             post_status("%s not found. Is the dongle plugged in?", app.devpath);
         else
@@ -979,19 +1014,73 @@ static GtkWidget *framed(const char *title, GtkWidget *child)
 
 /* ---- port list ---- */
 
+#ifdef _WIN32
+
+/* COM ports in number order: COM2 before COM10. */
+static int by_com_number(gconstpointer a, gconstpointer b)
+{
+    const char *x = *(char *const *)a, *y = *(char *const *)b;
+    long nx = g_ascii_strncasecmp(x, "COM", 3) == 0 ? strtol(x + 3, NULL, 10) : 0;
+    long ny = g_ascii_strncasecmp(y, "COM", 3) == 0 ? strtol(y + 3, NULL, 10) : 0;
+    return nx != ny ? (nx < ny ? -1 : 1) : g_strcmp0(x, y);
+}
+
+/* Every present serial port (Ports class in Device Manager), labelled with its
+ * friendly name, e.g. "COM4  (USB Serial Port (COM4), FTDI)". */
+static void find_ports(GPtrArray *found, GHashTable *ids)
+{
+    HDEVINFO set = SetupDiGetClassDevsW(&GUID_DEVCLASS_PORTS, NULL, NULL, DIGCF_PRESENT);
+    SP_DEVINFO_DATA dev = {.cbSize = sizeof dev};
+
+    if (set == INVALID_HANDLE_VALUE)
+        return;
+    for (DWORD i = 0; SetupDiEnumDeviceInfo(set, i, &dev); i++) {
+        wchar_t wport[64] = L"", wname[256] = L"", wmfg[128] = L"";
+        DWORD type, size = sizeof wport;
+        HKEY key = SetupDiOpenDevRegKey(set, &dev, DICS_FLAG_GLOBAL, 0, DIREG_DEV, KEY_READ);
+        char *port, *name, *mfg;
+
+        if (key == INVALID_HANDLE_VALUE)
+            continue;
+        if (RegQueryValueExW(key, L"PortName", NULL, &type, (BYTE *)wport, &size) != ERROR_SUCCESS ||
+            type != REG_SZ || _wcsnicmp(wport, L"COM", 3) != 0) {
+            RegCloseKey(key);
+            continue;       /* LPT ports are in the same class */
+        }
+        RegCloseKey(key);
+        SetupDiGetDeviceRegistryPropertyW(set, &dev, SPDRP_FRIENDLYNAME, NULL, (BYTE *)wname,
+                                          sizeof wname - sizeof *wname, NULL);
+        SetupDiGetDeviceRegistryPropertyW(set, &dev, SPDRP_MFG, NULL, (BYTE *)wmfg,
+                                          sizeof wmfg - sizeof *wmfg, NULL);
+        port = g_utf16_to_utf8((gunichar2 *)wport, -1, NULL, NULL, NULL);
+        name = g_utf16_to_utf8((gunichar2 *)wname, -1, NULL, NULL, NULL);
+        mfg = g_utf16_to_utf8((gunichar2 *)wmfg, -1, NULL, NULL, NULL);
+        if (port) {
+            g_ptr_array_add(found, g_strdup(port));
+            if (name && *name)
+                g_hash_table_replace(ids, g_strdup(port),
+                                     mfg && *mfg ? g_strdup_printf("%s, %s", name, mfg)
+                                                 : g_strdup(name));
+        }
+        g_free(port);
+        g_free(name);
+        g_free(mfg);
+    }
+    SetupDiDestroyDeviceInfoList(set);
+    g_ptr_array_sort(found, by_com_number);
+}
+
+#else
+
 static int by_name(gconstpointer a, gconstpointer b)
 {
     return g_strcmp0(*(char *const *)a, *(char *const *)b);
 }
 
-/* Serial ports that may be the Consult cable: /dev/consult (udev link), then
- * /dev/ttyUSB* and /dev/ttyACM*, each labelled with its /dev/serial/by-id name when
- * there is one. Fills app.dev_paths and the drop-down, with "Custom…" last. */
-static void scan_ports(void)
+/* /dev/consult (udev link), then /dev/ttyUSB* and /dev/ttyACM*, each labelled with its
+ * /dev/serial/by-id name when there is one. */
+static void find_ports(GPtrArray *found, GHashTable *ids)
 {
-    GtkStringList *names = gtk_string_list_new(NULL);
-    GPtrArray *found = g_ptr_array_new_with_free_func(g_free);
-    GHashTable *ids = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, g_free);
     GDir *d;
     const char *e;
 
@@ -1022,6 +1111,19 @@ static void scan_ports(void)
             free(real);
         }
     }
+}
+
+#endif
+
+/* Serial ports that may be the Consult cable (find_ports), each labelled when there is
+ * one. Fills app.dev_paths and the drop-down, with "Custom…" last. */
+static void scan_ports(void)
+{
+    GtkStringList *names = gtk_string_list_new(NULL);
+    GPtrArray *found = g_ptr_array_new_with_free_func(g_free);
+    GHashTable *ids = g_hash_table_new_full(g_str_hash, g_str_equal, g_free, g_free);
+
+    find_ports(found, ids);
 
     if (app.dev_paths)
         g_ptr_array_unref(app.dev_paths);
@@ -1055,7 +1157,7 @@ static void on_port_selected(GObject *o, GParamSpec *ps, gpointer u)
     if (!custom)
         gtk_editable_set_text(GTK_EDITABLE(app.dev), g_ptr_array_index(app.dev_paths, i));
     else if (!gtk_editable_get_text(GTK_EDITABLE(app.dev))[0])
-        gtk_editable_set_text(GTK_EDITABLE(app.dev), "/dev/ttyUSB0");
+        gtk_editable_set_text(GTK_EDITABLE(app.dev), SERIAL_DEFAULT_DEV);
     gtk_widget_set_sensitive(app.dev, custom && app.thread == NULL);
     if (custom)
         gtk_widget_grab_focus(app.dev);
@@ -1202,46 +1304,22 @@ static GtkWidget *other_page(void)
     return page;
 }
 
-/* Sidebar toggle: show or hide its panel. */
-static void on_page_toggled(GtkToggleButton *b, gpointer panel)
-{
-    gtk_widget_set_visible(GTK_WIDGET(panel), gtk_toggle_button_get_active(b));
-}
-
-/* A panel for the content area: bold title over the page, fixed minimum width so
- * several fit side by side. */
-static GtkWidget *panel(const char *title, GtkWidget *page)
-{
-    GtkWidget *box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0), *head = label(NULL, 0);
-    char *markup = g_markup_printf_escaped("<b>%s</b>", title);
-
-    gtk_label_set_markup(GTK_LABEL(head), markup);
-    g_free(markup);
-    gtk_widget_set_margin_start(head, 12);
-    gtk_widget_set_margin_top(head, 8);
-    gtk_box_append(GTK_BOX(box), head);
-    gtk_box_append(GTK_BOX(box), page);
-    gtk_widget_set_size_request(box, 400, -1);
-    gtk_widget_set_hexpand(box, TRUE);
-    return box;
-}
-
 static void activate(GtkApplication *ga, gpointer u)
 {
-    GtkWidget *win, *root, *bar, *split, *side, *scroll, *content, *body;
-    struct { const char *name; GtkWidget *page; int open; } pages[5];
+    GtkWidget *win, *root, *bar, *split, *side, *stack, *body;
+    struct { const char *id, *name; GtkWidget *page; } pages[5];
     (void)u;
 
     win = app.win = gtk_application_window_new(ga);
     gtk_window_set_title(GTK_WINDOW(win), "Consult");
-    gtk_window_set_default_size(GTK_WINDOW(win), 1100, 600);
+    gtk_window_set_default_size(GTK_WINDOW(win), 1050, 650);
 
     root = page_box();
     bar = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
     app.dev_list = gtk_drop_down_new(NULL, NULL);
     gtk_widget_set_hexpand(app.dev_list, TRUE);
     app.dev = gtk_entry_new();
-    gtk_entry_set_placeholder_text(GTK_ENTRY(app.dev), "/dev/ttyUSB0");
+    gtk_entry_set_placeholder_text(GTK_ENTRY(app.dev), SERIAL_DEFAULT_DEV);
     gtk_widget_set_size_request(app.dev, 200, -1);
     app.dev_scan = gtk_button_new_with_label("Rescan");
     g_signal_connect(app.dev_list, "notify::selected", G_CALLBACK(on_port_selected), NULL);
@@ -1263,35 +1341,30 @@ static void activate(GtkApplication *ga, gpointer u)
     gtk_widget_set_margin_end(body, 12);
     gtk_widget_set_margin_top(body, 12);
     gtk_widget_set_margin_bottom(body, 12);
-    pages[0].name = "Engine readouts"; pages[0].page = engine_page(); pages[0].open = 1;
-    pages[1].name = "Fault codes";     pages[1].page = codes_page();  pages[1].open = 1;
-    pages[2].name = "Engine tests";    pages[2].page = tests_page();  pages[2].open = 0;
-    pages[3].name = "BCM tests";       pages[3].page = body;          pages[3].open = 0;
-    pages[4].name = "Other";           pages[4].page = other_page();  pages[4].open = 0;
+    pages[0].id = "engine"; pages[0].name = "Engine readouts"; pages[0].page = engine_page();
+    pages[1].id = "codes";  pages[1].name = "Fault codes";     pages[1].page = codes_page();
+    pages[2].id = "tests";  pages[2].name = "Engine tests";    pages[2].page = tests_page();
+    pages[3].id = "bcm";    pages[3].name = "BCM tests";       pages[3].page = body;
+    pages[4].id = "other";  pages[4].name = "Other";           pages[4].page = other_page();
 
-    /* Left: one toggle per page, any number on at once. Right: the open pages side by
-     * side, scrolling when they don't fit. */
+    /* Left: the page list. Right: the selected page, one at a time, scrolling when it
+     * doesn't fit. */
     split = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_widget_set_vexpand(split, TRUE);
-    side = gtk_box_new(GTK_ORIENTATION_VERTICAL, 4);
-    gtk_widget_set_margin_end(side, 8);
-    content = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+    stack = gtk_stack_new();
+    gtk_widget_set_hexpand(stack, TRUE);
     for (int i = 0; i < 5; i++) {
-        GtkWidget *p = panel(pages[i].name, pages[i].page);
-        GtkWidget *t = gtk_toggle_button_new_with_label(pages[i].name);
-        gtk_widget_set_halign(gtk_button_get_child(GTK_BUTTON(t)), GTK_ALIGN_START);
-        gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(t), pages[i].open);
-        gtk_widget_set_visible(p, pages[i].open);
-        g_signal_connect(t, "toggled", G_CALLBACK(on_page_toggled), p);
-        gtk_box_append(GTK_BOX(side), t);
-        gtk_box_append(GTK_BOX(content), p);
+        GtkWidget *scroll = gtk_scrolled_window_new();
+        gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(scroll), pages[i].page);
+        gtk_stack_add_titled(GTK_STACK(stack), scroll, pages[i].id, pages[i].name);
     }
-    scroll = gtk_scrolled_window_new();
-    gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(scroll), content);
-    gtk_widget_set_hexpand(scroll, TRUE);
+    gtk_stack_set_visible_child_name(GTK_STACK(stack), "engine");
+    side = gtk_stack_sidebar_new();
+    gtk_stack_sidebar_set_stack(GTK_STACK_SIDEBAR(side), GTK_STACK(stack));
+    gtk_widget_set_size_request(side, 170, -1);
     gtk_box_append(GTK_BOX(split), side);
     gtk_box_append(GTK_BOX(split), gtk_separator_new(GTK_ORIENTATION_VERTICAL));
-    gtk_box_append(GTK_BOX(split), scroll);
+    gtk_box_append(GTK_BOX(split), stack);
     gtk_box_append(GTK_BOX(root), split);
 
     gtk_window_set_child(GTK_WINDOW(win), root);

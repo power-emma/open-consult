@@ -2,3 +2,4 @@ __pycache__/
 *.exe
 ecutalk.ini
 consult-gui
+dist/
