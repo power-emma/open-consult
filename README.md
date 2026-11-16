@@ -99,3 +99,7 @@ Manager → the port → Port Settings → Advanced.
 - **ABS (`E7`): never send `0A`.** Its active tests drive the brake solenoids and pump.
 - **Engine active tests change fuel, timing and pumps.** You're going to be turning off cylinders and the like just be smart
 - **BCM tests move windows and locks.** Keep hands clear
+
+## Processor-write research record
+
+[Findings and evidence status](docs/processor-write/FINDINGS.md), including failed attempts and corrections, with [all existing logs](docs/processor-write/LOGS.md) and [15 recovered Claude research sessions](docs/processor-write/SESSIONS.md).

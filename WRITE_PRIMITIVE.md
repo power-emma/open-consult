@@ -1,5 +1,7 @@
 # Write primitive: what it can do
 
+> **Evidence update (2026-11-15):** See [processor-write findings](docs/processor-write/FINDINGS.md) and the [preserved logs and sessions](docs/processor-write/SESSIONS.md). The overrun is observed, but the latest hardware streamlist plant failed, and Claude’s final review withdrew earlier actuator-target success claims. Hidden-read success and the stale-value chain remain unconfirmed. Earlier absolute conclusions below are historical and may be superseded.
+
 Summary of capabilities and limits of the `c9_find_hidden` buffer overrun
 (ROM_ANALYSIS.md §10) on the 23710-2L904 engine ECU.
 

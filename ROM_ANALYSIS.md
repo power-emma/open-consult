@@ -1,5 +1,7 @@
 # Engine ECU ROM analysis: 23710-2L904 (1998 Maxima VQ30DE, M/T)
 
+> **Evidence update (2026-11-15):** See [processor-write findings](docs/processor-write/FINDINGS.md) and the [preserved logs and sessions](docs/processor-write/SESSIONS.md). The overrun is observed, but the latest hardware streamlist plant failed, and Claude’s final review withdrew earlier actuator-target success claims. Hidden-read success and the stale-value chain remain unconfirmed. Earlier absolute conclusions below are historical and may be superseded.
+
 This is the ECU in my own car. This is diagnostic/tuning work on hardware I own, read
 out over the car's own Consult diagnostic port — not reverse engineering of someone
 else's product or system. The cable is a direct point-to-point serial link to this one
