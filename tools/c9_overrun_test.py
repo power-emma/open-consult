@@ -29,6 +29,7 @@ sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS
 from consult.transport import DEFAULT_DEV, Transport
+from consult.experimental import mutation_stream, require_research_ecu
 
 LOG_DIR = os.path.join(ROOT, "logs")
 
@@ -280,6 +281,7 @@ def run_live(dev, addr):
         if r is None:
             sys.exit("init failed (ignition on?)")
         attempt, secs, junk, ecu = r
+        require_research_ecu(c)
         print(f"init ok: id {ecu:02X}, attempt {attempt}, {secs * 1000:.0f} ms")
 
         # --- Before: read the full region ---
@@ -299,17 +301,7 @@ def run_live(dev, addr):
         print(f"\nSending trigger: 16 × C9 ${addr:04X} + F0...")
         payload = b"".join(bytes([0xC9, addr >> 8, addr & 0xFF])
                           for _ in range(16))
-        c.command(payload)
-        t.note("trigger sent, F0 accepted")
-
-        # Read one frame (c9_find_hidden already ran), then stop.
-        frames = []
-        try:
-            f = c.read_frame(expected_len=16, timeout=1.0)
-            frames.append(f)
-        except TimeoutError:
-            pass
-        c.stop()
+        frames = mutation_stream(c, payload, frames=1, expected_len=16)
         t.note(f"stopped after {len(frames)} frame(s)")
         print(f"  read {len(frames)} frame(s), stopped")
 
@@ -373,8 +365,9 @@ def run_live(dev, addr):
             print("and re-run) or the overrun didn't fire.")
         print(f"{'=' * 60}")
 
-    except (ConsultError, TimeoutError) as e:
+    except (OSError, ValueError) as e:
         print(f"error: {e}")
+        raise SystemExit(1) from e
     finally:
         t.close()
         print(f"\nlog: {log}")

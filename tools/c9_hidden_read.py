@@ -41,8 +41,8 @@ Frame 0: idx[$0E]=$61 → stale $60 → $07A1 (streamlist hi)
 Frame 2: idx[$10]=$60 → H8 reply → $07A0 (streamlist lo)
 After frame 2, cs_streamlist[0]=$60XX; the direct builder dereferences it.
 
-SAFE: read-only exploit — writes to Consult handler state only.  No code
-redirect.  Key cycle clears all corruption.
+EXPERIMENTAL: this proposed chain failed in the recorded hardware trial.
+Controlled writes and hidden reads remain unconfirmed; see FINDINGS.md.
 """
 import argparse
 import datetime
@@ -55,6 +55,7 @@ sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS
 from consult.transport import DEFAULT_DEV, Transport
+from consult.experimental import mutation_stream, require_research_ecu
 
 LOG_DIR = os.path.join(ROOT, "logs")
 
@@ -374,25 +375,13 @@ def read_c9(c, addrs):
 def run_plant(c, payload, stop_frame, target_addr):
     """Phase 1: fire the 20-address overrun to plant cs_streamlist."""
     n_addrs = len(payload)
-    n_frames = stop_frame + 2  # a couple extra for safety
+    n_frames = stop_frame + 1  # frame numbers are zero-based; no extra mutations
 
     print(f"\n--- Phase 1: PLANT (target ${target_addr:04X}) ---")
     print(f"  Sending {n_addrs} C9 addresses + F0...")
 
     cmd = b"".join(bytes([0xC9, a >> 8, a & 0xFF]) for a in payload)
-    c.command(cmd)
-    c.t.note(f"plant sent: {n_addrs} addrs, target=${target_addr:04X}")
-
-    frames = []
-    try:
-        for _ in range(n_frames):
-            f = c.read_frame(timeout=1.0)
-            frames.append(f)
-    except TimeoutError:
-        pass
-
-    c.stop(timeout=0.5)
-    c.t.drain(quiet=0.05)
+    frames = mutation_stream(c, cmd, frames=n_frames, expected_len=n_addrs)
     print(f"  Streamed {len(frames)} frames, stopped.")
     return frames
 
@@ -411,6 +400,7 @@ def run_verify(c, target_addr):
         print(f"  PLANT CONFIRMED: streamlist[0] = ${target_addr:04X}")
     else:
         print(f"  PLANT MISMATCH: expected ${target_addr:04X}, got ${word0:04X}")
+        raise ConsultError("plant readback mismatch; no follow-up mutation permitted")
 
     return word0, word1
 
@@ -431,19 +421,7 @@ def run_mixed(c, n_frames=12):
     print(f"  Sending 0A 02 81 + {n_c9}×C9 + F0...")
     print(f"  (0A activates direct mode; C9 overrun plants streamlist during streaming)")
 
-    c.command(cmd)
-    c.t.note(f"mixed cmd sent: 0A+{n_c9}xC9")
-
-    frames = []
-    try:
-        for _ in range(n_frames):
-            f = c.read_frame(timeout=1.0)  # don't constrain length — unknown format
-            frames.append(f)
-    except TimeoutError:
-        pass
-
-    c.stop(timeout=0.5)
-    c.t.drain(quiet=0.05)
+    frames = mutation_stream(c, cmd, frames=n_frames)
 
     print(f"  Streamed {len(frames)} frames.")
     print(f"\n  Raw frames:")
@@ -460,19 +438,7 @@ def run_direct_baseline(c, n_frames=4):
     print(f"  Sending 0A 02 81 + F0...")
 
     cmd = bytes([0x0A, 0x02, 0x81])
-    c.command(cmd)
-    c.t.note("baseline 0A direct")
-
-    frames = []
-    try:
-        for _ in range(n_frames):
-            f = c.read_frame(timeout=1.0)
-            frames.append(f)
-    except TimeoutError:
-        pass
-
-    c.stop(timeout=0.5)
-    c.t.drain(quiet=0.05)
+    frames = mutation_stream(c, cmd, frames=n_frames)
 
     print(f"  Streamed {len(frames)} frames.")
     for i, f in enumerate(frames):
@@ -638,6 +604,8 @@ def main():
     ap.add_argument("--dry-run", action="store_true",
                     help="simulate only, don't talk to the ECU")
     args = ap.parse_args()
+    if not 1 <= args.frames <= 1000:
+        ap.error("--frames must be in 1..1000")
 
     print("c9_hidden_read: read main CPU hidden code via overrun + streamlist chain")
     print("Target ECU: 23710-2L904 (1998 Maxima VQ30DE)")
@@ -649,7 +617,7 @@ def main():
         print(f"H8 dump: {args.h8} ({len(h8_dump)} bytes)")
     else:
         print(f"H8 dump not found: {args.h8}")
-        print("  (needed for plant simulation — mixed command still works without it)")
+        print("  (needed for plant simulation; mixed behavior is unconfirmed)")
 
     # --- Sweep ---
     if args.sweep:
@@ -700,8 +668,8 @@ def main():
     # --- Live ---
     print()
     print("-" * 60)
-    print("SAFETY: writes to Consult handler state only ($0740-$08D6).")
-    print("No code redirect possible. Key cycle clears all corruption.")
+    print("EXPERIMENTAL: controlled writes and hidden reads remain unconfirmed.")
+    print("Live handler state may be corrupted; reset behavior requires verification.")
     print("Run with key on, ENGINE OFF.")
     print("-" * 60)
     ok = input("Proceed? [y/N] ")
@@ -722,6 +690,7 @@ def main():
         if r is None:
             sys.exit("init failed (ignition on?)")
         attempt, secs, junk, ecu = r
+        require_research_ecu(c)
         print(f"\ninit ok: id {ecu:02X}, attempt {attempt}, {secs * 1000:.0f} ms")
 
         # Baseline streamlist
@@ -729,13 +698,18 @@ def main():
                                  CS_STREAMLIST + 2, CS_STREAMLIST + 3])
         print(f"  streamlist before: {sl_before.hex(' ')}")
 
+        if args.mixed_only:
+            run_mixed(c, args.frames)
+            print("Mixed frames are unverified observations, not hidden-code read proof.")
+            return
+
         if not args.mixed_only and target_addr is not None and h8_dump is not None:
             # Phase 1: Plant
             target_hi = (target_addr >> 8) & 0xFF
             target_lo = target_addr & 0xFF
             result = build_plant_payload(target_hi, target_lo, h8_dump)
             if result is None:
-                print(f"\nNo payload for ${target_addr:04X} — skipping plant, going to mixed.")
+                raise ConsultError(f"no plant payload for ${target_addr:04X}; nothing sent")
             else:
                 payload, stop_frame = result
                 run_plant(c, payload, stop_frame, target_addr)
@@ -743,56 +717,14 @@ def main():
                 # Phase 2: Verify
                 word0, word1 = run_verify(c, target_addr)
 
-        # Phase 3: Baseline 0A
-        print()
-        c.init()
-        baseline = run_direct_baseline(c, 4)
+        # A second mutation requires its own verified starting state. Re-init
+        # does not establish that state or preserve a planted streamlist.
+        print("Plant trial ended. No automatic direct-mode or mixed follow-up.")
+        return
 
-        # Phase 4: Mixed command
-        print()
-        c.init()
-        mixed = run_mixed(c, args.frames)
-
-        # Analysis
-        print(f"\n{'=' * 60}")
-        print("ANALYSIS")
-        print(f"{'=' * 60}")
-
-        if baseline and mixed:
-            bl = baseline[0] if baseline else b""
-            mx = mixed[-1] if mixed else b""
-            print(f"\n  Baseline 0A frame length: {len(bl)}")
-            print(f"  Mixed frame length:       {len(mx) if mx else '?'}")
-
-            if len(mx) > len(bl):
-                extra = len(mx) - len(bl)
-                print(f"  Extra bytes in mixed: {extra} (likely C9 hidden entries)")
-                print(f"\n  If direct-mode bytes are at the START of the frame:")
-                for i, f in enumerate(mixed):
-                    if len(f) >= len(bl):
-                        direct = f[:len(bl)]
-                        print(f"    frame {i:2d}: direct={direct.hex(' ')}")
-                print(f"\n  If direct-mode bytes are at the END:")
-                for i, f in enumerate(mixed):
-                    if len(f) >= len(bl):
-                        direct = f[-len(bl):]
-                        print(f"    frame {i:2d}: direct={direct.hex(' ')}")
-            else:
-                print(f"  Same length — direct and C9 might share slots or"
-                      f" only one builder ran.")
-                print(f"  Compare frame values:")
-                for i, f in enumerate(mixed):
-                    bl_f = baseline[min(i, len(baseline) - 1)] if baseline else b""
-                    diff = sum(1 for a, b in zip(f, bl_f) if a != b) if len(f) == len(bl_f) else -1
-                    print(f"    frame {i:2d}: {f.hex(' ')}"
-                          f"{'  (' + str(diff) + ' bytes differ)' if diff >= 0 else ''}")
-
-        print(f"\n  Check the log for raw bytes: {log}")
-        print(f"  Look for transition in direct-mode bytes after frame 2")
-        print(f"  (that's when the overrun finishes planting $07A0).")
-
-    except (ConsultError, TimeoutError) as e:
+    except (OSError, ValueError) as e:
         print(f"\nerror: {e}")
+        raise SystemExit(1) from e
     finally:
         t.close()
         print(f"\nlog: {log}")

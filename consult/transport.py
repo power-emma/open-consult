@@ -5,8 +5,11 @@ On Linux it uses the standard library only (termios). On Windows it needs pyseri
 (`pip install pyserial`); pass the port as e.g. `--dev COM4`.
 """
 import datetime
+import errno
 import os
 import time
+
+from .hardening import Completion, WriteFailure, WriteResult
 
 if os.name == "nt":
     import serial
@@ -67,13 +70,53 @@ class Transport:
         self._write_log("##", text)
 
     def write(self, data: bytes):
-        self._write_log("TX", data.hex(" "))
+        """Complete the OS write, then drain using the legacy platform behavior.
+
+        OS acceptance is deadline-bounded; driver drain/flush is not guaranteed
+        bounded. Neither establishes that the ECU executed the command.
+        """
+        self.write_all(data, deadline=time.monotonic() + 1.0)
         if os.name == "nt":
-            self.port.write(data)
             self.port.flush()
         else:
-            os.write(self.fd, data)
             termios.tcdrain(self.fd)
+
+    def write_all(self, data: bytes, *, deadline: float) -> WriteResult:
+        """Submit each suffix once; preserve partial progress on failure."""
+        self._write_log("TX", data.hex(" "))
+        accepted = 0
+        try:
+            while accepted < len(data):
+                remaining = deadline - time.monotonic()
+                if remaining <= 0:
+                    raise WriteFailure(WriteResult(len(data), accepted, Completion.DEADLINE))
+                if os.name == "nt":
+                    self.port.write_timeout = remaining
+                    count = self.port.write(data[accepted:])
+                else:
+                    try:
+                        _, writable, _ = select.select([], [self.fd], [], remaining)
+                        if not writable:
+                            raise WriteFailure(WriteResult(len(data), accepted, Completion.DEADLINE))
+                        count = os.write(self.fd, data[accepted:])
+                    except OSError as error:
+                        if error.errno in (errno.EINTR, errno.EAGAIN, errno.EWOULDBLOCK):
+                            continue
+                        raise
+                if count is None or count <= 0 or count > len(data) - accepted:
+                    raise OSError(errno.EIO, "invalid or zero write progress")
+                accepted += count
+        except WriteFailure:
+            raise
+        except OSError as error:
+            # A driver exception may conceal additional OS acceptance (notably
+            # pyserial timeouts). accepted is the confirmed prefix, not a proof
+            # that no additional bytes reached the ECU.
+            raise WriteFailure(WriteResult(len(data), accepted, Completion.OS_ERROR,
+                                           os_error=error.errno)) from error
+        finally:
+            self.note(f"TX accepted-prefix {accepted}/{len(data)}; ECU execution unconfirmed")
+        return WriteResult(len(data), accepted, Completion.COMPLETE)
 
     def _read_chunk(self, n, timeout):
         if os.name == "nt":

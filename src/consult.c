@@ -9,6 +9,19 @@ static int cancelled(consult_t *c)
     return c->cancel && atomic_load(c->cancel);
 }
 
+/* Serial reads use idle timeouts. One byte per call enforces a shared deadline. */
+static size_t read_until(consult_t *c, uint8_t *out, size_t n, double end)
+{
+    size_t got = 0;
+    while (got < n && !c->s->error) {
+        double remaining = end - mono();
+        if (remaining <= 0 || serial_read(c->s, out + got, 1, remaining) != 1)
+            break;
+        got++;
+    }
+    return got;
+}
+
 static void hex(char *out, size_t outlen, const uint8_t *buf, size_t n)
 {
     size_t o = 0;
@@ -68,18 +81,24 @@ int consult_stop(consult_t *c, double timeout, uint8_t *ack)
     uint8_t b = CONSULT_STOP;
     double end;
 
-    c->frame_started = 0;
     serial_write(c->s, &b, 1);
+    if (c->desynchronized)
+        return 0;
     end = mono() + timeout;
     while (mono() < end && !c->s->error) {
-        if (serial_read(c->s, &b, 1, 0.3) != 1)
-            continue;
+        if (c->frame_started) {
+            c->frame_started = 0;
+            b = 0xFF;
+        } else if (read_until(c, &b, 1, end) != 1)
+            break;
         if (b == 0xFF) {
             /* Skip a whole frame, so a data byte of CF or FE isn't taken for the ack.
              * Only whole frames come before the ack (checklist 1.5). */
             uint8_t n, skip[CONSULT_MAX_FRAME];
-            if (serial_read(c->s, &n, 1, 0.3) == 1)
-                serial_read(c->s, skip, n, 0.3);
+            if (read_until(c, &n, 1, end) != 1 || read_until(c, skip, n, end) != n) {
+                c->desynchronized = 1;
+                return 0;
+            }
             continue;
         }
         if (b == 0xCF || b == 0xFE) {
@@ -116,6 +135,8 @@ int consult_init(consult_t *c, const uint8_t *ids, int nids, int tries, uint8_t 
                 serial_note(c->s, "init ok id=%02X attempt=%d secs=%.3f",
                             ecu, n / nids + 1, mono() - sent);
                 *id_out = ecu;
+                c->frame_started = 0;
+                c->desynchronized = 0;
                 return 1;
             }
         }
@@ -130,10 +151,24 @@ int consult_command(consult_t *c, const uint8_t *payload, size_t n, int retries)
     char a[96], b[96];
     size_t wn;
 
-    if (n > 64) {
-        snprintf(c->err, sizeof c->err, "command too long");
+    if (!n || n > 64 || retries < 0 || c->desynchronized) {
+        snprintf(c->err, sizeof c->err, "invalid command or desynchronized stream");
         return 0;
     }
+    size_t c9_count = 0;
+    for (size_t i = 0; i < n;) {
+        uint8_t cmd = payload[i];
+        size_t k = nargs(cmd);
+        if (i + 1 + k > n) {
+            snprintf(c->err, sizeof c->err, "incomplete command arguments");
+            return 0;
+        }
+        if (cmd == 0xC9) c9_count++;
+        if (cmd != 0xC9 && cmd != 0x5A && cmd != 0xD0 && cmd != 0xD1)
+            retries = 0;
+        i += 1 + k;
+    }
+    if (c9_count > 8) retries = 0;
     wn = expected_echo(payload, n, want);
     for (int t = 0; t <= retries && !c->s->error; t++) {
         size_t gn = xfer(c, payload, n, want, wn, got);
@@ -163,21 +198,29 @@ int consult_command(consult_t *c, const uint8_t *payload, size_t n, int retries)
 int consult_read_frame(consult_t *c, int expected_len, double timeout, uint8_t *out)
 {
     double end = mono() + timeout;
+    if (c->desynchronized) {
+        snprintf(c->err, sizeof c->err, "stream desynchronized; explicit recovery required");
+        return -1;
+    }
     while (mono() < end && !cancelled(c) && !c->s->error) {
         uint8_t b, n;
         if (c->frame_started) {
             c->frame_started = 0;
         } else {
-            if (serial_read(c->s, &b, 1, timeout) != 1)
+            if (read_until(c, &b, 1, end) != 1)
                 break;
             if (b != 0xFF)
                 continue;
         }
-        if (serial_read(c->s, &n, 1, 0.3) != 1)
+        if (read_until(c, &n, 1, end) != 1) {
+            c->desynchronized = 1;
             break;
-        if (expected_len >= 0 && n != expected_len)
-            continue;
-        if (serial_read(c->s, out, n, 0.3) == n)
+        }
+        if (read_until(c, out, n, end) != n) {
+            c->desynchronized = 1;
+            break;
+        }
+        if (expected_len < 0 || n == expected_len)
             return n;
     }
     snprintf(c->err, sizeof c->err, "no frame");

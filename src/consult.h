@@ -30,6 +30,7 @@ typedef struct {
     serial_t *s;
     atomic_int *cancel;     /* optional: init and frame reads give up once it's set */
     int frame_started;      /* command() already consumed the first frame's FF */
+    int desynchronized;     /* truncated frame: no trustworthy ack boundary */
     int paced;              /* send one byte at a time, each after its echo (the BCM) */
     char err[256];          /* why the last call failed */
 } consult_t;

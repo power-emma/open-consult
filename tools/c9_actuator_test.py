@@ -48,6 +48,7 @@ sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS
 from consult.transport import DEFAULT_DEV, Transport
+from consult.experimental import mutation_stream, require_research_ecu
 
 LOG_DIR = os.path.join(ROOT, "logs")
 
@@ -377,6 +378,7 @@ def run_live(dev, target, addr_list, main_addr, n_hold_frames=20):
         if r is None:
             sys.exit("init failed (ignition on?)")
         attempt, secs, junk, ecu = r
+        require_research_ecu(c)
         print(f"init ok: id {ecu:02X}, attempt {attempt}, {secs * 1000:.0f} ms")
 
         # --- Baseline ---
@@ -394,22 +396,8 @@ def run_live(dev, target, addr_list, main_addr, n_hold_frames=20):
               f"(18 overrun + 1 probe at ${target:04X}) + F0...")
         payload = b"".join(bytes([0xC9, a >> 8, a & 0xFF])
                           for a in probe_list)
-        c.command(payload)
-        t.note("trigger sent")
-
-        # Stream frames — each fires one downstream write.
-        # The last byte of each frame is the probe: live RAM at the target.
-        frames = []
-        probe_vals = []
-        try:
-            for fi in range(n_hold_frames):
-                f = c.read_frame(expected_len=n_addrs, timeout=1.0)
-                frames.append(f)
-                pv = f[probe_pos] if len(f) > probe_pos else None
-                probe_vals.append(pv)
-        except TimeoutError:
-            pass
-        c.stop()
+        frames = mutation_stream(c, payload, frames=n_hold_frames, expected_len=n_addrs)
+        probe_vals = [f[probe_pos] for f in frames]
         t.note(f"stopped after {len(frames)} frame(s)")
         print(f"  streamed {len(frames)} frame(s)")
 
@@ -425,7 +413,7 @@ def run_live(dev, target, addr_list, main_addr, n_hold_frames=20):
                   else f"    frame {fi:2d}: ??")
 
         if changed_frame is not None:
-            print(f"\n  ✓ DOWNSTREAM WRITE VISIBLE on frame {changed_frame}: "
+            print(f"\n  Unverified payload change on frame {changed_frame}: "
                   f"${target_before:02X} → ${probe_vals[changed_frame]:02X}")
         else:
             print(f"\n  probe unchanged across {len(frames)} frames "
@@ -457,12 +445,12 @@ def run_live(dev, target, addr_list, main_addr, n_hold_frames=20):
         # --- Verdict ---
         print(f"\n{'=' * 60}")
         if target_before != target_after:
-            print(f"DOWNSTREAM WRITE CONFIRMED: ${target:04X} changed "
+            print(f"TARGET READBACK CHANGED (causality/value control unverified): ${target:04X} changed "
                   f"${target_before:02X} → ${target_after:02X}")
             lbl = region_label(target)
             if lbl:
                 print(f"  location: {lbl}")
-            print(f"  The overrun chain reached active-test state.")
+            print(f"  Compare independent readback and collateral state before classifying this trial.")
         elif n_changed > 0:
             print(f"OVERRUN FIRED — {n_changed} byte(s) changed, but target "
                   f"${target:04X} unchanged (${target_before:02X}).")
@@ -473,7 +461,7 @@ def run_live(dev, target, addr_list, main_addr, n_hold_frames=20):
             else:
                 print(f"  $07E3 = ${flags_after:02X}: flag OK, check cursor path.")
         else:
-            print(f"NO CHANGE — key-cycle and retry.")
+            print(f"NO CHANGE — trial unverified; establish a fresh baseline before another trial.")
         print(f"{'=' * 60}")
 
         # --- Persistence ---
@@ -492,8 +480,9 @@ def run_live(dev, target, addr_list, main_addr, n_hold_frames=20):
         else:
             print(f"  re-init failed")
 
-    except (ConsultError, TimeoutError) as e:
+    except (OSError, ValueError) as e:
         print(f"error: {e}")
+        raise SystemExit(1) from e
     finally:
         t.close()
         print(f"\nlog: {log}")
@@ -514,6 +503,8 @@ def main():
     ap.add_argument("--dry-run", action="store_true",
                     help="simulate only, don't talk to the ECU")
     args = ap.parse_args()
+    if not 1 <= args.frames <= 1000:
+        ap.error("--frames must be in 1..1000")
 
     target = args.target
     if not (DOWNSTREAM_LO <= target <= DOWNSTREAM_HI):
@@ -544,8 +535,8 @@ def main():
             sys.exit("not sent")
     else:
         print("-" * 60)
-        print("SAFETY: writes to Consult handler state only ($0740-$08D6).")
-        print("No code redirect possible. Key cycle clears all corruption.")
+        print("EXPERIMENTAL: controlled downstream writes remain unconfirmed.")
+        print("Live state may be corrupted; verify reset behavior and target readback.")
         print("Run with key on, ENGINE OFF.")
         print("-" * 60)
         ok = input("Proceed? [y/N] ")

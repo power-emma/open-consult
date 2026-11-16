@@ -1,5 +1,7 @@
 # Processor-write research record — 2026-11-15
 
+> **Review added 2026-11-16:** [Write-primitive skepticism and evidence limits](SKEPTICISM.md) distinguishes the observed RAM corruption from unconfirmed chosen-target writes and failed exploit chains. This review involved no new hardware test.
+
 This records existing work on the owned 23710-2L904 engine ECU (Mitsubishi 7700-family main processor and H8 second processor). No implementation, simulation, serial connection, or hardware test was performed for this documentation pass. Starting checkout: `ee89287` (`trying to find write bugs`); the working tree was clean and local main matched the locally recorded origin/main. That does not verify the remote server or recover work absent from this machine.
 
 ## Evidence and recovery

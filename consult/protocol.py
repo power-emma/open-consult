@@ -27,6 +27,8 @@ def expected_echo(payload: bytes) -> bytes:
     while i < len(payload):
         cmd = payload[i]
         n = NARGS.get(cmd, 0)
+        if i + 1 + n > len(payload):
+            raise ValueError("incomplete command arguments")
         out.append(~cmd & 0xFF)
         out += payload[i + 1:i + 1 + n]
         i += 1 + n
@@ -36,6 +38,20 @@ def expected_echo(payload: bytes) -> bytes:
 class Consult:
     def __init__(self, transport):
         self.t = transport
+        self._desynchronized = False
+
+    def _read_until(self, count, deadline):
+        """Exact-size attempt under one deadline, despite idle-timeout transport."""
+        data = bytearray()
+        while len(data) < count:
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                break
+            chunk = self.t.read(1, timeout=remaining)
+            if not chunk:
+                break
+            data += chunk
+        return bytes(data)
 
     def stop(self, timeout=2.0):
         """Send 30 and read until a stop ack. Returns (ack byte or None, bytes before it).
@@ -44,19 +60,31 @@ class Consult:
         isn't taken for the ack. Only whole frames come before the ack (checklist 1.5).
         """
         self.t.write(bytes([STOP]))
-        self._frame_started = False
         before = bytearray()
         end = time.monotonic() + timeout
+        # A truncated payload has no trustworthy acknowledgment boundary.
+        if self._desynchronized:
+            return None, bytes(before)
         while time.monotonic() < end:
-            b = self.t.read(1, timeout=0.3)
+            if getattr(self, "_frame_started", False):
+                self._frame_started = False
+                b = b"\xff"
+            else:
+                b = self._read_until(1, end)
             if not b:
                 continue
             before += b
             if b[0] == 0xFF:
-                n = self.t.read(1, timeout=0.3)
+                n = self._read_until(1, end)
                 before += n
-                if n:
-                    before += self.t.read(n[0], timeout=0.3)
+                if not n:
+                    self._desynchronized = True
+                    break
+                payload = self._read_until(n[0], end)
+                before += payload
+                if len(payload) != n[0]:
+                    self._desynchronized = True
+                    break
                 continue
             if b[0] in STOP_ACKS:
                 return b[0], bytes(before[:-1])
@@ -108,11 +136,13 @@ class Consult:
                     continue
                 if b[0] == ~ecu & 0xFF:
                     self.ecu = ecu
+                    self._frame_started = False
+                    self._desynchronized = False
                     return attempt, time.monotonic() - sent, bytes(junk), ecu
                 junk += b
         return None
 
-    def command(self, payload: bytes, retries=2):
+    def command(self, payload: bytes, retries=2, *, mutation=False):
         """Send a command list, check the echo, then send F0 to start streaming.
 
         The 1998 Maxima (seen 2026-11-14) sometimes answers a valid command with FE FE
@@ -120,6 +150,20 @@ class Consult:
         F0 with FE and sends no frames. Both are retried after a stop.
         """
         want = expected_echo(payload)
+        if not payload or retries < 0:
+            raise ValueError("empty command or negative retry count")
+        if self._desynchronized:
+            raise ConsultError("stream desynchronized; explicit recovery required")
+        # Oversized C9 and active/mixed lists may mutate state at F0. Never
+        # replay them after a missing response, including legacy tool callers.
+        i, c9_count = 0, 0
+        while i < len(payload):
+            cmd = payload[i]
+            c9_count += cmd == 0xC9
+            mutation |= cmd not in (0xC9, 0x5A, 0xD0, 0xD1)
+            i += 1 + NARGS.get(cmd, 0)
+        if mutation or c9_count > 8:
+            retries = 0
         why = ""
         for n in range(retries + 1):
             got = self._send(payload, want)
@@ -159,23 +203,27 @@ class Consult:
     def read_frame(self, expected_len=None, timeout=1.0) -> bytes:
         """Read one FF <n> <data...> frame, parsing by length (data may contain FF)."""
         end = time.monotonic() + timeout
+        if self._desynchronized:
+            raise TimeoutError("stream desynchronized; explicit recovery required")
         while time.monotonic() < end:
             if getattr(self, "_frame_started", False):
                 self._frame_started = False
             else:
-                b = self.t.read(1, timeout=timeout)
+                b = self._read_until(1, end)
                 if not b:
                     break
                 if b[0] != 0xFF:
                     continue
-            n = self.t.read(1, timeout=0.3)
+            n = self._read_until(1, end)
             if not n:
+                self._desynchronized = True
                 break
             n = n[0]
-            if expected_len is not None and n != expected_len:
-                continue
-            data = self.t.read(n, timeout=0.3)
-            if len(data) == n:
+            data = self._read_until(n, end)
+            if len(data) != n:
+                self._desynchronized = True
+                break
+            if expected_len is None or n == expected_len:
                 return data
         raise TimeoutError("no frame")
 

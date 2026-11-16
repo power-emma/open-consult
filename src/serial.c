@@ -226,10 +226,17 @@ void serial_close(serial_t *s)
 void serial_write(serial_t *s, const uint8_t *buf, size_t n)
 {
     log_hex(s, "TX", buf, n);
+    double end = mono() + 1.0;
     while (n > 0) {
         DWORD m = 0;
-        if (!WriteFile(s->h, buf, (DWORD)n, &m, NULL) || m == 0) {
-            DWORD code = m == 0 ? ERROR_TIMEOUT : GetLastError();
+        if (mono() >= end) {
+            s->error = EIO;
+            serial_note(s, "write deadline exceeded; ECU execution unknown");
+            return;
+        }
+        BOOL ok = WriteFile(s->h, buf, (DWORD)n, &m, NULL);
+        if (!ok || m == 0) {
+            DWORD code = !ok ? GetLastError() : ERROR_TIMEOUT;
             s->error = EIO;
             serial_note(s, "write failed: %s", win_error(code));
             return;
@@ -237,7 +244,10 @@ void serial_write(serial_t *s, const uint8_t *buf, size_t n)
         buf += m;
         n -= m;
     }
-    FlushFileBuffers(s->h);     /* like tcdrain */
+    if (!FlushFileBuffers(s->h)) {     /* driver drain remains potentially blocking */
+        s->error = EIO;
+        serial_note(s, "write drain failed: %s", win_error(GetLastError()));
+    }
 }
 
 size_t serial_read(serial_t *s, uint8_t *buf, size_t n, double timeout)
@@ -342,21 +352,36 @@ static int wait_fd(int fd, int for_write, double timeout)
 void serial_write(serial_t *s, const uint8_t *buf, size_t n)
 {
     log_hex(s, "TX", buf, n);
+    double end = mono() + 1.0;
     while (n > 0) {
+        double remaining = end - mono();
+        if (remaining <= 0) {
+            s->error = ETIMEDOUT;
+            serial_note(s, "write deadline exceeded; ECU execution unknown");
+            return;
+        }
         ssize_t m = write(s->fd, buf, n);
         if (m < 0) {
             if (errno == EINTR)
                 continue;
-            if (errno == EAGAIN && wait_fd(s->fd, 1, 1.0) > 0)
+            if (errno == EAGAIN && wait_fd(s->fd, 1, remaining) > 0)
                 continue;
             s->error = errno;
             serial_note(s, "write failed: %s", strerror(errno));
             return;
         }
+        if (m == 0) {
+            s->error = EIO;
+            serial_note(s, "write made no progress; ECU execution unknown");
+            return;
+        }
         buf += m;
         n -= (size_t)m;
     }
-    tcdrain(s->fd);
+    if (tcdrain(s->fd) < 0) {    /* driver drain remains potentially blocking */
+        s->error = errno;
+        serial_note(s, "write drain failed: %s", strerror(errno));
+    }
 }
 
 size_t serial_read(serial_t *s, uint8_t *buf, size_t n, double timeout)
