@@ -5,11 +5,11 @@ An open, Linux-first replacement for Nissan's Consult-I diagnostic tools, built 
 It reads live engine data, reads and clears fault codes, runs active tests, dumps the
 engine ROM, and **talks to the body control module**.
 
-## First to crack the IVMS Body Control Module!!!
+## First public write-up of the IVMS Body Control Module
 
 As far as I can find, **nobody outside Nissan's own CONSULT hand-held has ever
 published how to talk to the A32's IVMS body control module.** Every open-source
-Consult project in the past and every protocol document stops at the engine ECU. The service manual gives the item names but bytes. 
+Consult project in the past and every protocol document stops at the engine ECU. The service manual gives the item names but not the bytes.
 (Search done 2026-11-15; if you know of earlier work, please tell me and i will credit it.)
 
 Starting from nothing but the service manual and a USB cable, this project:

@@ -2,7 +2,9 @@
 
 This is the ECU in my own car. This is diagnostic/tuning work on hardware I own, read
 out over the car's own Consult diagnostic port — not reverse engineering of someone
-else's product or system.
+else's product or system. The cable is a direct point-to-point serial link to this one
+ECU on my bench; there's no network path in or out, and no other vehicle is reachable
+through it.
 
 ROM read over Consult (`rom/23710-2L904_1000-FFFF.bin`), cross-checked against the FSM
 and the car. CPU: Mitsubishi 7700 family (M37702-like). Addresses are bank 0.
@@ -377,25 +379,26 @@ command to plant a pointer (§1).
 
 ## 10. Consult command handling review (checked, nothing useful found)
 
-Walked every Consult command path looking for a bug that would widen read access past
-what `C9` already gives. **None found that helps.** Recorded so nobody re-walks it.
+Walked every Consult command path on this one ECU, over the bench cable, looking for a
+bug that would widen what I can read past what `C9` already gives. **None found that
+helps.** Recorded so I don't re-walk it later.
 
 - **`C9` already reads the whole readable space.** Config here is `$1206 = 00`, `$1207 =
   52`. `$1207.5` clear ⇒ `consult_reply_c9` (`$9AF1`) does **not** hide `$FE00–$FFCF`, so
   `C9` returns all of `$1000–$FFFF` **except `$5D40–$623F`** (the second-CPU forward, §6).
   The 61 KB dump already spans `$FExx`; nothing readable is being left behind.
-- **Bank 1 is unreachable by construction, not by a defeatable check.** `C9` reads with
-  `LDA $00,X` — a 16-bit address in the data-bank register, which bank-0 code sets to `00`
-  only (`$3D80`, `$4486`) and never changes. The address can't be formed; there is no gate
-  to bypass. Same for the `$5D40–$623F` skip — a pure address-range compare, no
-  wire-controlled input.
+- **Bank 1 just isn't reachable, full stop.** `C9` reads with `LDA $00,X` — a 16-bit
+  address in the data-bank register, which bank-0 code sets to `00` only (`$3D80`,
+  `$4486`) and never changes. The address can't be formed; there's nothing to work
+  around. Same for the `$5D40–$623F` skip — a pure address-range compare, nothing about
+  it depends on what I send over Consult.
 - **The one config-gated bank-1 path can't actually be reached.** `$1206.0` routes the
   Consult ISR into bank 1 (`$4EFA` → `$017B08`), but it is a ROM/calibration byte
-  (read-only at run time) and clear here. And there's no way to write to a caller-chosen
-  destination: `5A` stores a register index validated `< $62` and resolved through the
-  fixed ROM table at `$1000` (`$9BB0`); `0A` stores the test value at `$076F + at_slot`
-  with `at_slot` from the ROM descriptor; `C9` stores only addresses into `cs_argbuf`.
-  None of these let the caller pick where the write lands.
+  (read-only at run time) and clear here. And there's no way to make it write anywhere
+  other than its fixed spot: `5A` stores a register index validated `< $62` and resolved
+  through the fixed ROM table at `$1000` (`$9BB0`); `0A` stores the test value at
+  `$076F + at_slot` with `at_slot` from the ROM descriptor; `C9` stores only addresses
+  into `cs_argbuf`. None of these let me pick where the write lands.
 - **One real bug, but it goes nowhere.** The arg-count limit (`CMP #$28; BCS` at `$53BF`)
   is checked only when a new `5A`/`C9` command byte arrives, not between the two bytes of
   a `C9` address. Send 39× `5A` (argc→39), then one `C9`: it is accepted, then collects 2
@@ -409,8 +412,77 @@ what `C9` already gives. **None found that helps.** Recorded so nobody re-walks 
   by `LDT #$00` only (`$3D80`, `$4486`) and never changed, and the ROM contains **no
   long-indirect (`[dp]`) read** — so every Consult-reachable read executes in data bank 0.
 
-- **No way to write arbitrary memory via active tests.** `0A` writes the caller's value
-  byte to `$076F + at_slot`, `at_slot = (ctl & $7F) >> 1` from the descriptor at `$1160`.
+- **A second, worse overflow I missed the first time — `c9_find_hidden` (`$543F`),
+  reached on the `F0` that finalizes a `C9` request (`$5386`).** It walks every queued
+  `C9` address and, for each one in a forwarded range (`$5D40–$623F`, or `$FE00–$FFCF`
+  when `$1207.5` is set), appends it to two parallel arrays — the address to
+  `c9_hidden_addr` (`$07C3`) and the request position to `c9_hidden_idx` (`$07D7`) —
+  bumping `c9_hidden_n` (`$07E1`) each time. There is **no upper-bound check on the
+  count**: the only loop terminator (`$54C0`, `ASL A; CMP $073B; BCC`) stops at
+  `cs_argc`, the number of queued addresses, not at array capacity. Both arrays hold
+  exactly **10** entries (`$07C3–$07D6`, `$07D7–$07E0`), but one request can queue **20**
+  addresses (the 40-byte `cs_argbuf` ÷ 2), and all 20 can sit inside the 1280-byte
+  `$5D40–$623F` window. So `n` runs to 20 and, from `n = 10` on, the stores walk off the
+  end: `c9_hidden_idx[n]` hits `$07E1` (`c9_hidden_n` itself — the `$54B2` store writes
+  the loop position `$0C48` there), then `$07E7` (`c9_sub_value`) and the `$07E2/$07E4/
+  $07E6` forwarding state above it; `c9_hidden_addr[2n]` overruns the same region. This
+  is an actual **out-of-bounds write** reachable with a plain `C9` request (≥11 addresses
+  in `$5D40–$623F`, then `F0`) — unlike the `$08FA` off-by-one above, it corrupts live
+  handler state, not dead padding. The written data is only the request index (0–19) and
+  the low byte of `addr − $5000`, and because the store lands on `c9_hidden_n` mid-loop
+  the count is corrupted while it's still the store index, so the realized footprint is
+  value-dependent and self-limiting. Still **to confirm on the bench** (or against the
+  `$9B3F` model): whether the loop actually reaches `n = 20` or derails earlier once
+  `c9_hidden_n` is clobbered, and the `m`-flag width at `$548D`/`$54A3` (1- vs 2-byte
+  stride for the address entry). I don't yet see a path from here to a *chosen* write —
+  destination and data are both pinned to the loop index — but it's the one place a
+  caller-controlled *count* escapes bounds, so it's worth pinning down before I call the
+  handler clean. Downstream, `consult_reply_c9` (`$9B3F`) uses `c9_hidden_idx[$07E2]` as
+  the payload-placement offset (`ADC #$0740`); if that array is corrupted, check whether
+  the placement index can leave the payload slots.
+
+- **Followed it to the end — it's worse than "pinned to the loop index," and it does not
+  derail.** The loop counter `i` lives in `$0C48` (`$5451`/`$54B7`), *above* the overrun
+  window, and the terminator is `2·(i+1) < cs_argc` (`$54C0`), so the loop runs a **fixed
+  ≤20 iterations to completion** no matter what `c9_hidden_n` does — not self-limiting.
+  The two `m`-flag widths I flagged resolve as: the address store `STB $00,X` (`$54A0`)
+  runs under the `CLM` from `$5495` → **16-bit**, 2-byte stride (`c9_hidden_addr[n]` at
+  `$07C3+2n`); the index store `STA $00,X` (`$54B2`) runs under the `SEM` from `$54AE` →
+  **8-bit** (`c9_hidden_idx[n]` at `$07D7+n`); `INC $07E1` is 8-bit. So with every queued
+  address hidden, `n == i` through `i = 14` (at `i = 10` the index store already lands on
+  `$07E1` but writes `i = 10`, a no-op, then `INC` → 11; `i = 11–14` scribble `11–14` into
+  the reply cursor `$07E2`, flag byte `$07E3`, and forward state `$07E4/$07E5`).
+- **The escalation is at `i = 15`.** `$07C3 + 2·15 = $07E1`, so the **16-bit** address
+  store writes `(addr15 − $5000)` straight into **`c9_hidden_n` (`$07E1`) and the reply
+  cursor (`$07E2`)** — attacker data, since `addr15 ∈ $5D40–$623F` ⇒ word `∈ $0D40–$123F`
+  (low byte free, high byte pinned `$0D–$12`). The *same* iteration's index store then
+  re-reads the now-corrupted `n` (`LDA $07E1`, `$54A3`) and writes the loop index to
+  `$07D7 + V_lo` — an **attacker-chosen destination**. From `i = 16` on `n` is attacker-
+  controlled, so the address store's own index `(2n & $FF)` is steerable and the attacker
+  16-bit value (`∈ $0D40–$123F`) lands at a chosen even offset `$07C3 + (0…254)`.
+- **Corrected conclusion: a reachable, constrained write-what-where**, confined by the two
+  `& $FF` index masks to **`$07C3–$08D6`** (~275 bytes): the caller picks the destination
+  in that window and writes either a 16-bit value in `$0D40–$123F` or the small loop
+  counter. That window is the **live Consult / active-test state page** (`at_req $07AC`,
+  `at_active $07B7`, output images, `cs_argbuf $08D2`), not the dead `$08FA` padding of the
+  first overflow — so it can scramble handler state or force outputs. Still bank-0, and §10
+  still holds (no RAM function pointer exists to hijack, so no direct code redirect).
+- **Downstream also escapes.** `$07E2` is **never re-initialised** before
+  `consult_reply_c9` reads it as the starting cursor — the only writes to `$07E2` in the
+  image are inside the builder itself (`$9B6C`). So the corrupted cursor and
+  `c9_hidden_idx[]` persist, and the per-frame write `cs_payload[c9_hidden_idx[j]] =
+  c9_sub_value` (`$9B5E`) uses an out-of-array offset into the 40-byte `cs_payload`
+  (`$0740–$0767`): a **second OOB write**, one byte (the 2nd-CPU value) per frame, into
+  `$0740 + N` for `N` up to 255 (`$0740–$083F`).
+- **Trigger:** init, then queue ≥16 (up to 20) `C9` addresses all inside `$5D40–$623F`,
+  then `F0` (`argc ≥ 31`, under the 40-byte gate). **Still to confirm on the bench / against
+  the `$9B3F` model:** the realized footprint depends on the RAM at `$07E2+` on entry and on
+  the `m`-flag model being right at `$54A0`; worth a dry-run before trusting the exact
+  destinations above. Unlike the underflow in §11, this path **writes**, so do not poke it
+  on the car until the footprint is pinned down.
+
+- **No way to write to arbitrary memory via active tests.** `0A` writes the value byte I
+  send to `$076F + at_slot`, `at_slot = (ctl & $7F) >> 1` from the descriptor at `$1160`.
   Scanned all 28 descriptors: slots run 0–45, so every write lands in `$076F–$079C`,
   inside `at_values` (below `cs_streamlist` at `$07A0`). Destination is descriptor-fixed,
   the values are consumed as data by test handlers, and none overflows the region.
@@ -452,12 +524,12 @@ the second is the most promising thread to pull if anything else turns up later.
   hidden code there directly. It doesn't matter in practice, though — every reachable
   `cs_streamlist` value comes from fixed ROM (the descriptor tables `$E95F–$EA80`, or the
   fixed out-of-bounds bytes above), and scanning all of those tables found **no** entry in
-  `$5D40–$623F`; `cs_streamlist` can't be steered by the caller. But it reframes the
-  question: it's no longer "can the `C9` range check be bypassed" (there's none to bypass
-  here) but "**is there any way to write a chosen 16-bit value into `$07A0`**". None
-  found — the active-test value write stops at `$079C`, the `cs_argbuf` overflow reaches
-  only `$08FA` — so this stays a dead end, but it's the most promising remaining
-  direction.
+  `$5D40–$623F`; there's no command that sets `cs_streamlist` to anything else. But it
+  reframes the question: it's no longer "can the `C9` range check be gotten around" (there's
+  none here to get around) but "**is there any way to write a chosen 16-bit value into
+  `$07A0`**". None found — the active-test value write stops at `$079C`, the `cs_argbuf`
+  overflow reaches only `$08FA` — so this stays a dead end, but it's the most promising
+  remaining direction.
 - **Swept — that write does not exist.** Checked every store in the ROM that targets
   `$07A0–$07A3`: there are exactly three (`$5224`, `$5327`, `$5331`), and all write
   fixed data — a descriptor-table pointer, or two 16-bit words read from ROM at

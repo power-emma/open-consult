@@ -429,6 +429,10 @@ def _sub_block(c, addrs, budget):
     Returns (values, ok_flags, frames) where frames is the raw list of B-byte frames.
     """
     n = len(addrs)
+    # Safety: a C9 request of >10 addresses overruns cs_argbuf and corrupts ECU
+    # RAM (ROM_ANALYSIS.md §6). Never send a block that can reach that boundary.
+    if n > 10:
+        raise ConsultError(f"refusing {n} C9 addresses per request; max 10 (cs_argbuf overrun)")
     payload = b"".join(bytes([0xC9, a >> 8, a & 0xFF]) for a in addrs)
     frames = []
     try:
@@ -457,13 +461,13 @@ def cmd_sub_dump(c, args):
     For C9 addresses $5D40-$623F the ECU doesn't read its own memory: it passes
     (address - $5000) to the other CPU and fills the byte from that CPU's reply, one
     per reply frame. Rather than one command per byte, we queue a block of up to
-    `--block` addresses (cs_argbuf holds 20 C9 addresses) in a single C9 request and
+    `--block` addresses (max 10; >10 overruns cs_argbuf, §6) in a single C9 request and
     read the second CPU's bytes as a stream, which is far fewer handshakes and gives a
     coherent block per request. Read-only. Output: rom/sub_<first-5000>-<last-5000>.bin
     and a .txt of each address (ok/??) so unstable bytes can be checked.
     """
     connect(c)
-    first, last, block = args.first, args.last, max(1, min(args.block, 20))
+    first, last, block = args.first, args.last, max(1, min(args.block, 10))
     os.makedirs(ROM_DIR, exist_ok=True)
     base = os.path.join(ROM_DIR, f"sub_{first - 0x5000:04X}-{last - 0x5000:04X}")
     data, unstable, t0 = bytearray(), 0, time.monotonic()
@@ -633,8 +637,8 @@ def main():
     sd = sub.add_parser("sub-dump", help="C9 $5D40-$623F: read the second CPU's memory")
     sd.add_argument("--first", type=lambda x: int(x, 16), default=0x5D40)
     sd.add_argument("--last", type=lambda x: int(x, 16), default=0x623F)
-    sd.add_argument("--block", type=int, default=16,
-                    help="C9 addresses to queue per request (max 20)")
+    sd.add_argument("--block", type=int, default=10,
+                    help="C9 addresses to queue per request (max 10; >10 overruns cs_argbuf)")
     sd.add_argument("--frames", type=int, default=0,
                     help="frames to read per block (0 = 2*block+6)")
     r = sub.add_parser("rom-dump", help="C9: dump ROM to a file")
