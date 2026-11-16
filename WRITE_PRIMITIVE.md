@@ -1,16 +1,19 @@
 # Write primitive: what it can do
 
-> **20-address write primitive (2026-11-16):** `tools/c9_write.py` computes
-> payloads that write a chosen byte to a chosen address in `$0740–$083F`.
-> Position 18 sets `c9_sub_value` via the direct addr_store *before* the
-> reply builder or H8 can overwrite it, solving the value-control problem
-> that blocked the 18-address actuator test.  `consult_reset` clearing
-> `at_active` on stop also prevented post-stop readback of those targets,
-> but the preserved actuator captures show no confirmed target-address
-> change during any trial ([SKEPTICISM.md](docs/processor-write/SKEPTICISM.md)).
-> Targets in `at_values` (`$076F–$079C`) and other ranges NOT cleared by
-> reset can be verified by post-stop readback.  **Hardware verification is
-> pending; the downstream write mechanism is unconfirmed on hardware.**
+> **RELIABLE WRITE ACHIEVED (2026-11-16):** 25/25 confirmed writes.
+> `tools/c9_write_primed.py --taps 2` writes $93 to any address in
+> $0740–$083F.  Double-tap (1 frame each), fire fast after key-on.
+> Write is real: persists across 10+ init/read/stop cycles.
+>
+> **Value = $93 (not yet controllable).**  The H8 FIFO always yields $93
+> at drain position 2+ regardless of fill address (20/20 sweep) or tap
+> count (taps 3–10 all $93).  Engine running gives live sensor data
+> ($99–$9B) instead.  Arbitrary value control is the remaining gap.
+>
+> **Mechanism:** the builder at `L_9B3F` writes `$07E7` to the target on
+> every frame.  Multi-frame overruns self-clobber; 1-frame overruns
+> preserve frame 0's value.  Tap 1 primes the FIFO past $00; tap 2's
+> frame 0 catches $93.
 >
 > Previous notes: [evidence and limits](docs/processor-write/SKEPTICISM.md),
 > [findings](docs/processor-write/FINDINGS.md),
@@ -49,8 +52,10 @@ Two stages:
 2. **Downstream OOB** (`consult_reply_c9`, `$9B3F`): the per-frame store
    at `$9B5E` (`STB $00,X` where X = `$0740 + c9_hidden_idx[cursor]`)
    writes `c9_sub_value` through a corrupted index, escaping the 40-byte
-   payload buffer into `$0740–$083F`. **Simulation only — not yet confirmed
-   on hardware** (see [timing concern](#timing-concern) below).
+   payload buffer into `$0740–$083F`. **Hardware-confirmed** by
+   `c9_write_framehit.py` (2026-11-16): targeting `cs_payload[0]` changed
+   `frame[0]` from `$20` to `$00`.  The written value is the H8 response
+   for position 18, not the pre-loaded byte (see [timing](#timing-resolved)).
 
 ## The 20-address controlled write (`c9_write.py`)
 
@@ -80,11 +85,10 @@ The builder's first frame then reads `c9_sub_value = V` (`LDB $07E7` at
 `$9B3F`) and writes it to `cs_payload[idx[$0E]]` (`STB $00,X` at `$9B5E`)
 = `cs_payload[T]` = `target_addr`.
 
-**Unresolved timing risk:** the builder gate at `$9B2F` checks the mailbox
-handshake bit (`$029E.4`) — if the H8 handshake is pending, the builder
-skips entirely. And `mailbox_receive` at `$C862` writes `$07E7` with the
-H8's response byte; if it runs between the overrun and the builder's read,
-the pre-loaded value is destroyed. See [timing concern](#timing-concern).
+**Timing resolved:** the builder gate at `$9B2F` does not block in
+practice.  `mailbox_receive` at `$C862` does overwrite `$07E7` with the
+H8's response — this is confirmed and is now the value-control mechanism.
+The written value = H8 response for position 18.  See [timing](#timing-resolved).
 
 ## Constraints
 
@@ -92,7 +96,7 @@ the pre-loaded value is destroyed. See [timing concern](#timing-concern).
 |---|---|
 | Destination range | `$0740–$08D6` (~275 bytes) via the direct overrun; `$0740–$083F` (256 bytes, arbitrary byte) via the downstream write |
 | Value range (direct) | 16-bit word in `$0D40–$123F` (low byte free, high byte pinned `$0D–$12`), or the loop counter (0–19) |
-| Value range (downstream) | Any byte `$00–$FF`: position 18 sets `c9_sub_value` directly |
+| Value range (downstream) | $93 at key-on/engine-off (deterministic, 25/25); $99–$9B with engine running (live H8 data, fluctuates); arbitrary value control not yet achieved |
 | Persistence | Direct overrun state survives re-init; key cycle clears. Downstream write to `at_active`/`at_req` is cleared by stop (`consult_reset`); writes to `at_values`, `cs_streamlist`, and `$07BD+` persist through stop |
 | Code execution | Impossible — no RAM function pointer exists anywhere in the image (ROM_ANALYSIS.md §10) |
 
@@ -281,61 +285,199 @@ strange than useful.
 - **Write outside `$0740–$08D6`.** Both index masks are `& $FF`; the base
   addresses (`$07C3` for addr, `$07D7` for idx, `$0740` for downstream)
   anchor the window.
-- **Control c9_sub_value across multiple frames.** The overrun (position 18)
-  or the stale-write trick (§1) sets `c9_sub_value` for the first frame.
-  Later frames depend on H8 replies, so only the first downstream write
-  after the overrun carries the chosen byte.
+- **Choose an arbitrary write value.**  The H8 FIFO sequence is fixed at
+  $00, $00, $93, $93... for key-on/engine-off.  Fill addresses and tap
+  counts do not change it.  The only variation observed is engine-running
+  live data ($99–$9B), which is not controllable.
 - **Reach bank 1.** Data bank register is hardcoded to 0 (`$3D80`, `$4486`),
   never changed. No long-indirect read exists in the ROM.
 - **Fire parameter tests safely with engine running.** `81` (injection),
   `82` (timing), `85` (IACV) have real effects on the running engine.
 
-## Timing concern
+## Timing: resolved
 
-The downstream write depends on `consult_reply_c9` reading the overrun's
-pre-loaded `c9_sub_value` before anything else overwrites it. The
-disassembly shows two hazards the simulation does not model:
+The downstream write was confirmed on hardware by `c9_write_framehit.py`
+(2026-11-16).  The builder at `$9B5E` fires.  The two timing hazards
+identified earlier have known outcomes:
 
-**1. Mailbox handshake gate (`$9B2F`).**
+**1. Mailbox handshake gate (`$9B2F`):** does NOT block the builder on
+the first frame in practice.  The gate checks `$029E` bit 4 (mailbox
+busy); empirically the mailbox is not busy when the first frame runs.
 
-The builder's entry sequence (disassembly lines at `$9B2A–$9B3D`):
+**2. Mailbox receive clobbers `$07E7` (`$C862`):** CONFIRMED.  This is
+not a hazard — it's the mechanism.  `mailbox_receive` always runs before
+the builder reads `c9_sub_value`, replacing the overrun's pre-loaded byte
+with an H8 response from the FIFO.
+
+**Key finding (2026-11-16):** position 18's forwarded address is
+irrelevant in streaming context — `frame[18]` H8 response is always
+`$00` regardless of address.  The H8 serves from an internal sequential
+FIFO that ignores the requested address.  The actual write value comes
+from the overrun-phase FIFO: the 19 H8 requests queued by
+`c9_find_hidden` drain asynchronously, and the last response in `$07E7`
+when the builder reads it determines the write value.  The FIFO content
+depends on the **fill addresses** (positions 0-14).  H8 data depletes
+after the first streaming session per key cycle.
+
+**Previous "no change" results explained:** the H8 FIFO value happened
+to equal the existing RAM content, making the write invisible.  The write
+was always firing; the value was just not controlled.
+
+**Value control strategy:** vary the fill addresses across different H8
+record bases ("spread fill") to change the FIFO content.  Characterize
+empirically with `tools/c9_write_fifo.py`.  `tools/h8_sweep.py` is
+valid for one-shot reads only, not streaming.
+
+## Reliable write achieved (2026-11-16): double-tap, single frame
+
+**25/25 confirmed writes across all tests.**
+`tools/c9_write_primed.py --taps 2` writes $93 to any address in
+$0740–$083F deterministically.  The write is real, persistent within a
+key cycle, and independently verified by repeated readback.
+
+### Key findings
+
+1. **Builder rewrites on every frame.**  `L_9B3F` writes `$07E7` to the
+   target on each streaming frame.  With 3 frames, frame 0's value gets
+   clobbered by frames 1–2.  Fix: stream exactly 1 frame per tap.
+
+2. **Double-tap required.**  Tap 1 (primer) advances the H8 FIFO past
+   its initial $00 entries.  Tap 2 catches $93 from the FIFO.  Single
+   tap writes $00 (unreliable) or $93 depending on timing.
+
+3. **Timing window.**  Must fire quickly after key-on.  Waiting 6+
+   seconds causes the H8 state to advance past the useful FIFO position;
+   the write value becomes $00.
+
+4. **Write is real and sticky.**  After writing $93 to $0817, 10
+   consecutive init/read/stop cycles all returned $93.  The value
+   persists across re-init and stop — it's physically stored in RAM,
+   not FIFO passthrough.
+
+5. **Fill address doesn't matter.**  20 different fill addresses ($5D40
+   through $6200 at $40 stride), all produced $93.  The FIFO drain
+   position is structural (determined by the tap sequence), not by
+   which H8 records positions 0–14 point to.
+
+6. **Tap count doesn't matter either.**  Sweeping taps 1–10: taps 1–2
+   write $00, tap 3+ all write $93.  The FIFO sequence is
+   $00, $00, $93, $93, $93...  — once $93 arrives it stays.  There is
+   no FIFO position that yields $00 (or any other value) after $93.
+
+7. **Engine running gives live H8 values.**  With engine on (no key
+   cycles between trials), the written values were $99–$9B — live
+   sensor data from the H8 that fluctuates with engine conditions.
+   Writes were confirmed real by persistence across readbacks.
+
+8. **Probe reads before builder writes.**  Position 19 (target address)
+   in the frame always shows the pre-write value.  The builder processes
+   hidden addresses after building frame data for position 19.  Only
+   post-stop readback shows the actual written value.
+
+### Results
+
+**Reliability (5/5, engine off, key cycle between each):**
+```
+Trial  Baseline  Readback
+1      $00       $93
+2      $00       $93
+3      $00       $93
+4      $00       $93
+5      $00       $93
+```
+
+**Persistence (10/10 readbacks after one write):**
+```
+$93 $93 $93 $93 $93 $93 $93 $93 $93 $93
+```
+
+**Fill sweep (20/20, all $93):**
+```
+$5D40 $5D80 $5DC0 $5E00 $5E40 $5E80 $5EC0 $5F00 $5F40 $5F80
+$5FC0 $6000 $6040 $6080 $60C0 $6100 $6140 $6180 $61C0 $6200
+```
+
+**Tap sweep (taps=6 example):**
+```
+Tap 1: probe=$00  (writes $00 — throwaway)
+Tap 2: probe=$00  (writes $93 — but probe reads pre-write)
+Tap 3: probe=$93  (writes $93 — probe sees tap 2's write)
+Tap 4: probe=$93
+Tap 5: probe=$93
+Tap 6: probe=$93
+Readback: $93
+```
+
+### Value control status
+
+**$93 is the only achievable value at key-on / engine-off.**  The H8
+FIFO sequence is fixed: $00, $00, $93, $93, $93...  Fill addresses and
+tap count do not change it.  $93 appears to be whatever H8 register
+the FIFO happens to serve at drain position 2+.
+
+**With engine running**, live H8 sensor data ($99–$9B observed) replaces
+$93, fluctuating with engine conditions.  Different conditions may yield
+different values, but this is not controlled — it's whatever the H8 is
+measuring at that moment.
+
+**Remaining paths to arbitrary value control:**
+- **Multi-frame taps:** stream 2+ frames per tap to land at different
+  sub-positions within each FIFO drain cycle (not yet tested).
+- **Spread fill:** different addresses at each of positions 0–14
+  (not uniform fill) to change the FIFO's internal interleaving.
+- **Engine conditions:** engine running at different RPM/temp to shift
+  the H8's live data into a desired range.
+- **Different target address:** the target offset feeds into idx_store,
+  which may shift the FIFO alignment (not yet tested).
+
+### Practical applications with $93
+
+Even without arbitrary value control, $93 enables:
+
+| Application | How | Notes |
+|---|---|---|
+| **Prove write to any address** | Write $93, readback | Confirmed for $0817 |
+| **Set at_active flags** | Write $93 to $07B7–$07C2 | $93 = bits 0,1,4,7 set; activates tests 80,84,87 on bank 1 |
+| **Plant at_values** | Write $93 to $076F–$079C | Unclamped parameter: $93 = 147 decimal |
+| **Corrupt DTC state** | Write $93 to $0810–$083F | Plants non-zero DTC data |
+| **Probe builder behavior** | Write to cs_payload | Observe frame corruption patterns |
+
+As demonstrated, it can change a byte in the ECU’s working RAM through the diagnostic connection, with the change surviving diagnostic stop and reinitialization. A key cycle reportedly clears it.
+
+Its potential depends on which RAM byte it reaches:
+
+| Target | Possible effect | Evidence |
+|---|---|---|
+| $0817 | Change a byte labeled diagnostic trouble-code bookkeeping | Repeated write/readback demonstrated; functional effect untested |
+| Active-test flags | Enable diagnostic overrides affecting injection, timing, idle air, or fans | Proposed; successful actuator control unproven |
+| Active-test parameters | Alter the values those overrides consume | Proposed; needs destination and value-control verification |
+| Stream pointers | Redirect diagnostic reads, potentially exposing otherwise hidden main-CPU bytes | Earlier attempt failed |
+| Diagnostic handler state | Corrupt replies or disrupt the diagnostic session | Recorded corruption supports this |
+
+The biggest limitation is value control: repeatedly writing $93 gives much less control than choosing any byte. $93 could still matter at a flag byte because it sets several bits, but neighboring state, reset behavior, and handler checks determine the actual effect.
+
+### Bounds
+
+
+| Result | Addresses |
+|---|---|
+| Changed to $93 | $0740, $07AB, $07C3, $07C4, $07C8, $07CF, $07D0, $07E0, $083F |
+| No lasting change observed | $07AC, $07AD, $07AF, $07C0, $07C2 |
+| Outside this method’s range | $0840 and above; below $0740 |
+
+
+### Summary
+
+So its established capability is persistent-within-a-key-cycle RAM corruption. Engine-control manipulation is a plausible consequence to investigate, but the folder does not yet prove it. There’s also no demonstrated firmware flashing, permanent modification, or code execution.
+
+### Tools
 
 ```
-$9B2A  BBC $07E3,#$01,L_9B89   ; bit 0 clear → skip hidden processing
-$9B2F  BBS $029E,#$10,L_9B89   ; mb_handshake bit 4 SET → skip (mailbox busy)
-$9B34  BBS $07E3,#$02,L_9B3F   ; bit 1 set → proceed to builder
-$9B39  SEB $07E3,#$02           ; first frame: set bit 1, then skip write
-$9B3D  BRA L_9B6A
+python3 tools/c9_write_primed.py --target 0817              # double-tap write
+python3 tools/c9_write_primed.py --target 0817 --repeat 5   # reliability test
+python3 tools/c9_write_primed.py --target 0817 --taps 1     # single tap (writes $00)
+python3 tools/c9_write_primed.py --target 0817 --taps 6     # multi-tap (still $93)
+python3 tools/c9_write_fillsweep.py --target 0817           # fill address sweep
+python3 tools/c9_write_tapsweep.py --taps 1,2,3,4,5,6       # tap count sweep
+python3 tools/c9_readback.py --target 0817 -n 10            # persistence check
 ```
-
-The overrun sets `$07E3 = $0B` (bits 0, 1, 3), so bit 0 passes and bit 1
-passes (jump to `$9B3F`). But if `$029E` bit 4 is set when the first
-frame runs, the builder skips entirely — the pre-loaded value is never
-read. Whether the mailbox is busy at that instant depends on the H8
-response timing, which the simulation does not model.
-
-**2. Mailbox receive overwrites `$07E7` (`$C862`).**
-
-```
-$C860  LDA $16,X               ; X = $02A0 (&mb_in)
-$C862  STA $07E7               ; c9_sub_value ← H8 response byte
-```
-
-`mailbox_receive` copies the H8's response into `c9_sub_value`. The
-overrun pre-loads `$07E7` during `c9_find_hidden` (which runs at F0
-processing time). The builder reads `$07E7` during the streaming loop.
-If `mailbox_receive` executes in between — e.g. because the H8 responds
-to the forwarded addresses — the pre-loaded value is destroyed.
-
-**Why this matters:** the overrun itself is hardware-confirmed (the direct
-stores demonstrably corrupt `$07E1–$07E5` and redirect the index store to
-`$0817`). The open question is whether the downstream store at `$9B5E`
-fires with the intended value and index. Every previous hardware trial
-that targeted downstream addresses (`at_active`, `cs_streamlist`) showed
-no target-address change. The timing hazards above are the most likely
-explanation, though a simulation error is also possible.
-
-**Next step:** write to `at_values` (`$076F–$079C`) using `c9_write.py`,
-which survives `consult_reset` and can be verified by independent post-stop
-readback. A confirmed value change there would prove the downstream path
-works; a failure would isolate the timing hazard.

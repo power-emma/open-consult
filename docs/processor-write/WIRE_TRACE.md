@@ -282,7 +282,7 @@ write destination.  So $2F + $0740 = $076F — our target.
 
 **For any target T:** use address $5E00 + (T - $0740).
 
-### Position 18 — set the value ($5EA5)
+### Position 18 — pre-load c9_sub_value ($5EA5)
 
 ```
 addr_store: dest = $07C3 + 2*$12 = $07E7
@@ -295,12 +295,15 @@ idx_store:  dest = $07D7 + $12 = $07E9
 ```
 
 **Why $5EA5:** the low byte $A5 lands directly in c9_sub_value ($07E7).
-The builder reads this byte and writes it to the target.  This is the
-key advance: position 18's addr_store destination is mechanically
-$07E7 because n=$12 after position 17, and $07C3 + 2*$12 = $07E7.
-The desired byte rides in the low byte of the forwarded address.
+However, **mailbox_receive at $C862 overwrites $07E7** before the builder
+reads it (confirmed 2026-11-16).  The pre-loaded $A5 does not survive.
 
-**For any value V:** use address $5E00 + V.
+**Position 18 is irrelevant to value control in streaming context.**
+`h8_stream_cal.py` confirmed: 32 different position-18 addresses all
+produced `h8_resp=$00`.  The H8 ignores the requested address and serves
+from an internal sequential FIFO.  The actual write value comes from the
+FIFO content determined by **positions 0-14** (the fill addresses), not
+position 18.  Use `tools/c9_write_fifo.py` to characterize.
 
 ### Position 19 — the probe ($076F)
 
@@ -320,10 +323,12 @@ pos  0-14:  $5E00               (fill)
 pos 15:     $5E0A               (repair n + cursor)
 pos 16:     $5E0B               (repair flags)
 pos 17:     $5E00 + (T - $0740) (target index)
-pos 18:     $5E00 + V           (value)
+pos 18:     H8_ADDR             (value carrier: H8 response = V)
 pos 19:     T                   (probe, not forwarded)
 ```
 
+Position 18 must be a forwarded address whose H8 response is V.
+`tools/h8_sweep.py` maps H8 addresses to their response bytes.
 Only bytes 52-59 of the 60-byte command change between writes.
 
 ## 6. The downstream write
@@ -371,13 +376,15 @@ $C860  LDA $16,X           X = $02A0 (&mb_in)
 $C862  STA $07E7           c9_sub_value <- H8 response byte
 ```
 
-`mailbox_receive` copies the H8's latest response into $07E7.  The
-overrun pre-loads $07E7 during F0 processing.  The builder reads it
-during the streaming loop.  If `mailbox_receive` runs between those
-two events, the pre-loaded $A5 is replaced with whatever the H8 sent.
+`mailbox_receive` copies an H8 FIFO response into $07E7.  The overrun
+pre-loads $07E7 during F0 processing.  The builder reads it during the
+streaming loop.  `mailbox_receive` always runs between those two events,
+replacing the pre-loaded $A5 with the H8's FIFO output.
 
-This is the primary suspect for the model/hardware disagreement in all
-previous downstream write attempts.
+This is confirmed (2026-11-16) — the write fires but the value comes
+from the H8 FIFO, not from the overrun's pre-load.  Position 18's
+address is irrelevant; the FIFO content depends on the fill addresses
+(positions 0-14).
 
 ## 7. Frame response
 

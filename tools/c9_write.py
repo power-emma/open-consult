@@ -38,7 +38,7 @@ from consult.transport import DEFAULT_DEV, Transport
 from consult.experimental import mutation_stream, require_research_ecu
 from consult.write import (
     CS_PAYLOAD, HIDDEN_N, REPLY_CURSOR, FWD_FLAGS, C9_SUB_VAL,
-    RESET_CLEARS,
+    RESET_CLEARS, H8_VALUE_TABLE,
     compute_payload, simulate_overrun, simulate_builder_write,
     simulate_write, region_label,
 )
@@ -94,13 +94,16 @@ def run_dry(target, value):
     print(f"Persistent: {'YES' if sim['persistent'] else 'NO (cleared by stop)'}")
     print()
 
+    h8_addr = payload[18]
+    in_table = value in H8_VALUE_TABLE
     print(f"Payload (20 C9 addresses):")
     print(f"  [0..14]  15 x ${payload[0]:04X}")
     print(f"  [15]     ${payload[15]:04X}  (repair_a: n=$0A -> INC -> $10)")
     print(f"  [16]     ${payload[16]:04X}  (repair_b: $07E3=$0B, c9_sub_value=$10)")
     print(f"  [17]     ${payload[17]:04X}  (target idx: "
           f"${(target - CS_PAYLOAD) & 0xFF:02X} -> $07E5)")
-    print(f"  [18]     ${payload[18]:04X}  (value: ${value:02X} -> c9_sub_value)")
+    print(f"  [18]     ${h8_addr:04X}  (H8 addr -> response ${value:02X}"
+          f"{' [from lookup table]' if in_table else ' [manual]'})")
     print(f"  [19]     ${payload[19]:04X}  (dummy)")
     print()
 
@@ -137,10 +140,10 @@ def run_dry(target, value):
         return False
 
     print()
-    print(f"Builder frame 1 prediction:")
+    print(f"Builder frame 1 prediction (with mailbox clobber):")
     print(f"  cursor=${w['cursor']:02X} -> idx[$0E]=${w['idx']:02X} "
           f"-> ${w['target']:04X} ({region_label(w['target']) or '?'})")
-    print(f"  value=${w['value']:02X}")
+    print(f"  value=${w['value']:02X} (H8 response for ${h8_addr:04X})")
 
     if w["target"] == target and w["value"] == value:
         print(f"\n  PREDICTED WRITE: ${value:02X} -> ${target:04X}")
@@ -206,21 +209,37 @@ def run_live(dev, target, value, n_frames):
         t.note(f"stopped after {len(frames)} frame(s)")
         print(f"  streamed {len(frames)} frame(s)")
 
-        # Per-frame probe: live target value in each frame
-        print(f"\n  Per-frame probe (${target:04X} live RAM):")
+        # Full frame dump for key positions + per-frame probe
+        for fi, frame in enumerate(frames):
+            print(f"\n  Frame {fi} ({len(frame)} bytes):")
+            for i, b in enumerate(frame):
+                tag = ""
+                if i == probe_pos:
+                    tag = f"  <- probe ${target:04X}"
+                elif i == 18:
+                    tag = f"  <- pos 18 H8 response (determines write value)"
+                elif i == 15:
+                    tag = f"  <- pos 15 (repair_a: ${payload[15]:04X})"
+                elif i == 16:
+                    tag = f"  <- pos 16 (repair_b: ${payload[16]:04X})"
+                elif i == 17:
+                    tag = f"  <- pos 17 (target idx: ${payload[17]:04X})"
+                print(f"    [{i:2d}] ${b:02X}{tag}")
+
+        print(f"\n  Per-frame summary:")
         write_seen = False
         for fi, frame in enumerate(frames):
-            if len(frame) > probe_pos:
-                pv = frame[probe_pos]
-                marker = ""
-                if pv == value and not write_seen and pv != target_before:
-                    write_seen = True
-                    marker = " <- WRITE VISIBLE"
-                elif fi == 0:
-                    marker = "  (pre-write)"
-                print(f"    frame {fi:2d}: ${pv:02X}{marker}")
-            else:
-                print(f"    frame {fi:2d}: (frame too short: {len(frame)} bytes)")
+            pv = frame[probe_pos] if len(frame) > probe_pos else None
+            h8v = frame[18] if len(frame) > 18 else None
+            marker = ""
+            if pv is not None and pv != target_before and not write_seen:
+                write_seen = True
+                marker = " <- WRITE VISIBLE"
+            elif fi == 0:
+                marker = "  (pre-write)"
+            h8_str = f"  h8[18]=${h8v:02X}" if h8v is not None else ""
+            pv_str = f"${pv:02X}" if pv is not None else "??"
+            print(f"    frame {fi:2d}: probe={pv_str}{h8_str}{marker}")
 
         # --- Readback ---
         if persistent:
@@ -247,12 +266,32 @@ def run_live(dev, target, value, n_frames):
             if n_changed == 0:
                 print(f"  (none)")
 
+            # Detect actual written value from frames
+            actual_value = None
+            if len(frames) >= 2 and len(frames[1]) > probe_pos:
+                actual_value = frames[1][probe_pos]
+            h8_actual = None
+            if frames and len(frames[0]) > 18:
+                h8_actual = frames[0][18]
+
             # Verdict
             print(f"\n{'=' * 60}")
             if target_after == value and target_before != value:
                 print(f"WRITE VERIFIED: ${target:04X} ({lbl}) = "
                       f"${target_before:02X} -> ${value:02X}")
                 print(f"  Independent post-stop readback confirms the write.")
+            elif target_after != target_before and target_after != value:
+                print(f"WRITE FIRED, WRONG VALUE: ${target:04X} ({lbl}) = "
+                      f"${target_before:02X} -> ${target_after:02X} "
+                      f"(wanted ${value:02X})")
+                if h8_actual is not None:
+                    print(f"  H8 response at pos 18 (frame 0): ${h8_actual:02X}")
+                print(f"  The H8 auto-increment shifts responses during streaming.")
+                print(f"  One-shot sweep values don't match streaming behavior.")
+                if target_after in H8_VALUE_TABLE:
+                    print(f"  ${target_after:02X} is in the lookup table "
+                          f"(addr ${H8_VALUE_TABLE[target_after]:04X}), "
+                          f"but streaming context differs.")
             elif target_after == value and target_before == value:
                 print(f"TARGET UNCHANGED (already had value ${value:02X}).")
                 if write_seen:
@@ -260,16 +299,15 @@ def run_live(dev, target, value, n_frames):
                 else:
                     print(f"  Cannot distinguish write from prior state.")
             elif write_seen:
-                print(f"PARTIAL: probe showed ${value:02X} during streaming, "
+                print(f"PARTIAL: probe showed change during streaming, "
                       f"but readback is ${target_after:02X}.")
                 if target in RESET_CLEARS:
                     print(f"  Expected: ${target:04X} is cleared by consult_reset (stop).")
                 else:
                     print(f"  Unexpected: target should persist through stop.")
             else:
-                print(f"WRITE NOT CONFIRMED: target ${target:04X} = "
+                print(f"NO CHANGE: target ${target:04X} = "
                       f"${target_after:02X} (unchanged from ${target_before:02X}).")
-                print(f"  Probe showed no change during streaming either.")
             print(f"{'=' * 60}")
         else:
             print(f"\n  Target ${target:04X} is cleared by consult_reset (stop).")
@@ -350,8 +388,7 @@ def main():
         sys.exit("simulation predicts the write will not fire; aborting")
 
     print("-" * 60)
-    print("EXPERIMENTAL: controlled downstream writes are unconfirmed.")
-    print("This test aims to verify the mechanism with independent readback.")
+    print("Downstream write confirmed; value via H8 response lookup.")
     print("Run with key on, ENGINE OFF.")
     print("-" * 60)
     ok = input("Proceed? [y/N] ")

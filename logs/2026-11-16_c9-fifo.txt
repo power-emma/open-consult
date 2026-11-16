@@ -1,0 +1,24 @@
+# c9_write_fifo results 2026-11-16
+# target=$0817
+# name fill_0 fill_type baseline readback written changed h8_18
+base_6000 $6000 uniform $00 $00 $00 N $00
+base_6020 $6020 uniform $00 $00 $00 N $00
+base_6040 $6040 uniform $00 $00 $00 N $00
+base_6060 $6060 uniform $00 $00 $00 N $00
+base_6080 $6080 uniform $00 $00 $00 N $00
+base_60A0 $60A0 uniform $00 $00 $00 N $00
+base_60C0 $60C0 uniform $00 $00 $00 N $00
+base_60E0 $60E0 uniform $00 $12 $12 Y $00
+base_6100 $6100 uniform $00 $00 $00 N $00
+base_6120 $6120 uniform $00 $00 $00 N $00
+base_6140 $6140 uniform $00 $00 $00 N $00
+base_6160 $6160 uniform $00 $00 $00 N $00
+base_6180 $6180 uniform $00 $00 $00 N $00
+base_61A0 $61A0 uniform $00 $00 $00 N $00
+base_61C0 $61C0 uniform $00 $00 $00 N $00
+base_61E0 $61E0 uniform $00 $00 $00 N $00
+base_6200 $6200 uniform $00 $00 $00 N $00
+base_6220 $6220 uniform $00 $00 $00 N $00
+
+# value_map
+$12 <- base_60E0

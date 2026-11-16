@@ -1,0 +1,1912 @@
+  0.000136 ## open /dev/ttyUSB0 at 2026-11-16T13:41:36
+  0.000182 ## c9_write_1f target=$0817 fill=$5E00 frames=1 taps=1
+  0.000224 TX 30
+  0.000280 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.701513 TX ff
+  0.701576 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.982099 TX ff
+  0.982197 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.052616 TX ed
+  1.052686 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.056364 RX 12
+  1.056444 TX d0
+  1.056480 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.059559 RX 2f
+  1.059606 TX f0
+  1.059656 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.071533 RX ff
+  1.072123 RX 20
+  1.073283 RX 20
+  1.074262 RX 21
+  1.075297 RX 04
+  1.076343 RX 9d
+  1.077221 RX 00
+  1.078297 RX 00
+  1.079297 RX 00
+  1.080270 RX 3f
+  1.081330 RX c1
+  1.082283 RX 80
+  1.083318 RX c3
+  1.084310 RX 00
+  1.086345 RX 10
+  1.087317 RX 7c
+  1.088288 RX 05
+  1.089284 RX 00
+  1.090323 RX e5
+  1.091305 RX 07
+  1.092317 RX 00
+  1.093368 RX 01
+  1.094214 RX 00
+  1.095155 RX 00
+  1.096346 RX 00
+  1.097438 RX 00
+  1.098264 RX 00
+  1.099564 RX ff
+  1.100332 RX ff
+  1.101330 RX 32
+  1.102332 RX 4c
+  1.103254 RX 39
+  1.104280 RX 30
+  1.105602 RX 34
+  1.105653 TX 30
+  1.105707 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.109162 RX cf
+  1.109334 TX c9 08 17
+  1.109385 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  1.112283 RX 36
+  1.113163 RX 08
+  1.114150 RX 17
+  1.114192 TX f0
+  1.114259 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.122155 RX ff
+  1.123085 RX 01
+  1.124065 RX 00
+  1.124138 TX 30
+  1.124168 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.127184 RX cf
+  1.127421 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.127471 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.189321 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e 00
+  1.190324 RX 36
+  1.191321 RX 08
+  1.192313 RX 17
+  1.192336 TX f0
+  1.192378 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.204231 RX ff
+  1.205317 RX 14
+  1.206229 RX 00
+  1.207346 RX 21
+  1.208227 RX 04
+  1.210219 RX 9d
+  1.211247 RX 00
+  1.212303 RX 00
+  1.213198 RX 00
+  1.214326 RX 3f
+  1.215302 RX c1
+  1.216205 RX 80
+  1.217215 RX c3
+  1.218202 RX 00
+  1.219329 RX 10
+  1.220294 RX 7c
+  1.221305 RX 05
+  1.222306 RX 00
+  1.223341 RX e5
+  1.224210 RX 07
+  1.225144 RX 00
+  1.226189 RX 00
+  1.226215 TX 30
+  1.226249 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.229202 RX cf
+  1.229228 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.229307 TX 30
+  1.229328 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.231962 RX cf
+  1.432473 TX ff
+  1.432562 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.712930 TX ff
+  1.713043 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.783402 TX ed
+  1.783494 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.783723 RX 00
+  1.783755 RX 00
+  1.787043 RX 12
+  1.787155 TX c9 08 17
+  1.787191 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  1.790745 RX 36
+  1.791885 RX 08
+  1.792990 RX 17
+  1.793043 TX f0
+  1.793096 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.797788 RX ff
+  1.799790 RX 01
+  1.800608 RX 00
+  1.800640 TX 30
+  1.800694 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.803811 RX cf
+  1.803864 ## close
+  0.000074 ## open /dev/ttyUSB0 at 2026-11-16T13:41:43
+  0.000131 ## c9_write_1f target=$0817 fill=$5E00 frames=1 taps=2
+  0.000190 TX 30
+  0.000232 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.701695 TX ff
+  0.701764 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.982355 TX ff
+  0.982434 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.053059 TX ed
+  1.053177 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.056352 RX 12
+  1.056424 TX d0
+  1.056462 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.059327 RX 2f
+  1.059378 TX f0
+  1.059414 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.071454 RX ff
+  1.072273 RX 20
+  1.073302 RX 20
+  1.074324 RX 21
+  1.075302 RX 04
+  1.076274 RX 9d
+  1.077266 RX 00
+  1.078301 RX 00
+  1.079350 RX 00
+  1.080371 RX 3f
+  1.081323 RX c1
+  1.082423 RX 80
+  1.083322 RX c3
+  1.084278 RX 00
+  1.085349 RX 10
+  1.086369 RX 7c
+  1.087372 RX 05
+  1.088286 RX 00
+  1.089332 RX e5
+  1.090267 RX 07
+  1.091277 RX 00
+  1.092345 RX 01
+  1.093323 RX 00
+  1.094352 RX 00
+  1.095044 RX 00
+  1.097449 RX 00
+  1.098259 RX 00
+  1.099283 RX ff
+  1.100326 RX ff
+  1.101281 RX 32
+  1.102217 RX 4c
+  1.103300 RX 39
+  1.104248 RX 30
+  1.105234 RX 34
+  1.105254 TX 30
+  1.105278 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.108037 RX cf
+  1.108149 TX c9 08 17
+  1.108188 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  1.111232 RX 36
+  1.112327 RX 08
+  1.113230 RX 17
+  1.113251 TX f0
+  1.113281 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.121326 RX ff
+  1.123415 RX 01
+  1.124333 RX 00
+  1.124366 TX 30
+  1.124403 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.127304 RX cf
+  1.127583 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.127635 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.187551 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  1.188264 RX 5e
+  1.189296 RX 00
+  1.190272 RX 36
+  1.191270 RX 08
+  1.192300 RX 17
+  1.192329 TX f0
+  1.192381 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.204461 RX ff
+  1.205264 RX 14
+  1.206254 RX 00
+  1.207257 RX 21
+  1.208241 RX 04
+  1.209254 RX 9d
+  1.210463 RX 00
+  1.211256 RX 00
+  1.212306 RX 00
+  1.213260 RX 3f
+  1.214471 RX c1
+  1.215224 RX 80
+  1.216268 RX c3
+  1.217270 RX 00
+  1.218236 RX 10
+  1.219329 RX 7c
+  1.220451 RX 05
+  1.221277 RX 00
+  1.222300 RX e5
+  1.223258 RX 07
+  1.224272 RX 00
+  1.226271 RX 00
+  1.226303 TX 30
+  1.226331 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.229306 RX cf
+  1.229356 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.229439 ## tap 2/2: re-init for next overrun
+  1.229461 TX 30
+  1.229505 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.233290 RX cf
+  1.433583 TX ff
+  1.433680 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.714137 TX ff
+  1.714224 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.784779 TX ed
+  1.784851 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.785085 RX 00
+  1.785166 RX 00
+  1.787919 RX 12
+  1.788043 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.788084 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.848482 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  1.848611 RX 5e
+  1.849790 RX 00
+  1.850801 RX 36
+  1.851790 RX 08
+  1.852800 RX 17
+  1.852822 TX f0
+  1.852854 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.858834 RX ff
+  1.859869 RX 14
+  1.861031 RX 00
+  1.862804 RX 21
+  1.864047 RX 04
+  1.865028 RX 9d
+  1.866022 RX 00
+  1.866963 RX 00
+  1.867819 RX 00
+  1.869000 RX 3f
+  1.869871 RX c1
+  1.870978 RX 80
+  1.871848 RX c3
+  1.873001 RX 00
+  1.873815 RX 10
+  1.874797 RX 7c
+  1.875820 RX 05
+  1.876809 RX 00
+  1.877823 RX e5
+  1.878822 RX 07
+  1.880006 RX 00
+  1.881000 RX 00
+  1.881054 TX 30
+  1.881090 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.884818 RX cf
+  1.884853 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.884928 TX 30
+  1.884997 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.887823 RX cf
+  2.088367 TX ff
+  2.088434 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.368764 TX ff
+  2.368845 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.439311 TX ed
+  2.439386 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.439508 RX 00
+  2.439564 RX 00
+  2.442533 RX 12
+  2.442612 TX c9 08 17
+  2.442650 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  2.446425 RX 36
+  2.447387 RX 08
+  2.448391 RX 17
+  2.448420 TX f0
+  2.448457 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.453428 RX ff
+  2.454353 RX 01
+  2.455397 RX 93
+  2.455427 TX 30
+  2.455462 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.458410 RX cf
+  2.458470 ## close
+  0.000053 ## open /dev/ttyUSB0 at 2026-11-16T13:41:50
+  0.000086 ## c9_write_1f target=$0817 fill=$5E00 frames=1 taps=3
+  0.000101 TX 30
+  0.000149 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.701440 TX ff
+  0.701525 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.982045 TX ff
+  0.982142 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.052594 TX ed
+  1.052685 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.055927 RX 12
+  1.055969 TX d0
+  1.056021 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.058943 RX 2f
+  1.058974 TX f0
+  1.058999 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.064918 RX ff
+  1.065890 RX 20
+  1.066922 RX 20
+  1.067958 RX 21
+  1.068947 RX 04
+  1.069945 RX 9d
+  1.070893 RX 00
+  1.071980 RX 00
+  1.072972 RX 00
+  1.073943 RX 3f
+  1.075920 RX c1
+  1.076964 RX 80
+  1.077961 RX c3
+  1.078935 RX 00
+  1.079948 RX 10
+  1.080930 RX 7c
+  1.081898 RX 05
+  1.082914 RX 00
+  1.083913 RX e5
+  1.084936 RX 07
+  1.085921 RX 00
+  1.086919 RX 01
+  1.087902 RX 00
+  1.088934 RX 00
+  1.089914 RX 00
+  1.090947 RX 00
+  1.091889 RX 00
+  1.092932 RX ff
+  1.093909 RX ff
+  1.094925 RX 32
+  1.095870 RX 4c
+  1.096907 RX 39
+  1.097902 RX 30
+  1.098905 RX 34
+  1.098929 TX 30
+  1.098960 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.101899 RX cf
+  1.101951 TX c9 08 17
+  1.101979 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  1.104911 RX 36
+  1.105897 RX 08
+  1.106939 RX 17
+  1.106959 TX f0
+  1.106988 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.115933 RX ff
+  1.116917 RX 01
+  1.117929 RX 00
+  1.117948 TX 30
+  1.117971 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.120869 RX cf
+  1.120998 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.121023 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.181029 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  1.181892 RX 5e
+  1.182869 RX 00
+  1.183868 RX 36
+  1.184869 RX 08
+  1.185907 RX 17
+  1.185927 TX f0
+  1.185971 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.198111 RX ff
+  1.198846 RX 14
+  1.199884 RX 00
+  1.200883 RX 21
+  1.202902 RX 04
+  1.203921 RX 9d
+  1.204900 RX 00
+  1.205890 RX 00
+  1.206916 RX 00
+  1.207904 RX 3f
+  1.208890 RX c1
+  1.209924 RX 80
+  1.210941 RX c3
+  1.211937 RX 00
+  1.212957 RX 10
+  1.213930 RX 7c
+  1.214884 RX 05
+  1.215906 RX 00
+  1.217028 RX e5
+  1.217902 RX 07
+  1.218938 RX 00
+  1.219907 RX 00
+  1.219935 TX 30
+  1.219984 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.222804 RX cf
+  1.222865 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.222921 ## tap 2/3: re-init for next overrun
+  1.222936 TX 30
+  1.222962 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.225753 RX cf
+  1.426294 TX ff
+  1.426358 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.706687 TX ff
+  1.706783 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.777247 TX ed
+  1.777316 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.777641 RX 00
+  1.777707 RX 00
+  1.780448 RX 12
+  1.780575 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.780635 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.841836 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  1.842401 RX 00
+  1.843404 RX 36
+  1.844398 RX 08
+  1.845405 RX 17
+  1.845428 TX f0
+  1.845476 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.853408 RX ff
+  1.854419 RX 14
+  1.855402 RX 00
+  1.856407 RX 21
+  1.857401 RX 04
+  1.858402 RX 9d
+  1.859405 RX 00
+  1.860402 RX 00
+  1.861399 RX 00
+  1.862401 RX 3f
+  1.863406 RX c1
+  1.865384 RX 80
+  1.866379 RX c3
+  1.867396 RX 00
+  1.868364 RX 10
+  1.869381 RX 7c
+  1.870377 RX 05
+  1.871383 RX 00
+  1.872394 RX e5
+  1.873380 RX 07
+  1.874380 RX 00
+  1.875379 RX 00
+  1.875421 TX 30
+  1.875465 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.878416 RX cf
+  1.878470 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.878523 ## tap 3/3: re-init for next overrun
+  1.878539 TX 30
+  1.878565 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.881359 RX cf
+  2.081684 TX ff
+  2.081784 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.361973 TX ff
+  2.362047 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.432444 TX ed
+  2.432510 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.432658 RX 00
+  2.432696 RX 00
+  2.435936 RX 12
+  2.436016 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  2.436036 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  2.496000 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  2.497919 RX 00
+  2.499089 RX 36
+  2.499901 RX 08
+  2.500932 RX 17
+  2.500977 TX f0
+  2.501032 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.509119 RX ff
+  2.509941 RX 14
+  2.510971 RX 00
+  2.511899 RX 21
+  2.512958 RX 04
+  2.513941 RX 9d
+  2.514980 RX 00
+  2.515956 RX 00
+  2.516990 RX 00
+  2.517873 RX 3f
+  2.518912 RX c1
+  2.519925 RX 80
+  2.520932 RX c3
+  2.521914 RX 00
+  2.522928 RX 10
+  2.524926 RX 7c
+  2.525908 RX 05
+  2.526924 RX 00
+  2.528085 RX e5
+  2.529083 RX 07
+  2.529902 RX 00
+  2.530935 RX 93
+  2.530956 TX 30
+  2.530974 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.533908 RX cf
+  2.533928 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  2.533981 TX 30
+  2.533998 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.536906 RX cf
+  2.737368 TX ff
+  2.737429 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.017909 TX ff
+  3.017975 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.088510 TX ed
+  3.088626 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.088956 RX 00
+  3.088987 RX 00
+  3.091720 RX 12
+  3.091785 TX c9 08 17
+  3.091842 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  3.095746 RX 36
+  3.096783 RX 08
+  3.097531 RX 17
+  3.097582 TX f0
+  3.097653 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.102763 RX ff
+  3.103608 RX 01
+  3.104841 RX 93
+  3.104889 TX 30
+  3.104938 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.108819 RX cf
+  3.108868 ## close
+  0.000063 ## open /dev/ttyUSB0 at 2026-11-16T13:41:58
+  0.000107 ## c9_write_1f target=$0817 fill=$5E00 frames=1 taps=4
+  0.000152 TX 30
+  0.000198 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.701369 TX ff
+  0.701435 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.981948 TX ff
+  0.982021 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.052414 TX ed
+  1.052483 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.055469 RX 12
+  1.055556 TX d0
+  1.055594 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.059191 RX 2f
+  1.059237 TX f0
+  1.059289 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.066089 RX ff
+  1.067000 RX 20
+  1.068002 RX 20
+  1.068999 RX 21
+  1.070004 RX 04
+  1.071017 RX 9d
+  1.072008 RX 00
+  1.073009 RX 00
+  1.074045 RX 00
+  1.075043 RX 3f
+  1.076043 RX c1
+  1.077043 RX 80
+  1.078000 RX c3
+  1.079041 RX 00
+  1.080044 RX 10
+  1.081040 RX 7c
+  1.082041 RX 05
+  1.083042 RX 00
+  1.084045 RX e5
+  1.085017 RX 07
+  1.086027 RX 00
+  1.087027 RX 01
+  1.088035 RX 00
+  1.090030 RX 00
+  1.091034 RX 00
+  1.092027 RX 00
+  1.093027 RX 00
+  1.094027 RX ff
+  1.095031 RX ff
+  1.096026 RX 32
+  1.097024 RX 4c
+  1.098025 RX 39
+  1.099029 RX 30
+  1.100026 RX 34
+  1.100047 TX 30
+  1.100071 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.103026 RX cf
+  1.103069 TX c9 08 17
+  1.103091 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  1.106028 RX 36
+  1.107029 RX 08
+  1.108025 RX 17
+  1.108045 TX f0
+  1.108088 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.117020 RX ff
+  1.117983 RX 01
+  1.118977 RX 00
+  1.119010 TX 30
+  1.119057 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.122034 RX cf
+  1.122226 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.122290 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.182847 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  1.182997 RX 5e
+  1.183979 RX 00
+  1.184981 RX 36
+  1.185965 RX 08
+  1.186938 RX 17
+  1.186957 TX f0
+  1.186984 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.198997 RX ff
+  1.199980 RX 14
+  1.200982 RX 00
+  1.201986 RX 21
+  1.202933 RX 04
+  1.203922 RX 9d
+  1.204921 RX 00
+  1.205919 RX 00
+  1.206930 RX 00
+  1.207928 RX 3f
+  1.208941 RX c1
+  1.209930 RX 80
+  1.210980 RX c3
+  1.211943 RX 00
+  1.213956 RX 10
+  1.214952 RX 7c
+  1.215945 RX 05
+  1.216949 RX 00
+  1.217944 RX e5
+  1.218943 RX 07
+  1.219958 RX 00
+  1.220971 RX 00
+  1.220991 TX 30
+  1.221045 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.223956 RX cf
+  1.223980 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.224065 ## tap 2/4: re-init for next overrun
+  1.224087 TX 30
+  1.224119 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.226956 RX cf
+  1.427255 TX ff
+  1.427353 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.707652 TX ff
+  1.707757 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.778068 TX ed
+  1.778181 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.778419 RX 00
+  1.778464 RX 00
+  1.781568 RX 12
+  1.781646 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.781673 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.843019 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  1.843782 RX 00
+  1.844945 RX 36
+  1.845736 RX 08
+  1.846902 RX 17
+  1.846950 TX f0
+  1.846985 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.854982 RX ff
+  1.855769 RX 14
+  1.857030 RX 00
+  1.857750 RX 21
+  1.859031 RX 04
+  1.859710 RX 9d
+  1.860969 RX 00
+  1.861750 RX 00
+  1.862722 RX 00
+  1.863996 RX 3f
+  1.864737 RX c1
+  1.865963 RX 80
+  1.866738 RX c3
+  1.867916 RX 00
+  1.868745 RX 10
+  1.869845 RX 7c
+  1.870739 RX 05
+  1.871917 RX 00
+  1.873962 RX e5
+  1.874629 RX 07
+  1.875612 RX 00
+  1.876628 RX 00
+  1.876660 TX 30
+  1.876690 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.879840 RX cf
+  1.879892 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.879953 ## tap 3/4: re-init for next overrun
+  1.879975 TX 30
+  1.880031 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.883954 RX cf
+  2.084333 TX ff
+  2.084415 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.365004 TX ff
+  2.365110 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.435393 TX ed
+  2.435468 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.435624 RX 00
+  2.435653 RX 00
+  2.438396 RX 12
+  2.438516 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  2.438558 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  2.499106 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  2.500137 RX 00
+  2.501147 RX 36
+  2.502058 RX 08
+  2.503091 RX 17
+  2.503114 TX f0
+  2.503146 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.510039 RX ff
+  2.511084 RX 14
+  2.512102 RX 00
+  2.513102 RX 21
+  2.514007 RX 04
+  2.515074 RX 9d
+  2.516050 RX 00
+  2.517082 RX 00
+  2.518077 RX 00
+  2.519104 RX 3f
+  2.520088 RX c1
+  2.521100 RX 80
+  2.522041 RX c3
+  2.523066 RX 00
+  2.524085 RX 10
+  2.525105 RX 7c
+  2.526041 RX 05
+  2.527079 RX 00
+  2.528083 RX e5
+  2.529078 RX 07
+  2.530070 RX 00
+  2.531090 RX 93
+  2.531108 TX 30
+  2.531135 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.534232 RX cf
+  2.534252 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  2.534287 ## tap 4/4: re-init for next overrun
+  2.534324 TX 30
+  2.534384 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.537075 RX cf
+  2.737556 TX ff
+  2.737624 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.018002 TX ff
+  3.018080 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.088447 TX ed
+  3.088526 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.088687 RX 00
+  3.088726 RX 00
+  3.091720 RX 12
+  3.091850 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  3.091880 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  3.153038 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  3.153834 RX 00
+  3.154829 RX 36
+  3.155862 RX 08
+  3.156829 RX 17
+  3.156857 TX f0
+  3.156888 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.164943 RX ff
+  3.165820 RX 14
+  3.166810 RX 00
+  3.167810 RX 21
+  3.169070 RX 04
+  3.170955 RX 9d
+  3.171835 RX 00
+  3.172898 RX 00
+  3.173630 RX 00
+  3.174829 RX 3f
+  3.175832 RX c1
+  3.176826 RX 80
+  3.177835 RX c3
+  3.178831 RX 00
+  3.179827 RX 10
+  3.180821 RX 7c
+  3.181821 RX 05
+  3.182810 RX 00
+  3.183827 RX e5
+  3.184822 RX 07
+  3.185815 RX 00
+  3.186737 RX 93
+  3.186807 TX 30
+  3.186858 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.189853 RX cf
+  3.189878 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  3.189947 TX 30
+  3.190005 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.193867 RX cf
+  3.394447 TX ff
+  3.394516 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.674945 TX ff
+  3.675020 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.745557 TX ed
+  3.745632 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.745932 RX 00
+  3.745970 RX 00
+  3.748258 RX 12
+  3.748370 TX c9 08 17
+  3.748436 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  3.751566 RX 36
+  3.752607 RX 08
+  3.753595 RX 17
+  3.753641 TX f0
+  3.753669 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.758404 RX ff
+  3.760420 RX 01
+  3.761363 RX 93
+  3.761391 TX 30
+  3.761418 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.764198 RX cf
+  3.764280 ## close
+  0.000094 ## open /dev/ttyUSB0 at 2026-11-16T13:42:05
+  0.000192 ## c9_write_1f target=$0817 fill=$5E00 frames=1 taps=5
+  0.000233 TX 30
+  0.000283 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.701450 TX ff
+  0.701513 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.981993 TX ff
+  0.982064 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.052380 TX ed
+  1.052480 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.056049 RX 12
+  1.056112 TX d0
+  1.056191 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.058929 RX 2f
+  1.058963 TX f0
+  1.059030 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.069286 RX ff
+  1.070023 RX 20
+  1.070839 RX 20
+  1.072241 RX 21
+  1.073060 RX 04
+  1.074129 RX 9d
+  1.075056 RX 00
+  1.076058 RX 00
+  1.077162 RX 00
+  1.078072 RX 3f
+  1.079060 RX c1
+  1.080033 RX 80
+  1.081141 RX c3
+  1.081840 RX 00
+  1.084204 RX 10
+  1.085065 RX 7c
+  1.086128 RX 05
+  1.087067 RX 00
+  1.088230 RX e5
+  1.089066 RX 07
+  1.090066 RX 00
+  1.091053 RX 01
+  1.092056 RX 00
+  1.093164 RX 00
+  1.094071 RX 00
+  1.095142 RX 00
+  1.096069 RX 00
+  1.097280 RX ff
+  1.098017 RX ff
+  1.098821 RX 32
+  1.100199 RX 4c
+  1.101068 RX 39
+  1.102127 RX 30
+  1.103053 RX 34
+  1.103087 TX 30
+  1.103135 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.106077 RX cf
+  1.106199 TX c9 08 17
+  1.106245 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  1.108877 RX 36
+  1.111048 RX 08
+  1.112028 RX 17
+  1.112050 TX f0
+  1.112097 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.120182 RX ff
+  1.121033 RX 01
+  1.122102 RX 00
+  1.122173 TX 30
+  1.122229 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.125031 RX cf
+  1.125232 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.125313 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.186571 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  1.186759 RX 00
+  1.188072 RX 36
+  1.188961 RX 08
+  1.190007 RX 17
+  1.190053 TX f0
+  1.190108 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.201946 RX ff
+  1.202918 RX 14
+  1.203975 RX 00
+  1.205039 RX 21
+  1.206111 RX 04
+  1.206883 RX 9d
+  1.208016 RX 00
+  1.210107 RX 00
+  1.210973 RX 00
+  1.212050 RX 3f
+  1.212921 RX c1
+  1.213925 RX 80
+  1.214922 RX c3
+  1.216020 RX 00
+  1.216920 RX 10
+  1.218017 RX 7c
+  1.218889 RX 05
+  1.219684 RX 00
+  1.220886 RX e5
+  1.222012 RX 07
+  1.223098 RX 00
+  1.223973 RX 00
+  1.224021 TX 30
+  1.224075 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.226892 RX cf
+  1.226938 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.227003 ## tap 2/5: re-init for next overrun
+  1.227040 TX 30
+  1.227071 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.229921 RX cf
+  1.430329 TX ff
+  1.430418 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.711093 TX ff
+  1.711229 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.781792 TX ed
+  1.781867 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.782064 RX 00
+  1.782126 RX 00
+  1.785544 RX 12
+  1.785657 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.785696 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.846652 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  1.847414 RX 00
+  1.848403 RX 36
+  1.849416 RX 08
+  1.850415 RX 17
+  1.850445 TX f0
+  1.850481 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.857355 RX ff
+  1.858413 RX 14
+  1.859409 RX 00
+  1.860468 RX 21
+  1.861415 RX 04
+  1.862414 RX 9d
+  1.863442 RX 00
+  1.864414 RX 00
+  1.865409 RX 00
+  1.866407 RX 3f
+  1.867389 RX c1
+  1.868461 RX 80
+  1.870398 RX c3
+  1.871416 RX 00
+  1.872355 RX 10
+  1.873406 RX 7c
+  1.874400 RX 05
+  1.875407 RX 00
+  1.876355 RX e5
+  1.877238 RX 07
+  1.878303 RX 00
+  1.879416 RX 00
+  1.879441 TX 30
+  1.879472 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.882443 RX cf
+  1.882466 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.882508 ## tap 3/5: re-init for next overrun
+  1.882546 TX 30
+  1.882574 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.885442 RX cf
+  2.085986 TX ff
+  2.086055 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.366672 TX ff
+  2.366754 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.437230 TX ed
+  2.437306 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.437645 RX 00
+  2.437681 RX 00
+  2.440421 RX 12
+  2.440532 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  2.440571 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  2.501390 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  2.502087 RX 00
+  2.503232 RX 36
+  2.504085 RX 08
+  2.505264 RX 17
+  2.505305 TX f0
+  2.505352 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.513167 RX ff
+  2.514061 RX 14
+  2.515057 RX 00
+  2.516063 RX 21
+  2.517061 RX 04
+  2.518218 RX 9d
+  2.519066 RX 00
+  2.520063 RX 00
+  2.520890 RX 00
+  2.522083 RX 3f
+  2.523064 RX c1
+  2.524037 RX 80
+  2.525062 RX c3
+  2.527227 RX 00
+  2.528027 RX 10
+  2.529193 RX 7c
+  2.530031 RX 05
+  2.531035 RX 00
+  2.531893 RX e5
+  2.533206 RX 07
+  2.534031 RX 00
+  2.535042 RX 93
+  2.535076 TX 30
+  2.535137 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.538037 RX cf
+  2.538086 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  2.538138 ## tap 4/5: re-init for next overrun
+  2.538162 TX 30
+  2.538198 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.541181 RX cf
+  2.741368 TX ff
+  2.741438 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.022066 TX ff
+  3.022178 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.092601 TX ed
+  3.092675 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.092902 RX 00
+  3.092934 RX 00
+  3.095542 RX 12
+  3.095651 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  3.095690 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  3.155533 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  3.156493 RX 5e
+  3.157518 RX 00
+  3.158519 RX 36
+  3.159499 RX 08
+  3.160521 RX 17
+  3.160541 TX f0
+  3.160565 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.168471 RX ff
+  3.169638 RX 14
+  3.170511 RX 00
+  3.171524 RX 21
+  3.172457 RX 04
+  3.173453 RX 9d
+  3.174469 RX 00
+  3.175517 RX 00
+  3.176506 RX 00
+  3.177753 RX 3f
+  3.178770 RX c1
+  3.179769 RX 80
+  3.180738 RX c3
+  3.181712 RX 00
+  3.182767 RX 10
+  3.183712 RX 7c
+  3.184651 RX 05
+  3.185489 RX 00
+  3.186639 RX e5
+  3.187507 RX 07
+  3.188511 RX 00
+  3.189450 RX 93
+  3.189479 TX 30
+  3.189526 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.192455 RX cf
+  3.192483 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  3.192541 ## tap 5/5: re-init for next overrun
+  3.192580 TX 30
+  3.192612 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.195400 RX cf
+  3.395959 TX ff
+  3.396023 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.676487 TX ff
+  3.676585 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.747088 TX ed
+  3.747221 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.747611 RX 00
+  3.747644 RX 00
+  3.750229 RX 12
+  3.750319 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  3.750351 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  3.810409 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  3.811094 RX 5e
+  3.812191 RX 00
+  3.813184 RX 36
+  3.814443 RX 08
+  3.815175 RX 17
+  3.815209 TX f0
+  3.815247 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.823396 RX ff
+  3.824179 RX 14
+  3.825189 RX 00
+  3.826188 RX 21
+  3.828451 RX 04
+  3.829158 RX 9d
+  3.830209 RX 00
+  3.831178 RX 00
+  3.832127 RX 00
+  3.833106 RX 3f
+  3.834104 RX c1
+  3.835106 RX 80
+  3.836462 RX c3
+  3.837134 RX 00
+  3.838061 RX 10
+  3.839424 RX 7c
+  3.840154 RX 05
+  3.841132 RX 00
+  3.842305 RX e5
+  3.843035 RX 07
+  3.844152 RX 00
+  3.845112 RX 93
+  3.845146 TX 30
+  3.845205 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.848308 RX cf
+  3.848362 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  3.848435 TX 30
+  3.848474 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.852300 RX cf
+  4.052812 TX ff
+  4.052880 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.333174 TX ff
+  4.333240 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.403558 TX ed
+  4.403623 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.403828 RX 00
+  4.403859 RX 00
+  4.406564 RX 12
+  4.406644 TX c9 08 17
+  4.406683 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  4.409545 RX 36
+  4.410539 RX 08
+  4.411541 RX 17
+  4.411562 TX f0
+  4.411592 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.416566 RX ff
+  4.417550 RX 01
+  4.419551 RX 93
+  4.419597 TX 30
+  4.419630 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.422571 RX cf
+  4.422637 ## close
+  0.000063 ## open /dev/ttyUSB0 at 2026-11-16T13:42:13
+  0.000122 ## c9_write_1f target=$0817 fill=$5E00 frames=1 taps=6
+  0.000150 TX 30
+  0.000190 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.701463 TX ff
+  0.701525 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.981844 TX ff
+  0.981955 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.052227 TX ed
+  1.052347 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.055816 RX 12
+  1.055885 TX d0
+  1.055935 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.058910 RX 2f
+  1.058955 TX f0
+  1.059006 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.062964 RX ff
+  1.063614 RX 20
+  1.064851 RX 20
+  1.065628 RX 21
+  1.067656 RX 04
+  1.068755 RX 9d
+  1.069629 RX 00
+  1.070527 RX 00
+  1.071568 RX 00
+  1.072793 RX 3f
+  1.073782 RX c1
+  1.074785 RX 80
+  1.075641 RX c3
+  1.076812 RX 00
+  1.077776 RX 10
+  1.078625 RX 7c
+  1.079796 RX 05
+  1.080491 RX 00
+  1.081628 RX e5
+  1.082790 RX 07
+  1.083497 RX 00
+  1.084637 RX 01
+  1.085666 RX 00
+  1.086637 RX 00
+  1.087785 RX 00
+  1.088418 RX 00
+  1.089629 RX 00
+  1.090796 RX ff
+  1.091488 RX ff
+  1.093627 RX 32
+  1.094792 RX 4c
+  1.095495 RX 39
+  1.096663 RX 30
+  1.097797 RX 34
+  1.097863 TX 30
+  1.097908 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.101666 RX cf
+  1.101719 TX c9 08 17
+  1.101775 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  1.104666 RX 36
+  1.105792 RX 08
+  1.106773 RX 17
+  1.106818 TX f0
+  1.106873 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.114789 RX ff
+  1.115589 RX 01
+  1.116551 RX 00
+  1.116575 TX 30
+  1.116624 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.119706 RX cf
+  1.119937 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.120001 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.180513 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  1.181581 RX 00
+  1.182565 RX 36
+  1.183571 RX 08
+  1.184559 RX 17
+  1.184588 TX f0
+  1.184637 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.196607 RX ff
+  1.197679 RX 14
+  1.198575 RX 00
+  1.199683 RX 21
+  1.200679 RX 04
+  1.201671 RX 9d
+  1.202677 RX 00
+  1.203554 RX 00
+  1.204571 RX 00
+  1.205678 RX 3f
+  1.206683 RX c1
+  1.207678 RX 80
+  1.208682 RX c3
+  1.209679 RX 00
+  1.210675 RX 10
+  1.211556 RX 7c
+  1.212575 RX 05
+  1.213683 RX 00
+  1.214551 RX e5
+  1.215604 RX 07
+  1.216674 RX 00
+  1.218597 RX 00
+  1.218644 TX 30
+  1.218672 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.221679 RX cf
+  1.221726 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.221776 ## tap 2/6: re-init for next overrun
+  1.221791 TX 30
+  1.221856 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.225563 RX cf
+  1.426147 TX ff
+  1.426210 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.706616 TX ff
+  1.706679 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.777076 TX ed
+  1.777134 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.777429 RX 00
+  1.777452 RX 00
+  1.779966 RX 12
+  1.780057 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.780085 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.840028 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  1.840886 RX 5e
+  1.841883 RX 00
+  1.842865 RX 36
+  1.843855 RX 08
+  1.844855 RX 17
+  1.844911 TX f0
+  1.844939 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.851902 RX ff
+  1.852855 RX 14
+  1.853859 RX 00
+  1.854834 RX 21
+  1.855835 RX 04
+  1.856828 RX 9d
+  1.857862 RX 00
+  1.858862 RX 00
+  1.859871 RX 00
+  1.860865 RX 3f
+  1.861862 RX c1
+  1.862859 RX 80
+  1.863859 RX c3
+  1.864829 RX 00
+  1.865824 RX 10
+  1.866800 RX 7c
+  1.867852 RX 05
+  1.868860 RX 00
+  1.869836 RX e5
+  1.870829 RX 07
+  1.871825 RX 00
+  1.872842 RX 00
+  1.872869 TX 30
+  1.872919 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.875859 RX cf
+  1.875960 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.876012 ## tap 3/6: re-init for next overrun
+  1.876030 TX 30
+  1.876056 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.878825 RX cf
+  2.079154 TX ff
+  2.079217 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.359656 TX ff
+  2.359724 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.430114 TX ed
+  2.430183 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.430481 RX 00
+  2.430512 RX 00
+  2.433612 RX 12
+  2.433674 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  2.433703 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  2.494107 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  2.494435 RX 5e
+  2.495438 RX 00
+  2.496441 RX 36
+  2.497443 RX 08
+  2.498441 RX 17
+  2.498457 TX f0
+  2.498499 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.506456 RX ff
+  2.507446 RX 14
+  2.508441 RX 00
+  2.509430 RX 21
+  2.511442 RX 04
+  2.512442 RX 9d
+  2.513428 RX 00
+  2.514565 RX 00
+  2.515574 RX 00
+  2.516571 RX 3f
+  2.517573 RX c1
+  2.518565 RX 80
+  2.519574 RX c3
+  2.520565 RX 00
+  2.521572 RX 10
+  2.522557 RX 7c
+  2.523554 RX 05
+  2.524553 RX 00
+  2.525552 RX e5
+  2.526556 RX 07
+  2.527557 RX 00
+  2.528552 RX 93
+  2.528566 TX 30
+  2.528585 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.531557 RX cf
+  2.531571 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  2.531606 ## tap 4/6: re-init for next overrun
+  2.531636 TX 30
+  2.531654 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.534504 RX cf
+  2.734986 TX ff
+  2.735051 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.015628 TX ff
+  3.015695 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.086336 TX ed
+  3.086406 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.086671 RX 00
+  3.086703 RX 00
+  3.089334 RX 12
+  3.089416 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  3.089447 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  3.149316 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  3.150169 RX 5e
+  3.151187 RX 00
+  3.152171 RX 36
+  3.153175 RX 08
+  3.154225 RX 17
+  3.154245 TX f0
+  3.154269 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.162227 RX ff
+  3.163367 RX 14
+  3.164168 RX 00
+  3.165160 RX 21
+  3.166177 RX 04
+  3.167201 RX 9d
+  3.168197 RX 00
+  3.169149 RX 00
+  3.170188 RX 00
+  3.172180 RX 3f
+  3.173187 RX c1
+  3.173975 RX 80
+  3.175177 RX c3
+  3.176185 RX 00
+  3.177207 RX 10
+  3.178181 RX 7c
+  3.179095 RX 05
+  3.180091 RX 00
+  3.181159 RX e5
+  3.182169 RX 07
+  3.182973 RX 00
+  3.184180 RX 93
+  3.184200 TX 30
+  3.184225 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.187303 RX cf
+  3.187352 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  3.187384 ## tap 5/6: re-init for next overrun
+  3.187417 TX 30
+  3.187480 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.191174 RX cf
+  3.391506 TX ff
+  3.391570 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.671988 TX ff
+  3.672059 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.742726 TX ed
+  3.742808 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.743108 RX 00
+  3.743140 RX 00
+  3.745702 RX 12
+  3.745764 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  3.745791 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  3.807300 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  3.807362 RX 00
+  3.808550 RX 36
+  3.809552 RX 08
+  3.810550 RX 17
+  3.810570 TX f0
+  3.810593 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.817551 RX ff
+  3.818434 RX 14
+  3.819555 RX 00
+  3.820552 RX 21
+  3.821546 RX 04
+  3.822550 RX 9d
+  3.823551 RX 00
+  3.824552 RX 00
+  3.825552 RX 00
+  3.826554 RX 3f
+  3.827563 RX c1
+  3.828578 RX 80
+  3.829687 RX c3
+  3.831588 RX 00
+  3.832675 RX 10
+  3.833676 RX 7c
+  3.834678 RX 05
+  3.835686 RX 00
+  3.836681 RX e5
+  3.837678 RX 07
+  3.838559 RX 00
+  3.839565 RX 93
+  3.839599 TX 30
+  3.839625 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.842584 RX cf
+  3.842633 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  3.842690 ## tap 6/6: re-init for next overrun
+  3.842707 TX 30
+  3.842735 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.845588 RX cf
+  4.046092 TX ff
+  4.046154 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.326582 TX ff
+  4.326652 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.397103 TX ed
+  4.397172 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.397342 RX 00
+  4.397373 RX 00
+  4.400446 RX 12
+  4.400529 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  4.400562 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  4.461290 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  4.462211 RX 00
+  4.463226 RX 36
+  4.464195 RX 08
+  4.465116 RX 17
+  4.465137 TX f0
+  4.465161 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.473062 RX ff
+  4.474254 RX 14
+  4.475215 RX 00
+  4.476072 RX 21
+  4.477214 RX 04
+  4.478245 RX 9d
+  4.479204 RX 00
+  4.480203 RX 00
+  4.481225 RX 00
+  4.482222 RX 3f
+  4.483215 RX c1
+  4.484230 RX 80
+  4.485247 RX c3
+  4.486232 RX 00
+  4.487221 RX 10
+  4.488251 RX 7c
+  4.489151 RX 05
+  4.490275 RX 00
+  4.491197 RX e5
+  4.493257 RX 07
+  4.494275 RX 00
+  4.495080 RX 93
+  4.495100 TX 30
+  4.495124 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.498206 RX cf
+  4.498226 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  4.498281 TX 30
+  4.498301 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.501177 RX cf
+  4.701720 TX ff
+  4.701785 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.982446 TX ff
+  4.982540 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  5.052999 TX ed
+  5.053076 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  5.053344 RX 00
+  5.053376 RX 00
+  5.055722 RX 12
+  5.055789 TX c9 08 17
+  5.055816 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  5.058894 RX 36
+  5.059973 RX 08
+  5.060951 RX 17
+  5.061025 TX f0
+  5.061049 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  5.066985 RX ff
+  5.067962 RX 01
+  5.068884 RX 93
+  5.068965 TX 30
+  5.068992 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  5.071952 RX cf
+  5.072002 ## close
+  0.000062 ## open /dev/ttyUSB0 at 2026-11-16T13:42:20
+  0.000102 ## c9_write_1f target=$0817 fill=$5E00 frames=1 taps=7
+  0.000121 TX 30
+  0.000152 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.003251 RX cf
+  0.203632 TX ff
+  0.203694 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.484123 TX ff
+  0.484195 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.554758 TX ed
+  0.554850 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.555020 RX 00
+  0.555053 RX 00
+  0.558252 RX 12
+  0.558313 TX d0
+  0.558341 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.562234 RX 2f
+  0.562281 TX f0
+  0.562310 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.568889 RX ff
+  0.569858 RX 20
+  0.570862 RX 20
+  0.572874 RX 21
+  0.574173 RX 04
+  0.575006 RX 9d
+  0.576031 RX 00
+  0.577096 RX 00
+  0.578065 RX 00
+  0.579123 RX 3f
+  0.580096 RX c1
+  0.581029 RX 80
+  0.582069 RX c3
+  0.583033 RX 00
+  0.583962 RX 10
+  0.585012 RX 7c
+  0.586067 RX 05
+  0.587090 RX 00
+  0.588092 RX e5
+  0.589060 RX 07
+  0.590043 RX 00
+  0.591142 RX 01
+  0.592120 RX 00
+  0.593065 RX 00
+  0.593979 RX 00
+  0.595064 RX 00
+  0.596086 RX 00
+  0.597091 RX ff
+  0.599000 RX ff
+  0.600140 RX 32
+  0.601058 RX 4c
+  0.601814 RX 39
+  0.603231 RX 30
+  0.604102 RX 34
+  0.604130 TX 30
+  0.604158 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.607216 RX cf
+  0.607290 TX c9 08 17
+  0.607321 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  0.610122 RX 36
+  0.611918 RX 08
+  0.612845 RX 17
+  0.612886 TX f0
+  0.612914 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.619848 RX ff
+  0.620831 RX 01
+  0.622805 RX 93
+  0.622825 TX 30
+  0.622848 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.625785 RX cf
+  0.625935 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  0.625974 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  0.687223 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  0.687976 RX 00
+  0.688981 RX 36
+  0.690096 RX 08
+  0.690991 RX 17
+  0.691019 TX f0
+  0.691040 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.703063 RX ff
+  0.703967 RX 14
+  0.705057 RX 93
+  0.705958 RX 21
+  0.706963 RX 04
+  0.707796 RX 9d
+  0.708942 RX 00
+  0.710020 RX 00
+  0.711106 RX 00
+  0.711966 RX 3f
+  0.713042 RX c1
+  0.714004 RX 80
+  0.715083 RX c3
+  0.716014 RX 00
+  0.717087 RX 10
+  0.718028 RX 7c
+  0.719087 RX 05
+  0.719999 RX 00
+  0.721080 RX e5
+  0.722025 RX 07
+  0.723001 RX 00
+  0.724100 RX 93
+  0.724152 TX 30
+  0.724184 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.728006 RX cf
+  0.728060 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  0.728125 ## tap 2/7: re-init for next overrun
+  0.728168 TX 30
+  0.728208 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.730988 RX cf
+  0.931522 TX ff
+  0.931608 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.212263 TX ff
+  1.212339 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.282774 TX ed
+  1.282842 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.283106 RX 00
+  1.283139 RX 00
+  1.285917 RX 12
+  1.286043 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.286075 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  1.346390 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  1.347552 RX 00
+  1.348545 RX 36
+  1.349523 RX 08
+  1.350327 RX 17
+  1.350362 TX f0
+  1.350387 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.357618 RX ff
+  1.358609 RX 14
+  1.359668 RX 93
+  1.361591 RX 21
+  1.362609 RX 04
+  1.363772 RX 9d
+  1.364719 RX 00
+  1.365710 RX 00
+  1.366772 RX 00
+  1.367792 RX 3f
+  1.368409 RX c1
+  1.369471 RX 80
+  1.370615 RX c3
+  1.371718 RX 00
+  1.372590 RX 10
+  1.373554 RX 7c
+  1.374616 RX 05
+  1.375611 RX 00
+  1.376588 RX e5
+  1.377616 RX 07
+  1.378592 RX 00
+  1.379647 RX 93
+  1.379687 TX 30
+  1.379753 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.382599 RX cf
+  1.382635 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  1.382666 ## tap 3/7: re-init for next overrun
+  1.382697 TX 30
+  1.382776 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.385618 RX cf
+  1.586008 TX ff
+  1.586105 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.866631 TX ff
+  1.866700 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.937189 TX ed
+  1.937283 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.937444 RX 00
+  1.937503 RX 00
+  1.940201 RX 12
+  1.940283 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  1.940313 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  2.000215 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  2.001059 RX 5e
+  2.002064 RX 00
+  2.003157 RX 36
+  2.004072 RX 08
+  2.005161 RX 17
+  2.005181 TX f0
+  2.005204 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.013297 RX ff
+  2.014065 RX 14
+  2.016076 RX 93
+  2.017276 RX 21
+  2.018100 RX 04
+  2.019106 RX 9d
+  2.020086 RX 00
+  2.021097 RX 00
+  2.022112 RX 00
+  2.023171 RX 3f
+  2.024186 RX c1
+  2.025064 RX 80
+  2.026030 RX c3
+  2.027136 RX 00
+  2.028088 RX 10
+  2.029132 RX 7c
+  2.030092 RX 05
+  2.031134 RX 00
+  2.032165 RX e5
+  2.033141 RX 07
+  2.034164 RX 00
+  2.035145 RX 93
+  2.035173 TX 30
+  2.035199 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.038063 RX cf
+  2.038151 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  2.038200 ## tap 4/7: re-init for next overrun
+  2.038235 TX 30
+  2.038285 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.041053 RX cf
+  2.241464 TX ff
+  2.241576 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.522084 TX ff
+  2.522159 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.592627 TX ed
+  2.592716 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.592870 RX 00
+  2.592937 RX 00
+  2.595957 RX 12
+  2.596043 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  2.596075 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  2.657121 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36 5e
+  2.657436 RX 00
+  2.658620 RX 36
+  2.659621 RX 08
+  2.660672 RX 17
+  2.660746 TX f0
+  2.660774 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.668752 RX ff
+  2.669712 RX 14
+  2.670725 RX 93
+  2.671728 RX 21
+  2.672727 RX 04
+  2.673725 RX 9d
+  2.674718 RX 00
+  2.675729 RX 00
+  2.676628 RX 00
+  2.677632 RX 3f
+  2.678494 RX c1
+  2.679639 RX 80
+  2.680473 RX c3
+  2.682708 RX 00
+  2.683565 RX 10
+  2.684635 RX 7c
+  2.685636 RX 05
+  2.686627 RX 00
+  2.687722 RX e5
+  2.688727 RX 07
+  2.689709 RX 00
+  2.690722 RX 93
+  2.690774 TX 30
+  2.690806 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.693687 RX cf
+  2.693741 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  2.693805 ## tap 5/7: re-init for next overrun
+  2.693843 TX 30
+  2.693880 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.696650 RX cf
+  2.897124 TX ff
+  2.897191 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.177626 TX ff
+  3.177703 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.248097 TX ed
+  3.248173 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.248357 RX 00
+  3.248412 RX 00
+  3.251225 RX 12
+  3.251344 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  3.251387 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  3.311232 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  3.312094 RX 5e
+  3.313110 RX 00
+  3.314119 RX 36
+  3.315131 RX 08
+  3.316152 RX 17
+  3.316180 TX f0
+  3.316216 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.324255 RX ff
+  3.325054 RX 14
+  3.326080 RX 93
+  3.327124 RX 21
+  3.328122 RX 04
+  3.329152 RX 9d
+  3.330000 RX 00
+  3.331163 RX 00
+  3.332131 RX 00
+  3.333132 RX 3f
+  3.334087 RX c1
+  3.335111 RX 80
+  3.336112 RX c3
+  3.337161 RX 00
+  3.338034 RX 10
+  3.340126 RX 7c
+  3.341025 RX 05
+  3.342066 RX 00
+  3.343115 RX e5
+  3.344061 RX 07
+  3.345176 RX 00
+  3.346060 RX 93
+  3.346110 TX 30
+  3.346165 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.349008 RX cf
+  3.349048 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  3.349162 ## tap 6/7: re-init for next overrun
+  3.349188 TX 30
+  3.349284 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.352084 RX cf
+  3.552459 TX ff
+  3.552601 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.833066 TX ff
+  3.833141 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.903591 TX ed
+  3.903669 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.903876 RX 00
+  3.903909 RX 00
+  3.906733 RX 12
+  3.906843 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  3.906886 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  3.967382 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  3.967427 RX 5e
+  3.968725 RX 00
+  3.969720 RX 36
+  3.970764 RX 08
+  3.971725 RX 17
+  3.971804 TX f0
+  3.971838 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  3.979671 RX ff
+  3.980648 RX 14
+  3.981444 RX 93
+  3.982648 RX 21
+  3.983842 RX 04
+  3.984828 RX 9d
+  3.985828 RX 00
+  3.986686 RX 00
+  3.987846 RX 00
+  3.988684 RX 3f
+  3.989689 RX c1
+  3.990861 RX 80
+  3.991667 RX c3
+  3.992539 RX 00
+  3.993653 RX 10
+  3.994845 RX 7c
+  3.995868 RX 05
+  3.996841 RX 00
+  3.997682 RX e5
+  3.998859 RX 07
+  3.999687 RX 00
+  4.001623 RX 93
+  4.001657 TX 30
+  4.001694 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.004659 RX cf
+  4.004712 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  4.004758 ## tap 7/7: re-init for next overrun
+  4.004800 TX 30
+  4.004836 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.007657 RX cf
+  4.208195 TX ff
+  4.208301 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.488570 TX ff
+  4.488638 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.558898 TX ed
+  4.559018 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.559241 RX 00
+  4.559284 RX 00
+  4.562055 RX 12
+  4.562128 TX c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e d7 c9 5e 00 c9 08 17
+  4.562160 ## TX accepted-prefix 60/60; ECU execution unconfirmed
+  4.622349 RX 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e d7 36
+  4.623209 RX 5e
+  4.624200 RX 00
+  4.625206 RX 36
+  4.626087 RX 08
+  4.627378 RX 17
+  4.627428 TX f0
+  4.627464 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.634234 RX ff
+  4.636388 RX 14
+  4.637181 RX 93
+  4.638117 RX 21
+  4.639193 RX 04
+  4.640111 RX 9d
+  4.641186 RX 00
+  4.642179 RX 00
+  4.643175 RX 00
+  4.644125 RX 3f
+  4.645118 RX c1
+  4.646211 RX 80
+  4.647146 RX c3
+  4.648036 RX 00
+  4.649352 RX 10
+  4.650184 RX 7c
+  4.651182 RX 05
+  4.652199 RX 00
+  4.653187 RX e5
+  4.654190 RX 07
+  4.655111 RX 00
+  4.656128 RX 93
+  4.656174 TX 30
+  4.656210 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.658974 RX cf
+  4.659030 ## single mutation attempt; 1 frames; stop acknowledged; RAM unverified
+  4.659098 TX 30
+  4.659184 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  4.662234 RX cf
+  4.862805 TX ff
+  4.862875 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  5.143300 TX ff
+  5.143379 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  5.213900 TX ed
+  5.213986 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  5.214220 RX 00
+  5.214256 RX 00
+  5.216965 RX 12
+  5.217041 TX c9 08 17
+  5.217079 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  5.219867 RX 36
+  5.221974 RX 08
+  5.223000 RX 17
+  5.223050 TX f0
+  5.223085 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  5.228801 RX ff
+  5.229987 RX 01
+  5.231002 RX 93
+  5.231055 TX 30
+  5.231091 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  5.234834 RX cf
+  5.234892 ## close
