@@ -23,6 +23,7 @@
 
 #include "consult.h"
 #include "registers.h"
+#include "replay.h"
 
 /* $CONSULT_LOG_DIR if set. Otherwise Linux: the Makefile sets LOG_DIR to the checkout's
  * logs/. Windows: logs/ next to consult-gui.exe (the checkout when built there, or the
@@ -69,6 +70,8 @@ static struct {
     GtkWidget *bcm_btn[N_BCM_TESTS], *bcm_hold, *bcm_result, *bcm_latch;
     GtkWidget *body_val[N_BCM_INPUTS], *body_knob, *body_raw;
     GtkWidget *knock_btn, *knock_fs, *knock_ok, *knock_val, *knock_raw;
+    GtkWidget *replay_scale, *replay_info, *replay_value[N_SENSORS];
+    GArray *replay;
     GThread *thread;
     GPtrArray *dev_paths;   /* path per dev_list entry; the last entry is "Custom…" */
     char devpath[256];
@@ -1312,6 +1315,117 @@ static GtkWidget *engine_page(void)
     return page;
 }
 
+/* Playback has its own readouts, so worker messages cannot overwrite it. */
+static void replay_changed(GtkRange *range, gpointer unused)
+{
+    (void)unused;
+    if (!app.replay || !app.replay->len) return;
+    double time = gtk_range_get_value(range);
+    guint lo = 0, hi = app.replay->len;
+    while (lo + 1 < hi) {
+        guint mid = lo + (hi - lo) / 2;
+        if (g_array_index(app.replay, replay_frame_t, mid).time <= time) lo = mid;
+        else hi = mid;
+    }
+    replay_frame_t *f = &g_array_index(app.replay, replay_frame_t, lo);
+    char text[160];
+    g_snprintf(text, sizeof text, "%.3f s / %.3f s · frame %u of %u",
+               f->time, g_array_index(app.replay, replay_frame_t, app.replay->len - 1).time,
+               lo + 1, app.replay->len);
+    gtk_label_set_text(GTK_LABEL(app.replay_info), text);
+    for (int i = 0; i < N_SENSORS; i++) {
+        if (isnan(f->values[i])) g_snprintf(text, sizeof text, "–");
+        else g_snprintf(text, sizeof text, "%.*f %s", SENSORS[i].decimals,
+                        f->values[i], SENSORS[i].unit);
+        gtk_label_set_text(GTK_LABEL(app.replay_value[i]), text);
+    }
+}
+
+static void replay_step(GtkButton *button, gpointer direction)
+{
+    (void)button;
+    if (!app.replay || !app.replay->len) return;
+    double time = gtk_range_get_value(GTK_RANGE(app.replay_scale));
+    guint i = 0;
+    while (i + 1 < app.replay->len &&
+           g_array_index(app.replay, replay_frame_t, i + 1).time <= time) i++;
+    if (GPOINTER_TO_INT(direction) > 0) { if (i + 1 < app.replay->len) i++; }
+    else if (i) i--;
+    gtk_range_set_value(GTK_RANGE(app.replay_scale),
+                        g_array_index(app.replay, replay_frame_t, i).time);
+}
+
+static void replay_opened(GtkNativeDialog *dialog, int response, gpointer unused)
+{
+    (void)unused;
+    if (response == GTK_RESPONSE_ACCEPT) {
+        GFile *file = gtk_file_chooser_get_file(GTK_FILE_CHOOSER(dialog));
+        char *path = g_file_get_path(file);
+        GError *error = NULL;
+        GArray *frames = path ? replay_load(path, &error) : NULL;
+        if (frames) {
+            if (app.replay) g_array_unref(app.replay);
+            app.replay = frames;
+            double end = g_array_index(frames, replay_frame_t, frames->len - 1).time;
+            gtk_range_set_range(GTK_RANGE(app.replay_scale), 0, MAX(end, 0.001));
+            gtk_widget_set_sensitive(app.replay_scale, TRUE);
+            gtk_range_set_value(GTK_RANGE(app.replay_scale), 0);
+            replay_changed(GTK_RANGE(app.replay_scale), NULL);
+            char *name = g_file_get_basename(file);
+            gtk_label_set_text(GTK_LABEL(app.status), name);
+            g_free(name);
+        } else {
+            gtk_label_set_text(GTK_LABEL(app.status), error ? error->message : "Choose a local log file.");
+        }
+        g_clear_error(&error);
+        g_free(path);
+        g_object_unref(file);
+    }
+    g_object_unref(dialog);
+}
+
+static void replay_open(GtkButton *button, gpointer unused)
+{
+    (void)button; (void)unused;
+    GtkFileChooserNative *dialog = gtk_file_chooser_native_new("Open Consult log",
+        GTK_WINDOW(app.win), GTK_FILE_CHOOSER_ACTION_OPEN, "Open", "Cancel");
+    g_signal_connect(dialog, "response", G_CALLBACK(replay_opened), NULL);
+    gtk_native_dialog_show(GTK_NATIVE_DIALOG(dialog));
+}
+
+static GtkWidget *replay_page(void)
+{
+    GtkWidget *page = page_box(), *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+    GtkWidget *open = gtk_button_new_with_label("Open log…");
+    GtkWidget *prev = gtk_button_new_with_label("Previous frame");
+    GtkWidget *next = gtk_button_new_with_label("Next frame");
+    g_signal_connect(open, "clicked", G_CALLBACK(replay_open), NULL);
+    g_signal_connect(prev, "clicked", G_CALLBACK(replay_step), GINT_TO_POINTER(-1));
+    g_signal_connect(next, "clicked", G_CALLBACK(replay_step), GINT_TO_POINTER(1));
+    gtk_box_append(GTK_BOX(row), open);
+    gtk_box_append(GTK_BOX(row), prev);
+    gtk_box_append(GTK_BOX(row), next);
+    gtk_box_append(GTK_BOX(page), row);
+    gtk_box_append(GTK_BOX(page), label("Open a raw Consult log to review engine sensors. Times are relative to the first sensor frame; dashes mean a sensor was not recorded in that frame.", 0));
+    app.replay_info = label("No log loaded", 0);
+    gtk_box_append(GTK_BOX(page), app.replay_info);
+    app.replay_scale = gtk_scale_new_with_range(GTK_ORIENTATION_HORIZONTAL, 0, 1, 0.001);
+    gtk_scale_set_draw_value(GTK_SCALE(app.replay_scale), FALSE);
+    gtk_widget_set_sensitive(app.replay_scale, FALSE);
+    g_signal_connect(app.replay_scale, "value-changed", G_CALLBACK(replay_changed), NULL);
+    gtk_box_append(GTK_BOX(page), app.replay_scale);
+    GtkWidget *grid = gtk_grid_new();
+    gtk_grid_set_column_spacing(GTK_GRID(grid), 24);
+    gtk_grid_set_row_spacing(GTK_GRID(grid), 4);
+    for (int i = 0; i < N_SENSORS; i++) {
+        gtk_grid_attach(GTK_GRID(grid), label(SENSORS[i].name, 0), 0, i, 1, 1);
+        app.replay_value[i] = label("–", 1);
+        gtk_grid_attach(GTK_GRID(grid), app.replay_value[i], 1, i, 1, 1);
+    }
+    gtk_box_append(GTK_BOX(page), framed("Recorded engine sensors", grid));
+    return page;
+}
+
 static GtkWidget *codes_page(void)
 {
     GtkWidget *page = page_box(), *codes = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
@@ -1406,7 +1520,7 @@ static GtkWidget *other_page(void)
 static void activate(GtkApplication *ga, gpointer u)
 {
     GtkWidget *win, *root, *bar, *split, *side, *stack, *body;
-    struct { const char *id, *name; GtkWidget *page; } pages[5];
+    struct { const char *id, *name; GtkWidget *page; } pages[6];
     (void)u;
 
     win = app.win = gtk_application_window_new(ga);
@@ -1446,13 +1560,15 @@ static void activate(GtkApplication *ga, gpointer u)
     pages[3].id = "bcm";    pages[3].name = "Body (BCM)";      pages[3].page = body;
     pages[4].id = "other";  pages[4].name = "Other";           pages[4].page = other_page();
 
+    pages[5].id = "replay"; pages[5].name = "Log playback"; pages[5].page = replay_page();
+
     /* Left: the page list. Right: the selected page, one at a time, scrolling when it
      * doesn't fit. */
     split = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_widget_set_vexpand(split, TRUE);
     stack = gtk_stack_new();
     gtk_widget_set_hexpand(stack, TRUE);
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 6; i++) {
         GtkWidget *scroll = gtk_scrolled_window_new();
         gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(scroll), pages[i].page);
         gtk_stack_add_titled(GTK_STACK(stack), scroll, pages[i].id, pages[i].name);
@@ -1488,6 +1604,7 @@ int main(int argc, char **argv)
     g_signal_connect(ga, "activate", G_CALLBACK(activate), NULL);
     g_signal_connect(ga, "shutdown", G_CALLBACK(on_shutdown), NULL);
     rc = g_application_run(G_APPLICATION(ga), argc, argv);
+    if (app.replay) g_array_unref(app.replay);
     g_object_unref(ga);
     return rc;
 }

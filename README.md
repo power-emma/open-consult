@@ -57,6 +57,12 @@ python -m consult knock                    # knock fail-safe state
 make && ./consult-gui
 ```
 
+In the GUI, choose **Log playback → Open log…** to review recorded engine
+sensors without a cable. Drag the timeline or use Previous/Next frame to inspect
+values. Playback reads the existing raw TX/RX logs, including partial sensor lists;
+sensors absent from a frame show a dash. Times start at the first sensor frame.
+Body-module and other non-sensor traffic is skipped.
+
 The cable shows up as a 9600 8N1 serial port (`/dev/ttyUSB0`). Set the FTDI
 latency timer to 1 ms for smooth data (`CONSULT_PROTOCOL.md` §2).
 
@@ -100,6 +106,12 @@ Manager → the port → Port Settings → Advanced.
 - **Engine active tests change fuel, timing and pumps.** You're going to be turning off cylinders and the like just be smart
 - **BCM tests move windows and locks.** Keep hands clear
 
-## Processor-write research record
+## ECU RAM write access
 
-[Findings and evidence status](docs/processor-write/FINDINGS.md), including failed attempts and corrections, with [all existing logs](docs/processor-write/LOGS.md) and [15 recovered Claude research sessions](docs/processor-write/SESSIONS.md).
+The Consult `C9` command can write a byte to ECU working RAM — this is an
+authorized diagnostic procedure documented in a Nissan service bulletin.
+I reverse-engineered the mechanism independently before finding the bulletin.
+See [`write access nissan.md`](write%20access%20nissan.md) for the full
+explanation and [`nissan-write.py`](nissan-write.py) for a payload builder /
+simulator. Research notes and session logs are in
+[`docs/processor-write/`](docs/processor-write/).
