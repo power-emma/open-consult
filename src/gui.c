@@ -9,6 +9,7 @@
 #include <errno.h>
 #include <math.h>
 #include <gtk/gtk.h>
+#include <glib/gstdio.h>
 #include <stdatomic.h>
 #include <stdlib.h>
 #include <string.h>
@@ -22,6 +23,8 @@
 #endif
 
 #include "consult.h"
+#include "fuel_map.h"
+#include "factory_fuel.h"
 #include "registers.h"
 #include "replay.h"
 
@@ -47,7 +50,9 @@ static char *log_dir(void)
 #endif
 }
 
-enum { MSG_STATUS, MSG_VALUES, MSG_DTCS, MSG_ACTIVE, MSG_BCM, MSG_BODY, MSG_KNOCK, MSG_DONE };
+enum { MSG_STATUS, MSG_VALUES, MSG_DTCS, MSG_ACTIVE, MSG_FUEL, MSG_FUEL_LOG, MSG_TIMING, MSG_FUEL_SAMPLE, MSG_BCM, MSG_BODY, MSG_KNOCK, MSG_REFRESH, MSG_DONE };
+
+enum { FUEL_STREAM = 1, TIMING_PROBE };
 
 #define WINDOW_MAX_HOLD 10.0    /* s; a window moves only while its button is held */
 
@@ -56,6 +61,9 @@ typedef struct {
     char text[256];
     double values[N_SENSORS];
     double fps;
+    double fuel_rpm;
+    unsigned fuel_load;
+    int fuel_percent;
     consult_dtc_t dtcs[CONSULT_MAX_DTCS];
     int ndtcs;
     uint8_t knock[3];       /* $070D, $0213, $0DB8 */
@@ -67,6 +75,16 @@ static struct {
     GtkWidget *win, *dev, *dev_list, *dev_scan, *live_btn, *dtc_btn, *clear_btn, *status, *fps, *dtc_grid;
     GtkWidget *value[N_SENSORS];
     GtkWidget *test, *test_value, *test_unit, *test_hold, *test_btn, *test_result;
+    GtkWidget *fuel_import, *fuel_candidate, *fuel_start, *fuel_hold, *fuel_file, *fuel_result;
+    GtkWidget *fuel_table, *fuel_pointer, *fuel_factory_view, *fuel_until_stopped, *fuel_log;
+    GtkWidget *timing_raw, *timing_start, *timing_result, *timing_factory_view;
+    uint8_t timing_byte;
+    GtkTextTag *fuel_pointer_tag;
+    fuel_map_t *fuel_map;
+    double fuel_seconds;
+    int want_fuel;
+    gboolean fuel_is_candidate;
+    atomic_int abort_fuel;
     GtkWidget *bcm_btn[N_BCM_TESTS], *bcm_hold, *bcm_result, *bcm_latch;
     GtkWidget *body_val[N_BCM_INPUTS], *body_knob, *body_raw;
     GtkWidget *knock_btn, *knock_fs, *knock_ok, *knock_val, *knock_raw;
@@ -121,6 +139,32 @@ static void post_active(const char *fmt, ...)
     post(m);
 }
 
+static void post_fuel(const char *message)
+{
+    msg_t *m = g_new0(msg_t, 1);
+    m->kind = MSG_FUEL;
+    g_strlcpy(m->text, message, sizeof m->text);
+    post(m);
+}
+
+static void post_timing(const char *message)
+{
+    msg_t *m = g_new0(msg_t, 1);
+    m->kind = MSG_TIMING;
+    g_strlcpy(m->text, message, sizeof m->text);
+    post(m);
+}
+
+static void post_fuel_sample(double rpm, unsigned load, int percent)
+{
+    msg_t *m = g_new0(msg_t, 1);
+    m->kind = MSG_FUEL_SAMPLE;
+    m->fuel_rpm = rpm;
+    m->fuel_load = load;
+    m->fuel_percent = percent;
+    post(m);
+}
+
 static void post_bcm(const char *fmt, ...) G_GNUC_PRINTF(1, 2);
 static void post_bcm(const char *fmt, ...)
 {
@@ -144,7 +188,7 @@ static void give_up(void)
 {
     g_mutex_lock(&app.lock);
     app.want_live = app.want_dtc = app.want_clear = app.want_active = app.want_bcm = 0;
-    app.want_knock = 0;
+    app.want_knock = app.want_fuel = 0;
     app.want_latch = 0;
     g_mutex_unlock(&app.lock);
 }
@@ -356,6 +400,41 @@ static int read_knock(consult_t *c)
     return 1;
 }
 
+static gboolean run_logged_fuel(consult_t *c)
+{
+    GDateTime *now = g_date_time_new_now_local();
+    char *stamp = g_date_time_format(now, "%Y-%m-%d_%H%M%S_%f");
+    char *name = g_strdup_printf("%s_gui-fuel.csv", stamp);
+    char *dir = log_dir();
+    char *path = g_build_filename(dir, name, NULL);
+    FILE *csv = g_fopen(path, "wb");
+    gboolean ok = FALSE;
+    if (csv) {
+        msg_t *m = g_new0(msg_t, 1);
+        m->kind = MSG_FUEL_LOG;
+        g_snprintf(m->text, sizeof m->text, "Session CSV: %s", path);
+        post(m);
+        serial_note(c->s, "fuel session CSV: %s", path);
+        ok = fuel_map_stream(c, app.fuel_map, app.fuel_seconds, &app.abort_fuel,
+                             post_fuel, post_fuel_sample, csv);
+        if (fclose(csv) != 0 && ok) {
+            post_fuel("Fuel stream stopped, but closing the session CSV failed.");
+            ok = FALSE;
+        }
+    } else {
+        char message[256];
+        g_snprintf(message, sizeof message, "Could not open the fuel session CSV: %s", g_strerror(errno));
+        post_fuel(message);
+    }
+
+    g_free(path);
+    g_free(dir);
+    g_free(name);
+    g_free(stamp);
+    g_date_time_unref(now);
+    return ok;
+}
+
 static gpointer worker(gpointer unused)
 {
     serial_t s;
@@ -394,17 +473,24 @@ static gpointer worker(gpointer unused)
             post_status("%s not found. Is the dongle plugged in?", app.devpath);
         else
             post_status("Can't open %s: %s", app.devpath, g_strerror(-rc));
+        g_mutex_lock(&app.lock);
+        if (app.want_fuel == FUEL_STREAM)
+            post_fuel("Could not open the Consult port. See the connection status.");
+        else if (app.want_fuel == TIMING_PROBE)
+            post_timing("Could not open the Consult port. See the connection status.");
+        g_mutex_unlock(&app.lock);
         give_up();
         post_kind(MSG_DONE);
         return NULL;
     }
 
     while (!atomic_load(&app.cancel)) {
-        int live, dtc, clear, active, bcm, latch, knock, idx, arg;
+        int live, dtc, clear, active, bcm, latch, knock, fuel, idx, arg;
         double hold, bcm_hold;
         char bcm_name[sizeof app.bcm_name];
         uint8_t bcm_item, bcm_value;
         g_mutex_lock(&app.lock);
+        fuel = app.want_fuel;
         live = app.want_live;
         dtc = app.want_dtc;
         clear = app.want_clear;
@@ -420,6 +506,34 @@ static gpointer worker(gpointer unused)
         bcm_value = app.bcm_value;
         bcm_hold = app.bcm_hold_s;
         g_mutex_unlock(&app.lock);
+
+        if (fuel) {
+            fuel_status_fn status = fuel == TIMING_PROBE ? post_timing : post_fuel;
+            gboolean ready = !streaming || consult_stop(&c, 0.5, NULL);
+            streaming = latched = 0;
+            if (!ready) {
+                status("Could not stop the existing Consult stream.");
+                goto fail;
+            }
+            if (!use_engine(&c, &cur)) {
+                status("Could not connect to the engine ECU.");
+                goto fail;
+            }
+            gboolean streamed;
+            if (fuel == TIMING_PROBE) {
+                streamed = timing_probe(&c, app.timing_byte, &app.abort_fuel, status);
+            } else {
+                streamed = run_logged_fuel(&c);
+                post_fuel_sample(0, 0, 0);
+            }
+            if (!streamed)
+                goto fail;
+            g_mutex_lock(&app.lock);
+            app.want_fuel = 0;
+            g_mutex_unlock(&app.lock);
+            post_kind(MSG_REFRESH);
+            continue;
+        }
 
         if (bcm) {
             if (streaming)
@@ -618,6 +732,12 @@ static void start_worker(void)
     g_strlcpy(app.devpath, gtk_editable_get_text(GTK_EDITABLE(app.dev)), sizeof app.devpath);
     if (!app.devpath[0]) {
         post_status("Pick a port, or choose Custom… and type its path.");
+        g_mutex_lock(&app.lock);
+        if (app.want_fuel == FUEL_STREAM)
+            post_fuel("Select a serial port first.");
+        else if (app.want_fuel == TIMING_PROBE)
+            post_timing("Select a serial port first.");
+        g_mutex_unlock(&app.lock);
         give_up();
         update_buttons();
         return;
@@ -627,9 +747,10 @@ static void start_worker(void)
 
 static void update_buttons(void)
 {
-    int live, dtc, clear, active, bcm, latch, knock;
+    int live, dtc, clear, active, bcm, latch, knock, fuel;
     const active_test_t *t = &ACTIVE_TESTS[gtk_drop_down_get_selected(GTK_DROP_DOWN(app.test))];
     g_mutex_lock(&app.lock);
+    fuel = app.want_fuel;
     live = app.want_live;
     dtc = app.want_dtc;
     clear = app.want_clear;
@@ -638,17 +759,32 @@ static void update_buttons(void)
     latch = app.want_latch;
     knock = app.want_knock;
     g_mutex_unlock(&app.lock);
-    gtk_widget_set_sensitive(app.knock_btn, !knock && !active && !bcm);
+    gtk_widget_set_sensitive(app.fuel_import, !fuel);
+    gtk_widget_set_sensitive(app.fuel_candidate, !fuel);
+    gtk_widget_set_sensitive(app.fuel_until_stopped, !fuel);
+    gtk_widget_set_sensitive(app.fuel_hold,
+        !fuel && !gtk_check_button_get_active(GTK_CHECK_BUTTON(app.fuel_until_stopped)));
+    gboolean idle = !fuel && !dtc && !clear && !active && !bcm && !knock && !latch;
+    gtk_widget_set_sensitive(app.fuel_start, fuel == FUEL_STREAM || (idle && app.fuel_map));
+    gtk_button_set_label(GTK_BUTTON(app.fuel_start),
+                         fuel == FUEL_STREAM ? "Stop streaming" : "Stream map…");
+    gtk_widget_set_sensitive(app.timing_raw, !fuel);
+    gtk_widget_set_sensitive(app.timing_start, fuel == TIMING_PROBE || idle);
+    gtk_button_set_label(GTK_BUTTON(app.timing_start),
+                         fuel == TIMING_PROBE ? "Stop probe" : "Probe timing…");
+    gtk_widget_set_sensitive(app.live_btn, !fuel);
+    gtk_widget_set_sensitive(app.bcm_latch, !fuel);
+    gtk_widget_set_sensitive(app.knock_btn, !fuel && !knock && !active && !bcm);
     /* No-op (and no "toggled" signal) unless the worker dropped the latch. */
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(app.bcm_latch), latch);
     /* The window buttons stay sensitive: making a held button insensitive would cancel
      * the press, and the release is what stops the window. */
     for (int i = 0; i < N_BCM_TESTS; i++)
-        gtk_widget_set_sensitive(app.bcm_btn[i], !bcm && !active);
-    gtk_widget_set_sensitive(app.test_btn, active || !bcm);
+        gtk_widget_set_sensitive(app.bcm_btn[i], !fuel && !bcm && !active);
+    gtk_widget_set_sensitive(app.test_btn, !fuel && (active || !bcm));
     gtk_button_set_label(GTK_BUTTON(app.live_btn), live ? "Stop live data" : "Start live data");
-    gtk_widget_set_sensitive(app.dtc_btn, !dtc && !clear && !active);
-    gtk_widget_set_sensitive(app.clear_btn, !dtc && !clear && !active);
+    gtk_widget_set_sensitive(app.dtc_btn, !fuel && !dtc && !clear && !active);
+    gtk_widget_set_sensitive(app.clear_btn, !fuel && !dtc && !clear && !active);
     gtk_widget_set_sensitive(app.dev_list, app.thread == NULL);
     gtk_widget_set_sensitive(app.dev_scan, app.thread == NULL);
     gtk_widget_set_sensitive(app.dev, app.thread == NULL &&
@@ -733,6 +869,47 @@ static void show_body(const uint8_t *b)
     gtk_label_set_text(GTK_LABEL(app.body_raw), buf);
 }
 
+static void show_fuel_pointer(const msg_t *m)
+{
+    GtkTextView *view = GTK_TEXT_VIEW(app.fuel_table);
+    GtkTextBuffer *buffer = gtk_text_view_get_buffer(view);
+    GtkTextIter start, end;
+    gtk_text_buffer_get_bounds(buffer, &start, &end);
+    gtk_text_buffer_remove_tag(buffer, app.fuel_pointer_tag, &start, &end);
+    if (!m->fuel_rpm || !app.fuel_map) {
+        gtk_label_set_text(GTK_LABEL(app.fuel_pointer), "");
+        return;
+    }
+
+    char text[128];
+    if (m->fuel_percent)
+        g_snprintf(text, sizeof text, "%.1f RPM · raw load %u · sent %+d%% (native %d)",
+                   m->fuel_rpm, m->fuel_load, m->fuel_percent - 100, m->fuel_percent);
+    else
+        g_snprintf(text, sizeof text, "%.1f RPM · raw load %u · normal ECU feedback",
+                   m->fuel_rpm, m->fuel_load);
+    gtk_label_set_text(GTK_LABEL(app.fuel_pointer), text);
+
+    guint columns, rows, column = 0, row = 0;
+    fuel_map_dimensions(app.fuel_map, &columns, &rows);
+    for (guint i = 1; i < columns; i++)
+        if (fabs(fuel_map_rpm(app.fuel_map, i) - m->fuel_rpm) <
+            fabs(fuel_map_rpm(app.fuel_map, column) - m->fuel_rpm))
+            column = i;
+    for (guint i = 1; i < rows; i++)
+        if (fabs(fuel_map_load_code(app.fuel_map, i) - m->fuel_load) <
+            fabs(fuel_map_load_code(app.fuel_map, row) - m->fuel_load))
+            row = i;
+
+    enum { HEADER_LINES = 3, LOAD_WIDTH = 15, CELL_WIDTH = 13 };
+    if (gtk_text_buffer_get_iter_at_line_offset(buffer, &start, HEADER_LINES + row,
+                                                LOAD_WIDTH + CELL_WIDTH * column)) {
+        end = start;
+        gtk_text_iter_forward_chars(&end, CELL_WIDTH);
+        gtk_text_buffer_apply_tag(buffer, app.fuel_pointer_tag, &start, &end);
+    }
+}
+
 static gboolean on_msg(gpointer p)
 {
     msg_t *m = p;
@@ -763,6 +940,20 @@ static gboolean on_msg(gpointer p)
     case MSG_ACTIVE:
         gtk_label_set_text(GTK_LABEL(app.test_result), m->text);
         break;
+    case MSG_FUEL:
+        gtk_label_set_text(GTK_LABEL(app.fuel_result), m->text);
+        break;
+    case MSG_FUEL_LOG:
+        gtk_label_set_text(GTK_LABEL(app.fuel_log), m->text);
+        break;
+    case MSG_TIMING:
+        gtk_label_set_text(GTK_LABEL(app.timing_result), m->text);
+        break;
+    case MSG_FUEL_SAMPLE:
+        show_fuel_pointer(m);
+        break;
+    case MSG_REFRESH:
+        break;
     case MSG_BCM:
         gtk_label_set_text(GTK_LABEL(app.bcm_result), m->text);
         break;
@@ -788,7 +979,7 @@ static gboolean on_msg(gpointer p)
         /* A button may have been pressed while the worker was finishing. */
         g_mutex_lock(&app.lock);
         int again = app.want_live || app.want_dtc || app.want_clear || app.want_active ||
-                    app.want_bcm || app.want_latch || app.want_knock;
+                    app.want_bcm || app.want_latch || app.want_knock || app.want_fuel;
         g_mutex_unlock(&app.lock);
         if (again && !atomic_load(&app.cancel))
             start_worker();
@@ -1491,6 +1682,387 @@ static GtkWidget *tests_page(void)
     return page;
 }
 
+#include "rom_view.h"
+
+static GtkWidget *fuel_table_view(GtkWidget **view, const char *contents)
+{
+    GtkWidget *scroll = gtk_scrolled_window_new();
+    *view = gtk_text_view_new();
+    gtk_text_view_set_editable(GTK_TEXT_VIEW(*view), FALSE);
+    gtk_text_view_set_cursor_visible(GTK_TEXT_VIEW(*view), FALSE);
+    gtk_text_view_set_monospace(GTK_TEXT_VIEW(*view), TRUE);
+    gtk_text_view_set_left_margin(GTK_TEXT_VIEW(*view), 8);
+    gtk_text_view_set_top_margin(GTK_TEXT_VIEW(*view), 6);
+    gtk_text_view_set_bottom_margin(GTK_TEXT_VIEW(*view), 6);
+    gtk_text_buffer_set_text(gtk_text_view_get_buffer(GTK_TEXT_VIEW(*view)), contents, -1);
+    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scroll), GTK_POLICY_AUTOMATIC, GTK_POLICY_NEVER);
+    gtk_scrolled_window_set_propagate_natural_height(GTK_SCROLLED_WINDOW(scroll), TRUE);
+    gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(scroll), *view);
+    return scroll;
+}
+
+static void fuel_show_factory_tables(gboolean timing, double offset_low, double offset_high);
+
+static int fuel_offset_shade(double offset, double low, double high)
+{
+    return high > low ? CLAMP((int)(100 * (fabs(offset) - low) / (high - low)), 0, 100) : 0;
+}
+
+static void fuel_show_selected_table(void)
+{
+    guint columns, rows;
+    fuel_map_dimensions(app.fuel_map, &columns, &rows);
+    double low = 25, high = 0;
+    for (guint y = 0; y < rows; y++)
+        for (guint x = 0; x < columns; x++) {
+            double magnitude = fabs(fuel_map_offset(app.fuel_map, y, x));
+            if (!isnan(magnitude)) {
+                low = MIN(low, magnitude);
+                high = MAX(high, magnitude);
+            }
+        }
+
+    GArray *cells = g_array_new(FALSE, FALSE, sizeof(rom_cell_t));
+    GString *text = g_string_new("Offsets (%)   ECU = normal feedback   Blue → purple = smaller → larger offset\n\n"
+                                 "Raw load / RPM ");
+    for (guint x = 0; x < columns; x++)
+        g_string_append_printf(text, " %12.7g", fuel_map_rpm(app.fuel_map, x));
+    /* The grid contains only ASCII, so byte differences within it are character offsets. */
+    int grid_offset = g_utf8_strlen(text->str, -1) - (gssize)text->len;
+    for (guint y = 0; y < rows; y++) {
+        g_string_append_printf(text, "\n%14.7g ", fuel_map_load_code(app.fuel_map, y));
+        for (guint x = 0; x < columns; x++) {
+            double offset = fuel_map_offset(app.fuel_map, y, x);
+            if (isnan(offset)) {
+                g_string_append_printf(text, " %12s", "ECU");
+            } else {
+                rom_cell_t cell = { .start = grid_offset + (int)text->len,
+                    .shade = fuel_offset_shade(offset, low, high) };
+                g_string_append_printf(text, " %+11.7g%%", offset);
+                cell.end = grid_offset + (int)text->len;
+                g_array_append_val(cells, cell);
+            }
+        }
+    }
+    GtkTextBuffer *buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(app.fuel_table));
+    gtk_text_buffer_set_text(buffer, text->str, -1);
+    rom_color_cells(buffer, cells, TRUE);
+    gtk_text_tag_set_priority(app.fuel_pointer_tag,
+        gtk_text_tag_table_get_size(gtk_text_buffer_get_tag_table(buffer)) - 1);
+    g_array_unref(cells);
+    g_string_free(text, TRUE);
+    fuel_show_factory_tables(FALSE, low, high);
+}
+
+static void fuel_show_factory_tables(gboolean timing, double offset_low, double offset_high)
+{
+    static const struct { const char *name; const uint8_t *cells; } tables[] = {
+        {"Normal fuel (0x1700)", factory_fuel_normal},
+        {"Alternate / knock fuel (0x1800)", factory_fuel_alternate},
+        {"Normal timing (0x1D00)", factory_timing_normal},
+        {"Alternate / knock timing (0x1E00)", factory_timing_alternate},
+    };
+    guint first = timing ? 2 : 0;
+    const uint8_t *axes = timing ? factory_timing_axes + 16 : factory_fuel_axes;
+    const uint8_t *row_axis = timing ? factory_timing_axes : factory_fuel_axes + 16;
+    GArray *cells = g_array_new(FALSE, FALSE, sizeof(rom_cell_t));
+    GArray *offsets = g_array_new(FALSE, FALSE, sizeof(rom_cell_t));
+    gboolean overlay = !timing && app.fuel_map != NULL;
+    int low = 255, high = 0;
+    for (guint i = first; i < first + 2; i++)
+        for (guint j = 0; j < 256; j++) {
+            low = MIN(low, tables[i].cells[j]);
+            high = MAX(high, tables[i].cells[j]);
+        }
+    GString *text = g_string_new("23710-2L904 • Raw hex bytes in ROM storage order\n"
+                                 "Axis interpretation is provisional. Green → red = lower → higher byte value.\n");
+    if (overlay)
+        g_string_append(text, "Each cell shows the factory byte and selected map's Consult offset. ECU = normal feedback.\n"
+                              "Overlay coordinates use row byte × 50 RPM and column byte × 256 raw load.\n"
+                              "Offsets use the stream's interpolation, rounding and edge clamping.\n");
+    for (guint i = first; i < first + 2; i++) {
+        g_string_append_printf(text, "\n%s\nAxis   ", tables[i].name);
+        for (guint x = 0; x < 16; x++)
+            g_string_append_printf(text, overlay ? " %02X       " : " %02X ", axes[x]);
+        for (guint y = 0; y < 16; y++) {
+            g_string_append_printf(text, "\n  %02X   ", row_axis[y]);
+            for (guint x = 0; x < 16; x++) {
+                rom_append_cell(text, cells, tables[i].cells[y * 16 + x], low, high, TRUE);
+                if (!overlay)
+                    continue;
+                int percent = fuel_map_lookup(app.fuel_map, row_axis[y] * 50.0,
+                                              axes[x] * 256u);
+                if (!percent) {
+                    g_string_append(text, "  ECU ");
+                    continue;
+                }
+                rom_cell_t cell = { .start = g_utf8_strlen(text->str, -1),
+                    .shade = fuel_offset_shade(percent - 100, offset_low, offset_high) };
+                g_string_append_printf(text, " %+3d%% ", percent - 100);
+                cell.end = cell.start + 6;
+                g_array_append_val(offsets, cell);
+            }
+        }
+        g_string_append_c(text, '\n');
+    }
+    GtkTextBuffer *buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(timing ? app.timing_factory_view : app.fuel_factory_view));
+    gtk_text_buffer_set_text(buffer, text->str, -1);
+    rom_color_cells(buffer, cells, FALSE);
+    rom_color_cells(buffer, offsets, TRUE);
+    g_array_unref(offsets);
+    g_array_unref(cells);
+    g_string_free(text, TRUE);
+}
+
+static void fuel_imported(GObject *source, GAsyncResult *result, gpointer unused)
+{
+    (void)unused;
+    GError *error = NULL;
+    GFile *file = gtk_file_dialog_open_finish(GTK_FILE_DIALOG(source), result, &error);
+    fuel_map_t *map = file ? fuel_map_load(file, &error) : NULL;
+    if (map) {
+        guint rpm, load;
+        fuel_map_dimensions(map, &rpm, &load);
+        char *name = g_file_get_parse_name(file);
+        char *text = g_strdup_printf("%s — %u RPM × %u load breakpoints", name, rpm, load);
+        fuel_map_free(app.fuel_map);
+        app.fuel_map = map;
+        app.fuel_is_candidate = FALSE;
+        fuel_show_selected_table();
+        gtk_label_set_text(GTK_LABEL(app.fuel_file), text);
+        gtk_label_set_text(GTK_LABEL(app.fuel_result), "Map ready to stream.");
+        g_free(text);
+        g_free(name);
+        update_buttons();
+    } else if (error && !g_error_matches(error, GTK_DIALOG_ERROR, GTK_DIALOG_ERROR_DISMISSED)) {
+        gtk_label_set_text(GTK_LABEL(app.fuel_result), error->message);
+    }
+    g_clear_error(&error);
+    g_clear_object(&file);
+}
+
+static void fuel_import(GtkButton *button, gpointer unused)
+{
+    (void)button;
+    (void)unused;
+    GtkFileDialog *dialog = gtk_file_dialog_new();
+    GtkFileFilter *filter = gtk_file_filter_new();
+    GListStore *filters = g_list_store_new(GTK_TYPE_FILE_FILTER);
+    gtk_file_filter_set_name(filter, "JSON fuel maps");
+    gtk_file_filter_add_suffix(filter, "json");
+    g_list_store_append(filters, filter);
+    gtk_file_dialog_set_title(dialog, "Import fuel map");
+    gtk_file_dialog_set_modal(dialog, TRUE);
+    gtk_file_dialog_set_accept_label(dialog, "Import");
+    gtk_file_dialog_set_filters(dialog, G_LIST_MODEL(filters));
+    gtk_file_dialog_open(dialog, GTK_WINDOW(app.win), NULL, fuel_imported, NULL);
+    g_object_unref(filters);
+    g_object_unref(filter);
+    g_object_unref(dialog);
+}
+
+static void fuel_select_candidate(GtkButton *button, gpointer unused)
+{
+    (void)button;
+    (void)unused;
+    fuel_map_free(app.fuel_map);
+    app.fuel_map = fuel_map_dandymax_candidate();
+    app.fuel_is_candidate = TRUE;
+    fuel_show_selected_table();
+    gtk_label_set_text(GTK_LABEL(app.fuel_file), "DandyMax 91 AKI candidate");
+    gtk_label_set_text(GTK_LABEL(app.fuel_result),
+        "Requests −6% to −7% feedback at 4,000–5,500 RPM and raw load 28,000–32,000. "
+        "For controlled wideband validation. ECU feedback applies outside that range.");
+    update_buttons();
+}
+
+static void fuel_confirmed(GObject *src, GAsyncResult *res, gpointer unused)
+{
+    (void)unused;
+    if (gtk_alert_dialog_choose_finish(GTK_ALERT_DIALOG(src), res, NULL) != 1)
+        return;
+    g_mutex_lock(&app.lock);
+    gboolean busy = app.want_fuel || app.want_dtc || app.want_clear || app.want_active ||
+                    app.want_bcm || app.want_knock || app.want_latch;
+    if (!busy) {
+        atomic_store(&app.abort_fuel, 0);
+        app.fuel_seconds = gtk_check_button_get_active(GTK_CHECK_BUTTON(app.fuel_until_stopped))
+            ? INFINITY : gtk_spin_button_get_value(GTK_SPIN_BUTTON(app.fuel_hold));
+        app.want_fuel = FUEL_STREAM;
+    }
+    g_mutex_unlock(&app.lock);
+    if (!busy) {
+        gtk_label_set_text(GTK_LABEL(app.fuel_log), "");
+        gtk_label_set_text(GTK_LABEL(app.fuel_result), "Checking ECU and reading RPM and load…");
+        start_worker();
+        update_buttons();
+    }
+}
+
+static void fuel_start(GtkButton *button, gpointer unused)
+{
+    (void)button;
+    (void)unused;
+    g_mutex_lock(&app.lock);
+    gboolean running = app.want_fuel;
+    g_mutex_unlock(&app.lock);
+    if (running) {
+        atomic_store(&app.abort_fuel, 1);
+        gtk_label_set_text(GTK_LABEL(app.fuel_result), "Stopping fuel stream…");
+        return;
+    }
+    const char *buttons[] = {"Cancel", "Stream map", NULL};
+    GtkAlertDialog *dialog = gtk_alert_dialog_new("Stream this fuel map?");
+    gtk_alert_dialog_set_detail(dialog, "This changes engine fuel feedback while the map runs. "
+        "Use a running engine with the car parked, parking brake set and transmission in Park or neutral.");
+    if (app.fuel_is_candidate)
+        gtk_alert_dialog_set_detail(dialog, "This candidate has unverified high-load lean changes. "
+            "Use only on a controlled dyno with 91 AKI fuel and wideband lambda monitoring.");
+    gtk_alert_dialog_set_buttons(dialog, buttons);
+    gtk_alert_dialog_set_cancel_button(dialog, 0);
+    gtk_alert_dialog_set_default_button(dialog, 0);
+    gtk_alert_dialog_set_modal(dialog, TRUE);
+    gtk_alert_dialog_choose(dialog, GTK_WINDOW(app.win), NULL, fuel_confirmed, NULL);
+    g_object_unref(dialog);
+}
+
+static void on_timing_confirmed(GObject *source, GAsyncResult *result, gpointer unused)
+{
+    (void)unused;
+    if (gtk_alert_dialog_choose_finish(GTK_ALERT_DIALOG(source), result, NULL) != 1)
+        return;
+    g_mutex_lock(&app.lock);
+    gboolean busy = app.want_fuel || app.want_dtc || app.want_clear || app.want_active ||
+                    app.want_bcm || app.want_knock || app.want_latch;
+    if (!busy) {
+        app.timing_byte = gtk_drop_down_get_selected(GTK_DROP_DOWN(app.timing_raw));
+        atomic_store(&app.abort_fuel, 0);
+        app.want_fuel = TIMING_PROBE;
+    }
+    g_mutex_unlock(&app.lock);
+    if (!busy) {
+        gtk_label_set_text(GTK_LABEL(app.timing_result), "Checking ECU, knock status and idle…");
+        start_worker();
+        update_buttons();
+    }
+}
+
+static void on_timing_probe(GtkButton *button, gpointer unused)
+{
+    (void)button;
+    (void)unused;
+    g_mutex_lock(&app.lock);
+    gboolean running = app.want_fuel == TIMING_PROBE;
+    g_mutex_unlock(&app.lock);
+    if (running) {
+        atomic_store(&app.abort_fuel, 1);
+        return;
+    }
+
+    const char *buttons[] = {"Cancel", "Start probe", NULL};
+    GtkAlertDialog *dialog = gtk_alert_dialog_new("Run a two-second timing probe?");
+    gtk_alert_dialog_set_detail(dialog,
+        "Use a parked vehicle at idle with the parking brake set. "
+        "The parameter is a raw ECU byte with unverified timing direction and units.");
+    gtk_alert_dialog_set_buttons(dialog, buttons);
+    gtk_alert_dialog_set_cancel_button(dialog, 0);
+    gtk_alert_dialog_set_default_button(dialog, 0);
+    gtk_alert_dialog_set_modal(dialog, TRUE);
+    gtk_alert_dialog_choose(dialog, GTK_WINDOW(app.win), NULL, on_timing_confirmed, NULL);
+    g_object_unref(dialog);
+}
+
+static GtkWidget *timing_panel(void)
+{
+    const char *bytes[] = {"0x00", "0x01", "0x02", "0x03", NULL};
+    GtkWidget *panel = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
+    GtkWidget *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+    GtkWidget *factory = gtk_expander_new("Factory 23710-2L904 timing tables");
+    app.timing_raw = gtk_drop_down_new_from_strings(bytes);
+    app.timing_start = gtk_button_new_with_label("Probe timing…");
+    app.timing_result = label("", 0);
+    gtk_label_set_wrap(GTK_LABEL(app.timing_result), TRUE);
+    gtk_box_append(GTK_BOX(row), label("Raw Consult 0x82 byte", 0));
+    gtk_box_append(GTK_BOX(row), app.timing_raw);
+    gtk_box_append(GTK_BOX(row), app.timing_start);
+    gtk_box_append(GTK_BOX(panel), row);
+    gtk_box_append(GTK_BOX(panel), app.timing_result);
+    gtk_expander_set_child(GTK_EXPANDER(factory), fuel_table_view(&app.timing_factory_view, ""));
+    fuel_show_factory_tables(TRUE, 0, 0);
+    gtk_box_append(GTK_BOX(panel), factory);
+    g_signal_connect(app.timing_start, "clicked", G_CALLBACK(on_timing_probe), NULL);
+    return framed("Ignition timing", panel);
+}
+
+static void on_fuel_duration_mode(GtkCheckButton *button, gpointer unused)
+{
+    (void)button;
+    (void)unused;
+    update_buttons();
+}
+
+static GtkWidget *fuel_page(void)
+{
+    GtkWidget *page = page_box();
+    GtkWidget *panel = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
+    GtkWidget *row = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+    GtkWidget *stream_controls = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 8);
+
+    app.fuel_import = gtk_button_new_with_label("Import map…");
+    app.fuel_candidate = gtk_button_new_with_label("Load DandyMax candidate");
+    app.fuel_hold = gtk_spin_button_new_with_range(1, 600, 1);
+    gtk_spin_button_set_value(GTK_SPIN_BUTTON(app.fuel_hold), 10);
+    app.fuel_until_stopped = gtk_check_button_new_with_label("Until stopped");
+    gtk_check_button_set_active(GTK_CHECK_BUTTON(app.fuel_until_stopped), TRUE);
+    gtk_widget_set_sensitive(app.fuel_hold, FALSE);
+    app.fuel_start = gtk_button_new_with_label("Stream map…");
+    app.fuel_file = label("No fuel map imported", 0);
+    app.fuel_result = label("", 0);
+    app.fuel_log = label("", 0);
+    gtk_label_set_wrap(GTK_LABEL(app.fuel_log), TRUE);
+    gtk_label_set_selectable(GTK_LABEL(app.fuel_log), TRUE);
+    gtk_label_set_wrap(GTK_LABEL(app.fuel_file), TRUE);
+    gtk_label_set_wrap(GTK_LABEL(app.fuel_result), TRUE);
+    gtk_label_set_selectable(GTK_LABEL(app.fuel_result), TRUE);
+
+    gtk_box_append(GTK_BOX(row), app.fuel_import);
+    gtk_box_append(GTK_BOX(row), app.fuel_candidate);
+    gtk_box_append(GTK_BOX(panel), row);
+    gtk_box_append(GTK_BOX(stream_controls), label("Duration (s)", 0));
+    gtk_box_append(GTK_BOX(stream_controls), app.fuel_hold);
+    gtk_box_append(GTK_BOX(stream_controls), app.fuel_until_stopped);
+    gtk_box_append(GTK_BOX(stream_controls), app.fuel_start);
+    gtk_box_append(GTK_BOX(panel), stream_controls);
+    gtk_box_append(GTK_BOX(panel), app.fuel_file);
+    gtk_box_append(GTK_BOX(panel), app.fuel_result);
+    gtk_box_append(GTK_BOX(panel), app.fuel_log);
+    GtkWidget *knock_note = label("Knock readings are logged. Fuel streaming does not stop on knock.", 0);
+    gtk_label_set_wrap(GTK_LABEL(knock_note), TRUE);
+    gtk_box_append(GTK_BOX(panel), knock_note);
+    gtk_box_append(GTK_BOX(page), framed("Fuel feedback map", panel));
+    GtkWidget *preview = gtk_box_new(GTK_ORIENTATION_VERTICAL, 6);
+    app.fuel_pointer = label("", 0);
+    gtk_label_set_wrap(GTK_LABEL(app.fuel_pointer), TRUE);
+    gtk_box_append(GTK_BOX(preview), app.fuel_pointer);
+    gtk_box_append(GTK_BOX(preview),
+        fuel_table_view(&app.fuel_table, "Import a map or load the candidate to view its cells."));
+    GtkTextBuffer *buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(app.fuel_table));
+    app.fuel_pointer_tag = gtk_text_buffer_create_tag(buffer, "fuel-pointer",
+        "background", "#ffdc7d", "foreground", "#161c29", "weight", PANGO_WEIGHT_BOLD,
+        "underline", PANGO_UNDERLINE_SINGLE, NULL);
+    gtk_box_append(GTK_BOX(page), framed("Selected map offsets", preview));
+    GtkWidget *factory = gtk_expander_new("Factory ROM fuel tables and map overlay");
+    gtk_expander_set_child(GTK_EXPANDER(factory), fuel_table_view(&app.fuel_factory_view, ""));
+    fuel_show_factory_tables(FALSE, 0, 0);
+    gtk_box_append(GTK_BOX(page), factory);
+    gtk_box_append(GTK_BOX(page), timing_panel());
+    g_signal_connect(app.fuel_import, "clicked", G_CALLBACK(fuel_import), NULL);
+    g_signal_connect(app.fuel_candidate, "clicked", G_CALLBACK(fuel_select_candidate), NULL);
+    g_signal_connect(app.fuel_until_stopped, "toggled", G_CALLBACK(on_fuel_duration_mode), NULL);
+    g_signal_connect(app.fuel_start, "clicked", G_CALLBACK(fuel_start), NULL);
+    return page;
+}
+
 static GtkWidget *other_page(void)
 {
     GtkWidget *page = page_box(), *knock = gtk_box_new(GTK_ORIENTATION_VERTICAL, 8);
@@ -1520,7 +2092,7 @@ static GtkWidget *other_page(void)
 static void activate(GtkApplication *ga, gpointer u)
 {
     GtkWidget *win, *root, *bar, *split, *side, *stack, *body;
-    struct { const char *id, *name; GtkWidget *page; } pages[6];
+    struct { const char *id, *name; GtkWidget *page; } pages[8];
     (void)u;
 
     win = app.win = gtk_application_window_new(ga);
@@ -1561,6 +2133,8 @@ static void activate(GtkApplication *ga, gpointer u)
     pages[4].id = "other";  pages[4].name = "Other";           pages[4].page = other_page();
 
     pages[5].id = "replay"; pages[5].name = "Log playback"; pages[5].page = replay_page();
+    pages[6].id = "rom"; pages[6].name = "ROM tables"; pages[6].page = rom_page();
+    pages[7].id = "fuel"; pages[7].name = "Fuel maps"; pages[7].page = fuel_page();
 
     /* Left: the page list. Right: the selected page, one at a time, scrolling when it
      * doesn't fit. */
@@ -1568,7 +2142,7 @@ static void activate(GtkApplication *ga, gpointer u)
     gtk_widget_set_vexpand(split, TRUE);
     stack = gtk_stack_new();
     gtk_widget_set_hexpand(stack, TRUE);
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < (int)G_N_ELEMENTS(pages); i++) {
         GtkWidget *scroll = gtk_scrolled_window_new();
         gtk_scrolled_window_set_child(GTK_SCROLLED_WINDOW(scroll), pages[i].page);
         gtk_stack_add_titled(GTK_STACK(stack), scroll, pages[i].id, pages[i].name);
@@ -1605,6 +2179,7 @@ int main(int argc, char **argv)
     g_signal_connect(ga, "shutdown", G_CALLBACK(on_shutdown), NULL);
     rc = g_application_run(G_APPLICATION(ga), argc, argv);
     if (app.replay) g_array_unref(app.replay);
+    fuel_map_free(app.fuel_map);
     g_object_unref(ga);
     return rc;
 }

@@ -1,0 +1,51 @@
+{
+  "sha256": "e91a7a83993911c1bb570ac6ddb5e998a70c710de031a0505cfc698534fd7a87",
+  "image_bytes": 61440,
+  "decoded_instructions": 15877,
+  "byte_classifications": {
+    "annotated_table": 2747,
+    "unclassified": 13485,
+    "decoded_instruction": 43928,
+    "untrusted_dump_hole": 1280
+  },
+  "entry_count": 243,
+  "outside_image_entries": [
+    "0100C0",
+    "0101D0",
+    "010801",
+    "011019",
+    "01310C",
+    "01427A",
+    "01428D",
+    "015803",
+    "0158EE",
+    "015AD1",
+    "016C84",
+    "016D34",
+    "016E7E",
+    "016F0E",
+    "016F18",
+    "016FA7",
+    "017005",
+    "0170B5",
+    "017272",
+    "017311",
+    "01732D",
+    "0173B2",
+    "0176AB",
+    "017989",
+    "017A14",
+    "017A6B",
+    "017ABC",
+    "017B91"
+  ],
+  "decoder_check_issues": 0,
+  "limitations": [
+    "Structural inventory, not a complete semantic decompilation.",
+    "Decoder uses first-path m/x widths and assumes calls preserve widths.",
+    "Literal memory refs omit computed pointers and immediate pointer constants.",
+    "Indexed operands identify a base, not each effective address.",
+    "Named entries can be internal shared tails; entries are not proven function boundaries.",
+    "Unclassified bytes can contain data, padding, or missed code."
+  ]
+}

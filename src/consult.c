@@ -145,7 +145,7 @@ int consult_init(consult_t *c, const uint8_t *ids, int nids, int tries, uint8_t 
     return 0;
 }
 
-int consult_command(consult_t *c, const uint8_t *payload, size_t n, int retries)
+static int command(consult_t *c, const uint8_t *payload, size_t n, int retries, int recover)
 {
     uint8_t want[2 * 64], got[2 * 64];
     char a[96], b[96];
@@ -189,10 +189,22 @@ int consult_command(consult_t *c, const uint8_t *payload, size_t n, int retries)
             snprintf(c->err, sizeof c->err, "bad echo %s, expected %s", a, b);
         }
         serial_note(c->s, "command try %d failed: %s", t + 1, c->err);
+        if (!recover)
+            break;
         consult_stop(c, 0.5, NULL);
         serial_drain(c->s, 0.1, 3.0);
     }
     return 0;
+}
+
+int consult_command(consult_t *c, const uint8_t *payload, size_t n, int retries)
+{
+    return command(c, payload, n, retries, 1);
+}
+
+int consult_command_once(consult_t *c, const uint8_t *payload, size_t n)
+{
+    return command(c, payload, n, 0, 0);
 }
 
 int consult_read_frame(consult_t *c, int expected_len, double timeout, uint8_t *out)

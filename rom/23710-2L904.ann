@@ -84,6 +84,11 @@ ram 0F70 ffrm_1st     1st-trip freeze frame in backup RAM ($0F70-$0F79, Consult 
 # ---------------------------------------------------------------- live data (Consult register -> RAM, table at $1000)
 ram 0995 rpm_hi       Consult 00: RPM word x12.5
 ram 0994 rpm_lo       Consult 01
+ram 09AE rpm_cap      min(Consult RPM word, 255), units 12.5 rpm; NOT engine load ($5668-$5670)
+ram 09B0 rpm_div2     min(Consult RPM word >> 1, 255), units 25 rpm ($5674-$567D)
+ram 09B1 rpm_div4     low byte of (Consult RPM word >> 2), units 50 rpm ($5680-$5685)
+ram 0BCD idle_target Target engine-speed code (12.5 rpm/unit), overridden by rejected test 83
+ram 0BCB idle_target_ramp Target followed toward $0BCD at $AD19-$AD4A; compared to rpm_cap in idle loop
 ram 097A ref_period_hi Consult 02: 120 deg REF period, rpm = 2.5e6/word ?
 ram 0979 ref_period_lo Consult 03
 ram 09D6 maf_hi       Consult 04: MAF x5 mV
@@ -153,12 +158,15 @@ table 1D00 100 TIMING_MAP  Ignition timing 16x16, degrees; bit 7 set in some low
 table 1E00 100 TIMING_MAP_KNOCK  Knock timing 16x16, mostly lower than TIMING_MAP
 table 1F00 10 TIMING_RPM_SCALE
 table 1F10 10 TIMING_LOAD_SCALE
+table 2150 10 IDLE_SPEED_TARGET Temperature-indexed idle target codes; base units 12.5 rpm, $B25A-$B264
 table 9E0E 98 DTC_CODE_BYTES  Fault slot i -> Consult D1 code byte (11..18, 21..28, ... E8, 19..1F, 10, ...)
 table E086 130 DTC_PCODES  Fault slot i -> OBD-II P-code, 2 bytes BCD big-endian (00 00 = slot unused)
 head  E086 This car's codes: slot 8 = 21 = P1320, slot 19 = 34 = P0325, slot 79 = A8 = P0443.
 table E1C6 130 DTC_COUNTER_PTRS  Fault slot i -> RAM address of its starts counter (FFFF = none)
 table EA3F 1C DIRECT_TABLE_A  0A direct mode (value 01-07): pairs of RAM addresses to stream (OBD Mode 6 results ?)
 table EA5B 1C DIRECT_TABLE_B  0A direct mode (value 81-87): same, second set
+table CBA2 09 SUBCPU_REQUEST_IDS Second-CPU request IDs; bounded search at $CAE2-$CAEF
+table CBAB 12 SUBCPU_REQUEST_TARGETS Nine 16-bit targets for JMP ($CBAB,X); next byte $CBBD is code
 
 # ================================================================ vectors / interrupts
 label 3D75 reset
@@ -220,14 +228,14 @@ label 4FFD cs_check_c9
 label 5008 cs_check_5a
 label 5013 cs_check_0a
 label 5024 cs_check_noarg
-note  5024 51 = hidden command: clears every fault/test flag
+note  5024 51 = hidden event stream: immediately clears cycle-seen and received monitor flags; leaves stored DTCs
 note  5029 D1 = read codes
 note  502E C1 = read codes, then clear
 note  5033 D0 = part number
 label 5038 cs_reject
 note  5038 unknown command -> FE
 label 503C cs_cmd_51
-head  503C 51: zero dtc_seen ($0810-$0822) and test state ($0E51-$0E57, $0E78-$0E7A)
+head  503C 51: immediately zero dtc_seen ($0810-$0822) and test state ($0E51-$0E58, $0E78-$0E7A), before F0
 label 508F cs_store_cmd
 label 509D cs_arg_byte
 note  509D C9 address byte
@@ -330,7 +338,7 @@ head  D1E8 ===== Detection flags from the second CPU ($0E52-$0E57): bit n -> dtc
 label D237 dtc_from_subcpu_2
 head  D237 More flags from the second CPU ($0E58 bits -> slots 22h, 12h, 14h, ...).
 label E2F6 p1320_monitor
-head  E2F6 ===== P1320 ignition signal monitor (slot 8). Engine running, past start, load index >= 4:
+head  E2F6 ===== P1320 ignition signal monitor (slot 8). Engine running, past start, RPM code >= 4:
 head  E2F6 every 2nd call sample port P4 bit 3; each high sample = one miss (accumulates while the
 head  E2F6 conditions hold); 10 misses -> dtc_detect(8), then the count restarts at 0. Enabled by
 head  E2F6 CONFIG $120C.7. Fixed-rate slow task (sched slots 3/8), not synced to ignition.
@@ -426,8 +434,8 @@ note 3FB4 running sum != stored checksum $0300 -> RAM corrupt -> fail
 
 # ---------------------------------------------------------------- calc_switches
 head 8440 Build the engine-condition / switch bitfield $092B (Consult reg 31 reads $092B.6)
-head 8440 and the $0941/$094B/$094F state bits from second-CPU inputs ($0211), engine load
-head 8440 ($09AE, $0ABE CAL/LD) and rpm, against calibration thresholds ($228A/$228B, $15FE/
+head 8440 and the $0941/$094B/$094F state bits from second-CPU inputs ($0211), engine state
+head 8440 (RPM code $09AE, $0ABE CAL/LD), against calibration thresholds ($228A/$228B, $15FE/
 head 8440 $15FF). Hysteresis throughout, e.g. $094B.2 is set at load>=$50 and cleared at <$10.
 head 8440 Called each adc_task cycle ($4054) and from $4D81.
 note 84DE load >= $50: enter (set $094B.2)
@@ -474,7 +482,8 @@ note 66D3 overflow guard: any of the top 5 bits set -> clamp to $FFFF before the
 head 5624 Derive rpm from the captured REF period. First shift the rpm history ring $0994-$09A6
 head 5624 up by 2 (even-aligned, exits at $0992), then rpm = reciprocal-multiply of the period
 head 5624 ($A0 << 1) by $A6AB, result >>2 -> rpm_lo $0994 (Consult 01); $09AE/$09AC are the
-head 5624 derived load / rpm index used across the fuel, timing and knock tasks.
+head 5624 derived RPM values, NOT load. $09AE=min(RPM word,255); $09B0=min(word>>1,255);
+head 5624 $09B1=low byte(word>>2). Units are 12.5, 25 and 50 rpm respectively.
 note 47A8 ignition-timing target build (per REF edge); full term list in ROM_ANALYSIS.md §8
 
 # ---------------------------------------------------------------- cylinder counters
@@ -502,3 +511,18 @@ head BD00 (FSM: 0 step when stopped). The step-count code at $C038 (interp32 of 
 head BD00 $0E0D) writes purge_step $0806 (Consult reg 29); $9488 drives the 4-phase VCV outputs
 head BD00 on ECM pins 26/27/110/118. Test 98 ($07BA.0) overrides the step ($BFB3).
 note C068 purge_step $0806 (Consult reg 29) written here from the $29A0 duty table
+
+# ---------------------------------------------------------------- expanded feature scan 2026-11-16
+label B21D calc_idle_speed_target
+head B21D Build target idle-speed code: temperature table $2150, operating-condition clamps,
+head B21D then rejected-test-83 override at $B39A. $0BCD feeds the $0BCB ramp and idle loop.
+note B39A rejected test 83: override idle-speed target from $0772, capped $90 = 1800 rpm
+note AD1E compare ramped idle target with desired idle target, NOT engine load
+note F4C0 test A2 overrides pressure-measurement selector $095D.2; MAP/BARO association inferred from P0105
+head CAD7 Decode nine second-CPU requests ($20,$21,$60,$61,$A0-$A4), return two bytes in $07FB/$07FC.
+head CAD7 $CB99 clears the request and sets response-ready $07F1.4. This is not the Consult opcode dispatcher.
+ram 0F6D monitor_admission First blocking condition encoded via $9913; zero means no admission blockers ($98E6)
+label 986A calc_monitor_admission
+head 986A Build blocker bits $0F6F, then $98E6 encodes the first blocker as $80-$87 in $0F6D (Consult 61).
+label E7A2 switched_sensor_sequence
+head E7A2 Toggle $095E.1 and save averaged samples of ADC $0C ($09FC); physical sensor/valve not established.

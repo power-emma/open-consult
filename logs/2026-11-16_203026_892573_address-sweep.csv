@@ -1,0 +1,33 @@
+trial,requested,before,after,verification,companion_after,companion_verification,status,error,elapsed_seconds,target
+1,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.033,0801
+2,67,61,61,61,0E,0E,readback_mismatch,,0.1812,0803
+3,67,33,9D,67,08,06,readback_mismatch,,0.1844,0805
+4,67,83,23,23,0E,0E,readback_mismatch,,0.1828,0807
+5,67,FF,68,68,0E,0E,readback_mismatch,,0.1843,0809
+6,67,4E,67,67,0E,0E,readback_matches,,0.1833,080B
+7,67,4E,67,67,0E,0E,readback_matches,,0.184,080D
+8,67,00,67,67,0E,0E,readback_matches,,0.1831,080F
+9,67,0F,67,67,0E,0E,readback_matches,,0.1841,0811
+10,67,0F,67,67,0E,0E,readback_matches,,0.1828,0813
+11,67,10,67,67,0E,0E,readback_matches,,0.184,0815
+12,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0309,0817
+13,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0302,0819
+14,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0306,081B
+15,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0305,081D
+16,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0293,081F
+17,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0301,0821
+18,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0303,0823
+19,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0305,0825
+20,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0297,0827
+21,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0293,0829
+22,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0304,082B
+23,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0303,082D
+24,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0292,082F
+25,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.03,0831
+26,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.03,0833
+27,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0301,0835
+28,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.029,0837
+29,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0304,0839
+30,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0302,083B
+31,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0298,083D
+32,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0291,083F

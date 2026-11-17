@@ -1,0 +1,76 @@
+group_bit,trigger,call_pc,target,label,status
+04,odd scheduler slots,4C7E,00551F,adc_read_maf,decoded
+10,slots 1 and 6,4C8E,005600,L_5600,decoded
+10,slots 1 and 6,4C92,005624,calc_rpm,decoded
+10,slots 1 and 6,4C96,016F18,,outside_image
+10,slots 1 and 6,4C9A,0056A5,L_56A5,decoded
+10,slots 1 and 6,4C9E,00F19E,read_tps,decoded
+10,slots 1 and 6,4CA2,005730,L_5730,decoded
+10,slots 1 and 6,4CA6,005B92,L_5B92,decoded
+10,slots 1 and 6,4CAA,005C79,L_5C79,decoded
+10,slots 1 and 6,4CAE,005CBD,L_5CBD,decoded
+10,slots 1 and 6,4CB2,005F1B,L_5F1B,forwarded_dump_hole
+10,slots 1 and 6,4CB6,00644C,L_644C,decoded
+10,slots 1 and 6,4CBA,0066BA,L_66BA,decoded
+10,slots 1 and 6,4CBE,00683A,L_683A,decoded
+10,slots 1 and 6,4CC2,0068F3,L_68F3,decoded
+10,slots 1 and 6,4CC6,006A20,calc_injection,decoded
+10,slots 1 and 6,4CCA,006AC9,L_6AC9,decoded
+10,slots 1 and 6,4CCE,007CC7,L_7CC7,decoded
+10,slots 1 and 6,4CD2,007FBF,L_7FBF,decoded
+40,REF-event armed; conditional bank paths,4CE6,006C0F,L_6C0F,decoded
+40,REF-event armed; conditional bank paths,4CEA,006C73,L_6C73,decoded
+40,REF-event armed; conditional bank paths,4CEE,016FA7,,outside_image
+40,REF-event armed; conditional bank paths,4CF2,017005,,outside_image
+40,REF-event armed; conditional bank paths,4D0F,004E4E,L_4E4E,decoded
+40,REF-event armed; conditional bank paths,4D15,006D65,fuel_feedback,decoded
+40,REF-event armed; conditional bank paths,4D20,017A14,,outside_image
+40,REF-event armed; conditional bank paths,4D24,00DBA8,L_DBA8,decoded
+40,REF-event armed; conditional bank paths,4D41,004E4E,L_4E4E,decoded
+40,REF-event armed; conditional bank paths,4D47,006D65,fuel_feedback,decoded
+40,REF-event armed; conditional bank paths,4D52,017989,,outside_image
+40,REF-event armed; conditional bank paths,4D56,00DB7E,L_DB7E,decoded
+40,REF-event armed; conditional bank paths,4D5A,008102,L_8102,decoded
+40,REF-event armed; conditional bank paths,4D63,00E355,L_E355,decoded
+40,REF-event armed; conditional bank paths,4D67,00E399,L_E399,decoded
+20,slots 3 and 8; some calls conditional,4D7D,008426,L_8426,decoded
+20,slots 3 and 8; some calls conditional,4D81,008440,calc_switches,decoded
+20,slots 3 and 8; some calls conditional,4D85,00869D,L_869D,decoded
+20,slots 3 and 8; some calls conditional,4D89,00879F,L_879F,decoded
+20,slots 3 and 8; some calls conditional,4D8D,009488,purge_stepper_out,decoded
+20,slots 3 and 8; some calls conditional,4D91,00D128,dtc_task,decoded
+20,slots 3 and 8; some calls conditional,4D95,00D1E8,dtc_from_subcpu,decoded
+20,slots 3 and 8; some calls conditional,4D99,00D237,dtc_from_subcpu_2,decoded
+20,slots 3 and 8; some calls conditional,4D9D,00D279,L_D279,decoded
+20,slots 3 and 8; some calls conditional,4DA1,00D2CB,L_D2CB,decoded
+20,slots 3 and 8; some calls conditional,4DA5,00CF5A,L_CF5A,decoded
+20,slots 3 and 8; some calls conditional,4DA9,00D926,L_D926,decoded
+20,slots 3 and 8; some calls conditional,4DAD,00D4D6,L_D4D6,decoded
+20,slots 3 and 8; some calls conditional,4DB1,00DD34,L_DD34,decoded
+20,slots 3 and 8; some calls conditional,4DB5,0097FE,L_97FE,decoded
+20,slots 3 and 8; some calls conditional,4DB9,00986A,calc_monitor_admission,decoded
+20,slots 3 and 8; some calls conditional,4DBD,00991B,L_991B,decoded
+20,slots 3 and 8; some calls conditional,4DC1,00D46A,L_D46A,decoded
+20,slots 3 and 8; some calls conditional,4DC5,00950E,L_950E,decoded
+20,slots 3 and 8; some calls conditional,4DC9,00CBBD,L_CBBD,decoded
+20,slots 3 and 8; some calls conditional,4DD4,00C7F5,mailbox_receive,decoded
+20,slots 3 and 8; some calls conditional,4DDD,017B91,,outside_image
+20,slots 3 and 8; some calls conditional,4DE3,00996A,consult_task,decoded
+20,slots 3 and 8; some calls conditional,4DE7,009EA6,L_9EA6,decoded
+20,slots 3 and 8; some calls conditional,4DF2,00CC52,mailbox_send,decoded
+20,slots 3 and 8; some calls conditional,4DF6,009EDA,L_9EDA,decoded
+20,slots 3 and 8; some calls conditional,4DFA,00A4DB,diag_task_a4db,decoded
+20,slots 3 and 8; some calls conditional,4DFE,00A9B9,L_A9B9,decoded
+20,slots 3 and 8; some calls conditional,4E02,00A9EF,L_A9EF,decoded
+20,slots 3 and 8; some calls conditional,4E06,00AC54,idle_control,decoded
+20,slots 3 and 8; some calls conditional,4E0A,00BD00,purge_control,decoded
+20,slots 3 and 8; some calls conditional,4E0E,00C0C9,L_C0C9,decoded
+20,slots 3 and 8; some calls conditional,4E12,00BC6D,L_BC6D,decoded
+20,slots 3 and 8; some calls conditional,4E16,00E066,L_E066,decoded
+20,slots 3 and 8; some calls conditional,4E1A,00E3DD,L_E3DD,decoded
+20,slots 3 and 8; some calls conditional,4E1E,00E7A2,switched_sensor_sequence,decoded
+20,slots 3 and 8; some calls conditional,4E22,0081FC,L_81FC,decoded
+20,slots 3 and 8; some calls conditional,4E26,00E2F6,p1320_monitor,decoded
+20,slots 3 and 8; some calls conditional,4E2A,00E848,L_E848,decoded
+20,slots 3 and 8; some calls conditional,4E2E,00F468,diag_task_f468,decoded
+20,slots 3 and 8; some calls conditional,4E32,004E61,L_4E61,decoded

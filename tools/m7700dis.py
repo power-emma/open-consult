@@ -272,7 +272,7 @@ def decode(rom, pc, m, x):
 # Recursive-descent walker
 # ---------------------------------------------------------------------------
 
-def walk(rom, seeds=()):
+def walk(rom, seeds=(), jump_table_sizes=None):
     insns = {}
     labels = {}
     queue = collections.deque()
@@ -336,7 +336,11 @@ def walk(rom, seeds=()):
             if i.flow in ("jump_table", "call_table"):
                 tbl_base = rom.r16(pc + (1 if i.table is PAGE0 else 2))
                 if rom.has(tbl_base, 2):
-                    for off in range(0, 256, 2):
+                    # An annotated size prevents adjacent code from being
+                    # mistaken for more pointers merely because its bytes
+                    # happen to form addresses inside the image.
+                    size = (jump_table_sizes or {}).get(tbl_base, 256)
+                    for off in range(0, size, 2):
                         if not rom.has(tbl_base + off, 2):
                             break
                         entry = rom.r16(tbl_base + off)
@@ -454,7 +458,9 @@ class Ann:
     @classmethod
     def load(cls, path):
         a = cls()
-        for n, line in enumerate(open(path, encoding="utf-8"), 1):
+        with open(path, encoding="utf-8") as stream:
+            lines = stream.readlines()
+        for n, line in enumerate(lines, 1):
             line = line.rstrip("\n")
             if not line.strip() or line.lstrip().startswith("#"):
                 continue
@@ -696,7 +702,8 @@ def main():
     rom.holes = ann.holes
     title = args.title or os.path.splitext(os.path.basename(args.rom))[0]
 
-    insns, labels = walk(rom, ann.seeds)
+    insns, labels = walk(rom, ann.seeds,
+                         {addr: table[2] for addr, table in ann.tables.items()})
     print(f"Decoded {len(insns)} instructions, {len(labels)} labels", file=sys.stderr)
 
     annotations = find_tables(rom, insns)

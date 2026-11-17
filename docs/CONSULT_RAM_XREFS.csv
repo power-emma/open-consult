@@ -1,0 +1,257 @@
+ram_address,literal_reference_count,references
+0740,9,99BD LDY #$0740 [immediate; asm:12605] | 9A54 ADC #$0740 [immediate; asm:12691] | 9A83 ADC #$0740 [immediate; asm:12716] | 9AC7 LDX #$0740 [immediate; asm:12755] | 9AEE LDY #$0740 [immediate; asm:12775] | 9B59 ADC #$0740 [immediate; asm:12828] | 9B9E LDY #$0740 [immediate; asm:12865] | 9C73 ADC #$0740 [immediate; asm:12975] | 9CE4 LDY #$0740 [immediate; asm:13040]
+0741,0,
+0742,0,
+0743,0,
+0744,0,
+0745,0,
+0746,0,
+0747,0,
+0748,0,
+0749,0,
+074A,0,
+074B,0,
+074C,0,
+074D,0,
+074E,0,
+074F,0,
+0750,0,
+0751,0,
+0752,0,
+0753,0,
+0754,0,
+0755,0,
+0756,0,
+0757,0,
+0758,0,
+0759,0,
+075A,0,
+075B,0,
+075C,0,
+075D,0,
+075E,0,
+075F,0,
+0760,0,
+0761,0,
+0762,0,
+0763,0,
+0764,0,
+0765,0,
+0766,0,
+0767,0,
+0768,1,9A90 CPX #$0768 [immediate; asm:12722]
+0769,0,
+076A,13,"5169 LDM $076A,#$01 [memory; asm:3894] | 5171 LDA $076A [memory; asm:3896] | 5182 STA $076A [memory; asm:3906] | 51CA BBS $076A,#$01,L_51E7 [memory; asm:3946] | 51CF BBS $076A,#$04,L_51F0 [memory; asm:3947] | 51D4 BBS $076A,#$20,L_51F9 [memory; asm:3948] | 51D9 BBS $076A,#$40,L_5202 [memory; asm:3949] | 51DE BBS $076A,#$80,L_520B [memory; asm:3950] | 5263 BBS $076A,#$01,L_5280 [memory; asm:4019] | 5268 BBS $076A,#$04,L_52A2 [memory; asm:4020] | 526D BBS $076A,#$20,L_52BB [memory; asm:4021] | 5272 BBS $076A,#$40,L_52D3 [memory; asm:4022] | 5277 BBS $076A,#$80,L_52EA [memory; asm:4023]"
+076B,4,51C6 STB $076B [memory; asm:3945] | 5239 STB $076B [memory; asm:4001] | 5260 LDA $076B [memory; asm:4018] | 9CE7 LDB $076B [memory; asm:13041]
+076C,10,"51EA LDM $076C,#$02 [memory; asm:3955] | 51F3 LDM $076C,#$02 [memory; asm:3960] | 51FC LDM $076C,#$06 [memory; asm:3965] | 5205 LDM $076C,#$02 [memory; asm:3970] | 520E LDM $076C,#$02 [memory; asm:3975] | 5213 LDA $076C [memory; asm:3979] | 5335 LDM $076C,#$04 [memory; asm:4125] | 9BF7 LDA $076C [memory; asm:12919] | 9D00 CMP $076C [memory; asm:13055] | 9D3A LDB $076C [memory; asm:13096]"
+076D,3,"9CDD LDM $076D,#$01 [memory; asm:13038] | 9CFD LDA $076D [memory; asm:13054] | 9D0A INC $076D [memory; asm:13063]"
+076E,5,"99DF LDM $076E,#$01 [memory; asm:12625] | 9A0C LDB $076E [memory; asm:12652] | 9A22 LDM $076E,#$00 [memory; asm:12663] | 9A5C LDA $076E [memory; asm:12695] | 9AA6 LDB $076E [memory; asm:12736]"
+076F,1,5198 ADC #$076F [immediate; asm:3916]
+0770,1,6E1A LDA $0770 [memory; asm:6808]
+0771,0,
+0772,1,B39F LDA $0772 [memory; asm:15913]
+0773,0,
+0774,1,ACB8 LDA $0774 [memory; asm:15035]
+0775,0,
+0776,0,
+0777,0,
+0778,0,
+0779,0,
+077A,0,
+077B,0,
+077C,0,
+077D,0,
+077E,0,
+077F,0,
+0780,2,676E AND #$0780 [immediate; asm:5893] | 678E AND #$0780 [immediate; asm:5909]
+0781,0,
+0782,0,
+0783,0,
+0784,0,
+0785,0,
+0786,0,
+0787,1,BFB8 LDA $0787 [memory; asm:17514]
+0788,0,
+0789,0,
+078A,0,
+078B,0,
+078C,0,
+078D,0,
+078E,0,
+078F,0,
+0790,0,
+0791,1,F4C5 LDA $0791 [memory; asm:23091]
+0792,0,
+0793,0,
+0794,0,
+0795,0,
+0796,0,
+0797,0,
+0798,0,
+0799,0,
+079A,1,9933 LDA $079A [memory; asm:12529]
+079B,0,
+079C,0,
+079D,0,
+079E,0,
+079F,0,
+07A0,4,"5224 STA $07A0,X [memory; asm:3987] | 5327 STA $07A0 [memory; asm:4119] | 9CF1 LDA $07A0,X [memory; asm:13047] | 9D10 LDA $07A0,X [memory; asm:13068]"
+07A1,0,
+07A2,1,5331 STA $07A2 [memory; asm:4123]
+07A3,0,
+07A4,0,
+07A5,0,
+07A6,0,
+07A7,0,
+07A8,0,
+07A9,0,
+07AA,0,
+07AB,0,
+07AC,4,"514E ORB $07AC,Y [memory; asm:3881] | 5152 STB $07AC,Y [memory; asm:3882] | 536F LDX $07AC [memory; asm:4153] | 54F8 STX $07AC [memory; asm:4348]"
+07AD,0,
+07AE,2,5375 LDX $07AE [memory; asm:4155] | 54FB STX $07AE [memory; asm:4349]
+07AF,0,
+07B0,2,537B LDX $07B0 [memory; asm:4157] | 54FE STX $07B0 [memory; asm:4350]
+07B1,0,
+07B2,1,CA13 STA $07B2 [memory; asm:18788]
+07B3,2,CA19 STA $07B3 [memory; asm:18790] | CA65 STA $07B3 [memory; asm:18820]
+07B4,1,CA27 STA $07B4 [memory; asm:18797]
+07B5,1,CA2D STA $07B5 [memory; asm:18799]
+07B6,1,CA33 STA $07B6 [memory; asm:18801]
+07B7,7,"5372 STX $07B7 [memory; asm:4154] | 5501 STX $07B7 [memory; asm:4351] | 6E15 BBC $07B7,#$02,L_6E35 [memory; asm:6807] | 7434 BBC $07B7,#$02,L_743B [memory; asm:7619] | ACB3 BBC $07B7,#$20,L_ACC5 [memory; asm:15034] | B39A BBC $07B7,#$08,L_B3A8 [memory; asm:15912] | DA7B LDX $07B7 [memory; asm:20778]"
+07B8,1,"ACA0 BBC $07B8,#$10,L_ACAE [memory; asm:15025]"
+07B9,3,5378 STX $07B9 [memory; asm:4156] | 5504 STX $07B9 [memory; asm:4352] | DA80 LDX $07B9 [memory; asm:20780]
+07BA,2,"7384 BBS $07BA,#$01,L_738E [memory; asm:7532] | BFB3 BBC $07BA,#$01,L_BFC5 [memory; asm:17513]"
+07BB,4,"537E STX $07BB [memory; asm:4158] | 5507 STX $07BB [memory; asm:4353] | DA85 LDB $07BB [memory; asm:20782] | F4C0 BBC $07BB,#$04,L_F4D0 [memory; asm:23090]"
+07BC,4,"5406 BBC $07BC,#$04,L_540F [memory; asm:4222] | 98BB BBC $07BC,#$08,L_98C2 [memory; asm:12458] | 992E BBC $07BC,#$08,L_9943 [memory; asm:12528] | DA8E LDB $07BC [memory; asm:20785]"
+07BD,1,CA39 STA $07BD [memory; asm:18803]
+07BE,1,CA3F STA $07BE [memory; asm:18805]
+07BF,1,CA45 STA $07BF [memory; asm:18807]
+07C0,1,CA4B STA $07C0 [memory; asm:18809]
+07C1,1,CA51 STA $07C1 [memory; asm:18811]
+07C2,8,"4F08 STA $07C2 [memory; asm:3613] | 4F15 BBC $07C2,#$02,cs_rx_check [memory; asm:3618] | 4F67 LDA $07C2 [memory; asm:3656] | 4F77 BBS $07C2,#$80,L_4F9C [memory; asm:3661] | 4FA9 BBS $07C2,#$80,L_4F8A [memory; asm:3684] | 4FC8 BBS $07C2,#$80,cs_reject [memory; asm:3696] | 534B BBS $07C2,#$80,cs_reply_fe [memory; asm:4138] | 53F3 BBS $07C2,#$80,cs_reply_fe [memory; asm:4214]"
+07C3,2,549A ADC #$07C3 [immediate; asm:4303] | 9B75 ADC #$07C3 [immediate; asm:12846]
+07C4,0,
+07C5,0,
+07C6,0,
+07C7,0,
+07C8,0,
+07C9,0,
+07CA,0,
+07CB,0,
+07CC,0,
+07CD,0,
+07CE,0,
+07CF,0,
+07D0,0,
+07D1,0,
+07D2,0,
+07D3,0,
+07D4,0,
+07D5,0,
+07D6,0,
+07D7,2,54AA ADC #$07D7 [immediate; asm:4310] | 9B4F ADC #$07D7 [immediate; asm:12823]
+07D8,0,
+07D9,0,
+07DA,0,
+07DB,0,
+07DC,0,
+07DD,0,
+07DE,0,
+07DF,0,
+07E0,0,
+07E1,5,5442 STB $07E1 [memory; asm:4259] | 5491 LDA $07E1 [memory; asm:4298] | 54A3 LDA $07E1 [memory; asm:4307] | 54B4 INC $07E1 [memory; asm:4315] | 9B65 CMP $07E1 [memory; asm:12834]
+07E2,3,9B47 LDA $07E2 [memory; asm:12819] | 9B61 LDA $07E2 [memory; asm:12832] | 9B6C STA $07E2 [memory; asm:12841]
+07E3,5,"544D CLB $07E3,#$03 [memory; asm:4262] | 548D SEB $07E3,#$01 [memory; asm:4297] | 9B2A BBC $07E3,#$01,L_9B89 [memory; asm:12810] | 9B34 BBS $07E3,#$02,L_9B3F [memory; asm:12812] | 9B39 SEB $07E3,#$02 [memory; asm:12813]"
+07E4,2,9B7B STA $07E4 [memory; asm:12849] | CD62 LDA $07E4 [memory; asm:19162]
+07E5,1,CD67 LDA $07E5 [memory; asm:19164]
+07E6,2,"9B85 SEB $07E6,#$10 [memory; asm:12853] | CD59 BBC $07E6,#$10,L_CD62 [memory; asm:19158]"
+07E7,2,9B3F LDB $07E7 [memory; asm:12817] | C862 STA $07E7 [memory; asm:18617]
+07E8,8,"79D7 BBS $07E8,#$02,L_79E1 [memory; asm:8353] | 9572 BBC $07E8,#$04,L_95A0 [memory; asm:12005] | C819 LDA $07E8 [memory; asm:18591] | C820 STA $07E8 [memory; asm:18594] | C823 BBC $07E8,#$08,L_C840 [memory; asm:18595] | D150 BBS $07E8,#$04,L_D17C [memory; asm:19588] | E345 SEB $07E8,#$02 [memory; asm:21664] | E3EB BBC $07E8,#$20,L_E3F4 [memory; asm:21748]"
+07E9,4,"7242 BBC $07E9,#$01,L_726A [memory; asm:7358] | 7252 BBC $07E9,#$02,L_726A [memory; asm:7366] | C842 STA $07E9 [memory; asm:18605] | CD94 BBC $07E9,#$10,L_CDAC [memory; asm:19182]"
+07EA,1,C847 STA $07EA [memory; asm:18607]
+07EB,5,"831B BBS $07EB,#$02,L_8369 [memory; asm:9493] | 991B BBC $07EB,#$01,L_992A [memory; asm:12519] | 994D BBC $07EB,#$01,L_9965 [memory; asm:12538] | C851 STA $07EB [memory; asm:18611] | D155 BBC $07EB,#$80,L_D17C [memory; asm:19589]"
+07EC,0,
+07ED,0,
+07EE,18,"951C SEB $07EE,#$01 [memory; asm:11963] | 9522 CLB $07EE,#$01 [memory; asm:11967] | 952B BBC $07EE,#$01,L_9534 [memory; asm:11971] | A58D BBS $07EE,#$04,L_A5A5 [memory; asm:14111] | A65F BBS $07EE,#$04,L_A684 [memory; asm:14207] | A6DC BBS $07EE,#$04,L_A712 [memory; asm:14269] | C022 BBC $07EE,#$3C,L_C029 [memory; asm:17563] | CD8F LDA $07EE [memory; asm:19180] | D001 BBS $07EE,#$40,L_D06B [memory; asm:19447] | D074 BBS $07EE,#$40,L_D08D [memory; asm:19475] | D09A BBS $07EE,#$40,L_D0AA [memory; asm:19488] | D926 LDA $07EE [memory; asm:20614] | D9D9 STA $07EE [memory; asm:20692] | E300 BBS $07EE,#$20,L_E34F [memory; asm:21637] | E679 BBC $07EE,#$3C,L_E680 [memory; asm:22070] | F619 BBC $07EE,#$30,L_F620 [memory; asm:23238] | F80F BBC $07EE,#$3A,L_F816 [memory; asm:23461] | FB2B BBC $07EE,#$7A,L_FB34 [memory; asm:23861]"
+07EF,18,"7CF7 BBC $07EF,#$04,L_7D02 [memory; asm:8761] | 7E71 BBC $07EF,#$04,L_7E7E [memory; asm:8931] | 8102 BBC $07EF,#$10,L_8122 [memory; asm:9228] | C029 BBS $07EF,#$20,L_C044 [memory; asm:17567] | C83C CLB $07EF,#$80 [memory; asm:18601] | CDAC LDA $07EF [memory; asm:19190] | D512 BBS $07EF,#$08,L_D51C [memory; asm:20109] | D53C BBS $07EF,#$04,L_D546 [memory; asm:20128] | D9DC LDA $07EF [memory; asm:20693] | DA10 STA $07EF [memory; asm:20722] | DB7E LDA $07EF [memory; asm:20910] | DB91 BBC $07EF,#$08,L_DB9D [memory; asm:20918] | DBA4 STA $07EF [memory; asm:20927] | DBCA LDA $07EF [memory; asm:20946] | DBD6 STA $07EF [memory; asm:20952] | DDCA BBC $07EF,#$01,L_DDD3 [memory; asm:21164] | DE40 BBC $07EF,#$02,L_DE49 [memory; asm:21217] | FB6F BBC $07EF,#$03,L_FB76 [memory; asm:23887]"
+07F0,16,"7D0A BBC $07F0,#$04,L_7D1D [memory; asm:8770] | 7EC6 BBC $07F0,#$04,L_7ED3 [memory; asm:8966] | 8133 BBC $07F0,#$10,L_8153 [memory; asm:9251] | 8DEC BBS $07F0,#$80,L_8E46 [memory; asm:10957] | 9542 SEB $07F0,#$01 [memory; asm:11978] | 99D7 SEB $07F0,#$01 [memory; asm:12619] | C828 SEB $07F0,#$01 [memory; asm:18596] | CDA0 CLB $07F0,#$01 [memory; asm:19185] | CDB1 LDA $07F0 [memory; asm:19192] | D517 BBC $07F0,#$08,L_D538 [memory; asm:20110] | D541 BBC $07F0,#$04,L_D57A [memory; asm:20129] | DA13 LDA $07F0 [memory; asm:20723] | DA40 STA $07F0 [memory; asm:20752] | DBA8 LDA $07F0 [memory; asm:20932] | DBBB BBC $07F0,#$08,L_DBC7 [memory; asm:20940] | DBC7 STA $07F0 [memory; asm:20945]"
+07F1,14,"98B6 BBC $07F1,#$04,L_98C6 [memory; asm:12457] | 9D5E BBC $07F1,#$02,L_9D65 [memory; asm:13120] | 9D78 BBC $07F1,#$01,L_9D7F [memory; asm:13134] | CAFC CLB $07F1,#$10 [memory; asm:18889] | CB9D SEB $07F1,#$10 [memory; asm:18964] | CDB6 LDA $07F1 [memory; asm:19194] | D056 BBS $07F1,#$80,L_D06B [memory; asm:19464] | D05B BBS $07F1,#$40,L_D06B [memory; asm:19465] | D079 BBS $07F1,#$80,L_D08D [memory; asm:19476] | D09F BBS $07F1,#$80,L_D0AA [memory; asm:19489] | DA43 LDA $07F1 [memory; asm:20753] | DAA5 STA $07F1 [memory; asm:20800] | E075 BBS $07F1,#$04,L_E080 [memory; asm:21519] | FB47 BBS $07F1,#$80,L_FBB0 [memory; asm:23871]"
+07F2,7,"CDBB LDA $07F2 [memory; asm:19196] | D060 BBS $07F2,#$01,L_D06B [memory; asm:19466] | D07E BBS $07F2,#$20,L_D08D [memory; asm:19477] | DAA8 LDA $07F2 [memory; asm:20801] | DAE9 STA $07F2 [memory; asm:20836] | F80A BBS $07F2,#$20,L_F826 [memory; asm:23460] | FB34 BBC $07F2,#$21,L_FB3D [memory; asm:23865]"
+07F3,13,"CC92 SEB $07F3,#$80 [memory; asm:19075] | CDA8 CLB $07F3,#$80 [memory; asm:19187] | CDC0 LDA $07F3 [memory; asm:19198] | CF5A BBS $07F3,#$40,L_CFB3 [memory; asm:19388] | CFAD CLB $07F3,#$10 [memory; asm:19415] | CFB3 SEB $07F3,#$10 [memory; asm:19419] | CFB7 BBS $07F3,#$40,L_CFF8 [memory; asm:19422] | CFF2 CLB $07F3,#$02 [memory; asm:19439] | CFF8 SEB $07F3,#$02 [memory; asm:19443] | D06F BBS $07F3,#$40,L_D08D [memory; asm:19474] | D095 BBS $07F3,#$40,L_D0AA [memory; asm:19487] | DAEC LDA $07F3 [memory; asm:20837] | DB3D STA $07F3 [memory; asm:20875]"
+07F4,7,"9920 SEB $07F4,#$40 [memory; asm:12520] | 992A CLB $07F4,#$40 [memory; asm:12525] | 9EC3 SEB $07F4,#$80 [memory; asm:13254] | 9ED4 CLB $07F4,#$80 [memory; asm:13265] | CDC5 LDA $07F4 [memory; asm:19200] | DB40 LDA $07F4 [memory; asm:20876] | DB7A STA $07F4 [memory; asm:20905]"
+07F5,0,
+07F6,16,"40C8 CLB $07F6,#$02 [memory; asm:2005] | C874 SEB $07F6,#$02 [memory; asm:18624] | CC5B BBC $07F6,#$80,L_CC6B [memory; asm:19050] | CC72 BBS $07F6,#$80,L_CC8D [memory; asm:19059] | CC77 SEB $07F6,#$80 [memory; asm:19060] | CC88 CLB $07F6,#$80 [memory; asm:19068] | CE3D BBS $07F6,#$08,L_CE51 [memory; asm:19253] | CE58 BBS $07F6,#$08,L_CE8E [memory; asm:19267] | CF1D BBS $07F6,#$08,L_CF31 [memory; asm:19355] | D19C SEB $07F6,#$08 [memory; asm:19625] | D1B0 CLB $07F6,#$08 [memory; asm:19630] | D3C4 SEB $07F6,#$10 [memory; asm:19917] | D831 BBS $07F6,#$10,L_D881 [memory; asm:20510] | DC6A SEB $07F6,#$08 [memory; asm:21010] | DD2F CLB $07F6,#$08 [memory; asm:21103] | DF92 SEB $07F6,#$10 [memory; asm:21406]"
+07F7,4,409E STA $07F7 [memory; asm:1990] | 584C STA $07F7 [memory; asm:4782] | 588E STA $07F7 [memory; asm:4806] | CCD1 LDA $07F7 [memory; asm:19103]
+07F8,1,C811 STA $07F8 [memory; asm:18588]
+07F9,3,"C856 STA $07F9 [memory; asm:18613] | CAD7 LDA $07F9 [memory; asm:18868] | CB99 LDM $07F9,#$00 [memory; asm:18963]"
+07FA,1,C867 STA $07FA [memory; asm:18619]
+07FB,12,"CAF4 LDM $07FB,#$00 [memory; asm:18887] | CB09 STA $07FB [memory; asm:18895] | CB18 STA $07FB [memory; asm:18902] | CB27 STA $07FB [memory; asm:18909] | CB36 STA $07FB [memory; asm:18916] | CB45 STA $07FB [memory; asm:18923] | CB54 STA $07FB [memory; asm:18930] | CB63 STA $07FB [memory; asm:18937] | CB72 STA $07FB [memory; asm:18944] | CB81 STA $07FB [memory; asm:18951] | CB90 STA $07FB [memory; asm:18958] | CDCF LDA $07FB [memory; asm:19204]"
+07FC,12,"CAF8 LDM $07FC,#$00 [memory; asm:18888] | CB0F STA $07FC [memory; asm:18897] | CB1E STA $07FC [memory; asm:18904] | CB2D STA $07FC [memory; asm:18911] | CB3C STA $07FC [memory; asm:18918] | CB4B STA $07FC [memory; asm:18925] | CB5A STA $07FC [memory; asm:18932] | CB69 STA $07FC [memory; asm:18939] | CB78 STA $07FC [memory; asm:18946] | CB87 STA $07FC [memory; asm:18953] | CB96 STA $07FC [memory; asm:18960] | CDD4 LDA $07FC [memory; asm:19206]"
+07FD,7,BBD9 CMP $07FD [memory; asm:17000] | BBDE LDA $07FD [memory; asm:17004] | BC39 STA $07FD [memory; asm:17061] | BC47 CMP $07FD [memory; asm:17068] | BC4C LDA $07FD [memory; asm:17070] | BC63 CMP $07FD [memory; asm:17083] | BC68 STA $07FD [memory; asm:17085]
+07FE,0,
+07FF,5,BBC9 CMP $07FF [memory; asm:16987] | BBCE LDA $07FF [memory; asm:16991] | BC30 STA $07FF [memory; asm:17058] | BC3F CMP $07FF [memory; asm:17063] | BC44 LDA $07FF [memory; asm:17065]
+0800,0,
+0801,2,8BA4 INC $0801 [memory; asm:10617] | 8BA9 DEC $0801 [memory; asm:10619]
+0802,5,7A2B LDA $0802 [memory; asm:8388] | 81DA LDA $0802 [memory; asm:9341] | 81ED LDA $0802 [memory; asm:9353] | 81F8 STA $0802 [memory; asm:9360] | 8B7D LDA $0802 [memory; asm:10602]
+0803,2,"6EE3 SEB $0803,#$10 [memory; asm:6913] | 6EE9 SEB $0803,#$20 [memory; asm:6917]"
+0804,0,
+0805,3,444A LDA $0805 [memory; asm:2351] | C06C LDA $0805 [memory; asm:17601] | C0B7 STA $0805 [memory; asm:17635]
+0806,8,"94B3 CMP $0806 [memory; asm:11912] | BF8E LDA $0806 [memory; asm:17496] | BF9C LDA $0806 [memory; asm:17502] | C05F LDA $0806 [memory; asm:17595] | C068 LDM $0806,#$04 [memory; asm:17598] | C06F LDB $0806 [memory; asm:17602] | C0B3 STB $0806 [memory; asm:17634] | CCF0 LDA $0806 [memory; asm:19116]"
+0807,17,"BF6F BBS $0807,#$01,L_BF89 [memory; asm:17484] | BF74 SEB $0807,#$01 [memory; asm:17485] | BF89 BBS $0807,#$02,L_BF97 [memory; asm:17495] | BF93 SEB $0807,#$02 [memory; asm:17498] | BF97 BBC $0807,#$04,L_BFA9 [memory; asm:17501] | BFA1 CLB $0807,#$0C [memory; asm:17504] | C00C SEB $0807,#$08 [memory; asm:17555] | C054 SEB $0807,#$08 [memory; asm:17590] | C05A BBC $0807,#$08,L_C06C [memory; asm:17594] | C064 SEB $0807,#$04 [memory; asm:17597] | C07B SEB $0807,#$80 [memory; asm:17606] | C07F BBC $0807,#$40,L_C08A [memory; asm:17607] | C084 CLB $0807,#$40 [memory; asm:17608] | C091 SEB $0807,#$40 [memory; asm:17617] | C095 BBC $0807,#$80,L_C0A0 [memory; asm:17618] | C09A CLB $0807,#$80 [memory; asm:17619] | C0AF CLB $0807,#$C0 [memory; asm:17631]"
+0808,13,"40D0 BBS $0808,#$80,L_4137 [memory; asm:2007] | 40F1 SEB $0808,#$40 [memory; asm:2020] | 4137 SEB $0808,#$80 [memory; asm:2056] | 7415 BBC $0808,#$02,L_742E [memory; asm:7604] | BDBD BBS $0808,#$08,L_BDCB [memory; asm:17258] | BDC2 BBC $0808,#$04,L_BDCB [memory; asm:17259] | BDD1 BBS $0808,#$40,L_BDD9 [memory; asm:17265] | BE44 BBS $0808,#$10,L_BE4F [memory; asm:17327] | BE5F BBS $0808,#$08,L_BE6E [memory; asm:17344] | BE69 BBC $0808,#$02,L_BE73 [memory; asm:17346] | BE73 BBC $0808,#$01,L_BE89 [memory; asm:17353] | BEC8 BBS $0808,#$08,L_BED6 [memory; asm:17399] | BECD BBC $0808,#$04,L_BED6 [memory; asm:17400]"
+0809,4,3DD4 STA $0809 [memory; asm:1692] | 936A INC $0809 [memory; asm:11737] | 936F DEC $0809 [memory; asm:11739] | BCB3 LDA $0809 [memory; asm:17122]
+080A,3,8A59 LDX $080A [memory; asm:10454] | 8A62 STA $080A [memory; asm:10457] | E89C STA $080A [memory; asm:22344]
+080B,2,8A5C STX $080B [memory; asm:10455] | E89F STA $080B [memory; asm:22345]
+080C,2,8A53 LDX $080C [memory; asm:10452] | E8A2 STA $080C [memory; asm:22346]
+080D,2,8A56 STX $080D [memory; asm:10453] | E8A5 STA $080D [memory; asm:22347]
+080E,2,8A34 SBC $080E [memory; asm:10435] | E8A8 STA $080E [memory; asm:22348]
+080F,1,8A89 STA $080F [memory; asm:10477]
+0810,7,"503D LDM $0810,#$0000 [memory; asm:3763] | 55DD SEB $0810,#$40 [memory; asm:4460] | 9C04 LDX $0810 [memory; asm:12927] | 9C42 LDY #$0810 [immediate; asm:12952] | C288 BBC $0810,#$60,L_C28F [memory; asm:17858] | D38C LDA #$0810 [immediate; asm:19894] | DEA1 LDA #$0810 [immediate; asm:21285]"
+0811,1,"E33D SEB $0811,#$80 [memory; asm:21661]"
+0812,2,"5042 LDM $0812,#$0000 [memory; asm:3764] | 9C09 LDX $0812 [memory; asm:12929]"
+0813,0,
+0814,3,"5047 LDM $0814,#$0000 [memory; asm:3765] | 9C0E LDX $0814 [memory; asm:12931] | A788 SEB $0814,#$10 [memory; asm:14362]"
+0815,1,D12D STA $0815 [memory; asm:19567]
+0816,3,"504C LDM $0816,#$0000 [memory; asm:3766] | 9C13 LDX $0816 [memory; asm:12933] | D148 SEB $0816,#$80 [memory; asm:19584]"
+0817,0,
+0818,2,"5051 LDM $0818,#$0000 [memory; asm:3767] | 9C18 LDX $0818 [memory; asm:12935]"
+0819,0,
+081A,2,"5056 LDM $081A,#$0000 [memory; asm:3768] | 9C1D LDX $081A [memory; asm:12937]"
+081B,0,
+081C,2,"505B LDM $081C,#$0000 [memory; asm:3769] | 9C22 LDX $081C [memory; asm:12939]"
+081D,0,
+081E,2,"5060 LDM $081E,#$0000 [memory; asm:3770] | 9C27 LDX $081E [memory; asm:12941]"
+081F,0,
+0820,2,"5065 LDM $0820,#$0000 [memory; asm:3771] | 9C2C LDX $0820 [memory; asm:12943]"
+0821,0,
+0822,2,"507F LDM $0822,#$00 [memory; asm:3777] | 9C31 LDA $0822 [memory; asm:12945]"
+0823,0,
+0824,0,
+0825,0,
+0826,0,
+0827,0,
+0828,0,
+0829,1,C951 STA $0829 [memory; asm:18712]
+082A,1,C957 STA $082A [memory; asm:18714]
+082B,1,C95D STA $082B [memory; asm:18716]
+082C,10,"7389 BBC $082C,#$04,L_7391 [memory; asm:7533] | 78BA BBS $082C,#$10,L_78C5 [memory; asm:8201] | 8379 BBC $082C,#$04,L_8393 [memory; asm:9545] | 8CFD BBC $082C,#$08,L_8D0F [memory; asm:10813] | 919B BBS $082C,#$04,L_91B5 [memory; asm:11480] | 91E6 BBS $082C,#$04,L_9200 [memory; asm:11518] | 92FB BBC $082C,#$04,L_930A [memory; asm:11675] | CD0E LDA $082C [memory; asm:19128] | DDF1 BBC $082C,#$04,L_DDFA [memory; asm:21191] | DE67 BBC $082C,#$04,L_DE70 [memory; asm:21244]"
+082D,0,
+082E,1,C87A STA $082E [memory; asm:18626]
+082F,0,
+0830,4,D5E7 LDY #$0830 [immediate; asm:20205] | DEC1 LDA #$0830 [immediate; asm:21298] | DEDC LDA #$0830 [immediate; asm:21311] | DF97 LDA #$0830 [immediate; asm:21408]
+0831,0,
+0832,0,
+0833,0,
+0834,0,
+0835,3,"C9CC LDM $0835,#$00 [memory; asm:18760] | D130 STA $0835 [memory; asm:19568] | D5C3 LDM $0835,#$FF [memory; asm:20190]"
+0836,4,"C9D0 CLB $0836,#$80 [memory; asm:18761] | D14C SEB $0836,#$80 [memory; asm:19585] | D5C7 SEB $0836,#$80 [memory; asm:20191] | D5D3 SEB $0836,#$08 [memory; asm:20194]"
+0837,0,
+0838,0,
+0839,0,
+083A,0,
+083B,0,
+083C,0,
+083D,0,
+083E,1,"D5CB SEB $083E,#$06 [memory; asm:20192]"
+083F,2,"D5CF SEB $083F,#$C0 [memory; asm:20193] | D5D7 SEB $083F,#$08 [memory; asm:20195]"

@@ -1,0 +1,2 @@
+trial,requested,before,after,verification,companion_after,companion_verification,status,error,elapsed_seconds,target
+1,67,00,67,67,00,00,readback_mismatch,,0.1846,07ED

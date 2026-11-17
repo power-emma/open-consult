@@ -1,0 +1,33 @@
+trial,requested,before,after,verification,companion_after,companion_verification,status,error,elapsed_seconds,target
+1,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.032,0801
+2,67,61,61,61,0E,0E,readback_mismatch,,0.1822,0803
+3,67,0F,9D,67,08,06,readback_mismatch,,0.1832,0805
+4,67,83,23,23,0E,0E,readback_mismatch,,0.1845,0807
+5,67,FF,67,68,0E,0E,readback_mismatch,,0.183,0809
+6,67,4E,67,67,0E,0E,readback_matches,,0.1841,080B
+7,67,4E,67,67,0E,0E,readback_matches,,0.1833,080D
+8,67,00,67,67,0E,0E,readback_matches,,0.1843,080F
+9,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0326,0811
+10,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0302,0813
+11,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0294,0815
+12,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0303,0817
+13,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0315,0819
+14,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0281,081B
+15,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0303,081D
+16,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0302,081F
+17,67,67,,,,,already_matches,target already equals requested value; no mutation sent,0.0301,0821
+18,67,00,67,67,0E,0E,readback_matches,,0.1812,0823
+19,67,00,67,67,0E,0E,readback_matches,,0.1841,0825
+20,67,00,67,67,0E,0E,readback_matches,,0.1833,0827
+21,67,00,67,67,0E,0E,readback_matches,,0.1839,0829
+22,67,00,67,67,0A,0A,readback_mismatch,,0.1733,082B
+23,67,00,67,67,0E,0E,readback_matches,,0.1824,082D
+24,67,00,67,67,0E,0E,readback_matches,,0.184,082F
+25,67,80,67,67,0E,0E,readback_matches,,0.1829,0831
+26,67,00,67,67,0E,0E,readback_matches,,0.1838,0833
+27,67,00,67,67,0E,0E,readback_matches,,0.1841,0835
+28,67,00,67,67,0E,0E,readback_matches,,0.183,0837
+29,67,01,67,67,0E,0E,readback_matches,,0.183,0839
+30,67,00,67,67,0E,0E,readback_matches,,0.1842,083B
+31,67,00,67,67,0E,0E,readback_matches,,0.1831,083D
+32,67,00,67,67,0E,0E,readback_matches,,0.1855,083F

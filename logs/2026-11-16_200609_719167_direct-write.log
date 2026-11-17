@@ -1,0 +1,11 @@
+  0.000128 ## open /dev/ttyUSB0 at 2026-11-16T20:06:09
+  0.000166 ## direct write trial target=$0817 value=$42
+  0.000188 TX 30
+  0.000245 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.701247 TX ff
+  0.701312 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.981850 TX ff
+  0.981949 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  1.052220 TX ed
+  1.052321 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  2.159746 ## close

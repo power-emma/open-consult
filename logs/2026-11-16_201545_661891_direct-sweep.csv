@@ -1,0 +1,7 @@
+trial,requested,before,after,verification,companion_after,companion_verification,status,error
+1,00,67,00,00,0E,0E,readback_matches,
+2,01,00,01,01,0E,0E,readback_matches,
+3,02,01,02,02,0E,0E,readback_matches,
+4,03,02,03,03,0E,0E,readback_matches,
+5,04,03,04,04,0E,0E,readback_matches,
+6,05,,,,,,not_attempted,KeyboardInterrupt: 

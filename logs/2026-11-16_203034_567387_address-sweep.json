@@ -1,0 +1,1033 @@
+{
+  "status": "completed_with_mismatches",
+  "target": null,
+  "requested_values": [
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103
+  ],
+  "mode": "fast",
+  "model_validated": true,
+  "trials": [
+    {
+      "index": 1,
+      "value": 103,
+      "target": 2049,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 1e c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0801": 103,
+        "0802": 0
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0333
+    },
+    {
+      "index": 2,
+      "value": 103,
+      "target": 2051,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 1f c9 5e 67",
+      "mutation_attempted": true,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0803": 97,
+        "0804": 14
+      },
+      "rpm_before": 0.0,
+      "frames_hex": [
+        "61 0e 00 00 00 00 00 3f c1 80 c3 00 10 7c 05 00 e5"
+      ],
+      "stop_acknowledged": true,
+      "after": {
+        "0803": 97,
+        "0804": 14
+      },
+      "verification": {
+        "0803": 97,
+        "0804": 14
+      },
+      "readback_matches": false,
+      "observed_changes": {},
+      "status": "readback_mismatch",
+      "elapsed_seconds": 0.1811
+    },
+    {
+      "index": 3,
+      "value": 103,
+      "target": 2053,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 20 c9 5e 67",
+      "mutation_attempted": true,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0805": 157,
+        "0806": 0
+      },
+      "rpm_before": 0.0,
+      "frames_hex": [
+        "9d 00 00 00 00 00 00 3f c1 80 c3 00 10 7c 05 00 e5"
+      ],
+      "stop_acknowledged": true,
+      "after": {
+        "0805": 157,
+        "0806": 8
+      },
+      "verification": {
+        "0805": 103,
+        "0806": 6
+      },
+      "readback_matches": false,
+      "observed_changes": {
+        "0806": {
+          "before": 0,
+          "after": 8
+        }
+      },
+      "status": "readback_mismatch",
+      "elapsed_seconds": 0.1839
+    },
+    {
+      "index": 4,
+      "value": 103,
+      "target": 2055,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 21 c9 5e 67",
+      "mutation_attempted": true,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0807": 163,
+        "0808": 14
+      },
+      "rpm_before": 0.0,
+      "frames_hex": [
+        "a3 0e 00 00 00 00 00 3f c1 80 c3 00 10 7c 05 00 e5"
+      ],
+      "stop_acknowledged": true,
+      "after": {
+        "0807": 35,
+        "0808": 14
+      },
+      "verification": {
+        "0807": 35,
+        "0808": 14
+      },
+      "readback_matches": false,
+      "observed_changes": {
+        "0807": {
+          "before": 163,
+          "after": 35
+        }
+      },
+      "status": "readback_mismatch",
+      "elapsed_seconds": 0.1835
+    },
+    {
+      "index": 5,
+      "value": 103,
+      "target": 2057,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 22 c9 5e 67",
+      "mutation_attempted": true,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0809": 178,
+        "080A": 78
+      },
+      "rpm_before": 0.0,
+      "frames_hex": [
+        "b2 4e 00 00 00 00 00 3f c1 80 c3 00 10 7c 05 00 e5"
+      ],
+      "stop_acknowledged": true,
+      "after": {
+        "0809": 104,
+        "080A": 14
+      },
+      "verification": {
+        "0809": 104,
+        "080A": 14
+      },
+      "readback_matches": false,
+      "observed_changes": {
+        "0809": {
+          "before": 178,
+          "after": 104
+        },
+        "080A": {
+          "before": 78,
+          "after": 14
+        }
+      },
+      "status": "readback_mismatch",
+      "elapsed_seconds": 0.1839
+    },
+    {
+      "index": 6,
+      "value": 103,
+      "target": 2059,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 23 c9 5e 67",
+      "mutation_attempted": true,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "080B": 78,
+        "080C": 78
+      },
+      "rpm_before": 0.0,
+      "frames_hex": [
+        "4e 4e 00 00 00 00 00 3f c1 80 c3 00 10 7c 05 00 e5"
+      ],
+      "stop_acknowledged": true,
+      "after": {
+        "080B": 103,
+        "080C": 14
+      },
+      "verification": {
+        "080B": 103,
+        "080C": 14
+      },
+      "readback_matches": true,
+      "observed_changes": {
+        "080B": {
+          "before": 78,
+          "after": 103
+        },
+        "080C": {
+          "before": 78,
+          "after": 14
+        }
+      },
+      "status": "readback_matches",
+      "elapsed_seconds": 0.1835
+    },
+    {
+      "index": 7,
+      "value": 103,
+      "target": 2061,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 24 c9 5e 67",
+      "mutation_attempted": true,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "080D": 78,
+        "080E": 14
+      },
+      "rpm_before": 0.0,
+      "frames_hex": [
+        "4e 0e 00 00 00 00 00 3f c1 80 c3 00 10 7c 05 00 e5"
+      ],
+      "stop_acknowledged": true,
+      "after": {
+        "080D": 103,
+        "080E": 14
+      },
+      "verification": {
+        "080D": 103,
+        "080E": 14
+      },
+      "readback_matches": true,
+      "observed_changes": {
+        "080D": {
+          "before": 78,
+          "after": 103
+        }
+      },
+      "status": "readback_matches",
+      "elapsed_seconds": 0.1839
+    },
+    {
+      "index": 8,
+      "value": 103,
+      "target": 2063,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 25 c9 5e 67",
+      "mutation_attempted": true,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "080F": 0,
+        "0810": 14
+      },
+      "rpm_before": 0.0,
+      "frames_hex": [
+        "00 0e 00 00 00 00 00 3f c1 80 c3 00 10 7c 05 00 e5"
+      ],
+      "stop_acknowledged": true,
+      "after": {
+        "080F": 103,
+        "0810": 14
+      },
+      "verification": {
+        "080F": 103,
+        "0810": 14
+      },
+      "readback_matches": true,
+      "observed_changes": {
+        "080F": {
+          "before": 0,
+          "after": 103
+        }
+      },
+      "status": "readback_matches",
+      "elapsed_seconds": 0.1833
+    },
+    {
+      "index": 9,
+      "value": 103,
+      "target": 2065,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 26 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0811": 103,
+        "0812": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0323
+    },
+    {
+      "index": 10,
+      "value": 103,
+      "target": 2067,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 27 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0813": 103,
+        "0814": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0306
+    },
+    {
+      "index": 11,
+      "value": 103,
+      "target": 2069,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 28 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0815": 103,
+        "0816": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0305
+    },
+    {
+      "index": 12,
+      "value": 103,
+      "target": 2071,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 29 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0817": 103,
+        "0818": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0293
+    },
+    {
+      "index": 13,
+      "value": 103,
+      "target": 2073,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 2a c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0819": 103,
+        "081A": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.03
+    },
+    {
+      "index": 14,
+      "value": 103,
+      "target": 2075,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 2b c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "081B": 103,
+        "081C": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0304
+    },
+    {
+      "index": 15,
+      "value": 103,
+      "target": 2077,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 2c c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "081D": 103,
+        "081E": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0302
+    },
+    {
+      "index": 16,
+      "value": 103,
+      "target": 2079,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 2d c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "081F": 103,
+        "0820": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0293
+    },
+    {
+      "index": 17,
+      "value": 103,
+      "target": 2081,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 2e c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0821": 103,
+        "0822": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0306
+    },
+    {
+      "index": 18,
+      "value": 103,
+      "target": 2083,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 2f c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0823": 103,
+        "0824": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0303
+    },
+    {
+      "index": 19,
+      "value": 103,
+      "target": 2085,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 30 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0825": 103,
+        "0826": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0302
+    },
+    {
+      "index": 20,
+      "value": 103,
+      "target": 2087,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 31 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0827": 103,
+        "0828": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0291
+    },
+    {
+      "index": 21,
+      "value": 103,
+      "target": 2089,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 32 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0829": 103,
+        "082A": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0302
+    },
+    {
+      "index": 22,
+      "value": 103,
+      "target": 2091,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 33 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "082B": 103,
+        "082C": 10
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0299
+    },
+    {
+      "index": 23,
+      "value": 103,
+      "target": 2093,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 34 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "082D": 103,
+        "082E": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0302
+    },
+    {
+      "index": 24,
+      "value": 103,
+      "target": 2095,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 35 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "082F": 103,
+        "0830": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0296
+    },
+    {
+      "index": 25,
+      "value": 103,
+      "target": 2097,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 36 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0831": 103,
+        "0832": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0303
+    },
+    {
+      "index": 26,
+      "value": 103,
+      "target": 2099,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 37 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0833": 103,
+        "0834": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0301
+    },
+    {
+      "index": 27,
+      "value": 103,
+      "target": 2101,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 38 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0835": 103,
+        "0836": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0302
+    },
+    {
+      "index": 28,
+      "value": 103,
+      "target": 2103,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 39 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0837": 103,
+        "0838": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.029
+    },
+    {
+      "index": 29,
+      "value": 103,
+      "target": 2105,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 3a c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "0839": 103,
+        "083A": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0307
+    },
+    {
+      "index": 30,
+      "value": 103,
+      "target": 2107,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 3b c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "083B": 103,
+        "083C": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0301
+    },
+    {
+      "index": 31,
+      "value": 103,
+      "target": 2109,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 3c c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "083D": 103,
+        "083E": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0302
+    },
+    {
+      "index": 32,
+      "value": 103,
+      "target": 2111,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 3d c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "083F": 103,
+        "0840": 14
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0291
+    }
+  ],
+  "all_256_values_verified": false,
+  "key_session": "operator keeps key on; script does not power-cycle or independently detect key cycles",
+  "sweep_kind": "addresses",
+  "requested_addresses": [
+    2048,
+    2049,
+    2050,
+    2051,
+    2052,
+    2053,
+    2054,
+    2055,
+    2056,
+    2057,
+    2058,
+    2059,
+    2060,
+    2061,
+    2062,
+    2063,
+    2064,
+    2065,
+    2066,
+    2067,
+    2068,
+    2069,
+    2070,
+    2071,
+    2072,
+    2073,
+    2074,
+    2075,
+    2076,
+    2077,
+    2078,
+    2079,
+    2080,
+    2081,
+    2082,
+    2083,
+    2084,
+    2085,
+    2086,
+    2087,
+    2088,
+    2089,
+    2090,
+    2091,
+    2092,
+    2093,
+    2094,
+    2095,
+    2096,
+    2097,
+    2098,
+    2099,
+    2100,
+    2101,
+    2102,
+    2103,
+    2104,
+    2105,
+    2106,
+    2107,
+    2108,
+    2109,
+    2110,
+    2111
+  ],
+  "fixed_value": 103,
+  "unsupported_addresses": [
+    {
+      "target": 2048,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2050,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2052,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2054,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2056,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2058,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2060,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2062,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2064,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2066,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2068,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2070,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2072,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2074,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2076,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2078,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2080,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2082,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2084,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2086,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2088,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2090,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2092,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2094,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2096,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2098,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2100,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2102,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2104,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2106,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2108,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2110,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    }
+  ],
+  "planned_targets": [
+    2049,
+    2051,
+    2053,
+    2055,
+    2057,
+    2059,
+    2061,
+    2063,
+    2065,
+    2067,
+    2069,
+    2071,
+    2073,
+    2075,
+    2077,
+    2079,
+    2081,
+    2083,
+    2085,
+    2087,
+    2089,
+    2091,
+    2093,
+    2095,
+    2097,
+    2099,
+    2101,
+    2103,
+    2105,
+    2107,
+    2109,
+    2111
+  ],
+  "continue_on_mismatch": true,
+  "initial_target": 103,
+  "initial_companion": 0,
+  "actual_order": [
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103
+  ],
+  "actual_targets": [
+    2049,
+    2051,
+    2053,
+    2055,
+    2057,
+    2059,
+    2061,
+    2063,
+    2065,
+    2067,
+    2069,
+    2071,
+    2073,
+    2075,
+    2077,
+    2079,
+    2081,
+    2083,
+    2085,
+    2087,
+    2089,
+    2091,
+    2093,
+    2095,
+    2097,
+    2099,
+    2101,
+    2103,
+    2105,
+    2107,
+    2109,
+    2111
+  ],
+  "elapsed_seconds": 2.685,
+  "matched_trials": 3,
+  "verified_values": [
+    103
+  ],
+  "verified_addresses": [
+    2059,
+    2061,
+    2063
+  ],
+  "already_matching_trials": 25,
+  "mismatched_trials": 4,
+  "all_planned_addresses_verified": false
+}

@@ -47,6 +47,9 @@ int consult_init(consult_t *c, const uint8_t *ids, int nids, int tries, uint8_t 
  * this ECU's FE FE echoes and F0 → FE replies. Returns 1 on success. */
 int consult_command(consult_t *c, const uint8_t *payload, size_t n, int retries);
 
+/* Single attempt. The caller owns STOP on success and on failure. */
+int consult_command_once(consult_t *c, const uint8_t *payload, size_t n);
+
 /* Read one FF <n> <data...> frame into out (CONSULT_MAX_FRAME bytes). Frames of a
  * different length are skipped unless expected_len < 0. Returns the length or -1. */
 int consult_read_frame(consult_t *c, int expected_len, double timeout, uint8_t *out);

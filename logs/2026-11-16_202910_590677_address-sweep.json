@@ -1,0 +1,510 @@
+{
+  "status": "stopped_on_mismatch",
+  "target": null,
+  "requested_values": [
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103
+  ],
+  "mode": "fast",
+  "model_validated": true,
+  "trials": [
+    {
+      "index": 1,
+      "value": 103,
+      "target": 2029,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 14 c9 5e 67",
+      "mutation_attempted": false,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "07ED": 103,
+        "07EE": 0
+      },
+      "rpm_before": 0.0,
+      "status": "already_matches",
+      "skip_reason": "target already equals requested value; no mutation sent",
+      "elapsed_seconds": 0.0331
+    },
+    {
+      "index": 2,
+      "value": 103,
+      "target": 2031,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 15 c9 5e 67",
+      "mutation_attempted": true,
+      "identity": "23710-2L904 (checked at sweep start)",
+      "verification_scope": "target and companion; collateral snapshots omitted",
+      "before": {
+        "07EF": 32,
+        "07F0": 2
+      },
+      "rpm_before": 0.0,
+      "frames_hex": [
+        "20 02 00 00 00 00 00 3f c1 80 c3 00 10 7c 05 00 e5"
+      ],
+      "stop_acknowledged": true,
+      "after": {
+        "07EF": 32,
+        "07F0": 2
+      },
+      "verification": {
+        "07EF": 32,
+        "07F0": 2
+      },
+      "readback_matches": false,
+      "observed_changes": {},
+      "status": "readback_mismatch",
+      "elapsed_seconds": 0.1809
+    }
+  ],
+  "all_256_values_verified": false,
+  "key_session": "operator keeps key on; script does not power-cycle or independently detect key cycles",
+  "sweep_kind": "addresses",
+  "requested_addresses": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2034,
+    2035,
+    2036,
+    2037,
+    2038,
+    2039,
+    2040,
+    2041,
+    2042,
+    2043,
+    2044,
+    2045,
+    2046,
+    2047,
+    2048,
+    2049,
+    2050,
+    2051,
+    2052,
+    2053,
+    2054,
+    2055,
+    2056,
+    2057,
+    2058,
+    2059,
+    2060,
+    2061,
+    2062,
+    2063,
+    2064,
+    2065,
+    2066,
+    2067,
+    2068,
+    2069,
+    2070,
+    2071,
+    2072,
+    2073,
+    2074,
+    2075,
+    2076,
+    2077,
+    2078,
+    2079,
+    2080,
+    2081,
+    2082,
+    2083,
+    2084,
+    2085,
+    2086,
+    2087,
+    2088,
+    2089,
+    2090,
+    2091,
+    2092,
+    2093,
+    2094,
+    2095,
+    2096,
+    2097,
+    2098,
+    2099,
+    2100,
+    2101,
+    2102,
+    2103,
+    2104,
+    2105,
+    2106,
+    2107,
+    2108,
+    2109,
+    2110,
+    2111
+  ],
+  "fixed_value": 103,
+  "unsupported_addresses": [
+    {
+      "target": 2026,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2027,
+      "reason": "control-state alias changes this candidate; choose another target"
+    },
+    {
+      "target": 2028,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2030,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2032,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2034,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2036,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2038,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2040,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2042,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2044,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2046,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2048,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2050,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2052,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2054,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2056,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2058,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2060,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2062,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2064,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2066,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2068,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2070,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2072,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2074,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2076,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2078,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2080,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2082,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2084,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2086,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2088,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2090,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2092,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2094,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2096,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2098,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2100,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2102,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2104,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2106,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2108,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    },
+    {
+      "target": 2110,
+      "reason": "direct word-store low byte requires an odd address in $07C3-$083F"
+    }
+  ],
+  "planned_targets": [
+    2029,
+    2031,
+    2033,
+    2035,
+    2037,
+    2039,
+    2041,
+    2043,
+    2045,
+    2047,
+    2049,
+    2051,
+    2053,
+    2055,
+    2057,
+    2059,
+    2061,
+    2063,
+    2065,
+    2067,
+    2069,
+    2071,
+    2073,
+    2075,
+    2077,
+    2079,
+    2081,
+    2083,
+    2085,
+    2087,
+    2089,
+    2091,
+    2093,
+    2095,
+    2097,
+    2099,
+    2101,
+    2103,
+    2105,
+    2107,
+    2109,
+    2111
+  ],
+  "continue_on_mismatch": false,
+  "initial_target": 103,
+  "initial_companion": 0,
+  "actual_order": [
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103,
+    103
+  ],
+  "actual_targets": [
+    2029,
+    2031,
+    2033,
+    2035,
+    2037,
+    2039,
+    2041,
+    2043,
+    2045,
+    2047,
+    2049,
+    2051,
+    2053,
+    2055,
+    2057,
+    2059,
+    2061,
+    2063,
+    2065,
+    2067,
+    2069,
+    2071,
+    2073,
+    2075,
+    2077,
+    2079,
+    2081,
+    2083,
+    2085,
+    2087,
+    2089,
+    2091,
+    2093,
+    2095,
+    2097,
+    2099,
+    2101,
+    2103,
+    2105,
+    2107,
+    2109,
+    2111
+  ],
+  "elapsed_seconds": 0.8413,
+  "matched_trials": 0,
+  "verified_values": [],
+  "verified_addresses": [],
+  "already_matching_trials": 1,
+  "mismatched_trials": 1
+}

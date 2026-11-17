@@ -212,7 +212,6 @@ const active_test_t ACTIVE_TESTS[N_ACTIVE_TESTS] = {
     {"Cooling fan (high)",  0x94, 0,   0,   0,   0, "",          0, 0},
     {"Coolant temp override", 0x80, 1, 20, 110, 100, "°C",       0, 0},
     {"Fuel trim",           0x81, 1, -10,  10,   6, "%",         1, 0},
-    {"Ignition timing",     0x82, 1,  -5,   5,   2, "°",         1, 0},
     {"Cut cylinder",        0x88, 1,   1,   6,   1, "cylinder",  1, 1},
 };
 
@@ -221,7 +220,6 @@ uint8_t active_encode(const active_test_t *t, int arg)
     switch (t->reg) {
     case 0x80: return (uint8_t)(arg + 50);
     case 0x81: return (uint8_t)(0x64 + arg);
-    case 0x82: return (uint8_t)arg;             /* signed degrees */
     /* Bitmask per Issue 6 (bit 0 = cylinder 1). For cylinders 1 and 2 the bitmask and
      * the cylinder-number encoding give the same byte; checklist 4.4 is still open. */
     case 0x88: return (uint8_t)(1u << (arg - 1));

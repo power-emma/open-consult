@@ -1,0 +1,56 @@
+{
+  "maf_curve": {
+    "address": "0x1220",
+    "size": 128,
+    "matching_bytes": 128,
+    "identical": true
+  },
+  "ve_map": {
+    "address": "0x1400",
+    "size": 256,
+    "matching_bytes": 256,
+    "identical": true
+  },
+  "ve_axes": {
+    "address": "0x1500",
+    "size": 32,
+    "matching_bytes": 32,
+    "identical": true
+  },
+  "normal_fuel": {
+    "address": "0x1700",
+    "size": 256,
+    "matching_bytes": 256,
+    "identical": true
+  },
+  "knock_fuel": {
+    "address": "0x1800",
+    "size": 256,
+    "matching_bytes": 256,
+    "identical": true
+  },
+  "fuel_axes": {
+    "address": "0x1900",
+    "size": 32,
+    "matching_bytes": 32,
+    "identical": true
+  },
+  "normal_timing": {
+    "address": "0x1d00",
+    "size": 256,
+    "matching_bytes": 203,
+    "identical": false
+  },
+  "knock_timing": {
+    "address": "0x1e00",
+    "size": 256,
+    "matching_bytes": 192,
+    "identical": false
+  },
+  "timing_axes": {
+    "address": "0x1f00",
+    "size": 32,
+    "matching_bytes": 32,
+    "identical": true
+  }
+}

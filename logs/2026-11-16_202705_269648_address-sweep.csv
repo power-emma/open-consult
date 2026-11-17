@@ -1,0 +1,10 @@
+trial,requested,before,after,verification,companion_after,companion_verification,status,error,elapsed_seconds,target
+1,67,80,67,67,0E,0E,readback_matches,,0.1841,0811
+2,67,00,67,67,0E,0E,readback_matches,,0.1839,0813
+3,67,00,67,67,0E,0E,readback_matches,,0.1841,0815
+4,67,FF,67,67,0E,0E,readback_matches,,0.1836,0817
+5,67,01,67,67,0E,0E,readback_matches,,0.184,0819
+6,67,00,67,67,0E,0E,readback_matches,,0.1727,081B
+7,67,00,67,67,0E,0E,readback_matches,,0.1832,081D
+8,67,00,67,67,0E,0E,readback_matches,,0.1843,081F
+9,67,00,67,67,0E,0E,readback_matches,,0.1832,0821

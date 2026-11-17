@@ -1,0 +1,12 @@
+{
+  "description": "Laptop native feedback-control map. null means normal ECU control; 100 means a fixed 100% feedback override, not stock control. Rows are raw load code, columns are RPM. No tuned values are supplied.",
+  "rpm_axis": [0, 1000, 2000, 4000, 8000],
+  "load_code_axis": [0, 8192, 16384, 32768, 65535],
+  "fuel_percent": [
+    [null, null, null, null, null],
+    [null, null, null, null, null],
+    [null, null, null, null, null],
+    [null, null, null, null, null],
+    [null, null, null, null, null]
+  ]
+}

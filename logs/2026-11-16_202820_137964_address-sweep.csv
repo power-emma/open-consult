@@ -1,0 +1,16 @@
+trial,requested,before,after,verification,companion_after,companion_verification,status,error,elapsed_seconds,target
+1,67,00,67,67,0E,0E,readback_matches,,0.1847,07C3
+2,67,00,67,67,0E,0E,readback_matches,,0.1832,07C5
+3,67,00,67,67,0E,0E,readback_matches,,0.184,07C7
+4,67,00,67,67,0E,0E,readback_matches,,0.1843,07C9
+5,67,00,67,67,0E,0E,readback_matches,,0.1831,07CB
+6,67,00,67,67,0E,0E,readback_matches,,0.1844,07CD
+7,67,00,67,67,0E,0E,readback_matches,,0.1829,07CF
+8,67,00,67,67,0E,0E,readback_matches,,0.1842,07D1
+9,67,00,67,67,0E,0E,readback_matches,,0.183,07D3
+10,67,00,67,67,0E,0E,readback_matches,,0.1839,07D5
+11,67,00,67,67,0E,0E,readback_matches,,0.1829,07D7
+12,67,00,67,67,0E,0E,readback_matches,,0.1842,07DB
+13,67,00,67,67,0E,0E,readback_matches,,0.1822,07DD
+14,67,00,67,67,0E,0E,readback_matches,,0.1848,07DF
+15,67,0C,64,64,67,67,readback_mismatch,,0.1815,07E3

@@ -5,10 +5,10 @@
 
 CFLAGS ?= -O2 -g -Wall -Wextra
 PKG_CONFIG ?= pkg-config
-GTK_CFLAGS := $(shell $(PKG_CONFIG) --cflags gtk4)
-GTK_LIBS := $(shell $(PKG_CONFIG) --libs gtk4)
+GTK_CFLAGS := $(shell $(PKG_CONFIG) --cflags gtk4 json-glib-1.0)
+GTK_LIBS := $(shell $(PKG_CONFIG) --libs gtk4 json-glib-1.0)
 
-SRC := src/gui.c src/replay.c src/consult.c src/serial.c src/registers.c
+SRC := src/gui.c src/fuel_map.c src/replay.c src/consult.c src/serial.c src/registers.c
 
 ifeq ($(OS),Windows_NT)
 WINDOWS ?= 1

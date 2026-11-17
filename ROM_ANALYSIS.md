@@ -1,5 +1,11 @@
 # Engine ECU ROM analysis: 23710-2L904 (1998 Maxima VQ30DE, M/T)
 
+> **2026-11-16 corrections:** [ROM atlas](docs/ROM_ATLAS.md) traces `$09AE`
+> to RPM, not load; identifies the rejected `83` handler as an idle-speed-target
+> override; revises the `A2` pressure-selector interpretation; and explains `AB`
+> admission-status codes. It also documents a fixed disassembler jump-table overrun.
+> Earlier interpretations below must be read with those corrections.
+
 > **Evidence update (2026-11-15):** See [processor-write findings](docs/processor-write/FINDINGS.md) and the [preserved logs and sessions](docs/processor-write/SESSIONS.md). The overrun is observed, but the latest hardware streamlist plant failed, and Claude’s final review withdrew earlier actuator-target success claims. Hidden-read success and the stale-value chain remain unconfirmed. Earlier absolute conclusions below are historical and may be superseded.
 
 This is the ECU in my own car. This is diagnostic/tuning work on hardware I own, read
@@ -30,10 +36,12 @@ annotation file `rom/23710-2L904.ann`. Edit the `.ann`, then regenerate:
 - **Accepted command bytes:** `FF` (re-init), `30` (stop), `C9` (memory read, 2 address
   bytes), `5A` (register, 1 byte), `0A` (active test), `D0`, `D1`, `C1`, and **`51`**.
   Anything else gets `FE` back. This matches the car (3.2: unsupported = `A5 FE`).
-- **`51` is undocumented:** on `F0` it reports the "seen this ignition cycle" flags
-  (`$0810–$0822`) as codes and clears them. It also zeroes test state (`$0E51–$0E57`,
-  `$0E78–$0E7A`). Confirmed and pending codes are untouched, but avoid sending it
-  until it has been tried on purpose.
+- **`51` is undocumented:** parsing it immediately clears the "seen this ignition
+  cycle" flags (`$0810–$0822`) and received test state (`$0E51–$0E58`,
+  `$0E78–$0E7A`), before `F0`. The streaming reply then reports newly set flags,
+  clearing each reported bit, up to two IDs per frame; it can append these to a
+  sensor list. Confirmed and pending arrays are not cleared by this parser path.
+  See [the feature scan](docs/ROM_FEATURE_SCAN.md) for evidence and limits.
 - **`5A`:** register numbers `00–61` only (`CMPB #$62`). The RAM address comes from the
   pointer table at `$1000` (2 bytes per register, `$FFFF` = unsupported).
 - **Request limit:** a new `5A`/`C9` is refused (`FE`) once the argument buffer
@@ -112,7 +120,7 @@ the car (checklist §3).
 | `32` | `$0C4C` | **A 00/FF flag, not CAL/LD**: `$DD8A` writes `FF` or `00` from a comparison of the MAF word with calibration value `$22FB`. (The freeze frame does copy it.) Meaning open [ROM] |
 | `3B–47`, `51` | `$05E0–$05ED` | **Freeze frame** (§3.2) |
 | `56–5F` | `$0F70–$0F79` | **1st-trip freeze frame**, in backup RAM |
-| `49` | `$0725` | **Bits** (`$9D89`): **MAP/BARO switch solenoid** `$095E.1` (b3 = on, b5 = off; toggled by `$E7A2`, which samples the pressure sensor in each state), b2 = `$095D.2` (test `A2` output), b0 = `$0961.0` |
+| `49` | `$0725` | **Bits** (`$9D89`): `$095E.1` (b3 = on, b5 = off; `$E7A2` samples `$09FC` around its transitions, physical identity unresolved), b2 = `$095D.2` (test `A2`, pressure-selector path associated with P0105), b0 = `$0961.0` |
 | `4C` | `$07FA` | From the second CPU's message block (`mb_in` + `18`, `$C867`) |
 | `4E` | `$0726` | **Bits** (`$9DA7`) from backup-RAM monitor flags `$0F66`/`$0F68`: monitor-complete / readiness status *(inferred)* |
 | `4F` | `$072F` | **Bits** (`$9DEF`): b1 from `$0F69.7`, `$0F66.0` and REF valid |
@@ -192,7 +200,7 @@ value byte. Any running test sets `$07F1.2` (sent to the second CPU). Handlers m
 | `99` | `$07BA.02` | `$0788` | bank 1 | ? |
 | `9A` | `$07BA.04` | `$0789` | bank 1 | Canister vent control valve [PLMS] |
 | `9C` | `$07BA.10` | `$078B` | bank 1 | Vacuum cut bypass valve [PLMS] |
-| `A2` | `$07BB.04` | `$0791` | `$F4C0` | On/off (value 0 / non-0): forces output bit `$095D.2` in task `$F468`, which otherwise switches it on throttle (`37`) and speed thresholds `$2BBC–$2BBE`. Engine mount? *(inferred, weak)* |
+| `A2` | `$07BB.04` | `$0791` | `$F4C0` | Zero/nonzero clears/sets `$095D.2` in a paired pressure-sampling/P0105 path. MAP/BARO selector association is strongly inferred; physical pin unverified. See the ROM atlas. |
 | `A6` | `$07BB.40` | `$0795` | bank 1 | ? |
 | `A7` | `$07BB.80` | `$0796` | bank 1 | Vacuum cut bypass valve [PLMS] |
 | `AA` | `$07BC.04` | `$0799` | `$5406` | **Persistent side effect:** stopping it sets backup-RAM `$0F69.4`, which stops the session reset (`$550A`) from clearing `$0F69` bits 7–6. Bit 7 gates logic at `$9DEF`. Avoid |
@@ -203,7 +211,9 @@ value byte. Any running test sets `$07F1.2` (sent to the second CPU). Handlers m
 - `$511D` rejects tests outside `80`–`AD`. **Don't fire unknown tests**: on a 1999 ECU
   one above `9F` re-registered the NATS keys [PLMS].
 - Fans [PLMS]: low = `93 01` + `94 00`, high = `93 00` + `94 01`. Both `01`: avoid.
-- `83` has code (`$B39A`) but no descriptor, so it's rejected.
+- `83` has code (`$B39A`) but no descriptor, so it's rejected. It overrides the
+  idle-speed target `$0BCD` from `$0772`, capped at `$90` (1800 rpm), rather than
+  directly setting the air-valve step. See the ROM atlas for the consumer trace.
 
 ## 5. Interrupts (from what each handler writes)
 
@@ -250,7 +260,7 @@ code reads it constantly.
 
   | Step | Code | Detail |
   |---|---|---|
-  | Preconditions | `$E2F6–$E328` | `$0850.0`, not `$07EE.5`, REF valid (`$092A.6`, `$0931.2`), past start or `$0ACA` ≥ 30, load `$09AE` ≥ 4. Else count = 0 |
+  | Preconditions | `$E2F6–$E328` | `$0850.0`, not `$07EE.5`, REF valid (`$092A.6`, `$0931.2`), past start or `$0ACA` ≥ 30, RPM code `$09AE` ≥ 4 (about 50 rpm). Else count = 0 |
   | Spacing | `$0C6F` | Sample needs ≥ 2; a miss resets it. ≤ 1 miss per 2 calls |
   | Sample | `$E331` | P4.3 (`$0A.3`) high = miss |
   | Count | `$0C60` | +1 per miss, sets `$0811.7` |
@@ -485,7 +495,7 @@ helps.** Recorded so I don't re-walk it later.
 
 - **No way to write to arbitrary memory via active tests.** `0A` writes the value byte I
   send to `$076F + at_slot`, `at_slot = (ctl & $7F) >> 1` from the descriptor at `$1160`.
-  Scanned all 28 descriptors: slots run 0–45, so every write lands in `$076F–$079C`,
+  There are 22 supported descriptors in the 46-entry range: slots run 0–45, so every write lands in `$076F–$079C`,
   inside `at_values` (below `cs_streamlist` at `$07A0`). Destination is descriptor-fixed,
   the values are consumed as data by test handlers, and none overflows the region.
 - **No way to redirect code execution.** The entire image has exactly one indirect

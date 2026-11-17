@@ -1,0 +1,128 @@
+{
+  "evidence": "offline selected ROM paths; explicit synthetic ordering; no hardware execution",
+  "direct_mode_findings": {
+    "old_setup_hex": "0a 02 81",
+    "old_setup_echo_hex": "f5 02 fe",
+    "accepted_setup_hex": "0a 02 82",
+    "accepted_setup_echo_hex": "f5 02 82",
+    "C9_argc_after_direct_setup_and_20_C9_addresses": 40,
+    "pointer_after_valid_direct_setup": 1226,
+    "pointer_after_conditional_plant": 1127,
+    "direct_reader_executed_in_C9_frame": false,
+    "C9_reader_executed_in_C9_frame": true,
+    "pointer_after_next_direct_setup": 1226
+  },
+  "schedule_cases": [
+    {
+      "schedule": "no_pending_mailbox",
+      "target": 1904,
+      "desired_value": 103,
+      "mailbox_test_byte": 147,
+      "stored_C9_argc": 40,
+      "total_wire_argument_bytes": 42,
+      "command_hex": "0a 81 64 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e 30 c9 5e 67 c9 08 17",
+      "echo_hex": "f5 81 64 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e 30 36 5e 67 36 08 17",
+      "source_after_plant": 103,
+      "source_at_builder": 103,
+      "actual_write": 103,
+      "writer_pc": 39774,
+      "writer_destination": 1904,
+      "applied_fuel_alphas_in_model": [
+        103,
+        103
+      ],
+      "hardware_reliability_established": false
+    },
+    {
+      "schedule": "mailbox_before_F0",
+      "target": 1904,
+      "desired_value": 103,
+      "mailbox_test_byte": 147,
+      "stored_C9_argc": 40,
+      "total_wire_argument_bytes": 42,
+      "command_hex": "0a 81 64 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e 30 c9 5e 67 c9 08 17",
+      "echo_hex": "f5 81 64 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e 30 36 5e 67 36 08 17",
+      "source_after_plant": 103,
+      "source_at_builder": 103,
+      "actual_write": 103,
+      "writer_pc": 39774,
+      "writer_destination": 1904,
+      "applied_fuel_alphas_in_model": [
+        103,
+        103
+      ],
+      "hardware_reliability_established": false
+    },
+    {
+      "schedule": "mailbox_after_F0",
+      "target": 1904,
+      "desired_value": 103,
+      "mailbox_test_byte": 147,
+      "stored_C9_argc": 40,
+      "total_wire_argument_bytes": 42,
+      "command_hex": "0a 81 64 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e 30 c9 5e 67 c9 08 17",
+      "echo_hex": "f5 81 64 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e 30 36 5e 67 36 08 17",
+      "source_after_plant": 103,
+      "source_at_builder": 147,
+      "actual_write": 147,
+      "writer_pc": 39774,
+      "writer_destination": 1904,
+      "applied_fuel_alphas_in_model": [
+        125,
+        125
+      ],
+      "hardware_reliability_established": false
+    },
+    {
+      "schedule": "no_pending_mailbox",
+      "target": 1952,
+      "desired_value": 103,
+      "mailbox_test_byte": 147,
+      "stored_C9_argc": 40,
+      "total_wire_argument_bytes": 40,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e 60 c9 5e 67 c9 08 17",
+      "echo_hex": "36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e 60 36 5e 67 36 08 17",
+      "source_after_plant": 103,
+      "source_at_builder": 103,
+      "actual_write": 103,
+      "writer_pc": 39774,
+      "writer_destination": 1952,
+      "applied_fuel_alphas_in_model": null,
+      "hardware_reliability_established": false
+    },
+    {
+      "schedule": "mailbox_before_F0",
+      "target": 1952,
+      "desired_value": 103,
+      "mailbox_test_byte": 147,
+      "stored_C9_argc": 40,
+      "total_wire_argument_bytes": 40,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e 60 c9 5e 67 c9 08 17",
+      "echo_hex": "36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e 60 36 5e 67 36 08 17",
+      "source_after_plant": 103,
+      "source_at_builder": 103,
+      "actual_write": 103,
+      "writer_pc": 39774,
+      "writer_destination": 1952,
+      "applied_fuel_alphas_in_model": null,
+      "hardware_reliability_established": false
+    },
+    {
+      "schedule": "mailbox_after_F0",
+      "target": 1952,
+      "desired_value": 103,
+      "mailbox_test_byte": 147,
+      "stored_C9_argc": 40,
+      "total_wire_argument_bytes": 40,
+      "command_hex": "c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 00 c9 5e 0a c9 5e 0b c9 5e 60 c9 5e 67 c9 08 17",
+      "echo_hex": "36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 00 36 5e 0a 36 5e 0b 36 5e 60 36 5e 67 36 08 17",
+      "source_after_plant": 103,
+      "source_at_builder": 147,
+      "actual_write": 147,
+      "writer_pc": 39774,
+      "writer_destination": 1952,
+      "applied_fuel_alphas_in_model": null,
+      "hardware_reliability_established": false
+    }
+  ]
+}

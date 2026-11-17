@@ -43,7 +43,7 @@ const char *dtc_name(uint8_t code);
 
 /* Active tests (CONSULT_PROTOCOL.md §8), limited to values inside the normal ranges.
  * Same set and limits as ACTIVE_TESTS in consult/__main__.py. */
-#define N_ACTIVE_TESTS 6
+#define N_ACTIVE_TESTS 5
 
 typedef struct {
     const char *name;

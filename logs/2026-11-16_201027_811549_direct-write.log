@@ -1,0 +1,247 @@
+  0.000071 ## open /dev/ttyUSB0 at 2026-11-16T20:10:27
+  0.000124 ## direct write trial target=$0817 value=$FF
+  0.000143 TX 30
+  0.000172 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.003026 RX cf
+  0.203395 TX ff
+  0.203528 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.483829 TX ff
+  0.483898 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.554211 TX ed
+  0.554351 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.554528 RX 00
+  0.554586 RX 00
+  0.557664 RX 12
+  0.557777 TX d0
+  0.557808 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.560842 RX 2f
+  0.560892 TX f0
+  0.560920 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.569860 RX ff
+  0.570543 RX 20
+  0.571490 RX 20
+  0.572580 RX 21
+  0.573474 RX 04
+  0.574695 RX 9d
+  0.575662 RX 00
+  0.576498 RX 00
+  0.577476 RX 00
+  0.578458 RX 3f
+  0.579495 RX c1
+  0.581468 RX 80
+  0.582509 RX c3
+  0.583473 RX 00
+  0.584483 RX 10
+  0.585477 RX 7c
+  0.586467 RX 05
+  0.587516 RX 00
+  0.588433 RX e5
+  0.589481 RX 07
+  0.590458 RX 00
+  0.591418 RX 01
+  0.592410 RX 00
+  0.593411 RX 00
+  0.594491 RX 00
+  0.595474 RX 00
+  0.596476 RX 00
+  0.597474 RX ff
+  0.598431 RX ff
+  0.599378 RX 32
+  0.600375 RX 4c
+  0.601424 RX 39
+  0.602426 RX 30
+  0.603440 RX 34
+  0.603535 TX 30
+  0.603576 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.606481 RX cf
+  0.606656 TX c9 02 9e c9 07 c3 c9 07 c4 c9 07 c5 c9 07 c6 c9 07 c7 c9 07 c8 c9 07 c9
+  0.606711 ## TX accepted-prefix 24/24; ECU execution unconfirmed
+  0.629833 RX 36 02 9e 36 07 c3 36 07 c4 36 07 c5 36 07 c6 36 07 c7 36 07
+  0.630608 RX c8
+  0.631425 RX 36
+  0.632579 RX 07
+  0.633835 RX c9
+  0.633875 TX f0
+  0.633903 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.641393 RX ff
+  0.642537 RX 08
+  0.643501 RX 04
+  0.644495 RX 00
+  0.645532 RX 00
+  0.646356 RX 00
+  0.647509 RX 00
+  0.648550 RX 00
+  0.649383 RX 00
+  0.650571 RX 00
+  0.650593 TX 30
+  0.650626 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.651558 RX ff
+  0.652574 RX 08
+  0.654370 RX 05
+  0.655364 RX 00
+  0.656408 RX 00
+  0.657412 RX 00
+  0.658361 RX 00
+  0.659439 RX 00
+  0.660549 RX 00
+  0.661567 RX 00
+  0.662476 RX cf
+  0.662578 TX c9 07 ca c9 07 cb c9 07 cc c9 07 cd c9 07 ce c9 07 cf c9 07 d0 c9 07 d1
+  0.662606 ## TX accepted-prefix 24/24; ECU execution unconfirmed
+  0.686137 RX 36 07 ca 36 07 cb 36 07 cc 36 07 cd 36 07 ce 36 07 cf 36 07
+  0.686415 RX d0
+  0.687579 RX 36
+  0.688435 RX 07
+  0.689395 RX d1
+  0.689460 TX f0
+  0.689504 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.702745 RX ff
+  0.703541 RX 08
+  0.704365 RX 00
+  0.705308 RX 00
+  0.706376 RX 00
+  0.707432 RX 00
+  0.709331 RX 00
+  0.710492 RX 00
+  0.711542 RX 00
+  0.712725 RX 00
+  0.712765 TX 30
+  0.712793 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.713513 RX ff
+  0.714698 RX 08
+  0.715547 RX 00
+  0.716540 RX 00
+  0.717550 RX 00
+  0.718592 RX 00
+  0.719656 RX 00
+  0.720523 RX 00
+  0.721433 RX 00
+  0.722278 RX 00
+  0.723272 RX cf
+  0.723435 TX c9 07 d2 c9 07 d3 c9 07 d4 c9 07 d5 c9 07 d6 c9 07 d7 c9 07 d8 c9 07 d9
+  0.723514 ## TX accepted-prefix 24/24; ECU execution unconfirmed
+  0.746884 RX 36 07 d2 36 07 d3 36 07 d4 36 07 d5 36 07 d6 36 07 d7 36 07
+  0.747517 RX d8
+  0.748594 RX 36
+  0.749505 RX 07
+  0.750505 RX d9
+  0.750564 TX f0
+  0.750592 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.754322 RX ff
+  0.755281 RX 08
+  0.756296 RX 00
+  0.757320 RX 00
+  0.758433 RX 00
+  0.759273 RX 00
+  0.760421 RX 00
+  0.761454 RX 00
+  0.762462 RX 00
+  0.763504 RX 00
+  0.763524 TX 30
+  0.763548 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.764520 RX ff
+  0.765410 RX 08
+  0.772492 RX 00
+  0.772581 RX 00
+  0.772605 RX 00
+  0.772643 RX 00
+  0.772668 RX 00
+  0.772695 RX 00
+  0.772714 RX 00
+  0.774387 RX 00
+  0.775346 RX cf
+  0.775422 TX c9 07 da c9 07 db c9 07 dc c9 07 dd c9 07 de c9 07 df c9 07 e0 c9 07 e1
+  0.775442 ## TX accepted-prefix 24/24; ECU execution unconfirmed
+  0.798874 RX 36 07 da 36 07 db 36 07 dc 36 07 dd 36 07 de 36 07 df 36 07
+  0.799221 RX e0
+  0.800156 RX 36
+  0.801152 RX 07
+  0.802157 RX e1
+  0.802183 TX f0
+  0.802234 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.815153 RX ff
+  0.816135 RX 08
+  0.817128 RX 00
+  0.818143 RX 00
+  0.819149 RX 00
+  0.820136 RX 00
+  0.821152 RX 00
+  0.822157 RX 00
+  0.823155 RX 00
+  0.825199 RX 00
+  0.825275 TX 30
+  0.825308 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.826162 RX ff
+  0.827245 RX 08
+  0.828266 RX 00
+  0.829247 RX 00
+  0.830246 RX 00
+  0.831251 RX 00
+  0.832201 RX 00
+  0.833162 RX 00
+  0.834248 RX 00
+  0.835250 RX 00
+  0.836248 RX cf
+  0.836325 TX c9 07 e2 c9 07 e3 c9 07 e4 c9 07 e5 c9 08 00 c9 08 01 c9 08 17 c9 08 18
+  0.836349 ## TX accepted-prefix 24/24; ECU execution unconfirmed
+  0.859908 RX 36 07 e2 36 07 e3 36 07 e4 36 07 e5 36 08 00 36 08 01 36 08
+  0.860243 RX 17
+  0.861211 RX 36
+  0.862211 RX 08
+  0.863210 RX 18
+  0.863254 TX f0
+  0.863287 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.877240 RX ff
+  0.878217 RX 08
+  0.879129 RX 00
+  0.880194 RX 00
+  0.881192 RX 00
+  0.882190 RX 00
+  0.883191 RX 00
+  0.884190 RX 00
+  0.885193 RX 00
+  0.886190 RX 00
+  0.886231 TX 30
+  0.886258 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.887149 RX ff
+  0.888196 RX 08
+  0.889081 RX 00
+  0.890135 RX 00
+  0.891117 RX 00
+  0.892196 RX 00
+  0.893192 RX 00
+  0.894166 RX 00
+  0.895188 RX 00
+  0.896156 RX 00
+  0.897156 RX cf
+  0.897225 TX c9 0c 48
+  0.897252 ## TX accepted-prefix 3/3; ECU execution unconfirmed
+  0.900165 RX 36
+  0.901135 RX 0c
+  0.902108 RX 48
+  0.902135 TX f0
+  0.902157 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.907155 RX ff
+  0.908159 RX 01
+  0.909116 RX 00
+  0.909165 TX 30
+  0.909247 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.912129 RX cf
+  0.912195 TX c9 09 95 c9 09 94
+  0.912230 ## TX accepted-prefix 6/6; ECU execution unconfirmed
+  0.915826 RX 36
+  0.916110 RX 09
+  0.917112 RX 95
+  0.918098 RX 36
+  0.919097 RX 09
+  0.920099 RX 94
+  0.920134 TX f0
+  0.920159 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.928171 RX ff
+  0.929145 RX 02
+  0.930143 RX 00
+  0.931059 RX 70
+  0.931132 TX 30
+  0.931164 ## TX accepted-prefix 1/1; ECU execution unconfirmed
+  0.934107 RX cf
+  0.934201 ## close

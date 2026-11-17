@@ -1,0 +1,317 @@
+[
+  {
+    "rpm_offset": 0.25,
+    "load_offset": 0,
+    "rounding": "nearest",
+    "exact": 0.8150851581508516,
+    "mae": 0.35523114355231145
+  },
+  {
+    "rpm_offset": 0.5,
+    "load_offset": 0,
+    "rounding": "nearest",
+    "exact": 0.8126520681265207,
+    "mae": 0.35766423357664234
+  },
+  {
+    "rpm_offset": 0,
+    "load_offset": 0,
+    "rounding": "nearest",
+    "exact": 0.8004866180048662,
+    "mae": 0.3819951338199513
+  },
+  {
+    "rpm_offset": 0.75,
+    "load_offset": 0,
+    "rounding": "nearest",
+    "exact": 0.7445255474452555,
+    "mae": 0.43795620437956206
+  },
+  {
+    "rpm_offset": 1,
+    "load_offset": 0,
+    "rounding": "nearest",
+    "exact": 0.7055961070559611,
+    "mae": 0.48661800486618007
+  },
+  {
+    "rpm_offset": 1,
+    "load_offset": 0,
+    "rounding": "ceil",
+    "exact": 0.610705596107056,
+    "mae": 0.5815085158150851
+  },
+  {
+    "rpm_offset": 0.5,
+    "load_offset": -0.5,
+    "rounding": "ceil",
+    "exact": 0.6058394160583942,
+    "mae": 0.5742092457420924
+  },
+  {
+    "rpm_offset": 0,
+    "load_offset": -0.5,
+    "rounding": "ceil",
+    "exact": 0.6009732360097324,
+    "mae": 0.583941605839416
+  },
+  {
+    "rpm_offset": 0.25,
+    "load_offset": -0.5,
+    "rounding": "ceil",
+    "exact": 0.5985401459854015,
+    "mae": 0.5790754257907542
+  },
+  {
+    "rpm_offset": 0.5,
+    "load_offset": 0.5,
+    "rounding": "nearest",
+    "exact": 0.5888077858880778,
+    "mae": 0.6131386861313869
+  },
+  {
+    "rpm_offset": 0.75,
+    "load_offset": 0,
+    "rounding": "ceil",
+    "exact": 0.5863746958637469,
+    "mae": 0.6009732360097324
+  },
+  {
+    "rpm_offset": 0.5,
+    "load_offset": -0.5,
+    "rounding": "nearest",
+    "exact": 0.5766423357664233,
+    "mae": 0.6155717761557178
+  },
+  {
+    "rpm_offset": 0.75,
+    "load_offset": -0.5,
+    "rounding": "ceil",
+    "exact": 0.5766423357664233,
+    "mae": 0.6131386861313869
+  },
+  {
+    "rpm_offset": 0.25,
+    "load_offset": -0.5,
+    "rounding": "nearest",
+    "exact": 0.5742092457420924,
+    "mae": 0.6131386861313869
+  },
+  {
+    "rpm_offset": 0.5,
+    "load_offset": 0,
+    "rounding": "ceil",
+    "exact": 0.5742092457420924,
+    "mae": 0.6009732360097324
+  },
+  {
+    "rpm_offset": 1,
+    "load_offset": -0.5,
+    "rounding": "ceil",
+    "exact": 0.5742092457420924,
+    "mae": 0.6204379562043796
+  },
+  {
+    "rpm_offset": 0,
+    "load_offset": -0.5,
+    "rounding": "nearest",
+    "exact": 0.5717761557177615,
+    "mae": 0.6301703163017032
+  },
+  {
+    "rpm_offset": 0,
+    "load_offset": 0,
+    "rounding": "floor",
+    "exact": 0.559610705596107,
+    "mae": 0.6277372262773723
+  },
+  {
+    "rpm_offset": 0.25,
+    "load_offset": 0.5,
+    "rounding": "nearest",
+    "exact": 0.5547445255474452,
+    "mae": 0.6520681265206812
+  },
+  {
+    "rpm_offset": 0.25,
+    "load_offset": 0,
+    "rounding": "ceil",
+    "exact": 0.5523114355231143,
+    "mae": 0.6228710462287105
+  },
+  {
+    "rpm_offset": 0.75,
+    "load_offset": 0.5,
+    "rounding": "nearest",
+    "exact": 0.5401459854014599,
+    "mae": 0.6715328467153284
+  },
+  {
+    "rpm_offset": 0,
+    "load_offset": 0,
+    "rounding": "ceil",
+    "exact": 0.537712895377129,
+    "mae": 0.6447688564476886
+  },
+  {
+    "rpm_offset": 0,
+    "load_offset": 0.5,
+    "rounding": "nearest",
+    "exact": 0.5352798053527981,
+    "mae": 0.6934306569343066
+  },
+  {
+    "rpm_offset": 0,
+    "load_offset": 0.5,
+    "rounding": "floor",
+    "exact": 0.5328467153284672,
+    "mae": 0.6496350364963503
+  },
+  {
+    "rpm_offset": 1,
+    "load_offset": 0.5,
+    "rounding": "nearest",
+    "exact": 0.5304136253041363,
+    "mae": 0.683698296836983
+  },
+  {
+    "rpm_offset": 0.75,
+    "load_offset": -0.5,
+    "rounding": "nearest",
+    "exact": 0.5085158150851582,
+    "mae": 0.6958637469586375
+  },
+  {
+    "rpm_offset": 1,
+    "load_offset": 0.5,
+    "rounding": "floor",
+    "exact": 0.5060827250608273,
+    "mae": 0.6861313868613139
+  },
+  {
+    "rpm_offset": 0.75,
+    "load_offset": 0.5,
+    "rounding": "floor",
+    "exact": 0.49635036496350365,
+    "mae": 0.683698296836983
+  },
+  {
+    "rpm_offset": 0.5,
+    "load_offset": 0.5,
+    "rounding": "floor",
+    "exact": 0.49391727493917276,
+    "mae": 0.6739659367396593
+  },
+  {
+    "rpm_offset": 0.25,
+    "load_offset": 0,
+    "rounding": "floor",
+    "exact": 0.48905109489051096,
+    "mae": 0.6958637469586375
+  },
+  {
+    "rpm_offset": 0.25,
+    "load_offset": 0.5,
+    "rounding": "floor",
+    "exact": 0.48661800486618007,
+    "mae": 0.6934306569343066
+  },
+  {
+    "rpm_offset": 1,
+    "load_offset": -0.5,
+    "rounding": "nearest",
+    "exact": 0.4768856447688564,
+    "mae": 0.7372262773722628
+  },
+  {
+    "rpm_offset": 0.5,
+    "load_offset": 0,
+    "rounding": "floor",
+    "exact": 0.4744525547445255,
+    "mae": 0.7007299270072993
+  },
+  {
+    "rpm_offset": 1,
+    "load_offset": 0,
+    "rounding": "floor",
+    "exact": 0.44768856447688565,
+    "mae": 0.7518248175182481
+  },
+  {
+    "rpm_offset": 0.75,
+    "load_offset": 0,
+    "rounding": "floor",
+    "exact": 0.44282238442822386,
+    "mae": 0.7420924574209246
+  },
+  {
+    "rpm_offset": 1,
+    "load_offset": 0.5,
+    "rounding": "ceil",
+    "exact": 0.43552311435523117,
+    "mae": 0.9051094890510949
+  },
+  {
+    "rpm_offset": 0.5,
+    "load_offset": 0.5,
+    "rounding": "ceil",
+    "exact": 0.40389294403892945,
+    "mae": 0.9440389294403893
+  },
+  {
+    "rpm_offset": 0.75,
+    "load_offset": 0.5,
+    "rounding": "ceil",
+    "exact": 0.40145985401459855,
+    "mae": 0.9416058394160584
+  },
+  {
+    "rpm_offset": 0,
+    "load_offset": 0.5,
+    "rounding": "ceil",
+    "exact": 0.39659367396593675,
+    "mae": 0.9781021897810219
+  },
+  {
+    "rpm_offset": 0.25,
+    "load_offset": 0.5,
+    "rounding": "ceil",
+    "exact": 0.38929440389294406,
+    "mae": 0.975669099756691
+  },
+  {
+    "rpm_offset": 0,
+    "load_offset": -0.5,
+    "rounding": "floor",
+    "exact": 0.35766423357664234,
+    "mae": 0.9562043795620438
+  },
+  {
+    "rpm_offset": 0.25,
+    "load_offset": -0.5,
+    "rounding": "floor",
+    "exact": 0.30170316301703165,
+    "mae": 1.0072992700729928
+  },
+  {
+    "rpm_offset": 1,
+    "load_offset": -0.5,
+    "rounding": "floor",
+    "exact": 0.30170316301703165,
+    "mae": 1.0656934306569343
+  },
+  {
+    "rpm_offset": 0.5,
+    "load_offset": -0.5,
+    "rounding": "floor",
+    "exact": 0.291970802919708,
+    "mae": 1.0145985401459854
+  },
+  {
+    "rpm_offset": 0.75,
+    "load_offset": -0.5,
+    "rounding": "floor",
+    "exact": 0.2871046228710462,
+    "mae": 1.0462287104622872
+  }
+]
