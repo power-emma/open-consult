@@ -375,6 +375,34 @@ Consult itself cannot reach bank 1: `C9` reads 16-bit addresses in the data bank
 bank-0 code only ever sets to `00` (`$3D80`, `$4486`), and there is no Consult write
 command to plant a pointer (§1).
 
+### Behavioural bank-1 map oracle
+
+Although Consult cannot return bank-1 bytes, the scheduled bank-1 lookup routines leave
+their inputs and results in bank-0 RAM. `tools/table_trace.py` captures those values with
+read-only `C9` requests. `tools/bank1_map_oracle.py` aggregates repeated coordinates and
+fits a 16×16 bilinear surface, marking cells without sufficient weighted observations as
+`null` rather than inventing them. This reconstructs observable lookup behaviour, not
+machine code or a byte-exact ROM map.
+
+Capture timing data (preview is the default; live access requires `--run`):
+
+```sh
+python3 tools/table_trace.py --profile timing
+python3 tools/table_trace.py --profile timing --seconds 60 --run --dev /dev/ttyUSB0
+```
+
+Then build the oracle from all timing traces, or name particular CSVs:
+
+```sh
+python3 tools/bank1_map_oracle.py --profile timing
+python3 tools/bank1_map_oracle.py --profile timing logs/TRACE1.csv logs/TRACE2.csv
+```
+
+The JSON records the axes, load scaling, fit error and per-cell support. A low fit error
+does not prove that the selected scaling or interpolation model matches the hidden code;
+repeat captures across stable RPM/load regions and compare alternative `--load-divisor`
+values before treating supported cells as calibrated observations.
+
 ## 9. Open questions
 
 1. P1320 (§7): `python -m consult p1320` while unplugging one coil at a time. Test the
