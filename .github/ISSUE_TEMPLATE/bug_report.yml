@@ -1,0 +1,28 @@
+name: Bug or correction
+description: Report a reproducible software bug or documentation error
+title: "Bug: "
+body:
+  - type: input
+    id: vehicle
+    attributes:
+      label: Vehicle and ECU (if applicable)
+      description: Year, model, and module part number; omit VINs
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Commands, setup, and relevant redacted raw bytes or log
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior and evidence
+    validations:
+      required: true

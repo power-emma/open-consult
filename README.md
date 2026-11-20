@@ -120,6 +120,14 @@ Manager → the port → Port Settings → Advanced.
 | [`CAR_TEST_CHECKLIST.md`](CAR_TEST_CHECKLIST.md) | Every test run on the car, with results and logs |
 | [`BODY_DIAG_PLAN.md`](BODY_DIAG_PLAN.md) | Service-manual reference for the IVMS and ASCD, and remaining body work |
 
+## Contributing
+
+Have another Consult-I car? Start with [NEW_VEHICLE.md](NEW_VEHICLE.md) for
+connection checks, read-only scans, and how to record results. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for the report template and pull request process.
+Partial results are useful; the behavior documented above is confirmed on the
+project's 1998 Maxima and should be checked separately on other vehicles.
+
 ## Safety
 
 - **Airbag unit (`DC`): read-only.** Consult switches it into diagnosis mode (the lamp
@@ -137,3 +145,10 @@ See [`write access nissan.md`](write%20access%20nissan.md) for the full
 explanation and [`nissan-write.py`](nissan-write.py) for a payload builder /
 simulator. Research notes and session logs are in
 [`docs/processor-write/`](docs/processor-write/).
+
+## License
+
+The project's original code and documentation are licensed under the
+[MIT License](LICENSE). Manuals, ROM images, and other third-party reference
+material in the repository (including `fsm/`, `reference/`, and `rom/`) retain
+their original rights and are not relicensed by this project.

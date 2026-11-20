@@ -1,0 +1,31 @@
+name: Vehicle report
+description: Share Consult-I results from another car
+title: "Vehicle: "
+body:
+  - type: markdown
+    attributes:
+      value: "Partial results are welcome. Please redact VINs, registration numbers, and personal details from logs. Start with read-only checks; see CONTRIBUTING.md."
+  - type: input
+    id: vehicle
+    attributes:
+      label: Vehicle
+      description: Year, market, model/chassis, engine, and transmission
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: Setup
+      description: Connector, cable, operating system, and serial port
+  - type: textarea
+    id: modules
+    attributes:
+      label: Modules and results
+      description: Init IDs, module part numbers, working reads, failures, and engine state
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Exact command and raw TX/RX bytes or a redacted log; distinguish observed results from inferences
