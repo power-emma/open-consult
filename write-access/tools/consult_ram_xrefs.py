@@ -13,7 +13,7 @@ import sys
 
 
 def main():
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parents[2]
     refs = {a: [] for a in range(0x0740, 0x0840)}
     instruction = re.compile(
         r"^\s+([0-9A-F]{4})\s+(?:[0-9A-F]{2} )+\s+([A-Z][A-Z0-9]*)\s+(.*)"

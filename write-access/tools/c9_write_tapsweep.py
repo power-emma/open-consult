@@ -5,10 +5,10 @@ Each trial: key cycle, then N taps (1 frame each), readback.
 Different tap counts land at different H8 FIFO positions = different values.
 
 Usage:
-  python3 tools/c9_write_tapsweep.py --target 0817 --taps 1,2,3,4,5,6,7,8,9,10
+  python3 write-access/tools/c9_write_tapsweep.py --target 0817 --taps 1,2,3,4,5,6,7,8,9,10
 """
 import argparse, datetime, os, sys
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.transport import DEFAULT_DEV

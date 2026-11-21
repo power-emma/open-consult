@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Sweep caller-selected bytes at one RAM address during a single key-on.
 
-  python3 tools/c9_direct_sweep.py                       # offline preview
-  python3 tools/c9_direct_sweep.py --run --dev /dev/ttyUSB0
-  python3 tools/c9_direct_sweep.py --values FF,00,21,67 --run
-  python3 tools/c9_direct_sweep.py --addresses 0810-0822 --value 67 --run
+  python3 write-access/tools/c9_direct_sweep.py                       # offline preview
+  python3 write-access/tools/c9_direct_sweep.py --run --dev /dev/ttyUSB0
+  python3 write-access/tools/c9_direct_sweep.py --values FF,00,21,67 --run
+  python3 write-access/tools/c9_direct_sweep.py --addresses 0810-0822 --value 67 --run
 
 Fast mode (default) verifies identity once and keeps the initialized session.
 Each trial checks baseline/RPM together and independently reads the target pair
@@ -19,7 +19,7 @@ from pathlib import Path
 import sys
 import time
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from c9_direct_test import AlreadyMatches, plan_test, run_trial

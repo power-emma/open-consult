@@ -4,6 +4,7 @@ import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'write-access/tools'))
 sys.path.insert(0, str(ROOT / 'tools'))
 from trace_consult_parser import ConsultTrace
 from trace_write_chain import direct_mode_findings, receive_pending, schedule_case

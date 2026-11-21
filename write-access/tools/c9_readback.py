@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Read a RAM address N times, one init/read/stop per loop."""
 import argparse, os, sys, time
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 from consult.protocol import Consult, ENGINE_IDS
 from consult.transport import DEFAULT_DEV, Transport

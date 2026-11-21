@@ -21,16 +21,16 @@ SAFE: writes to Consult handler state only. No RAM function pointers exist
 Run with key on, engine off.
 
 Usage:
-  python3 tools/c9_write.py --target 076F --value 42 --dry-run
-  python3 tools/c9_write.py --target 076F --value 42
-  python3 tools/c9_write.py --target 076F --value 42 --frames 3
+  python3 write-access/tools/c9_write.py --target 076F --value 42 --dry-run
+  python3 write-access/tools/c9_write.py --target 076F --value 42
+  python3 write-access/tools/c9_write.py --target 076F --value 42 --frames 3
 """
 import argparse
 import datetime
 import os
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS

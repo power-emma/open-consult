@@ -15,16 +15,16 @@ and reads back what value the builder actually wrote.  Each trial:
 One trial per init cycle (mutation_attempted latch).  Slow but accurate.
 
 Usage:
-  python3 tools/h8_stream_cal.py                     # sweep $5E00-$5EFF
-  python3 tools/h8_stream_cal.py --start 5D40 --end 5D80
-  python3 tools/h8_stream_cal.py --addrs 5E60,5D48,6118  # specific addresses
+  python3 write-access/tools/h8_stream_cal.py                     # sweep $5E00-$5EFF
+  python3 write-access/tools/h8_stream_cal.py --start 5D40 --end 5D80
+  python3 write-access/tools/h8_stream_cal.py --addrs 5E60,5D48,6118  # specific addresses
 """
 import argparse
 import datetime
 import os
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS

@@ -13,7 +13,7 @@ ROM calibration maps nor the ordinary live fuel-trim, timing and sensor values.
 It is not evidence of reflashing, persistent tuning or code execution.
 
 The write mechanism and controllable data are separate questions. The notes in
-`write access nissan.md` and `consult/write.py` report repeatable $93 writes with
+the [write-access guide](../README.md) and [`consult/write.py`](../../consult/write.py) report repeatable $93 writes with
 the engine off. Earlier experimental scripts still describe controlled writes
 as unconfirmed. `logs/2026-11-16_c9-tapsweep.log` includes a post-reinit C9 read
 of $0817 returning $93; that supports that observed readback, not arbitrary-byte
@@ -69,7 +69,7 @@ contains one row for each of the 256 bytes, with literal instruction references.
 
 ## Active-test consumers: useful distinctions
 
-The existing [active-test table](../ROM_ANALYSIS.md#4-active-tests-0a-descriptor-table-at-1160-rom)
+The existing [active-test table](../../ROM_ANALYSIS.md#4-active-tests-0a-descriptor-table-at-1160-rom)
 maps supported flags/values. Directly checked bank-0 consumers include:
 
 | State | Consumer | What the code establishes |
@@ -86,7 +86,7 @@ maps supported flags/values. Directly checked bank-0 consumers include:
 Coolant, timing, cylinder cut and relay tests also have descriptors, but some
 handlers are in unread bank 1 or involve the second processor. Writing their
 flag is not by itself proof the expected actuator command executes. The
-`tools/c9_actuator_test.py` header specifically records that relay control was
+`write-access/tools/c9_actuator_test.py` header specifically records that relay control was
 not explained by the visible bank-0 flag consumers.
 
 Writing $93 to $07B7 would set multiple bits together; it is not a clean
@@ -104,7 +104,7 @@ It would still be a bank-0 read, not bank 1 access.
 
 There are two obstacles: direct-mode setup normally replaces the pointer list,
 and chosen two-byte writes have not been established by the $93 primitive.
-`tools/c9_hidden_read.py` already proposes a mixed-command chain and explicitly
+`write-access/tools/c9_hidden_read.py` already proposes a mixed-command chain and explicitly
 marks it failed in the recorded hardware trial. The corresponding
 `logs/2026-11-15_hidden-read.log` records repeated FE rejection of the requested
 direct-mode setup. The older ROM notes' claim that no Consult write can ever
@@ -113,10 +113,10 @@ successful hidden read still cannot be claimed.
 
 ## Scope and reproducibility
 
-- Source: [annotated ROM listing](../rom/23710-2L904.asm), its `.ann` file,
-  [ROM analysis](../ROM_ANALYSIS.md), and the scripts/logs named above.
+- Source: [annotated ROM listing](../../rom/23710-2L904.asm), its `.ann` file,
+  [ROM analysis](../../ROM_ANALYSIS.md), and the scripts/logs named above.
 - [Per-byte literal reference index](CONSULT_RAM_XREFS.csv): regenerate with
-  `python3 tools/consult_ram_xrefs.py > docs/CONSULT_RAM_XREFS.csv`.
+  `python3 write-access/tools/consult_ram_xrefs.py > write-access/docs/CONSULT_RAM_XREFS.csv`.
 - The index records instruction operands, including immediate constants and
   indexed bases, not a complete read/write graph. Computed-pointer accesses,
   word-access second bytes, initialization loops, unread bank 1 and the second

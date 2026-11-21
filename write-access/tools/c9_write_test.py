@@ -20,16 +20,16 @@ What the test does NOT do:
 Key on, engine off.  Key cycle clears all state.
 
 Usage:
-  python3 tools/c9_write_test.py --dry-run
-  python3 tools/c9_write_test.py
-  python3 tools/c9_write_test.py --dev /dev/ttyUSB1
+  python3 write-access/tools/c9_write_test.py --dry-run
+  python3 write-access/tools/c9_write_test.py
+  python3 write-access/tools/c9_write_test.py --dev /dev/ttyUSB1
 """
 import argparse
 import datetime
 import os
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS

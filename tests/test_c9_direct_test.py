@@ -5,7 +5,7 @@ import unittest
 from unittest.mock import Mock, patch
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'tools'))
+sys.path.insert(0, str(ROOT / 'write-access/tools'))
 import c9_direct_test as trial
 from consult.experimental import MutationUnverified
 from consult.protocol import ConsultError

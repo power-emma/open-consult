@@ -34,7 +34,7 @@ BBC handlers and would fire, but are unsafe with engine running.
 SAFE: writes to Consult/active-test state only. No RAM function pointers,
 no code redirect. Engine off. Key cycle clears all corruption.
 
-Usage: python3 tools/c9_actuator_test.py [--target 07B7] [--trigger 6178]
+Usage: python3 write-access/tools/c9_actuator_test.py [--target 07B7] [--trigger 6178]
                                          [--dev /dev/ttyUSB0] [--dry-run]
 """
 import argparse
@@ -43,7 +43,7 @@ import os
 import sys
 import time
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS

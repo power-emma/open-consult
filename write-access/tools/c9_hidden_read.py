@@ -20,12 +20,13 @@ Phase 3 is the novel part: it avoids the "0A overwrites cs_streamlist"
 problem by running the overrun and direct mode *simultaneously*.
 
 Usage:
-  python3 tools/c9_hidden_read.py --dry-run          # simulate only
-  python3 tools/c9_hidden_read.py --sweep --dry-run   # show all targets
-  python3 tools/c9_hidden_read.py                     # live: default addr
-  python3 tools/c9_hidden_read.py --addr 6025         # live: specific addr
+  python3 write-access/tools/c9_hidden_read.py --dry-run          # simulate only
+  python3 write-access/tools/c9_hidden_read.py --sweep --dry-run   # show all targets
+  python3 write-access/tools/c9_hidden_read.py                     # live: default addr
+  python3 write-access/tools/c9_hidden_read.py --addr 6025         # live: specific addr
 
-The 20-address plant uses the stale c9_sub_value trick (WRITE_PRIMITIVE.md):
+The 20-address plant uses the stale c9_sub_value behavior described in
+write-access/README.md:
   [0..14]  main_addr × 15
   [15]     $5E0F   (n=$10 after INC, cursor=$0E)
   [16]     $5E0B   (repair $07E3: lo=$0B, bits 0+1 set)
@@ -42,7 +43,8 @@ Frame 2: idx[$10]=$60 → H8 reply → $07A0 (streamlist lo)
 After frame 2, cs_streamlist[0]=$60XX; the direct builder dereferences it.
 
 EXPERIMENTAL: this proposed chain failed in the recorded hardware trial.
-Controlled writes and hidden reads remain unconfirmed; see FINDINGS.md.
+Controlled writes and hidden reads remain unconfirmed; see
+write-access/docs/CONSULT_RAM_MAP.md.
 """
 import argparse
 import datetime
@@ -50,7 +52,7 @@ import os
 import sys
 import time
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS
@@ -593,8 +595,8 @@ def main():
                     help=f"serial device (default: {DEFAULT_DEV})")
     ap.add_argument("--addr", type=lambda x: int(x, 16), default=None,
                     help="target hidden-region address in hex (default: auto from sweep)")
-    ap.add_argument("--h8", default=os.path.join(ROOT, "h8_clean.bin"),
-                    help="H8 dump for simulation (default: h8_clean.bin)")
+    ap.add_argument("--h8", default=os.path.join(ROOT, "write-access", "h8", "h8_clean.bin"),
+                    help="H8 dump for simulation (default: write-access/h8/h8_clean.bin)")
     ap.add_argument("--sweep", action="store_true",
                     help="show all achievable target addresses")
     ap.add_argument("--mixed-only", action="store_true",

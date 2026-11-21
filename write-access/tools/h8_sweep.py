@@ -11,17 +11,17 @@ This tool reads a range of forwarded addresses across multiple passes
 to find stable (predictable) responses and build a value lookup table.
 
 Usage:
-  python3 tools/h8_sweep.py                          # default: $5E00-$5EFF, 3 passes
-  python3 tools/h8_sweep.py --start 5D40 --end 5E40  # custom range
-  python3 tools/h8_sweep.py --passes 5               # more passes for stability check
-  python3 tools/h8_sweep.py --all                     # full forwarded range (slow)
+  python3 write-access/tools/h8_sweep.py                          # default: $5E00-$5EFF, 3 passes
+  python3 write-access/tools/h8_sweep.py --start 5D40 --end 5E40  # custom range
+  python3 write-access/tools/h8_sweep.py --passes 5               # more passes for stability check
+  python3 write-access/tools/h8_sweep.py --all                     # full forwarded range (slow)
 """
 import argparse
 import datetime
 import os
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS

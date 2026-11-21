@@ -233,7 +233,7 @@ the nine resolved jump-table edges and long transfers to missing banks.
 Regenerate it with `python3 tools/rom_control_flow.py`.
 The specific [check for transfers to/from `$0740–$083F`](ROM_JUMP_WINDOW.md)
 found no matches in the decoded control flow; missing-code and runtime limits apply.
-The [direct RAM-write test](DIRECT_RAM_WRITE_TEST.md) traces a chosen-value
+The [direct RAM-write test](../write-access/docs/DIRECT_RAM_WRITE_TEST.md) traces a chosen-value
 word store at `$54A0` and provides an offline preview/live readback script.
 
 The missing `$5D40–$623F` local-ROM region, bank 1, and second-processor program

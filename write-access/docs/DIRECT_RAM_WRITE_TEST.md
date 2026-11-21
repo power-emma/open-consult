@@ -3,7 +3,7 @@
 The new path writes at `$54A0` inside `c9_find_hidden`, rather than relying on
 the later `$9B5E` reply-placement write. Hardware testing at `$0817` has now
 verified all 256 chosen byte values; other addresses require separate validation.
-The saved [sweep report](../logs/2026-11-16_202021_963725_direct-sweep.json)
+The saved [sweep report](../../logs/2026-11-16_202021_963725_direct-sweep.json)
 contains 256 changed baselines, matching target/companion bytes in both later
 readbacks, and acknowledged mutation stops. Recorded elapsed time is 47.6981 s.
 
@@ -12,13 +12,13 @@ readbacks, and acknowledged mutation stops. Recorded elapsed time is 47.6981 s.
 From the repository root, preview without opening a serial port:
 
 ```sh
-python3 tools/c9_direct_test.py --target 0817 --value 42
+python3 write-access/tools/c9_direct_test.py --target 0817 --value 42
 ```
 
 With the key on and engine off, execute one trial:
 
 ```sh
-python3 tools/c9_direct_test.py --target 0817 --value 42 --run --dev /dev/ttyUSB0
+python3 write-access/tools/c9_direct_test.py --target 0817 --value 42 --run --dev /dev/ttyUSB0
 ```
 
 On Windows, substitute `--dev COM4` (or the actual cable port). The script uses
@@ -88,14 +88,14 @@ single-byte access across all of `$0740–$083F`.
 Preview or test all 256 values, with the key kept on and engine off throughout:
 
 ```sh
-python3 tools/c9_direct_sweep.py
-python3 tools/c9_direct_sweep.py --run --dev /dev/ttyUSB0
+python3 write-access/tools/c9_direct_sweep.py
+python3 write-access/tools/c9_direct_sweep.py --run --dev /dev/ttyUSB0
 ```
 
 To repeat the four transitions already reported from the car:
 
 ```sh
-python3 tools/c9_direct_sweep.py --values FF,00,21,67 --run --dev /dev/ttyUSB0
+python3 write-access/tools/c9_direct_sweep.py --values FF,00,21,67 --run --dev /dev/ttyUSB0
 ```
 
 There are no key-cycle prompts. **Fast mode is now the default:** identity and
@@ -128,8 +128,8 @@ does not independently establish that the operator kept the key on.
 Preview an address range, then write `$67` at each modeled destination:
 
 ```sh
-python3 tools/c9_direct_sweep.py --addresses 0810-0822 --value 67
-python3 tools/c9_direct_sweep.py --addresses 0810-0822 --value 67 --run --dev /dev/ttyUSB0
+python3 write-access/tools/c9_direct_sweep.py --addresses 0810-0822 --value 67
+python3 write-access/tools/c9_direct_sweep.py --addresses 0810-0822 --value 67 --run --dev /dev/ttyUSB0
 ```
 
 The full window can be selected with `--addresses 0740-083F`. For `$67`, the
@@ -159,14 +159,14 @@ current-cycle fault-flag region.
 ### Offline instruction trace
 
 ```sh
-python3 tools/trace_ram_write.py --target 0817 --value 42
+python3 write-access/tools/trace_ram_write.py --target 0817 --value 42
 python3 -m unittest discover -s tests -p test_c9_direct_test.py
 ```
 
 The limited interpreter assumes bank/direct page zero, 16-bit X/Y and entry
 `m=1`, matching this Consult call path. It follows `SEM`/`CLM` changes but does
 not simulate interrupts, the scheduler, mailbox arrivals, or actuators.
-The [saved store trace](rom-inventory/direct_write_0817_42.json) is modeled
+The [saved store trace](direct_write_0817_42.json) is modeled
 evidence, not a hardware log.
 
 Earlier hardware evidence for the older downstream method is in

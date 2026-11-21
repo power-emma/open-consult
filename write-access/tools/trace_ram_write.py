@@ -11,10 +11,12 @@ from dataclasses import asdict, dataclass
 import json
 from pathlib import Path
 import re
+import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))
 from m7700dis import Rom, decode
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 
 
 @dataclass

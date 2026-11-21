@@ -141,10 +141,10 @@ project's 1998 Maxima and should be checked separately on other vehicles.
 The Consult `C9` command can write a byte to ECU working RAM — this is an
 authorized diagnostic procedure documented in a Nissan service bulletin.
 I reverse-engineered the mechanism independently before finding the bulletin.
-See [`write access nissan.md`](write%20access%20nissan.md) for the full
-explanation and [`nissan-write.py`](nissan-write.py) for a payload builder /
-simulator. Research notes and session logs are in
-[`docs/processor-write/`](docs/processor-write/).
+See the [write-access guide](write-access/README.md) for the full explanation
+and [`nissan-write.py`](write-access/nissan-write.py) for a payload builder and
+simulator. Research notes are in [`write-access/docs/`](write-access/docs/),
+and session logs are in [`logs/`](logs/).
 
 ## License
 

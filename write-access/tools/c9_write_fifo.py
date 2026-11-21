@@ -17,17 +17,17 @@ Modes:
   --patterns: try specific named fill patterns
 
 Usage:
-  python3 tools/c9_write_fifo.py --sweep-base --target 0817
-  python3 tools/c9_write_fifo.py --sweep-spread --target 0817
-  python3 tools/c9_write_fifo.py --patterns uniform,spread,reverse --target 0817
-  python3 tools/c9_write_fifo.py --dry-run --patterns spread
+  python3 write-access/tools/c9_write_fifo.py --sweep-base --target 0817
+  python3 write-access/tools/c9_write_fifo.py --sweep-spread --target 0817
+  python3 write-access/tools/c9_write_fifo.py --patterns uniform,spread,reverse --target 0817
+  python3 write-access/tools/c9_write_fifo.py --dry-run --patterns spread
 """
 import argparse
 import datetime
 import os
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS

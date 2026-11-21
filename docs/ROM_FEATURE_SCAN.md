@@ -68,9 +68,9 @@ not trustworthy local ROM. Bank 1 is absent. The 768-byte BCM fragment and the
 small H8 reconstruction were not treated as complete firmware.
 
 Existing overflow/write and hidden-read claims were not revalidated by this
-feature scan. `ROM_ANALYSIS.md` references `docs/processor-write/FINDINGS.md`
-and `SESSIONS.md`, but neither file exists in this checkout. Its older broad
-conclusions about reachability should therefore not be treated as settled here.
+feature scan. See the [Consult RAM map](../write-access/docs/CONSULT_RAM_MAP.md)
+and preserved [`logs/`](../logs/) for the separate write-access evidence.
+Older broad conclusions about reachability should not be treated as settled here.
 
 Next useful validation is a recorded bench trace of `51` alone and combined with
 a short read-only sensor list, using a deliberate known monitor condition and

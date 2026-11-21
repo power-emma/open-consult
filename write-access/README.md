@@ -1,5 +1,18 @@
 # Write access to Nissan ECU RAM over Consult
 
+This folder keeps the write-access research together:
+
+- [`nissan-write.py`](nissan-write.py): offline payload builder and simulator.
+- [`docs/`](docs/): RAM map, direct-write test notes, and the literal-reference index.
+- [`tools/`](tools/): C9 and H8 research tools. Run their documented commands from
+  the repository root. Live tools can change ECU state; review each tool before
+  connecting it to a vehicle.
+- [`h8/`](h8/): H8 dumps and comparisons previously kept at the repository root.
+
+Session logs remain in the repository's [`logs/`](../logs/) directory. The
+runtime library stays at [`consult/write.py`](../consult/write.py), where the
+research tools import it.
+
 Nissan's own Consult-I tool can write a byte to any address in
 `$0740`-`$083F` (256 bytes of live ECU working RAM) using the `C9`
 memory-read command with a specific 20-address payload. A Nissan service
@@ -54,8 +67,8 @@ each) deterministically writes `$93`.
 computes the payload and simulates the overrun. No serial connection needed.
 
 ```
-python3 nissan-write.py --target 0817
-python3 nissan-write.py --target 07B7 --sim
+python3 write-access/nissan-write.py --target 0817
+python3 write-access/nissan-write.py --target 07B7 --sim
 ```
 
 ## Constraints
@@ -77,5 +90,5 @@ disassembly.
 
 ## Research notes
 
-All scratch work, evidence logs, and session transcripts are in
-[`docs/processor-write/`](docs/processor-write/).
+Additional analysis is in [the write-access docs](docs/); evidence logs are
+in the repository's [`logs/`](../logs/) directory.

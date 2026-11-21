@@ -2,8 +2,8 @@
 """Preview or test a direct request-builder RAM write on ECU 23710-2L904.
 
 Examples (key on, engine off for a live trial):
-  python3 tools/c9_direct_test.py --value 42
-  python3 tools/c9_direct_test.py --value 42 --run --dev /dev/ttyUSB0
+  python3 write-access/tools/c9_direct_test.py --value 42
+  python3 write-access/tools/c9_direct_test.py --value 42 --run --dev /dev/ttyUSB0
 
 Default is offline. The live path sends one mutation request, requests one
 frame, requires stop acknowledgment, then reads RAM independently. Receiving
@@ -15,7 +15,7 @@ import json
 from pathlib import Path
 import sys
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from consult.experimental import mutation_stream, require_research_ecu

@@ -67,7 +67,7 @@ class ExperimentalTests(unittest.TestCase):
         client.command.assert_not_called()
 
     def test_plant_mismatch_cannot_be_returned_as_success(self):
-        path = Path(__file__).resolve().parents[1] / "tools/c9_hidden_read.py"
+        path = Path(__file__).resolve().parents[1] / "write-access/tools/c9_hidden_read.py"
         spec = importlib.util.spec_from_file_location("hidden_read_test", path)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)

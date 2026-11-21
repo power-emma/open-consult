@@ -15,7 +15,7 @@ SAFE: the overrun is confined to Consult/active-test state ($07C3-$08D6).
 No RAM function pointer exists (ROM_ANALYSIS.md §10), so no code redirect.
 Re-init does NOT clear it — only a key cycle does. Run with key on, engine off.
 
-Usage: python3 tools/c9_overrun_test.py [--dev /dev/ttyUSB0] [--dry-run]
+Usage: python3 write-access/tools/c9_overrun_test.py [--dev /dev/ttyUSB0] [--dry-run]
 """
 import argparse
 import datetime
@@ -24,7 +24,7 @@ import sys
 import time
 
 # Add the project root to the path so we can import consult.
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS

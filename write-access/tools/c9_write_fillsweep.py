@@ -5,14 +5,14 @@ Double-tap, 1 frame each, varies fill addr across H8 record bases.
 One key cycle per trial.
 
 Usage:
-  python3 tools/c9_write_fillsweep.py --target 0817
+  python3 write-access/tools/c9_write_fillsweep.py --target 0817
 """
 import argparse
 import datetime
 import os
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.transport import DEFAULT_DEV

@@ -18,7 +18,7 @@ in the $0740-$083F downstream range.  The mechanism:
 
 VALUE CONTROL STATUS (2026-11-16): reliable write achieved.  Double-tap
 (two back-to-back overruns, 1 frame each, no key cycle between) writes $93
-to the target, 5/5 trials confirmed.  tools/c9_write_primed.py --taps 2.
+to the target, 5/5 trials confirmed.  write-access/tools/c9_write_primed.py --taps 2.
 
 The builder at L_9B3F rewrites the target on EVERY frame using $07E7.  With
 multiple frames, later frames clobber frame 0's value.  Fix: stream 1 frame.
@@ -28,7 +28,7 @@ Value $93 is deterministic for fill=$5E00x15 + double-tap, but not yet
 independently controllable.  Next: vary fill addresses to shift the FIFO
 drain position and get different values.
 
-References: ROM_ANALYSIS.md sec 10, FINDINGS.md, SKEPTICISM.md.
+References: ROM_ANALYSIS.md sec 10 and write-access/docs/CONSULT_RAM_MAP.md.
 """
 
 CS_PAYLOAD    = 0x0740
@@ -45,7 +45,7 @@ FORWARD_HI    = 0x623F
 # ONE-SHOT READS ONLY — invalid in streaming context.  In streaming, the H8
 # serves from an internal sequential FIFO that ignores the requested address;
 # position 18 always returns $00.  Use spread fill + empirical calibration
-# (tools/c9_write_fifo.py) for streaming value control.
+# (write-access/tools/c9_write_fifo.py) for streaming value control.
 H8_VALUE_TABLE = {
     0x00: 0x5D44, 0x01: 0x5D80, 0x02: 0x6180, 0x03: 0x6228,
     0x04: 0x6178, 0x08: 0x6138, 0x0E: 0x5DC8, 0x0F: 0x5D98,

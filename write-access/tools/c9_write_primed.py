@@ -18,10 +18,10 @@ Sequence (single key cycle):
   3. Re-init + readback
 
 Usage:
-  python3 tools/c9_write_primed.py --target 0817
-  python3 tools/c9_write_primed.py --target 0817 --overrun-frames 1
-  python3 tools/c9_write_primed.py --target 0817 --sweep-frames 1,2,3
-  python3 tools/c9_write_primed.py --target 0817 --repeat 5
+  python3 write-access/tools/c9_write_primed.py --target 0817
+  python3 write-access/tools/c9_write_primed.py --target 0817 --overrun-frames 1
+  python3 write-access/tools/c9_write_primed.py --target 0817 --sweep-frames 1,2,3
+  python3 write-access/tools/c9_write_primed.py --target 0817 --repeat 5
 """
 import argparse
 import datetime
@@ -29,7 +29,7 @@ import os
 import sys
 import time
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS

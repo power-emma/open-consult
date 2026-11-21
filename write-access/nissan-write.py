@@ -5,9 +5,9 @@ Builds the 20-address C9 payload that writes a byte to a chosen address
 in $0740-$083F, using the authorized Nissan diagnostic write mechanism.
 
 Usage:
-  python3 nissan-write.py --target 0817              # print the payload
-  python3 nissan-write.py --target 0817 --sim        # simulate the overrun
-  python3 nissan-write.py --target 07B7 --sim        # target at_active flags
+  python3 write-access/nissan-write.py --target 0817              # print the payload
+  python3 write-access/nissan-write.py --target 0817 --sim        # simulate the overrun
+  python3 write-access/nissan-write.py --target 07B7 --sim        # target at_active flags
 """
 import argparse
 

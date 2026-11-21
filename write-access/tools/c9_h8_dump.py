@@ -16,9 +16,9 @@ contaminated by the c9_hidden reply mechanism ($0E/$1E artifacts). Use
 --batch 6 for a clean dump, or --patch to re-read only the contaminated
 positions from a prior batch=8 dump.
 
-Usage: python3 tools/c9_h8_dump.py [--dev /dev/ttyUSB0] [--range 5D40-623F]
+Usage: python3 write-access/tools/c9_h8_dump.py [--dev /dev/ttyUSB0] [--range 5D40-623F]
                                    [--batch 6] [--frames 4] [--out dump.bin]
-       python3 tools/c9_h8_dump.py --patch prior.bin --out clean.bin
+       python3 write-access/tools/c9_h8_dump.py --patch prior.bin --out clean.bin
 """
 import argparse
 import datetime
@@ -26,7 +26,7 @@ import os
 import sys
 import time
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT)
 
 from consult.protocol import Consult, ConsultError, ENGINE_IDS
